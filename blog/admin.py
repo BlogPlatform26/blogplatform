@@ -262,8 +262,6 @@ ADMIN_MODEL_GROUPS = [
         "name": "Sigurnost i moderacija",
         "models": [
             "SecurityEvent",
-            "AccessAttempt",
-            "AccessLog",
             "UserRestriction",
             "UserBlock",
             "BugReport",

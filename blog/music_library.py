@@ -383,97 +383,14 @@ AMBIENT_MUSIC_TRACKS = [{'id': 'lvymusic-calm-background-for-video-121519',
 
 AMBIENT_MUSIC_TRACK_MAP = {item["id"]: item for item in AMBIENT_MUSIC_TRACKS}
 
-
-def _get_uploaded_ambient_tracks():
-    """
-    Glazba dodana kroz Django admin.
-    Funkcija je namjerno ovdje, a import modela je unutra, da ne radi circular import.
-    """
-    try:
-        from django.db.utils import OperationalError, ProgrammingError
-        from .models import AmbientMusicTrack
-
-        uploaded_tracks = []
-        qs = AmbientMusicTrack.objects.filter(is_active=True).order_by("category", "title")
-
-        for track in qs:
-            audio_url = track.audio_file.url if track.audio_file else ""
-            category_label = track.get_category_display()
-
-            uploaded_tracks.append({
-                "id": f"admin-{track.pk}",
-                "title": track.title,
-                "category": track.category,
-                "category_label": category_label,
-                "description": track.description or "Glazba dodana kroz admin.",
-                "artist": track.artist or "BlogPlatform",
-                "artist_url": "",
-                "source_name": "Admin",
-                "source_url": audio_url,
-                "license_label": "Dodano u adminu",
-                "filename": track.audio_file.name if track.audio_file else "",
-                "static_path": "",
-                "audio_url": audio_url,
-                "is_uploaded": True,
-            })
-
-        return uploaded_tracks
-
-    except (OperationalError, ProgrammingError):
-        # Ako migracija još nije pokrenuta, nemoj srušiti stranicu.
-        return []
-    except Exception:
-        return []
-
-
 def get_ambient_music_tracks():
-    static_tracks = []
-
-    for item in AMBIENT_MUSIC_TRACKS:
-        copied = dict(item)
-        copied.setdefault("audio_url", "")
-        copied.setdefault("is_uploaded", False)
-        static_tracks.append(copied)
-
-    return static_tracks + _get_uploaded_ambient_tracks()
-
+    return [dict(item) for item in AMBIENT_MUSIC_TRACKS]
 
 def get_ambient_music_categories():
-    categories = [dict(item) for item in AMBIENT_MUSIC_CATEGORIES]
-
-    if not any(item.get("value") == "other" for item in categories):
-        categories.append({
-            "value": "other",
-            "label": "Ostalo",
-            "description": "Glazba dodana kroz admin."
-        })
-
-    return categories
-
+    return [dict(item) for item in AMBIENT_MUSIC_CATEGORIES]
 
 def get_ambient_music_track(track_id):
     if not track_id:
         return None
-
-    track_id = str(track_id).strip()
-
-    if track_id.startswith("admin-"):
-        try:
-            pk = int(track_id.replace("admin-", "", 1))
-        except Exception:
-            return None
-
-        for item in _get_uploaded_ambient_tracks():
-            if item.get("id") == f"admin-{pk}":
-                return dict(item)
-
-        return None
-
-    item = AMBIENT_MUSIC_TRACK_MAP.get(track_id)
-    if not item:
-        return None
-
-    copied = dict(item)
-    copied.setdefault("audio_url", "")
-    copied.setdefault("is_uploaded", False)
-    return copied
+    item = AMBIENT_MUSIC_TRACK_MAP.get(str(track_id).strip())
+    return dict(item) if item else None

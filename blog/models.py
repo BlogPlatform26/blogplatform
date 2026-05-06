@@ -17,6 +17,15 @@ def validate_image_size(image):
     if image.size > max_bytes:
         raise ValidationError(f"Slika je prevelika (max {max_mb}MB).")
 
+
+def validate_audio_size(audio):
+    max_mb = int(os.environ.get("MAX_AUDIO_UPLOAD_SIZE_MB", 20))
+    max_bytes = max_mb * 1024 * 1024
+
+    if audio.size > max_bytes:
+        raise ValidationError(f"Audio datoteka je prevelika (max {max_mb}MB).")
+
+
 def extract_youtube_video_id(url):
     url = (url or "").strip()
     if not url:
@@ -964,63 +973,4 @@ class SecurityEvent(models.Model):
     def __str__(self):
         who = self.username or (self.user.username if self.user else "anonimno")
         return f"{self.get_event_type_display()} - {who} - {self.created_at:%d.%m.%Y %H:%M}"
-
-# ==========================================================
-# POZADINSKA GLAZBA ZA BLOGOVE
-# ==========================================================
-
-def validate_audio_size(audio):
-    from django.conf import settings
-
-    max_mb = int(getattr(settings, "MAX_AUDIO_UPLOAD_SIZE_MB", 20))
-    max_size = max_mb * 1024 * 1024
-
-    if audio.size > max_size:
-        raise ValidationError(f"Audio datoteka je prevelika (max {max_mb}MB).")
-
-
-def validate_audio_extension(audio):
-    allowed_extensions = [".mp3", ".ogg", ".wav", ".m4a"]
-    name = (audio.name or "").lower()
-
-    if not any(name.endswith(ext) for ext in allowed_extensions):
-        raise ValidationError("Dopušteni audio formati su: MP3, OGG, WAV i M4A.")
-
-
-class AmbientMusicTrack(models.Model):
-    CATEGORY_CHOICES = [
-        ("calm", "Mirno i opuštajuće"),
-        ("romantic", "Nježno i romantično"),
-        ("jazz", "Jazz i lounge"),
-        ("fantasy", "Čarobno i fantasy"),
-        ("mystery", "Tajanstveno i napeto"),
-        ("cinematic", "Putovanje i filmski ugođaj"),
-        ("fun", "Veselo i posebno"),
-        ("other", "Ostalo"),
-    ]
-
-    title = models.CharField(max_length=200)
-    category = models.CharField(
-        max_length=30,
-        choices=CATEGORY_CHOICES,
-        default="other"
-    )
-    description = models.CharField(max_length=300, blank=True)
-    artist = models.CharField(max_length=120, blank=True, default="BlogPlatform")
-
-    audio_file = models.FileField(
-        upload_to="ambient_music/",
-        validators=[validate_audio_size, validate_audio_extension]
-    )
-
-    is_active = models.BooleanField(default=True)
-    created_at = models.DateTimeField(auto_now_add=True)
-
-    class Meta:
-        verbose_name = "Pozadinska glazba"
-        verbose_name_plural = "Pozadinska glazba"
-        ordering = ["category", "title"]
-
-    def __str__(self):
-        return self.title
 

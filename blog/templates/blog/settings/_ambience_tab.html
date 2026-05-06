@@ -190,7 +190,7 @@
                                                 class="btn btn-sm btn-outline-primary ambience-track-preview"
                                                 data-track-id="{{ track.id }}"
                                                 data-track-title="{{ track.title|escape }}"
-                                                data-track-src="{% if track.audio_url %}{{ track.audio_url }}{% else %}{% static track.static_path %}{% endif %}">
+                                                data-track-src="{% static track.static_path %}">
                                             <i class="bi bi-play-fill"></i>
                                             Preview
                                         </button>

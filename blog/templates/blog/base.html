@@ -1063,17 +1063,8 @@
             <div class="ambient-music-title">{{ blog_preferences.ambient_music_track_data.title }}</div>
             <div class="ambient-music-status" id="ambientMusicStatus">Klikni za reprodukciju</div>
             <div class="ambient-music-attribution">
-                {% if blog_preferences.ambient_music_track_data.artist_url %}
-                    <a href="{{ blog_preferences.ambient_music_track_data.artist_url }}" target="_blank" rel="noopener noreferrer">{{ blog_preferences.ambient_music_track_data.artist }}</a>
-                {% else %}
-                    <span>{{ blog_preferences.ambient_music_track_data.artist }}</span>
-                {% endif %}
-                ·
-                {% if blog_preferences.ambient_music_track_data.source_url %}
-                    <a href="{{ blog_preferences.ambient_music_track_data.source_url }}" target="_blank" rel="noopener noreferrer">{{ blog_preferences.ambient_music_track_data.license_label }}</a>
-                {% else %}
-                    <span>{{ blog_preferences.ambient_music_track_data.license_label }}</span>
-                {% endif %}
+                <a href="{{ blog_preferences.ambient_music_track_data.artist_url }}" target="_blank" rel="noopener noreferrer">{{ blog_preferences.ambient_music_track_data.artist }}</a> ·
+                <a href="{{ blog_preferences.ambient_music_track_data.source_url }}" target="_blank" rel="noopener noreferrer">{{ blog_preferences.ambient_music_track_data.license_label }}</a>
             </div>
         </div>
     </div>
@@ -1081,11 +1072,7 @@
         <i class="bi bi-play-fill" id="ambientMusicToggleIcon"></i>
     </button>
     <audio id="ambientMusicPlayer" loop preload="auto">
-        {% if blog_preferences.ambient_music_track_data.audio_url %}
-            <source src="{{ blog_preferences.ambient_music_track_data.audio_url }}" type="audio/mpeg">
-        {% else %}
-            <source src="{% static blog_preferences.ambient_music_track_data.static_path %}" type="audio/mpeg">
-        {% endif %}
+        <source src="{% static blog_preferences.ambient_music_track_data.static_path %}" type="audio/mpeg">
     </audio>
 </div>
 {% endif %}

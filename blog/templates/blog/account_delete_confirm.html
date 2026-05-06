@@ -1,0 +1,44 @@
+{% extends "blog/base.html" %}
+
+{% block title %}Brisanje računa{% endblock %}
+
+{% block left_sidebar %}{% endblock %}
+{% block right_sidebar %}{% endblock %}
+
+{% block content %}
+<div class="card shadow-sm">
+    <div class="card-body">
+        <h3 class="mb-3">Brisanje računa</h3>
+
+        <p>
+            Račun se neće odmah fizički obrisati iz baze.
+            Bit će označen kao obrisan, profil će biti sakriven,
+            a tvoje ime će se prikazivati kao <strong>Obrisan korisnik</strong>.
+        </p>
+
+        <p class="text-muted">
+            Nakon određenog vremena podaci se mogu anonimizirati naredbom:
+            <code>python manage.py anonymize_deleted_users</code>
+        </p>
+
+        <form method="POST" class="mt-4">
+            {% csrf_token %}
+
+            <div class="mb-3">
+                <label class="form-label">
+                    Za potvrdu upiši <strong>obrisi</strong>
+                </label>
+                <input type="text" name="confirm_text" class="form-control" required>
+            </div>
+
+            <button type="submit" class="btn btn-danger">
+                Obriši račun
+            </button>
+
+            <a href="{% url 'profile' %}" class="btn btn-outline-secondary ms-2">
+                Odustani
+            </a>
+        </form>
+    </div>
+</div>
+{% endblock %}
