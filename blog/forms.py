@@ -7,6 +7,7 @@ from django.contrib.auth.forms import UserCreationForm
 from ckeditor.widgets import CKEditorWidget
 import re
 from .models import Category, Post, Comment, Profile, UserBox, BugReport, AuthorQuestion, extract_youtube_video_id
+from .html_sanitizer import sanitize_post_html
 
 
 class PostForm(forms.ModelForm):
@@ -157,12 +158,13 @@ class PostForm(forms.ModelForm):
 
     def clean_content(self):
         content = self.cleaned_data.get("content") or ""
-        plain_text = strip_tags(content).replace(" ", " ").strip()
+        cleaned_content = sanitize_post_html(content)
+        plain_text = strip_tags(cleaned_content).replace(" ", " ").strip()
 
         if not plain_text:
             raise forms.ValidationError("Sadržaj posta je obavezan.")
 
-        return content
+        return cleaned_content
 
 
     def clean(self):
