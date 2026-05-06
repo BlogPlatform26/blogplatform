@@ -15,7 +15,6 @@ from blog.views import analytics_ping, blog_analytics_summary
 
 
 urlpatterns = [
-    path('admin/security-events/overview/', views.security_events_dashboard, name='security_events_dashboard'),
     path('admin/', admin.site.urls),
     path('', home, name='home'),
     path('post/<int:post_id>/', post_detail, name='post_detail'),
@@ -32,7 +31,7 @@ urlpatterns = [
     path('comment/<int:comment_id>/edit/', edit_comment, name='edit_comment'),
     path('profile/', profile, name='profile'),
     path('profile/edit/', edit_profile, name='edit_profile'),
-    path('password_change/', auth_views.PasswordChangeView.as_view(template_name='blog/password_change.html'), name='password_change'),
+    path('password_change/', views.SecurityPasswordChangeView.as_view(), name='password_change'),
     path('password_change/done/', auth_views.PasswordChangeDoneView.as_view(template_name='blog/password_change_done.html'), name='password_change_done'),
     path('post/<int:post_id>/like/', like_post, name='like_post'),
     path("blog/settings/", views.blog_settings, name="blog_settings"),
@@ -65,9 +64,7 @@ urlpatterns = [
 
     path(
         "reset/<uidb64>/<token>/",
-        auth_views.PasswordResetConfirmView.as_view(
-            template_name="registration/password_reset_confirm.html"
-        ),
+        views.SecurityPasswordResetConfirmView.as_view(),
         name="password_reset_confirm"
     ),
 

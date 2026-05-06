@@ -10,22 +10,89 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
+from django.contrib.auth.views import PasswordChangeView, PasswordResetConfirmView
 from django.contrib.auth.tokens import default_token_generator
 from django.contrib.sites.shortcuts import get_current_site
 from django.core.cache import cache
 from django.core.mail import EmailMultiAlternatives, send_mail
 from django.shortcuts import redirect, render
 from django.template.loader import render_to_string
+from django.urls import reverse_lazy
 from django.utils.encoding import force_bytes, force_str
 from django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode
 from django.views.decorators.http import require_POST
 
+from blog.email_utils import send_security_notification_email
 from blog.forms import AuthorProfileForm, CustomUserCreationForm, ProfileUpdateForm, UserUpdateForm
 from blog.services import set_blog_preferences
 from blog.security import log_security_event
 
 
 PENDING_ACTIVATION_SESSION_KEY = 'pending_activation_user_id'
+
+
+class SecurityPasswordChangeView(PasswordChangeView):
+    template_name = 'blog/password_change.html'
+    success_url = reverse_lazy('password_change_done')
+
+    def form_valid(self, form):
+        response = super().form_valid(form)
+
+        send_security_notification_email(
+            user=self.request.user,
+            subject='Lozinka je promijenjena',
+            title='Lozinka je promijenjena',
+            message=(
+                'Lozinka za vaš BlogPlatform račun je upravo promijenjena. '
+                'Ako ste to bili vi, ne morate ništa napraviti. '
+                'Ako ovo niste bili vi, odmah pokušajte resetirati lozinku ili kontaktirajte podršku.'
+            ),
+            request=self.request,
+            event_label='Promjena lozinke',
+        )
+
+        log_security_event(
+            self.request,
+            event_type='password_changed',
+            user=self.request.user,
+            severity='warning',
+            message='Korisnik je promijenio lozinku.',
+        )
+
+        return response
+
+
+class SecurityPasswordResetConfirmView(PasswordResetConfirmView):
+    template_name = 'registration/password_reset_confirm.html'
+    success_url = reverse_lazy('password_reset_complete')
+
+    def form_valid(self, form):
+        user = form.user
+        response = super().form_valid(form)
+
+        send_security_notification_email(
+            user=user,
+            subject='Lozinka je resetirana',
+            title='Lozinka je resetirana',
+            message=(
+                'Lozinka za vaš BlogPlatform račun je upravo resetirana preko reset-password linka. '
+                'Ako ste to bili vi, ne morate ništa napraviti. '
+                'Ako ovo niste bili vi, odmah kontaktirajte podršku.'
+            ),
+            request=self.request,
+            event_label='Reset lozinke',
+        )
+
+        log_security_event(
+            self.request,
+            event_type='password_reset_completed',
+            user=user,
+            severity='warning',
+            message='Korisnik je resetirao lozinku preko reset-password linka.',
+        )
+
+        return response
+
 
 
 
@@ -717,18 +784,19 @@ def edit_profile(request):
                     [new_email],
                 ).send()
 
-                warning_message = (
-                    f'Pozdrav {request.user.username},\n\n'
-                    'Zatražena je promjena email adrese vašeg računa.\n\n'
-                    f'Nova adresa: {new_email}\n\n'
-                    'Ako ovo niste bili vi, odmah promijenite lozinku.\n'
+                send_security_notification_email(
+                    user=request.user,
+                    subject='Zatražena je promjena email adrese',
+                    title='Zatražena je promjena email adrese',
+                    message=(
+                        'Zatražena je promjena email adrese vašeg računa. '
+                        f'Nova adresa: {new_email}. '
+                        'Ako ovo niste bili vi, odmah promijenite lozinku.'
+                    ),
+                    request=request,
+                    recipient_email=old_email,
+                    event_label='Promjena email adrese',
                 )
-                EmailMultiAlternatives(
-                    'Zatražena je promjena email adrese',
-                    warning_message,
-                    settings.EMAIL_HOST_USER,
-                    [old_email],
-                ).send()
                 log_security_event(
                     request,
                     event_type='email_change_requested',
@@ -775,6 +843,18 @@ def confirm_email_change(request, uidb64, token):
                 severity='info',
                 message='Email adresa je uspješno potvrđena.',
                 metadata={'email': user.email},
+            )
+            send_security_notification_email(
+                user=user,
+                subject='Email adresa je promijenjena',
+                title='Email adresa je promijenjena',
+                message=(
+                    'Email adresa na vašem BlogPlatform računu je uspješno promijenjena i potvrđena. '
+                    'Ako ste to bili vi, ne morate ništa napraviti. '
+                    'Ako ovo niste bili vi, odmah promijenite lozinku ili kontaktirajte podršku.'
+                ),
+                request=request,
+                event_label='Potvrđena promjena email adrese',
             )
             messages.success(request, 'Email adresa je uspješno potvrđena.')
         return redirect('profile')
