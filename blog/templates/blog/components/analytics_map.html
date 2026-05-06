@@ -1,0 +1,22 @@
+{% with selected_variant=map_variant|default:'map' %}
+<div class="analytics-map-wrapper analytics-map-wrapper--{{ selected_variant }}" data-analytics-map-wrapper data-map-variant="{{ selected_variant }}">
+    <div class="analytics-map-card analytics-map-card--{{ selected_variant }}">
+        <div
+            class="analytics-map-canvas analytics-map-canvas--{{ selected_variant }}"
+            data-analytics-map
+            data-map-style="{{ selected_variant }}"
+            aria-label="{% if selected_variant == 'globe' %}3D globus s lokacijama posjeta{% else %}Karta svijeta s lokacijama posjeta{% endif %}">
+            {% for point in map_points %}
+                <span
+                    hidden
+                    data-map-point
+                    data-lat="{{ point.latitude }}"
+                    data-lng="{{ point.longitude }}"
+                    data-count="{{ point.count }}"
+                    data-label="{{ point.label|escape }}">
+                </span>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endwith %}

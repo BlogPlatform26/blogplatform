@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Obriši post</title>
+</head>
+<body>
+
+    <h1>Obriši post</h1>
+
+    <p>Jesi li siguran da želiš obrisati post:</p>
+    <h3>{{ post.title }}</h3>
+
+    <form method="POST">
+        {% csrf_token %}
+        <button type="submit">Da, obriši</button>
+    </form>
+
+    <a href="/post/{{ post.id }}/">Odustani</a>
+
+</body>
+</html>

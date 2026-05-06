@@ -1,0 +1,190 @@
+{% extends "blog/base.html" %}
+{% block left_sidebar %}{% endblock %}
+{% block right_sidebar %}{% endblock %}
+{% block title %}O autoru{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-lg-10 col-xl-9">
+        <div class="card shadow-sm author-onboarding-card">
+            <div class="card-body p-4 p-md-5 p-xl-5">
+                <h3 class="mb-4 text-center">O autoru</h3>
+
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="alert {% if message.tags == 'error' %}alert-danger{% else %}alert-success{% endif %}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+
+                <div class="author-step-indicator mb-4">
+                    <span class="author-step-dot active" data-step-indicator="1">1</span>
+                    <span class="author-step-dot" data-step-indicator="2">2</span>
+                    <span class="author-step-dot" data-step-indicator="3">3</span>
+                </div>
+
+                <form method="POST" id="authorOnboardingForm">
+                    {% csrf_token %}
+
+                    <section class="author-step" data-step="1">
+                        <h5 class="mb-3">Kratko o sebi</h5>
+                        <div class="mb-3">
+                            <label class="form-label" for="{{ author_form.author_bio.id_for_label }}">{{ author_form.author_bio.label }}</label>
+                            {{ author_form.author_bio }}
+                        </div>
+                        <div class="d-flex flex-wrap gap-2 justify-content-between">
+                            <button type="button" class="btn btn-outline-secondary" data-skip-to="2">Preskoči</button>
+                            <button type="button" class="btn btn-primary" data-next-step="2">Dalje</button>
+                        </div>
+                    </section>
+
+                    <section class="author-step d-none" data-step="2">
+                        <h5 class="mb-3">Osobno i identitet</h5>
+                        <div class="vstack gap-3">
+                            <div>
+                                <label class="form-label" for="{{ author_form.author_full_name.id_for_label }}">{{ author_form.author_full_name.label }}</label>
+                                {{ author_form.author_full_name }}
+                            </div>
+                            <div>
+                                <label class="form-label" for="{{ author_form.author_nickname.id_for_label }}">{{ author_form.author_nickname.label }}</label>
+                                {{ author_form.author_nickname }}
+                            </div>
+                            <div>
+                                <label class="form-label" for="{{ author_form.author_birth_date.id_for_label }}">{{ author_form.author_birth_date.label }}</label>
+                                {{ author_form.author_birth_date }}
+                            </div>
+                            <div>
+                                <label class="form-label" for="{{ author_form.author_birth_place.id_for_label }}">{{ author_form.author_birth_place.label }}</label>
+                                {{ author_form.author_birth_place }}
+                            </div>
+                            <div>
+                                <label class="form-label" for="{{ author_form.author_education.id_for_label }}">{{ author_form.author_education.label }}</label>
+                                {{ author_form.author_education }}
+                            </div>
+                            <div>
+                                <label class="form-label" for="{{ author_form.author_occupation.id_for_label }}">{{ author_form.author_occupation.label }}</label>
+                                {{ author_form.author_occupation }}
+                            </div>
+                            <div>
+                                <label class="form-label" for="{{ author_form.author_languages.id_for_label }}">{{ author_form.author_languages.label }}</label>
+                                {{ author_form.author_languages }}
+                            </div>
+                            <div>
+                                <label class="form-label" for="{{ author_form.author_religion.id_for_label }}">{{ author_form.author_religion.label }}</label>
+                                {{ author_form.author_religion }}
+                            </div>
+                            <div>
+                                <label class="form-label" for="{{ author_form.author_nationality.id_for_label }}">{{ author_form.author_nationality.label }}</label>
+                                {{ author_form.author_nationality }}
+                            </div>
+                        </div>
+                        <div class="d-flex flex-wrap gap-2 justify-content-between mt-4">
+                            <div class="d-flex gap-2">
+                                <button type="button" class="btn btn-outline-secondary" data-prev-step="1">Natrag</button>
+                                <button type="button" class="btn btn-outline-secondary" data-skip-to="3">Preskoči</button>
+                            </div>
+                            <button type="button" class="btn btn-primary" data-next-step="3">Dalje</button>
+                        </div>
+                    </section>
+
+                    <section class="author-step d-none" data-step="3">
+                        <h5 class="mb-3">Hobiji i interesi</h5>
+                        <div class="vstack gap-3">
+                            <div>
+                                <label class="form-label" for="{{ author_form.author_hobbies.id_for_label }}">{{ author_form.author_hobbies.label }}</label>
+                                {{ author_form.author_hobbies }}
+                            </div>
+                            <div>
+                                <label class="form-label" for="{{ author_form.author_interests.id_for_label }}">{{ author_form.author_interests.label }}</label>
+                                {{ author_form.author_interests }}
+                            </div>
+                            <div>
+                                <label class="form-label" for="{{ author_form.author_favorite_topics.id_for_label }}">{{ author_form.author_favorite_topics.label }}</label>
+                                {{ author_form.author_favorite_topics }}
+                            </div>
+                            <div>
+                                <label class="form-label" for="{{ author_form.author_inspiration.id_for_label }}">{{ author_form.author_inspiration.label }}</label>
+                                {{ author_form.author_inspiration }}
+                            </div>
+                            <div>
+                                <label class="form-label" for="{{ author_form.author_motto.id_for_label }}">{{ author_form.author_motto.label }}</label>
+                                {{ author_form.author_motto }}
+                            </div>
+                        </div>
+                        <div class="d-flex flex-wrap gap-2 justify-content-between mt-4">
+                            <div class="d-flex gap-2">
+                                <button type="button" class="btn btn-outline-secondary" data-prev-step="2">Natrag</button>
+                                <button type="submit" name="skip_author_onboarding" value="1" class="btn btn-outline-secondary">Preskoči za sada</button>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Spremi</button>
+                        </div>
+                    </section>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.author-onboarding-card{
+    border-radius:18px;
+}
+.author-step-indicator{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+}
+.author-step-dot{
+    width:36px;
+    height:36px;
+    border-radius:999px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    border:1px solid #d0d7de;
+    color:#6c757d;
+    font-weight:600;
+    background:#fff;
+}
+.author-step-dot.active{
+    background:#0d6efd;
+    color:#fff;
+    border-color:#0d6efd;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const steps = Array.from(document.querySelectorAll('.author-step'));
+    const indicators = Array.from(document.querySelectorAll('[data-step-indicator]'));
+
+    function showStep(stepNumber) {
+        steps.forEach(step => {
+            step.classList.toggle('d-none', step.getAttribute('data-step') !== String(stepNumber));
+        });
+        indicators.forEach(indicator => {
+            indicator.classList.toggle('active', indicator.getAttribute('data-step-indicator') === String(stepNumber));
+        });
+    }
+
+    document.querySelectorAll('[data-next-step]').forEach(button => {
+        button.addEventListener('click', function () {
+            showStep(this.getAttribute('data-next-step'));
+        });
+    });
+
+    document.querySelectorAll('[data-prev-step]').forEach(button => {
+        button.addEventListener('click', function () {
+            showStep(this.getAttribute('data-prev-step'));
+        });
+    });
+
+    document.querySelectorAll('[data-skip-to]').forEach(button => {
+        button.addEventListener('click', function () {
+            showStep(this.getAttribute('data-skip-to'));
+        });
+    });
+});
+</script>
+{% endblock %}

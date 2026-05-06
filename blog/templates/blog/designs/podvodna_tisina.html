@@ -1,0 +1,380 @@
+{% extends "blog/layouts/blog_design_base.html" %}
+{% load static %}
+
+{% block content %}
+    {% include "blog/components/blog_design_styles.html" %}
+    <style>
+    body {
+        background: #010611;
+        color: var(--body-text-color, #d5e5ff);
+        position: relative;
+        min-height: 100vh;
+        --analytics-stat-card-bg: rgba(0, 0, 0, 0.2);
+        --analytics-stat-card-border: rgba(197, 220, 255, 0.14);
+        --analytics-stat-card-color: #e8f1ff;
+        --analytics-stat-value-color: #ffffff;
+        --analytics-stat-label-color: rgba(232, 241, 255, 0.72);
+        --analytics-stat-card-shadow: none;
+        --analytics-page-row-bg: rgba(0, 0, 0, 0.16);
+        --analytics-page-row-border: rgba(197, 220, 255, 0.12);
+        --analytics-page-row-color: #e8f1ff;
+        --analytics-map-card-bg: rgba(0, 0, 0, 0.16);
+        --analytics-map-card-border: rgba(197, 220, 255, 0.14);
+        --analytics-map-card-shadow: none;
+    }
+
+    body::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: clamp(520px, 60vw, 980px);
+        pointer-events: none;
+        z-index: 0;
+        background-image:
+            linear-gradient(to bottom, rgba(1, 6, 17, 0) 0%, rgba(1, 6, 17, 0.04) 48%, rgba(1, 6, 17, 0.18) 64%, rgba(1, 6, 17, 0.52) 80%, #010611 100%),
+            url('{% static "blog/images/design-backgrounds/podvodna_tisina.png" %}');
+        background-repeat: no-repeat, no-repeat;
+        background-position: center top, center -40px;
+        background-size: 100% 100%, 100% auto;
+    }
+
+    nav.navbar {
+        position: relative;
+        z-index: 4000 !important;
+    }
+
+    nav.navbar .dropdown-menu {
+        z-index: 4100 !important;
+    }
+
+    .container-fluid.mt-3,
+    footer {
+        position: relative;
+        z-index: 2;
+    }
+
+    .blog-header-wrap,
+    .blog-main-layout-row {
+        position: relative;
+        z-index: 2;
+        max-width: min(1560px, calc(100vw - 40px));
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .blog-header-wrap > .row,
+    .blog-main-layout-row,
+    .blog-banner-strip > .row {
+        --bs-gutter-x: 22px;
+    }
+
+    .blog-page-title,
+    .blog-page-title a {
+        color: var(--blog-title-color, #f1f6ff) !important;
+        text-decoration: none;
+        text-shadow: 0 6px 18px rgba(0, 0, 0, 0.55);
+    }
+
+    .blog-post-entry h4,
+    .blog-post-title,
+    .blog-post-entry h4 a {
+        color: var(--post-title-color, #eef5ff) !important;
+    }
+
+    .calendar-title,
+    .archive-title,
+    .sidebar-box-title,
+    .blog-box-title {
+        color: var(--box-title-color, #cfe1ff) !important;
+    }
+
+    .blog-header-main {
+        background: transparent !important;
+        border: 0 !important;
+        box-shadow: none !important;
+        padding-top: 18px;
+    }
+
+    .blog-header-main,
+    .blog-header-main .blog-user-dropdown-toggle,
+    .blog-header-main .small,
+    .blog-header-main span,
+    .blog-header-main strong {
+        color: var(--body-text-color, #d5e5ff) !important;
+        text-shadow: 0 4px 14px rgba(0, 0, 0, 0.48);
+    }
+
+    .page-top-align {
+        margin-top: 250px;
+    }
+
+    .calendar-box,
+    .archive-box,
+    .sidebar-box,
+    .live-analytics-widget,
+    .live-analytics-widget .sidebar-box,
+    .blog-post-entry,
+    .comment-body {
+        background: transparent !important;
+        border: 1px solid rgba(197, 220, 255, 0.22) !important;
+        border-radius: 16px;
+        box-shadow: none !important;
+        backdrop-filter: none;
+    }
+
+    .calendar-box,
+    .archive-box,
+    .sidebar-box,
+    .live-analytics-widget {
+        width: 100%;
+        max-width: 260px;
+    }
+
+    .calendar-box {
+        padding: 16px;
+        margin-left: auto;
+    }
+
+    .archive-box,
+    .sidebar-box,
+    .live-analytics-widget {
+        padding: 0;
+    }
+
+    .archive-box {
+        margin-left: auto;
+    }
+
+    .sidebar-box {
+        margin-top: 20px;
+    }
+
+    .sidebar-left-align {
+        margin-left: auto;
+        margin-right: 0;
+    }
+
+    .sidebar-right-align {
+        margin-right: auto;
+        margin-left: 0;
+    }
+
+    .archive-title,
+    .sidebar-box-title {
+        padding: 14px 16px 12px;
+        margin: 0;
+        border-bottom: 1px solid rgba(197, 220, 255, 0.16);
+        background: transparent !important;
+    }
+
+    .calendar-title {
+        text-align: center;
+        font-size: 14px;
+        margin-bottom: 12px;
+        letter-spacing: 0.08em;
+    }
+
+    .calendar-weekdays {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        text-align: center;
+        font-size: 11px;
+        color: rgba(213, 229, 255, 0.6);
+        margin-bottom: 8px;
+    }
+
+    .calendar-grid {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 6px;
+        text-align: center;
+        font-size: 12px;
+    }
+
+    .calendar-day {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 34px;
+        text-decoration: none;
+        background: transparent;
+        color: #d5e5ff;
+        border: 1px solid rgba(197, 220, 255, 0.14);
+        border-radius: 10px;
+    }
+
+    .calendar-day:hover {
+        color: #ffffff;
+        border-color: rgba(197, 220, 255, 0.34);
+    }
+
+    .calendar-day-has-post {
+        border-color: rgba(197, 220, 255, 0.28);
+    }
+
+    .calendar-day-today {
+        background: rgba(207, 225, 255, 0.22);
+        background-image: none;
+        border-color: rgba(207, 225, 255, 0.76);
+        color: #ffffff;
+        font-weight: 800;
+        position: relative;
+        z-index: 1;
+        box-shadow: 0 0 0 1px rgba(255,255,255,0.68) inset, 0 0 0 2px rgba(207,225,255,0.2), 0 10px 20px rgba(0,0,0,0.24);
+        transform: translateY(-1px) scale(1.04);
+    }
+
+    .archive-list {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding: 14px 16px 16px;
+    }
+
+    .archive-link {
+        color: #d5e5ff;
+        text-decoration: none;
+        font-size: 13px;
+        line-height: 1.2;
+        padding: 8px 10px;
+        border-radius: 10px;
+        background: transparent;
+        border: 1px solid rgba(197, 220, 255, 0.14);
+    }
+
+    .archive-link:hover {
+        color: #ffffff;
+        border-color: rgba(197, 220, 255, 0.32);
+    }
+
+    .archive-empty,
+    .sidebar-box-content,
+    .post-meta,
+    .post-author-line,
+    .comment-text,
+    .comment-time {
+        color: var(--body-text-color, #d5e5ff);
+    }
+
+    .sidebar-box-content,
+    .live-analytics-widget .sidebar-box-content {
+        padding: 14px 16px 16px;
+        font-size: 13px;
+        line-height: 1.65;
+    }
+
+    .blog-post-entry {
+        padding: 24px 26px;
+    }
+
+    .blog-post-entry hr {
+        border-color: rgba(197, 220, 255, 0.16);
+    }
+
+    .comment-body {
+        padding: 10px 44px 10px 12px;
+    }
+
+    textarea.form-control {
+        background: transparent !important;
+        color: #ffffff !important;
+        border: 1px solid rgba(197, 220, 255, 0.24) !important;
+        border-radius: 12px;
+    }
+
+    textarea.form-control:focus {
+        background: transparent !important;
+        color: #ffffff !important;
+        border-color: rgba(207, 225, 255, 0.44) !important;
+        box-shadow: none !important;
+    }
+
+    textarea::placeholder {
+        color: rgba(213, 229, 255, 0.52) !important;
+    }
+
+    .blog-action-outline,
+    .btn-outline-light {
+        border-color: rgba(207, 225, 255, 0.34) !important;
+        color: #e7f0ff !important;
+    }
+
+    .blog-action-outline:hover,
+    .btn-outline-light:hover {
+        background-color: rgba(207, 225, 255, 0.12) !important;
+        color: #ffffff !important;
+    }
+
+
+    .archive-title,
+    .sidebar-box-title,
+    .calendar-title {
+        position: relative;
+        border-bottom: none !important;
+    }
+
+    .archive-title::after,
+    .sidebar-box-title::after,
+    .calendar-title::after {
+        content: "";
+        display: block;
+        height: 1px;
+        width: 100%;
+        margin-top: 10px;
+        background: linear-gradient(90deg, rgba(197, 220, 255, 0), rgba(197, 220, 255, 0.42), rgba(197, 220, 255, 0));
+    }
+
+    .blog-post-entry hr,
+    .archive-link,
+    .calendar-day,
+    .comment-body,
+    textarea.form-control {
+        border-color: rgba(197, 220, 255, 0.18) !important;
+    }
+
+
+    .blog-date-shell,
+    .blog-date-shell * {
+        background: none !important;
+        background-image: none !important;
+        -webkit-background-clip: border-box !important;
+        background-clip: border-box !important;
+        -webkit-text-fill-color: initial !important;
+        box-shadow: none !important;
+    }
+
+    .blog-date-day {
+        font-size: 34px;
+        font-weight: 600;
+        color: #f4f8ff !important;
+        text-shadow: none !important;
+        letter-spacing: 0.01em;
+    }
+
+    .blog-date-month {
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        color: #b7cceb !important;
+        font-weight: 600;
+    }
+
+    .blog-date-year {
+        font-size: 12px;
+        color: rgba(214, 226, 244, 0.78) !important;
+        letter-spacing: 0.10em;
+    }
+
+    .post-meta-sep {
+        color: rgba(197, 220, 255, 0.32);
+    }
+
+    .post-views {
+        color: #b8d7ff;
+        opacity: 0.95;
+    }
+    </style>
+    {% include "blog/components/blog_posts.html" %}
+{% endblock %}

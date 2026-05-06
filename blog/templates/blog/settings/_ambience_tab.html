@@ -1,0 +1,582 @@
+{% load static %}
+{% with selected_cursor_style=blog_preferences.cursor_style|default:'default' selected_cursor_effect=blog_preferences.cursor_effect|default:'none' selected_music_enabled=blog_preferences.ambient_music_enabled selected_music_volume=blog_preferences.ambient_music_volume|default:18 selected_music_track=blog_preferences.ambient_music_track|default:'' %}
+<div class="card p-4 mb-4 shadow-sm border-0 ambience-card ambience-card--simple">
+    <div class="d-flex flex-wrap align-items-start justify-content-between gap-3 mb-4">
+        <div>
+            <h5 class="mb-1">Kursor na blogu</h5>
+            <div class="text-muted small">
+                Ovdje možeš odabrati kursor i dodatni efekt koji se može prikazivati dok se miš pomiče, dok miruje ili kad klikneš.
+            </div>
+        </div>
+        <span class="badge text-bg-light border">Samo za tvoj blog</span>
+    </div>
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <div class="ambience-layout ambience-layout--simple">
+            <div class="ambience-panel ambience-panel--compact">
+                <div class="ambience-field-block">
+                    <label for="cursorStyleSelect" class="form-label fw-semibold mb-2">Odaberi kursor</label>
+                    <select name="cursor_style" id="cursorStyleSelect" class="form-select ambience-select">
+                        {% for cursor in cursor_choices %}
+                            <option value="{{ cursor.value }}"
+                                    data-description="{{ cursor.description }}"
+                                    data-preview-target="cursorPreviewMarkup-{{ cursor.value }}"
+                                    {% if selected_cursor_style == cursor.value %}selected{% endif %}>
+                                {{ cursor.label }}
+                            </option>
+                        {% endfor %}
+                    </select>
+                    <div class="d-flex flex-wrap align-items-center gap-2 mt-2">
+                        <button type="button" class="btn btn-sm btn-outline-secondary" id="resetCursorToDefault">
+                            Vrati obični kursor
+                        </button>
+                        <span class="small text-muted">Defaultni obični kursor je uvijek dostupan jednim klikom.</span>
+                    </div>
+                </div>
+
+                <div class="ambience-choice-card mt-3">
+                    <div class="ambience-choice-label">Odabrani kursor</div>
+                    <div class="ambience-choice-row ambience-choice-row--large">
+                        <div class="ambience-choice-icon ambience-choice-icon--large" id="cursorPreviewIcon">
+                            {% for cursor in cursor_choices %}
+                                {% if selected_cursor_style == cursor.value %}
+                                    {{ cursor.preview_html|safe }}
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                        <div>
+                            <div class="ambience-choice-title" id="cursorPreviewTitle">
+                                {% for cursor in cursor_choices %}
+                                    {% if selected_cursor_style == cursor.value %}
+                                        {{ cursor.label }}
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                            <div class="ambience-choice-description" id="cursorPreviewDescription">
+                                {% for cursor in cursor_choices %}
+                                    {% if selected_cursor_style == cursor.value %}
+                                        {{ cursor.description }}
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ambience-field-block mt-4 pt-1">
+                    <label for="cursorEffectSelect" class="form-label fw-semibold mb-2">Dodatni efekt</label>
+                    <select name="cursor_effect" id="cursorEffectSelect" class="form-select ambience-select">
+                        {% for effect in cursor_effect_choices %}
+                            <option value="{{ effect.value }}"
+                                    data-description="{{ effect.description }}"
+                                    data-preview-target="cursorEffectPreviewMarkup-{{ effect.value }}"
+                                    {% if selected_cursor_effect == effect.value %}selected{% endif %}>
+                                {{ effect.label }}
+                            </option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div class="ambience-choice-card mt-3">
+                    <div class="ambience-choice-label">Odabrani efekt</div>
+                    <div class="ambience-choice-row ambience-choice-row--large">
+                        <div class="ambience-choice-icon ambience-choice-icon--large" id="cursorEffectPreviewIcon">
+                            {% for effect in cursor_effect_choices %}
+                                {% if selected_cursor_effect == effect.value %}
+                                    {{ effect.preview_html|safe }}
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                        <div>
+                            <div class="ambience-choice-title" id="cursorEffectPreviewTitle">
+                                {% for effect in cursor_effect_choices %}
+                                    {% if selected_cursor_effect == effect.value %}
+                                        {{ effect.label }}
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                            <div class="ambience-choice-description" id="cursorEffectPreviewDescription">
+                                {% for effect in cursor_effect_choices %}
+                                    {% if selected_cursor_effect == effect.value %}
+                                        {{ effect.description }}
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ambience-field-block mt-4 pt-1">
+                    <div class="d-flex flex-wrap align-items-start justify-content-between gap-3">
+                        <div>
+                            <label for="ambientMusicEnabled" class="form-label fw-semibold mb-1">Glazba na blogu</label>
+                            <div class="form-text mt-0">Posjetitelj i dalje mora kliknuti play. Ovdje biraš melodiju koja će biti ponuđena na tvom blogu.</div>
+                        </div>
+                        <div class="form-check form-switch ambience-music-switch mb-0">
+                            <input class="form-check-input" type="checkbox" role="switch" id="ambientMusicEnabled" name="ambient_music_enabled" value="1" {% if selected_music_enabled and selected_music_track %}checked{% endif %}>
+                            <label class="form-check-label small" for="ambientMusicEnabled">Uključi glazbu na blogu</label>
+                        </div>
+                    </div>
+
+                    <div class="ambience-choice-card mt-3 ambience-music-card" id="ambientMusicCard">
+                        <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
+                            <div>
+                                <div class="ambience-choice-label mb-1">Odabir melodije</div>
+                                <div class="small text-muted">Prvo možeš poslušati preview, pa tek onda odabrati.</div>
+                            </div>
+                            <div class="ambience-track-selected small" id="ambientMusicSelectedText">
+                                {% if selected_music_track and blog_preferences.ambient_music_track_data %}
+                                    Odabrano: <strong>{{ blog_preferences.ambient_music_track_data.title }}</strong>
+                                {% else %}
+                                    Odabrano: <strong>Bez glazbe</strong>
+                                {% endif %}
+                            </div>
+                        </div>
+
+                        <div class="row g-2 align-items-end mb-3">
+                            <div class="col-md-5">
+                                <label for="ambientMusicFilter" class="form-label fw-semibold small mb-1">Kategorija</label>
+                                <select id="ambientMusicFilter" class="form-select form-select-sm">
+                                    <option value="all">Sve kategorije</option>
+                                    {% for category in ambient_music_categories %}
+                                        <option value="{{ category.value }}">{{ category.label }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="col-md-7">
+                                <label for="ambientMusicSearch" class="form-label fw-semibold small mb-1">Pretraga</label>
+                                <input type="text" id="ambientMusicSearch" class="form-control form-control-sm" placeholder="Naslov melodije...">
+                            </div>
+                        </div>
+
+                        <div class="ambience-music-list" id="ambientMusicGrid">
+                            <label class="ambience-track-row {% if not selected_music_track %}is-selected{% endif %}" data-music-category="none" data-search="bez glazbe tišina silence none">
+                                <input type="radio" name="ambient_music_track" value="" class="ambience-track-radio" {% if not selected_music_track %}checked{% endif %}>
+                                <div class="ambience-track-main">
+                                    <div class="ambience-track-title-row">
+                                        <div class="ambience-track-title">Bez glazbe</div>
+                                        <span class="badge text-bg-light border">Isključeno</span>
+                                    </div>
+                                    <div class="ambience-track-description">Blog može ostati bez ikakve pozadinske melodije.</div>
+                                </div>
+                                <div class="ambience-track-actions">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary ambience-track-select">Odaberi</button>
+                                </div>
+                            </label>
+
+                            {% for track in ambient_music_tracks %}
+                                <label class="ambience-track-row {% if selected_music_track == track.id %}is-selected{% endif %}"
+                                       data-music-category="{{ track.category }}"
+                                       data-search="{{ track.title|lower }} {{ track.category_label|lower }} {{ track.description|lower }}">
+                                    <input type="radio" name="ambient_music_track" value="{{ track.id }}" class="ambience-track-radio" {% if selected_music_track == track.id %}checked{% endif %}>
+
+                                    <div class="ambience-track-main">
+                                        <div class="ambience-track-title-row">
+                                            <div class="ambience-track-title">{{ track.title }}</div>
+                                            <span class="badge rounded-pill text-bg-light border">{{ track.category_label }}</span>
+                                        </div>
+                                        <div class="ambience-track-description">{{ track.description }}</div>
+                                        <div class="ambience-track-meta-line">
+                                            <span>Autor: {{ track.artist }}</span>
+                                            <span>·</span>
+                                            <a href="{{ track.source_url }}" target="_blank" rel="noopener noreferrer">{{ track.license_label }}</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="ambience-track-actions">
+                                        <button type="button"
+                                                class="btn btn-sm btn-outline-primary ambience-track-preview"
+                                                data-track-id="{{ track.id }}"
+                                                data-track-title="{{ track.title|escape }}"
+                                                data-track-src="{% if track.audio_url %}{{ track.audio_url }}{% else %}{% static track.static_path %}{% endif %}">
+                                            <i class="bi bi-play-fill"></i>
+                                            Preview
+                                        </button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary ambience-track-select">Odaberi</button>
+                                    </div>
+                                </label>
+                            {% endfor %}
+                        </div>
+
+                        <div class="ambience-preview-bar mt-3" id="ambientMusicPreviewBar" hidden>
+                            <div>
+                                <div class="small text-muted">Preview svira</div>
+                                <div class="fw-semibold" id="ambientMusicPreviewTitle">-</div>
+                            </div>
+                            <button type="button" class="btn btn-sm btn-outline-dark" id="ambientMusicPreviewStop">
+                                <i class="bi bi-stop-fill"></i>
+                                Zaustavi
+                            </button>
+                        </div>
+                        <audio id="ambientMusicPreviewPlayer" preload="none"></audio>
+
+                        <div class="mt-4">
+                            <label for="ambientMusicVolume" class="form-label fw-semibold small mb-2">Glasnoća</label>
+                            <div class="d-flex align-items-center gap-3">
+                                <input type="range" class="form-range ambience-volume-range" min="0" max="100" step="1" name="ambient_music_volume" id="ambientMusicVolume" value="{{ selected_music_volume|default:18 }}">
+                                <span class="ambience-volume-badge" id="ambientMusicVolumeValue">{{ selected_music_volume|default:18 }}%</span>
+                            </div>
+                            <div class="form-text mt-2">Preporuka: 10% do 25%, da glazba ostane u pozadini i ne smeta čitanju.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-none">
+            {% for cursor in cursor_choices %}
+                <div id="cursorPreviewMarkup-{{ cursor.value }}">{{ cursor.preview_html|safe }}</div>
+            {% endfor %}
+            {% for effect in cursor_effect_choices %}
+                <div id="cursorEffectPreviewMarkup-{{ effect.value }}">{{ effect.preview_html|safe }}</div>
+            {% endfor %}
+        </div>
+
+        <div class="d-flex flex-wrap align-items-center gap-2 mt-4">
+            <button type="submit" class="btn btn-primary">Spremi kursor, efekt i glazbu</button>
+            <div class="small text-muted">Promjena vrijedi za profil, blog i detalj posta tog korisnika.</div>
+        </div>
+    </form>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const cursorSelect = document.getElementById('cursorStyleSelect');
+    const cursorIcon = document.getElementById('cursorPreviewIcon');
+    const cursorTitle = document.getElementById('cursorPreviewTitle');
+    const cursorDescription = document.getElementById('cursorPreviewDescription');
+    const effectSelect = document.getElementById('cursorEffectSelect');
+    const effectIcon = document.getElementById('cursorEffectPreviewIcon');
+    const effectTitle = document.getElementById('cursorEffectPreviewTitle');
+    const effectDescription = document.getElementById('cursorEffectPreviewDescription');
+    const ambientMusicEnabled = document.getElementById('ambientMusicEnabled');
+    const ambientMusicCard = document.getElementById('ambientMusicCard');
+    const ambientMusicVolume = document.getElementById('ambientMusicVolume');
+    const ambientMusicVolumeValue = document.getElementById('ambientMusicVolumeValue');
+    const musicFilter = document.getElementById('ambientMusicFilter');
+    const musicSearch = document.getElementById('ambientMusicSearch');
+    const musicGrid = document.getElementById('ambientMusicGrid');
+    const musicCards = musicGrid ? Array.from(musicGrid.querySelectorAll('.ambience-track-row')) : [];
+    const previewButtons = musicGrid ? Array.from(musicGrid.querySelectorAll('.ambience-track-preview')) : [];
+    const previewPlayer = document.getElementById('ambientMusicPreviewPlayer');
+    const previewBar = document.getElementById('ambientMusicPreviewBar');
+    const previewTitle = document.getElementById('ambientMusicPreviewTitle');
+    const previewStop = document.getElementById('ambientMusicPreviewStop');
+    const selectedText = document.getElementById('ambientMusicSelectedText');
+    let activePreviewButton = null;
+
+    function updatePreview(select, icon, title, description, fallbackId, fallbackTitle, fallbackDescription) {
+        if (!select || !icon || !title || !description) return;
+        const option = select.options[select.selectedIndex];
+        if (!option) return;
+
+        const previewTargetId = option.dataset.previewTarget || fallbackId;
+        const previewTarget = document.getElementById(previewTargetId);
+        const defaultTarget = document.getElementById(fallbackId);
+
+        icon.innerHTML = previewTarget ? previewTarget.innerHTML : (defaultTarget ? defaultTarget.innerHTML : '');
+        title.textContent = option.textContent.trim() || fallbackTitle;
+        description.textContent = option.dataset.description || fallbackDescription;
+    }
+
+    if (cursorSelect) {
+        const refreshCursor = function () {
+            updatePreview(
+                cursorSelect,
+                cursorIcon,
+                cursorTitle,
+                cursorDescription,
+                'cursorPreviewMarkup-default',
+                'Obični kursor (default)',
+                'Standardni obični kursor bez posebnog stila.'
+            );
+        };
+        cursorSelect.addEventListener('change', refreshCursor);
+        refreshCursor();
+    }
+
+    const resetCursorButton = document.getElementById('resetCursorToDefault');
+    if (resetCursorButton && cursorSelect) {
+        resetCursorButton.addEventListener('click', function () {
+            cursorSelect.value = 'default';
+            cursorSelect.dispatchEvent(new Event('change', { bubbles: true }));
+        });
+    }
+
+    if (effectSelect) {
+        const refreshEffect = function () {
+            updatePreview(
+                effectSelect,
+                effectIcon,
+                effectTitle,
+                effectDescription,
+                'cursorEffectPreviewMarkup-none',
+                'Bez efekta',
+                'Samo odabrani kursor, bez dodatne animacije.'
+            );
+        };
+        effectSelect.addEventListener('change', refreshEffect);
+        refreshEffect();
+    }
+
+    function refreshAmbientMusicState() {
+        if (!ambientMusicCard || !ambientMusicEnabled) return;
+        ambientMusicCard.classList.toggle('is-disabled', !ambientMusicEnabled.checked);
+    }
+
+    function refreshAmbientMusicVolume() {
+        if (!ambientMusicVolume || !ambientMusicVolumeValue) return;
+        ambientMusicVolumeValue.textContent = ambientMusicVolume.value + '%';
+    }
+
+    function updateSelectedMusicLabel() {
+        if (!selectedText) return;
+        const checked = musicGrid ? musicGrid.querySelector('.ambience-track-radio:checked') : null;
+        if (!checked) {
+            selectedText.innerHTML = 'Odabrano: <strong>Bez glazbe</strong>';
+            return;
+        }
+        const row = checked.closest('.ambience-track-row');
+        const titleEl = row ? row.querySelector('.ambience-track-title') : null;
+        const title = titleEl ? titleEl.textContent.trim() : 'Bez glazbe';
+        selectedText.innerHTML = 'Odabrano: <strong>' + title + '</strong>';
+    }
+
+    function updateSelectedMusicCard() {
+        musicCards.forEach(function (row) {
+            const radio = row.querySelector('.ambience-track-radio');
+            row.classList.toggle('is-selected', !!(radio && radio.checked));
+        });
+        updateSelectedMusicLabel();
+    }
+
+    function applyMusicFilters() {
+        const category = musicFilter ? musicFilter.value : 'all';
+        const query = musicSearch ? musicSearch.value.trim().toLowerCase() : '';
+
+        musicCards.forEach(function (row) {
+            const rowCategory = row.dataset.musicCategory || 'all';
+            const searchText = (row.dataset.search || '').toLowerCase();
+            const categoryMatches = category === 'all' || rowCategory === category || rowCategory === 'none';
+            const searchMatches = !query || searchText.indexOf(query) !== -1;
+            row.hidden = !(categoryMatches && searchMatches);
+        });
+    }
+
+    function stopPreview() {
+        if (!previewPlayer) return;
+        previewPlayer.pause();
+        previewPlayer.currentTime = 0;
+        if (previewBar) {
+            previewBar.hidden = true;
+        }
+        if (activePreviewButton) {
+            activePreviewButton.innerHTML = '<i class="bi bi-play-fill"></i> Preview';
+            activePreviewButton.classList.remove('btn-dark');
+            activePreviewButton.classList.add('btn-outline-primary');
+            activePreviewButton = null;
+        }
+    }
+
+    previewButtons.forEach(function (button) {
+        button.addEventListener('click', function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+            if (!previewPlayer) return;
+
+            const trackSrc = this.dataset.trackSrc || '';
+            const trackTitle = this.dataset.trackTitle || 'Preview';
+            const isSameButton = activePreviewButton === this;
+
+            if (isSameButton && !previewPlayer.paused) {
+                stopPreview();
+                return;
+            }
+
+            stopPreview();
+            previewPlayer.src = trackSrc;
+            previewPlayer.currentTime = 0;
+            previewPlayer.play().then(function () {
+                activePreviewButton = button;
+                activePreviewButton.innerHTML = '<i class="bi bi-pause-fill"></i> Pauziraj';
+                activePreviewButton.classList.remove('btn-outline-primary');
+                activePreviewButton.classList.add('btn-dark');
+                if (previewBar) {
+                    previewBar.hidden = false;
+                }
+                if (previewTitle) {
+                    previewTitle.textContent = trackTitle;
+                }
+            }).catch(function () {
+                stopPreview();
+                alert('Preview se ne može pustiti jer audio datoteka nije pronađena. Ubaci novi audio zip u blog/static/blog/audio/library/');
+            });
+        });
+    });
+
+    if (previewPlayer) {
+        previewPlayer.addEventListener('ended', stopPreview);
+    }
+
+    if (previewStop) {
+        previewStop.addEventListener('click', function () {
+            stopPreview();
+        });
+    }
+
+    musicCards.forEach(function (row) {
+        const radio = row.querySelector('.ambience-track-radio');
+        const selectButton = row.querySelector('.ambience-track-select');
+
+        if (selectButton && radio) {
+            selectButton.addEventListener('click', function (event) {
+                event.preventDefault();
+                event.stopPropagation();
+                radio.checked = true;
+                updateSelectedMusicCard();
+            });
+        }
+
+        if (radio) {
+            radio.addEventListener('change', updateSelectedMusicCard);
+        }
+    });
+
+    if (ambientMusicEnabled) {
+        ambientMusicEnabled.addEventListener('change', refreshAmbientMusicState);
+        refreshAmbientMusicState();
+    }
+
+    if (ambientMusicVolume) {
+        ambientMusicVolume.addEventListener('input', refreshAmbientMusicVolume);
+        refreshAmbientMusicVolume();
+    }
+
+    if (musicFilter) {
+        musicFilter.addEventListener('change', applyMusicFilters);
+    }
+
+    if (musicSearch) {
+        musicSearch.addEventListener('input', applyMusicFilters);
+    }
+
+    updateSelectedMusicCard();
+    applyMusicFilters();
+});
+</script>
+
+<style>
+.ambience-music-switch .form-check-input{
+    width: 2.6rem;
+    height: 1.35rem;
+}
+.ambience-music-card.is-disabled{
+    opacity: 0.55;
+}
+.ambience-volume-range{
+    margin: 0;
+}
+.ambience-volume-badge{
+    min-width: 54px;
+    text-align: center;
+    padding: 6px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(148, 163, 184, 0.32);
+    background: rgba(255, 255, 255, 0.75);
+    color: #475569;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+.ambience-music-list{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-top: 1px solid rgba(148, 163, 184, 0.22);
+}
+.ambience-track-row{
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 14px;
+    align-items: center;
+    padding: 14px 4px;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.22);
+    background: transparent;
+}
+.ambience-track-row.is-selected{
+    background: rgba(99, 102, 241, 0.06);
+}
+.ambience-track-radio{
+    display: none;
+}
+.ambience-track-main{
+    min-width: 0;
+}
+.ambience-track-title-row{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+.ambience-track-title{
+    font-weight: 700;
+    color: #111827;
+    line-height: 1.2;
+}
+.ambience-track-description{
+    font-size: 0.88rem;
+    color: #64748b;
+    margin-top: 4px;
+    line-height: 1.35;
+}
+.ambience-track-meta-line{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 6px;
+    font-size: 0.82rem;
+    color: #475569;
+}
+.ambience-track-meta-line a{
+    color: #475569;
+    text-decoration: none;
+}
+.ambience-track-meta-line a:hover{
+    text-decoration: underline;
+}
+.ambience-track-actions{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: flex-end;
+}
+.ambience-preview-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 12px 14px;
+    border-radius: 14px;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    background: rgba(15, 23, 42, 0.04);
+}
+.ambience-track-selected{
+    color: #475569;
+}
+@media (max-width: 767.98px){
+    .ambience-track-row{
+        grid-template-columns: 1fr;
+    }
+    .ambience-track-actions{
+        justify-content: flex-start;
+    }
+}
+@media (max-width: 576px){
+    .ambience-preview-bar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+</style>
+{% endwith %}

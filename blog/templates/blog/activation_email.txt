@@ -1,0 +1,7 @@
+Pozdrav {{ user.username }},
+
+Kliknite na link ispod da aktivirate svoj račun:
+
+{{ activation_url }}
+
+Ako niste vi kreirali račun, ignorirajte ovu poruku.

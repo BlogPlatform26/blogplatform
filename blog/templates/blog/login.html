@@ -1,0 +1,70 @@
+{% extends "blog/base.html" %}
+{% block left_sidebar %}{% endblock %}
+{% block right_sidebar %}{% endblock %}
+
+{% block title %}Prijava{% endblock %}
+
+{% block content %}
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+
+        <div class="card shadow-sm">
+            <div class="card-body">
+
+                <h3 class="mb-4 text-center">Prijava</h3>
+
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="alert {% if message.tags == 'error' %}alert-danger{% else %}alert-success{% endif %}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+
+                <form method="POST">
+                    {% csrf_token %}
+
+                    <div class="mb-4">
+                        <label class="form-label fw-semibold">Korisničko ime ili email adresa</label>
+                        <input type="text" name="username" class="form-control" autocomplete="username" required>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label fw-semibold">Lozinka</label>
+                        <div class="input-group password-toggle-group">
+                            <input type="password" name="password" class="form-control password-toggle-input" autocomplete="current-password" required>
+                            <button type="button"
+                                    class="btn btn-outline-secondary password-toggle-btn"
+                                    aria-label="Prikaži lozinku"
+                                    title="Prikaži lozinku">
+                                <i class="bi bi-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100">
+                        Prijavi se
+                    </button>
+                </form>
+
+                <hr>
+
+                <div class="d-flex justify-content-between align-items-center">
+                    <a href="{% url 'password_reset' %}">
+                        Zaboravili ste lozinku?
+                    </a>
+
+                    <span>
+                        Nemaš račun?
+                        <a href="/register/">Registriraj se</a>
+                    </span>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

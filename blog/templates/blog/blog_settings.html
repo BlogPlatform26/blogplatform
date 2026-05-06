@@ -1,0 +1,27 @@
+{% extends "dashboard_base.html" %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'blog/css/blog_settings.css' %}">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css" rel="stylesheet"/>
+
+<div class="container-fluid">
+    <div class="row">
+        {% include "blog/settings/_sidebar.html" %}
+
+        <div class="col-md-11 ps-4 pe-0 py-4 bg-white">
+            {% include "blog/settings/_posts_tab.html" %}
+            {% include "blog/settings/_boxes_tab.html" %}
+            {% include "blog/settings/_design_tab.html" %}
+            {% include "blog/settings/_author_tab.html" %}
+            {% include "blog/settings/_settings_tab.html" %}
+            {% include "blog/settings/_statistics_tab.html" %}
+        </div>
+    </div>
+</div>
+
+<script src="{% static 'blog/js/blog_settings_main.js' %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
+<script src="{% static 'blog/js/blog_settings_avatar.js' %}"></script>
+<script src="{% static 'blog/js/blog_settings_titles_preview.js' %}"></script>
+{% endblock %}

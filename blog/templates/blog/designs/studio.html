@@ -1,0 +1,737 @@
+{% extends "blog/base.html" %}
+{% load static custom_tags %}
+
+{% block blog_header %}{% endblock %}
+
+{% block left_sidebar %}
+<div class="soho-sidebar">
+    {% if blog.profile.blog_banner %}
+    <div class="soho-sidebar-banner soho-sidebar-banner--{{ blog.profile.blog_banner_position|default:'center' }}">
+        <img src="{{ blog.profile.blog_banner.url }}" alt="Banner bloga">
+    </div>
+    {% endif %}
+
+    <div class="soho-sidebar-inner">
+        <div class="soho-profile-block">
+            {% if blog.profile.avatar %}
+                <img src="{{ blog.profile.avatar.url }}" alt="{{ blog.username }}" class="soho-avatar">
+            {% else %}
+                <img src="{% static 'images/default-avatar.jpg' %}" alt="{{ blog.username }}" class="soho-avatar">
+            {% endif %}
+            <div class="soho-profile-top-row">
+                <div class="soho-profile-name">{{ blog.username }}</div>
+
+                {% if request.user.is_authenticated and request.user != blog %}
+                <div class="soho-profile-actions">
+                    {% if not is_restricted %}
+                        <form method="post" action="{% url 'follow_toggle' blog.username %}" class="m-0">
+                            {% csrf_token %}
+                            <button type="submit" class="btn {% if is_following %}btn-outline-primary{% else %}btn-primary{% endif %} btn-sm">
+                                {% if is_following %}Pratiš{% else %}Prati{% endif %}
+                            </button>
+                        </form>
+                    {% endif %}
+
+                    <div class="dropdown soho-profile-dropdown">
+                        <a class="soho-profile-dropdown-toggle"
+                           href="#"
+                           role="button"
+                           data-bs-toggle="dropdown"
+                           aria-expanded="false"
+                           title="Više opcija">
+                            <i class="bi bi-three-dots fs-5"></i>
+                        </a>
+
+                        <ul class="dropdown-menu dropdown-menu-end soho-profile-dropdown-menu">
+                            {% if is_following %}
+                                <li>
+                                    <form method="post" action="{% url 'unfollow_user' blog.username %}" class="m-0">
+                                        {% csrf_token %}
+                                        <button type="submit" class="dropdown-item">Prestani pratiti</button>
+                                    </form>
+                                </li>
+                            {% else %}
+                                <li>
+                                    <form method="post" action="{% url 'follow_toggle' blog.username %}" class="m-0">
+                                        {% csrf_token %}
+                                        <button type="submit" class="dropdown-item" {% if is_restricted %}disabled{% endif %}>Prati korisnika</button>
+                                    </form>
+                                </li>
+                            {% endif %}
+
+                            <li>
+                                <form method="post" action="{% url 'restrict_user' blog.username %}" class="m-0">
+                                    {% csrf_token %}
+                                    <button type="submit" class="dropdown-item">Ograniči korisnika</button>
+                                </form>
+                            </li>
+
+                            <li><hr class="dropdown-divider"></li>
+
+                            <li>
+                                <form method="post" action="{% url 'block_user' blog.username %}" class="m-0">
+                                    {% csrf_token %}
+                                    <button type="submit" class="dropdown-item text-danger">Blokiraj korisnika</button>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+            <div class="soho-profile-meta">{{ followers_count }} pratitelja · {{ following_count }} prati</div>
+            {% if has_author_content %}
+            <a href="{{ author_page_url }}" class="soho-profile-author-link">Upoznaj autora</a>
+            {% endif %}
+            {% if request.user.is_authenticated and request.user != blog and is_restricted %}
+            <div class="soho-profile-note">Ovaj autor te je ograničio pa ne možeš pratiti, lajkati ni komentirati.</div>
+            {% endif %}
+        </div>
+
+        {% if blog_preferences.blog_archive_mode == "both" or blog_preferences.blog_archive_mode == "calendar" %}
+        <section class="soho-sidebar-section">
+            <div class="soho-section-title">Kalendar</div>
+            <div class="soho-calendar-title calendar-month-nav"><a href="{{ prev_month_url }}" class="calendar-month-nav-link" aria-label="Prethodni mjesec">&#8249;</a><span>{{ current_month_hr|upper }}, {{ current_year }}</span><a href="{{ next_month_url }}" class="calendar-month-nav-link" aria-label="Sljedeći mjesec">&#8250;</a></div>
+            <div class="soho-calendar-weekdays">
+                <div>P</div><div>U</div><div>S</div><div>Č</div><div>P</div><div>S</div><div>N</div>
+            </div>
+            <div class="soho-calendar-grid">
+                {% for week in month_calendar %}
+                    {% for day in week %}
+                        {% if day == 0 %}
+                            <div class="soho-calendar-empty"></div>
+                        {% else %}
+                            {% with pid=day_single_post_map|get_item:day %}
+                                {% if day in days_with_posts %}
+                                    {% if pid %}
+                                        <a href="{% url 'post_detail' pid %}" class="soho-calendar-day soho-calendar-day--has-post {% if day == current_day %}soho-calendar-day--today{% endif %}">{{ day }}</a>
+                                    {% else %}
+                                        <a href="{{ archive_base_url }}?year={{ current_year }}&month={{ current_month_num }}&day={{ day }}" class="soho-calendar-day soho-calendar-day--has-post {% if day == current_day %}soho-calendar-day--today{% endif %}">{{ day }}</a>
+                                    {% endif %}
+                                {% else %}
+                                    <div class="soho-calendar-day {% if day == current_day %}soho-calendar-day--today{% endif %}">{{ day }}</div>
+                                {% endif %}
+                            {% endwith %}
+                        {% endif %}
+                    {% endfor %}
+                {% endfor %}
+            </div>
+        </section>
+        {% endif %}
+
+        {% if blog_preferences.blog_archive_mode == "both" or blog_preferences.blog_archive_mode == "list" %}
+        <section class="soho-sidebar-section">
+            <div class="soho-section-title">Arhiva</div>
+            <div class="soho-archive-list">
+                {% for a in archives %}
+                    <a class="soho-archive-link" href="{{ archive_base_url }}?year={{ a.year }}&month={{ a.month }}">{{ a.label }} ({{ a.count }})</a>
+                {% empty %}
+                    <div class="soho-empty-copy">Nema postova.</div>
+                {% endfor %}
+            </div>
+        </section>
+        {% endif %}
+
+        {% if blog_preferences.analytics_widget_side == 'left_top' %}
+        <section class="soho-sidebar-section">
+            {% include "blog/components/live_analytics_widget.html" with analytics_widget_class="sidebar-left-align" %}
+        </section>
+        {% endif %}
+
+        {% for box in left_boxes %}
+        <section class="soho-sidebar-section">
+            <div class="soho-section-title">{{ box.title }}</div>
+            <div class="soho-sidebar-box-content">{{ box.content|safe }}</div>
+        </section>
+        {% endfor %}
+
+        {% if blog_preferences.analytics_widget_side == 'right_top' %}
+        <section class="soho-sidebar-section">
+            {% include "blog/components/live_analytics_widget.html" with analytics_widget_class="sidebar-left-align" %}
+        </section>
+        {% endif %}
+
+        {% for box in right_boxes %}
+        <section class="soho-sidebar-section">
+            <div class="soho-section-title">{{ box.title }}</div>
+            <div class="soho-sidebar-box-content">{{ box.content|safe }}</div>
+        </section>
+        {% endfor %}
+
+        {% if blog_preferences.analytics_widget_side == 'left_bottom' or blog_preferences.analytics_widget_side == 'right_bottom' %}
+        <section class="soho-sidebar-section">
+            {% include "blog/components/live_analytics_widget.html" with analytics_widget_class="sidebar-left-align" %}
+        </section>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
+
+{% block right_sidebar %}{% endblock %}
+
+{% block content %}
+<style>
+:root {
+    --soho-page-bg: {{ blog_preferences.active_design_customization.outer_background_color_1|default:'#ece7df' }};
+    --soho-sidebar-bg: transparent;
+    --soho-content-bg: {{ blog_preferences.active_design_customization.content_background_color|default:'#fbf8f3' }};
+    --soho-content-border: {{ blog_preferences.active_design_customization.content_border_color|default:'#ddd3c7' }};
+    --soho-title-color: {{ blog_preferences.active_design_customization.blog_title_color|default:'#2f241c' }};
+    --soho-post-title: {{ blog_preferences.active_design_customization.post_title_color|default:'#2f241c' }};
+    --soho-box-title: {{ blog_preferences.active_design_customization.box_title_color|default:'#44382d' }};
+    --soho-text: {{ blog_preferences.active_design_customization.body_text_color|default:'#4b4137' }};
+    --soho-date: {{ blog_preferences.active_design_customization.post_date_color|default:'#b67a2d' }};
+    --soho-title-font: {{ blog_preferences.active_design_customization.blog_title_font_stack|default:'Georgia, Times New Roman, serif' }};
+    --soho-post-font: {{ blog_preferences.active_design_customization.post_title_font_stack|default:'Georgia, Times New Roman, serif' }};
+    --soho-box-font: {{ blog_preferences.active_design_customization.box_title_font_stack|default:'Georgia, Times New Roman, serif' }};
+    --soho-body-font: {{ blog_preferences.active_design_customization.body_font_stack|default:'Arial, Helvetica, sans-serif' }};
+}
+
+body {
+    background: var(--soho-page-bg);
+    color: var(--soho-text);
+    font-family: var(--soho-body-font);
+}
+
+.container-fluid.mt-3 {
+    margin-top: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    max-width: none !important;
+    width: 100% !important;
+}
+
+.blog-main-layout-row {
+    --bs-gutter-x: 0;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    max-width: none !important;
+    width: 100% !important;
+    align-items: stretch !important;
+}
+
+.blog-main-left-column,
+.blog-main-content-column,
+.blog-main-right-column {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.blog-main-left-column {
+    flex: 0 0 286px !important;
+    max-width: 286px !important;
+    width: 286px !important;
+    background: transparent;
+    border-right: 1px solid var(--soho-content-border);
+}
+
+.blog-main-content-column {
+    flex: 1 1 auto !important;
+    max-width: calc(100% - 286px) !important;
+    width: calc(100% - 286px) !important;
+    min-width: 0;
+}
+
+.blog-main-right-column {
+    display: none;
+}
+
+.blog-header-wrap {
+    max-width: none !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.soho-sidebar {
+    min-height: 100%;
+    background: transparent;
+}
+
+.soho-sidebar-banner img {
+    width: 100%;
+    display: block;
+    height: 124px;
+    object-fit: cover;
+}
+
+.soho-sidebar-banner--left img { object-position: left center; }
+.soho-sidebar-banner--center img { object-position: center center; }
+.soho-sidebar-banner--right img { object-position: right center; }
+
+.soho-sidebar-inner {
+    padding: 28px 22px 44px;
+}
+
+.soho-profile-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.soho-avatar {
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255,255,255,0.45);
+}
+
+.soho-profile-name {
+    color: var(--soho-box-title);
+    font-family: var(--soho-box-font);
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.soho-profile-meta {
+    color: color-mix(in srgb, var(--soho-text) 78%, transparent);
+    font-size: 0.8rem;
+    line-height: 1.45;
+}
+
+.soho-profile-top-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+}
+
+.soho-profile-author-link {
+    margin-top: 6px;
+    display: inline-flex;
+    font-size: 0.86rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--soho-box-title);
+}
+
+.soho-profile-author-link:hover {
+    text-decoration: underline;
+    color: var(--soho-box-title);
+}
+
+.soho-profile-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.soho-profile-dropdown {
+    position: relative;
+}
+
+.soho-profile-dropdown-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    color: var(--soho-box-title);
+    text-decoration: none;
+}
+
+.soho-profile-dropdown-toggle::after {
+    display: none !important;
+}
+
+.soho-profile-dropdown-menu {
+    min-width: 220px;
+    z-index: 9999;
+}
+
+nav.navbar {
+    position: relative;
+    z-index: 5000 !important;
+}
+
+nav.navbar .dropdown-menu {
+    z-index: 5100 !important;
+}
+
+.soho-profile-note {
+    margin-top: 2px;
+    font-size: 0.84rem;
+    line-height: 1.45;
+    color: color-mix(in srgb, var(--soho-text) 76%, transparent);
+}
+
+.soho-sidebar-section {
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid color-mix(in srgb, var(--soho-content-border) 74%, transparent);
+}
+
+.soho-section-title,
+.soho-calendar-title {
+    color: var(--soho-box-title);
+    font-family: var(--soho-box-font);
+}
+
+.soho-section-title {
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.72rem;
+    font-weight: 700;
+}
+
+.soho-calendar-title {
+    font-size: 0.92rem;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+.soho-calendar-weekdays,
+.soho-calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 6px;
+    text-align: center;
+}
+
+.soho-calendar-weekdays {
+    margin-bottom: 6px;
+    font-size: 0.72rem;
+    color: color-mix(in srgb, var(--soho-text) 70%, transparent);
+}
+
+.soho-calendar-empty,
+.soho-calendar-day {
+    min-height: 28px;
+}
+
+.soho-calendar-day {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    color: var(--soho-text);
+    background: color-mix(in srgb, var(--soho-page-bg) 86%, white 14%);
+}
+
+.soho-calendar-day--has-post {
+    background: color-mix(in srgb, white 82%, var(--soho-page-bg) 18%);
+    color: #805318;
+    font-weight: 700;
+}
+
+.soho-calendar-day--today {
+    background: #b67a2d;
+    color: #fff;
+    font-weight: 800;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 0 0 2px rgba(255,255,255,0.92), 0 0 0 5px rgba(182,122,45,0.18), 0 10px 20px rgba(182,122,45,0.18);
+    transform: translateY(-1px) scale(1.05);
+}
+
+.soho-archive-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.soho-archive-link {
+    color: var(--soho-text);
+    text-decoration: none;
+}
+
+.soho-archive-link:hover {
+    color: #8b5a23;
+}
+
+.soho-empty-copy {
+    color: color-mix(in srgb, var(--soho-text) 74%, transparent);
+    font-size: 0.9rem;
+}
+
+.soho-sidebar-box-content {
+    color: var(--soho-text);
+    font-size: 0.92rem;
+    line-height: 1.65;
+}
+
+.soho-sidebar-box-content > :last-child,
+.soho-sidebar-box-content p:last-child {
+    margin-bottom: 0;
+}
+
+.soho-sidebar-box-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+.soho-sidebar .live-analytics-widget,
+.soho-sidebar .live-analytics-widget .sidebar-box,
+.soho-sidebar .live-analytics-widget .analytics-map-card,
+.soho-sidebar .live-analytics-widget .live-analytics-stat-card,
+.soho-sidebar .live-analytics-widget .live-analytics-page-row {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+.soho-sidebar .live-analytics-widget,
+.soho-sidebar .live-analytics-widget .sidebar-box,
+.soho-sidebar .live-analytics-widget .analytics-map-card {
+    border: none !important;
+}
+
+.soho-sidebar .live-analytics-widget {
+    margin: 0 !important;
+}
+
+.soho-sidebar .live-analytics-widget .sidebar-box-title,
+.soho-sidebar .live-analytics-widget .small.fw-semibold {
+    padding: 0 0 12px !important;
+    margin: 0 !important;
+    background: transparent !important;
+    border: none !important;
+    color: var(--soho-box-title) !important;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.72rem !important;
+}
+
+.soho-sidebar .live-analytics-widget .sidebar-box-content {
+    padding: 0 !important;
+}
+
+.soho-main-shell {
+    --soho-main-gap: 28px;
+    padding-left: 0;
+    padding-bottom: 54px;
+}
+
+.soho-title-row {
+    margin-left: var(--soho-main-gap);
+    margin-right: 0;
+    padding: 16px 0 22px;
+}
+
+.soho-blog-title {
+    margin: 0;
+    color: var(--soho-title-color);
+    font-family: var(--soho-title-font);
+    font-size: clamp(2rem, 2.2vw, 2.9rem);
+    line-height: 1.1;
+}
+
+.soho-hero {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: var(--soho-main-gap);
+}
+
+.soho-hero-media {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: rgba(255,255,255,0.5);
+    overflow: hidden;
+}
+
+.soho-hero-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.soho-posts-wrap {
+    max-width: 820px;
+    margin-left: var(--soho-main-gap);
+    padding: 28px 0 0;
+}
+
+.soho-post-entry {
+    background: var(--soho-content-bg);
+    border: 1px solid var(--soho-content-border);
+    padding: 28px 30px;
+    margin-bottom: 24px;
+}
+
+.soho-post-entry h4,
+.soho-post-entry h4 a,
+.blog-post-title {
+    color: var(--soho-post-title) !important;
+    font-family: var(--soho-post-font) !important;
+}
+
+.soho-post-entry hr {
+    border-color: rgba(86, 72, 58, 0.12);
+}
+
+.soho-post-entry a {
+    color: #8b5a23;
+}
+
+.soho-post-entry .blog-date-day,
+.soho-post-entry .blog-date-month,
+.soho-post-entry .blog-date-year {
+    color: var(--soho-date);
+}
+
+.post-meta,
+.post-author-line,
+.comment-text,
+.comment-time,
+.sidebar-box-content,
+.comment-body {
+    color: var(--soho-text);
+}
+
+.comment-body {
+    background: #fff;
+    border: 1px solid var(--soho-content-border);
+}
+
+textarea.form-control {
+    background: #fff !important;
+    color: var(--soho-text) !important;
+    border: 1px solid var(--soho-content-border) !important;
+}
+
+textarea.form-control:focus {
+    box-shadow: 0 0 0 0.12rem rgba(182, 122, 45, 0.18) !important;
+    border-color: #c79554 !important;
+}
+
+@media (max-width: 991.98px) {
+    .blog-main-left-column,
+    .blog-main-content-column {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .soho-main-shell {
+        padding-left: 0;
+    }
+
+    .soho-sidebar-inner {
+        padding: 22px 18px 28px;
+    }
+
+    .soho-main-shell {
+        --soho-main-gap: 18px;
+    }
+
+    .soho-title-row,
+    .soho-posts-wrap {
+        margin-left: var(--soho-main-gap);
+        margin-right: var(--soho-main-gap);
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .soho-hero {
+        width: auto;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: var(--soho-main-gap);
+        padding-right: var(--soho-main-gap);
+    }
+
+    .soho-posts-wrap {
+        max-width: none;
+    }
+}
+</style>
+
+<div class="soho-main-shell">
+    <div class="soho-title-row">
+        <h1 class="soho-blog-title">{{ blog.profile.blog_name }}</h1>
+
+    {% if blog.profile.blog_tagline %}<p class="blog-tagline-shared">{{ blog.profile.blog_tagline }}</p>{% endif %}
+    </div>
+
+    <div class="soho-hero">
+        <div class="soho-hero-media">
+            {% if blog.profile.simple_background_image %}
+                <img src="{{ blog.profile.simple_background_image.url }}" alt="Naslovna slika bloga">
+            {% elif blog_preferences.active_design_customization.outer_background_asset %}
+                <img src="{% static blog_preferences.active_design_customization.outer_background_asset %}" alt="Naslovna slika bloga">
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="soho-posts-wrap">
+        {% for post in page_obj %}
+            <article class="soho-post-entry">
+                <div class="d-flex justify-content-between align-items-start gap-3">
+                    <div class="d-flex flex-column" style="gap:10px; min-width:0; flex:1;">
+                        <h4 class="mb-0">{{ post.title }}</h4>
+                        {% include "blog/components/post_meta.html" %}
+                    </div>
+
+                    <div class="text-center ms-3 blog-date-shell blog-date-style-{{ blog_preferences.active_design_customization.post_date_style|default:'classic_vertical' }} blog-date-effect-{{ blog_preferences.active_design_customization.post_date_effect|default:'solid' }}" style="line-height:1;" data-date-style="{{ blog_preferences.active_design_customization.post_date_style|default:'classic_vertical' }}" data-date-effect="{{ blog_preferences.active_design_customization.post_date_effect|default:'solid' }}">
+                        <div class="blog-date-main">
+                            <div class="blog-date-day-wrap">
+                                <div class="blog-date-day">{{ post.publication_datetime|date:"d" }}</div>
+                            </div>
+                            <div class="blog-date-text">
+                                <div class="blog-date-month">{{ post.publication_datetime|month_hr|upper }}</div>
+                                <div class="blog-date-year">{{ post.publication_datetime|date:"Y" }}</div>
+                            </div>
+                        </div>
+                        <div class="blog-date-inline">
+                            <span class="blog-date-inline-day">{{ post.publication_datetime|date:"d" }}</span>
+                            <span class="blog-date-inline-sep">/</span>
+                            <span class="blog-date-inline-month">{{ post.publication_datetime|month_hr|upper }}</span>
+                            <span class="blog-date-inline-sep">/</span>
+                            <span class="blog-date-inline-year">{{ post.publication_datetime|date:"Y" }}</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-4">
+                    {% include "blog/components/post_body.html" %}
+                </div>
+
+                {% include "blog/components/post_actions.html" %}
+                {% include "blog/components/post_comments.html" %}
+                <hr>
+            </article>
+        {% empty %}
+            <p>Nema postova.</p>
+        {% endfor %}
+
+        {% if page_obj.has_other_pages %}
+            <div class="d-flex flex-wrap justify-content-center align-items-center gap-2 mt-4 mb-4">
+                {% if page_obj.has_previous %}
+                    <a href="?page={{ page_obj.previous_page_number }}{{ pagination_query }}" class="btn btn-sm btn-outline-secondary">Prethodna</a>
+                {% endif %}
+                <span class="align-self-center small">Stranica {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}</span>
+                {% if page_obj.has_next %}
+                    <a href="?page={{ page_obj.next_page_number }}{{ pagination_query }}" class="btn btn-sm btn-outline-secondary">Sljedeća</a>
+                {% endif %}
+            </div>
+        {% endif %}
+    </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".poll-bar").forEach(function (bar) {
+        const p = bar.getAttribute("data-percent") || "0";
+        bar.style.width = p + "%";
+    });
+
+    document.querySelectorAll(".js-scroll-to-comments").forEach(function (a) {
+        a.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href");
+            if (!targetId) return;
+            const el = document.querySelector(targetId);
+            if (!el) return;
+            el.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+    });
+});
+</script>
+{% endblock %}

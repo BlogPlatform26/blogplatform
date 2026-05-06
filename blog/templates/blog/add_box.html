@@ -1,0 +1,149 @@
+{% extends "blog/base.html" %}
+{% block left_sidebar %}{% endblock %}
+{% block right_sidebar %}{% endblock %}
+
+{% block content %}
+
+<div class="card shadow-sm p-4">
+    <div class="d-flex flex-wrap justify-content-between align-items-start gap-3 mb-4">
+        <div>
+            <h2 class="mb-1">Dodaj box</h2>
+            <div class="text-muted small">
+                Možeš imati najviše {{ max_boxes_per_side }} boxa lijevo i {{ max_boxes_per_side }} boxa desno.
+            </div>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2 small">
+            <span class="badge text-bg-primary-subtle px-3 py-2">Lijevo: {{ left_count }}/{{ max_boxes_per_side }}</span>
+            <span class="badge text-bg-success-subtle px-3 py-2">Desno: {{ right_count }}/{{ max_boxes_per_side }}</span>
+        </div>
+    </div>
+
+    {{ form.media }}
+
+    <form method="POST" id="addBoxForm" data-content-limit="{{ box_content_limit }}">
+        {% csrf_token %}
+
+        <div class="mb-3">
+            <div class="d-flex justify-content-between align-items-center gap-2">
+                <label for="id_title" class="form-label mb-0">Naslov</label>
+                <div class="small text-muted"><span id="addBoxTitleCounter">0</span>/{{ box_title_limit }}</div>
+            </div>
+            {{ form.title }}
+            <div class="form-text">Naslov može imati najviše {{ box_title_limit }} znakova.</div>
+        </div>
+
+        <div class="mb-3">
+            <div class="d-flex justify-content-between align-items-center gap-2">
+                <label for="id_content" class="form-label mb-0">Sadržaj</label>
+                <div class="small text-muted"><span id="addBoxContentCounter">0</span>/{{ box_content_limit }}</div>
+            </div>
+            {{ form.content }}
+            <div class="form-text">Tekst boxa može imati najviše {{ box_content_limit }} znakova bez HTML oznaka.</div>
+            <div class="small text-danger d-none mt-1" id="addBoxContentError">
+                Tekst boxa je predug. Skrati sadržaj prije spremanja.
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Pozicija</label>
+
+            <select name="position" class="form-select">
+                <option value="">---------</option>
+
+                <option value="left"
+                    {% if left_count >= max_boxes_per_side %}disabled{% endif %}
+                    {% if left_count >= max_boxes_per_side %}title="Dosegnut maksimalan broj lijevih boxeva ({{ max_boxes_per_side }})"{% endif %}>
+                    Lijevo
+                </option>
+
+                <option value="right"
+                    {% if right_count >= max_boxes_per_side %}disabled{% endif %}
+                    {% if right_count >= max_boxes_per_side %}title="Dosegnut maksimalan broj desnih boxeva ({{ max_boxes_per_side }})"{% endif %}>
+                    Desno
+                </option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+            Spremi
+        </button>
+
+        <a href="{% url 'blog_settings' %}?tab=boxevi" class="btn btn-secondary ms-2">
+            Odustani
+        </a>
+
+    </form>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const titleInput = document.getElementById("id_title");
+    const titleCounter = document.getElementById("addBoxTitleCounter");
+    const contentCounter = document.getElementById("addBoxContentCounter");
+    const contentError = document.getElementById("addBoxContentError");
+    const contentLimit = parseInt(form?.dataset.contentLimit || "1200", 10);
+    const form = document.getElementById("addBoxForm");
+
+    function updateTitleCounter() {
+        if (!titleInput || !titleCounter) return;
+        titleCounter.textContent = titleInput.value.length;
+    }
+
+    function getPlainTextLengthFromHtml(html) {
+        const temp = document.createElement("div");
+        temp.innerHTML = html || "";
+        return (temp.textContent || temp.innerText || "").replace(/\s+/g, " ").trim().length;
+    }
+
+    function updateContentCounter() {
+        let length = 0;
+
+        if (window.CKEDITOR && CKEDITOR.instances && CKEDITOR.instances.id_content) {
+            length = getPlainTextLengthFromHtml(CKEDITOR.instances.id_content.getData());
+        } else {
+            const textarea = document.getElementById("id_content");
+            if (textarea) {
+                length = getPlainTextLengthFromHtml(textarea.value);
+            }
+        }
+
+        if (contentCounter) {
+            contentCounter.textContent = length;
+        }
+
+        if (contentError) {
+            contentError.classList.toggle("d-none", length <= contentLimit);
+        }
+
+        return length;
+    }
+
+    if (titleInput) {
+        updateTitleCounter();
+        titleInput.addEventListener("input", updateTitleCounter);
+    }
+
+    if (window.CKEDITOR && CKEDITOR.instances && CKEDITOR.instances.id_content) {
+        CKEDITOR.instances.id_content.on("instanceReady", updateContentCounter);
+        CKEDITOR.instances.id_content.on("change", updateContentCounter);
+        updateContentCounter();
+    } else {
+        const textarea = document.getElementById("id_content");
+        if (textarea) {
+            updateContentCounter();
+            textarea.addEventListener("input", updateContentCounter);
+        }
+    }
+
+    if (form) {
+        form.addEventListener("submit", function (e) {
+            if (updateContentCounter() > contentLimit) {
+                e.preventDefault();
+            }
+        });
+    }
+});
+</script>
+
+{% endblock %}

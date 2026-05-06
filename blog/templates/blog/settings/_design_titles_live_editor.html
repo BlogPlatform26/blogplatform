@@ -1,0 +1,152 @@
+{% load custom_tags %}
+<div class="card shadow-sm border-0 design-live-editor-shell">
+    <div class="card-body p-0">
+        <form method="POST" class="design-live-editor-form" data-design-live-form>
+            {% csrf_token %}
+            <input type="hidden" name="save_design_customization" value="1">
+            <input type="hidden" name="editor_panel" value="naslovi">
+
+            <div class="design-live-editor-topbar">
+                <div>
+                    <h5 class="mb-1">Uređivanje naslova uživo</h5>
+                    <div class="text-muted small">Lijevo mijenjaš naslov, a desno odmah vidiš svoj pravi blog. Kad prijeđeš mišem preko kartice, taj dio se blago označi u previewu.</div>
+                </div>
+                <div class="design-live-editor-topbar-meta">
+                    <span class="design-live-editor-badge">Aktivni dizajn: {{ design_template_labels|get_item:active_design_template|default:profile.template }}</span>
+                    <span class="design-live-editor-badge design-live-editor-badge--soft">Live preview</span>
+                </div>
+            </div>
+
+            <div class="design-live-editor-grid">
+                <aside class="design-live-editor-sidebar">
+                    <div class="design-live-editor-section-label">Naslovi</div>
+
+                    <div class="design-live-editor-card" data-preview-role="blog-title">
+                        <div class="design-live-editor-card-head">
+                            <div>
+                                <h6 class="mb-1">Naziv bloga</h6>
+                                <div class="small text-muted">Veliki naslov na vrhu bloga.</div>
+                            </div>
+                            <button type="submit" class="btn btn-sm btn-outline-secondary" name="reset_design_part" value="blog_title">Vrati</button>
+                        </div>
+
+                        <div class="design-live-editor-field">
+                            <label class="form-label">Font</label>
+                            <select name="blog_title_font" class="form-select design-live-font-select" data-css-target="--blog-title-font">
+                                {% for font in design_font_choices %}
+                                    <option value="{{ font.value }}" data-font-stack="{{ font.stack }}" style="font-family: {{ font.stack|safe }};" {% if active_design_customization.blog_title_font == font.value %}selected{% endif %}>{{ font.label }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <div class="design-live-editor-field-row">
+                            <div class="design-live-editor-field design-live-editor-field--color">
+                                <label class="form-label">Boja</label>
+                                <input type="color" name="blog_title_color" class="form-control form-control-color design-live-color-input" value="{{ active_design_customization.blog_title_color|default:'#3f3128' }}" data-css-target="--blog-title-color">
+                            </div>
+                            <div class="design-live-editor-field design-live-editor-field--size">
+                                <label class="form-label">Veličina</label>
+                                <div class="design-live-size-wrap">
+                                    <input type="range" min="24" max="84" step="1" name="blog_title_size" value="{{ active_design_customization.blog_title_size|default:'44' }}" class="form-range design-live-range-input" data-css-target="--blog-title-size" data-sync-name="blog_title_size_number">
+                                    <input type="number" min="24" max="84" step="1" name="blog_title_size_number" value="{{ active_design_customization.blog_title_size|default:'44' }}" class="form-control design-live-number-input" data-css-target="--blog-title-size" data-sync-name="blog_title_size">
+                                    <span class="design-live-unit">px</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="design-live-editor-card" data-preview-role="post-title">
+                        <div class="design-live-editor-card-head">
+                            <div>
+                                <h6 class="mb-1">Naslov posta</h6>
+                                <div class="small text-muted">Naslovi postova u sredini stranice.</div>
+                            </div>
+                            <button type="submit" class="btn btn-sm btn-outline-secondary" name="reset_design_part" value="post_title">Vrati</button>
+                        </div>
+
+                        <div class="design-live-editor-field">
+                            <label class="form-label">Font</label>
+                            <select name="post_title_font" class="form-select design-live-font-select" data-css-target="--post-title-font">
+                                {% for font in design_font_choices %}
+                                    <option value="{{ font.value }}" data-font-stack="{{ font.stack }}" style="font-family: {{ font.stack|safe }};" {% if active_design_customization.post_title_font == font.value %}selected{% endif %}>{{ font.label }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <div class="design-live-editor-field-row">
+                            <div class="design-live-editor-field design-live-editor-field--color">
+                                <label class="form-label">Boja</label>
+                                <input type="color" name="post_title_color" class="form-control form-control-color design-live-color-input" value="{{ active_design_customization.post_title_color|default:'#111827' }}" data-css-target="--post-title-color">
+                            </div>
+                            <div class="design-live-editor-field design-live-editor-field--size">
+                                <label class="form-label">Veličina</label>
+                                <div class="design-live-size-wrap">
+                                    <input type="range" min="20" max="60" step="1" name="post_title_size" value="{{ active_design_customization.post_title_size|default:'32' }}" class="form-range design-live-range-input" data-css-target="--post-title-size" data-sync-name="post_title_size_number">
+                                    <input type="number" min="20" max="60" step="1" name="post_title_size_number" value="{{ active_design_customization.post_title_size|default:'32' }}" class="form-control design-live-number-input" data-css-target="--post-title-size" data-sync-name="post_title_size">
+                                    <span class="design-live-unit">px</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="design-live-editor-card" data-preview-role="box-title">
+                        <div class="design-live-editor-card-head">
+                            <div>
+                                <h6 class="mb-1">Naslov boxa</h6>
+                                <div class="small text-muted">Naslovi boxeva lijevo i desno.</div>
+                            </div>
+                            <button type="submit" class="btn btn-sm btn-outline-secondary" name="reset_design_part" value="box_title">Vrati</button>
+                        </div>
+
+                        <div class="design-live-editor-field">
+                            <label class="form-label">Font</label>
+                            <select name="box_title_font" class="form-select design-live-font-select" data-css-target="--box-title-font">
+                                {% for font in design_font_choices %}
+                                    <option value="{{ font.value }}" data-font-stack="{{ font.stack }}" style="font-family: {{ font.stack|safe }};" {% if active_design_customization.box_title_font == font.value %}selected{% endif %}>{{ font.label }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <div class="design-live-editor-field-row">
+                            <div class="design-live-editor-field design-live-editor-field--color">
+                                <label class="form-label">Boja</label>
+                                <input type="color" name="box_title_color" class="form-control form-control-color design-live-color-input" value="{{ active_design_customization.box_title_color|default:'#3f3128' }}" data-css-target="--box-title-color">
+                            </div>
+                            <div class="design-live-editor-field design-live-editor-field--size">
+                                <label class="form-label">Veličina</label>
+                                <div class="design-live-size-wrap">
+                                    <input type="range" min="14" max="40" step="1" name="box_title_size" value="{{ active_design_customization.box_title_size|default:'20' }}" class="form-range design-live-range-input" data-css-target="--box-title-size" data-sync-name="box_title_size_number">
+                                    <input type="number" min="14" max="40" step="1" name="box_title_size_number" value="{{ active_design_customization.box_title_size|default:'20' }}" class="form-control design-live-number-input" data-css-target="--box-title-size" data-sync-name="box_title_size">
+                                    <span class="design-live-unit">px</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="design-live-editor-actions">
+                        <button type="submit" class="btn btn-outline-secondary" name="reset_design_all" value="1">Vrati sve</button>
+                        <button type="submit" class="btn btn-primary">Spremi</button>
+                    </div>
+                </aside>
+
+                <section class="design-live-preview-panel">
+                    <div class="design-live-preview-head">
+                        <div>
+                            <div class="design-live-preview-title">Preview bloga</div>
+                            <div class="design-live-preview-subtitle">Ovo je tvoj pravi blog unutar uređivača.</div>
+                        </div>
+                        <a href="{{ live_preview_url }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-secondary">Otvori veći pregled</a>
+                    </div>
+
+                    <div class="design-live-preview-frame-shell">
+                        <iframe
+                            src="{{ live_preview_url }}"
+                            class="design-live-preview-frame"
+                            data-design-preview-frame
+                            title="Live preview bloga"></iframe>
+                    </div>
+                </section>
+            </div>
+        </form>
+    </div>
+</div>

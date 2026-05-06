@@ -1,0 +1,748 @@
+{% extends "blog/base.html" %}
+{% load static custom_tags %}
+
+{% block blog_header %}{% endblock %}
+
+{% block left_sidebar %}
+<div class="magazin-sidebar">
+    <div class="magazin-sidebar-inner">
+        <div class="magazin-profile-block">
+            {% if blog.profile.avatar %}
+                <img src="{{ blog.profile.avatar.url }}" alt="{{ blog.username }}" class="magazin-avatar">
+            {% else %}
+                <img src="{% static 'images/default-avatar.jpg' %}" alt="{{ blog.username }}" class="magazin-avatar">
+            {% endif %}
+
+            <div class="magazin-profile-top-row">
+                <div class="magazin-profile-name">{{ blog.username }}</div>
+
+                {% if request.user.is_authenticated and request.user != blog %}
+                <div class="magazin-profile-actions">
+                    {% if not is_restricted %}
+                        <form method="post" action="{% url 'follow_toggle' blog.username %}" class="m-0">
+                            {% csrf_token %}
+                            <button type="submit" class="btn {% if is_following %}btn-outline-primary{% else %}btn-primary{% endif %} btn-sm">
+                                {% if is_following %}Pratiš{% else %}Prati{% endif %}
+                            </button>
+                        </form>
+                    {% endif %}
+
+                    <div class="dropdown magazin-profile-dropdown">
+                        <a class="magazin-profile-dropdown-toggle"
+                           href="#"
+                           role="button"
+                           data-bs-toggle="dropdown"
+                           aria-expanded="false"
+                           title="Više opcija">
+                            <i class="bi bi-three-dots fs-5"></i>
+                        </a>
+
+                        <ul class="dropdown-menu dropdown-menu-end magazin-profile-dropdown-menu">
+                            {% if is_following %}
+                                <li>
+                                    <form method="post" action="{% url 'unfollow_user' blog.username %}" class="m-0">
+                                        {% csrf_token %}
+                                        <button type="submit" class="dropdown-item">Prestani pratiti</button>
+                                    </form>
+                                </li>
+                            {% else %}
+                                <li>
+                                    <form method="post" action="{% url 'follow_toggle' blog.username %}" class="m-0">
+                                        {% csrf_token %}
+                                        <button type="submit" class="dropdown-item" {% if is_restricted %}disabled{% endif %}>Prati korisnika</button>
+                                    </form>
+                                </li>
+                            {% endif %}
+
+                            <li>
+                                <form method="post" action="{% url 'restrict_user' blog.username %}" class="m-0">
+                                    {% csrf_token %}
+                                    <button type="submit" class="dropdown-item">Ograniči korisnika</button>
+                                </form>
+                            </li>
+
+                            <li><hr class="dropdown-divider"></li>
+
+                            <li>
+                                <form method="post" action="{% url 'block_user' blog.username %}" class="m-0">
+                                    {% csrf_token %}
+                                    <button type="submit" class="dropdown-item text-danger">Blokiraj korisnika</button>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+
+            <div class="magazin-profile-meta">{{ followers_count }} pratitelja · {{ following_count }} prati</div>
+            {% if has_author_content %}
+                <a href="{{ author_page_url }}" class="magazin-profile-author-link">Upoznaj autora</a>
+            {% endif %}
+
+            {% if request.user.is_authenticated and request.user != blog and is_restricted %}
+                <div class="magazin-profile-note">Ovaj autor te je ograničio pa ne možeš pratiti, lajkati ni komentirati.</div>
+            {% endif %}
+        </div>
+
+        {% if blog_preferences.blog_archive_mode == "both" or blog_preferences.blog_archive_mode == "calendar" %}
+        <section class="magazin-sidebar-section">
+            <div class="magazin-section-title">Kalendar</div>
+            <div class="magazin-calendar-title calendar-month-nav"><a href="{{ prev_month_url }}" class="calendar-month-nav-link" aria-label="Prethodni mjesec">&#8249;</a><span>{{ current_month_hr|upper }}, {{ current_year }}</span><a href="{{ next_month_url }}" class="calendar-month-nav-link" aria-label="Sljedeći mjesec">&#8250;</a></div>
+            <div class="magazin-calendar-weekdays">
+                <div>P</div><div>U</div><div>S</div><div>Č</div><div>P</div><div>S</div><div>N</div>
+            </div>
+            <div class="magazin-calendar-grid">
+                {% for week in month_calendar %}
+                    {% for day in week %}
+                        {% if day == 0 %}
+                            <div class="magazin-calendar-empty"></div>
+                        {% else %}
+                            {% with pid=day_single_post_map|get_item:day %}
+                                {% if day in days_with_posts %}
+                                    {% if pid %}
+                                        <a href="{% url 'post_detail' pid %}" class="magazin-calendar-day magazin-calendar-day--has-post {% if day == current_day %}magazin-calendar-day--today{% endif %}">{{ day }}</a>
+                                    {% else %}
+                                        <a href="{{ archive_base_url }}?year={{ current_year }}&month={{ current_month_num }}&day={{ day }}" class="magazin-calendar-day magazin-calendar-day--has-post {% if day == current_day %}magazin-calendar-day--today{% endif %}">{{ day }}</a>
+                                    {% endif %}
+                                {% else %}
+                                    <div class="magazin-calendar-day {% if day == current_day %}magazin-calendar-day--today{% endif %}">{{ day }}</div>
+                                {% endif %}
+                            {% endwith %}
+                        {% endif %}
+                    {% endfor %}
+                {% endfor %}
+            </div>
+        </section>
+        {% endif %}
+
+        {% if blog_preferences.blog_archive_mode == "both" or blog_preferences.blog_archive_mode == "list" %}
+        <section class="magazin-sidebar-section">
+            <div class="magazin-section-title">Arhiva</div>
+            <div class="magazin-archive-list">
+                {% for a in archives %}
+                    <a class="magazin-archive-link" href="{{ archive_base_url }}?year={{ a.year }}&month={{ a.month }}">{{ a.label }} ({{ a.count }})</a>
+                {% empty %}
+                    <div class="magazin-empty-copy">Nema postova.</div>
+                {% endfor %}
+            </div>
+        </section>
+        {% endif %}
+
+        {% if blog_preferences.analytics_widget_side == 'left_top' %}
+        <section class="magazin-sidebar-section">
+            {% include "blog/components/live_analytics_widget.html" with analytics_widget_class="sidebar-left-align" %}
+        </section>
+        {% endif %}
+
+        {% for box in left_boxes %}
+        <section class="magazin-sidebar-section magazin-sidebar-section--box">
+            <div class="magazin-section-title">{{ box.title }}</div>
+            <div class="magazin-sidebar-box-content">{{ box.content|safe }}</div>
+        </section>
+        {% endfor %}
+
+        {% if blog_preferences.analytics_widget_side == 'right_top' %}
+        <section class="magazin-sidebar-section">
+            {% include "blog/components/live_analytics_widget.html" with analytics_widget_class="sidebar-left-align" %}
+        </section>
+        {% endif %}
+
+        {% for box in right_boxes %}
+        <section class="magazin-sidebar-section magazin-sidebar-section--box">
+            <div class="magazin-section-title">{{ box.title }}</div>
+            <div class="magazin-sidebar-box-content">{{ box.content|safe }}</div>
+        </section>
+        {% endfor %}
+
+        {% if blog_preferences.analytics_widget_side == 'left_bottom' or blog_preferences.analytics_widget_side == 'right_bottom' %}
+        <section class="magazin-sidebar-section">
+            {% include "blog/components/live_analytics_widget.html" with analytics_widget_class="sidebar-left-align" %}
+        </section>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
+
+{% block right_sidebar %}{% endblock %}
+
+{% block content %}
+<style>
+:root {
+    --magazin-main-bg: {{ blog_preferences.active_design_customization.outer_background_color_1|default:'#dce9e3' }};
+    --magazin-sidebar-bg: {{ blog_preferences.active_design_customization.header_background_color_1|default:'#f6f1ea' }};
+    --magazin-content-bg: {{ blog_preferences.active_design_customization.content_background_color|default:'#fffaf5' }};
+    --magazin-content-border: {{ blog_preferences.active_design_customization.content_border_color|default:'#ddd1c4' }};
+    --magazin-section-bg: {{ blog_preferences.active_design_customization.box_background_color|default:'#f8f3ed' }};
+    --magazin-section-border: {{ blog_preferences.active_design_customization.box_border_color|default:'#e6dbcf' }};
+    --magazin-title-color: {{ blog_preferences.active_design_customization.blog_title_color|default:'#ffffff' }};
+    --magazin-post-title: {{ blog_preferences.active_design_customization.post_title_color|default:'#4f4136' }};
+    --magazin-box-title: {{ blog_preferences.active_design_customization.box_title_color|default:'#54463b' }};
+    --magazin-text: {{ blog_preferences.active_design_customization.body_text_color|default:'#5e5043' }};
+    --magazin-date: {{ blog_preferences.active_design_customization.post_date_color|default:'#9b7b5a' }};
+    --magazin-title-font: {{ blog_preferences.active_design_customization.blog_title_font_stack|default:'Georgia, Times New Roman, serif' }};
+    --magazin-post-font: {{ blog_preferences.active_design_customization.post_title_font_stack|default:'Georgia, Times New Roman, serif' }};
+    --magazin-box-font: {{ blog_preferences.active_design_customization.box_title_font_stack|default:'Garamond, Georgia, serif' }};
+    --magazin-body-font: {{ blog_preferences.active_design_customization.body_font_stack|default:'Arial, Helvetica, sans-serif' }};
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--magazin-main-bg);
+    color: var(--magazin-text);
+    font-family: var(--magazin-body-font);
+}
+
+.container-fluid.mt-3 {
+    margin-top: 0 !important;
+    padding: 0 !important;
+    max-width: none !important;
+    width: 100vw !important;
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
+}
+
+.container-fluid.mt-3 > .blog-main-layout-row {
+    --bs-gutter-x: 0 !important;
+    width: 100vw !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    align-items: stretch !important;
+}
+
+.blog-main-layout-row {
+    --bs-gutter-x: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100vw !important;
+    max-width: none !important;
+    align-items: stretch !important;
+}
+
+.blog-main-left-column,
+.blog-main-content-column,
+.blog-main-right-column {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.blog-main-left-column {
+    flex: 0 0 290px !important;
+    max-width: 290px !important;
+    width: 290px !important;
+    background: var(--magazin-sidebar-bg);
+    border-right: 1px solid var(--magazin-section-border);
+}
+
+.blog-main-content-column {
+    flex: 1 1 auto !important;
+    max-width: calc(100vw - 290px) !important;
+    width: calc(100vw - 290px) !important;
+    min-width: 0;
+    background: var(--magazin-main-bg);
+}
+
+.blog-main-right-column {
+    display: none !important;
+}
+
+.blog-header-wrap {
+    display: none !important;
+}
+
+.magazin-sidebar {
+    min-height: 100%;
+    background: var(--magazin-sidebar-bg);
+}
+
+.magazin-sidebar-inner {
+    padding: 34px 24px 42px;
+}
+
+.magazin-profile-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.magazin-avatar {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255,255,255,0.82);
+    box-shadow: 0 8px 18px rgba(34, 26, 17, 0.10);
+}
+
+.magazin-profile-top-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+}
+
+.magazin-profile-name {
+    color: var(--magazin-box-title);
+    font-family: var(--magazin-box-font);
+    font-size: 1.02rem;
+    font-weight: 700;
+    line-height: 1.15;
+}
+
+.magazin-profile-meta,
+.magazin-profile-note {
+    color: color-mix(in srgb, var(--magazin-text) 80%, transparent);
+    font-size: 0.83rem;
+    line-height: 1.45;
+}
+
+.magazin-profile-author-link {
+    margin-top: 6px;
+    display: inline-flex;
+    font-size: 0.88rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--magazin-box-title);
+}
+
+.magazin-profile-author-link:hover {
+    text-decoration: underline;
+    color: var(--magazin-box-title);
+}
+
+.magazin-profile-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.magazin-profile-dropdown {
+    position: relative;
+}
+
+.magazin-profile-dropdown-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    color: var(--magazin-box-title);
+    text-decoration: none;
+}
+
+.magazin-profile-dropdown-toggle::after {
+    display: none !important;
+}
+
+.magazin-profile-dropdown-menu {
+    min-width: 220px;
+    z-index: 9999;
+}
+
+nav.navbar {
+    position: relative;
+    z-index: 5000 !important;
+}
+
+nav.navbar .dropdown-menu {
+    z-index: 5100 !important;
+}
+
+.magazin-sidebar-section {
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid color-mix(in srgb, var(--magazin-section-border) 78%, transparent);
+}
+
+.magazin-sidebar-section--box {
+    background: color-mix(in srgb, var(--magazin-section-bg) 85%, white 15%);
+    border: 1px solid var(--magazin-section-border);
+    padding: 16px 16px 14px;
+    border-radius: 16px;
+}
+
+.magazin-sidebar-section--box .magazin-section-title {
+    margin-bottom: 10px;
+}
+
+.magazin-section-title,
+.magazin-calendar-title {
+    color: var(--magazin-box-title);
+    font-family: var(--magazin-box-font);
+}
+
+.magazin-section-title {
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.72rem;
+    font-weight: 700;
+}
+
+.magazin-calendar-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+.magazin-calendar-weekdays,
+.magazin-calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 6px;
+    text-align: center;
+}
+
+.magazin-calendar-weekdays {
+    margin-bottom: 6px;
+    font-size: 0.72rem;
+    color: color-mix(in srgb, var(--magazin-text) 72%, transparent);
+}
+
+.magazin-calendar-empty,
+.magazin-calendar-day {
+    min-height: 28px;
+}
+
+.magazin-calendar-day {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    color: var(--magazin-text);
+    background: rgba(255,255,255,0.65);
+}
+
+.magazin-calendar-day--has-post {
+    background: #fff;
+    color: #7a5d40;
+    font-weight: 700;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+}
+
+.magazin-calendar-day--today {
+    background: var(--magazin-date);
+    color: #fff;
+    font-weight: 800;
+}
+
+.magazin-archive-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.magazin-archive-link {
+    color: var(--magazin-text);
+    text-decoration: none;
+}
+
+.magazin-archive-link:hover {
+    color: #7a5d40;
+}
+
+.magazin-empty-copy {
+    color: color-mix(in srgb, var(--magazin-text) 74%, transparent);
+    font-size: 0.9rem;
+}
+
+.magazin-sidebar-box-content {
+    color: var(--magazin-text);
+    font-size: 0.92rem;
+    line-height: 1.65;
+}
+
+.magazin-sidebar-box-content > :last-child,
+.magazin-sidebar-box-content p:last-child {
+    margin-bottom: 0;
+}
+
+.magazin-sidebar-box-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+.magazin-sidebar .live-analytics-widget,
+.magazin-sidebar .live-analytics-widget .sidebar-box,
+.magazin-sidebar .live-analytics-widget .analytics-map-card,
+.magazin-sidebar .live-analytics-widget .live-analytics-stat-card,
+.magazin-sidebar .live-analytics-widget .live-analytics-page-row {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+.magazin-sidebar .live-analytics-widget,
+.magazin-sidebar .live-analytics-widget .sidebar-box,
+.magazin-sidebar .live-analytics-widget .analytics-map-card {
+    border: none !important;
+}
+
+.magazin-sidebar .live-analytics-widget {
+    margin: 0 !important;
+}
+
+.magazin-sidebar .live-analytics-widget .sidebar-box-title,
+.magazin-sidebar .live-analytics-widget .small.fw-semibold {
+    padding: 0 0 12px !important;
+    margin: 0 !important;
+    background: transparent !important;
+    border: none !important;
+    color: var(--magazin-box-title) !important;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.72rem !important;
+}
+
+.magazin-sidebar .live-analytics-widget .sidebar-box-content {
+    padding: 0 !important;
+}
+
+.magazin-main-shell {
+    min-height: 100%;
+    background: linear-gradient(to bottom, transparent 0 260px, var(--magazin-main-bg) 260px 100%);
+    padding-bottom: 56px;
+}
+
+.magazin-hero {
+    position: relative;
+    width: 100%;
+    min-height: 250px;
+    background: rgba(255,255,255,0.15);
+    overflow: hidden;
+}
+
+.magazin-hero-media {
+    width: 100%;
+    aspect-ratio: 16 / 5.3;
+    min-height: 250px;
+    overflow: hidden;
+}
+
+.magazin-hero-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.magazin-hero-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: clamp(28px, 3vw, 44px) 28px 28px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.20), rgba(0,0,0,0.03) 45%, rgba(0,0,0,0));
+    text-align: center;
+}
+
+.magazin-blog-title {
+    margin: 0;
+    color: var(--magazin-title-color);
+    font-family: var(--magazin-title-font);
+    font-size: clamp(2rem, 2.3vw, 3rem);
+    line-height: 1.1;
+    text-shadow: 0 8px 22px rgba(0,0,0,0.20);
+}
+
+.magazin-posts-wrap {
+    width: min(760px, calc(100% - 88px));
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -118px;
+    position: relative;
+    z-index: 2;
+}
+
+.magazin-post-entry {
+    background: var(--magazin-content-bg);
+    border: 1px solid var(--magazin-content-border);
+    box-shadow: 0 18px 42px rgba(56, 38, 21, 0.10);
+    padding: 28px 30px;
+    margin-bottom: 26px;
+}
+
+.magazin-post-entry h4,
+.magazin-post-entry h4 a,
+.blog-post-title {
+    color: var(--magazin-post-title) !important;
+    font-family: var(--magazin-post-font) !important;
+}
+
+.magazin-post-entry hr {
+    border-color: rgba(86, 72, 58, 0.12);
+}
+
+.magazin-post-entry a {
+    color: #8b5a23;
+}
+
+.magazin-post-entry .blog-date-day,
+.magazin-post-entry .blog-date-month,
+.magazin-post-entry .blog-date-year {
+    color: var(--magazin-date);
+}
+
+.post-meta,
+.post-author-line,
+.comment-text,
+.comment-time,
+.sidebar-box-content,
+.comment-body {
+    color: var(--magazin-text);
+}
+
+.comment-body {
+    background: #fff;
+    border: 1px solid var(--magazin-content-border);
+}
+
+textarea.form-control {
+    background: #fff !important;
+    color: var(--magazin-text) !important;
+    border: 1px solid var(--magazin-content-border) !important;
+}
+
+textarea.form-control:focus {
+    box-shadow: 0 0 0 0.12rem rgba(155, 123, 90, 0.18) !important;
+    border-color: #b68f68 !important;
+}
+
+@media (max-width: 991.98px) {
+    .blog-main-left-column,
+    .blog-main-content-column {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    .magazin-sidebar-inner {
+        padding: 24px 18px 28px;
+    }
+
+    .magazin-main-shell {
+        background: linear-gradient(to bottom, transparent 0 210px, var(--magazin-main-bg) 210px 100%);
+    }
+
+    .magazin-hero-media {
+        aspect-ratio: 16 / 7.5;
+        min-height: 210px;
+    }
+
+    .magazin-posts-wrap {
+        width: auto;
+        margin-left: 14px;
+        margin-right: 14px;
+        margin-top: -56px;
+    }
+
+    .magazin-post-entry {
+        padding: 22px 20px;
+    }
+}
+</style>
+
+<div class="magazin-main-shell">
+    <div class="magazin-hero">
+        <div class="magazin-hero-media">
+            {% if blog.profile.simple_background_image %}
+                <img src="{{ blog.profile.simple_background_image.url }}" alt="Naslovna slika bloga">
+            {% elif blog_preferences.active_design_customization.outer_background_asset %}
+                <img src="{% static blog_preferences.active_design_customization.outer_background_asset %}" alt="Naslovna slika bloga">
+            {% endif %}
+        </div>
+        <div class="magazin-hero-overlay">
+            <h1 class="magazin-blog-title">{{ blog.profile.blog_name }}</h1>
+
+    {% if blog.profile.blog_tagline %}<p class="blog-tagline-shared">{{ blog.profile.blog_tagline }}</p>{% endif %}
+        </div>
+    </div>
+
+    <div class="magazin-posts-wrap">
+        {% for post in page_obj %}
+            <article class="magazin-post-entry">
+                <div class="d-flex justify-content-between align-items-start gap-3">
+                    <div class="d-flex flex-column" style="gap:10px; min-width:0; flex:1;">
+                        <h4 class="mb-0">{{ post.title }}</h4>
+                        {% include "blog/components/post_meta.html" %}
+                    </div>
+
+                    <div class="text-center ms-3 blog-date-shell blog-date-style-{{ blog_preferences.active_design_customization.post_date_style|default:'classic_vertical' }} blog-date-effect-{{ blog_preferences.active_design_customization.post_date_effect|default:'solid' }}" style="line-height:1;" data-date-style="{{ blog_preferences.active_design_customization.post_date_style|default:'classic_vertical' }}" data-date-effect="{{ blog_preferences.active_design_customization.post_date_effect|default:'solid' }}">
+                        <div class="blog-date-main">
+                            <div class="blog-date-day-wrap">
+                                <div class="blog-date-day">{{ post.publication_datetime|date:"d" }}</div>
+                            </div>
+                            <div class="blog-date-text">
+                                <div class="blog-date-month">{{ post.publication_datetime|month_hr|upper }}</div>
+                                <div class="blog-date-year">{{ post.publication_datetime|date:"Y" }}</div>
+                            </div>
+                        </div>
+                        <div class="blog-date-inline">
+                            <span class="blog-date-inline-day">{{ post.publication_datetime|date:"d" }}</span>
+                            <span class="blog-date-inline-sep">/</span>
+                            <span class="blog-date-inline-month">{{ post.publication_datetime|month_hr|upper }}</span>
+                            <span class="blog-date-inline-sep">/</span>
+                            <span class="blog-date-inline-year">{{ post.publication_datetime|date:"Y" }}</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-4">
+                    {% include "blog/components/post_body.html" %}
+                </div>
+
+                {% include "blog/components/post_actions.html" %}
+                {% include "blog/components/post_comments.html" %}
+                <hr>
+            </article>
+        {% empty %}
+            <p class="m-4">Nema postova.</p>
+        {% endfor %}
+
+        {% if page_obj.has_other_pages %}
+            <div class="d-flex flex-wrap justify-content-center align-items-center gap-2 mt-4 mb-4">
+                {% if page_obj.has_previous %}
+                    <a href="?page={{ page_obj.previous_page_number }}{{ pagination_query }}" class="btn btn-sm btn-outline-secondary">Prethodna</a>
+                {% endif %}
+                <span class="align-self-center small">Stranica {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}</span>
+                {% if page_obj.has_next %}
+                    <a href="?page={{ page_obj.next_page_number }}{{ pagination_query }}" class="btn btn-sm btn-outline-secondary">Sljedeća</a>
+                {% endif %}
+            </div>
+        {% endif %}
+    </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".poll-bar").forEach(function (bar) {
+        const p = bar.getAttribute("data-percent") || "0";
+        bar.style.width = p + "%";
+    });
+
+    document.querySelectorAll(".js-scroll-to-comments").forEach(function (a) {
+        a.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href");
+            if (!targetId) return;
+            const el = document.querySelector(targetId);
+            if (!el) return;
+            el.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+    });
+});
+</script>
+{% endblock %}

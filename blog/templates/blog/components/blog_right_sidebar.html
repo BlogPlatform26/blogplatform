@@ -1,0 +1,187 @@
+{% load custom_tags %}
+{% with plus_columns=blog_preferences.active_design_customization.right_box_columns|default:'2' %}
+{% if blog.profile.template == 'default_right' or blog.profile.template == 'dark_right' or blog.profile.template == 'classic_right' %}
+<div class="page-top-align blog-sidebar-stack--wide blog-sidebar-stack--right">
+    {% include "blog/components/blog_profile_actions_sidebar.html" %}
+
+    {% if plus_columns == '1' %}
+        {% if blog_preferences.blog_archive_mode == "both" or blog_preferences.blog_archive_mode == "calendar" %}
+        <div class="calendar-box{% if blog.profile.template == 'simple_pattern' or blog.profile.template == 'simple_image' or blog.profile.template == 'simple_retro' %} calendar-box--simple{% endif %}">
+            <div class="calendar-title calendar-title--nav">
+                <a href="{{ prev_month_url }}" class="calendar-month-nav-link" aria-label="Prethodni mjesec">&#8249;</a>
+                <span>{{ current_month_hr|upper }}, {{ current_year }}</span>
+                <a href="{{ next_month_url }}" class="calendar-month-nav-link" aria-label="Sljedeći mjesec">&#8250;</a>
+            </div>
+
+            <div class="calendar-weekdays"{% if blog.profile.template == 'simple_pattern' or blog.profile.template == 'simple_image' or blog.profile.template == 'simple_retro' %} style="display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px;text-align:center;margin-bottom:10px;"{% endif %}>
+                <div>P</div><div>U</div><div>S</div><div>Č</div><div>P</div><div>S</div><div>N</div>
+            </div>
+
+            <div class="calendar-grid"{% if blog.profile.template == 'simple_pattern' or blog.profile.template == 'simple_image' or blog.profile.template == 'simple_retro' %} style="display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px;text-align:center;"{% endif %}>
+            {% for week in month_calendar %}
+                {% for day in week %}
+                    {% if day == 0 %}
+                        <div class="calendar-empty"{% if blog.profile.template == 'simple_pattern' or blog.profile.template == 'simple_image' or blog.profile.template == 'simple_retro' %} style="min-height:36px;"{% endif %}></div>
+                    {% else %}
+                        {% with pid=day_single_post_map|get_item:day %}
+                            {% if day in days_with_posts %}
+                                {% if pid %}
+                                    <a href="{% url 'post_detail' pid %}"
+                                       class="calendar-day calendar-day-has-post {% if day == current_day %}calendar-day-today{% endif %}"{% if blog.profile.template == 'simple_pattern' or blog.profile.template == 'simple_image' or blog.profile.template == 'simple_retro' %} style="display:flex;align-items:center;justify-content:center;min-height:36px;text-decoration:none;"{% endif %}>
+                                        {{ day }}
+                                    </a>
+                                {% else %}
+                                    <a href="{{ archive_base_url }}?year={{ current_year }}&month={{ current_month_num }}&day={{ day }}"
+                                       class="calendar-day calendar-day-has-post {% if day == current_day %}calendar-day-today{% endif %}"{% if blog.profile.template == 'simple_pattern' or blog.profile.template == 'simple_image' or blog.profile.template == 'simple_retro' %} style="display:flex;align-items:center;justify-content:center;min-height:36px;text-decoration:none;"{% endif %}>
+                                        {{ day }}
+                                    </a>
+                                {% endif %}
+                            {% else %}
+                                <div class="calendar-day {% if day == current_day %}calendar-day-today{% endif %}"{% if blog.profile.template == 'simple_pattern' or blog.profile.template == 'simple_image' or blog.profile.template == 'simple_retro' %} style="display:flex;align-items:center;justify-content:center;min-height:36px;"{% endif %}>
+                                    {{ day }}
+                                </div>
+                            {% endif %}
+                        {% endwith %}
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
+        {% if blog_preferences.blog_archive_mode == "both" or blog_preferences.blog_archive_mode == "list" %}
+        <div class="archive-box{% if blog.profile.template == 'simple_pattern' or blog.profile.template == 'simple_image' or blog.profile.template == 'simple_retro' %} archive-box--simple{% endif %}">
+            <div class="archive-title">Arhiva</div>
+            <div class="archive-list">
+                {% for a in archives %}
+                    <a class="archive-link" href="{{ archive_base_url }}?year={{ a.year }}&month={{ a.month }}">
+                        {{ a.label }} ({{ a.count }})
+                    </a>
+                {% empty %}
+                    <div class="archive-empty">Nema postova.</div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
+        {% if blog_preferences.analytics_widget_side == 'left_top' %}
+            {% include "blog/components/live_analytics_widget.html" with analytics_widget_class="sidebar-left-align" %}
+        {% endif %}
+
+        {% for box in left_boxes %}
+            <div class="sidebar-box sidebar-left-align{% if blog.profile.template == 'simple_pattern' or blog.profile.template == 'simple_image' or blog.profile.template == 'simple_retro' %} sidebar-box--simple{% endif %}">
+                <div class="sidebar-box-title">{{ box.title }}</div>
+                <div class="sidebar-box-content">{{ box.content|safe }}</div>
+            </div>
+        {% endfor %}
+
+        {% if blog_preferences.analytics_widget_side == 'left_bottom' %}
+            {% include "blog/components/live_analytics_widget.html" with analytics_widget_class="sidebar-left-align" %}
+        {% endif %}
+    {% endif %}
+
+    {% if blog_preferences.analytics_widget_side == 'right_top' %}
+        {% include "blog/components/live_analytics_widget.html" with analytics_widget_class="sidebar-right-align" %}
+    {% endif %}
+
+    {% for box in right_boxes %}
+        <div class="sidebar-box sidebar-right-align{% if blog.profile.template == 'simple_pattern' or blog.profile.template == 'simple_image' or blog.profile.template == 'simple_retro' %} sidebar-box--simple{% endif %}">
+            <div class="sidebar-box-title">{{ box.title }}</div>
+            <div class="sidebar-box-content">{{ box.content|safe }}</div>
+        </div>
+    {% endfor %}
+
+    {% if blog_preferences.analytics_widget_side == 'right_bottom' %}
+        {% include "blog/components/live_analytics_widget.html" with analytics_widget_class="sidebar-right-align" %}
+    {% endif %}
+</div>
+{% else %}
+<div class="page-top-align">
+    {% include "blog/components/blog_profile_actions_sidebar.html" %}
+
+    {% if blog.profile.template == 'simple_retro' %}
+        <div class="calendar-box calendar-box--simple">
+            <div class="calendar-title calendar-title--nav">
+                <a href="{{ prev_month_url }}" class="calendar-month-nav-link" aria-label="Prethodni mjesec">&#8249;</a>
+                <span>{{ current_month_hr|upper }}, {{ current_year }}</span>
+                <a href="{{ next_month_url }}" class="calendar-month-nav-link" aria-label="Sljedeći mjesec">&#8250;</a>
+            </div>
+
+            <div class="calendar-weekdays" style="display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px;text-align:center;margin-bottom:10px;">
+                <div>P</div><div>U</div><div>S</div><div>Č</div><div>P</div><div>S</div><div>N</div>
+            </div>
+
+            <div class="calendar-grid" style="display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px;text-align:center;">
+            {% for week in month_calendar %}
+                {% for day in week %}
+                    {% if day == 0 %}
+                        <div class="calendar-empty" style="min-height:36px;"></div>
+                    {% else %}
+                        {% with pid=day_single_post_map|get_item:day %}
+                            {% if day in days_with_posts %}
+                                {% if pid %}
+                                    <a href="{% url 'post_detail' pid %}"
+                                       class="calendar-day calendar-day-has-post {% if day == current_day %}calendar-day-today{% endif %}"
+                                       style="display:flex;align-items:center;justify-content:center;min-height:36px;text-decoration:none;">
+                                        {{ day }}
+                                    </a>
+                                {% else %}
+                                    <a href="{{ archive_base_url }}?year={{ current_year }}&month={{ current_month_num }}&day={{ day }}"
+                                       class="calendar-day calendar-day-has-post {% if day == current_day %}calendar-day-today{% endif %}"
+                                       style="display:flex;align-items:center;justify-content:center;min-height:36px;text-decoration:none;">
+                                        {{ day }}
+                                    </a>
+                                {% endif %}
+                            {% else %}
+                                <div class="calendar-day {% if day == current_day %}calendar-day-today{% endif %}"
+                                     style="display:flex;align-items:center;justify-content:center;min-height:36px;">
+                                    {{ day }}
+                                </div>
+                            {% endif %}
+                        {% endwith %}
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+            </div>
+        </div>
+
+        <div class="archive-box archive-box--simple">
+            <div class="archive-title">Arhiva</div>
+            <div class="archive-list">
+                {% for a in archives %}
+                    <a class="archive-link" href="{{ archive_base_url }}?year={{ a.year }}&month={{ a.month }}">
+                        {{ a.label }} ({{ a.count }})
+                    </a>
+                {% empty %}
+                    <div class="archive-empty">Nema postova.</div>
+                {% endfor %}
+            </div>
+        </div>
+    {% endif %}
+
+    {% if blog_preferences.analytics_widget_side == 'right_top' %}
+        {% include "blog/components/live_analytics_widget.html" with analytics_widget_class="sidebar-right-align" %}
+    {% endif %}
+
+    {% if blog.profile.template == 'simple_retro' %}
+        {% for box in left_boxes %}
+            <div class="sidebar-box sidebar-right-align sidebar-box--simple">
+                <div class="sidebar-box-title">{{ box.title }}</div>
+                <div class="sidebar-box-content">{{ box.content|safe }}</div>
+            </div>
+        {% endfor %}
+    {% endif %}
+
+    {% for box in right_boxes %}
+        <div class="sidebar-box sidebar-right-align{% if blog.profile.template == 'simple_pattern' or blog.profile.template == 'simple_image' or blog.profile.template == 'simple_retro' %} sidebar-box--simple{% endif %}">
+            <div class="sidebar-box-title">{{ box.title }}</div>
+            <div class="sidebar-box-content">{{ box.content|safe }}</div>
+        </div>
+    {% endfor %}
+
+    {% if blog_preferences.analytics_widget_side == 'right_bottom' %}
+        {% include "blog/components/live_analytics_widget.html" with analytics_widget_class="sidebar-right-align" %}
+    {% endif %}
+</div>
+{% endif %}
+{% endwith %}

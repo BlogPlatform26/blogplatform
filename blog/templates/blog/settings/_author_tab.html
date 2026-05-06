@@ -1,0 +1,281 @@
+{% if request.GET.tab == "autor" %}
+    <h4 class="mb-4">Upoznaj autora</h4>
+
+    <div class="card p-4 mb-4 shadow-sm">
+        <div class="d-flex flex-wrap justify-content-between gap-3 align-items-start mb-4">
+            <div>
+                <h5 class="mb-1">Podaci autora</h5>
+                <div class="text-muted small">
+                    Sve je opcionalno. Ako ništa ne ispuniš, link “Upoznaj autora” neće se prikazivati na blogu.
+                </div>
+            </div>
+
+            {% if profile.has_author_content %}
+                <a href="{% url 'author_detail' request.user.username %}" class="btn btn-outline-primary btn-sm" target="_blank">
+                    Otvori stranicu autora
+                </a>
+            {% endif %}
+        </div>
+
+        <form method="POST">
+            {% csrf_token %}
+
+            <div class="mb-4">
+                <label class="form-label" for="{{ author_form.author_bio.id_for_label }}">{{ author_form.author_bio.label }}</label>
+                {{ author_form.author_bio }}
+            </div>
+
+            <div class="author-settings-group mb-4">
+                <div class="author-settings-group-title">Osobno i identitet</div>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label class="form-label" for="{{ author_form.author_full_name.id_for_label }}">{{ author_form.author_full_name.label }}</label>
+                        {{ author_form.author_full_name }}
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label" for="{{ author_form.author_nickname.id_for_label }}">{{ author_form.author_nickname.label }}</label>
+                        {{ author_form.author_nickname }}
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label" for="{{ author_form.author_birth_date.id_for_label }}">{{ author_form.author_birth_date.label }}</label>
+                        {{ author_form.author_birth_date }}
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label" for="{{ author_form.author_birth_place.id_for_label }}">{{ author_form.author_birth_place.label }}</label>
+                        {{ author_form.author_birth_place }}
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label" for="{{ author_form.author_education.id_for_label }}">{{ author_form.author_education.label }}</label>
+                        {{ author_form.author_education }}
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label" for="{{ author_form.author_occupation.id_for_label }}">{{ author_form.author_occupation.label }}</label>
+                        {{ author_form.author_occupation }}
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label" for="{{ author_form.author_languages.id_for_label }}">{{ author_form.author_languages.label }}</label>
+                        {{ author_form.author_languages }}
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label" for="{{ author_form.author_religion.id_for_label }}">{{ author_form.author_religion.label }}</label>
+                        {{ author_form.author_religion }}
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label" for="{{ author_form.author_nationality.id_for_label }}">{{ author_form.author_nationality.label }}</label>
+                        {{ author_form.author_nationality }}
+                    </div>
+                </div>
+            </div>
+
+            <div class="author-settings-group mb-4">
+                <div class="author-settings-group-title">Interesi i pisanje</div>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label class="form-label" for="{{ author_form.author_hobbies.id_for_label }}">{{ author_form.author_hobbies.label }}</label>
+                        {{ author_form.author_hobbies }}
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label" for="{{ author_form.author_interests.id_for_label }}">{{ author_form.author_interests.label }}</label>
+                        {{ author_form.author_interests }}
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label" for="{{ author_form.author_favorite_topics.id_for_label }}">{{ author_form.author_favorite_topics.label }}</label>
+                        {{ author_form.author_favorite_topics }}
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label" for="{{ author_form.author_inspiration.id_for_label }}">{{ author_form.author_inspiration.label }}</label>
+                        {{ author_form.author_inspiration }}
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label" for="{{ author_form.author_motto.id_for_label }}">{{ author_form.author_motto.label }}</label>
+                        {{ author_form.author_motto }}
+                    </div>
+                </div>
+            </div>
+
+            <div class="author-settings-group mb-3">
+                <div class="author-settings-group-title">Poveznice i kontakt</div>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label class="form-label" for="{{ author_form.author_contact.id_for_label }}">{{ author_form.author_contact.label }}</label>
+                        {{ author_form.author_contact }}
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label" for="{{ author_form.author_social_links.id_for_label }}">{{ author_form.author_social_links.label }}</label>
+                        {{ author_form.author_social_links }}
+                    </div>
+                    <div class="col-md-12">
+                        <label class="form-label" for="{{ author_form.author_website.id_for_label }}">{{ author_form.author_website.label }}</label>
+                        {{ author_form.author_website }}
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-check mt-4 mb-3">
+                {{ author_form.allow_author_questions }}
+                <label class="form-check-label" for="{{ author_form.allow_author_questions.id_for_label }}">
+                    Dopusti čitateljima da ti postavljaju pitanja
+                </label>
+            </div>
+
+            <button type="submit" name="save_author_profile" class="btn btn-primary">
+                Spremi podatke autora
+            </button>
+        </form>
+    </div>
+
+    <div class="card p-4 shadow-sm">
+        <div class="d-flex flex-wrap justify-content-between gap-3 align-items-start mb-3">
+            <div>
+                <h5 class="mb-1">Pitanja čitatelja</h5>
+                <div class="small text-muted">
+                    Javno pitanje i odgovor vide svi. Privatno pitanje i odgovor vidi samo korisnik koji je to pitanje poslao.
+                </div>
+            </div>
+        </div>
+
+        <div class="author-filter-bar mb-4">
+            <a href="{% url 'blog_settings' %}?tab=autor&author_question_filter=all" class="author-filter-link {% if author_question_filter == 'all' %}active{% endif %}">
+                Sva ({{ author_questions_all_count }})
+            </a>
+            <a href="{% url 'blog_settings' %}?tab=autor&author_question_filter=answered" class="author-filter-link {% if author_question_filter == 'answered' %}active{% endif %}">
+                Odgovorena ({{ author_questions_answered_count }})
+            </a>
+            <a href="{% url 'blog_settings' %}?tab=autor&author_question_filter=unanswered" class="author-filter-link {% if author_question_filter == 'unanswered' %}active{% endif %}">
+                Neodgovorena ({{ author_questions_unanswered_count }})
+            </a>
+        </div>
+
+        {% for question in received_author_questions %}
+            <div class="author-manage-card mb-3">
+                <div class="d-flex flex-wrap justify-content-between gap-2 mb-3">
+                    <div>
+                        <div class="fw-semibold">{{ question.sender.username }}</div>
+                        <div class="small text-muted">{{ question.created_at|date:"d.m.Y H:i" }}</div>
+                    </div>
+
+                    <div class="d-flex flex-wrap gap-2">
+                        {% if question.answer %}
+                            <span class="badge rounded-pill text-bg-success">Odgovoreno</span>
+                        {% else %}
+                            <span class="badge rounded-pill text-bg-warning">Čeka odgovor</span>
+                        {% endif %}
+
+                        {% if question.answer and question.is_public %}
+                            <span class="badge rounded-pill text-bg-primary">Javno</span>
+                        {% elif question.answer %}
+                            <span class="badge rounded-pill text-bg-secondary">Privatno za pošiljatelja</span>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <div class="qa-box question-box mb-3">
+                    <div class="qa-box-label">Pitanje</div>
+                    <div class="qa-box-text">{{ question.question|linebreaksbr }}</div>
+                </div>
+
+                <form method="POST">
+                    {% csrf_token %}
+                    <input type="hidden" name="author_question_id" value="{{ question.id }}">
+
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">Odgovor</label>
+                        <textarea name="answer" class="form-control" rows="4" placeholder="Napiši odgovor...">{{ question.answer }}</textarea>
+                    </div>
+
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" name="is_public" value="1" id="publicQuestion{{ question.id }}" {% if question.is_public %}checked{% endif %}>
+                        <label class="form-check-label" for="publicQuestion{{ question.id }}">
+                            Prikaži ovo javno svima na stranici “Upoznaj autora”
+                        </label>
+                    </div>
+
+                    <div class="d-flex flex-wrap gap-2">
+                        <button type="submit" name="save_author_question" class="btn btn-outline-primary btn-sm">
+                            Spremi odgovor
+                        </button>
+
+                        <button type="submit" name="delete_author_question" class="btn btn-outline-danger btn-sm" onclick="return confirm('Želiš li izbrisati ovo pitanje?')">
+                            Izbriši pitanje
+                        </button>
+                    </div>
+                </form>
+            </div>
+        {% empty %}
+            <div class="text-muted">Još nema pitanja za ovaj filter.</div>
+        {% endfor %}
+    </div>
+
+    <style>
+    .author-settings-group{
+        border:1px solid #e9ecef;
+        border-radius:18px;
+        padding:18px;
+        background:#fafbfc;
+    }
+
+    .author-settings-group-title{
+        font-size:12px;
+        text-transform:uppercase;
+        letter-spacing:.08em;
+        font-weight:700;
+        color:#6c757d;
+        margin-bottom:14px;
+    }
+
+    .author-filter-bar{
+        display:flex;
+        flex-wrap:wrap;
+        gap:10px;
+    }
+
+    .author-filter-link{
+        text-decoration:none;
+        border:1px solid #d9d9d9;
+        color:#495057;
+        padding:8px 14px;
+        border-radius:999px;
+        font-size:14px;
+        background:#fff;
+    }
+
+    .author-filter-link.active{
+        border-color:#0d6efd;
+        color:#0d6efd;
+        background:rgba(13,110,253,0.08);
+        font-weight:600;
+    }
+
+    .author-manage-card{
+        border:1px solid #e5e7eb;
+        border-radius:18px;
+        padding:18px;
+        background:#fff;
+    }
+
+    .qa-box{
+        border-radius:14px;
+        padding:14px 16px;
+        border:1px solid #e5e7eb;
+    }
+
+    .question-box{
+        background:#f8f9fa;
+    }
+
+    .qa-box-label{
+        font-size:12px;
+        text-transform:uppercase;
+        letter-spacing:.08em;
+        font-weight:700;
+        color:#6c757d;
+        margin-bottom:8px;
+    }
+
+    .qa-box-text{
+        color:#1f2937;
+        line-height:1.6;
+        white-space:pre-wrap;
+    }
+    </style>
+{% endif %}

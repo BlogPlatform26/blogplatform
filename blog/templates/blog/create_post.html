@@ -1,0 +1,38 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+
+{% block left_sidebar %}{% endblock %}
+{% block right_sidebar %}{% endblock %}
+
+<h2>Novi post</h2>
+
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    {{ form.media }}
+
+    {% if form.non_field_errors %}
+        <div class="alert alert-danger">{{ form.non_field_errors }}</div>
+    {% endif %}
+
+    <div class="mb-3">{{ form.title.label_tag }}{{ form.title }}{% for error in form.title.errors %}<div class="text-danger small mt-1">{{ error }}</div>{% endfor %}</div>
+    <div class="mb-3">{{ form.category.label_tag }}{{ form.category }}{% for error in form.category.errors %}<div class="text-danger small mt-1">{{ error }}</div>{% endfor %}</div>
+    <div class="mb-3">{{ form.content.label_tag }}{{ form.content }}{% for error in form.content.errors %}<div class="text-danger small mt-1">{{ error }}</div>{% endfor %}</div>
+    <div class="mb-3">{{ form.image.label_tag }}{{ form.image }}{% for error in form.image.errors %}<div class="text-danger small mt-1">{{ error }}</div>{% endfor %}</div>
+    <div class="mb-3">{{ form.video_url.label_tag }}{{ form.video_url }}{% for error in form.video_url.errors %}<div class="text-danger small mt-1">{{ error }}</div>{% endfor %}</div>
+    <div class="mb-3">{{ form.tags_input.label_tag }}{{ form.tags_input }}{% for error in form.tags_input.errors %}<div class="text-danger small mt-1">{{ error }}</div>{% endfor %}</div>
+    <div class="form-check mb-3">{{ form.allow_comments }} <label class="form-check-label" for="{{ form.allow_comments.id_for_label }}">{{ form.allow_comments.label }}</label>{% for error in form.allow_comments.errors %}<div class="text-danger small mt-1">{{ error }}</div>{% endfor %}</div>
+    <div class="mb-3">{{ form.publish_at.label_tag }}{{ form.publish_at }}<div class="small text-muted mt-1">Ako upišeš datum i vrijeme pa klikneš Objavi, post će biti objavljen tada. Ako ostaviš prazno, objavit će se odmah.</div>{% for error in form.publish_at.errors %}<div class="text-danger small mt-1">{{ error }}</div>{% endfor %}</div>
+
+    <button type="submit" name="publish_post" class="btn btn-primary">
+        Objavi
+    </button>
+    <button type="submit" name="save_draft" class="btn btn-secondary">
+        Spremi kao draft
+    </button>
+</form>
+
+<a href="/" class="btn btn-secondary mt-2">Natrag</a>
+
+{% endblock %}

@@ -1,0 +1,787 @@
+            <!-- POSTOVI -->
+            {% if request.GET.tab == "postovi" %}
+            <h4 class="mb-4">Postovi</h4>
+
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-danger">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+
+            {# CKEditor media (JS/CSS) #}
+            {{ post_form.media }}
+
+            <ul class="nav nav-tabs mb-4">
+
+                <li class="nav-item">
+                    <a href="?tab=postovi&post_filter=new"
+                    class="nav-link {% if post_filter == 'new' %}active{% endif %}">
+                        Novi post
+                    </a>
+                </li>
+
+                <!-- ✅ NOVO -->
+                <li class="nav-item">
+                    <a href="?tab=postovi&post_filter=quiz_new"
+                    class="nav-link {% if post_filter == 'quiz_new' %}active{% endif %}">
+                        Kviz
+                    </a>
+                </li>
+
+                <!-- ✅ NOVO -->
+                <li class="nav-item">
+                    <a href="?tab=postovi&post_filter=poll_new"
+                    class="nav-link {% if post_filter == 'poll_new' %}active{% endif %}">
+                        Anketa
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="?tab=postovi&post_filter=published"
+                    class="nav-link {% if post_filter == 'published' %}active{% endif %}">
+                        Objavljeni ({{ published_count }})
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="?tab=postovi&post_filter=draft"
+                    class="nav-link {% if post_filter == 'draft' %}active{% endif %}">
+                        Skice ({{ draft_count }})
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="?tab=postovi&post_filter=scheduled"
+                    class="nav-link {% if post_filter == 'scheduled' %}active{% endif %}">
+                        Na čekanju ({{ scheduled_count }})
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="?tab=postovi&post_filter=deleted"
+                    class="nav-link {% if post_filter == 'deleted' %}active{% endif %}">
+                        Otpad ({{ deleted_count }})
+                    </a>
+                </li>
+
+            </ul>
+
+            <!-- EDIT POST -->
+            {% if post_filter == "edit" and edit_post %}
+                <div class="card p-4 shadow-sm">
+                    <form method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <input type="hidden" name="update_post_id" value="{{ edit_post.id }}">
+
+                        <div class="row">
+
+                            <!-- LIJEVA STRANA -->
+                            <div class="col-md-8">
+
+                                <div class="mb-3">
+                                    <label class="form-label d-block">Naslov</label>
+                                    <input type="text" name="title"
+                                        value="{{ edit_post.title }}"
+                                        class="form-control">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label d-block">Sadržaj</label>
+                                    <div>
+                                        {{ post_form.content }}
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label d-block">YouTube video link</label>
+                                    {{ post_form.video_url }}
+                                    <div class="small text-muted mt-1">
+                                        Zalijepi obični YouTube link. Primjer: https://www.youtube.com/watch?v=...
+                                    </div>
+                                </div>
+
+                                {% if edit_post.images.all %}
+                                <div class="mb-3">
+                                    <label class="form-label d-block">Postojeće slike</label>
+
+                                    <div class="row g-2">
+                                        {% for img in edit_post.images.all %}
+                                        <div class="col-6">
+                                            <div class="border rounded p-2">
+                                                <img src="{{ img.image.url }}" class="img-fluid rounded"
+                                                    style="max-height:180px; width:100%; object-fit:contain;">
+
+                                                <div class="form-check mt-2">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="delete_post_images" value="{{ img.id }}"
+                                                        id="delimg{{ img.id }}">
+                                                    <label class="form-check-label" for="delimg{{ img.id }}">
+                                                        Izbriši ovu sliku
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                                {% endif %}
+
+                                <div class="mb-3">
+                                    <label class="form-label d-block">Dodaj nove slike</label>
+                                    <input type="file" name="images" class="form-control" accept="image/*" multiple>
+                                </div>
+
+                            </div>
+
+                            <!-- DESNA STRANA -->
+                            <div class="col-md-4">
+
+                                <div class="card">
+                                    <div class="card-body category-card">
+                                        <strong>Kategorija</strong>
+
+                                        {% regroup categories by group as category_groups %}
+
+                                        {% for group in category_groups %}
+                                            <div class="mb-3">
+                                                <div class="category-group-title">
+                                                    {{ group.list.0.get_group_display }}
+                                                </div>
+
+                                                <div class="row">
+                                                    {% for category in group.list %}
+                                                        <div class="col-6">
+                                                            <div class="form-check category-option">
+                                                                <input class="form-check-input"
+                                                                    type="radio"
+                                                                    name="category"
+                                                                    value="{{ category.id }}"
+                                                                    id="edit_cat{{ category.id }}"
+                                                                    {% if edit_post.category and edit_post.category.id == category.id %}checked{% endif %}>
+
+                                                                <label class="form-check-label"
+                                                                    for="edit_cat{{ category.id }}">
+                                                                    {{ category.name }}
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    {% endfor %}
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+
+                                    </div>
+                                </div>
+
+                                <div class="mb-3 mt-3">
+                                    <label class="form-label">Tagovi</label>
+                                    {{ post_form.tags_input }}
+                                    <div class="small text-muted mt-1">
+                                        Odvoji zarezom. Bez razmaka. Primjer: ljubav, film_serije, co2
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="px-1 pt-2 pb-1">
+                            <div class="form-check mb-3">
+                                {{ post_form.allow_comments }}
+                                <label class="form-check-label" for="{{ post_form.allow_comments.id_for_label }}">
+                                    {{ post_form.allow_comments.label }}
+                                </label>
+                                {% for error in post_form.allow_comments.errors %}
+                                    <div class="text-danger small mt-1">{{ error }}</div>
+                                {% endfor %}
+                            </div>
+
+                            <div class="mb-3" style="max-width: 320px;">
+                                {{ post_form.publish_at.label_tag }}
+                                {{ post_form.publish_at }}
+                                <div class="small text-muted mt-1">
+                                    Ako upišeš datum i vrijeme pa klikneš Objavi, post će biti objavljen tada. Ako ostaviš prazno, objavit će se odmah.
+                                </div>
+                                {% for error in post_form.publish_at.errors %}
+                                    <div class="text-danger small mt-1">{{ error }}</div>
+                                {% endfor %}
+                            </div>
+                        </div>
+
+                        <div class="mt-3 d-flex gap-2">
+
+                            <button type="submit"
+                                    name="update_post"
+                                    class="btn btn-primary">
+                                Objavi
+                            </button>
+
+                            <button type="submit"
+                                    name="update_post"
+                                    value="1"
+                                    class="btn btn-secondary"
+                                    onclick="document.getElementById('save_as_draft_input').value='1';">
+                                Spremi kao draft
+                            </button>
+                            <input type="hidden" name="save_as_draft" id="save_as_draft_input" value="0">
+
+                            {% if edit_post.status == "deleted" %}
+                            <button type="submit"
+                                    name="restore_post"
+                                    class="btn btn-warning">
+                                Vrati u skice
+                            </button>
+                            {% endif %}
+
+                        </div>
+
+                    </form>
+                </div>
+
+            <!-- NOVI POST -->
+            {% elif post_filter == "new" %}
+
+                <div class="shadow-sm border rounded-start-3" style="border-right:0;">
+                    <form method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+
+                        <div class="row g-0">
+
+                            <!-- LIJEVO: ograniči širinu da izgleda uredno -->
+                            <div class="col-md-8">
+                                <div class="ps-4 pe-4 py-3 w-100">
+
+                                    <div class="mb-3">
+                                        <label class="form-label d-block">Naslov <span class="text-danger">*</span></label>
+                                        {{ post_form.title }}
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label d-block">Sadržaj<span class="text-danger">*</span></label>
+                                        <div>
+                                            {{ post_form.content }}
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label d-block">YouTube video link</label>
+                                        {{ post_form.video_url }}
+                                        <div class="small text-muted mt-1">
+                                            Zalijepi obični YouTube link. Primjer: https://www.youtube.com/watch?v=...
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label d-block">Slike</label>
+                                        <input type="file" name="images" class="form-control" accept="image/*" multiple>
+                                        <div class="small text-muted mt-1">Možeš odabrati više slika odjednom.</div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- DESNO: ide do kraja -->
+                            <div class="col-md-4 pe-0 ps-3 py-3">
+
+                                <div class="card">
+                                    <div class="card-body category-card">
+                                        <label class="form-label d-block">Kategorije<span class="text-danger">*</span></label>
+
+                                        {% regroup categories by group as category_groups %}
+
+                                        {% for group in category_groups %}
+                                            <div class="mb-3">
+                                                <strong class="d-block mb-2">
+                                                    <div class="category-group-title">
+                                                        {{ group.list.0.get_group_display }}
+                                                    </div>
+                                                </strong>
+
+                                                <div class="row">
+                                                    {% for category in group.list %}
+                                                        <div class="col-6">
+                                                            <div class="form-check category-option">
+                                                                <input class="form-check-input"
+                                                                    type="radio"
+                                                                    name="category"
+                                                                    value="{{ category.id }}"
+                                                                    id="cat{{ category.id }}"
+                                                                    {% if request.POST.category == category.id|stringformat:"s" %}checked{% endif %}>
+
+                                                                <label class="form-check-label" for="cat{{ category.id }}">
+                                                                    {{ category.name }}
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    {% endfor %}
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+
+                                    </div>
+                                </div>
+
+                                <div class="mb-3 mt-3 pe-4">
+                                    <label class="form-label">Tagovi</label>
+                                    {{ post_form.tags_input }}
+                                    <div class="small text-muted mt-1">
+                                        Odvoji zarezom. Bez razmaka. Dopušteno: slova, brojevi i _. Primjer: ljubav, film_serije, co2
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="px-4 pt-2 pb-3">
+                            <div class="form-check mb-3">
+                                {{ post_form.allow_comments }}
+                                <label class="form-check-label" for="{{ post_form.allow_comments.id_for_label }}">
+                                    {{ post_form.allow_comments.label }}
+                                </label>
+                                {% for error in post_form.allow_comments.errors %}
+                                    <div class="text-danger small mt-1">{{ error }}</div>
+                                {% endfor %}
+                            </div>
+
+                            <div class="mb-3" style="max-width: 320px;">
+                                {{ post_form.publish_at.label_tag }}
+                                {{ post_form.publish_at }}
+                                <div class="small text-muted mt-1">
+                                    Ako upišeš datum i vrijeme pa klikneš Objavi, post će biti objavljen tada. Ako ostaviš prazno, objavit će se odmah.
+                                </div>
+                                {% for error in post_form.publish_at.errors %}
+                                    <div class="text-danger small mt-1">{{ error }}</div>
+                                {% endfor %}
+                            </div>
+                        </div>
+
+                        <div class="p-4 pt-0">
+                            <button type="submit" name="publish_post" class="btn btn-primary">
+                                Objavi
+                            </button>
+
+                            <button type="submit" name="save_draft" class="btn btn-secondary">
+                                Spremi kao draft
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+
+            <!-- ✅ NOVO: KVIZ -->
+            {% elif post_filter == "quiz_new" %}
+
+                <div class="card p-4 shadow-sm">
+                    <form method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+
+                        <div class="row">
+
+                            <div class="col-md-8">
+
+                                <div class="mb-3">
+                                    <label class="form-label d-block">Pitanje <span class="text-danger">*</span></label>
+                                    <input type="text" name="question" class="form-control" placeholder="Upiši pitanje...">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label d-block">Odgovori <span class="text-danger">*</span></label>
+
+                                    <div id="quizOptions">
+                                        <div class="d-flex gap-2 mb-2 align-items-center">
+                                            <input type="radio" name="correct_option" value="0">
+                                            <input type="text" name="quiz_option" class="form-control" placeholder="Odgovor 1">
+                                        </div>
+
+                                        <div class="d-flex gap-2 mb-2 align-items-center">
+                                            <input type="radio" name="correct_option" value="1">
+                                            <input type="text" name="quiz_option" class="form-control" placeholder="Odgovor 2">
+                                        </div>
+                                    </div>
+
+                                    <button type="button" class="btn btn-sm btn-outline-primary" id="addQuizOption">
+                                        + Dodaj odgovor
+                                    </button>
+
+                                    <div class="small text-muted mt-2">
+                                        Označi radio gumb pokraj odgovora koji je točan.
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label d-block">Slika (opcionalno)</label>
+                                    <input type="file" name="image" class="form-control" accept="image/*">
+                                </div>
+
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="checkbox" name="allow_comments" id="quizAllowComments" checked>
+                                    <label class="form-check-label" for="quizAllowComments">
+                                        Dopusti komentare na ovom kvizu
+                                    </label>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label d-block" for="quizPublishAt">Datum i vrijeme objave</label>
+                                    <input type="datetime-local" name="publish_at" id="quizPublishAt" class="form-control">
+                                    <div class="small text-muted mt-1">
+                                        Ako upišeš datum i vrijeme pa klikneš Objavi kviz, kviz će biti objavljen tada. Ako ostaviš prazno, objavit će se odmah.
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-4">
+
+                                <div class="card">
+                                    <div class="card-body category-card">
+                                        <label class="form-label d-block">Kategorije<span class="text-danger">*</span></label>
+
+                                        {% regroup categories by group as category_groups %}
+
+                                        {% for group in category_groups %}
+                                            <div class="mb-3">
+                                                <strong class="d-block mb-2">
+                                                    <div class="category-group-title">
+                                                        {{ group.list.0.get_group_display }}
+                                                    </div>
+                                                </strong>
+
+                                                <div class="row">
+                                                    {% for category in group.list %}
+                                                        <div class="col-6">
+                                                            <div class="form-check category-option">
+                                                                <input class="form-check-input"
+                                                                    type="radio"
+                                                                    name="category"
+                                                                    value="{{ category.id }}"
+                                                                    id="qcat{{ category.id }}">
+
+                                                                <label class="form-check-label"
+                                                                    for="qcat{{ category.id }}">
+                                                                    {{ category.name }}
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    {% endfor %}
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="mt-3">
+                            <button type="submit" name="create_quiz" class="btn btn-primary">
+                                Objavi kviz
+                            </button>
+
+                            <button type="submit" name="save_quiz_draft" class="btn btn-secondary">
+                                Spremi kao draft
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+
+            <!-- ✅ NOVO: ANKETA -->
+            {% elif post_filter == "poll_new" %}
+
+                <div class="card p-4 shadow-sm">
+                    <form method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+
+                        <div class="row">
+
+                            <div class="col-md-8">
+
+                                <div class="mb-3">
+                                    <label class="form-label d-block">Pitanje ankete <span class="text-danger">*</span></label>
+                                    <input type="text" name="question" class="form-control" placeholder="Upiši pitanje...">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label d-block">Opcije <span class="text-danger">*</span></label>
+
+                                    <div id="pollOptions">
+                                        <div class="d-flex gap-2 mb-2 align-items-center">
+                                            <input type="text" name="poll_option" class="form-control" placeholder="Opcija 1">
+                                        </div>
+
+                                        <div class="d-flex gap-2 mb-2 align-items-center">
+                                            <input type="text" name="poll_option" class="form-control" placeholder="Opcija 2">
+                                        </div>
+                                    </div>
+
+                                    <button type="button" class="btn btn-sm btn-outline-primary" id="addPollOption">
+                                        + Dodaj opciju
+                                    </button>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label d-block">Slika (opcionalno)</label>
+                                    <input type="file" name="image" class="form-control" accept="image/*">
+                                </div>
+
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="checkbox" name="allow_comments" id="pollAllowComments" checked>
+                                    <label class="form-check-label" for="pollAllowComments">
+                                        Dopusti komentare na ovoj anketi
+                                    </label>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label d-block" for="pollPublishAt">Datum i vrijeme objave</label>
+                                    <input type="datetime-local" name="publish_at" id="pollPublishAt" class="form-control">
+                                    <div class="small text-muted mt-1">
+                                        Ako upišeš datum i vrijeme pa klikneš Objavi anketu, anketa će biti objavljena tada. Ako ostaviš prazno, objavit će se odmah.
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-4">
+
+                                <div class="card">
+                                    <div class="card-body category-card">
+                                        <label class="form-label d-block">Kategorije<span class="text-danger">*</span></label>
+
+                                        {% regroup categories by group as category_groups %}
+
+                                        {% for group in category_groups %}
+                                            <div class="mb-3">
+                                                <strong class="d-block mb-2">
+                                                    <div class="category-group-title">
+                                                        {{ group.list.0.get_group_display }}
+                                                    </div>
+                                                </strong>
+
+                                                <div class="row">
+                                                    {% for category in group.list %}
+                                                        <div class="col-6">
+                                                            <div class="form-check category-option">
+                                                                <input class="form-check-input"
+                                                                    type="radio"
+                                                                    name="category"
+                                                                    value="{{ category.id }}"
+                                                                    id="pcat{{ category.id }}">
+
+                                                                <label class="form-check-label"
+                                                                    for="pcat{{ category.id }}">
+                                                                    {{ category.name }}
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    {% endfor %}
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="mt-3">
+                            <button type="submit" name="create_poll" class="btn btn-primary">
+                                Objavi anketu
+                            </button>
+
+                            <button type="submit" name="save_poll_draft" class="btn btn-secondary">
+                                Spremi kao draft
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+
+            <!-- LISTA POSTOVA -->
+            {% else %}
+
+            <div class="card shadow-sm">
+
+                {% if post_filter == "deleted" %}
+                    <form method="POST" id="trashBulkForm">
+                        {% csrf_token %}
+
+                        <div class="d-flex align-items-center px-3 py-2 border-bottom bg-light rounded-top">
+
+                            <div class="form-check m-0">
+                                <input class="form-check-input" type="checkbox" id="selectAllTrash">
+                                <label class="form-check-label" for="selectAllTrash">
+                                    Označi sve
+                                </label>
+                            </div>
+
+                            <div class="d-flex gap-2 ms-auto">
+                                <button type="submit"
+                                        name="bulk_restore"
+                                        class="btn btn-sm btn-outline-primary px-3 text-nowrap"
+                                        onclick="return confirm('Jeste li sigurni da želite vratiti označene postove u skice?')">
+                                    Vrati označene u skice
+                                </button>
+
+                                <button type="submit"
+                                        name="bulk_permanent_delete"
+                                        class="btn btn-sm btn-outline-danger px-3 text-nowrap"
+                                        onclick="return confirm('Jeste li sigurni da želite trajno izbrisati označene postove? Ova radnja se ne može poništiti.')">
+                                    Trajno izbriši označene
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <div class="list-group list-group-flush">
+
+                            {% if user_posts %}
+                                {% for post in user_posts %}
+
+                                    <div class="list-group-item d-flex justify-content-between align-items-center">
+
+                                        <div class="d-flex align-items-center gap-3">
+
+                                            <div class="form-check m-0">
+                                                <input class="form-check-input trash-checkbox"
+                                                    type="checkbox"
+                                                    name="selected_posts"
+                                                    value="{{ post.id }}">
+                                            </div>
+
+                                            <div>
+                                                <strong>{{ post.title }}</strong>
+                                                <small class="text-muted">
+                                                    {{ post.publication_datetime|date:"d.m.Y" }}
+                                                </small>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="d-flex gap-2">
+
+                                        <form method="POST" class="d-inline">
+                                            {% csrf_token %}
+                                            <input type="hidden" name="restore_post_id" value="{{ post.id }}">
+                                            <button type="submit" class="btn btn-sm btn-outline-primary px-3 text-nowrap">
+                                                Vrati u skice
+                                            </button>
+                                        </form>
+
+                                        <form method="POST" class="d-inline">
+                                            {% csrf_token %}
+                                            <input type="hidden" name="permanent_delete_id" value="{{ post.id }}">
+                                            <button type="submit"
+                                                    class="btn btn-sm btn-outline-danger px-3 text-nowrap"
+                                                    onclick="return confirm('Jeste li sigurni da želite trajno izbrisati ovaj post? Ova radnja se ne može poništiti.')">
+                                                Trajno izbriši
+                                            </button>
+                                        </form>
+
+                                        </div>
+
+                                    </div>
+
+                                {% endfor %}
+                            {% else %}
+                                <div class="list-group-item text-muted">
+                                    Nema postova u ovoj kategoriji.
+                                </div>
+                            {% endif %}
+
+                        </div>
+                    </form>
+
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function () {
+                            const selectAll = document.getElementById("selectAllTrash");
+                            const checkboxes = document.querySelectorAll(".trash-checkbox");
+
+                            if (selectAll) {
+                                selectAll.addEventListener("change", function () {
+                                    checkboxes.forEach(cb => cb.checked = selectAll.checked);
+                                });
+                            }
+
+                            checkboxes.forEach(cb => {
+                                cb.addEventListener("change", function () {
+                                    const allChecked = Array.from(checkboxes).every(x => x.checked);
+                                    const anyChecked = Array.from(checkboxes).some(x => x.checked);
+                                    if (selectAll) {
+                                        selectAll.checked = allChecked;
+                                        selectAll.indeterminate = !allChecked && anyChecked;
+                                    }
+                                });
+                            });
+                        });
+                    </script>
+
+                {% else %}
+
+                    <div class="list-group list-group-flush">
+
+                        {% if user_posts %}
+                            {% for post in user_posts %}
+
+                                <div class="list-group-item d-flex justify-content-between align-items-center">
+
+                                    <div>
+                                        {% if post.status == "published" %}
+                                            <a href="{% url 'post_detail' post.id %}" class="text-decoration-none">
+                                                <strong>{{ post.title }}</strong>
+                                            </a>
+                                        {% elif post.status == "draft" %}
+                                            <a href="?tab=postovi&post_filter=edit&post_id={{ post.id }}"
+                                            class="text-decoration-none">
+                                                <strong>{{ post.title }}</strong>
+                                            </a>
+                                        {% else %}
+                                            <strong>{{ post.title }}</strong>
+                                        {% endif %}
+
+                                        <small class="text-muted">
+                                            {{ post.publication_datetime|date:"d.m.Y" }}
+                                        </small>
+                                    </div>
+
+                                    <div class="d-flex gap-2">
+
+                                        {% if post.status != "deleted" %}
+                                            <a href="?tab=postovi&post_filter=edit&post_id={{ post.id }}"
+                                            class="btn btn-sm btn-outline-primary">
+                                                Uredi
+                                            </a>
+
+                                            <form method="POST" style="display:inline;">
+                                                {% csrf_token %}
+                                                <input type="hidden" name="delete_post_id" value="{{ post.id }}">
+                                                <button type="submit" class="btn btn-sm btn-outline-danger">
+                                                    Premjesti u otpad
+                                                </button>
+                                            </form>
+                                        {% endif %}
+
+                                    </div>
+
+                                </div>
+
+                            {% endfor %}
+                        {% else %}
+                            <div class="list-group-item text-muted">
+                                Nema postova u ovoj kategoriji.
+                            </div>
+                        {% endif %}
+
+                    </div>
+
+                {% endif %}
+
+            </div>
+
+            {% endif %}
+            {% endif %}

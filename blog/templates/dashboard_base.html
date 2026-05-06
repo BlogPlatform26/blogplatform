@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <title>{% block title %}Dashboard{% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <style>
+        .unread-notification {
+            background-color: rgba(61, 61, 61, 0.274);
+        }
+
+        /* preuzeto iz base.html (da navbar izgleda isto) */
+        .nav-right{
+            gap: 14px;
+            align-items: center;
+        }
+        .nav-icon{
+            color: rgba(255,255,255,0.92);
+            text-decoration: none;
+            padding: 6px 10px;
+            border-radius: 10px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .nav-icon:hover{
+            background: rgba(255,255,255,0.08);
+            color: #fff;
+        }
+        .nav-user{
+            color: rgba(255,255,255,0.92);
+            text-decoration: none;
+            padding: 6px 10px;
+            border-radius: 10px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .nav-user:hover{
+            background: rgba(255,255,255,0.08);
+            color: #fff;
+        }
+        .nav-avatar{
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .nav-user-text{ line-height: 1; }
+        .notif-badge{ font-size: 11px; padding: 3px 6px; }
+        .notif-menu{ width: 360px; max-height: 420px; overflow-y: auto; }
+    .notif-actions-bar{
+        position: sticky;
+        top: 0;
+        z-index: 5;
+        background: #fff;
+        border-bottom: 1px solid rgba(0,0,0,0.08);
+    }
+    .notif-actions-title{
+        font-weight: 700;
+        color: rgba(0,0,0,0.72);
+    }
+    .notif-actions-link,
+    .notif-actions-btn{
+        font-size: 12px;
+        line-height: 1.2;
+        border: 0;
+        background: transparent;
+        color: #0d6efd;
+        padding: 0;
+        text-decoration: none;
+        white-space: nowrap;
+    }
+    .notif-actions-link:hover,
+    .notif-actions-btn:hover{
+        text-decoration: underline;
+    }
+    .notif-actions-btn:disabled{
+        color: rgba(0,0,0,0.35);
+        cursor: default !important;
+        text-decoration: none;
+    }
+
+        body,
+        body * {
+            cursor: auto !important;
+        }
+
+        a,
+        button,
+        .btn,
+        [role="button"],
+        input[type="submit"],
+        input[type="button"],
+        input[type="radio"],
+        input[type="checkbox"],
+        select,
+        summary,
+        label[for] {
+            cursor: pointer !important;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="search"],
+        input[type="number"],
+        input[type="date"],
+        textarea,
+        [contenteditable="true"] {
+            cursor: text !important;
+        }
+    
+
+    /* PRIKAŽI / SAKRIJ LOZINKU */
+    .password-toggle-group .form-control{
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .password-toggle-btn{
+        width: 44px;
+        min-width: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .password-toggle-btn i{
+        font-size: 1rem;
+        line-height: 1;
+    }
+
+    </style>
+</head>
+<body>
+
+{% if request.user.is_authenticated and request.user.profile.pending_email %}
+<div style="
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 900px;
+    z-index: 9999;
+
+    background: rgba(255, 120, 120, 0.45);
+    backdrop-filter: blur(5px);
+
+    color: #d9480f;
+    border: 1px solid rgb(154, 35, 35);
+    border-radius: 10px;
+    padding: 12px 16px;
+
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.135);
+
+    pointer-events: none;
+">
+    <i class="bi bi-exclamation-triangle-fill"></i>
+
+    <span>
+        Email adresa ({{ request.user.profile.pending_email }}) nije potvrđena.
+        Provjerite inbox ili
+    </span>
+
+    <form method="POST" action="{% url 'resend_confirmation_email' %}" style="display:inline; margin:0; pointer-events:auto;">
+        {% csrf_token %}
+        <button type="submit"
+                style="background:none; border:0; padding:0; color:#d9480f; font-weight:600; text-decoration:underline; cursor:pointer;">
+            ponovno pošaljite mail.
+        </button>
+    </form>
+</div>
+{% endif %}
+
+<!-- ✅ ISTI NAVBAR KAO U base.html -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid position-relative">
+
+        <a class="navbar-brand" href="{% url 'home' %}">
+            <img src="{% static 'images/logo.svg' %}"
+                 alt="Logo"
+                 style="height:44px;">
+        </a>
+
+        <!-- ✅ Ikona za pretragu -->
+        <button id="searchToggleBtn"
+                class="btn btn-outline-light btn-sm ms-2"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSearchInline"
+                aria-expanded="false"
+                aria-controls="navbarSearchInline"
+                title="Pretraga">
+            <i class="bi bi-search"></i>
+        </button>
+
+        <!-- ✅ Pretraga unutar navbara (inline) -->
+        <div class="collapse ms-2" id="navbarSearchInline">
+            <form class="d-flex align-items-center"
+                  method="GET"
+                  action="{% url 'search' %}">
+                <div class="input-group input-group-sm" style="width: 320px;">
+                    <input id="navbarSearchInput"
+                           class="form-control"
+                           type="search"
+                           name="q"
+                           placeholder="Pretraži..."
+                           value="{{ request.GET.q|default:'' }}">
+
+                    <button class="btn btn-outline-light" type="submit" title="Pretraži">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- desni dio navbara -->
+        <div class="d-flex align-items-center ms-auto nav-right">
+
+            {% if user.is_authenticated %}
+
+            <!-- NOTIFIKACIJE -->
+            <div class="dropdown me-2">
+                <a class="nav-icon dropdown-toggle"
+                   href="#"
+                   role="button"
+                   data-bs-toggle="dropdown"
+                   aria-expanded="false"
+                   title="Notifikacije">
+                    <span class="position-relative d-inline-flex align-items-center">
+                        <i class="bi bi-bell fs-5"></i>
+
+                        {% if unread_notifications_count > 0 %}
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger notif-badge">
+                            {{ unread_notifications_count }}
+                        </span>
+                        {% endif %}
+                    </span>
+                </a>
+
+                <ul class="dropdown-menu dropdown-menu-end notif-menu">
+                    <li class="notif-actions-bar">
+                        <div class="d-flex align-items-center justify-content-between gap-2 px-3 py-2">
+                            <span class="notif-actions-title small">Obavijesti</span>
+
+                            <div class="d-flex align-items-center gap-2">
+                                <form method="POST" action="{% url 'mark_all_notifications_read' %}" class="m-0">
+                                    {% csrf_token %}
+                                    <button type="submit"
+                                            class="notif-actions-btn"
+                                            {% if unread_notifications_count == 0 %}disabled{% endif %}>
+                                        Označi sve pročitano
+                                    </button>
+                                </form>
+
+                                <a href="{% url 'notifications' %}" class="notif-actions-link">
+                                    Vidi sve
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+
+                    {% for notification in latest_notifications %}
+                        <li>
+                            {% if notification.notification_type == "follow" %}
+                                <a class="dropdown-item small {% if not notification.is_read %}unread-notification{% endif %}"
+                                   href="{% url 'notification_redirect' notification.id %}">
+                                    <div class="d-flex align-items-start gap-2">
+                                        <i class="bi bi-person-plus"></i>
+                                        <div>
+                                            <div><strong>{{ notification.sender.username }}</strong> vas je zapratio.</div>
+                                            <div class="text-muted small">{{ notification.created_at|date:"d.m.Y H:i" }}</div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                            {% elif notification.notification_type == "like" %}
+                                <a class="dropdown-item small {% if not notification.is_read %}unread-notification{% endif %}"
+                                   href="{% url 'notification_redirect' notification.id %}">
+                                    <div class="d-flex align-items-start gap-2">
+                                        <i class="bi bi-heart"></i>
+                                        <div>
+                                            <div><strong>{{ notification.sender.username }}</strong> je lajkao vaš post <strong>"{{ notification.post.title }}"</strong></div>
+                                            <div class="text-muted small">{{ notification.created_at|date:"d.m.Y H:i" }}</div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                            {% elif notification.notification_type == "comment" %}
+                                <a class="dropdown-item small {% if not notification.is_read %}unread-notification{% endif %}"
+                                   href="{% url 'notification_redirect' notification.id %}">
+                                    <div class="d-flex align-items-start gap-2">
+                                        <i class="bi bi-chat-left-text"></i>
+                                        <div>
+                                            <div><strong>{{ notification.sender.username }}</strong> je komentirao vaš post <strong>"{{ notification.post.title }}"</strong></div>
+                                            <div class="text-muted small">{{ notification.created_at|date:"d.m.Y H:i" }}</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            {% endif %}
+                        </li>
+                    {% empty %}
+                        <li><span class="dropdown-item text-muted">Nema notifikacija.</span></li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <!-- USER MENU -->
+            <div class="dropdown">
+                <a class="nav-user dropdown-toggle"
+                   href="#"
+                   role="button"
+                   data-bs-toggle="dropdown"
+                   aria-expanded="false">
+
+                    {% if user.profile.avatar %}
+                        <img src="{{ user.profile.avatar.url }}" class="nav-avatar" alt="avatar">
+                    {% else %}
+                        <img src="{% static 'images/default-avatar.jpg' %}" class="nav-avatar" alt="avatar">
+                    {% endif %}
+
+                    <span class="nav-user-text">
+                        Pozdrav, <strong>{{ user.username }}</strong>
+                    </span>
+                </a>
+
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item" href="/profile/">Moj blog</a></li>
+                    <li>
+                        <a class="dropdown-item" href="{% url 'blog_settings' %}?tab=postovi&post_filter=new">
+                            Uredi blog
+                        </a>
+                    </li>
+                    <li><a class="dropdown-item" href="/profile/edit/">Postavke korisničkog računa</a></li>
+                    <li><a class="dropdown-item" href="/password_change/">Promijeni lozinku</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li>
+                        <form action="/logout/" method="POST" class="px-3">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-link p-0 text-decoration-none">Logout</button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+
+            {% else %}
+                <a href="/login/" class="text-light me-3">Login</a>
+                <a href="/register/" class="text-light">Registracija</a>
+            {% endif %}
+
+        </div>
+
+    </div>
+</nav>
+
+<!-- CONTENT -->
+<div class="container-fluid px-0">
+
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} alert-dismissible fade show">
+                {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+        {% endfor %}
+    {% endif %}
+
+    {% block content %}
+    {% endblock %}
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const searchCollapseEl = document.getElementById("navbarSearchInline");
+    const input = document.getElementById("navbarSearchInput");
+    const toggleBtn = document.getElementById("searchToggleBtn");
+
+    if (!searchCollapseEl || !input || !toggleBtn) return;
+
+    const collapse = bootstrap.Collapse.getOrCreateInstance(searchCollapseEl, { toggle: false });
+
+    searchCollapseEl.addEventListener("shown.bs.collapse", function () {
+        setTimeout(() => input.focus(), 50);
+    });
+
+    document.addEventListener("keydown", function (e) {
+        const isOpen = searchCollapseEl.classList.contains("show");
+        if (isOpen && e.key === "Escape") {
+            collapse.hide();
+        }
+    });
+});
+</script>
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll('input[type="password"]').forEach(function (input) {
+        if (input.dataset.passwordToggleReady === "1") return;
+        input.dataset.passwordToggleReady = "1";
+
+        const wrapper = document.createElement("div");
+        wrapper.className = "input-group password-toggle-group";
+
+        const parent = input.parentNode;
+        parent.insertBefore(wrapper, input);
+        wrapper.appendChild(input);
+
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "btn btn-outline-secondary password-toggle-btn";
+        button.setAttribute("aria-label", "Prikaži lozinku");
+        button.setAttribute("title", "Prikaži lozinku");
+        button.innerHTML = '<i class="bi bi-eye" aria-hidden="true"></i>';
+
+        button.addEventListener("click", function () {
+            const isHidden = input.type === "password";
+            const icon = button.querySelector("i");
+
+            input.type = isHidden ? "text" : "password";
+
+            if (icon) {
+                icon.className = isHidden ? "bi bi-eye-slash" : "bi bi-eye";
+            }
+
+            button.setAttribute("aria-label", isHidden ? "Sakrij lozinku" : "Prikaži lozinku");
+            button.setAttribute("title", isHidden ? "Sakrij lozinku" : "Prikaži lozinku");
+        });
+
+        wrapper.appendChild(button);
+    });
+});
+</script>
+
+</body>
+</html>

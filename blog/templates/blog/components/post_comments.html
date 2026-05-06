@@ -1,0 +1,142 @@
+{% load custom_tags static %}
+<div class="mt-5" id="comments-{% if is_detail %}detail{% else %}{{ post.id }}{% endif %}">
+    <h6>Komentari:</h6>
+
+    {% if post.author.profile.show_post_comments %}
+        {% if is_detail %}
+            {% for comment in comments %}
+                <div id="comment-{{ comment.id }}" class="comment-item mb-3 d-flex gap-2">
+                    {% if comment.author.username == anonymous_comment_username %}
+                        <img src="{% static 'images/default-avatar.jpg' %}" class="comment-avatar" width="35" height="35">
+                    {% elif comment.author.profile.has_active_premium %}
+                        <span class="premium-avatar-wrap">
+                            {% if comment.author.profile.avatar %}
+                                <img src="{{ comment.author.profile.avatar.url }}" class="comment-avatar" width="35" height="35">
+                            {% else %}
+                                <img src="{% static 'images/default-avatar.jpg' %}" class="comment-avatar" width="35" height="35">
+                            {% endif %}
+                        </span>
+                    {% elif comment.author.profile.avatar %}
+                        <img src="{{ comment.author.profile.avatar.url }}" class="comment-avatar" width="35" height="35">
+                    {% else %}
+                        <img src="{% static 'images/default-avatar.jpg' %}" class="comment-avatar" width="35" height="35">
+                    {% endif %}
+
+                    <div class="comment-body flex-grow-1">
+                        {% if user.is_authenticated and user == comment.author and comment.author.username != anonymous_comment_username %}
+                            <div class="comment-actions">
+                                <a href="{% url 'edit_comment' comment.id %}" class="comment-action-btn" title="Uredi">
+                                    <i class="bi bi-pencil"></i>
+                                </a>
+                                <form method="POST" action="{% url 'delete_comment' comment.id %}" class="d-inline">
+                                    {% csrf_token %}
+                                    <button type="submit" class="comment-action-btn comment-action-danger" title="Izbriši" onclick="return confirm('Jeste li sigurni da želite izbrisati komentar?')">
+                                        <i class="bi bi-trash"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        {% endif %}
+
+                        <div class="comment-header">
+                            {% if comment.author.username == anonymous_comment_username %}
+                                <strong class="comment-author">Anonimni korisnik</strong>
+                            {% else %}
+                                <strong class="comment-author">{{ comment.author|user_link }}</strong>
+                            {% endif %}
+                            <span class="comment-time">{{ comment.created_at|date:"d.m.Y H:i" }}</span>
+                        </div>
+
+                        <div class="comment-text">{{ comment.content }}</div>
+                    </div>
+                </div>
+            {% empty %}
+                <p class="small text-muted">Nema komentara.</p>
+            {% endfor %}
+        {% else %}
+            {% with COMMENT_LIMIT=5 %}
+                {% for comment in post.comments.all %}
+                    {% if forloop.counter <= COMMENT_LIMIT %}
+                        <div id="comment-{{ comment.id }}" class="comment-item mb-3 d-flex gap-2">
+                            {% if comment.author.username == anonymous_comment_username %}
+                                <img src="{% static 'images/default-avatar.jpg' %}" class="comment-avatar" width="35" height="35">
+                            {% elif comment.author.profile.has_active_premium %}
+                        <span class="premium-avatar-wrap">
+                            {% if comment.author.profile.avatar %}
+                                <img src="{{ comment.author.profile.avatar.url }}" class="comment-avatar" width="35" height="35">
+                            {% else %}
+                                <img src="{% static 'images/default-avatar.jpg' %}" class="comment-avatar" width="35" height="35">
+                            {% endif %}
+                        </span>
+                    {% elif comment.author.profile.avatar %}
+                        <img src="{{ comment.author.profile.avatar.url }}" class="comment-avatar" width="35" height="35">
+                    {% else %}
+                        <img src="{% static 'images/default-avatar.jpg' %}" class="comment-avatar" width="35" height="35">
+                    {% endif %}
+
+                            <div class="comment-body flex-grow-1">
+                                {% if user.is_authenticated and user == comment.author and comment.author.username != anonymous_comment_username %}
+                                    <div class="comment-actions">
+                                        <a href="{% url 'edit_comment' comment.id %}" class="comment-action-btn" title="Uredi">
+                                            <i class="bi bi-pencil"></i>
+                                        </a>
+                                        <form method="POST" action="{% url 'delete_comment' comment.id %}" class="d-inline">
+                                            {% csrf_token %}
+                                            <button type="submit" class="comment-action-btn comment-action-danger" title="Izbriši" onclick="return confirm('Jeste li sigurni da želite izbrisati komentar?')">
+                                                <i class="bi bi-trash"></i>
+                                            </button>
+                                        </form>
+                                    </div>
+                                {% endif %}
+
+                                <div class="comment-header">
+                                    {% if comment.author.username == anonymous_comment_username %}
+                                        <strong class="comment-author">Anonimni korisnik</strong>
+                                    {% else %}
+                                        <strong class="comment-author">{{ comment.author|user_link }}</strong>
+                                    {% endif %}
+                                    <span class="comment-time">{{ comment.created_at|date:"d.m.Y H:i" }}</span>
+                                </div>
+
+                                <div class="comment-text">{{ comment.content }}</div>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% empty %}
+                    <p class="small text-muted">Nema komentara.</p>
+                {% endfor %}
+
+                {% if post.comments.count > COMMENT_LIMIT %}
+                    <div class="mt-2">
+                        <a href="{% url 'post_detail' post.id %}#comments-detail" class="text-decoration-none">
+                            Prikaži sve komentare ({{ post.comments.count }})
+                        </a>
+                    </div>
+                {% endif %}
+            {% endwith %}
+        {% endif %}
+    {% endif %}
+
+    {% if post.author.profile.allow_comments %}
+        {% if is_restricted %}
+            <p class="small text-muted">Autor te je ograničio pa ne možeš komentirati.</p>
+        {% elif user.is_authenticated or post.allow_anonymous_comments %}
+            <form method="POST" action="{% if is_detail %}{% url 'post_detail' post.id %}{% else %}{% url 'create_comment' post.id %}{% endif %}" class="mt-3">
+                {% csrf_token %}
+                <div class="comment-row">
+                    {{ form.content }}
+                    <button type="submit" class="btn blog-action-outline">Komentiraj</button>
+                </div>
+                {% if post.allow_anonymous_comments %}
+                    <div class="form-check mt-2">
+                        {{ form.anonymous }}
+                        <label class="form-check-label" for="{{ form.anonymous.id_for_label }}">Objavi anonimno</label>
+                    </div>
+                {% endif %}
+            </form>
+        {% else %}
+            <p class="small"><a href="{% url 'login' %}">Prijavi se</a> da bi komentirao.</p>
+        {% endif %}
+    {% else %}
+        <p class="small text-muted">Komentiranje je isključeno na ovom blogu.</p>
+    {% endif %}
+</div>

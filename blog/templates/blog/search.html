@@ -1,0 +1,125 @@
+{% extends "blog/base.html" %}
+{% load static %}
+{% load custom_tags %}
+
+{% block content %}
+
+<h4 class="mb-3">Pretraga</h4>
+
+{% if not q %}
+    <div class="text-muted">
+        Upiši pojam u pretragu gore u navbaru.
+    </div>
+{% else %}
+
+    <div class="mb-3">
+        <span class="text-muted">Tražiš:</span>
+        <strong>"{{ q }}"</strong>
+    </div>
+
+    <div class="post-filter mb-4">
+        <a href="{% url 'search' %}?q={{ q|urlencode }}&scope=all"
+        class="filter-link {% if scope == 'all' %}active{% endif %}">
+            Sve
+        </a>
+
+        <a href="{% url 'search' %}?q={{ q|urlencode }}&scope=posts"
+        class="filter-link {% if scope == 'posts' %}active{% endif %}">
+            Postovi
+        </a>
+
+        <a href="{% url 'search' %}?q={{ q|urlencode }}&scope=users"
+        class="filter-link {% if scope == 'users' %}active{% endif %}">
+            Korisnici
+        </a>
+
+        <a href="{% url 'search' %}?q={{ q|urlencode }}&scope=tags"
+        class="filter-link {% if scope == 'tags' %}active{% endif %}">
+            Tagovi
+        </a>
+    </div>
+
+    {% if scope == "all" or scope == "posts" %}
+        <h6 class="mb-3">Postovi</h6>
+
+        {% for post in posts %}
+            <div class="d-flex mb-4">
+                <div class="me-3">
+                    <div class="date-box text-center px-2 py-2 shadow-sm">
+                        <div class="date-day">{{ post.publication_datetime|date:"d" }}</div>
+                        <div class="date-month">{{ post.publication_datetime|date:"M" }}</div>
+                    </div>
+                </div>
+
+                <div class="flex-grow-1">
+                    <div class="card post-card shadow-sm">
+                        <div class="card-body">
+                            <h4 class="post-title">
+                                <a href="{% url 'post_detail' post.id %}" class="text-decoration-none post-link">
+                                    {{ post.title }}
+                                </a>
+                            </h4>
+
+                            <div class="home-post-meta">
+                                {% if post.category %}
+                                    <span class="home-post-meta-category">{{ post.category.name }}</span>
+                                {% endif %}
+
+                                {% if post.show_post_tags and post.tags.exists %}
+                                    {% for tag in post.tags.all %}
+                                        <span class="home-post-meta-sep">/</span>
+                                        <span class="home-post-meta-tag">#{{ tag.name }}</span>
+                                    {% endfor %}
+                                {% endif %}
+                            </div>
+
+                            <p>{{ post.content|truncatewords:35|safe }}</p>
+
+                            <small class="text-muted">
+                                Autor: {{ post.author|blog_link }}
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {% if not forloop.last %}
+                <div class="post-divider"></div>
+            {% endif %}
+        {% empty %}
+            <p class="text-muted">Nema postova za ovaj pojam.</p>
+        {% endfor %}
+    {% endif %}
+
+    {% if scope == "all" or scope == "users" %}
+        <h6 class="mt-4 mb-2">Korisnici</h6>
+
+        {% for u in users_found %}
+            <div class="mb-2">
+                <a href="{% url 'user_blog' u.username %}" class="text-decoration-none">
+                    {{ u.profile.blog_name }} <span class="text-muted">(@{{ u.username }})</span>
+                </a>
+            </div>
+        {% empty %}
+            <p class="text-muted">Nema korisnika za ovaj pojam.</p>
+        {% endfor %}
+    {% endif %}
+
+    {% if scope == "all" or scope == "tags" %}
+        <h6 class="mt-4 mb-2">Tagovi</h6>
+
+        <div class="d-flex flex-wrap gap-2">
+            {% for t in tags_found %}
+                <a class="btn btn-sm btn-outline-secondary"
+                   href="{% url 'home' %}?tag={{ t.name|urlencode }}">
+                    #{{ t.name }} ({{ t.published_posts }})
+                </a>
+            {% empty %}
+                <p class="text-muted">Nema tagova za ovaj pojam.</p>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+{% endif %}
+
+{% endblock %}

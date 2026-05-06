@@ -1,0 +1,744 @@
+{% extends "blog/base.html" %}
+{% load static custom_tags %}
+
+{% block header %}{% endblock %}
+
+{% block blog_header %}
+<style>
+body {
+    background-color: #f3d7d8;
+    background-image:
+        linear-gradient(180deg, rgba(255, 247, 244, 0.16) 0%, rgba(255, 239, 232, 0.22) 48%, rgba(255, 235, 228, 0.38) 100%),
+        url('{% static "blog/images/design-backgrounds/ruzicasti_vrt.jpg" %}');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #5e4b4f;
+}
+
+.container-fluid.mt-3 {
+    margin-top: 0 !important;
+    padding-top: 24px;
+    position: relative;
+    z-index: 1;
+}
+
+.container-fluid.mt-3 > .row.align-items-start {
+    display: none;
+}
+
+nav.navbar {
+    position: relative;
+    z-index: 4000 !important;
+    background: rgba(64, 42, 49, 0.24) !important;
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.14);
+}
+
+nav.navbar .dropdown-menu {
+    z-index: 4100 !important;
+}
+
+.rv-theme {
+    max-width: 980px;
+    margin: 36px auto 32px;
+    padding: 0 16px;
+}
+
+.rv-title {
+    margin: 0 0 6px 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.95rem, 3.25vw, 2.9rem);
+    line-height: 1.05;
+    color: #6b5056;
+    text-shadow: 0 6px 22px rgba(255, 255, 255, 0.42);
+}
+
+.rv-banner {
+    margin-top: 18px;
+    background: rgba(255, 248, 246, 0.16);
+    border: 1px solid rgba(255,255,255,0.18);
+    padding: 8px;
+    box-shadow: 0 12px 28px rgba(132, 95, 101, 0.12);
+    backdrop-filter: blur(12px);
+}
+
+.rv-banner img {
+    width: 100%;
+    max-height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.rv-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 260px;
+    gap: 22px;
+    align-items: start;
+    margin-top: 92px;
+}
+
+.rv-post,
+.rv-side-card,
+.rv-profile-wrap .blog-profile-panel {
+    background: rgba(255, 249, 247, 0.24);
+    border: 1px solid rgba(255,255,255,0.34);
+    box-shadow: 0 18px 42px rgba(126, 93, 96, 0.08);
+    backdrop-filter: blur(13px);
+}
+
+.rv-post {
+    padding: 22px 26px 20px;
+    margin-bottom: 20px;
+}
+
+.rv-post-divider {
+    margin: 10px 0 18px;
+    border-top: 1px solid rgba(202, 173, 176, 0.42);
+}
+
+.rv-post-date {
+    font-size: 0.90rem;
+    color: #9f8283;
+    letter-spacing: 0.02em;
+    margin-bottom: 4px;
+}
+
+.rv-post h4,
+.rv-post h4 a,
+.rv-post .blog-post-title {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #6b5056 !important;
+    font-size: clamp(1.95rem, 3vw, 2.4rem);
+    text-decoration: none;
+}
+
+.rv-post h4 a:hover {
+    color: #bf7f95 !important;
+}
+
+.post-meta {
+    margin-top: 8px;
+    font-size: 12px;
+    color: #8f7374;
+}
+
+.post-meta-category {
+    font-weight: 700;
+    color: #be738c;
+}
+
+.post-meta-tag {
+    color: #9a7f82;
+}
+
+.post-meta-sep {
+    margin: 0 5px;
+    color: rgba(154,127,130,0.34);
+}
+
+.rv-post .mt-4,
+.rv-post p,
+.rv-post li,
+.rv-post blockquote,
+.rv-post div,
+.rv-post span,
+.rv-post strong,
+.rv-post em {
+    color: #66575a;
+}
+
+.rv-post .mt-4 img,
+.rv-post img.img-fluid,
+.rv-post .ratio iframe {
+    border: 1px solid rgba(255,255,255,0.20);
+    box-shadow: 0 10px 26px rgba(126, 93, 96, 0.12);
+    background: rgba(255,255,255,0.08);
+    padding: 4px;
+}
+
+.rv-post .mt-5.small {
+    margin-top: 24px !important;
+}
+
+.post-author-line,
+.post-author-link,
+.rv-post .small.text-muted,
+.rv-post .text-muted {
+    color: #8f7374 !important;
+}
+
+.post-views {
+    color: #be738c;
+}
+
+.post-actions a {
+    color: #be738c;
+}
+
+.post-actions a:hover {
+    color: #9f5f79;
+}
+
+.rv-side-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.rv-side-card {
+    padding: 14px 16px 16px;
+}
+
+.rv-side-title {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.42rem;
+    color: #6b5056;
+    margin-bottom: 10px;
+}
+
+.rv-profile-wrap .blog-profile-panel {
+    max-width: none;
+    width: 100%;
+    padding: 14px 16px 16px;
+    margin: 0;
+    color: #645356;
+}
+
+.rv-profile-wrap .blog-profile-panel__name,
+.rv-profile-wrap .blog-profile-panel__blog-name,
+.rv-profile-wrap .blog-profile-panel__stats,
+.rv-profile-wrap .blog-profile-panel__dropdown-toggle {
+    color: inherit;
+    text-shadow: none;
+}
+
+.rv-profile-wrap .blog-profile-panel__avatar {
+    box-shadow: 0 8px 18px rgba(126, 93, 96, 0.14);
+}
+
+.rv-profile-wrap .btn-primary {
+    background: #be738c;
+    border-color: #be738c;
+    color: #fff8fa;
+}
+
+.rv-profile-wrap .btn-primary:hover {
+    background: #aa617b;
+    border-color: #aa617b;
+}
+
+.rv-profile-wrap .btn-outline-primary {
+    color: #be738c;
+    border-color: #be738c;
+}
+
+.rv-profile-wrap .btn-outline-primary:hover {
+    background: #be738c;
+    color: #fff8fa;
+}
+
+.rv-calendar-title,
+.rv-box-title,
+.rv-archive-title {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.22rem;
+    color: #6b5056;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(202, 173, 176, 0.52);
+}
+
+.rv-calendar-month {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #9e8184;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.rv-calendar-weekdays,
+.rv-calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 6px;
+    text-align: center;
+}
+
+.rv-calendar-weekdays {
+    font-size: 11px;
+    color: #a88b8f;
+    margin-bottom: 8px;
+}
+
+.rv-calendar-day,
+.rv-calendar-empty {
+    min-height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 12px;
+}
+
+.rv-calendar-day {
+    text-decoration: none;
+    background: rgba(255,255,255,0.08);
+    color: #7d666b;
+    border: 1px solid rgba(255,255,255,0.18);
+}
+
+.rv-calendar-day:hover {
+    color: #6b5056;
+    border-color: rgba(190,115,140,0.34);
+    background: rgba(255,255,255,0.18);
+}
+
+.rv-calendar-day--has-post {
+    font-weight: 700;
+    color: #ad617a;
+}
+
+.rv-calendar-day--today {
+    background: rgba(190,115,140,0.14);
+    color: #7e4f5d;
+    border-color: rgba(190,115,140,0.58);
+    box-shadow: 0 0 0 2px rgba(255,255,255,0.20), 0 0 0 4px rgba(190,115,140,0.10);
+}
+
+.rv-archive-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.rv-archive-link {
+    display: block;
+    padding: 8px 10px;
+    text-decoration: none;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.24);
+    color: #7a666a;
+    font-size: 13px;
+}
+
+.rv-archive-link:hover {
+    color: #6b5056;
+    border-color: rgba(190,115,140,0.30);
+    background: rgba(255,255,255,0.32);
+}
+
+.rv-box-title {
+    font-size: 1.12rem;
+    margin-bottom: 8px;
+}
+
+.rv-box-content,
+.rv-side-card,
+.rv-post,
+.rv-post p,
+.rv-post li,
+.rv-empty-copy {
+    color: #66575a;
+}
+
+.rv-box-content a,
+.rv-side-card a {
+    color: #ad617a;
+}
+
+.rv-side-card .live-analytics-widget {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+
+.rv-filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 16px 0;
+    padding: 10px 12px;
+    background: rgba(255,249,247,0.20);
+    border: 1px solid rgba(255,255,255,0.18);
+    box-shadow: 0 12px 28px rgba(126,93,96,0.06);
+    color: #66575a;
+    font-size: 13px;
+    backdrop-filter: blur(12px);
+}
+
+.rv-filter-chip {
+    padding: 5px 10px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.24);
+    color: #ad617a;
+    font-weight: 700;
+}
+
+.rv-filter-clear {
+    margin-left: auto;
+    text-decoration: none;
+    color: #876e73;
+    font-weight: 600;
+}
+
+.rv-filter-clear:hover {
+    color: #6b5056;
+}
+
+.blog-action-outline,
+.btn-outline-light {
+    border-color: #be738c !important;
+    color: #be738c !important;
+    background: transparent !important;
+}
+
+.blog-action-outline:hover,
+.btn-outline-light:hover {
+    background: #be738c !important;
+    color: #fff8fa !important;
+    box-shadow: 0 0 10px rgba(190,115,140,0.14);
+}
+
+.comment-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 100%;
+}
+
+.comment-row textarea,
+.comment-row .form-control {
+    flex: 1;
+    background: rgba(255,255,255,0.22) !important;
+    color: #66575a !important;
+    border: 1px solid rgba(255,255,255,0.30) !important;
+    border-radius: 10px;
+    resize: none;
+    min-height: 48px;
+}
+
+.comment-row textarea:focus,
+.comment-row .form-control:focus {
+    border-color: rgba(190,115,140,0.44) !important;
+    box-shadow: 0 0 0 0.2rem rgba(190,115,140,0.08) !important;
+}
+
+.comment-row textarea::placeholder,
+.comment-row .form-control::placeholder {
+    color: #9f8587 !important;
+}
+
+.comment-item {
+    align-items: flex-start;
+}
+
+.comment-avatar {
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 2px;
+}
+
+.comment-body {
+    position: relative;
+    background: rgba(255,255,255,0.10);
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 12px;
+    padding: 10px 44px 10px 12px;
+    backdrop-filter: blur(12px);
+}
+
+.comment-header {
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+    margin-bottom: 2px;
+}
+
+.comment-author a {
+    color: #ad617a;
+    text-decoration: none;
+}
+
+.comment-time {
+    font-size: 12px;
+    color: #9c8185;
+}
+
+.comment-text {
+    color: #66575a;
+    line-height: 1.35;
+}
+
+.comment-actions {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 120ms ease-in-out;
+}
+
+.comment-item:hover .comment-actions {
+    opacity: 0.9;
+}
+
+.comment-action-btn {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.24);
+    border-radius: 8px;
+    cursor: pointer;
+    color: rgba(102,87,90,0.80);
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+}
+
+.comment-action-btn i {
+    font-size: 14px;
+    line-height: 1;
+    display: block;
+}
+
+.comment-action-btn:hover {
+    color: #6b5056;
+    border-color: rgba(190,115,140,0.30);
+    background: rgba(255,255,255,0.08);
+}
+
+.comment-action-danger:hover {
+    color: #b45b70;
+    border-color: rgba(180,91,112,0.30);
+    background: rgba(255,255,255,0.08);
+}
+
+@media (max-width: 991.98px) {
+    .rv-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .rv-theme {
+        max-width: 720px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .container-fluid.mt-3 {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+
+    .rv-theme {
+        padding: 0 4px;
+        margin-top: 8px;
+    }
+
+    .rv-layout {
+        margin-top: 68px;
+    }
+
+    .rv-title {
+        font-size: 2rem;
+    }
+
+    .rv-post {
+        padding: 18px 16px 16px;
+    }
+
+    .comment-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .comment-row .btn {
+        width: 100%;
+    }
+}
+</style>
+
+<div class="rv-theme">
+    <h1 class="rv-title">{{ blog.profile.blog_name|default:blog.username }}</h1>
+
+    {% if blog.profile.blog_tagline %}<p class="blog-tagline-shared">{{ blog.profile.blog_tagline }}</p>{% endif %}
+
+    {% if blog.profile.blog_banner %}
+    <div class="rv-banner">
+        <img src="{{ blog.profile.blog_banner.url }}" alt="Banner bloga">
+    </div>
+    {% endif %}
+
+    <div class="rv-layout">
+        <main>
+            {% if active_category or active_tag %}
+            <div class="rv-filter-bar">
+                <span>Filtrirano:</span>
+                {% if active_category_name %}
+                    <span class="rv-filter-chip">{{ active_category_name }}</span>
+                {% elif active_category %}
+                    <span class="rv-filter-chip">{{ active_category }}</span>
+                {% endif %}
+                {% if active_tag %}
+                    <span class="rv-filter-chip">#{{ active_tag }}</span>
+                {% endif %}
+                <a class="rv-filter-clear" href="{{ archive_base_url }}">Makni filter</a>
+            </div>
+            {% endif %}
+
+            {% for post in page_obj %}
+                <article class="rv-post">
+                    <div class="rv-post-date">{{ post.publication_datetime|date:"d.m.Y" }}</div>
+                    <div class="rv-post-divider"></div>
+                    <div class="d-flex flex-column" style="gap: 10px; min-width: 0;">
+                        <h4 class="mb-0">{{ post.title }}</h4>
+                        {% include "blog/components/post_meta.html" %}
+                    </div>
+
+                    <div class="mt-4">
+                        {% include "blog/components/post_body.html" %}
+                    </div>
+
+                    {% include "blog/components/post_actions.html" %}
+                    {% include "blog/components/post_comments.html" %}
+                </article>
+            {% empty %}
+                <div class="rv-post">
+                    <p class="mb-0">Nema postova.</p>
+                </div>
+            {% endfor %}
+
+            {% if page_obj.has_other_pages %}
+            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mt-3">
+                {% if page_obj.has_previous %}
+                    <a href="?page={{ page_obj.previous_page_number }}{{ pagination_query }}" class="btn btn-sm btn-outline-secondary">Prethodna</a>
+                {% else %}
+                    <span></span>
+                {% endif %}
+
+                <span class="small text-muted">Stranica {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}</span>
+
+                {% if page_obj.has_next %}
+                    <a href="?page={{ page_obj.next_page_number }}{{ pagination_query }}" class="btn btn-sm btn-outline-secondary">Sljedeća</a>
+                {% endif %}
+            </div>
+            {% endif %}
+        </main>
+
+        <aside class="rv-side-stack">
+            <div class="rv-profile-wrap rv-side-card">
+                <div class="rv-side-title">O autoru</div>
+                {% include "blog/components/blog_profile_actions_sidebar.html" %}
+            </div>
+
+            {% if blog_preferences.blog_archive_mode == "both" or blog_preferences.blog_archive_mode == "calendar" %}
+            <div class="rv-side-card">
+                <div class="rv-calendar-title">Kalendar</div>
+                <div class="rv-calendar-month calendar-month-nav"><a href="{{ prev_month_url }}" class="calendar-month-nav-link" aria-label="Prethodni mjesec">&#8249;</a><span>{{ current_month_hr|upper }}, {{ current_year }}</span><a href="{{ next_month_url }}" class="calendar-month-nav-link" aria-label="Sljedeći mjesec">&#8250;</a></div>
+                <div class="rv-calendar-weekdays">
+                    <div>P</div><div>U</div><div>S</div><div>Č</div><div>P</div><div>S</div><div>N</div>
+                </div>
+                <div class="rv-calendar-grid">
+                    {% for week in month_calendar %}
+                        {% for day in week %}
+                            {% if day == 0 %}
+                                <div class="rv-calendar-empty"></div>
+                            {% else %}
+                                {% with pid=day_single_post_map|get_item:day %}
+                                    {% if day in days_with_posts %}
+                                        {% if pid %}
+                                            <a href="{% url 'post_detail' pid %}" class="rv-calendar-day rv-calendar-day--has-post {% if day == current_day %}rv-calendar-day--today{% endif %}">{{ day }}</a>
+                                        {% else %}
+                                            <a href="{{ archive_base_url }}?year={{ current_year }}&month={{ current_month_num }}&day={{ day }}" class="rv-calendar-day rv-calendar-day--has-post {% if day == current_day %}rv-calendar-day--today{% endif %}">{{ day }}</a>
+                                        {% endif %}
+                                    {% else %}
+                                        <div class="rv-calendar-day {% if day == current_day %}rv-calendar-day--today{% endif %}">{{ day }}</div>
+                                    {% endif %}
+                                {% endwith %}
+                            {% endif %}
+                        {% endfor %}
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+
+            {% if blog_preferences.blog_archive_mode == "both" or blog_preferences.blog_archive_mode == "list" %}
+            <div class="rv-side-card">
+                <div class="rv-archive-title">Arhiva bloga</div>
+                <div class="rv-archive-list">
+                    {% for a in archives %}
+                        <a class="rv-archive-link" href="{{ archive_base_url }}?year={{ a.year }}&month={{ a.month }}">{{ a.label }} ({{ a.count }})</a>
+                    {% empty %}
+                        <div class="rv-empty-copy">Nema postova.</div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+
+            {% if blog_preferences.analytics_widget_side == 'left_top' or blog_preferences.analytics_widget_side == 'right_top' %}
+            <div class="rv-side-card">
+                {% include "blog/components/live_analytics_widget.html" with analytics_widget_class="" %}
+            </div>
+            {% endif %}
+
+            {% for box in left_boxes %}
+            <div class="rv-side-card">
+                <div class="rv-box-title">{{ box.title }}</div>
+                <div class="rv-box-content">{{ box.content|safe }}</div>
+            </div>
+            {% endfor %}
+
+            {% for box in right_boxes %}
+            <div class="rv-side-card">
+                <div class="rv-box-title">{{ box.title }}</div>
+                <div class="rv-box-content">{{ box.content|safe }}</div>
+            </div>
+            {% endfor %}
+
+            {% if blog_preferences.analytics_widget_side == 'left_bottom' or blog_preferences.analytics_widget_side == 'right_bottom' %}
+            <div class="rv-side-card">
+                {% include "blog/components/live_analytics_widget.html" with analytics_widget_class="" %}
+            </div>
+            {% endif %}
+        </aside>
+    </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".poll-bar").forEach(function (bar) {
+        const p = bar.getAttribute("data-percent") || "0";
+        bar.style.width = p + "%";
+    });
+
+    document.querySelectorAll(".js-scroll-to-comments").forEach(function (a) {
+        a.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href");
+            if (!targetId) return;
+            const el = document.querySelector(targetId);
+            if (!el) return;
+            el.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+    });
+});
+</script>
+{% endblock %}
+
+{% block left_sidebar %}{% endblock %}
+{% block right_sidebar %}{% endblock %}
+{% block content %}{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "blog/base.html" %}
+{% load custom_tags %}
+{% load static %}
+
+{% block blog_header %}
+    {% include "blog/components/blog_header.html" %}
+{% endblock %}
+
+{% block left_sidebar %}
+    {% include "blog/components/blog_left_sidebar.html" %}
+{% endblock %}
+
+{% block right_sidebar %}
+    {% include "blog/components/blog_right_sidebar.html" %}
+{% endblock %}
+
+{% block content %}
+    {% include "blog/components/blog_design_styles.html" %}
+    {% include "blog/components/blog_posts.html" %}
+{% endblock %}

@@ -1,0 +1,748 @@
+{% extends "blog/base.html" %}
+{% load static custom_tags %}
+
+{% block header %}{% endblock %}
+
+{% block blog_header %}
+<style>
+body {
+    background-color: #2d1f18;
+    background-image:
+        linear-gradient(180deg, rgba(51, 28, 16, 0.20) 0%, rgba(66, 34, 19, 0.14) 26%, rgba(42, 24, 17, 0.32) 62%, rgba(25, 15, 12, 0.48) 100%),
+        url('{% static "blog/images/design-backgrounds/jedro_u_suton.png" %}');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #f7eadc;
+}
+
+.container-fluid.mt-3 {
+    margin-top: 0 !important;
+    padding-top: 24px;
+    position: relative;
+    z-index: 1;
+}
+
+.container-fluid.mt-3 > .row.align-items-start {
+    display: none;
+}
+
+nav.navbar {
+    position: relative;
+    z-index: 4000 !important;
+    background: rgba(38, 23, 17, 0.78) !important;
+    backdrop-filter: blur(7px);
+    border-bottom: 1px solid rgba(255, 228, 203, 0.10);
+}
+
+nav.navbar .dropdown-menu {
+    z-index: 4100 !important;
+}
+
+.jus-theme {
+    max-width: 900px;
+    margin: 34px auto 34px;
+    padding: 0 14px;
+}
+
+.jus-title {
+    display: inline-block;
+    margin: 0 0 18px;
+    padding: 8px 14px 10px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.25rem, 1.9vw, 1.75rem);
+    line-height: 1.04;
+    color: #fff7ee;
+    text-shadow: 0 6px 22px rgba(0, 0, 0, 0.32);
+    background: rgba(58, 31, 20, 0.12);
+    border: 1px solid rgba(255, 232, 208, 0.08);
+    backdrop-filter: blur(2px);
+}
+
+.jus-shell {
+    margin-top: 14px;
+    padding: 22px 22px 24px;
+    background: rgba(58, 34, 24, 0.12);
+    border: 1px solid rgba(255, 232, 208, 0.10);
+    box-shadow: 0 18px 42px rgba(21, 12, 9, 0.12);
+    backdrop-filter: blur(5px);
+}
+
+.jus-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 220px;
+    gap: 22px;
+    align-items: start;
+}
+
+.jus-main {
+    min-width: 0;
+}
+
+.jus-post {
+    padding: 0 0 26px;
+    margin: 0 0 26px;
+    border-bottom: 1px solid rgba(255, 232, 208, 0.20);
+}
+
+.jus-post:last-child,
+.jus-post:last-of-type {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.jus-post-date {
+    font-size: 0.82rem;
+    color: #f6d0ae;
+    letter-spacing: 0.02em;
+    margin-bottom: 6px;
+}
+
+.jus-post-divider {
+    margin: 0 0 18px;
+    border-top: 1px solid rgba(255, 232, 208, 0.14);
+}
+
+.jus-post h4,
+.jus-post h4 a,
+.jus-post .blog-post-title {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #fff7ef !important;
+    font-size: clamp(1.05rem, 1.45vw, 1.35rem);
+    line-height: 1.15;
+    text-decoration: none;
+}
+
+.jus-post h4 a:hover {
+    color: #ffe5cb !important;
+}
+
+.post-meta {
+    margin-top: 8px;
+    font-size: 11px;
+    color: #f2dcc8;
+}
+
+.post-meta-category {
+    font-weight: 700;
+    color: #ffd2a8;
+}
+
+.post-meta-tag {
+    color: #f6e3d2;
+}
+
+.post-meta-sep {
+    margin: 0 5px;
+    color: rgba(246, 227, 210, 0.36);
+}
+
+.jus-post,
+.jus-post p,
+.jus-post li,
+.jus-post blockquote,
+.jus-post div,
+.jus-post span,
+.jus-post strong,
+.jus-post em,
+.jus-box-content,
+.jus-section {
+    color: #fbefe3;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.jus-box-content,
+.jus-box-content p,
+.jus-box-content li {
+    font-size: 0.9rem;
+    line-height: 1.55;
+}
+
+.jus-post .mt-4 img,
+.jus-post img.img-fluid,
+.jus-post .ratio iframe {
+    border: 1px solid rgba(255, 232, 208, 0.16);
+    box-shadow: 0 10px 26px rgba(17, 10, 8, 0.16);
+    background: rgba(73, 44, 30, 0.10);
+    padding: 4px;
+}
+
+.jus-post .mt-5.small {
+    margin-top: 24px !important;
+}
+
+.post-author-line,
+.post-author-link,
+.jus-post .small.text-muted,
+.jus-post .text-muted,
+.jus-shell .small.text-muted {
+    color: #f2dfcb !important;
+}
+
+.post-views,
+.post-actions a,
+.comment-author a,
+.jus-calendar-day--has-post,
+.jus-archive-link:hover,
+.jus-box-content a,
+.jus-profile-wrap a {
+    color: #ffd2a8;
+}
+
+.post-actions a:hover,
+.comment-author a:hover,
+.jus-filter-clear:hover,
+.jus-calendar-day:hover,
+.jus-archive-link:hover,
+.jus-box-content a:hover,
+.jus-profile-wrap a:hover {
+    color: #ffedd7;
+}
+
+.jus-side-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.jus-section {
+    padding: 0 0 18px;
+    border-bottom: 1px solid rgba(255, 232, 208, 0.16);
+}
+
+.jus-section:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.jus-side-title,
+.jus-calendar-title,
+.jus-box-title,
+.jus-archive-title {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.02rem;
+    color: #fff5ea;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(255, 232, 208, 0.14);
+}
+
+.jus-profile-wrap .blog-profile-panel {
+    max-width: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    color: #fbefe3;
+}
+
+.jus-profile-wrap .blog-profile-panel__name,
+.jus-profile-wrap .blog-profile-panel__blog-name,
+.jus-profile-wrap .blog-profile-panel__stats,
+.jus-profile-wrap .blog-profile-panel__dropdown-toggle {
+    color: inherit;
+    text-shadow: none;
+}
+
+.jus-profile-wrap .blog-profile-panel__avatar {
+    box-shadow: 0 8px 18px rgba(18, 11, 8, 0.22);
+}
+
+.jus-profile-wrap .btn-primary {
+    background: rgba(255, 210, 168, 0.18);
+    border-color: rgba(255, 210, 168, 0.52);
+    color: #fff8ef;
+}
+
+.jus-profile-wrap .btn-primary:hover {
+    background: rgba(255, 210, 168, 0.24);
+    border-color: rgba(255, 210, 168, 0.66);
+    color: #fffdf9;
+}
+
+.jus-profile-wrap .btn-outline-primary {
+    color: #ffd2a8;
+    border-color: rgba(255, 210, 168, 0.48);
+}
+
+.jus-profile-wrap .btn-outline-primary:hover {
+    background: rgba(255, 210, 168, 0.16);
+    color: #fff8ef;
+}
+
+.jus-calendar-month {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #f6d0ae;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.jus-calendar-weekdays,
+.jus-calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 6px;
+    text-align: center;
+}
+
+.jus-calendar-weekdays {
+    font-size: 11px;
+    color: #f6e3d2;
+    margin-bottom: 8px;
+}
+
+.jus-calendar-day,
+.jus-calendar-empty {
+    min-height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 12px;
+}
+
+.jus-calendar-day {
+    text-decoration: none;
+    background: rgba(255, 245, 235, 0.04);
+    color: #fff3e4;
+    border: 1px solid rgba(255, 232, 208, 0.10);
+}
+
+.jus-calendar-day:hover {
+    border-color: rgba(255, 210, 168, 0.28);
+    background: rgba(255, 245, 235, 0.07);
+}
+
+.jus-calendar-day--today {
+    background: rgba(255, 210, 168, 0.12);
+    color: #fffdf7;
+    border-color: rgba(255, 210, 168, 0.42);
+    box-shadow: 0 0 0 2px rgba(255, 245, 235, 0.10);
+}
+
+.jus-archive-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.jus-archive-link {
+    display: block;
+    padding: 8px 10px;
+    text-decoration: none;
+    border-radius: 10px;
+    background: rgba(255, 245, 235, 0.04);
+    border: 1px solid rgba(255, 232, 208, 0.10);
+    color: #fbefe3;
+    font-size: 12px;
+}
+
+.jus-archive-link:hover {
+    border-color: rgba(255, 210, 168, 0.28);
+    background: rgba(255, 245, 235, 0.07);
+}
+
+.jus-box-title {
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+}
+
+.jus-side-stack .live-analytics-widget {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+
+.jus-filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 18px 0;
+    padding: 10px 12px;
+    background: rgba(255, 245, 235, 0.04);
+    border: 1px solid rgba(255, 232, 208, 0.10);
+    color: #fbefe3;
+    font-size: 12px;
+}
+
+.jus-filter-chip {
+    padding: 5px 10px;
+    border-radius: 999px;
+    background: rgba(255, 245, 235, 0.05);
+    border: 1px solid rgba(255, 232, 208, 0.10);
+    color: #ffd2a8;
+    font-weight: 700;
+}
+
+.jus-filter-clear {
+    margin-left: auto;
+    text-decoration: none;
+    color: #ffd2a8;
+    font-weight: 600;
+}
+
+.blog-action-outline,
+.btn-outline-light,
+.jus-theme .btn-outline-secondary {
+    border-color: rgba(255, 210, 168, 0.48) !important;
+    color: #ffd2a8 !important;
+    background: transparent !important;
+}
+
+.blog-action-outline:hover,
+.btn-outline-light:hover,
+.jus-theme .btn-outline-secondary:hover {
+    background: rgba(255, 210, 168, 0.14) !important;
+    color: #fff8ef !important;
+    box-shadow: 0 0 8px rgba(255, 210, 168, 0.14);
+}
+
+.comment-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 100%;
+}
+
+.comment-row textarea,
+.comment-row .form-control {
+    flex: 1;
+    background: rgba(255, 245, 235, 0.06) !important;
+    color: #fff7ef !important;
+    border: 1px solid rgba(255, 232, 208, 0.12) !important;
+    border-radius: 10px;
+    resize: none;
+    min-height: 48px;
+}
+
+.comment-row textarea:focus,
+.comment-row .form-control:focus {
+    border-color: rgba(255, 210, 168, 0.34) !important;
+    box-shadow: 0 0 0 0.2rem rgba(255, 210, 168, 0.08) !important;
+}
+
+.comment-item {
+    align-items: flex-start;
+}
+
+.comment-avatar {
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 2px;
+}
+
+.comment-body {
+    position: relative;
+    background: rgba(255, 245, 235, 0.04);
+    border: 1px solid rgba(255, 232, 208, 0.10);
+    border-radius: 12px;
+    padding: 10px 44px 10px 12px;
+}
+
+.comment-header {
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+    margin-bottom: 2px;
+}
+
+.comment-time {
+    font-size: 12px;
+    color: #f2dfcb;
+}
+
+.comment-text {
+    color: #fff6ec;
+    line-height: 1.35;
+}
+
+.comment-actions {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 120ms ease-in-out;
+}
+
+.comment-item:hover .comment-actions {
+    opacity: 0.9;
+}
+
+.comment-action-btn {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 1px solid rgba(255, 232, 208, 0.10);
+    border-radius: 8px;
+    cursor: pointer;
+    color: rgba(255, 247, 239, 0.72);
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+}
+
+.comment-action-btn i {
+    font-size: 14px;
+    line-height: 1;
+    display: block;
+}
+
+.comment-action-btn:hover {
+    color: #fffdf7;
+    border-color: rgba(255, 232, 208, 0.16);
+    background: rgba(255, 245, 235, 0.06);
+}
+
+.comment-action-danger:hover {
+    color: #ffc1b4;
+    border-color: rgba(255, 193, 180, 0.28);
+    background: rgba(255, 193, 180, 0.10);
+}
+
+.jus-empty-copy {
+    color: #f2dfcb;
+    font-size: 13px;
+}
+
+@media (max-width: 991.98px) {
+    .jus-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .jus-theme {
+        max-width: 680px;
+    }
+
+    .jus-shell {
+        padding: 20px 18px 22px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .container-fluid.mt-3 {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+
+    .jus-theme {
+        padding: 0 4px;
+        margin-top: 8px;
+    }
+
+    .jus-title {
+        font-size: 1.35rem;
+        padding: 8px 12px 10px;
+    }
+
+    .jus-shell {
+        margin-top: 16px;
+        padding: 16px 14px 18px;
+    }
+
+    .jus-post h4,
+    .jus-post h4 a,
+    .jus-post .blog-post-title {
+        font-size: 1.12rem;
+    }
+
+    .comment-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .comment-row .btn {
+        width: 100%;
+    }
+}
+</style>
+
+<div class="jus-theme">
+    <h1 class="jus-title">{{ blog.profile.blog_name|default:blog.username }}</h1>
+
+    {% if blog.profile.blog_tagline %}<p class="blog-tagline-shared">{{ blog.profile.blog_tagline }}</p>{% endif %}
+
+    {% if blog.profile.blog_banner %}
+    <div class="sa-banner" style="margin-top: 6px; background: rgba(58, 34, 24, 0.12); border: 1px solid rgba(255, 232, 208, 0.10); padding: 8px; box-shadow: 0 12px 28px rgba(17, 10, 8, 0.12); backdrop-filter: blur(5px);">
+        <img src="{{ blog.profile.blog_banner.url }}" alt="Banner bloga" style="width: 100%; max-height: 220px; object-fit: cover; display: block;">
+    </div>
+    {% endif %}
+
+    <div class="jus-shell">
+        {% if active_category or active_tag %}
+        <div class="jus-filter-bar">
+            <span>Filtrirano:</span>
+            {% if active_category_name %}
+                <span class="jus-filter-chip">{{ active_category_name }}</span>
+            {% elif active_category %}
+                <span class="jus-filter-chip">{{ active_category }}</span>
+            {% endif %}
+            {% if active_tag %}
+                <span class="jus-filter-chip">#{{ active_tag }}</span>
+            {% endif %}
+            <a class="jus-filter-clear" href="{{ archive_base_url }}">Makni filter</a>
+        </div>
+        {% endif %}
+
+        <div class="jus-layout">
+            <main class="jus-main">
+                {% for post in page_obj %}
+                    <article class="jus-post">
+                        <div class="jus-post-date">{{ post.publication_datetime|date:"d.m.Y" }}</div>
+                        <div class="jus-post-divider"></div>
+                        <div class="d-flex flex-column" style="gap: 10px; min-width: 0;">
+                            <h4 class="mb-0">{{ post.title }}</h4>
+                            {% include "blog/components/post_meta.html" %}
+                        </div>
+
+                        <div class="mt-4">
+                            {% include "blog/components/post_body.html" %}
+                        </div>
+
+                        {% include "blog/components/post_actions.html" %}
+                        {% include "blog/components/post_comments.html" %}
+                    </article>
+                {% empty %}
+                    <article class="jus-post">
+                        <p class="mb-0">Nema postova.</p>
+                    </article>
+                {% endfor %}
+
+                {% if page_obj.has_other_pages %}
+                <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mt-3">
+                    {% if page_obj.has_previous %}
+                        <a href="?page={{ page_obj.previous_page_number }}{{ pagination_query }}" class="btn btn-sm btn-outline-secondary">Prethodna</a>
+                    {% else %}
+                        <span></span>
+                    {% endif %}
+
+                    <span class="small text-muted">Stranica {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}</span>
+
+                    {% if page_obj.has_next %}
+                        <a href="?page={{ page_obj.next_page_number }}{{ pagination_query }}" class="btn btn-sm btn-outline-secondary">Sljedeća</a>
+                    {% endif %}
+                </div>
+                {% endif %}
+            </main>
+
+            <aside class="jus-side-stack">
+                <section class="jus-section jus-profile-wrap">
+                    <div class="jus-side-title">O autoru</div>
+                    {% include "blog/components/blog_profile_actions_sidebar.html" %}
+                </section>
+
+                {% if blog_preferences.blog_archive_mode == "both" or blog_preferences.blog_archive_mode == "calendar" %}
+                <section class="jus-section">
+                    <div class="jus-calendar-title">Kalendar</div>
+                    <div class="jus-calendar-month calendar-month-nav"><a href="{{ prev_month_url }}" class="calendar-month-nav-link" aria-label="Prethodni mjesec">&#8249;</a><span>{{ current_month_hr|upper }}, {{ current_year }}</span><a href="{{ next_month_url }}" class="calendar-month-nav-link" aria-label="Sljedeći mjesec">&#8250;</a></div>
+                    <div class="jus-calendar-weekdays">
+                        <div>P</div><div>U</div><div>S</div><div>Č</div><div>P</div><div>S</div><div>N</div>
+                    </div>
+                    <div class="jus-calendar-grid">
+                        {% for week in month_calendar %}
+                            {% for day in week %}
+                                {% if day == 0 %}
+                                    <div class="jus-calendar-empty"></div>
+                                {% else %}
+                                    {% with pid=day_single_post_map|get_item:day %}
+                                        {% if day in days_with_posts %}
+                                            {% if pid %}
+                                                <a href="{% url 'post_detail' pid %}" class="jus-calendar-day jus-calendar-day--has-post {% if day == current_day %}jus-calendar-day--today{% endif %}">{{ day }}</a>
+                                            {% else %}
+                                                <a href="{{ archive_base_url }}?year={{ current_year }}&month={{ current_month_num }}&day={{ day }}" class="jus-calendar-day jus-calendar-day--has-post {% if day == current_day %}jus-calendar-day--today{% endif %}">{{ day }}</a>
+                                            {% endif %}
+                                        {% else %}
+                                            <div class="jus-calendar-day {% if day == current_day %}jus-calendar-day--today{% endif %}">{{ day }}</div>
+                                        {% endif %}
+                                    {% endwith %}
+                                {% endif %}
+                            {% endfor %}
+                        {% endfor %}
+                    </div>
+                </section>
+                {% endif %}
+
+                {% if blog_preferences.blog_archive_mode == "both" or blog_preferences.blog_archive_mode == "list" %}
+                <section class="jus-section">
+                    <div class="jus-archive-title">Arhiva bloga</div>
+                    <div class="jus-archive-list">
+                        {% for a in archives %}
+                            <a class="jus-archive-link" href="{{ archive_base_url }}?year={{ a.year }}&month={{ a.month }}">{{ a.label }} ({{ a.count }})</a>
+                        {% empty %}
+                            <div class="jus-empty-copy">Nema postova.</div>
+                        {% endfor %}
+                    </div>
+                </section>
+                {% endif %}
+
+                {% if blog_preferences.analytics_widget_side == 'left_top' or blog_preferences.analytics_widget_side == 'right_top' %}
+                <section class="jus-section">
+                    {% include "blog/components/live_analytics_widget.html" with analytics_widget_class="" %}
+                </section>
+                {% endif %}
+
+                {% for box in left_boxes %}
+                <section class="jus-section">
+                    <div class="jus-box-title">{{ box.title }}</div>
+                    <div class="jus-box-content">{{ box.content|safe }}</div>
+                </section>
+                {% endfor %}
+
+                {% for box in right_boxes %}
+                <section class="jus-section">
+                    <div class="jus-box-title">{{ box.title }}</div>
+                    <div class="jus-box-content">{{ box.content|safe }}</div>
+                </section>
+                {% endfor %}
+
+                {% if blog_preferences.analytics_widget_side == 'left_bottom' or blog_preferences.analytics_widget_side == 'right_bottom' %}
+                <section class="jus-section">
+                    {% include "blog/components/live_analytics_widget.html" with analytics_widget_class="" %}
+                </section>
+                {% endif %}
+            </aside>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".poll-bar").forEach(function (bar) {
+        const p = bar.getAttribute("data-percent") || "0";
+        bar.style.width = p + "%";
+    });
+
+    document.querySelectorAll(".js-scroll-to-comments").forEach(function (a) {
+        a.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href");
+            if (!targetId) return;
+            const el = document.querySelector(targetId);
+            if (!el) return;
+            el.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+    });
+});
+</script>
+{% endblock %}
+
+{% block left_sidebar %}{% endblock %}
+{% block right_sidebar %}{% endblock %}
+{% block content %}{% endblock %}

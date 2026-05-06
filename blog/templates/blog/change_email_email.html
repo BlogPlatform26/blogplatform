@@ -1,0 +1,7 @@
+Pozdrav {{ user.username }},
+
+Kliknite na link ispod kako biste potvrdili novu email adresu:
+
+http://{{ domain }}{% url 'confirm_email_change' uidb64=uid token=token %}
+
+Ako niste vi tražili promjenu, ignorirajte ovu poruku.

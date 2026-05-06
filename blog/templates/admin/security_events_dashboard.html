@@ -1,0 +1,403 @@
+{% extends "admin/base_site.html" %}
+
+{% block content %}
+<style>
+    .security-dashboard {
+        max-width: 1280px;
+    }
+
+    .security-actions {
+        margin: 0 0 18px 0;
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .security-actions a {
+        display: inline-block;
+        padding: 7px 12px;
+        border-radius: 8px;
+        border: 1px solid #d0d7de;
+        background: #fff;
+        text-decoration: none;
+    }
+
+    .security-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(160px, 1fr));
+        gap: 12px;
+        margin-bottom: 18px;
+    }
+
+    .security-card {
+        background: #fff;
+        border: 1px solid #d0d7de;
+        border-radius: 10px;
+        padding: 14px;
+    }
+
+    .security-card strong {
+        display: block;
+        font-size: 24px;
+        line-height: 1.1;
+        margin-bottom: 6px;
+    }
+
+    .security-card span {
+        color: #59636e;
+    }
+
+    .security-card.warning strong { color: #9a6700; }
+    .security-card.critical strong { color: #cf222e; }
+    .security-card.suspicious strong { color: #8250df; }
+
+    .security-columns {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        margin-bottom: 20px;
+    }
+
+    .security-panel {
+        background: #fff;
+        border: 1px solid #d0d7de;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .security-panel h2 {
+        font-size: 16px;
+        margin: 0;
+        padding: 12px 14px;
+        border-bottom: 1px solid #d0d7de;
+        background: #f6f8fa;
+    }
+
+    .security-panel-body {
+        padding: 12px 14px;
+    }
+
+    .security-table {
+        width: 100%;
+        border-collapse: collapse;
+        background: #fff;
+    }
+
+    .security-table th,
+    .security-table td {
+        padding: 8px 10px;
+        border-bottom: 1px solid #d8dee4;
+        vertical-align: top;
+    }
+
+    .security-table th {
+        background: #f6f8fa;
+        text-align: left;
+        font-weight: 700;
+    }
+
+    .security-filter {
+        background: #fff;
+        border: 1px solid #d0d7de;
+        border-radius: 10px;
+        padding: 14px;
+        margin-bottom: 18px;
+        display: grid;
+        grid-template-columns: repeat(5, minmax(120px, 1fr));
+        gap: 10px;
+        align-items: end;
+    }
+
+    .security-filter label {
+        display: block;
+        font-weight: 700;
+        margin-bottom: 4px;
+    }
+
+    .security-filter input,
+    .security-filter select {
+        width: 100%;
+        padding: 7px 8px;
+        border: 1px solid #d0d7de;
+        border-radius: 8px;
+        box-sizing: border-box;
+    }
+
+    .security-filter button {
+        padding: 8px 12px;
+        border: 0;
+        border-radius: 8px;
+        background: #0d6efd;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .badge {
+        display: inline-block;
+        padding: 2px 8px;
+        border-radius: 999px;
+        font-size: 12px;
+        font-weight: 700;
+        background: #d0d7de;
+        color: #24292f;
+        white-space: nowrap;
+    }
+
+    .badge.info { background: #ddf4ff; color: #0550ae; }
+    .badge.warning { background: #fff8c5; color: #9a6700; }
+    .badge.critical { background: #ffebe9; color: #cf222e; }
+
+    .muted { color: #59636e; }
+    .nowrap { white-space: nowrap; }
+
+    .pagination-links {
+        margin-top: 14px;
+        display: flex;
+        gap: 8px;
+        align-items: center;
+    }
+
+    .pagination-links a {
+        padding: 6px 10px;
+        border: 1px solid #d0d7de;
+        border-radius: 8px;
+        background: #fff;
+        text-decoration: none;
+    }
+
+    @media (max-width: 900px) {
+        .security-grid,
+        .security-columns,
+        .security-filter {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+<div class="security-dashboard">
+    <h1>Sigurnosni pregled</h1>
+
+    <div class="security-actions">
+        <a href="{% url 'admin:blog_securityevent_changelist' %}">Otvori sve SecurityEvent zapise</a>
+        <a href="?days=1">Zadnja 24 sata</a>
+        <a href="?days=7">Zadnjih 7 dana</a>
+        <a href="?days=30">Zadnjih 30 dana</a>
+    </div>
+
+    <p class="muted">
+        Prikaz od {{ since|date:"d.m.Y H:i" }} do sada. Ovdje vidiš sažetak sumnjivih aktivnosti i najnovije sigurnosne događaje.
+    </p>
+
+    <div class="security-grid">
+        <div class="security-card">
+            <strong>{{ total_events }}</strong>
+            <span>Ukupno događaja</span>
+        </div>
+        <div class="security-card warning">
+            <strong>{{ warning_events }}</strong>
+            <span>Upozorenja</span>
+        </div>
+        <div class="security-card critical">
+            <strong>{{ critical_events }}</strong>
+            <span>Kritično</span>
+        </div>
+        <div class="security-card suspicious">
+            <strong>{{ suspicious_events }}</strong>
+            <span>Sumnjivi događaji</span>
+        </div>
+    </div>
+
+    <div class="security-grid">
+        <div class="security-card">
+            <strong>{{ login_failed_count }}</strong>
+            <span>Neuspjele prijave</span>
+        </div>
+        <div class="security-card warning">
+            <strong>{{ login_lockout_count }}</strong>
+            <span>Blokirane prijave</span>
+        </div>
+        <div class="security-card warning">
+            <strong>{{ registration_blocked_count }}</strong>
+            <span>Blokirane registracije</span>
+        </div>
+        <div class="security-card warning">
+            <strong>{{ comment_limited_count }}</strong>
+            <span>Spam komentari</span>
+        </div>
+    </div>
+
+    <div class="security-columns">
+        <div class="security-panel">
+            <h2>Najaktivnije IP adrese</h2>
+            <div class="security-panel-body">
+                <table class="security-table">
+                    <thead>
+                        <tr>
+                            <th>IP</th>
+                            <th>Ukupno</th>
+                            <th>Upozorenja</th>
+                            <th>Kritično</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for row in top_ips %}
+                            <tr>
+                                <td><a href="?days={{ days }}&ip={{ row.ip_address }}">{{ row.ip_address }}</a></td>
+                                <td>{{ row.total }}</td>
+                                <td>{{ row.warnings }}</td>
+                                <td>{{ row.critical }}</td>
+                            </tr>
+                        {% empty %}
+                            <tr><td colspan="4" class="muted">Nema podataka.</td></tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="security-panel">
+            <h2>Najčešća korisnička imena</h2>
+            <div class="security-panel-body">
+                <table class="security-table">
+                    <thead>
+                        <tr>
+                            <th>Korisnik / unos</th>
+                            <th>Ukupno</th>
+                            <th>Upozorenja</th>
+                            <th>Kritično</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for row in top_usernames %}
+                            <tr>
+                                <td>{{ row.username }}</td>
+                                <td>{{ row.total }}</td>
+                                <td>{{ row.warnings }}</td>
+                                <td>{{ row.critical }}</td>
+                            </tr>
+                        {% empty %}
+                            <tr><td colspan="4" class="muted">Nema podataka.</td></tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="security-panel" style="margin-bottom: 18px;">
+        <h2>Najčešći tipovi događaja</h2>
+        <div class="security-panel-body">
+            <table class="security-table">
+                <thead>
+                    <tr>
+                        <th>Tip događaja</th>
+                        <th>Broj</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in event_type_counts %}
+                        <tr>
+                            <td>{{ row.event_type }}</td>
+                            <td>{{ row.total }}</td>
+                        </tr>
+                    {% empty %}
+                        <tr><td colspan="2" class="muted">Nema podataka.</td></tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <form method="get" class="security-filter">
+        <div>
+            <label for="days">Period</label>
+            <select name="days" id="days">
+                <option value="1" {% if days == 1 %}selected{% endif %}>24 sata</option>
+                <option value="7" {% if days == 7 %}selected{% endif %}>7 dana</option>
+                <option value="30" {% if days == 30 %}selected{% endif %}>30 dana</option>
+                <option value="90" {% if days == 90 %}selected{% endif %}>90 dana</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="event_type">Tip</label>
+            <select name="event_type" id="event_type">
+                <option value="">Svi tipovi</option>
+                {% for value,label in event_type_choices %}
+                    <option value="{{ value }}" {% if selected_event_type == value %}selected{% endif %}>{{ label }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div>
+            <label for="severity">Razina</label>
+            <select name="severity" id="severity">
+                <option value="">Sve razine</option>
+                {% for value,label in severity_choices %}
+                    <option value="{{ value }}" {% if selected_severity == value %}selected{% endif %}>{{ label }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div>
+            <label for="q">Pretraga</label>
+            <input type="text" name="q" id="q" value="{{ search_query }}" placeholder="korisnik, IP, poruka...">
+        </div>
+
+        <div>
+            <button type="submit">Filtriraj</button>
+        </div>
+
+        {% if selected_ip %}
+            <input type="hidden" name="ip" value="{{ selected_ip }}">
+        {% endif %}
+    </form>
+
+    <div class="security-panel">
+        <h2>Najnoviji sigurnosni događaji</h2>
+        <div class="security-panel-body">
+            <table class="security-table">
+                <thead>
+                    <tr>
+                        <th>Vrijeme</th>
+                        <th>Tip</th>
+                        <th>Razina</th>
+                        <th>Korisnik</th>
+                        <th>IP</th>
+                        <th>Putanja</th>
+                        <th>Poruka</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for event in page_obj %}
+                        <tr>
+                            <td class="nowrap">{{ event.created_at|date:"d.m.Y H:i:s" }}</td>
+                            <td>{{ event.get_event_type_display }}</td>
+                            <td><span class="badge {{ event.severity }}">{{ event.get_severity_display }}</span></td>
+                            <td>{{ event.username|default:"-" }}</td>
+                            <td>{{ event.ip_address|default:"-" }}</td>
+                            <td>{{ event.path|default:"-" }}</td>
+                            <td>{{ event.message|default:"-" }}</td>
+                        </tr>
+                    {% empty %}
+                        <tr><td colspan="7" class="muted">Nema događaja za ovaj filter.</td></tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+            <div class="pagination-links">
+                {% if page_obj.has_previous %}
+                    <a href="?days={{ days }}&event_type={{ selected_event_type }}&severity={{ selected_severity }}&q={{ search_query }}&ip={{ selected_ip }}&page={{ page_obj.previous_page_number }}">Prethodna</a>
+                {% endif %}
+
+                <span class="muted">Stranica {{ page_obj.number }} od {{ page_obj.paginator.num_pages }}</span>
+
+                {% if page_obj.has_next %}
+                    <a href="?days={{ days }}&event_type={{ selected_event_type }}&severity={{ selected_severity }}&q={{ search_query }}&ip={{ selected_ip }}&page={{ page_obj.next_page_number }}">Sljedeća</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

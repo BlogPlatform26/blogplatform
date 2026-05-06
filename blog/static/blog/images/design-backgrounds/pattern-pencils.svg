@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="150" height="120" viewBox="0 0 150 120">
+  <rect width="150" height="120" fill="none"/>
+  <g opacity="0.55" transform="rotate(-28 75 60)">
+    <g transform="translate(12 20)">
+      <rect x="0" y="0" width="62" height="14" rx="6" fill="rgba(255,255,255,0.34)" stroke="rgba(110,74,40,0.16)" stroke-width="2"/>
+      <rect x="6" y="0" width="34" height="14" fill="rgba(214,161,62,0.18)"/>
+      <rect x="40" y="0" width="12" height="14" fill="rgba(230,184,75,0.24)"/>
+      <rect x="52" y="0" width="8" height="14" fill="rgba(232,145,166,0.30)"/>
+      <path d="M0 0 L-10 7 L0 14 Z" fill="rgba(196,164,132,0.34)" stroke="rgba(110,74,40,0.16)" stroke-width="2"/>
+      <path d="M-10 7 L-15 7 L-10 4 Z" fill="rgba(90,68,52,0.24)"/>
+    </g>
+    <g transform="translate(80 56)">
+      <rect x="0" y="0" width="62" height="14" rx="6" fill="rgba(255,255,255,0.34)" stroke="rgba(110,74,40,0.16)" stroke-width="2"/>
+      <rect x="6" y="0" width="34" height="14" fill="rgba(214,161,62,0.18)"/>
+      <rect x="40" y="0" width="12" height="14" fill="rgba(230,184,75,0.24)"/>
+      <rect x="52" y="0" width="8" height="14" fill="rgba(232,145,166,0.30)"/>
+      <path d="M0 0 L-10 7 L0 14 Z" fill="rgba(196,164,132,0.34)" stroke="rgba(110,74,40,0.16)" stroke-width="2"/>
+      <path d="M-10 7 L-15 7 L-10 4 Z" fill="rgba(90,68,52,0.24)"/>
+    </g>
+  </g>
+</svg>

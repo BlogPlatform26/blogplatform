@@ -1,0 +1,38 @@
+        <!-- LIJEVI MENU -->
+        <div class="col-md-1 bg-light border-end min-vh-100 p-0">
+
+            <div class="list-group list-group-flush">
+
+                <a href="{% url 'blog_settings' %}?tab=postovi"
+                class="list-group-item list-group-item-action {% if request.GET.tab == 'postovi' or not request.GET.tab %}active{% endif %}">
+                    Postovi
+                </a>
+
+                <a href="{% url 'blog_settings' %}?tab=boxevi"
+                class="list-group-item list-group-item-action {% if request.GET.tab == 'boxevi' %}active{% endif %}">
+                    Boxevi
+                </a>
+
+                <a href="{% url 'blog_settings' %}?tab=dizajn"
+                class="list-group-item list-group-item-action {% if request.GET.tab == 'dizajn' %}active{% endif %}">
+                    Dizajn
+                </a>
+
+                <a href="{% url 'blog_settings' %}?tab=autor"
+                class="list-group-item list-group-item-action {% if request.GET.tab == 'autor' %}active{% endif %}">
+                    Upoznaj autora
+                </a>
+
+                <a href="{% url 'blog_settings' %}?tab=postavke"
+                class="list-group-item list-group-item-action {% if request.GET.tab == 'postavke' %}active{% endif %}">
+                    Postavke
+                </a>
+
+                <a href="{% url 'blog_settings' %}?tab=statistika"
+                class="list-group-item list-group-item-action {% if request.GET.tab == 'statistika' %}active{% endif %}">
+                    Statistika
+                </a>
+
+            </div>
+
+        </div>

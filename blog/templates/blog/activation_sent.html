@@ -1,0 +1,45 @@
+{% extends "blog/base.html" %}
+{% block left_sidebar %}{% endblock %}
+{% block right_sidebar %}{% endblock %}
+{% block title %}Provjeri email{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card shadow-sm">
+            <div class="card-body p-4">
+                <h3 class="mb-3 text-center">Provjeri email</h3>
+
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="alert {% if message.tags == 'error' %}alert-danger{% else %}alert-success{% endif %}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+
+                <p class="text-center mb-2">
+                    Poslali smo aktivacijski link na:<br>
+                    <strong>{{ pending_user_email }}</strong>
+                </p>
+
+                <p class="text-center text-muted small mb-3">
+                    Provjeri inbox, spam i promotions. Ako ga nema, klikni ponovno slanje ispod.
+                </p>
+
+                <form method="POST" class="mb-3">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-outline-primary w-100">
+                        Pošalji aktivacijski mail ponovno
+                    </button>
+                </form>
+
+                <p class="text-center mb-0 small text-muted">
+                    Ako si već aktivirao račun, možeš se vratiti na
+                    <a href="{% url 'login' %}">prijavu</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,64 @@
+{% if live_analytics and blog and blog_preferences %}
+{% if blog_preferences.analytics_live_counter_enabled or blog_preferences.analytics_map_enabled or blog_preferences.analytics_active_pages_enabled %}
+<div class="sidebar-box live-analytics-widget{% if analytics_widget_layout == 'full' %} live-analytics-widget--full{% endif %}{% if analytics_widget_class %} {{ analytics_widget_class }}{% endif %}" data-summary-url="{% url 'blog_analytics_summary' blog.username %}">
+    <div class="sidebar-box-title">Posjetitelji</div>
+    <div class="sidebar-box-content">
+        <div class="live-analytics-layout-grid">
+            {% if blog_preferences.analytics_live_counter_enabled %}
+                <div class="live-analytics-section live-analytics-section--stats">
+                    <div class="live-analytics-stats live-analytics-stats--{{ blog_preferences.analytics_stat_card_size|default:'small' }}">
+                        <div class="live-analytics-stat-card">
+                            <div class="live-analytics-stat-value js-analytics-active-now">{{ live_analytics.active_now }}</div>
+                            <div class="live-analytics-stat-label">Trenutno</div>
+                        </div>
+                        <div class="live-analytics-stat-card">
+                            <div class="live-analytics-stat-value js-analytics-active-recent">{{ live_analytics.active_recent }}</div>
+                            <div class="live-analytics-stat-label">15 min</div>
+                        </div>
+                        <div class="live-analytics-stat-card">
+                            <div class="live-analytics-stat-value js-analytics-today-unique">{{ live_analytics.today_unique }}</div>
+                            <div class="live-analytics-stat-label">Danas</div>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+
+            {% if blog_preferences.analytics_active_pages_enabled %}
+                <div class="live-analytics-section live-analytics-section--pages">
+                    <div class="small fw-semibold mb-2">Aktivne stranice</div>
+                    <div class="live-analytics-pages js-analytics-pages">
+                        {% for item in live_analytics.page_breakdown %}
+                            <div class="live-analytics-page-row">
+                                <span>{{ item.label }}</span>
+                                <strong>{{ item.count }}</strong>
+                            </div>
+                        {% empty %}
+                            <div class="small text-muted">Trenutno nema aktivnih stranica.</div>
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endif %}
+
+            {% if blog_preferences.analytics_map_enabled %}
+                <div class="live-analytics-section live-analytics-section--map">
+                    <div class="small fw-semibold mb-2">Lokacije posjeta</div>
+                    <div class="js-analytics-map-count-wrap small text-muted mb-2">
+                        Spremljenih točaka: <strong class="js-analytics-map-count">{{ live_analytics.map_points|length }}</strong>
+                    </div>
+                    {% include "blog/components/analytics_map.html" with map_points=live_analytics.map_points map_variant=blog_preferences.analytics_map_variant %}
+                    {% if request.user.is_authenticated and request.user == blog %}
+                        <div class="mt-2">
+                            <a href="{% url 'blog_settings' %}?tab=statistika#statistics-country-breakdown" class="small text-decoration-none fw-semibold d-inline-flex align-items-center gap-1">
+                                Države i gradovi u statistici <span aria-hidden="true">→</span>
+                            </a>
+                        </div>
+                    {% endif %}
+                </div>
+            {% endif %}
+        </div>
+
+        <div class="small text-muted mt-3{% if analytics_widget_layout == 'full' %} live-analytics-widget-note{% endif %}">Broj je procjena na temelju aktivnosti u zadnjih 5 minuta.</div>
+    </div>
+</div>
+{% endif %}
+{% endif %}

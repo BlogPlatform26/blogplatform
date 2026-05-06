@@ -1,0 +1,321 @@
+{% extends "blog/base.html" %}
+{% load static %}
+
+{% block blog_header %}{% endblock %}
+{% block left_sidebar %}{% endblock %}
+{% block right_sidebar %}{% endblock %}
+
+{% block content %}
+    {% include "blog/components/blog_design_styles.html" %}
+
+    <div class="card shadow-sm border-0 mb-4 author-page-card">
+        <div class="card-body p-4 p-md-5">
+            <div class="d-flex flex-wrap justify-content-between align-items-start gap-3 mb-4">
+                <div>
+                    <div class="small text-uppercase text-muted fw-semibold mb-2">Upoznaj autora</div>
+                    <h2 class="author-page-title mb-0">{{ blog.profile.blog_name|default:blog.username }}</h2>
+                    {% if blog.profile.blog_tagline %}
+                        <div class="author-page-subtitle mt-2">{{ blog.profile.blog_tagline }}</div>
+                    {% endif %}
+                </div>
+
+                <a href="{% url 'user_blog' blog.username %}" class="btn btn-outline-secondary btn-sm">
+                    Natrag na blog
+                </a>
+            </div>
+
+            {% if author_bio %}
+                <div class="author-page-section mb-4">
+                    <h5 class="author-page-section-title">Autobiografija autora</h5>
+                    <div class="author-page-bio">{{ author_bio|linebreaksbr }}</div>
+                </div>
+            {% endif %}
+
+            {% if author_profile_sections %}
+                {% for section in author_profile_sections %}
+                    <div class="author-page-section {% if not forloop.last %}mb-4{% endif %}">
+                        <h5 class="author-page-section-title">{{ section.title }}</h5>
+                        <div class="row g-3">
+                            {% for item in section.items %}
+                                <div class="col-md-6">
+                                    <div class="author-page-info-card {% if item.label == 'Kontakt' or item.label == 'Društvene mreže' %}author-page-info-card-wide{% endif %}">
+                                        <div class="author-page-info-label">{{ item.label }}</div>
+                                        <div class="author-page-info-value">{{ item.value|urlize|linebreaksbr }}</div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+
+    {% if can_ask_author_question %}
+        <div class="card shadow-sm border-0 mb-4 author-page-card">
+            <div class="card-body p-4">
+                <h5 class="author-page-section-title mb-3">Postavi pitanje autoru</h5>
+                <form method="POST" action="{% url 'submit_author_question' blog.username %}">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        {{ question_form.question }}
+                    </div>
+                    <div class="small text-muted mb-3">
+                        Autor može odgovor spremiti kao javan ili kao privatan. Privatno vidi samo osoba koja je poslala pitanje.
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-sm">Pošalji pitanje</button>
+                </form>
+            </div>
+        </div>
+    {% elif blog.profile.allow_author_questions and not request.user.is_authenticated %}
+        <div class="card shadow-sm border-0 mb-4 author-page-card">
+            <div class="card-body p-4">
+                <div class="small text-muted">
+                    <a href="{% url 'login' %}">Prijavi se</a> da postaviš pitanje autoru.
+                </div>
+            </div>
+        </div>
+    {% endif %}
+
+    {% if viewer_private_author_questions %}
+        <div class="card shadow-sm border-0 mb-4 author-page-card">
+            <div class="card-body p-4 p-md-5">
+                <div class="d-flex flex-wrap justify-content-between gap-3 mb-4">
+                    <div>
+                        <h5 class="author-page-section-title mb-1">Tvoja privatna pitanja i odgovori</h5>
+                        <div class="small text-muted">Ovo vidiš samo ti i autor.</div>
+                    </div>
+                </div>
+
+                {% for item in viewer_private_author_questions %}
+                    <div class="author-qa-card private {% if not forloop.last %}mb-4{% endif %}">
+                        <div class="author-qa-head">
+                            <span class="author-qa-badge private">Privatno</span>
+                            <span class="author-qa-date">{{ item.created_at|date:"d.m.Y H:i" }}</span>
+                        </div>
+
+                        <div class="qa-bubble question">
+                            <div class="qa-bubble-label">Tvoje pitanje</div>
+                            <div class="qa-bubble-text">{{ item.question|linebreaksbr }}</div>
+                        </div>
+
+                        <div class="qa-arrow">→</div>
+
+                        <div class="qa-bubble answer {% if not item.answer %}pending{% endif %}">
+                            <div class="qa-bubble-label">Odgovor autora</div>
+                            {% if item.answer %}
+                                <div class="qa-bubble-text">{{ item.answer|linebreaksbr }}</div>
+                            {% else %}
+                                <div class="qa-bubble-empty">Autor još nije odgovorio.</div>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    {% endif %}
+
+    {% if public_author_questions %}
+        <div class="card shadow-sm border-0 author-page-card">
+            <div class="card-body p-4 p-md-5">
+                <h5 class="author-page-section-title mb-4">Javna pitanja i odgovori</h5>
+
+                {% for item in public_author_questions %}
+                    <div class="author-qa-card public {% if not forloop.last %}mb-4{% endif %}">
+                        <div class="author-qa-head">
+                            <div class="author-qa-meta">
+                                <span class="author-qa-badge public">Javno</span>
+                                <span class="author-qa-author">{{ item.sender.username }}</span>
+                            </div>
+                            <span class="author-qa-date">{{ item.created_at|date:"d.m.Y H:i" }}</span>
+                        </div>
+
+                        <div class="qa-bubble question">
+                            <div class="qa-bubble-label">Pitanje</div>
+                            <div class="qa-bubble-text">{{ item.question|linebreaksbr }}</div>
+                        </div>
+
+                        <div class="qa-arrow">→</div>
+
+                        <div class="qa-bubble answer">
+                            <div class="qa-bubble-label">Odgovor autora</div>
+                            <div class="qa-bubble-text">{{ item.answer|linebreaksbr }}</div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    {% endif %}
+
+    <style>
+    .blog-main-left-column,
+    .blog-main-right-column{
+        display:none !important;
+    }
+
+    .blog-main-content-column{
+        flex:0 0 100% !important;
+        width:100% !important;
+        max-width:100% !important;
+    }
+
+    .blog-main-layout-row{
+        justify-content:center;
+    }
+
+    .author-page-card {
+        background: rgba(255,255,255,0.95);
+        border-radius: 22px;
+        max-width: 940px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .author-page-title {
+        font-family: var(--blog-title-font, Georgia, "Times New Roman", serif);
+        color: var(--blog-title-color, #3f3128);
+        font-size: clamp(1.9rem, 1.7rem + 0.8vw, 2.6rem);
+        line-height: 1.08;
+    }
+
+    .author-page-subtitle {
+        color: rgba(0,0,0,0.65);
+        max-width: 720px;
+        line-height: 1.5;
+    }
+
+    .author-page-section-title {
+        font-family: var(--box-title-font, Georgia, "Times New Roman", serif);
+        color: var(--box-title-color, #3f3128);
+        font-size: 1.15rem;
+        margin-bottom: 1rem;
+    }
+
+    .author-page-bio,
+    .author-page-info-value {
+        color: #1f2937;
+        line-height: 1.7;
+        white-space: pre-wrap;
+    }
+
+    .author-page-info-card {
+        height: 100%;
+        border: 1px solid rgba(0,0,0,0.08);
+        border-radius: 16px;
+        padding: 14px 16px;
+        background: rgba(248,249,250,0.9);
+    }
+
+    .author-page-info-label,
+    .qa-bubble-label {
+        font-size: 0.78rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: rgba(0,0,0,0.5);
+        margin-bottom: 8px;
+        font-weight: 700;
+    }
+
+    .author-qa-card{
+        border:1px solid rgba(0,0,0,0.08);
+        border-radius:20px;
+        padding:18px;
+        background:#fff;
+    }
+
+    .author-qa-head{
+        display:flex;
+        justify-content:space-between;
+        gap:12px;
+        flex-wrap:wrap;
+        align-items:center;
+        margin-bottom:14px;
+    }
+
+    .author-qa-meta{
+        display:flex;
+        align-items:center;
+        gap:10px;
+        flex-wrap:wrap;
+    }
+
+    .author-qa-badge{
+        display:inline-flex;
+        align-items:center;
+        padding:5px 10px;
+        border-radius:999px;
+        font-size:12px;
+        font-weight:700;
+    }
+
+    .author-qa-badge.public{
+        background:rgba(13,110,253,0.12);
+        color:#0d6efd;
+    }
+
+    .author-qa-badge.private{
+        background:rgba(108,117,125,0.14);
+        color:#495057;
+    }
+
+    .author-qa-author,
+    .author-qa-date{
+        font-size:14px;
+        color:rgba(0,0,0,0.56);
+    }
+
+    .qa-bubble{
+        border-radius:18px;
+        padding:16px 18px;
+        border:1px solid rgba(0,0,0,0.08);
+    }
+
+    .qa-bubble.question{
+        background:rgba(13,110,253,0.06);
+    }
+
+    .qa-bubble.answer{
+        background:rgba(25,135,84,0.06);
+    }
+
+    .qa-bubble.answer.pending{
+        background:rgba(108,117,125,0.06);
+    }
+
+    .qa-bubble-text,
+    .qa-bubble-empty{
+        color:#1f2937;
+        line-height:1.65;
+        white-space:pre-wrap;
+    }
+
+    .qa-bubble-empty{
+        color:rgba(0,0,0,0.55);
+        font-style:italic;
+    }
+
+    .qa-arrow{
+        font-size:24px;
+        line-height:1;
+        color:rgba(0,0,0,0.28);
+        text-align:center;
+        padding:10px 0;
+    }
+
+    .author-page-info-value a{
+        color:#0d6efd;
+        text-decoration:none;
+        word-break:break-word;
+    }
+
+    .author-page-info-value a:hover{
+        text-decoration:underline;
+    }
+
+    @media (max-width: 768px){
+        .author-page-card{
+            border-radius:18px;
+        }
+    }
+    </style>
+{% endblock %}

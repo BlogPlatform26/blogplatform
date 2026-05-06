@@ -1,0 +1,194 @@
+<div class="card mb-4 sidebar-box special-day-card special-theme-{{ card.theme }} special-position-{{ card.position }}">
+    <div class="special-day-shell">
+        <div class="special-day-glow"></div>
+
+        <span class="special-float special-float-1"></span>
+        <span class="special-float special-float-2"></span>
+        <span class="special-float special-float-3"></span>
+        <span class="special-float special-float-4"></span>
+
+        {% if card.theme == "womens_day" %}
+            <div class="special-decor floral-decor" aria-hidden="true">
+                <span class="flower-corner flower-corner-tl">{% include "blog/partials/special_day_flower.html" %}</span>
+                <span class="flower-corner flower-corner-tr">{% include "blog/partials/special_day_flower.html" %}</span>
+                <span class="flower-corner flower-corner-bl">{% include "blog/partials/special_day_flower.html" %}</span>
+                <span class="flower-corner flower-corner-br">{% include "blog/partials/special_day_flower.html" %}</span>
+                <span class="petal-drift petal-drift-1"></span>
+                <span class="petal-drift petal-drift-2"></span>
+                <span class="petal-drift petal-drift-3"></span>
+                <span class="petal-drift petal-drift-4"></span>
+            </div>
+        {% elif card.theme == "advent" %}
+            <div class="special-decor advent-lights-decor" aria-hidden="true">
+                <span class="light-wire light-wire-top"></span>
+                <span class="light-wire light-wire-bottom"></span>
+
+                <span class="light-bulb bulb-top bulb-1"></span>
+                <span class="light-bulb bulb-top bulb-2"></span>
+                <span class="light-bulb bulb-top bulb-3"></span>
+                <span class="light-bulb bulb-top bulb-4"></span>
+                <span class="light-bulb bulb-top bulb-5"></span>
+                <span class="light-bulb bulb-top bulb-6"></span>
+                <span class="light-bulb bulb-top bulb-7"></span>
+                <span class="light-bulb bulb-top bulb-8"></span>
+
+                <span class="light-bulb bulb-bottom bulb-9"></span>
+                <span class="light-bulb bulb-bottom bulb-10"></span>
+                <span class="light-bulb bulb-bottom bulb-11"></span>
+                <span class="light-bulb bulb-bottom bulb-12"></span>
+                <span class="light-bulb bulb-bottom bulb-13"></span>
+                <span class="light-bulb bulb-bottom bulb-14"></span>
+                <span class="light-bulb bulb-bottom bulb-15"></span>
+                <span class="light-bulb bulb-bottom bulb-16"></span>
+
+                <span class="snowflake snowflake-1">❄</span>
+                <span class="snowflake snowflake-2">❄</span>
+                <span class="snowflake snowflake-3">❄</span>
+                <span class="snowflake snowflake-4">❄</span>
+                <span class="snowflake snowflake-5">❄</span>
+                <span class="snowflake snowflake-6">❄</span>
+            </div>
+        {% elif card.theme == "advent_candle_1" or card.theme == "advent_candle_2" or card.theme == "advent_candle_3" or card.theme == "advent_candle_4" %}
+            <div class="special-decor advent-candles-decor" aria-hidden="true">
+                <span class="advent-wreath"></span>
+                <span class="advent-berry berry-1"></span>
+                <span class="advent-berry berry-2"></span>
+                <span class="advent-berry berry-3"></span>
+                <span class="advent-berry berry-4"></span>
+
+                <span class="advent-candle candle-1"><span class="candle-flame"></span></span>
+                <span class="advent-candle candle-2"><span class="candle-flame"></span></span>
+                <span class="advent-candle candle-3"><span class="candle-flame"></span></span>
+                <span class="advent-candle candle-4"><span class="candle-flame"></span></span>
+
+                <span class="advent-star advent-star-1"></span>
+                <span class="advent-star advent-star-2"></span>
+                <span class="advent-star advent-star-3"></span>
+            </div>
+        {% elif card.theme == "christmas" %}
+            <div class="special-decor christmas-decor" aria-hidden="true">
+                <span class="garland garland-left"></span>
+                <span class="garland garland-right"></span>
+                <span class="ornament ornament-1"></span>
+                <span class="ornament ornament-2"></span>
+                <span class="ornament ornament-3"></span>
+                <span class="christmas-star"></span>
+                <span class="christmas-flake christmas-flake-1">✦</span>
+                <span class="christmas-flake christmas-flake-2">❄</span>
+                <span class="christmas-flake christmas-flake-3">✦</span>
+            </div>
+        {% elif card.theme == "new_year" or card.theme == "old_year" %}
+            <div class="special-decor fireworks-decor" aria-hidden="true">
+                {% if card.theme == "old_year" %}
+                    <span class="midnight-clock"></span>
+                {% endif %}
+
+                <svg class="firework firework-1" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                    <g class="firework-burst">
+                        <circle class="burst-core" cx="60" cy="60" r="5" />
+                        <line class="burst-ray" x1="60" y1="60" x2="60" y2="15" />
+                        <line class="burst-ray" x1="60" y1="60" x2="93" y2="27" />
+                        <line class="burst-ray" x1="60" y1="60" x2="105" y2="60" />
+                        <line class="burst-ray" x1="60" y1="60" x2="93" y2="93" />
+                        <line class="burst-ray" x1="60" y1="60" x2="60" y2="105" />
+                        <line class="burst-ray" x1="60" y1="60" x2="27" y2="93" />
+                        <line class="burst-ray" x1="60" y1="60" x2="15" y2="60" />
+                        <line class="burst-ray" x1="60" y1="60" x2="27" y2="27" />
+                    </g>
+                </svg>
+
+                <svg class="firework firework-2" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                    <g class="firework-burst">
+                        <circle class="burst-core" cx="60" cy="60" r="5" />
+                        <line class="burst-ray" x1="60" y1="60" x2="60" y2="12" />
+                        <line class="burst-ray" x1="60" y1="60" x2="95" y2="25" />
+                        <line class="burst-ray" x1="60" y1="60" x2="108" y2="60" />
+                        <line class="burst-ray" x1="60" y1="60" x2="95" y2="95" />
+                        <line class="burst-ray" x1="60" y1="60" x2="60" y2="108" />
+                        <line class="burst-ray" x1="60" y1="60" x2="25" y2="95" />
+                        <line class="burst-ray" x1="60" y1="60" x2="12" y2="60" />
+                        <line class="burst-ray" x1="60" y1="60" x2="25" y2="25" />
+                    </g>
+                </svg>
+
+                <svg class="firework firework-3" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                    <g class="firework-burst">
+                        <circle class="burst-core" cx="60" cy="60" r="5" />
+                        <line class="burst-ray" x1="60" y1="60" x2="60" y2="18" />
+                        <line class="burst-ray" x1="60" y1="60" x2="91" y2="29" />
+                        <line class="burst-ray" x1="60" y1="60" x2="102" y2="60" />
+                        <line class="burst-ray" x1="60" y1="60" x2="91" y2="91" />
+                        <line class="burst-ray" x1="60" y1="60" x2="60" y2="102" />
+                        <line class="burst-ray" x1="60" y1="60" x2="29" y2="91" />
+                        <line class="burst-ray" x1="60" y1="60" x2="18" y2="60" />
+                        <line class="burst-ray" x1="60" y1="60" x2="29" y2="29" />
+                    </g>
+                </svg>
+
+                <span class="confetti confetti-1"></span>
+                <span class="confetti confetti-2"></span>
+                <span class="confetti confetti-3"></span>
+                <span class="confetti confetti-4"></span>
+                <span class="confetti confetti-5"></span>
+            </div>
+        {% elif card.theme == "easter" %}
+            <div class="special-decor easter-decor" aria-hidden="true">
+                <span class="easter-egg egg-1"></span>
+                <span class="easter-egg egg-2"></span>
+                <span class="easter-egg egg-3"></span>
+                <span class="easter-dot dot-1"></span>
+                <span class="easter-dot dot-2"></span>
+                <span class="easter-dot dot-3"></span>
+                <span class="easter-dot dot-4"></span>
+            </div>
+        {% elif card.theme == "bread" %}
+            <div class="special-decor bread-decor" aria-hidden="true">
+                <span class="wheat wheat-left"></span>
+                <span class="wheat wheat-right"></span>
+                <span class="bread-loaf"></span>
+                <span class="bread-steam steam-1"></span>
+                <span class="bread-steam steam-2"></span>
+                <span class="bread-steam steam-3"></span>
+            </div>
+        {% elif card.theme == "romance" %}
+            <div class="special-decor romance-decor" aria-hidden="true">
+                <span class="romance-ribbon"></span>
+                <span class="romance-heart romance-heart-1"></span>
+                <span class="romance-heart romance-heart-2"></span>
+                <span class="romance-heart romance-heart-3"></span>
+                <span class="romance-heart romance-heart-4"></span>
+            </div>
+        {% endif %}
+
+        <div class="card-body special-day-body">
+            <div class="special-day-label">{{ card.label }}</div>
+
+            {% if card.message.title %}
+                <h4 class="special-day-title">{{ card.message.title }}</h4>
+            {% else %}
+                <h4 class="special-day-title">{{ card.event.name }}</h4>
+            {% endif %}
+
+            <div class="special-day-text">
+                {{ card.message.body|linebreaksbr }}
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+(function(){
+    const cards = document.querySelectorAll('.special-day-card:not([data-special-ready])');
+    cards.forEach(function(card){
+        card.setAttribute('data-special-ready', '1');
+        const floats = card.querySelectorAll('.special-float');
+        floats.forEach(function(item, index){
+            item.style.setProperty('--sd-rotate', Math.floor(Math.random() * 60 - 30) + 'deg');
+            item.style.setProperty('--sd-x', Math.floor(Math.random() * 16 - 8) + 'px');
+            item.style.setProperty('--sd-y', Math.floor(Math.random() * 18 - 9) + 'px');
+            item.style.setProperty('--sd-delay', (index * 0.35 + Math.random() * 0.3) + 's');
+            item.style.setProperty('--sd-scale', (0.9 + Math.random() * 0.4).toFixed(2));
+        });
+    });
+})();
+</script>

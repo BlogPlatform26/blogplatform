@@ -1,0 +1,76 @@
+{% load custom_tags %}
+<div class="container page-top-align blog-posts-shell{% if blog.profile.template == 'default_right' or blog.profile.template == 'dark_right' or blog.profile.template == 'classic_right' %} blog-posts-shell--wide{% endif %}{% if blog.profile.template == 'simple_pattern' or blog.profile.template == 'simple_image' or blog.profile.template == 'simple_retro' %} blog-posts-shell--simple{% endif %}{% if blog.profile.template == 'simple_retro' %} blog-posts-shell--simple-retro{% endif %}">
+    <div class="page-top-align">
+        {% for post in page_obj %}
+            <div class="mb-4 blog-post-entry">
+                <div class="d-flex justify-content-between align-items-start gap-3">
+                    <div class="d-flex flex-column" style="gap:10px; min-width:0; flex:1;">
+                        <h4 class="mb-0">{{ post.title }}</h4>
+                        {% include "blog/components/post_meta.html" %}
+                    </div>
+
+                    <div class="text-center ms-3 blog-date-shell blog-date-style-{{ blog_preferences.active_design_customization.post_date_style|default:'classic_vertical' }} blog-date-effect-{{ blog_preferences.active_design_customization.post_date_effect|default:'solid' }}" style="line-height:1;" data-date-style="{{ blog_preferences.active_design_customization.post_date_style|default:'classic_vertical' }}" data-date-effect="{{ blog_preferences.active_design_customization.post_date_effect|default:'solid' }}">
+                        <div class="blog-date-main">
+                            <div class="blog-date-day-wrap">
+                                <div class="blog-date-day">{{ post.publication_datetime|date:"d" }}</div>
+                            </div>
+                            <div class="blog-date-text">
+                                <div class="blog-date-month">{{ post.publication_datetime|month_hr|upper }}</div>
+                                <div class="blog-date-year">{{ post.publication_datetime|date:"Y" }}</div>
+                            </div>
+                        </div>
+                        <div class="blog-date-inline">
+                            <span class="blog-date-inline-day">{{ post.publication_datetime|date:"d" }}</span>
+                            <span class="blog-date-inline-sep">/</span>
+                            <span class="blog-date-inline-month">{{ post.publication_datetime|month_hr|upper }}</span>
+                            <span class="blog-date-inline-sep">/</span>
+                            <span class="blog-date-inline-year">{{ post.publication_datetime|date:"Y" }}</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-4">
+                    {% include "blog/components/post_body.html" %}
+                </div>
+
+                {% include "blog/components/post_actions.html" %}
+                {% include "blog/components/post_comments.html" %}
+                <hr>
+            </div>
+        {% empty %}
+            <p>Nema postova.</p>
+        {% endfor %}
+
+        {% if page_obj.has_other_pages %}
+            <div class="d-flex flex-wrap justify-content-center align-items-center gap-2 mt-4 mb-4">
+                {% if page_obj.has_previous %}
+                    <a href="?page={{ page_obj.previous_page_number }}{{ pagination_query }}" class="btn btn-sm btn-outline-secondary">Prethodna</a>
+                {% endif %}
+                <span class="align-self-center small">Stranica {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}</span>
+                {% if page_obj.has_next %}
+                    <a href="?page={{ page_obj.next_page_number }}{{ pagination_query }}" class="btn btn-sm btn-outline-secondary">Sljedeća</a>
+                {% endif %}
+            </div>
+        {% endif %}
+    </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".poll-bar").forEach(function (bar) {
+        const p = bar.getAttribute("data-percent") || "0";
+        bar.style.width = p + "%";
+    });
+
+    document.querySelectorAll(".js-scroll-to-comments").forEach(function (a) {
+        a.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href");
+            if (!targetId) return;
+            const el = document.querySelector(targetId);
+            if (!el) return;
+            el.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+    });
+});
+</script>

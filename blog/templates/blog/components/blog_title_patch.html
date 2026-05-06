@@ -1,0 +1,8 @@
+
+<!-- zamijeni naziv bloga -->
+<h1 class="blog-page-title {% if blog.profile.has_active_premium %}premium-title{% endif %}">
+    {{ blog.profile.blog_name }}
+    {% if blog.profile.has_active_premium %}
+        <span class="premium-crown-title">👑</span>
+    {% endif %}
+</h1>

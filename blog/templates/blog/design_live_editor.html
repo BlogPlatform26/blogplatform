@@ -1,0 +1,765 @@
+{% load static custom_tags %}
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Live uređivanje bloga</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <style>
+        body{
+            margin:0;
+            background:#eef2f7;
+            color:#132238;
+            font-family:Arial, Helvetica, sans-serif;
+            overflow-x:hidden;
+        }
+
+        .live-editor-shell{
+            display:grid;
+            grid-template-columns: 338px minmax(0, 1fr);
+            min-height:100vh;
+        }
+
+        .live-editor-sidebar{
+            background:#f8fafc;
+            border-right:1px solid #d9e0ea;
+            padding:14px 10px 16px;
+            overflow:auto;
+        }
+
+        .live-editor-preview-pane{
+            min-width:0;
+            padding:12px 14px;
+            display:flex;
+            flex-direction:column;
+            gap:10px;
+            overflow:hidden;
+        }
+
+        .live-editor-toolbar{
+            display:flex;
+            flex-wrap:wrap;
+            align-items:center;
+            justify-content:space-between;
+            gap:10px;
+        }
+
+        .live-editor-toolbar h2{
+            font-size:20px;
+            margin:0 0 4px;
+        }
+
+        .live-editor-toolbar .text-muted{
+            font-size:13px;
+        }
+
+        .live-editor-frame-wrap{
+            flex:1 1 auto;
+            min-height:0;
+            background:#d9dee6;
+            border:1px solid #c6ced9;
+            border-radius:14px;
+            padding:10px;
+            overflow-y:auto;
+            overflow-x:hidden;
+            box-shadow: inset 0 1px 0 rgba(255,255,255,.55);
+        }
+
+        .live-editor-frame-shell{
+            position:relative;
+            width:100%;
+            min-width:0;
+            margin:0 auto;
+        }
+
+        .live-editor-click-blocker{
+            position:absolute;
+            inset:0;
+            z-index:5;
+            background:transparent;
+        }
+
+        .live-editor-frame{
+            display:block;
+            width:1360px;
+            min-height:900px;
+            border:0;
+            border-radius:18px;
+            background:#fff;
+            box-shadow:0 24px 60px rgba(15,23,42,.16);
+            transform-origin:top left;
+        }
+
+        .live-editor-header{
+            margin-bottom:10px;
+        }
+
+        .live-editor-header h1{
+            font-size:19px;
+            margin:8px 0 3px;
+            line-height:1.2;
+        }
+
+        .live-editor-header p{
+            margin:0;
+            color:#607086;
+            font-size:12px;
+            line-height:1.5;
+        }
+
+        .live-editor-back{
+            text-decoration:none;
+            font-weight:600;
+            font-size:14px;
+        }
+
+        .messages-stack .alert{
+            margin-bottom:10px;
+            padding:10px 12px;
+            font-size:14px;
+            border-radius:14px;
+        }
+
+        .editor-tabs{
+            display:flex;
+            gap:6px;
+            margin-bottom:10px;
+        }
+
+        .editor-tab-btn{
+            border:1px solid #d8e0ea;
+            background:#fff;
+            color:#35506c;
+            border-radius:999px;
+            padding:6px 10px;
+            font-size:11px;
+            font-weight:600;
+            cursor:pointer;
+            transition:.18s ease;
+        }
+
+        .editor-tab-btn:hover{
+            border-color:#7c3aed;
+            color:#7c3aed;
+        }
+
+        .editor-tab-btn.is-active{
+            background:#eef2ff;
+            border-color:#7c3aed;
+            color:#5b21b6;
+            box-shadow:0 8px 20px rgba(124,58,237,.10);
+        }
+
+        .editor-tab-btn[disabled]{
+            opacity:.55;
+            cursor:not-allowed;
+            color:#6b7280;
+        }
+
+        .editor-panel[hidden]{
+            display:none !important;
+        }
+
+        .editor-card{
+            background:#fff;
+            border:1px solid #dbe3ee;
+            border-radius:18px;
+            padding:12px;
+            box-shadow:0 10px 28px rgba(15,23,42,.05);
+            margin-bottom:10px;
+        }
+
+        .editor-card.is-hovered,
+        .editor-card:hover{
+            border-color:#7c3aed;
+            box-shadow:0 14px 32px rgba(124,58,237,.14);
+        }
+
+        .editor-card-head{
+            display:flex;
+            align-items:flex-start;
+            justify-content:space-between;
+            gap:8px;
+            margin-bottom:8px;
+        }
+
+        .editor-title{
+            font-size:13px;
+            font-weight:700;
+            margin:0 0 2px;
+            line-height:1.2;
+        }
+
+        .editor-help{
+            margin:0;
+            font-size:11px;
+            color:#617287;
+            line-height:1.4;
+        }
+
+        .editor-label{
+            display:block;
+            font-size:11px;
+            font-weight:600;
+            margin-bottom:4px;
+            color:#24364c;
+        }
+
+        .editor-two-col{
+            display:grid;
+            grid-template-columns: 78px minmax(0, 1fr);
+            gap:10px;
+            align-items:end;
+        }
+
+        .editor-size-row,
+        .editor-color-row{
+            display:grid;
+            grid-template-columns: minmax(0, 1fr) 64px 18px;
+            gap:6px;
+            align-items:center;
+        }
+
+        .editor-color-input{
+            width:52px !important;
+            min-width:52px;
+            height:34px !important;
+            padding:2px !important;
+            border-radius:10px !important;
+            cursor:pointer;
+        }
+
+        .editor-number{
+            text-align:center;
+            font-size:13px;
+            padding:4px 6px;
+            height:36px;
+        }
+
+        .editor-unit{
+            font-size:12px;
+            color:#6b7d92;
+            font-weight:600;
+        }
+
+        .editor-card .form-select,
+        .editor-card .form-control{
+            font-size:13px;
+            min-height:36px;
+            border-radius:12px;
+            padding-top:5px;
+            padding-bottom:5px;
+        }
+
+        .editor-card .form-range{
+            transform:scale(.88);
+            transform-origin:left center;
+        }
+
+        .live-editor-sidebar .btn,
+        .live-editor-preview-pane .btn{
+            font-size:13px;
+            line-height:1.1;
+            padding:7px 11px;
+            border-radius:12px;
+        }
+
+        .live-editor-sidebar .btn-sm{
+            font-size:12px;
+            padding:6px 10px;
+            border-radius:10px;
+        }
+
+        .active-design-card .small{
+            font-size:10px;
+            letter-spacing:.04em;
+        }
+
+        .active-design-card .fw-semibold{
+            font-size:14px;
+        }
+
+        .live-editor-actions{
+            display:flex;
+            gap:8px;
+            flex-wrap:wrap;
+            margin-top:10px;
+        }
+
+        .editor-inline-note{
+            margin-top:4px;
+            font-size:11px;
+            color:#6b7d92;
+        }
+
+        .editor-mode-group[hidden]{
+            display:none !important;
+        }
+
+        .editor-upload-box{
+            border:1px dashed #cbd5e1;
+            border-radius:16px;
+            padding:10px;
+            background:#f8fafc;
+        }
+
+        .editor-upload-thumb{
+            width:100%;
+            max-height:90px;
+            object-fit:cover;
+            border-radius:12px;
+            border:1px solid #dbe3ee;
+            margin-bottom:10px;
+        }
+
+        .editor-system-thumb{
+            width:100%;
+            height:112px;
+            object-fit:contain;
+            object-position:center;
+            border-radius:14px;
+            border:1px solid #dbe3ee;
+            background:#f3ede4;
+            padding:6px;
+            margin-top:10px;
+        }
+
+        .editor-empty-state{
+            font-size:11px;
+            color:#607086;
+        }
+
+        @media (max-width: 1200px){
+            .live-editor-shell{
+                grid-template-columns: 320px minmax(0, 1fr);
+            }
+        }
+
+        @media (max-width: 992px){
+            .editor-two-col{
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 992px){
+            .live-editor-shell{
+                grid-template-columns: 1fr;
+            }
+
+            .live-editor-sidebar{
+                border-right:0;
+                border-bottom:1px solid #d9e0ea;
+            }
+
+            .live-editor-preview-pane{
+                min-height:70vh;
+            }
+        }
+    </style>
+</head>
+<body data-editor-section="{{ live_editor_section|default:'naslovi' }}">
+<div class="live-editor-shell">
+    <aside class="live-editor-sidebar">
+        <div class="live-editor-header">
+            <a href="{% url 'blog_settings' %}?tab=dizajn&design_tab=uredivanje" class="live-editor-back">
+                <i class="bi bi-arrow-left"></i> Natrag na uređivanje dizajna
+            </a>
+            <h1>Live uređivanje bloga</h1>
+            <p>Ovdje možeš uživo mijenjati naslove, datum posta i pozadine. Desno je pravi blog, samo smanjen da sve stane u prikaz.</p>
+        </div>
+
+        {% if messages %}
+        <div class="messages-stack mb-3">
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags|default:'info' }}">{{ message }}</div>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        <div class="editor-tabs" role="tablist" aria-label="Sekcije uređivanja">
+            <button type="button" class="editor-tab-btn" data-editor-tab="naslovi">Naslovi</button>
+            <button type="button" class="editor-tab-btn" data-editor-tab="pozadine" {% if not supports_background_editor %}disabled{% endif %}>Pozadine</button>
+        </div>
+
+        <div class="editor-card active-design-card">
+            <div class="small text-uppercase text-muted mb-2">Aktivni dizajn</div>
+            <div class="fw-semibold">{{ design_template_labels|get_item:active_design_template|default:profile.template }}</div>
+            {% if not supports_background_editor %}
+                <div class="editor-inline-note">Pozadine su trenutno dostupne za simple dizajne. Za ovaj dizajn zasad možeš uređivati samo naslove.</div>
+            {% endif %}
+        </div>
+
+        <section class="editor-panel" data-editor-panel="naslovi">
+            <form method="POST" id="designLiveTitlesForm">
+                {% csrf_token %}
+
+                <section class="editor-card" data-highlight-target="blog-title">
+                    <div class="editor-card-head">
+                        <div>
+                            <h2 class="editor-title">Naziv bloga</h2>
+                            <p class="editor-help">Veliki naslov na vrhu bloga.</p>
+                        </div>
+                        <button type="button" class="btn btn-outline-secondary btn-sm" data-reset-card="blog">Vrati</button>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="editor-label">Font</label>
+                        <select class="form-select" name="blog_title_font" data-live-font="blog-title">
+                            {% for font in design_font_choices %}
+                            <option value="{{ font.value }}" data-font-stack="{{ font.stack }}" style="font-family: {{ font.stack|safe }};" {% if active_design_customization.blog_title_font == font.value %}selected{% endif %}>{{ font.label }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <div class="editor-two-col">
+                        <div>
+                            <label class="editor-label">Boja</label>
+                            <input type="color" class="form-control form-control-color editor-color-input" name="blog_title_color" value="{{ active_design_customization.blog_title_color|default:'#3f3128' }}" data-live-color="blog-title">
+                        </div>
+                        <div>
+                            <label class="editor-label">Veličina</label>
+                            <div class="editor-size-row">
+                                <input type="range" class="form-range m-0" min="32" max="96" value="{{ active_design_customization.blog_title_size|default:'54' }}" data-size-range="blog_title_size">
+                                <input type="number" class="form-control editor-number" min="32" max="96" name="blog_title_size" value="{{ active_design_customization.blog_title_size|default:'54' }}" data-live-size="blog-title" data-size-input="blog_title_size">
+                                <span class="editor-unit">px</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="editor-card" data-highlight-target="post-title">
+                    <div class="editor-card-head">
+                        <div>
+                            <h2 class="editor-title">Naslov posta</h2>
+                            <p class="editor-help">Naslov svakog posta u sredini bloga.</p>
+                        </div>
+                        <button type="button" class="btn btn-outline-secondary btn-sm" data-reset-card="post">Vrati</button>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="editor-label">Font</label>
+                        <select class="form-select" name="post_title_font" data-live-font="post-title">
+                            {% for font in design_font_choices %}
+                            <option value="{{ font.value }}" data-font-stack="{{ font.stack }}" style="font-family: {{ font.stack|safe }};" {% if active_design_customization.post_title_font == font.value %}selected{% endif %}>{{ font.label }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <div class="editor-two-col">
+                        <div>
+                            <label class="editor-label">Boja</label>
+                            <input type="color" class="form-control form-control-color editor-color-input" name="post_title_color" value="{{ active_design_customization.post_title_color|default:'#111827' }}" data-live-color="post-title">
+                        </div>
+                        <div>
+                            <label class="editor-label">Veličina</label>
+                            <div class="editor-size-row">
+                                <input type="range" class="form-range m-0" min="22" max="64" value="{{ active_design_customization.post_title_size|default:'32' }}" data-size-range="post_title_size">
+                                <input type="number" class="form-control editor-number" min="22" max="64" name="post_title_size" value="{{ active_design_customization.post_title_size|default:'32' }}" data-live-size="post-title" data-size-input="post_title_size">
+                                <span class="editor-unit">px</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="editor-card" data-highlight-target="box-title">
+                    <div class="editor-card-head">
+                        <div>
+                            <h2 class="editor-title">Naslov boxa</h2>
+                            <p class="editor-help">Naslovi kalendara, arhive i ostalih boxeva.</p>
+                        </div>
+                        <button type="button" class="btn btn-outline-secondary btn-sm" data-reset-card="box">Vrati</button>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="editor-label">Font</label>
+                        <select class="form-select" name="box_title_font" data-live-font="box-title">
+                            {% for font in design_font_choices %}
+                            <option value="{{ font.value }}" data-font-stack="{{ font.stack }}" style="font-family: {{ font.stack|safe }};" {% if active_design_customization.box_title_font == font.value %}selected{% endif %}>{{ font.label }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <div class="editor-two-col">
+                        <div>
+                            <label class="editor-label">Boja</label>
+                            <input type="color" class="form-control form-control-color editor-color-input" name="box_title_color" value="{{ active_design_customization.box_title_color|default:'#3f3128' }}" data-live-color="box-title">
+                        </div>
+                        <div>
+                            <label class="editor-label">Veličina</label>
+                            <div class="editor-size-row">
+                                <input type="range" class="form-range m-0" min="10" max="28" value="{{ active_design_customization.box_title_size|default:'13' }}" data-size-range="box_title_size">
+                                <input type="number" class="form-control editor-number" min="10" max="28" name="box_title_size" value="{{ active_design_customization.box_title_size|default:'13' }}" data-live-size="box-title" data-size-input="box_title_size">
+                                <span class="editor-unit">px</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="editor-card" data-highlight-target="post-date">
+                    <div class="editor-card-head">
+                        <div>
+                            <h2 class="editor-title">Datum posta</h2>
+                            <p class="editor-help">Odaberi izgled datuma, efekt boje i veličinu.</p>
+                        </div>
+                        <button type="button" class="btn btn-outline-secondary btn-sm" data-reset-card="date">Vrati</button>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="editor-label">Izgled datuma</label>
+                        <select class="form-select" name="post_date_style" data-live-date-style>
+                            {% for item in post_date_style_choices %}
+                            <option value="{{ item.value }}" {% if active_design_customization.post_date_style == item.value %}selected{% endif %}>{{ item.label }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="editor-label">Efekt</label>
+                        <select class="form-select" name="post_date_effect" data-live-date-effect>
+                            {% for item in post_date_effect_choices %}
+                            <option value="{{ item.value }}" {% if active_design_customization.post_date_effect == item.value %}selected{% endif %}>{{ item.label }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <div class="editor-two-col">
+                        <div>
+                            <label class="editor-label" id="postDateColor1Label">Boja</label>
+                            <input type="color" class="form-control form-control-color editor-color-input" name="post_date_color_1" value="{{ active_design_customization.post_date_color_1|default:active_design_customization.post_date_color|default:'#d97706' }}" data-live-date-color="primary">
+                        </div>
+                        <div data-date-secondary-wrap>
+                            <label class="editor-label">Druga boja</label>
+                            <input type="color" class="form-control form-control-color editor-color-input" name="post_date_color_2" value="{{ active_design_customization.post_date_color_2|default:'#ffd200' }}" data-live-date-color="secondary">
+                        </div>
+                    </div>
+
+                    <div class="mt-3">
+                        <label class="editor-label">Veličina</label>
+                        <div class="editor-size-row">
+                            <input type="range" class="form-range m-0" min="70" max="170" value="{{ active_design_customization.post_date_size|default:'100' }}" data-size-range="post_date_size">
+                            <input type="number" class="form-control editor-number" min="70" max="170" name="post_date_size" value="{{ active_design_customization.post_date_size|default:'100' }}" data-live-date-size data-size-input="post_date_size">
+                            <span class="editor-unit">%</span>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="live-editor-actions">
+                    <button type="submit" name="save_title_settings" value="1" class="btn btn-primary">Spremi promjene</button>
+                    <button type="submit" class="btn btn-outline-secondary" name="reset_titles_mode" value="all">Vrati sve naslove</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="editor-panel" data-editor-panel="pozadine" {% if not supports_background_editor %}hidden{% endif %}>
+            {% if supports_background_editor %}
+            <form method="POST" enctype="multipart/form-data" id="designLiveBackgroundForm">
+                {% csrf_token %}
+
+                <section class="editor-card" data-highlight-target="outer-background">
+                    <div class="editor-card-head">
+                        <div>
+                            <h2 class="editor-title">Glavna pozadina</h2>
+                            <p class="editor-help">Boja, uzorak ili slika iza cijelog bloga.</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="editor-label">Način pozadine</label>
+                        <select class="form-select" name="outer_background_mode" data-live-background-mode>
+                            {% for item in background_mode_choices %}
+                                <option value="{{ item.value }}" {% if active_design_customization.outer_background_mode == item.value %}selected{% endif %}>{{ item.label }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="editor-label">Glavna boja</label>
+                        <input type="color" class="form-control form-control-color editor-color-input" name="outer_background_color_1" value="{{ active_design_customization.outer_background_color_1|default:'#efe4c9' }}" data-live-background-color="outer1">
+                    </div>
+
+                    <div class="editor-mode-group" data-mode-panel="gradient">
+                        <div class="mb-3">
+                            <label class="editor-label">Druga boja</label>
+                            <input type="color" class="form-control form-control-color editor-color-input" name="outer_background_color_2" value="{{ active_design_customization.outer_background_color_2|default:'#e1d0ac' }}" data-live-background-color="outer2">
+                        </div>
+                        <div class="mb-3">
+                            <label class="editor-label">Smjer gradijenta</label>
+                            <select class="form-select" name="outer_background_gradient_direction" data-live-background-select>
+                                {% for item in design_gradient_direction_choices %}
+                                    <option value="{{ item.value }}" {% if active_design_customization.outer_background_gradient_direction == item.value %}selected{% endif %}>{{ item.label }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="editor-mode-group" data-mode-panel="pattern">
+                        <div class="mb-3">
+                            <label class="editor-label">Uzorak</label>
+                            <select class="form-select" name="outer_background_pattern" data-live-background-select>
+                                {% for item in design_pattern_choices %}
+                                    <option value="{{ item.value }}" {% if active_design_customization.outer_background_pattern == item.value %}selected{% endif %}>{{ item.label }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="editor-mode-group" data-mode-panel="system_image">
+                        <div class="mb-3">
+                            <label class="editor-label">Sistemska slika</label>
+                            <select class="form-select" name="outer_background_image" data-live-background-select>
+                                {% for item in design_background_image_choices %}
+                                    <option value="{{ item.value }}" {% if active_design_customization.outer_background_image == item.value %}selected{% endif %}>{{ item.label }}</option>
+                                {% endfor %}
+                            </select>
+                            <img
+                                src="{% if active_design_customization.outer_background_image and active_design_customization.outer_background_mode == 'system_image' %}{% for item in design_background_image_choices %}{% if item.value == active_design_customization.outer_background_image %}{% static item.asset %}{% endif %}{% endfor %}{% endif %}"
+                                alt="Pregled sistemske pozadinske slike"
+                                class="editor-system-thumb"
+                                id="liveEditorSystemImagePreview"
+                                {% if active_design_customization.outer_background_mode != 'system_image' %}style="display:none;"{% endif %}>
+                        </div>
+                    </div>
+
+                    <div class="editor-mode-group" data-mode-panel="upload_image">
+                        <div class="editor-upload-box">
+                            {% if current_simple_background_url %}
+                                <img src="{{ current_simple_background_url }}" alt="Trenutna pozadinska slika" class="editor-upload-thumb" id="liveEditorUploadPreview">
+                            {% else %}
+                                <img src="" alt="Preview pozadinske slike" class="editor-upload-thumb" id="liveEditorUploadPreview" style="display:none;">
+                            {% endif %}
+
+                            <label class="editor-label">Moja slika</label>
+                            <input type="file" class="form-control" name="simple_background_image" accept="image/*" data-live-background-upload>
+                            {% if current_simple_background_url %}
+                                <button type="submit" class="btn btn-outline-secondary btn-sm mt-2" name="delete_simple_background_image" value="1">Izbriši moju sliku</button>
+                            {% else %}
+                                <div class="editor-inline-note">Kad dodaš svoju sliku, ona će se koristiti kao pozadina za simple image dizajn.</div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </section>
+
+                <section class="editor-card" data-highlight-target="header-background">
+                    <div class="editor-card-head">
+                        <div>
+                            <h2 class="editor-title">Gornji dio</h2>
+                            <p class="editor-help">Pozadina dijela s nazivom bloga.</p>
+                        </div>
+                    </div>
+                    <label class="editor-label">Boja</label>
+                    <input type="color" class="form-control form-control-color editor-color-input" name="header_background_color_1" value="{{ active_design_customization.header_background_color_1|default:'#d98a37' }}" data-live-background-color="header">
+                </section>
+
+                <section class="editor-card" data-highlight-target="content-background">
+                    <div class="editor-card-head">
+                        <div>
+                            <h2 class="editor-title">Postovi</h2>
+                            <p class="editor-help">Pozadina glavnog dijela gdje je sadržaj posta.</p>
+                        </div>
+                    </div>
+                    <label class="editor-label">Boja</label>
+                    <input type="color" class="form-control form-control-color editor-color-input" name="content_background_color" value="{{ active_design_customization.content_background_color|default:'#fffefb' }}" data-live-background-color="content">
+                </section>
+
+                <section class="editor-card" data-highlight-target="box-background">
+                    <div class="editor-card-head">
+                        <div>
+                            <h2 class="editor-title">Boxevi</h2>
+                            <p class="editor-help">Pozadina kalendara, arhive i ostalih boxeva.</p>
+                        </div>
+                    </div>
+                    <label class="editor-label">Boja</label>
+                    <input type="color" class="form-control form-control-color editor-color-input" name="box_background_color" value="{{ active_design_customization.box_background_color|default:'#fffefb' }}" data-live-background-color="box">
+                </section>
+
+                <div class="live-editor-actions">
+                    <button type="submit" name="save_background_settings" value="1" class="btn btn-primary">Spremi pozadine</button>
+                    <button type="submit" class="btn btn-outline-secondary" name="reset_background_mode" value="all">Vrati pozadine</button>
+                </div>
+            </form>
+            {% else %}
+            <div class="editor-card">
+                <h2 class="editor-title mb-2">Pozadine još nisu uključene za ovaj dizajn</h2>
+                <p class="editor-help mb-0">Sad smo ih uključili za simple dizajne. Kad budeš na simple dizajnu, ovdje ćeš dobiti kontrole za glavnu pozadinu, gornji dio, postove i boxeve.</p>
+            </div>
+            {% endif %}
+        </section>
+    </aside>
+
+    <main class="live-editor-preview-pane">
+        <div class="live-editor-toolbar">
+            <div>
+                <h2>Prikaz bloga</h2>
+                <div class="text-muted">Pravi raspored bloga, samo smanjen da sve stane u prikaz.</div>
+            </div>
+            <div class="d-flex gap-2 flex-wrap">
+                <button type="button" class="btn btn-outline-secondary" id="reloadPreviewBtn">
+                    <i class="bi bi-arrow-clockwise"></i> Osvježi pregled
+                </button>
+                <a href="{{ full_preview_url }}" target="_blank" rel="noopener" class="btn btn-outline-primary">
+                    Otvori blog u novom tabu
+                </a>
+            </div>
+        </div>
+
+        <div class="live-editor-frame-wrap" id="designLiveFrameWrap">
+            <div class="live-editor-frame-shell" id="designLiveFrameShell">
+                <iframe
+                    id="designLivePreviewFrame"
+                    class="live-editor-frame"
+                    src="{{ preview_url }}"
+                    title="Preview bloga">
+                </iframe>
+                <div class="live-editor-click-blocker" aria-hidden="true"></div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<script>
+window.designLiveEditorDefaults = {
+    blog: {
+        font: "{{ default_active_design_customization.blog_title_font }}",
+        color: "{{ default_active_design_customization.blog_title_color|default:'#3f3128' }}",
+        size: "{{ default_active_design_customization.blog_title_size|default:'54' }}"
+    },
+    post: {
+        font: "{{ default_active_design_customization.post_title_font }}",
+        color: "{{ default_active_design_customization.post_title_color|default:'#111827' }}",
+        size: "{{ default_active_design_customization.post_title_size|default:'32' }}"
+    },
+    box: {
+        font: "{{ default_active_design_customization.box_title_font }}",
+        color: "{{ default_active_design_customization.box_title_color|default:'#3f3128' }}",
+        size: "{{ default_active_design_customization.box_title_size|default:'13' }}"
+    },
+    date: {
+        style: "{{ default_active_design_customization.post_date_style|default:'classic_vertical' }}",
+        effect: "{{ default_active_design_customization.post_date_effect|default:'solid' }}",
+        color1: "{{ default_active_design_customization.post_date_color_1|default:default_active_design_customization.post_date_color|default:'#d97706' }}",
+        color2: "{{ default_active_design_customization.post_date_color_2|default:'#ffd200' }}",
+        size: "{{ default_active_design_customization.post_date_size|default:'100' }}"
+    }
+};
+window.designLiveEditorConfig = {
+    activeTemplate: "{{ active_design_template }}",
+    activeSection: "{{ live_editor_section|default:'naslovi' }}",
+    supportsBackgroundEditor: {% if supports_background_editor %}true{% else %}false{% endif %},
+    currentUploadImageUrl: {% if current_simple_background_url %}"{{ current_simple_background_url }}"{% else %}""{% endif %},
+    patternAssets: {
+        {% for item in design_pattern_choices %}
+        "{{ item.value }}": "{% static item.asset %}"{% if not forloop.last %},{% endif %}
+        {% endfor %}
+    },
+    systemImageAssets: {
+        {% for item in design_background_image_choices %}
+        "{{ item.value }}": "{% static item.asset %}"{% if not forloop.last %},{% endif %}
+        {% endfor %}
+    }
+};
+</script>
+<script src="{% static 'blog/js/design_live_editor.js' %}"></script>
+</body>
+</html>

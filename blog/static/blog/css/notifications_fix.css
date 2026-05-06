@@ -1,0 +1,18 @@
+/* FIX SAMO ZA OBAVIJESTI */
+
+.notif-menu{
+    width:340px !important;
+    max-height:420px !important;
+    overflow-y:auto !important;
+    background:#fff !important;
+    border-radius:12px !important;
+}
+
+.notif-menu .dropdown-item{
+    padding:10px 14px !important;
+    display:block !important;
+}
+
+.notif-menu .dropdown-item:hover{
+    background:rgba(0,0,0,0.05) !important;
+}

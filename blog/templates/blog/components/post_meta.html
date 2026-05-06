@@ -1,0 +1,12 @@
+<div class="post-meta">
+    {% if post.category %}
+        <a class="post-meta-category" href="{{ request.path }}?category={{ post.category.slug }}">{{ post.category.name }}</a>
+    {% endif %}
+
+    {% if post.tags.exists %}
+        {% for tag in post.tags.all %}
+            <span class="post-meta-sep">/</span>
+            <a class="post-meta-tag" href="{{ request.path }}?tag={{ tag.name|urlencode }}">#{{ tag.name }}</a>
+        {% endfor %}
+    {% endif %}
+</div>

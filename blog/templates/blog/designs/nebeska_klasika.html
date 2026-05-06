@@ -1,0 +1,715 @@
+{% extends "blog/base.html" %}
+{% load static custom_tags %}
+
+{% block header %}{% endblock %}
+
+{% block blog_header %}
+<style>
+body {
+    background-color: #ece7dc;
+    background-image: url('{% static "blog/images/design-backgrounds/nebeska_klasika.jpg" %}');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #4b463f;
+}
+
+.container-fluid.mt-3 {
+    margin-top: 0 !important;
+    padding-top: 24px;
+    position: relative;
+    z-index: 1;
+}
+
+.container-fluid.mt-3 > .row.align-items-start {
+    display: none;
+}
+
+nav.navbar {
+    position: relative;
+    z-index: 4000 !important;
+    background: rgba(42, 45, 51, 0.84) !important;
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+nav.navbar .dropdown-menu {
+    z-index: 4100 !important;
+}
+
+.nk-theme {
+    max-width: 960px;
+    margin: 34px auto 28px;
+    padding: 0 16px;
+}
+
+.nk-title {
+    margin: 0 0 6px 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.7rem, 3vw, 2.35rem);
+    line-height: 1.03;
+    color: #514d57;
+    text-shadow: 0 2px 12px rgba(255,255,255,0.55);
+}
+
+
+.nk-banner {
+    margin-top: 18px;
+    background: rgba(252, 249, 243, 0.72);
+    border: 1px solid rgba(187, 176, 162, 0.62);
+    padding: 8px;
+    box-shadow: 0 10px 28px rgba(112, 102, 87, 0.14);
+}
+
+.nk-banner img {
+    width: 100%;
+    max-height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.nk-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 250px;
+    gap: 20px;
+    align-items: start;
+    margin-top: 120px;
+}
+
+.nk-post,
+.nk-side-card,
+.nk-profile-wrap .blog-profile-panel {
+    background: rgba(250, 247, 240, 0.84);
+    border: 1px solid rgba(192, 180, 164, 0.78);
+    box-shadow: 0 18px 38px rgba(116, 102, 78, 0.16);
+    backdrop-filter: blur(2px);
+}
+
+.nk-post {
+    padding: 22px 26px 20px;
+    margin-bottom: 20px;
+}
+
+.nk-post-divider {
+    margin: 10px 0 18px;
+    border-top: 1px solid rgba(184, 172, 157, 0.66);
+}
+
+.nk-post-date {
+    font-size: 0.88rem;
+    color: #7f7468;
+    letter-spacing: 0.02em;
+    margin-bottom: 4px;
+}
+
+.nk-post h4,
+.nk-post h4 a,
+.nk-post .blog-post-title {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #534842 !important;
+    font-size: clamp(1.8rem, 3vw, 2.2rem);
+    text-decoration: none;
+}
+
+.nk-post h4 a:hover {
+    color: #6d7e9f !important;
+}
+
+.post-meta {
+    margin-top: 8px;
+    font-size: 12px;
+    color: #84786d;
+}
+
+.post-meta-category {
+    font-weight: 700;
+    color: #6a7e9e;
+}
+
+.post-meta-tag {
+    color: #8a7c71;
+}
+
+.post-meta-sep {
+    margin: 0 5px;
+    color: #c3b7ab;
+}
+
+.nk-post .mt-4 img,
+.nk-post img.img-fluid {
+    border: 1px solid rgba(185, 174, 157, 0.72);
+    box-shadow: 0 8px 22px rgba(117, 104, 83, 0.14);
+    background: rgba(255,255,255,0.66);
+    padding: 4px;
+}
+
+.nk-post .ratio iframe {
+    border: 1px solid rgba(185, 174, 157, 0.72);
+    box-shadow: 0 8px 22px rgba(117, 104, 83, 0.14);
+    background: rgba(255,255,255,0.66);
+}
+
+.nk-post .mt-5.small {
+    margin-top: 24px !important;
+}
+
+.post-author-line,
+.post-author-link {
+    color: #7a7066;
+}
+
+.post-views {
+    color: #6d7e9f;
+}
+
+.post-actions a {
+    color: #6d7e9f;
+}
+
+.post-actions a:hover {
+    color: #4f627e;
+}
+
+.nk-side-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.nk-side-card {
+    padding: 14px 16px 16px;
+}
+
+.nk-side-title {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.35rem;
+    color: #584d46;
+    margin-bottom: 10px;
+}
+
+.nk-profile-wrap .blog-profile-panel {
+    max-width: none;
+    width: 100%;
+    padding: 14px 16px 16px;
+    margin: 0;
+    color: #554a44;
+}
+
+.nk-profile-wrap .blog-profile-panel__name,
+.nk-profile-wrap .blog-profile-panel__blog-name,
+.nk-profile-wrap .blog-profile-panel__stats,
+.nk-profile-wrap .blog-profile-panel__dropdown-toggle {
+    color: inherit;
+    text-shadow: none;
+}
+
+.nk-profile-wrap .blog-profile-panel__avatar {
+    box-shadow: 0 6px 16px rgba(108, 95, 80, 0.16);
+}
+
+.nk-profile-wrap .btn-primary {
+    background: #6d7e9f;
+    border-color: #6d7e9f;
+}
+
+.nk-profile-wrap .btn-outline-primary {
+    color: #6d7e9f;
+    border-color: #6d7e9f;
+}
+
+.nk-calendar-title,
+.nk-box-title,
+.nk-archive-title {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.2rem;
+    color: #584d46;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(190, 177, 161, 0.72);
+}
+
+.nk-calendar-month {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #82786d;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.nk-calendar-weekdays,
+.nk-calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 6px;
+    text-align: center;
+}
+
+.nk-calendar-weekdays {
+    font-size: 11px;
+    color: #8b8073;
+    margin-bottom: 8px;
+}
+
+.nk-calendar-day,
+.nk-calendar-empty {
+    min-height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 12px;
+}
+
+.nk-calendar-day {
+    text-decoration: none;
+    background: rgba(255,255,255,0.56);
+    color: #62574e;
+    border: 1px solid rgba(194,181,165,0.34);
+}
+
+.nk-calendar-day:hover {
+    color: #4f627e;
+    border-color: rgba(109,126,159,0.42);
+    background: rgba(255,255,255,0.78);
+}
+
+.nk-calendar-day--has-post {
+    font-weight: 700;
+    color: #5d6f8f;
+}
+
+.nk-calendar-day--today {
+    background: #6d7e9f;
+    color: #fff;
+    border-color: #6d7e9f;
+    box-shadow: 0 0 0 2px rgba(255,255,255,0.9), 0 0 0 4px rgba(109,126,159,0.18);
+}
+
+.nk-archive-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.nk-archive-link {
+    display: block;
+    padding: 8px 10px;
+    text-decoration: none;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.56);
+    border: 1px solid rgba(194,181,165,0.34);
+    color: #675d54;
+    font-size: 13px;
+}
+
+.nk-archive-link:hover {
+    color: #4f627e;
+    border-color: rgba(109,126,159,0.40);
+    background: rgba(255,255,255,0.78);
+}
+
+.nk-box-title {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.nk-box-content,
+.nk-side-card,
+.nk-post,
+.nk-post p,
+.nk-post li {
+    color: #554a44;
+}
+
+.nk-side-card .live-analytics-widget {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+
+.nk-filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 16px 0;
+    padding: 10px 12px;
+    background: rgba(250,247,240,0.84);
+    border: 1px solid rgba(192,180,164,0.78);
+    box-shadow: 0 12px 28px rgba(116,102,78,0.10);
+    color: #62574e;
+    font-size: 13px;
+}
+
+.nk-filter-chip {
+    padding: 5px 10px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.62);
+    border: 1px solid rgba(194,181,165,0.34);
+    color: #5d6f8f;
+    font-weight: 700;
+}
+
+.nk-filter-clear {
+    margin-left: auto;
+    text-decoration: none;
+    color: #7b6f64;
+    font-weight: 600;
+}
+
+.nk-filter-clear:hover {
+    color: #4f627e;
+}
+
+.blog-action-outline,
+.btn-outline-light {
+    border-color: #6d7e9f !important;
+    color: #6d7e9f !important;
+    background: transparent !important;
+}
+
+.blog-action-outline:hover,
+.btn-outline-light:hover {
+    background: #6d7e9f !important;
+    color: #fff !important;
+    box-shadow: 0 0 8px rgba(109,126,159,0.25);
+}
+
+.comment-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 100%;
+}
+
+.comment-row textarea,
+.comment-row .form-control {
+    flex: 1;
+    background: rgba(255,255,255,0.70) !important;
+    color: #554a44 !important;
+    border: 1px solid rgba(194,181,165,0.48) !important;
+    border-radius: 10px;
+    resize: none;
+    min-height: 48px;
+}
+
+.comment-row textarea:focus,
+.comment-row .form-control:focus {
+    border-color: rgba(109,126,159,0.62) !important;
+    box-shadow: 0 0 0 0.2rem rgba(109,126,159,0.12) !important;
+}
+
+.comment-item {
+    align-items: flex-start;
+}
+
+.comment-avatar {
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 2px;
+}
+
+.comment-body {
+    position: relative;
+    background: rgba(255,255,255,0.56);
+    border: 1px solid rgba(194,181,165,0.42);
+    border-radius: 12px;
+    padding: 10px 44px 10px 12px;
+}
+
+.comment-header {
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+    margin-bottom: 2px;
+}
+
+.comment-author a {
+    color: #5d6f8f;
+    text-decoration: none;
+}
+
+.comment-time {
+    font-size: 12px;
+    color: #8f8478;
+}
+
+.comment-text {
+    color: #554a44;
+    line-height: 1.35;
+}
+
+.comment-actions {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 120ms ease-in-out;
+}
+
+.comment-item:hover .comment-actions {
+    opacity: 0.9;
+}
+
+.comment-action-btn {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 1px solid rgba(84, 74, 68, 0.14);
+    border-radius: 8px;
+    cursor: pointer;
+    color: rgba(84, 74, 68, 0.66);
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+}
+
+.comment-action-btn i {
+    font-size: 14px;
+    line-height: 1;
+    display: block;
+}
+
+.comment-action-btn:hover {
+    color: #4b423d;
+    border-color: rgba(84, 74, 68, 0.24);
+    background: rgba(255,255,255,0.5);
+}
+
+.comment-action-danger:hover {
+    color: #c44e4e;
+    border-color: rgba(196,78,78,0.34);
+    background: rgba(196,78,78,0.08);
+}
+
+.nk-empty-copy {
+    color: #807568;
+    font-size: 13px;
+}
+
+@media (max-width: 991.98px) {
+    .nk-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .nk-theme {
+        max-width: 700px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .container-fluid.mt-3 {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+
+    .nk-theme {
+        padding: 0 4px;
+        margin-top: 8px;
+    }
+
+    .nk-layout {
+        margin-top: 72px;
+    }
+
+    .nk-title {
+        font-size: 1.95rem;
+    }
+
+    .nk-post {
+        padding: 18px 16px 16px;
+    }
+
+    .comment-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .comment-row .btn {
+        width: 100%;
+    }
+}
+</style>
+
+<div class="nk-theme">
+    <h1 class="nk-title">{{ blog.profile.blog_name|default:blog.username }}</h1>
+
+    {% if blog.profile.blog_tagline %}<p class="blog-tagline-shared">{{ blog.profile.blog_tagline }}</p>{% endif %}
+
+    {% if blog.profile.blog_banner %}
+    <div class="nk-banner">
+        <img src="{{ blog.profile.blog_banner.url }}" alt="Banner bloga">
+    </div>
+    {% endif %}
+
+    <div class="nk-layout">
+        <main>
+            {% if active_category or active_tag %}
+            <div class="nk-filter-bar">
+                <span>Filtrirano:</span>
+                {% if active_category_name %}
+                    <span class="nk-filter-chip">{{ active_category_name }}</span>
+                {% elif active_category %}
+                    <span class="nk-filter-chip">{{ active_category }}</span>
+                {% endif %}
+                {% if active_tag %}
+                    <span class="nk-filter-chip">#{{ active_tag }}</span>
+                {% endif %}
+                <a class="nk-filter-clear" href="{{ archive_base_url }}">Makni filter</a>
+            </div>
+            {% endif %}
+
+            {% for post in page_obj %}
+                <article class="nk-post">
+                    <div class="nk-post-date">{{ post.publication_datetime|date:"d.m.Y" }}</div>
+                    <div class="nk-post-divider"></div>
+                    <div class="d-flex flex-column" style="gap: 10px; min-width: 0;">
+                        <h4 class="mb-0">{{ post.title }}</h4>
+                        {% include "blog/components/post_meta.html" %}
+                    </div>
+
+                    <div class="mt-4">
+                        {% include "blog/components/post_body.html" %}
+                    </div>
+
+                    {% include "blog/components/post_actions.html" %}
+                    {% include "blog/components/post_comments.html" %}
+                </article>
+            {% empty %}
+                <div class="nk-post">
+                    <p class="mb-0">Nema postova.</p>
+                </div>
+            {% endfor %}
+
+            {% if page_obj.has_other_pages %}
+            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mt-3">
+                {% if page_obj.has_previous %}
+                    <a href="?page={{ page_obj.previous_page_number }}{{ pagination_query }}" class="btn btn-sm btn-outline-secondary">Prethodna</a>
+                {% else %}
+                    <span></span>
+                {% endif %}
+
+                <span class="small text-muted">Stranica {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}</span>
+
+                {% if page_obj.has_next %}
+                    <a href="?page={{ page_obj.next_page_number }}{{ pagination_query }}" class="btn btn-sm btn-outline-secondary">Sljedeća</a>
+                {% endif %}
+            </div>
+            {% endif %}
+        </main>
+
+        <aside class="nk-side-stack">
+            <div class="nk-profile-wrap nk-side-card" id="nk-author">
+                <div class="nk-side-title">O autoru</div>
+                {% include "blog/components/blog_profile_actions_sidebar.html" %}
+            </div>
+
+            {% if blog_preferences.blog_archive_mode == "both" or blog_preferences.blog_archive_mode == "calendar" %}
+            <div class="nk-side-card">
+                <div class="nk-calendar-title">Kalendar</div>
+                <div class="nk-calendar-month calendar-month-nav"><a href="{{ prev_month_url }}" class="calendar-month-nav-link" aria-label="Prethodni mjesec">&#8249;</a><span>{{ current_month_hr|upper }}, {{ current_year }}</span><a href="{{ next_month_url }}" class="calendar-month-nav-link" aria-label="Sljedeći mjesec">&#8250;</a></div>
+                <div class="nk-calendar-weekdays">
+                    <div>P</div><div>U</div><div>S</div><div>Č</div><div>P</div><div>S</div><div>N</div>
+                </div>
+                <div class="nk-calendar-grid">
+                    {% for week in month_calendar %}
+                        {% for day in week %}
+                            {% if day == 0 %}
+                                <div class="nk-calendar-empty"></div>
+                            {% else %}
+                                {% with pid=day_single_post_map|get_item:day %}
+                                    {% if day in days_with_posts %}
+                                        {% if pid %}
+                                            <a href="{% url 'post_detail' pid %}" class="nk-calendar-day nk-calendar-day--has-post {% if day == current_day %}nk-calendar-day--today{% endif %}">{{ day }}</a>
+                                        {% else %}
+                                            <a href="{{ archive_base_url }}?year={{ current_year }}&month={{ current_month_num }}&day={{ day }}" class="nk-calendar-day nk-calendar-day--has-post {% if day == current_day %}nk-calendar-day--today{% endif %}">{{ day }}</a>
+                                        {% endif %}
+                                    {% else %}
+                                        <div class="nk-calendar-day {% if day == current_day %}nk-calendar-day--today{% endif %}">{{ day }}</div>
+                                    {% endif %}
+                                {% endwith %}
+                            {% endif %}
+                        {% endfor %}
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+
+            {% if blog_preferences.blog_archive_mode == "both" or blog_preferences.blog_archive_mode == "list" %}
+            <div class="nk-side-card" id="nk-archive">
+                <div class="nk-archive-title">Arhiva bloga</div>
+                <div class="nk-archive-list">
+                    {% for a in archives %}
+                        <a class="nk-archive-link" href="{{ archive_base_url }}?year={{ a.year }}&month={{ a.month }}">{{ a.label }} ({{ a.count }})</a>
+                    {% empty %}
+                        <div class="nk-empty-copy">Nema postova.</div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+
+            {% if blog_preferences.analytics_widget_side == 'left_top' or blog_preferences.analytics_widget_side == 'right_top' %}
+            <div class="nk-side-card">
+                {% include "blog/components/live_analytics_widget.html" with analytics_widget_class="" %}
+            </div>
+            {% endif %}
+
+            {% for box in left_boxes %}
+            <div class="nk-side-card">
+                <div class="nk-box-title">{{ box.title }}</div>
+                <div class="nk-box-content">{{ box.content|safe }}</div>
+            </div>
+            {% endfor %}
+
+            {% for box in right_boxes %}
+            <div class="nk-side-card">
+                <div class="nk-box-title">{{ box.title }}</div>
+                <div class="nk-box-content">{{ box.content|safe }}</div>
+            </div>
+            {% endfor %}
+
+            {% if blog_preferences.analytics_widget_side == 'left_bottom' or blog_preferences.analytics_widget_side == 'right_bottom' %}
+            <div class="nk-side-card">
+                {% include "blog/components/live_analytics_widget.html" with analytics_widget_class="" %}
+            </div>
+            {% endif %}
+        </aside>
+    </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".poll-bar").forEach(function (bar) {
+        const p = bar.getAttribute("data-percent") || "0";
+        bar.style.width = p + "%";
+    });
+
+    document.querySelectorAll(".js-scroll-to-comments").forEach(function (a) {
+        a.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href");
+            if (!targetId) return;
+            const el = document.querySelector(targetId);
+            if (!el) return;
+            el.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+    });
+});
+</script>
+{% endblock %}
+
+{% block left_sidebar %}{% endblock %}
+{% block right_sidebar %}{% endblock %}
+{% block content %}{% endblock %}

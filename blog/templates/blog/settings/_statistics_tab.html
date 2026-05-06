@@ -1,0 +1,545 @@
+{% if request.GET.tab == "statistika" %}
+<div class="statistics-tab-wrap">
+    <style>
+        .statistics-card {
+            border: 1px solid #e9ecef;
+            border-radius: 18px;
+            background: #fff;
+            box-shadow: 0 10px 25px rgba(15, 23, 42, 0.05);
+            height: 100%;
+        }
+        .statistics-kpi {
+            border-radius: 16px;
+            padding: 1rem 1.1rem;
+            background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+            border: 1px solid #edf2f7;
+            height: 100%;
+        }
+        .statistics-kpi-label {
+            font-size: 0.85rem;
+            color: #6c757d;
+            margin-bottom: 0.35rem;
+        }
+        .statistics-kpi-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 0.45rem;
+            color: #0f172a;
+        }
+        .statistics-kpi-help {
+            font-size: 0.83rem;
+            color: #6c757d;
+        }
+        .statistics-chart-box {
+            position: relative;
+            width: 100%;
+            min-height: 260px;
+            border-radius: 16px;
+            background: linear-gradient(180deg, #f8fbff 0%, #ffffff 100%);
+            border: 1px solid #edf2f7;
+            padding: 1rem 1rem 2.4rem;
+        }
+        .statistics-chart-box svg {
+            width: 100%;
+            height: 190px;
+            display: block;
+        }
+        .statistics-chart-labels {
+            position: absolute;
+            left: 1rem;
+            right: 1rem;
+            bottom: 0.8rem;
+            height: 18px;
+        }
+        .statistics-chart-label {
+            position: absolute;
+            transform: translateX(-50%);
+            font-size: 0.74rem;
+            color: #6c757d;
+            white-space: nowrap;
+        }
+        .statistics-mini-list {
+            display: grid;
+            gap: 0.75rem;
+        }
+        .statistics-mini-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            padding: 0.85rem 1rem;
+            border-radius: 14px;
+            background: #f8fafc;
+            border: 1px solid #eef2f7;
+        }
+        .statistics-mini-item strong {
+            font-size: 1.1rem;
+            color: #0f172a;
+        }
+        .statistics-table-wrap {
+            overflow-x: auto;
+        }
+        .statistics-table-wrap table {
+            margin-bottom: 0;
+        }
+        .statistics-note {
+            font-size: 0.84rem;
+            color: #6c757d;
+        }
+        .statistics-live-section {
+            margin-top: 2rem;
+            padding-top: 1.35rem;
+            border-top: 1px solid #e8edf3;
+        }
+        .statistics-live-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            padding: 1rem 1.15rem;
+            margin-bottom: 1rem;
+            border-radius: 18px;
+            background: linear-gradient(180deg, #f8fbff 0%, #f2f7ff 100%);
+            border: 1px solid #e1eaf7;
+        }
+        .statistics-live-header-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 0.2rem;
+        }
+        .statistics-live-header-text {
+            font-size: 0.88rem;
+            color: #64748b;
+        }
+    </style>
+
+    <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+        <div>
+            <h4 class="mb-1">Statistika</h4>
+            <div class="text-muted">Pregled bloga, sadržaja, kategorija, kvizova i anketa.</div>
+        </div>
+        <span class="badge rounded-pill bg-light text-dark border px-3 py-2">Ukupno sadržaja: {{ statistics.total_posts }}</span>
+    </div>
+
+    <div class="row g-3 mb-4">
+        <div class="col-12 col-md-6 col-xl-3">
+            <div class="statistics-kpi">
+                <div class="statistics-kpi-label">Pregledi</div>
+                <div class="statistics-kpi-value">{{ statistics.total_views }}</div>
+                <div class="statistics-kpi-help">Prosjek po objavljenom postu: {{ statistics.avg_views_per_published|floatformat:1 }}</div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-xl-3">
+            <div class="statistics-kpi">
+                <div class="statistics-kpi-label">Reakcije publike</div>
+                <div class="statistics-kpi-value">{{ statistics.engagement_rate|floatformat:2 }}%</div>
+                <div class="statistics-kpi-help">(lajkovi + komentari) / pregledi</div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-xl-3">
+            <div class="statistics-kpi">
+                <div class="statistics-kpi-label">Pratitelji</div>
+                <div class="statistics-kpi-value">{{ statistics.total_followers }}</div>
+                <div class="statistics-kpi-help">+{{ statistics.followers_30 }} u zadnjih 30 dana</div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-xl-3">
+            <div class="statistics-kpi">
+                <div class="statistics-kpi-label">Interakcije</div>
+                <div class="statistics-kpi-value">{{ statistics.total_likes|add:statistics.total_comments }}</div>
+                <div class="statistics-kpi-help">{{ statistics.total_likes }} lajkova i {{ statistics.total_comments }} komentara</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-4 mb-4">
+        <div class="col-12 col-xl-8">
+            <div class="statistics-card p-4">
+                <div class="d-flex flex-wrap justify-content-between align-items-start gap-3 mb-3">
+                    <div>
+                        <h5 class="mb-1">Graf pregleda kroz vrijeme</h5>
+                        <div class="text-muted small">Zadnjih 14 dana, prema datumu objave sadržaja.</div>
+                    </div>
+                    <span class="badge bg-light text-dark border">Max: {{ statistics.chart_max }}</span>
+                </div>
+
+                <div class="statistics-chart-box">
+                    <svg viewBox="0 0 100 60" preserveAspectRatio="none" aria-label="Graf pregleda">
+                        <line x1="0" y1="55" x2="100" y2="55" stroke="#dbe4ee" stroke-width="0.8"></line>
+                        <line x1="0" y1="39" x2="100" y2="39" stroke="#eef2f7" stroke-width="0.7"></line>
+                        <line x1="0" y1="23" x2="100" y2="23" stroke="#eef2f7" stroke-width="0.7"></line>
+                        <line x1="0" y1="7" x2="100" y2="7" stroke="#eef2f7" stroke-width="0.7"></line>
+                        <polyline fill="none" stroke="#0d6efd" stroke-width="1.45" stroke-linecap="round" stroke-linejoin="round" points="{{ statistics.chart_points }}"></polyline>
+                    </svg>
+
+                    <div class="statistics-chart-labels">
+                        {% for item in statistics.chart_labels %}
+                            <span class="statistics-chart-label" style="left:{% widthratio item.index 13 100 %}%">{{ item.label }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                {% if not statistics.chart_has_real_view_history %}
+                    <div class="statistics-note mt-3">
+                        Napomena: aplikacija još ne sprema svaki pregled po danu, pa je ovaj graf napravljen prema datumu objave i ukupnim pregledima tih objava.
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="col-12 col-xl-4">
+            <div class="statistics-card p-4 h-100">
+                <h5 class="mb-3">Zadnjih 30 dana</h5>
+                <div class="statistics-mini-list">
+                    <div class="statistics-mini-item">
+                        <div>
+                            <div class="text-muted small">Novi sadržaji</div>
+                            <strong>{{ statistics.posts_30 }}</strong>
+                        </div>
+                        <span class="badge bg-light text-dark border">30 dana</span>
+                    </div>
+                    <div class="statistics-mini-item">
+                        <div>
+                            <div class="text-muted small">Komentari</div>
+                            <strong>{{ statistics.comments_30 }}</strong>
+                        </div>
+                        <span class="badge bg-light text-dark border">30 dana</span>
+                    </div>
+                    <div class="statistics-mini-item">
+                        <div>
+                            <div class="text-muted small">Odgovori na kvizove</div>
+                            <strong>{{ statistics.quiz_answers_30 }}</strong>
+                        </div>
+                        <span class="badge bg-light text-dark border">30 dana</span>
+                    </div>
+                    <div class="statistics-mini-item">
+                        <div>
+                            <div class="text-muted small">Glasovi u anketama</div>
+                            <strong>{{ statistics.poll_votes_30 }}</strong>
+                        </div>
+                        <span class="badge bg-light text-dark border">30 dana</span>
+                    </div>
+                    <div class="statistics-mini-item">
+                        <div>
+                            <div class="text-muted small">Rast pratitelja</div>
+                            <strong>+{{ statistics.followers_7 }} / +{{ statistics.followers_30 }} / +{{ statistics.followers_90 }}</strong>
+                        </div>
+                        <span class="badge bg-light text-dark border">7 / 30 / 90</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-4 mb-4">
+        <div class="col-12 col-xl-4">
+            <div class="statistics-card p-4 h-100">
+                <h5 class="mb-3">Sadržaj po vrsti</h5>
+                <div class="statistics-mini-list">
+                    {% for item in statistics.content_type_stats %}
+                        <div class="statistics-mini-item">
+                            <div>
+                                <div class="text-muted small">{{ item.label }}</div>
+                                <strong>{{ item.count }}</strong>
+                            </div>
+                            <span class="badge bg-light text-dark border">{{ item.views }} pregleda</span>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-xl-4">
+            <div class="statistics-card p-4 h-100">
+                <h5 class="mb-3">Objave</h5>
+                <div class="statistics-mini-list">
+                    <div class="statistics-mini-item"><span>Ukupno sadržaja</span><strong>{{ statistics.total_posts }}</strong></div>
+                    <div class="statistics-mini-item"><span>Objavljeno</span><strong>{{ statistics.published_count }}</strong></div>
+                    <div class="statistics-mini-item"><span>Skice</span><strong>{{ statistics.draft_count }}</strong></div>
+                    <div class="statistics-mini-item"><span>Na čekanju</span><strong>{{ statistics.scheduled_count }}</strong></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-xl-4">
+            <div class="statistics-card p-4 h-100">
+                <h5 class="mb-3">Prosjeci</h5>
+                <div class="statistics-mini-list">
+                    <div class="statistics-mini-item"><span>Pregleda po objavljenom</span><strong>{{ statistics.avg_views_per_published|floatformat:1 }}</strong></div>
+                    <div class="statistics-mini-item"><span>Lajkova po objavljenom</span><strong>{{ statistics.avg_likes_per_published|floatformat:1 }}</strong></div>
+                    <div class="statistics-mini-item"><span>Komentara po objavljenom</span><strong>{{ statistics.avg_comments_per_published|floatformat:1 }}</strong></div>
+                    <div class="statistics-mini-item"><span>Reakcije publike</span><strong>{{ statistics.engagement_rate|floatformat:2 }}%</strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-4 mb-4">
+        <div class="col-12 col-xl-6">
+            <div class="statistics-card p-4 h-100">
+                <div class="d-flex justify-content-between align-items-center gap-2 mb-3">
+                    <h5 class="mb-0">Najuspješnije kategorije</h5>
+                    <span class="badge bg-light text-dark border">Top 5</span>
+                </div>
+                <div class="statistics-table-wrap">
+                    <table class="table align-middle">
+                        <thead>
+                            <tr>
+                                <th>Kategorija</th>
+                                <th>Objave</th>
+                                <th>Pregledi</th>
+                                <th>Interakcije</th>
+                                <th>Reakcije %</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for item in statistics.top_categories %}
+                                <tr>
+                                    <td>{{ item.name }}</td>
+                                    <td>{{ item.post_count }}</td>
+                                    <td>{{ item.views }}</td>
+                                    <td>{{ item.likes|add:item.comments }}</td>
+                                    <td>{{ item.engagement|floatformat:2 }}%</td>
+                                </tr>
+                            {% empty %}
+                                <tr>
+                                    <td colspan="5" class="text-muted">Još nema dovoljno podataka.</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-xl-6">
+            <div class="statistics-card p-4 h-100">
+                <div class="d-flex justify-content-between align-items-center gap-2 mb-3">
+                    <h5 class="mb-0">Najgledaniji postovi</h5>
+                    <span class="badge bg-light text-dark border">Top 5</span>
+                </div>
+                <div class="statistics-table-wrap">
+                    <table class="table align-middle">
+                        <thead>
+                            <tr>
+                                <th>Naslov</th>
+                                <th>Pregledi</th>
+                                <th>Lajkovi</th>
+                                <th>Komentari</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for post in statistics.top_posts %}
+                                <tr>
+                                    <td>{{ post.title|truncatechars:48 }}</td>
+                                    <td>{{ post.views }}</td>
+                                    <td>{{ post.like_count }}</td>
+                                    <td>{{ post.comment_count }}</td>
+                                </tr>
+                            {% empty %}
+                                <tr>
+                                    <td colspan="4" class="text-muted">Još nema objavljenih postova.</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-12 col-xl-6">
+            <div class="statistics-card p-4 h-100">
+                <div class="d-flex justify-content-between align-items-center gap-2 mb-3">
+                    <h5 class="mb-0">Kvizovi</h5>
+                    <span class="badge bg-light text-dark border">{{ statistics.quiz_count }}</span>
+                </div>
+                <div class="statistics-mini-list mb-3">
+                    <div class="statistics-mini-item"><span>Ukupno kvizova</span><strong>{{ statistics.quiz_count }}</strong></div>
+                    <div class="statistics-mini-item"><span>Ukupno odgovora</span><strong>{{ statistics.total_quiz_answers }}</strong></div>
+                    <div class="statistics-mini-item"><span>Prosjek odgovora po kvizu</span><strong>{{ statistics.avg_quiz_answers|floatformat:1 }}</strong></div>
+                    <div class="statistics-mini-item"><span>Točnost odgovora</span><strong>{{ statistics.quiz_success_rate|floatformat:2 }}%</strong></div>
+                </div>
+                {% if statistics.top_quiz %}
+                    <div class="border rounded-4 p-3 ">
+                        <div class="small text-muted mb-1">Najpopularniji kviz</div>
+                        <div class="fw-semibold">{{ statistics.top_quiz.title }}</div>
+                        <div class="small text-muted mt-1">{{ statistics.top_quiz.quiz_answer_count }} odgovora · {{ statistics.top_quiz.views }} pregleda</div>
+                    </div>
+                {% else %}
+                    <div class="text-muted">Još nema kvizova.</div>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="col-12 col-xl-6">
+            <div class="statistics-card p-4 h-100">
+                <div class="d-flex justify-content-between align-items-center gap-2 mb-3">
+                    <h5 class="mb-0">Ankete</h5>
+                    <span class="badge bg-light text-dark border">{{ statistics.poll_count }}</span>
+                </div>
+                <div class="statistics-mini-list mb-3">
+                    <div class="statistics-mini-item"><span>Ukupno anketa</span><strong>{{ statistics.poll_count }}</strong></div>
+                    <div class="statistics-mini-item"><span>Ukupno glasova</span><strong>{{ statistics.total_poll_votes }}</strong></div>
+                    <div class="statistics-mini-item"><span>Prosjek glasova po anketi</span><strong>{{ statistics.avg_poll_votes|floatformat:1 }}</strong></div>
+                    <div class="statistics-mini-item"><span>Glasovi u zadnjih 30 dana</span><strong>{{ statistics.poll_votes_30 }}</strong></div>
+                </div>
+                {% if statistics.top_poll %}
+                    <div class="border rounded-4 p-3 ">
+                        <div class="small text-muted mb-1">Najpopularnija anketa</div>
+                        <div class="fw-semibold">{{ statistics.top_poll.title }}</div>
+                        <div class="small text-muted mt-1">{{ statistics.top_poll.poll_vote_count }} glasova · {{ statistics.top_poll.views }} pregleda</div>
+                    </div>
+                {% else %}
+                    <div class="text-muted">Još nema anketa.</div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    {% if live_analytics %}
+    <section class="statistics-live-section">
+        <div class="statistics-live-header">
+            <div>
+                <div class="statistics-live-header-title">Analitika posjetitelja</div>
+                <div class="statistics-live-header-text">Ovaj dio je namjerno malo odvojen od ostatka statistike jer prikazuje podatke uživo, lokacije i zemlje posjeta.</div>
+            </div>
+        </div>
+
+    <div class="row g-4 mt-1">
+        <div class="col-12">
+            <div class="statistics-card p-4">
+                <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+                    <div>
+                        <h5 class="mb-1">Pregled uživo</h5>
+                        <div class="text-muted small">Aktivni posjetitelji, uređaji i stranice sad su prikazani ovdje umjesto u postavkama.</div>
+                    </div>
+                    <span class="badge bg-light text-dark border">Analitika uživo</span>
+                </div>
+
+                <div class="row g-3 mb-3">
+                    <div class="col-12 col-md-4">
+                        <div class="statistics-kpi text-center">
+                            <div class="statistics-kpi-label">Trenutno</div>
+                            <div class="statistics-kpi-value">{{ live_analytics.active_now|default:0 }}</div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="statistics-kpi text-center">
+                            <div class="statistics-kpi-label">15 min</div>
+                            <div class="statistics-kpi-value">{{ live_analytics.active_recent|default:0 }}</div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="statistics-kpi text-center">
+                            <div class="statistics-kpi-label">Danas</div>
+                            <div class="statistics-kpi-value">{{ live_analytics.today_unique|default:0 }}</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-3 mb-3">
+                    <div class="col-12 col-md-6">
+                        <div class="statistics-mini-item h-100">
+                            <span>Povratni posjetitelji (30 dana)</span>
+                            <strong>{{ live_analytics.repeat_visitors|default:0 }}</strong>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="statistics-mini-item h-100">
+                            <span>Jedinstveni posjetitelji (30 dana)</span>
+                            <strong>{{ live_analytics.month_unique|default:0 }}</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-12 col-xl-6">
+                        <div class="border rounded-4 p-3 h-100">
+                            <div class="fw-semibold mb-3">Aktivni uređaji</div>
+                            <div class="d-flex flex-wrap gap-2">
+                                {% for item in live_analytics.device_breakdown %}
+                                    <span class="badge bg-light text-dark border px-3 py-2">{{ item.label }} · {{ item.count }}</span>
+                                {% empty %}
+                                    <span class="small text-muted">Još nema dovoljno podataka.</span>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-6">
+                        <div class="border rounded-4 p-3 h-100">
+                            <div class="fw-semibold mb-3">Aktivne stranice</div>
+                            <div class="list-group list-group-flush border rounded-4 overflow-hidden">
+                                {% for item in live_analytics.page_breakdown %}
+                                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                                        <span>{{ item.label }}</span>
+                                        <strong>{{ item.count }}</strong>
+                                    </div>
+                                {% empty %}
+                                    <div class="list-group-item text-muted">Trenutno nema aktivnih stranica.</div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 mt-2" id="statistics-country-breakdown">
+            <div class="statistics-card p-4">
+                <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+                    <div>
+                        <h5 class="mb-1">Odakle dolaze posjetitelji</h5>
+                        <div class="text-muted small">Grad i država računaju se iz približne lokacije koju je posjetitelj dopustio.</div>
+                    </div>
+                    <span class="badge bg-light text-dark border">{{ live_analytics.month_unique|default:0 }} posjetitelja / 30 dana</span>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-12 col-xl-6">
+                        <div class="border rounded-4 p-3 h-100">
+                            <div class="fw-semibold mb-3">Postotak po državama</div>
+                            {% for item in live_analytics.country_breakdown %}
+                                <div class="mb-3">
+                                    <div class="d-flex justify-content-between align-items-center gap-3 mb-1">
+                                        <span>{{ item.country }}</span>
+                                        <strong>{{ item.percent }}%</strong>
+                                    </div>
+                                    <div class="progress" style="height: 8px;">
+                                        <div class="progress-bar" role="progressbar" style="width: {{ item.percent }}%;"></div>
+                                    </div>
+                                    <div class="small text-muted mt-1">{{ item.count }} posjetitelja</div>
+                                </div>
+                            {% empty %}
+                                <div class="text-muted small">Još nema dovoljno podataka za prikaz država.</div>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-xl-6">
+                        <div class="border rounded-4 p-3 h-100">
+                            <div class="fw-semibold mb-3">Gradovi i države</div>
+                            <div class="list-group list-group-flush border rounded-4 overflow-hidden">
+                                {% for item in live_analytics.location_breakdown %}
+                                    <div class="list-group-item d-flex justify-content-between align-items-center gap-3">
+                                        <div>
+                                            <div class="fw-semibold">{{ item.city }}</div>
+                                            <div class="small text-muted">{{ item.country }}</div>
+                                        </div>
+                                        <strong>{{ item.count }}</strong>
+                                    </div>
+                                {% empty %}
+                                    <div class="list-group-item text-muted">Još nema spremljenih gradova i država.</div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    {% endif %}
+</div>
+{% endif %}

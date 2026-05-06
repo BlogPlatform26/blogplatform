@@ -1,0 +1,288 @@
+            <!-- DODAVANJE / UREĐIVANJE BOXEVA -->
+            {% if request.GET.tab == "boxevi" %}
+
+                <div class="box-layout-topbar mb-4">
+                    <div>
+                        <h4 class="mb-1">Boxevi</h4>
+                        <div class="text-muted small">
+                            Možeš imati najviše {{ max_boxes_per_side }} boxa lijevo i {{ max_boxes_per_side }} boxa desno.
+                            Povuci box za ručkicu i prebaci ga u drugi stupac ili promijeni redoslijed unutar istog stupca.
+                        </div>
+                    </div>
+
+                    <div class="box-layout-topbar-actions">
+                        <span class="box-count-pill box-count-pill--left">
+                            Lijevo <strong><span id="leftColumnCount">{{ left_count }}</span>/{{ max_boxes_per_side }}</strong>
+                        </span>
+                        <span class="box-count-pill box-count-pill--right">
+                            Desno <strong><span id="rightColumnCount">{{ right_count }}</span>/{{ max_boxes_per_side }}</strong>
+                        </span>
+
+                        {% if boxes|length >= 6 %}
+                            <span class="box-count-pill box-count-pill--total">Maksimum: 6/6</span>
+                        {% else %}
+                            <a href="{% url 'add_box' %}" class="btn btn-primary btn-sm box-add-btn">
+                                + Dodaj box
+                            </a>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <div class="box-layout-help mb-4">
+                    <div class="box-layout-help-item">
+                        <span class="box-layout-help-icon">1</span>
+                        <div>
+                            <div class="box-layout-help-title">Uhvati za ručkicu</div>
+                            <div class="box-layout-help-text">Povuci box za točkice sa strane.</div>
+                        </div>
+                    </div>
+                    <div class="box-layout-help-item">
+                        <span class="box-layout-help-icon">2</span>
+                        <div>
+                            <div class="box-layout-help-title">Premjesti ili zamijeni</div>
+                            <div class="box-layout-help-text">Možeš ga premjestiti gore-dolje ili prebaciti lijevo/desno.</div>
+                        </div>
+                    </div>
+                    <div class="box-layout-help-item">
+                        <span class="box-layout-help-icon">3</span>
+                        <div>
+                            <div class="box-layout-help-title">Otvori i uredi</div>
+                            <div class="box-layout-help-text">Klik na naziv boxa otvara uređivanje ispod.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <form method="POST" id="boxLayoutForm" class="mb-4">
+                    {% csrf_token %}
+                    <input type="hidden" name="box_layout_json" id="boxLayoutJson">
+                    <input type="hidden" name="active_box_id" value="{% if active_box %}{{ active_box.id }}{% endif %}">
+
+                    <div class="row g-4">
+
+                        <div class="col-lg-6">
+                            <div class="card shadow-sm box-side-card box-side-left">
+                                <div class="card-header bg-white border-0 pb-0">
+                                    <div class="d-flex justify-content-between align-items-center gap-3">
+                                        <div>
+                                            <h5 class="mb-1">Lijevi boxevi</h5>
+                                            <div class="small text-muted">Najviše {{ max_boxes_per_side }} boxa</div>
+                                        </div>
+                                        <span class="badge text-bg-primary">{{ left_count }}/{{ max_boxes_per_side }}</span>
+                                    </div>
+                                </div>
+
+                                <div class="card-body">
+                                    <div class="box-drop-note mb-3">
+                                        Povuci box ovdje ili promijeni redoslijed unutar liste.
+                                    </div>
+
+                                    <div class="box-sort-list"
+                                         id="leftBoxList"
+                                         data-position="left"
+                                         data-max="{{ max_boxes_per_side }}">
+                                        {% for box in left_boxes %}
+                                            <div class="sortable-box-item {% if active_box and box.id == active_box.id %}active-box-item{% endif %}"
+                                                 draggable="true"
+                                                 data-box-id="{{ box.id }}">
+                                                <div class="box-item-main">
+                                                    <div class="drag-handle" title="Povuci box" aria-hidden="true">⋮⋮</div>
+                                                    <a href="?tab=boxevi&box={{ box.id }}"
+                                                       class="box-item-link text-decoration-none flex-grow-1">
+                                                        <div class="box-item-title-row">
+                                                            <div class="fw-semibold text-truncate">{{ box.title }}</div>
+                                                            <span class="box-item-id">#{{ box.id }}</span>
+                                                        </div>
+                                                        <div class="box-item-meta-row">
+                                                            <span class="badge text-bg-light box-side-badge">Lijevo</span>
+                                                            <span class="box-item-meta-text">Povuci za promjenu mjesta</span>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        {% empty %}
+                                            <div class="box-side-empty">
+                                                Trenutno nema lijevih boxeva.
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="card shadow-sm box-side-card box-side-right">
+                                <div class="card-header bg-white border-0 pb-0">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h5 class="mb-1">Desni boxevi</h5>
+                                            <div class="small text-muted">Najviše {{ max_boxes_per_side }} boxa</div>
+                                        </div>
+                                        <span class="badge text-bg-success">{{ right_count }}/{{ max_boxes_per_side }}</span>
+                                    </div>
+                                </div>
+
+                                <div class="card-body">
+                                    <div class="box-drop-note mb-3">
+                                        Povuci box ovdje ili promijeni redoslijed unutar liste.
+                                    </div>
+
+                                    <div class="box-sort-list"
+                                         id="rightBoxList"
+                                         data-position="right"
+                                         data-max="{{ max_boxes_per_side }}">
+                                        {% for box in right_boxes %}
+                                            <div class="sortable-box-item {% if active_box and box.id == active_box.id %}active-box-item{% endif %}"
+                                                 draggable="true"
+                                                 data-box-id="{{ box.id }}">
+                                                <div class="box-item-main">
+                                                    <div class="drag-handle" title="Povuci box" aria-hidden="true">⋮⋮</div>
+                                                    <a href="?tab=boxevi&box={{ box.id }}"
+                                                       class="box-item-link text-decoration-none flex-grow-1">
+                                                        <div class="box-item-title-row">
+                                                            <div class="fw-semibold text-truncate">{{ box.title }}</div>
+                                                            <span class="box-item-id">#{{ box.id }}</span>
+                                                        </div>
+                                                        <div class="box-item-meta-row">
+                                                            <span class="badge text-bg-light box-side-badge">Desno</span>
+                                                            <span class="box-item-meta-text">Povuci za promjenu mjesta</span>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        {% empty %}
+                                            <div class="box-side-empty">
+                                                Trenutno nema desnih boxeva.
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="mt-3 d-flex flex-wrap gap-2">
+                        {% if boxes|length < 6 %}
+                            <a href="{% url 'add_box' %}" class="btn btn-outline-secondary">
+                                Dodaj novi box
+                            </a>
+                        {% endif %}
+                    </div>
+
+                    <div id="boxAutoSaveStatus" class="small text-muted mt-2"></div>
+                </form>
+
+                {% if active_box %}
+                    <div class="card p-4 shadow-sm box-editor-card">
+
+                        {% if active_box_form %}
+                            {{ active_box_form.media }}
+                        {% endif %}
+
+                        <div class="d-flex flex-wrap justify-content-between align-items-start gap-3 mb-3">
+                            <div>
+                                <h5 class="mb-1">Uredi box</h5>
+                                <div class="small text-muted">
+                                    Trenutno uređuješ: <strong>{{ active_box.title }}</strong>
+                                </div>
+                            </div>
+
+                            <div class="small text-muted">
+                                Aktivna strana:
+                                {% if active_box.position == "left" %}
+                                    <span class="badge text-bg-primary">Lijevo</span>
+                                {% else %}
+                                    <span class="badge text-bg-success">Desno</span>
+                                {% endif %}
+                            </div>
+                        </div>
+
+                        <form method="POST" action="{% url 'edit_box' active_box.id %}" id="editBoxForm" data-content-limit="{{ box_content_limit }}">
+                            {% csrf_token %}
+
+                            <div class="mb-3">
+                                <div class="d-flex justify-content-between align-items-center gap-2">
+                                    <label class="form-label d-block mb-0">Naslov</label>
+                                    <div class="small text-muted">
+                                        <span id="boxTitleCounter">{{ active_box.title|length }}</span>/{{ box_title_limit }}
+                                    </div>
+                                </div>
+
+                                <input type="text"
+                                    id="id_title"
+                                    name="title"
+                                    value="{{ active_box.title }}"
+                                    class="form-control"
+                                    maxlength="{{ box_title_limit }}"
+                                    placeholder="Naslov boxa">
+
+                                <div class="form-text">
+                                    Naslov može imati najviše {{ box_title_limit }} znakova.
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <div class="d-flex justify-content-between align-items-center gap-2">
+                                    <label class="form-label d-block mb-0">Tekst</label>
+                                    <div class="small text-muted">
+                                        <span id="boxContentCounter">0</span>/{{ box_content_limit }}
+                                    </div>
+                                </div>
+
+                                {% if active_box_form %}
+                                    {{ active_box_form.content }}
+                                {% else %}
+                                    <textarea name="content" id="id_content" class="form-control" rows="6">{{ active_box.content }}</textarea>
+                                {% endif %}
+
+                                <div class="form-text">
+                                    Tekst boxa može imati najviše {{ box_content_limit }} znakova bez HTML oznaka.
+                                </div>
+
+                                <div class="small text-danger d-none mt-1" id="boxContentError">
+                                    Tekst boxa je predug. Skrati sadržaj prije spremanja.
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label d-block">Pozicija</label>
+                                <select name="position" class="form-select">
+                                    <option value="left"
+                                        {% if active_box.position == "left" %}selected{% elif left_count >= max_boxes_per_side %}disabled{% endif %}>
+                                        Lijevo
+                                    </option>
+                                    <option value="right"
+                                        {% if active_box.position == "right" %}selected{% elif right_count >= max_boxes_per_side %}disabled{% endif %}>
+                                        Desno
+                                    </option>
+                                </select>
+
+                                <div class="form-text">
+                                    Ako je druga strana puna, nećeš moći prebaciti box dok tamo ne oslobodiš mjesto.
+                                </div>
+                            </div>
+
+                            <div class="mt-3 d-flex gap-2">
+
+                                <button type="submit" class="btn btn-primary">
+                                    Spremi promjene
+                                </button>
+
+                                <a href="{% url 'delete_box' active_box.id %}"
+                                class="btn btn-outline-danger">
+                                    Izbriši box
+                                </a>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                {% else %}
+                    <div class="card p-4 shadow-sm">
+                        <p class="mb-0">Nema boxeva. Dodaj prvi box.</p>
+                    </div>
+                {% endif %}
+
+            {% endif %}

@@ -1,0 +1,49 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+<h4 class="mb-4">Notifikacije</h4>
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <div class="text-muted small">
+        Pregled svih obavijesti
+    </div>
+
+    <form method="POST" action="{% url 'mark_all_notifications_read' %}" class="m-0">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-outline-primary btn-sm">
+            Označi sve pročitano
+        </button>
+    </form>
+</div>
+
+{% for notification in notifications %}
+    <div class="card mb-2">
+        <div class="card-body">
+
+            {% if notification.notification_type == "follow" %}
+                <strong>{{ notification.sender.username }}</strong> vas je zapratio.
+
+            {% elif notification.notification_type == "like" %}
+                <strong>{{ notification.sender.username }}</strong> je lajkao vaš post
+                <a href="{% url 'post_detail' notification.post.id %}">
+                    "{{ notification.post.title }}"
+                </a>.
+
+            {% elif notification.notification_type == "comment" %}
+                <strong>{{ notification.sender.username }}</strong> je komentirao vaš post
+                <a href="{% url 'post_detail' notification.post.id %}">
+                    "{{ notification.post.title }}"
+                </a>.
+            {% endif %}
+
+            <div class="small text-muted">
+                {{ notification.created_at|date:"d.m.Y H:i" }}
+            </div>
+
+        </div>
+    </div>
+{% empty %}
+    <p>Nema notifikacija.</p>
+{% endfor %}
+
+{% endblock %}

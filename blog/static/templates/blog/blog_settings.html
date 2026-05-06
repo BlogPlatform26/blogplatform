@@ -1,0 +1,1368 @@
+{% extends "dashboard_base.html" %}
+{% block content %}
+{% load static %}
+
+<div class="container-fluid">
+    <div class="row">
+
+        <!-- LIJEVI MENU -->
+        <div class="col-md-1 bg-light border-end min-vh-100 p-0">
+
+            <div class="list-group list-group-flush">
+
+                <a href="{% url 'blog_settings' %}?tab=postovi"
+                class="list-group-item list-group-item-action {% if request.GET.tab == 'postovi' or not request.GET.tab %}active{% endif %}">
+                    Postovi
+                </a>
+
+                <a href="{% url 'blog_settings' %}?tab=boxevi"
+                class="list-group-item list-group-item-action {% if request.GET.tab == 'boxevi' %}active{% endif %}">
+                    Boxevi
+                </a>
+
+                <a href="{% url 'blog_settings' %}?tab=dizajn"
+                class="list-group-item list-group-item-action {% if request.GET.tab == 'dizajn' %}active{% endif %}">
+                    Dizajn
+                </a>
+
+                <a href="{% url 'blog_settings' %}?tab=postavke"
+                class="list-group-item list-group-item-action {% if request.GET.tab == 'postavke' %}active{% endif %}">
+                    Postavke
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- DESNO -->
+        <div class="col-md-11 ps-4 pe-0 py-4 bg-white">
+
+            <!-- POSTOVI -->
+            {% if request.GET.tab == "postovi" %}
+            <h4 class="mb-4">Postovi</h4>
+
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-danger">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+
+            {# CKEditor media (JS/CSS) #}
+            {{ post_form.media }}
+
+            <ul class="nav nav-tabs mb-4">
+
+                <li class="nav-item">
+                    <a href="?tab=postovi&post_filter=new"
+                    class="nav-link {% if post_filter == 'new' %}active{% endif %}">
+                        Novi post
+                    </a>
+                </li>
+
+                <!-- ✅ NOVO -->
+                <li class="nav-item">
+                    <a href="?tab=postovi&post_filter=quiz_new"
+                    class="nav-link {% if post_filter == 'quiz_new' %}active{% endif %}">
+                        Kviz
+                    </a>
+                </li>
+
+                <!-- ✅ NOVO -->
+                <li class="nav-item">
+                    <a href="?tab=postovi&post_filter=poll_new"
+                    class="nav-link {% if post_filter == 'poll_new' %}active{% endif %}">
+                        Anketa
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="?tab=postovi&post_filter=published"
+                    class="nav-link {% if post_filter == 'published' %}active{% endif %}">
+                        Objavljeni ({{ published_count }})
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="?tab=postovi&post_filter=draft"
+                    class="nav-link {% if post_filter == 'draft' %}active{% endif %}">
+                        Skice ({{ draft_count }})
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="?tab=postovi&post_filter=deleted"
+                    class="nav-link {% if post_filter == 'deleted' %}active{% endif %}">
+                        Otpad ({{ deleted_count }})
+                    </a>
+                </li>
+
+            </ul>
+
+            <!-- EDIT POST -->
+            {% if post_filter == "edit" and edit_post %}
+                <div class="card p-4 shadow-sm">
+                    <form method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <input type="hidden" name="update_post_id" value="{{ edit_post.id }}">
+
+                        <div class="row">
+
+                            <!-- LIJEVA STRANA -->
+                            <div class="col-md-8">
+
+                                <div class="mb-3">
+                                    <label class="form-label d-block">Naslov</label>
+                                    <input type="text" name="title"
+                                        value="{{ edit_post.title }}"
+                                        class="form-control">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label d-block">Sadržaj</label>
+                                    <div>
+                                        {{ post_form.content }}
+                                    </div>
+                                </div>
+
+                                {% if edit_post.images.all %}
+                                <div class="mb-3">
+                                    <label class="form-label d-block">Postojeće slike</label>
+
+                                    <div class="row g-2">
+                                        {% for img in edit_post.images.all %}
+                                        <div class="col-6">
+                                            <div class="border rounded p-2">
+                                                <img src="{{ img.image.url }}" class="img-fluid rounded"
+                                                    style="max-height:180px; width:100%; object-fit:contain;">
+
+                                                <div class="form-check mt-2">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="delete_post_images" value="{{ img.id }}"
+                                                        id="delimg{{ img.id }}">
+                                                    <label class="form-check-label" for="delimg{{ img.id }}">
+                                                        Izbriši ovu sliku
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                                {% endif %}
+
+                                <div class="mb-3">
+                                    <label class="form-label d-block">Dodaj nove slike</label>
+                                    <input type="file" name="images" class="form-control" accept="image/*" multiple>
+                                </div>
+
+                            </div>
+
+                            <!-- DESNA STRANA -->
+                            <div class="col-md-4">
+
+                                <div class="card">
+                                    <div class="card-body category-card">
+                                        <strong>Kategorija</strong>
+
+                                        {% regroup categories by group as category_groups %}
+
+                                        {% for group in category_groups %}
+                                            <div class="mb-3">
+                                                <div class="category-group-title">
+                                                    {{ group.list.0.get_group_display }}
+                                                </div>
+
+                                                <div class="row">
+                                                    {% for category in group.list %}
+                                                        <div class="col-6">
+                                                            <div class="form-check category-option">
+                                                                <input class="form-check-input"
+                                                                    type="radio"
+                                                                    name="category"
+                                                                    value="{{ category.id }}"
+                                                                    id="edit_cat{{ category.id }}"
+                                                                    {% if edit_post.category and edit_post.category.id == category.id %}checked{% endif %}>
+
+                                                                <label class="form-check-label"
+                                                                    for="edit_cat{{ category.id }}">
+                                                                    {{ category.name }}
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    {% endfor %}
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="mt-3 d-flex gap-2">
+
+                            <button type="submit"
+                                    name="update_post"
+                                    class="btn btn-primary">
+                                Spremi promjene
+                            </button>
+
+                            {% if edit_post.status == "draft" %}
+                            <button type="submit"
+                                    name="publish_now"
+                                    value="1"
+                                    class="btn btn-success">
+                                Objavi
+                            </button>
+                            {% endif %}
+
+                            {% if edit_post.status == "deleted" %}
+                            <button type="submit"
+                                    name="restore_post"
+                                    class="btn btn-warning">
+                                Vrati u skice
+                            </button>
+                            {% endif %}
+
+                        </div>
+
+                    </form>
+                </div>
+
+            <!-- NOVI POST -->
+            {% elif post_filter == "new" %}
+
+            <div class="shadow-sm border rounded-start-3" style="border-right:0;">
+                <form method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+
+                    <div class="row g-0">
+
+                        <!-- LIJEVO: ograniči širinu da izgleda uredno -->
+                        <div class="col-md-8">
+                            <div class="ps-4 pe-4 py-3 w-100">
+
+                                <div class="mb-3">
+                                    <label class="form-label d-block">Naslov <span class="text-danger">*</span></label>
+                                    {{ post_form.title }}
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label d-block">Sadržaj<span class="text-danger">*</span></label>
+                                    <div>
+                                        {{ post_form.content }}
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label d-block">Slike</label>
+                                    <input type="file" name="images" class="form-control" accept="image/*" multiple>
+                                    <div class="small text-muted mt-1">Možeš odabrati više slika odjednom.</div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- DESNO: ide do kraja -->
+                        <div class="col-md-4 pe-0 ps-3 py-3">
+
+                            <div class="card">
+                                <div class="card-body category-card">
+                                    <label class="form-label d-block">Kategorije<span class="text-danger">*</span></label>
+
+                                    {% regroup categories by group as category_groups %}
+
+                                    {% for group in category_groups %}
+                                        <div class="mb-3">
+                                            <strong class="d-block mb-2">
+                                                <div class="category-group-title">
+                                                    {{ group.list.0.get_group_display }}
+                                                </div>
+                                            </strong>
+
+                                            <div class="row">
+                                                {% for category in group.list %}
+                                                    <div class="col-6">
+                                                        <div class="form-check category-option">
+                                                            <input class="form-check-input"
+                                                                type="radio"
+                                                                name="category"
+                                                                value="{{ category.id }}"
+                                                                id="cat{{ category.id }}"
+                                                                {% if request.POST.category == category.id|stringformat:"s" %}checked{% endif %}>
+
+                                                            <label class="form-check-label" for="cat{{ category.id }}">
+                                                                {{ category.name }}
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                {% endfor %}
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+
+                                </div>
+                            </div>
+
+                            <!-- ✅ Tagovi: neka budu unutar “desnog stupca”, ali s desnim paddingom da ne lijepi na rub -->
+                            <div class="mb-3 mt-3 pe-4">
+                                <label class="form-label">Tagovi</label>
+                                {{ post_form.tags_input }}
+                                <div class="small text-muted mt-1">
+                                    Odvoji zarezom. Bez razmaka. Dopušteno: slova, brojevi i _. Primjer: ljubav, film_serije, co2
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="p-4 pt-0">
+                        <button type="submit" name="publish_post" class="btn btn-primary">
+                            Objavi
+                        </button>
+
+                        <button type="submit" name="save_draft" class="btn btn-secondary">
+                            Spremi kao draft
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+
+            <!-- ✅ NOVO: KVIZ -->
+            {% elif post_filter == "quiz_new" %}
+
+                <div class="card p-4 shadow-sm">
+                    <form method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+
+                        <div class="row">
+
+                            <div class="col-md-8">
+
+                                <div class="mb-3">
+                                    <label class="form-label d-block">Pitanje <span class="text-danger">*</span></label>
+                                    <input type="text" name="question" class="form-control" placeholder="Upiši pitanje...">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label d-block">Odgovori <span class="text-danger">*</span></label>
+
+                                    <div id="quizOptions">
+                                        <div class="d-flex gap-2 mb-2 align-items-center">
+                                            <input type="radio" name="correct_option" value="0">
+                                            <input type="text" name="quiz_option" class="form-control" placeholder="Odgovor 1">
+                                        </div>
+
+                                        <div class="d-flex gap-2 mb-2 align-items-center">
+                                            <input type="radio" name="correct_option" value="1">
+                                            <input type="text" name="quiz_option" class="form-control" placeholder="Odgovor 2">
+                                        </div>
+                                    </div>
+
+                                    <button type="button" class="btn btn-sm btn-outline-primary" id="addQuizOption">
+                                        + Dodaj odgovor
+                                    </button>
+
+                                    <div class="small text-muted mt-2">
+                                        Označi radio gumb pokraj odgovora koji je točan.
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label d-block">Slika (opcionalno)</label>
+                                    <input type="file" name="image" class="form-control" accept="image/*">
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-4">
+
+                                <div class="card">
+                                    <div class="card-body category-card">
+                                        <label class="form-label d-block">Kategorije<span class="text-danger">*</span></label>
+
+                                        {% regroup categories by group as category_groups %}
+
+                                        {% for group in category_groups %}
+                                            <div class="mb-3">
+                                                <strong class="d-block mb-2">
+                                                    <div class="category-group-title">
+                                                        {{ group.list.0.get_group_display }}
+                                                    </div>
+                                                </strong>
+
+                                                <div class="row">
+                                                    {% for category in group.list %}
+                                                        <div class="col-6">
+                                                            <div class="form-check category-option">
+                                                                <input class="form-check-input"
+                                                                    type="radio"
+                                                                    name="category"
+                                                                    value="{{ category.id }}"
+                                                                    id="qcat{{ category.id }}">
+
+                                                                <label class="form-check-label"
+                                                                    for="qcat{{ category.id }}">
+                                                                    {{ category.name }}
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    {% endfor %}
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="mt-3">
+                            <button type="submit" name="create_quiz" class="btn btn-primary">
+                                Objavi kviz
+                            </button>
+
+                            <button type="submit" name="save_quiz_draft" class="btn btn-secondary">
+                                Spremi kao draft
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+
+            <!-- ✅ NOVO: ANKETA -->
+            {% elif post_filter == "poll_new" %}
+
+                <div class="card p-4 shadow-sm">
+                    <form method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+
+                        <div class="row">
+
+                            <div class="col-md-8">
+
+                                <div class="mb-3">
+                                    <label class="form-label d-block">Pitanje ankete <span class="text-danger">*</span></label>
+                                    <input type="text" name="question" class="form-control" placeholder="Upiši pitanje...">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label d-block">Opcije <span class="text-danger">*</span></label>
+
+                                    <div id="pollOptions">
+                                        <div class="d-flex gap-2 mb-2 align-items-center">
+                                            <input type="text" name="poll_option" class="form-control" placeholder="Opcija 1">
+                                        </div>
+
+                                        <div class="d-flex gap-2 mb-2 align-items-center">
+                                            <input type="text" name="poll_option" class="form-control" placeholder="Opcija 2">
+                                        </div>
+                                    </div>
+
+                                    <button type="button" class="btn btn-sm btn-outline-primary" id="addPollOption">
+                                        + Dodaj opciju
+                                    </button>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label d-block">Slika (opcionalno)</label>
+                                    <input type="file" name="image" class="form-control" accept="image/*">
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-4">
+
+                                <div class="card">
+                                    <div class="card-body category-card">
+                                        <label class="form-label d-block">Kategorije<span class="text-danger">*</span></label>
+
+                                        {% regroup categories by group as category_groups %}
+
+                                        {% for group in category_groups %}
+                                            <div class="mb-3">
+                                                <strong class="d-block mb-2">
+                                                    <div class="category-group-title">
+                                                        {{ group.list.0.get_group_display }}
+                                                    </div>
+                                                </strong>
+
+                                                <div class="row">
+                                                    {% for category in group.list %}
+                                                        <div class="col-6">
+                                                            <div class="form-check category-option">
+                                                                <input class="form-check-input"
+                                                                    type="radio"
+                                                                    name="category"
+                                                                    value="{{ category.id }}"
+                                                                    id="pcat{{ category.id }}">
+
+                                                                <label class="form-check-label"
+                                                                    for="pcat{{ category.id }}">
+                                                                    {{ category.name }}
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    {% endfor %}
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="mt-3">
+                            <button type="submit" name="create_poll" class="btn btn-primary">
+                                Objavi anketu
+                            </button>
+
+                            <button type="submit" name="save_poll_draft" class="btn btn-secondary">
+                                Spremi kao draft
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+
+            <!-- LISTA POSTOVA -->
+            {% else %}
+
+            <div class="card shadow-sm">
+
+                {# ✅ BULK BAR samo za OTpad #}
+                {% if post_filter == "deleted" %}
+                    <form method="POST" id="trashBulkForm">
+                        {% csrf_token %}
+
+                        <div class="d-flex align-items-center px-3 py-2 border-bottom bg-light rounded-top">
+
+                            <div class="form-check m-0">
+                                <input class="form-check-input" type="checkbox" id="selectAllTrash">
+                                <label class="form-check-label" for="selectAllTrash">
+                                    Označi sve
+                                </label>
+                            </div>
+
+                            <div class="d-flex gap-2 ms-auto">
+                                <button type="submit"
+                                        name="bulk_restore"
+                                        class="btn btn-sm btn-outline-primary px-3 text-nowrap"
+                                        onclick="return confirm('Jeste li sigurni da želite vratiti označene postove u skice?')">
+                                    Vrati označene u skice
+                                </button>
+
+                                <button type="submit"
+                                        name="bulk_permanent_delete"
+                                        class="btn btn-sm btn-outline-danger px-3 text-nowrap"
+                                        onclick="return confirm('Jeste li sigurni da želite trajno izbrisati označene postove? Ova radnja se ne može poništiti.')">
+                                    Trajno izbriši označene
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <div class="list-group list-group-flush">
+
+                            {% if user_posts %}
+                                {% for post in user_posts %}
+
+                                    <div class="list-group-item d-flex justify-content-between align-items-center">
+
+                                        <div class="d-flex align-items-center gap-3">
+
+                                            {# ✅ checkbox samo za otpad #}
+                                            <div class="form-check m-0">
+                                                <input class="form-check-input trash-checkbox"
+                                                    type="checkbox"
+                                                    name="selected_posts"
+                                                    value="{{ post.id }}">
+                                            </div>
+
+                                            <div>
+                                                <strong>{{ post.title }}</strong>
+                                                <small class="text-muted">
+                                                    {{ post.created_at|date:"d.m.Y" }}
+                                                </small>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="d-flex gap-2">
+
+                                        <!-- Vrati u skice (po stavci) -->
+                                        <form method="POST" class="d-inline">
+                                            {% csrf_token %}
+                                            <input type="hidden" name="restore_post_id" value="{{ post.id }}">
+                                            <button type="submit" class="btn btn-sm btn-outline-primary px-3 text-nowrap">
+                                                Vrati u skice
+                                            </button>
+                                        </form>
+
+                                        <!-- Trajno izbriši (po stavci) -->
+                                        <form method="POST" class="d-inline">
+                                            {% csrf_token %}
+                                            <input type="hidden" name="permanent_delete_id" value="{{ post.id }}">
+                                            <button type="submit"
+                                                    class="btn btn-sm btn-outline-danger px-3 text-nowrap"
+                                                    onclick="return confirm('Jeste li sigurni da želite trajno izbrisati ovaj post? Ova radnja se ne može poništiti.')">
+                                                Trajno izbriši
+                                            </button>
+                                        </form>
+
+                                        </div>
+
+                                    </div>
+
+                                {% endfor %}
+                            {% else %}
+                                <div class="list-group-item text-muted">
+                                    Nema postova u ovoj kategoriji.
+                                </div>
+                            {% endif %}
+
+                        </div>
+                    </form>
+
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function () {
+                            const selectAll = document.getElementById("selectAllTrash");
+                            const checkboxes = document.querySelectorAll(".trash-checkbox");
+
+                            if (selectAll) {
+                                selectAll.addEventListener("change", function () {
+                                    checkboxes.forEach(cb => cb.checked = selectAll.checked);
+                                });
+                            }
+
+                            checkboxes.forEach(cb => {
+                                cb.addEventListener("change", function () {
+                                    const allChecked = Array.from(checkboxes).every(x => x.checked);
+                                    const anyChecked = Array.from(checkboxes).some(x => x.checked);
+                                    if (selectAll) {
+                                        selectAll.checked = allChecked;
+                                        selectAll.indeterminate = !allChecked && anyChecked;
+                                    }
+                                });
+                            });
+                        });
+                    </script>
+
+                {% else %}
+
+                    {# ✅ tvoja postojeća lista za published/draft (NIŠTA ne mijenjamo) #}
+                    <div class="list-group list-group-flush">
+
+                        {% if user_posts %}
+                            {% for post in user_posts %}
+
+                                <div class="list-group-item d-flex justify-content-between align-items-center">
+
+                                    <div>
+                                        {% if post.status == "published" %}
+                                            <a href="{% url 'post_detail' post.id %}" class="text-decoration-none">
+                                                <strong>{{ post.title }}</strong>
+                                            </a>
+                                        {% elif post.status == "draft" %}
+                                            <a href="?tab=postovi&post_filter=edit&post_id={{ post.id }}"
+                                            class="text-decoration-none">
+                                                <strong>{{ post.title }}</strong>
+                                            </a>
+                                        {% else %}
+                                            <strong>{{ post.title }}</strong>
+                                        {% endif %}
+
+                                        <small class="text-muted">
+                                            {{ post.created_at|date:"d.m.Y" }}
+                                        </small>
+                                    </div>
+
+                                    <div class="d-flex gap-2">
+
+                                        {% if post.status != "deleted" %}
+                                            <a href="?tab=postovi&post_filter=edit&post_id={{ post.id }}"
+                                            class="btn btn-sm btn-outline-primary">
+                                                Uredi
+                                            </a>
+
+                                            <form method="POST" style="display:inline;">
+                                                {% csrf_token %}
+                                                <input type="hidden" name="delete_post_id" value="{{ post.id }}">
+                                                <button type="submit" class="btn btn-sm btn-outline-danger">
+                                                    Premjesti u otpad
+                                                </button>
+                                            </form>
+                                        {% endif %}
+
+                                    </div>
+
+                                </div>
+
+                            {% endfor %}
+                        {% else %}
+                            <div class="list-group-item text-muted">
+                                Nema postova u ovoj kategoriji.
+                            </div>
+                        {% endif %}
+
+                    </div>
+
+                {% endif %}
+
+            </div>
+
+            {% endif %}
+            {% endif %}
+
+            <!-- DODAVANJE BOXEVA -->
+            {% if request.GET.tab == "boxevi" %}
+
+                <!-- TABOVI GORE -->
+                <ul class="nav nav-tabs mb-4">
+                    {% for box in boxes %}
+                        <li class="nav-item">
+                            <a href="?tab=boxevi&box={{ box.id }}"
+                            class="nav-link {% if active_box and box.id == active_box.id %}active{% endif %}">
+                                {{ box.title }}
+                            </a>
+                        </li>
+                    {% endfor %}
+
+                    {% if boxes|length >= 5 %}
+                        <li class="nav-item">
+                            <span class="nav-link text-muted">
+                                Maksimalan broj boxeva (5/5)
+                            </span>
+                        </li>
+                    {% else %}
+                        <li class="nav-item">
+                            <a href="{% url 'add_box' %}" class="nav-link text-primary">
+                                + Dodaj box
+                            </a>
+                        </li>
+                    {% endif %}
+                </ul>
+
+                <!-- BOXEVI -->
+                {% if active_box %}
+
+                    <div class="card p-4 shadow-sm">
+
+                        {% if active_box_form %}
+                            {{ active_box_form.media }}
+                        {% endif %}
+
+                        <form method="POST" action="{% url 'edit_box' active_box.id %}">
+                            {% csrf_token %}
+
+                            <div class="mb-3">
+                                <label class="form-label d-block">Naslov</label>
+                                <input type="text"
+                                    name="title"
+                                    value="{{ active_box.title }}"
+                                    class="form-control">
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label d-block">Tekst</label>
+                                {% if active_box_form %}
+                                    {{ active_box_form.content }}
+                                {% else %}
+                                    <textarea name="content" class="form-control" rows="6">{{ active_box.content }}</textarea>
+                                {% endif %}
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label d-block">Pozicija</label>
+                                <select name="position" class="form-select">
+                                    <option value="left"
+                                        {% if active_box.position == "left" %}selected{% endif %}>
+                                        Lijevo
+                                    </option>
+                                    <option value="right"
+                                        {% if active_box.position == "right" %}selected{% endif %}>
+                                        Desno
+                                    </option>
+                                </select>
+                            </div>
+
+                            <div class="mt-3 d-flex gap-2">
+
+                                <button type="submit" class="btn btn-primary">
+                                    Spremi promjene
+                                </button>
+
+                                <a href="{% url 'delete_box' active_box.id %}"
+                                class="btn btn-outline-danger">
+                                    Izbriši box
+                                </a>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                {% else %}
+                    <p>Nema boxeva. Dodaj prvi box.</p>
+                {% endif %}
+
+            {% endif %}
+
+            <!-- DIZAJN -->
+            {% if request.GET.tab == "dizajn" %}
+
+                <h4 class="mb-4">Odaberi dizajn</h4>
+
+                <form method="POST">
+                    {% csrf_token %}
+
+                    <div class="row">
+
+                        <!-- DEFAULT -->
+                        <div class="col-md-4 mb-4">
+                            <label class="design-card">
+                                <input type="radio" name="design" value="default"
+                                    {% if profile.template == "default" %}checked{% endif %}>
+
+                                <div class="design-box {% if profile.template == 'default' %}active-design{% endif %}">
+                                    <div class="design-preview">
+                                        Ovdje će ići preview slike
+                                    </div>
+                                    <div class="design-title">
+                                        Default
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+
+                        <!-- dark -->
+                        <div class="col-md-4 mb-4">
+                            <label class="design-card">
+                                <input type="radio" name="design" value="dark"
+                                    {% if profile.template == "dark" %}checked{% endif %}>
+
+                                <div class="design-box {% if profile.template == 'dark' %}active-design{% endif %}">
+                                    <div class="design-preview">
+                                        Ovdje će ići preview slike
+                                    </div>
+                                    <div class="design-title">
+                                        Dark
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+
+                        <!-- classic -->
+                        <div class="col-md-4 mb-4">
+                            <label class="design-card">
+                                <input type="radio" name="design" value="classic"
+                                    {% if profile.template == "classic" %}checked{% endif %}>
+
+                                <div class="design-box {% if profile.template == 'classic' %}active-design{% endif %}">
+                                    <div class="design-preview">
+                                        Ovdje će ići preview slike
+                                    </div>
+                                    <div class="design-title">
+                                        Classic
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">
+                        Spremi promjene
+                    </button>
+
+                </form>
+
+            {% endif %}
+
+            <!-- POSTAVKE BLOGA -->
+            {% if request.GET.tab == "postavke" %}
+
+                <h4 class="mb-4">Postavke bloga</h4>
+
+                <form method="POST" enctype="multipart/form-data" id="avatarForm">
+                    {% csrf_token %}
+
+                    <!-- AVATAR -->
+                    <div class="card p-4 mb-4 shadow-sm">
+
+                        <h5 class="mb-3">Avatar</h5>
+
+                        <div class="d-flex flex-wrap align-items-start gap-4">
+
+                            <!-- trenutni avatar -->
+                            <div class="text-center">
+                                {% if user.profile.avatar %}
+                                    <img src="{{ user.profile.avatar.url }}"
+                                        width="100" height="100"
+                                        style="border-radius:50%; object-fit:cover;">
+                                {% else %}
+                                    <img src="{% static 'images/default-avatar.jpg' %}"
+                                        width="100" height="100"
+                                        style="border-radius:50%; object-fit:cover;">
+                                {% endif %}
+
+                                <div class="small text-muted mt-2">
+                                    Trenutni avatar
+                                </div>
+                            </div>
+
+                            <!-- upload + crop area -->
+                            <div class="flex-grow-1" style="min-width:280px;">
+                                <label class="form-label d-block">Promijeni avatar</label>
+                                <input type="file" id="avatarInput" accept="image/*" class="form-control">
+
+                                {% if user.profile.avatar %}
+                                    <button type="submit"
+                                            name="delete_avatar"
+                                            value="1"
+                                            class="btn btn-outline-danger btn-sm mt-2">
+                                        Izbriši avatar
+                                    </button>
+                                {% endif %}
+
+                                <!-- cropper slika -->
+                                <div class="mt-3 avatar-cropper-wrap">
+                                    <img id="imagePreview" style="max-width:100%; display:none;">
+                                </div>
+
+                                <input type="hidden" name="cropped_image" id="croppedImage">
+                            </div>
+
+                            <!-- LIVE preview -->
+                            <div class="avatar-live-preview text-center" style="min-width:160px;">
+                                <div class="avatar-preview-circle" id="avatarPreviewCircle">
+                                    <canvas id="avatarPreviewCanvas" width="160" height="160"></canvas>
+                                </div>
+
+                                <div class="small text-muted mt-2">
+                                    Preview (okruglo)
+                                </div>
+
+                                <div class="d-flex justify-content-center gap-2 mt-2">
+                                    <div class="avatar-preview-mini">
+                                        <canvas id="avatarPreviewMiniCanvas" width="26" height="26"></canvas>
+                                    </div>
+                                    <div class="small text-muted align-self-center">
+                                        Kako izgleda pored imena
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">
+                        Spremi promjene
+                    </button>
+
+                </form>
+
+                <!-- BLOKIRANI KORISNICI -->
+                <div class="card p-4 mt-4 shadow-sm">
+                    <div class="d-flex flex-wrap justify-content-between align-items-center gap-2">
+                        <div>
+                            <h5 class="mb-1">Blokirani korisnici</h5>
+                            <div class="text-muted small">
+                                Ovdje možeš vidjeti koga si blokirao i po želji odblokirati korisnika.
+                            </div>
+                        </div>
+
+                        <button class="btn btn-outline-secondary btn-sm"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#blockedUsersCollapse"
+                                aria-expanded="false"
+                                aria-controls="blockedUsersCollapse">
+                            Prikaži listu ({{ blocked_users|length }})
+                        </button>
+                    </div>
+
+                    <div class="collapse mt-3" id="blockedUsersCollapse">
+                        {% if blocked_users %}
+                            <div class="list-group">
+                                {% for block in blocked_users %}
+                                    <div class="list-group-item d-flex justify-content-between align-items-center flex-wrap gap-2">
+                                        <div class="d-flex align-items-center gap-3">
+
+                                            {% if block.blocked.profile.avatar %}
+                                                <img src="{{ block.blocked.profile.avatar.url }}"
+                                                    width="42" height="42"
+                                                    style="border-radius:50%; object-fit:cover;">
+                                            {% else %}
+                                                <img src="{% static 'images/default-avatar.jpg' %}"
+                                                    width="42" height="42"
+                                                    style="border-radius:50%; object-fit:cover;">
+                                            {% endif %}
+
+                                            <div>
+                                                <div class="fw-semibold">
+                                                    {{ block.blocked.profile.blog_name|default:block.blocked.username }}
+                                                </div>
+                                                <div class="small text-muted">
+                                                    @{{ block.blocked.username }}
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <form method="POST" class="m-0">
+                                            {% csrf_token %}
+                                            <input type="hidden" name="unblock_user_id" value="{{ block.blocked.id }}">
+                                            <button type="submit"
+                                                    class="btn btn-outline-danger btn-sm"
+                                                    onclick="return confirm('Jesi li siguran da želiš odblokirati ovog korisnika?')">
+                                                Odblokiraj
+                                            </button>
+                                        </form>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            <div class="text-muted small mt-2">
+                                Trenutno nemaš blokiranih korisnika.
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+
+            {% endif %}
+
+        </div>
+    </div>
+</div>
+
+<style>
+.design-card input {
+    display: none;
+}
+
+.design-box {
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+    overflow: hidden;
+}
+
+.design-box:hover {
+    border-color: #0d6efd;
+}
+
+.active-design {
+    border-color: #0d6efd;
+}
+
+.design-preview {
+    height: 140px;
+    background: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+    font-size: 14px;
+}
+
+.design-title {
+    padding: 10px;
+    text-align: center;
+    font-weight: 500;
+    background: white;
+}
+
+/* KATEGORIJE */
+.category-group-title {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    margin-top: 18px;
+    letter-spacing: 1px;
+
+    background: linear-gradient(90deg, #7a2cff, #ffd200);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    padding-bottom: 4px;
+    border-bottom: 2px solid rgba(122,44,255,0.2);
+}
+
+.form-check {
+    margin-left: 6px;
+}
+
+.category-option:hover {
+    background: #f5f7fa;
+}
+
+.category-option input {
+    margin-right: 6px;
+}
+
+.category-card {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+/* Stabilizacija CKEditor toolbara */
+.cke_top,
+.cke_toolbar,
+.cke_button {
+    transition: none !important;
+}
+
+.cke_button:hover {
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+.cke {
+    border-radius: 6px !important;
+}
+
+/* ✅ da label uvijek bude iznad CKEditor-a */
+.mb-3 > label {
+    display: block;
+    margin-bottom: 6px;
+}
+</style>
+<style>
+/* wrapper da cropper ne bude “razvučen” */
+.avatar-cropper-wrap {
+    max-width: 520px;
+}
+
+/* okrugli crop okvir (vizualno) */
+.cropper-view-box,
+.cropper-face {
+    border-radius: 50% !important;
+}
+
+/* malo ljepši border oko kruga */
+.cropper-view-box {
+    outline: 2px solid rgba(255,255,255,0.9);
+    outline-offset: -2px;
+}
+
+/* live preview krug */
+.avatar-preview-circle {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid rgba(0,0,0,0.15);
+    background: #f3f4f6;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* mini preview (kao navbar avatar 26x26) */
+.avatar-preview-mini {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.15);
+    background: #f3f4f6;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* da canvas bude točno u centru */
+#avatarPreviewCanvas,
+#avatarPreviewMiniCanvas {
+    display: block;
+}
+
+/* ✅ CKEditor wrapper 100% unutar kolone */
+.cke {
+    width: 100% !important;
+}
+.cke_contents {
+    width: 100% !important;
+}
+
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const radios = document.querySelectorAll('input[name="design"]');
+
+    radios.forEach(radio => {
+        radio.addEventListener("change", function () {
+
+            document.querySelectorAll(".design-box").forEach(box => {
+                box.classList.remove("active-design");
+            });
+
+            this.closest(".design-card")
+                .querySelector(".design-box")
+                .classList.add("active-design");
+        });
+    });
+
+    // ✅ NOVO: KVIZ - dodavanje opcija
+    const addQuizBtn = document.getElementById("addQuizOption");
+    const quizOptions = document.getElementById("quizOptions");
+
+    if (addQuizBtn && quizOptions) {
+        addQuizBtn.addEventListener("click", function () {
+            const index = quizOptions.querySelectorAll("input[type='text']").length;
+
+            const row = document.createElement("div");
+            row.className = "d-flex gap-2 mb-2 align-items-center";
+            row.innerHTML = `
+                <input type="radio" name="correct_option" value="${index}">
+                <input type="text" name="quiz_option" class="form-control" placeholder="Odgovor ${index + 1}">
+            `;
+            quizOptions.appendChild(row);
+        });
+    }
+
+    // ✅ NOVO: ANKETA - dodavanje opcija
+    const addPollBtn = document.getElementById("addPollOption");
+    const pollOptions = document.getElementById("pollOptions");
+
+    if (addPollBtn && pollOptions) {
+        addPollBtn.addEventListener("click", function () {
+            const index = pollOptions.querySelectorAll("input[type='text']").length;
+
+            const row = document.createElement("div");
+            row.className = "d-flex gap-2 mb-2 align-items-center";
+            row.innerHTML = `
+                <input type="text" name="poll_option" class="form-control" placeholder="Opcija ${index + 1}">
+            `;
+            pollOptions.appendChild(row);
+        });
+    }
+});
+</script>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    let cropper;
+    const input = document.getElementById('avatarInput');
+    const image = document.getElementById('imagePreview');
+    const hiddenInput = document.getElementById('croppedImage');
+    const form = document.getElementById("avatarForm");
+
+    const previewCanvas = document.getElementById("avatarPreviewCanvas");
+    const previewMiniCanvas = document.getElementById("avatarPreviewMiniCanvas");
+
+    function drawCirclePreview(fromCanvas, targetCanvas) {
+        if (!targetCanvas) return;
+
+        const ctx = targetCanvas.getContext("2d");
+        const w = targetCanvas.width;
+        const h = targetCanvas.height;
+
+        ctx.clearRect(0, 0, w, h);
+
+        // krug maska
+        ctx.save();
+        ctx.beginPath();
+        ctx.arc(w/2, h/2, Math.min(w,h)/2, 0, Math.PI * 2);
+        ctx.closePath();
+        ctx.clip();
+
+        // iscrtaj sadržaj (cover)
+        ctx.drawImage(fromCanvas, 0, 0, w, h);
+
+        ctx.restore();
+    }
+
+    function updateLivePreviews() {
+        if (!cropper) return;
+
+        // uzmi mali canvas iz croppera (brzo i “live”)
+        const live = cropper.getCroppedCanvas({ width: 256, height: 256 });
+
+        // veliki preview (160)
+        const big = document.createElement("canvas");
+        big.width = 160;
+        big.height = 160;
+        big.getContext("2d").drawImage(live, 0, 0, 160, 160);
+        drawCirclePreview(big, previewCanvas);
+
+        // mini preview (26)
+        const mini = document.createElement("canvas");
+        mini.width = 26;
+        mini.height = 26;
+        mini.getContext("2d").drawImage(live, 0, 0, 26, 26);
+        drawCirclePreview(mini, previewMiniCanvas);
+    }
+
+    if (!input || !form) return;
+
+    input.addEventListener('change', function(e) {
+        const file = e.target.files && e.target.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+
+        reader.onload = function(event) {
+            image.src = event.target.result;
+            image.style.display = 'block';
+
+            if (cropper) cropper.destroy();
+
+            cropper = new Cropper(image, {
+                aspectRatio: 1,
+                viewMode: 1,
+                dragMode: "move",
+                autoCropArea: 1,
+                background: false,
+                guides: false,
+                center: false,
+                highlight: false,
+                toggleDragModeOnDblclick: false,
+
+                ready() {
+                    updateLivePreviews();
+                },
+                crop() {
+                    updateLivePreviews();
+                }
+            });
+        };
+
+        reader.readAsDataURL(file);
+    });
+
+    form.addEventListener("submit", function() {
+        if (cropper) {
+            // ovo je stvarna slika koja se sprema
+            const canvas = cropper.getCroppedCanvas({
+                width: 400,
+                height: 400
+            });
+            hiddenInput.value = canvas.toDataURL("image/jpeg", 0.92);
+        }
+    });
+
+});
+</script>
+
+{% endblock %}

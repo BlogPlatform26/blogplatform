@@ -1,0 +1,14 @@
+{% if user.is_authenticated %}
+    <form method="POST" action="{% url 'like_post' post.id %}" class="d-inline">
+        {% csrf_token %}
+        <button type="submit"
+                class="btn btn-sm {% if post.user_liked %}btn-primary{% else %}btn-outline-primary{% endif %}">
+            {% if post.user_liked %}
+                👍 Ne sviđa mi se
+            {% else %}
+                👍 Sviđa mi se
+            {% endif %}
+            ({{ post.likes.count }})
+        </button>
+    </form>
+{% endif %}

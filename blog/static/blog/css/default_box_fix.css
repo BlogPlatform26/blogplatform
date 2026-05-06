@@ -1,0 +1,45 @@
+/* 
+   FIX: default dizajn ne smije pokupiti crne boxeve iz dark dizajna.
+   Ovo vraća boxeve na default dizajnu na normalnu svijetlu pozadinu.
+   Dark dizajn nije diran.
+*/
+
+.blog-default-page .sidebar-box{
+    background: #ffffff !important;
+    border: 1px solid rgba(0,0,0,0.08) !important;
+    border-radius: 14px !important;
+    color: inherit !important;
+}
+
+.blog-default-page .sidebar-box .card-body{
+    background: transparent !important;
+    color: inherit !important;
+}
+
+.blog-default-page .sidebar-title{
+    color: rgba(0,0,0,0.78) !important;
+}
+
+.blog-default-page .sidebar-box,
+.blog-default-page .sidebar-box p,
+.blog-default-page .sidebar-box div,
+.blog-default-page .sidebar-box span{
+    color: inherit;
+}
+
+/* Dark dizajn ostaje taman */
+.blog-dark-page .sidebar-box{
+    background:#111 !important;
+    border:1px solid #222 !important;
+    border-radius:12px;
+    color:#fff;
+}
+
+.blog-dark-page .sidebar-box-title{
+    color:#fff;
+    border-bottom:1px solid #333;
+}
+
+.blog-dark-page .sidebar-box-content{
+    color:#ccc;
+}

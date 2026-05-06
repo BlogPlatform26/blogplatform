@@ -1,0 +1,115 @@
+{% extends "blog/base.html" %}
+{% block left_sidebar %}{% endblock %}
+{% block right_sidebar %}{% endblock %}
+{% block title %}Registracija{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h3 class="mb-4 text-center">Registracija</h3>
+
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="alert {% if message.tags == 'error' %}alert-danger{% else %}alert-success{% endif %}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+
+                {% if form.non_field_errors %}
+                    {% for error in form.non_field_errors %}
+                        <div class="alert alert-danger">{{ error }}</div>
+                    {% endfor %}
+                {% endif %}
+
+                <form method="POST">
+                    {% csrf_token %}
+
+                    <div class="mb-4">
+                        <label class="form-label fw-semibold" for="{{ form.username.id_for_label }}">Korisničko ime</label>
+                        {{ form.username }}
+                        {% for error in form.username.errors %}
+                            <div class="text-danger small mt-1">{{ error }}</div>
+                        {% endfor %}
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label fw-semibold" for="{{ form.email.id_for_label }}">Email adresa</label>
+                        {{ form.email }}
+                        {% for error in form.email.errors %}
+                            <div class="text-danger small mt-1">{{ error }}</div>
+                        {% endfor %}
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label fw-semibold" for="{{ form.blog_name.id_for_label }}">Naziv bloga</label>
+                        {{ form.blog_name }}
+                        {% for error in form.blog_name.errors %}
+                            <div class="text-danger small mt-1">{{ error }}</div>
+                        {% endfor %}
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label fw-semibold" for="{{ form.password1.id_for_label }}">Lozinka</label>
+                        <div class="input-group password-toggle-group">
+                            {{ form.password1 }}
+                            <button type="button"
+                                    class="btn btn-outline-secondary password-toggle-btn"
+                                    aria-label="Prikaži lozinku"
+                                    title="Prikaži lozinku">
+                                <i class="bi bi-eye"></i>
+                            </button>
+                        </div>
+                        {% if form.password1.help_text %}
+                            <div class="form-text">{{ form.password1.help_text }}</div>
+                        {% endif %}
+                        {% for error in form.password1.errors %}
+                            <div class="text-danger small mt-1">{{ error }}</div>
+                        {% endfor %}
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label fw-semibold" for="{{ form.password2.id_for_label }}">Potvrdi lozinku</label>
+                        <div class="input-group password-toggle-group">
+                            {{ form.password2 }}
+                            <button type="button"
+                                    class="btn btn-outline-secondary password-toggle-btn"
+                                    aria-label="Prikaži lozinku"
+                                    title="Prikaži lozinku">
+                                <i class="bi bi-eye"></i>
+                            </button>
+                        </div>
+                        {% if form.password2.help_text %}
+                            <div class="form-text">{{ form.password2.help_text }}</div>
+                        {% endif %}
+                        {% for error in form.password2.errors %}
+                            <div class="text-danger small mt-1">{{ error }}</div>
+                        {% endfor %}
+                    </div>
+
+                    {% if turnstile_enabled %}
+                        <div class="mb-4">
+                            <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+                            <div class="cf-turnstile" data-sitekey="{{ turnstile_site_key }}"></div>
+                            <div class="form-text">Sigurnosna provjera protiv automatskih registracija.</div>
+                        </div>
+                    {% endif %}
+
+                    <button type="submit" class="btn btn-primary w-100">
+                        Registriraj se
+                    </button>
+                </form>
+
+                <hr>
+
+                <p class="text-center mb-0">
+                    Imaš račun?
+                    <a href="{% url 'login' %}">Prijavi se</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

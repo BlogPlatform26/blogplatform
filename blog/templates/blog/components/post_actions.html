@@ -1,0 +1,39 @@
+{% load custom_tags %}
+<div class="mt-5 small d-flex align-items-center justify-content-end">
+    <span class="post-author-line">
+        Autor by <span class="post-author-link">{{ post.author|user_link }}</span> {{ post.publication_datetime|date:"d.m.Y H:i" }}
+    </span>
+</div>
+
+<div class="mt-2 small d-flex flex-wrap align-items-center gap-3 justify-content-end post-actions">
+    <span class="post-views"><i class="bi bi-eye"></i> {{ post.views }}</span>
+
+    {% if not is_restricted %}
+    <form method="POST" action="{% url 'like_post' post.id %}" class="d-inline m-0">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-link p-0 text-decoration-none align-baseline {% if post.user_liked %}fw-bold{% endif %}">
+            <i class="bi bi-hand-thumbs-up"></i> Sviđa mi se ({{ post.likes.count }})
+        </button>
+    </form>
+    {% else %}
+    <span class="text-muted">
+        <i class="bi bi-hand-thumbs-up"></i> Sviđa mi se ({{ post.likes.count }})
+    </span>
+    {% endif %}
+
+    {% if is_detail %}
+        <a href="#comments-detail" class="text-decoration-none js-scroll-to-comments">
+            <i class="bi bi-chat-dots"></i> Komentari ({{ post.comments.count }})
+        </a>
+    {% else %}
+        <a href="{% url 'post_detail' post.id %}#comments-detail" class="text-decoration-none">
+            <i class="bi bi-chat-dots"></i> Komentari ({{ post.comments.count }})
+        </a>
+    {% endif %}
+
+    {% if not is_detail %}
+        <a href="{% url 'post_detail' post.id %}" class="text-decoration-none">
+            <i class="bi bi-link-45deg"></i> Otvori post
+        </a>
+    {% endif %}
+</div>

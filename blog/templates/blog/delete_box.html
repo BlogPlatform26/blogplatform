@@ -1,0 +1,26 @@
+{% extends "blog/base.html" %}
+{% block left_sidebar %}{% endblock %}
+{% block right_sidebar %}{% endblock %}
+
+{% block content %}
+
+<div class="card shadow-sm p-4">
+    <h3>Obriši box</h3>
+
+    <p>Jesi li siguran da želiš obrisati box: 
+       <strong>{{ box.title }}</strong>?</p>
+
+    <form method="POST">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">
+            Obriši
+        </button>
+
+        <a href="{% url 'blog_settings' %}" 
+           class="btn btn-secondary">
+           Odustani
+        </a>
+    </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,744 @@
+{% extends "blog/base.html" %}
+{% load static custom_tags %}
+
+{% block header %}{% endblock %}
+
+{% block blog_header %}
+<style>
+body {
+    background-color: #2b1715;
+    background-image:
+        linear-gradient(180deg, rgba(34, 12, 10, 0.30) 0%, rgba(45, 18, 14, 0.56) 50%, rgba(33, 14, 12, 0.82) 100%),
+        url('{% static "blog/images/design-backgrounds/vecer_uz_jezero.jpg" %}');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #f8e6dc;
+}
+
+.container-fluid.mt-3 {
+    margin-top: 0 !important;
+    padding-top: 24px;
+    position: relative;
+    z-index: 1;
+}
+
+.container-fluid.mt-3 > .row.align-items-start {
+    display: none;
+}
+
+nav.navbar {
+    position: relative;
+    z-index: 4000 !important;
+    background: rgba(30, 13, 12, 0.82) !important;
+    border-bottom: 1px solid rgba(255, 228, 204, 0.10);
+}
+
+nav.navbar .dropdown-menu {
+    z-index: 4100 !important;
+}
+
+.vj-theme {
+    max-width: 1020px;
+    margin: 34px auto 32px;
+    padding: 0 16px;
+}
+
+.vj-title {
+    margin: 0 0 8px 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.95rem, 3.2vw, 2.95rem);
+    line-height: 1.05;
+    color: #fff1e8;
+    text-shadow: 0 6px 24px rgba(0, 0, 0, 0.34);
+}
+
+.vj-banner {
+    margin-top: 18px;
+    background: rgba(255, 245, 238, 0.10);
+    border: 1px solid rgba(255, 224, 199, 0.16);
+    padding: 8px;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.18);
+}
+
+.vj-banner img {
+    width: 100%;
+    max-height: 230px;
+    object-fit: cover;
+    display: block;
+}
+
+.vj-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 270px;
+    gap: 22px;
+    align-items: start;
+    margin-top: 86px;
+}
+
+.vj-post,
+.vj-side-card,
+.vj-profile-wrap .blog-profile-panel {
+    background: rgba(56, 26, 23, 0.56);
+    border: 1px solid rgba(255, 228, 204, 0.18);
+    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.16);
+    backdrop-filter: blur(6px);
+}
+
+.vj-post {
+    padding: 22px 26px 20px;
+    margin-bottom: 20px;
+}
+
+.vj-post-divider {
+    margin: 10px 0 18px;
+    border-top: 1px solid rgba(255, 220, 196, 0.18);
+}
+
+.vj-post-date {
+    font-size: 0.92rem;
+    color: #f2c4a4;
+    letter-spacing: 0.02em;
+    margin-bottom: 4px;
+}
+
+.vj-post h4,
+.vj-post h4 a,
+.vj-post .blog-post-title {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #fff3ea !important;
+    font-size: clamp(1.55rem, 2.3vw, 2.05rem);
+    line-height: 1.18;
+    text-decoration: none;
+}
+
+.vj-post h4 a:hover {
+    color: #ffd7bc !important;
+}
+
+.post-meta {
+    margin-top: 8px;
+    font-size: 12px;
+    color: #f0cdc0;
+}
+
+.post-meta-category {
+    font-weight: 700;
+    color: #ffd6bd;
+}
+
+.post-meta-tag {
+    color: #f4d7ca;
+}
+
+.post-meta-sep {
+    margin: 0 5px;
+    color: rgba(244, 215, 202, 0.32);
+}
+
+.vj-post .mt-4,
+.vj-post p,
+.vj-post li,
+.vj-post blockquote,
+.vj-post div,
+.vj-post span,
+.vj-post strong,
+.vj-post em {
+    color: #f8e6dc;
+}
+
+.vj-post .mt-4 img,
+.vj-post img.img-fluid,
+.vj-post .ratio iframe {
+    border: 1px solid rgba(255, 228, 204, 0.16);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.18);
+    background: rgba(255,255,255,0.04);
+    padding: 4px;
+}
+
+.vj-post .mt-5.small {
+    margin-top: 24px !important;
+}
+
+.post-author-line,
+.post-author-link,
+.vj-post .small.text-muted,
+.vj-post .text-muted {
+    color: #f0cdc0 !important;
+}
+
+.post-views {
+    color: #ffd6bd;
+}
+
+.post-actions a {
+    color: #ffd6bd;
+}
+
+.post-actions a:hover {
+    color: #fff1e4;
+}
+
+.vj-side-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.vj-side-card {
+    padding: 14px 16px 16px;
+}
+
+.vj-side-title {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.34rem;
+    color: #ffe9da;
+    margin-bottom: 10px;
+}
+
+.vj-profile-wrap .blog-profile-panel {
+    max-width: none;
+    width: 100%;
+    padding: 14px 16px 16px;
+    margin: 0;
+    color: #f8e6dc;
+}
+
+.vj-profile-wrap .blog-profile-panel__name,
+.vj-profile-wrap .blog-profile-panel__blog-name,
+.vj-profile-wrap .blog-profile-panel__stats,
+.vj-profile-wrap .blog-profile-panel__dropdown-toggle {
+    color: inherit;
+    text-shadow: none;
+}
+
+.vj-profile-wrap .blog-profile-panel__avatar {
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.24);
+}
+
+.vj-profile-wrap .btn-primary {
+    background: #f3c3a0;
+    border-color: #f3c3a0;
+    color: #341c18;
+}
+
+.vj-profile-wrap .btn-primary:hover {
+    background: #ffd1af;
+    border-color: #ffd1af;
+    color: #291411;
+}
+
+.vj-profile-wrap .btn-outline-primary {
+    color: #ffd6bd;
+    border-color: #ffd6bd;
+}
+
+.vj-profile-wrap .btn-outline-primary:hover {
+    background: #ffd6bd;
+    color: #341c18;
+}
+
+.vj-calendar-title,
+.vj-box-title,
+.vj-archive-title {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.18rem;
+    color: #ffe9da;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(255, 228, 204, 0.18);
+}
+
+.vj-calendar-month {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #f2c4a4;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.vj-calendar-weekdays,
+.vj-calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 6px;
+    text-align: center;
+}
+
+.vj-calendar-weekdays {
+    font-size: 11px;
+    color: #f2cfc2;
+    margin-bottom: 8px;
+}
+
+.vj-calendar-day,
+.vj-calendar-empty {
+    min-height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 12px;
+}
+
+.vj-calendar-day {
+    text-decoration: none;
+    background: rgba(255,255,255,0.06);
+    color: #ffe9da;
+    border: 1px solid rgba(255,228,204,0.12);
+}
+
+.vj-calendar-day:hover {
+    color: #fff7f1;
+    border-color: rgba(255,228,204,0.24);
+    background: rgba(255,255,255,0.10);
+}
+
+.vj-calendar-day--has-post {
+    font-weight: 700;
+    color: #ffd6bd;
+}
+
+.vj-calendar-day--today {
+    background: rgba(243, 195, 160, 0.18);
+    color: #fff3ea;
+    border-color: rgba(243, 195, 160, 0.50);
+    box-shadow: 0 0 0 2px rgba(255,255,255,0.08), 0 0 0 4px rgba(243, 195, 160, 0.08);
+}
+
+.vj-archive-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.vj-archive-link {
+    display: block;
+    padding: 8px 10px;
+    text-decoration: none;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,228,204,0.12);
+    color: #f7dfd3;
+    font-size: 13px;
+}
+
+.vj-archive-link:hover {
+    color: #fff5ee;
+    border-color: rgba(255,228,204,0.24);
+    background: rgba(255,255,255,0.10);
+}
+
+.vj-box-title {
+    font-size: 1.08rem;
+    margin-bottom: 8px;
+}
+
+.vj-box-content,
+.vj-side-card,
+.vj-post,
+.vj-post p,
+.vj-post li,
+.vj-empty-copy {
+    color: #f8e6dc;
+}
+
+.vj-box-content a,
+.vj-side-card a {
+    color: #ffd6bd;
+}
+
+.vj-side-card .live-analytics-widget {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+
+.vj-filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 16px 0;
+    padding: 10px 12px;
+    background: rgba(56, 26, 23, 0.46);
+    border: 1px solid rgba(255,228,204,0.14);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.10);
+    color: #f8e6dc;
+    font-size: 13px;
+    backdrop-filter: blur(6px);
+}
+
+.vj-filter-chip {
+    padding: 5px 10px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,228,204,0.14);
+    color: #ffd6bd;
+    font-weight: 700;
+}
+
+.vj-filter-clear {
+    margin-left: auto;
+    text-decoration: none;
+    color: #ffe1ce;
+    font-weight: 600;
+}
+
+.vj-filter-clear:hover {
+    color: #fff7f1;
+}
+
+.blog-action-outline,
+.btn-outline-light {
+    border-color: #ffd6bd !important;
+    color: #ffd6bd !important;
+    background: transparent !important;
+}
+
+.blog-action-outline:hover,
+.btn-outline-light:hover {
+    background: rgba(255, 214, 189, 0.16) !important;
+    color: #fff7f1 !important;
+    box-shadow: 0 0 10px rgba(255,214,189,0.12);
+}
+
+.comment-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 100%;
+}
+
+.comment-row textarea,
+.comment-row .form-control {
+    flex: 1;
+    background: rgba(255,255,255,0.08) !important;
+    color: #f8e6dc !important;
+    border: 1px solid rgba(255,228,204,0.16) !important;
+    border-radius: 10px;
+    resize: none;
+    min-height: 48px;
+}
+
+.comment-row textarea:focus,
+.comment-row .form-control:focus {
+    border-color: rgba(255,214,189,0.34) !important;
+    box-shadow: 0 0 0 0.2rem rgba(255,214,189,0.08) !important;
+}
+
+.comment-row textarea::placeholder,
+.comment-row .form-control::placeholder {
+    color: #f1cbbb !important;
+}
+
+.comment-item {
+    align-items: flex-start;
+}
+
+.comment-avatar {
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 2px;
+}
+
+.comment-body {
+    position: relative;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,228,204,0.14);
+    border-radius: 12px;
+    padding: 10px 44px 10px 12px;
+    backdrop-filter: blur(5px);
+}
+
+.comment-header {
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+    margin-bottom: 2px;
+}
+
+.comment-author a {
+    color: #ffd6bd;
+    text-decoration: none;
+}
+
+.comment-time {
+    font-size: 12px;
+    color: #efc3b0;
+}
+
+.comment-text {
+    color: #f8e6dc;
+    line-height: 1.35;
+}
+
+.comment-actions {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 120ms ease-in-out;
+}
+
+.comment-item:hover .comment-actions {
+    opacity: 0.9;
+}
+
+.comment-action-btn {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,228,204,0.16);
+    border-radius: 8px;
+    cursor: pointer;
+    color: rgba(248,230,220,0.84);
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+}
+
+.comment-action-btn i {
+    font-size: 14px;
+    line-height: 1;
+    display: block;
+}
+
+.comment-action-btn:hover {
+    color: #fff7f1;
+    border-color: rgba(255,228,204,0.24);
+    background: rgba(255,255,255,0.10);
+}
+
+.comment-action-danger:hover {
+    color: #ffc6bd;
+    border-color: rgba(255,198,189,0.28);
+    background: rgba(255,255,255,0.10);
+}
+
+@media (max-width: 991.98px) {
+    .vj-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .vj-theme {
+        max-width: 740px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .container-fluid.mt-3 {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+
+    .vj-theme {
+        padding: 0 4px;
+        margin-top: 8px;
+    }
+
+    .vj-layout {
+        margin-top: 64px;
+    }
+
+    .vj-title {
+        font-size: 2rem;
+    }
+
+    .vj-post {
+        padding: 18px 16px 16px;
+    }
+
+    .comment-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .comment-row .btn {
+        width: 100%;
+    }
+}
+</style>
+
+<div class="vj-theme">
+    <h1 class="vj-title">{{ blog.profile.blog_name|default:blog.username }}</h1>
+
+    {% if blog.profile.blog_tagline %}<p class="blog-tagline-shared">{{ blog.profile.blog_tagline }}</p>{% endif %}
+
+    {% if blog.profile.blog_banner %}
+    <div class="vj-banner">
+        <img src="{{ blog.profile.blog_banner.url }}" alt="Banner bloga">
+    </div>
+    {% endif %}
+
+    <div class="vj-layout">
+        <main>
+            {% if active_category or active_tag %}
+            <div class="vj-filter-bar">
+                <span>Filtrirano:</span>
+                {% if active_category_name %}
+                    <span class="vj-filter-chip">{{ active_category_name }}</span>
+                {% elif active_category %}
+                    <span class="vj-filter-chip">{{ active_category }}</span>
+                {% endif %}
+                {% if active_tag %}
+                    <span class="vj-filter-chip">#{{ active_tag }}</span>
+                {% endif %}
+                <a class="vj-filter-clear" href="{{ archive_base_url }}">Makni filter</a>
+            </div>
+            {% endif %}
+
+            {% for post in page_obj %}
+                <article class="vj-post">
+                    <div class="vj-post-date">{{ post.publication_datetime|date:"d.m.Y" }}</div>
+                    <div class="vj-post-divider"></div>
+                    <div class="d-flex flex-column" style="gap: 10px; min-width: 0;">
+                        <h4 class="mb-0">{{ post.title }}</h4>
+                        {% include "blog/components/post_meta.html" %}
+                    </div>
+
+                    <div class="mt-4">
+                        {% include "blog/components/post_body.html" %}
+                    </div>
+
+                    {% include "blog/components/post_actions.html" %}
+                    {% include "blog/components/post_comments.html" %}
+                </article>
+            {% empty %}
+                <div class="vj-post">
+                    <p class="mb-0">Nema postova.</p>
+                </div>
+            {% endfor %}
+
+            {% if page_obj.has_other_pages %}
+            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mt-3">
+                {% if page_obj.has_previous %}
+                    <a href="?page={{ page_obj.previous_page_number }}{{ pagination_query }}" class="btn btn-sm btn-outline-secondary">Prethodna</a>
+                {% else %}
+                    <span></span>
+                {% endif %}
+
+                <span class="small text-muted">Stranica {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}</span>
+
+                {% if page_obj.has_next %}
+                    <a href="?page={{ page_obj.next_page_number }}{{ pagination_query }}" class="btn btn-sm btn-outline-secondary">Sljedeća</a>
+                {% endif %}
+            </div>
+            {% endif %}
+        </main>
+
+        <aside class="vj-side-stack">
+            <div class="vj-profile-wrap vj-side-card">
+                <div class="vj-side-title">O autoru</div>
+                {% include "blog/components/blog_profile_actions_sidebar.html" %}
+            </div>
+
+            {% if blog_preferences.blog_archive_mode == "both" or blog_preferences.blog_archive_mode == "calendar" %}
+            <div class="vj-side-card">
+                <div class="vj-calendar-title">Kalendar</div>
+                <div class="vj-calendar-month calendar-month-nav"><a href="{{ prev_month_url }}" class="calendar-month-nav-link" aria-label="Prethodni mjesec">&#8249;</a><span>{{ current_month_hr|upper }}, {{ current_year }}</span><a href="{{ next_month_url }}" class="calendar-month-nav-link" aria-label="Sljedeći mjesec">&#8250;</a></div>
+                <div class="vj-calendar-weekdays">
+                    <div>P</div><div>U</div><div>S</div><div>Č</div><div>P</div><div>S</div><div>N</div>
+                </div>
+                <div class="vj-calendar-grid">
+                    {% for week in month_calendar %}
+                        {% for day in week %}
+                            {% if day == 0 %}
+                                <div class="vj-calendar-empty"></div>
+                            {% else %}
+                                {% with pid=day_single_post_map|get_item:day %}
+                                    {% if day in days_with_posts %}
+                                        {% if pid %}
+                                            <a href="{% url 'post_detail' pid %}" class="vj-calendar-day vj-calendar-day--has-post {% if day == current_day %}vj-calendar-day--today{% endif %}">{{ day }}</a>
+                                        {% else %}
+                                            <a href="{{ archive_base_url }}?year={{ current_year }}&month={{ current_month_num }}&day={{ day }}" class="vj-calendar-day vj-calendar-day--has-post {% if day == current_day %}vj-calendar-day--today{% endif %}">{{ day }}</a>
+                                        {% endif %}
+                                    {% else %}
+                                        <div class="vj-calendar-day {% if day == current_day %}vj-calendar-day--today{% endif %}">{{ day }}</div>
+                                    {% endif %}
+                                {% endwith %}
+                            {% endif %}
+                        {% endfor %}
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+
+            {% if blog_preferences.blog_archive_mode == "both" or blog_preferences.blog_archive_mode == "list" %}
+            <div class="vj-side-card">
+                <div class="vj-archive-title">Arhiva bloga</div>
+                <div class="vj-archive-list">
+                    {% for a in archives %}
+                        <a class="vj-archive-link" href="{{ archive_base_url }}?year={{ a.year }}&month={{ a.month }}">{{ a.label }} ({{ a.count }})</a>
+                    {% empty %}
+                        <div class="vj-empty-copy">Nema postova.</div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+
+            {% if blog_preferences.analytics_widget_side == 'left_top' or blog_preferences.analytics_widget_side == 'right_top' %}
+            <div class="vj-side-card">
+                {% include "blog/components/live_analytics_widget.html" with analytics_widget_class="" %}
+            </div>
+            {% endif %}
+
+            {% for box in left_boxes %}
+            <div class="vj-side-card">
+                <div class="vj-box-title">{{ box.title }}</div>
+                <div class="vj-box-content">{{ box.content|safe }}</div>
+            </div>
+            {% endfor %}
+
+            {% for box in right_boxes %}
+            <div class="vj-side-card">
+                <div class="vj-box-title">{{ box.title }}</div>
+                <div class="vj-box-content">{{ box.content|safe }}</div>
+            </div>
+            {% endfor %}
+
+            {% if blog_preferences.analytics_widget_side == 'left_bottom' or blog_preferences.analytics_widget_side == 'right_bottom' %}
+            <div class="vj-side-card">
+                {% include "blog/components/live_analytics_widget.html" with analytics_widget_class="" %}
+            </div>
+            {% endif %}
+        </aside>
+    </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".poll-bar").forEach(function (bar) {
+        const p = bar.getAttribute("data-percent") || "0";
+        bar.style.width = p + "%";
+    });
+
+    document.querySelectorAll(".js-scroll-to-comments").forEach(function (a) {
+        a.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href");
+            if (!targetId) return;
+            const el = document.querySelector(targetId);
+            if (!el) return;
+            el.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+    });
+});
+</script>
+{% endblock %}
+
+{% block left_sidebar %}{% endblock %}
+{% block right_sidebar %}{% endblock %}
+{% block content %}{% endblock %}

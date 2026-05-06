@@ -1,0 +1,243 @@
+{% if request.GET.tab == "posjetitelji" %}
+<div class="container-fluid px-0">
+    <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+        <div>
+            <h4 class="mb-1">Posjetitelji i analitika uživo</h4>
+            <div class="text-muted">Ovdje uključuješ dodatne widgete koji nisu uključeni po defaultu.</div>
+        </div>
+        <span class="badge bg-light text-dark border">Eksperimentalno</span>
+    </div>
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <div class="row g-4 mb-4">
+            <div class="col-12 col-xl-6">
+                <div class="card shadow-sm border-0 h-100">
+                    <div class="card-body p-4">
+                        <h5 class="mb-3">Što želiš prikazivati na blogu</h5>
+
+                        <div class="form-check form-switch mb-3">
+                            <input type="hidden" name="analytics_live_counter_enabled" value="0">
+                            <input class="form-check-input" type="checkbox" name="analytics_live_counter_enabled" value="1" id="analyticsLiveCounter" {% if blog_preferences.analytics_live_counter_enabled %}checked{% endif %}>
+                            <label class="form-check-label" for="analyticsLiveCounter">Broj aktivnih posjetitelja</label>
+                            <div class="small text-muted mt-1">Prikazuje trenutno aktivne, zadnjih 15 minuta i današnje posjetitelje.</div>
+                        </div>
+
+                        <div class="form-check form-switch mb-3">
+                            <input type="hidden" name="analytics_active_pages_enabled" value="0">
+                            <input class="form-check-input" type="checkbox" name="analytics_active_pages_enabled" value="1" id="analyticsActivePages" {% if blog_preferences.analytics_active_pages_enabled %}checked{% endif %}>
+                            <label class="form-check-label" for="analyticsActivePages">Aktivne stranice</label>
+                            <div class="small text-muted mt-1">Prikazuje jesu li ljudi sada na naslovnici bloga ili na detalju posta.</div>
+                        </div>
+
+                        <div class="form-check form-switch mb-3">
+                            <input type="hidden" name="analytics_map_enabled" value="0">
+                            <input class="form-check-input" type="checkbox" name="analytics_map_enabled" value="1" id="analyticsMap" {% if blog_preferences.analytics_map_enabled %}checked{% endif %}>
+                            <label class="form-check-label" for="analyticsMap">Karta / globus lokacija posjeta</label>
+                            <div class="small text-muted mt-1">Prikazuje približne točke posjeta na karti ili u globe prikazu.</div>
+                        </div>
+
+                        <div class="form-check form-switch mb-4">
+                            <input type="hidden" name="analytics_geo_enabled" value="0">
+                            <input class="form-check-input" type="checkbox" name="analytics_geo_enabled" value="1" id="analyticsGeo" {% if blog_preferences.analytics_geo_enabled %}checked{% endif %}>
+                            <label class="form-check-label" for="analyticsGeo">Traži približnu lokaciju posjetitelja</label>
+                            <div class="small text-muted mt-1">Preglednik će posjetitelju ponuditi dozvolu za približnu lokaciju. Bez toga karta ostaje prazna.</div>
+                        </div>
+
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Položaj widgeta na blogu</label>
+                                <select class="form-select" name="analytics_widget_side">
+                                    <option value="right_top" {% if blog_preferences.analytics_widget_side == 'right_top' %}selected{% endif %}>Desno gore</option>
+                                    <option value="right_bottom" {% if blog_preferences.analytics_widget_side == 'right_bottom' %}selected{% endif %}>Desno dolje</option>
+                                    <option value="left_top" {% if blog_preferences.analytics_widget_side == 'left_top' %}selected{% endif %}>Lijevo gore (ispod kalendara i arhive)</option>
+                                    <option value="left_bottom" {% if blog_preferences.analytics_widget_side == 'left_bottom' %}selected{% endif %}>Lijevo dolje (ispod boxeva)</option>
+                                    <option value="footer_full" {% if blog_preferences.analytics_widget_side == 'footer_full' %}selected{% endif %}>Na dnu iznad footera (cijelom širinom)</option>
+                                </select>
+                                <div class="small text-muted mt-2">Lijevo gore je ispod kalendara i arhive, lijevo dolje je ispod boxeva, a donja varijanta ide u jedan široki red iznad footera.</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Stil prikaza lokacija</label>
+                                <select class="form-select" name="analytics_map_variant">
+                                    <option value="map" {% if blog_preferences.analytics_map_variant == 'map' %}selected{% endif %}>Karta svijeta</option>
+                                    <option value="globe" {% if blog_preferences.analytics_map_variant == 'globe' %}selected{% endif %}>Globus</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-xl-6">
+                <div class="card shadow-sm border-0 h-100">
+                    <div class="card-body p-4">
+                        <h5 class="mb-3">Pregled uživo</h5>
+                        <div class="row g-3 mb-3">
+                            <div class="col-4">
+                                <div class="border rounded-4 p-3 h-100 text-center">
+                                    <div class="small text-muted">Trenutno</div>
+                                    <div class="fs-3 fw-semibold">{{ live_analytics.active_now|default:0 }}</div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="border rounded-4 p-3 h-100 text-center">
+                                    <div class="small text-muted">15 min</div>
+                                    <div class="fs-3 fw-semibold">{{ live_analytics.active_recent|default:0 }}</div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="border rounded-4 p-3 h-100 text-center">
+                                    <div class="small text-muted">Danas</div>
+                                    <div class="fs-3 fw-semibold">{{ live_analytics.today_unique|default:0 }}</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row g-3 mb-3">
+                            <div class="col-md-6">
+                                <div class="border rounded-4 p-3 h-100">
+                                    <div class="small text-muted mb-2">Povratni posjetitelji (30 dana)</div>
+                                    <div class="fs-4 fw-semibold">{{ live_analytics.repeat_visitors|default:0 }}</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="border rounded-4 p-3 h-100">
+                                    <div class="small text-muted mb-2">Jedinstveni posjetitelji (30 dana)</div>
+                                    <div class="fs-4 fw-semibold">{{ live_analytics.month_unique|default:0 }}</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <div class="small fw-semibold mb-2">Aktivni uređaji</div>
+                            <div class="d-flex flex-wrap gap-2">
+                                {% for item in live_analytics.device_breakdown %}
+                                    <span class="badge bg-light text-dark border px-3 py-2">{{ item.label }} · {{ item.count }}</span>
+                                {% empty %}
+                                    <span class="small text-muted">Još nema dovoljno podataka.</span>
+                                {% endfor %}
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="small fw-semibold mb-2">Aktivne stranice</div>
+                            <div class="list-group list-group-flush border rounded-4 overflow-hidden">
+                                {% for item in live_analytics.page_breakdown %}
+                                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                                        <span>{{ item.label }}</span>
+                                        <strong>{{ item.count }}</strong>
+                                    </div>
+                                {% empty %}
+                                    <div class="list-group-item text-muted">Trenutno nema aktivnih stranica.</div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card shadow-sm border-0 mb-4">
+            <div class="card-body p-4">
+                <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+                    <div>
+                        <h5 class="mb-1">Pregled lokacija</h5>
+                        <div class="small text-muted">Prikazuju se samo približne lokacije iz zadnjih 30 dana.</div>
+                    </div>
+                    <span class="badge bg-light text-dark border">{{ live_analytics.map_points|length }} točaka</span>
+                </div>
+
+                {% if live_analytics.has_map_points %}
+                    {% include "blog/components/analytics_map.html" with map_points=live_analytics.map_points map_variant=blog_preferences.analytics_map_variant %}
+                {% else %}
+                    <div class="border rounded-4 p-4 text-muted analytics-map-empty">
+                        Još nema spremljenih lokacija. Uključi "Traži približnu lokaciju posjetitelja" i karta će se puniti kad netko dopusti lokaciju.
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="card shadow-sm border-0 mb-4">
+            <div class="card-body p-4">
+                <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+                    <div>
+                        <h5 class="mb-1">Odakle dolaze posjetitelji</h5>
+                        <div class="small text-muted">Grad i država računaju se iz približne lokacije koju je posjetitelj dopustio.</div>
+                    </div>
+                    <span class="badge bg-light text-dark border">{{ live_analytics.month_unique|default:0 }} posjetitelja / 30 dana</span>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="border rounded-4 p-3 h-100">
+                            <div class="fw-semibold mb-3">Postotak po državama</div>
+                            {% for item in live_analytics.country_breakdown %}
+                                <div class="mb-3">
+                                    <div class="d-flex justify-content-between align-items-center gap-3 mb-1">
+                                        <span>{{ item.country }}</span>
+                                        <strong>{{ item.percent }}%</strong>
+                                    </div>
+                                    <div class="progress" style="height: 8px;">
+                                        <div class="progress-bar" role="progressbar" style="width: {{ item.percent }}%;"></div>
+                                    </div>
+                                    <div class="small text-muted mt-1">{{ item.count }} posjetitelja</div>
+                                </div>
+                            {% empty %}
+                                <div class="text-muted small">Još nema dovoljno podataka za prikaz država.</div>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="border rounded-4 p-3 h-100">
+                            <div class="fw-semibold mb-3">Gradovi i države</div>
+                            <div class="list-group list-group-flush border rounded-4 overflow-hidden">
+                                {% for item in live_analytics.location_breakdown %}
+                                    <div class="list-group-item d-flex justify-content-between align-items-center gap-3">
+                                        <div>
+                                            <div class="fw-semibold">{{ item.city }}</div>
+                                            <div class="small text-muted">{{ item.country }}</div>
+                                        </div>
+                                        <strong>{{ item.count }}</strong>
+                                    </div>
+                                {% empty %}
+                                    <div class="list-group-item text-muted">Još nema spremljenih gradova i država.</div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card shadow-sm border-0 mb-4">
+            <div class="card-body p-4">
+                <h5 class="mb-3">Još sitnica koje sam dodao</h5>
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <div class="border rounded-4 p-3 h-100">
+                            <div class="fw-semibold mb-1">Povratni posjetitelji</div>
+                            <div class="small text-muted">Vidi koliko ih se vratilo više puta u zadnjih 30 dana.</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="border rounded-4 p-3 h-100">
+                            <div class="fw-semibold mb-1">Aktivni uređaji</div>
+                            <div class="small text-muted">Brzi pregled dolaze li ljudi više s mobitela, računala ili tableta.</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="border rounded-4 p-3 h-100">
+                            <div class="fw-semibold mb-1">Aktivne stranice</div>
+                            <div class="small text-muted">Odmah vidi jesu li sada više na naslovnici bloga ili na postovima.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Spremi promjene</button>
+    </form>
+</div>
+{% endif %}

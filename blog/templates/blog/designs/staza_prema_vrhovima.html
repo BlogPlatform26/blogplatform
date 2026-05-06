@@ -1,0 +1,701 @@
+{% extends "blog/base.html" %}
+{% load static custom_tags %}
+
+{% block header %}{% endblock %}
+
+{% block blog_header %}
+<style>
+body {
+    background-color: #2f2419;
+    background-image:
+        linear-gradient(180deg, rgba(34, 22, 12, 0.16) 0%, rgba(36, 23, 14, 0.38) 44%, rgba(26, 18, 12, 0.74) 100%),
+        url('{% static "blog/images/design-backgrounds/staza_prema_vrhovima.png" %}');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #f2e3ce;
+}
+
+.container-fluid.mt-3 {
+    margin-top: 0 !important;
+    padding-top: 24px;
+    position: relative;
+    z-index: 1;
+}
+
+.container-fluid.mt-3 > .row.align-items-start {
+    display: none;
+}
+
+nav.navbar {
+    position: relative;
+    z-index: 4000 !important;
+    background: rgba(28, 20, 13, 0.82) !important;
+    border-bottom: 1px solid rgba(255, 225, 185, 0.12);
+    backdrop-filter: blur(6px);
+}
+
+nav.navbar .dropdown-menu {
+    z-index: 4100 !important;
+}
+
+.spv-theme {
+    max-width: 1040px;
+    margin: 34px auto 32px;
+    padding: 0 16px;
+}
+
+.spv-title {
+    margin: 0 0 8px 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.85rem, 3vw, 2.7rem);
+    line-height: 1.05;
+    color: #fff2dd;
+    text-shadow: 0 6px 24px rgba(0, 0, 0, 0.36);
+}
+
+.spv-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 270px;
+    gap: 22px;
+    align-items: start;
+    margin-top: 82px;
+}
+
+.spv-post,
+.spv-side-card,
+.spv-profile-wrap .blog-profile-panel {
+    background: rgba(47, 32, 20, 0.36);
+    border: 1px solid rgba(255, 225, 185, 0.14);
+    box-shadow: 0 16px 34px rgba(0, 0, 0, 0.14);
+    backdrop-filter: blur(3px);
+}
+
+.spv-post {
+    padding: 22px 26px 20px;
+    margin-bottom: 20px;
+}
+
+.spv-post-divider {
+    margin: 10px 0 18px;
+    border-top: 1px solid rgba(255, 225, 185, 0.18);
+}
+
+.spv-post-date {
+    font-size: 0.92rem;
+    color: #e3bc7b;
+    letter-spacing: 0.02em;
+    margin-bottom: 4px;
+}
+
+.spv-post h4,
+.spv-post h4 a,
+.spv-post .blog-post-title {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #fff2df !important;
+    font-size: clamp(1.42rem, 2.2vw, 1.9rem);
+    line-height: 1.16;
+    text-decoration: none;
+}
+
+.spv-post h4 a:hover {
+    color: #ffe5b4 !important;
+}
+
+.post-meta {
+    margin-top: 8px;
+    font-size: 12px;
+    color: #ead7bc;
+}
+
+.post-meta-category {
+    font-weight: 700;
+    color: #ffd89c;
+}
+
+.post-meta-tag {
+    color: #f4e3ca;
+}
+
+.post-meta-sep {
+    margin: 0 5px;
+    color: rgba(244, 227, 202, 0.34);
+}
+
+.spv-post .mt-4,
+.spv-post p,
+.spv-post li,
+.spv-post blockquote,
+.spv-post div,
+.spv-post span,
+.spv-post strong,
+.spv-post em {
+    color: #f2e3ce;
+}
+
+.spv-post .mt-4 img,
+.spv-post img.img-fluid,
+.spv-post .ratio iframe {
+    border: 1px solid rgba(255, 225, 185, 0.16);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.18);
+    background: rgba(255,255,255,0.04);
+    padding: 4px;
+}
+
+.spv-post .mt-5.small {
+    margin-top: 24px !important;
+}
+
+.post-author-line,
+.post-author-link,
+.spv-post .small.text-muted,
+.spv-post .text-muted,
+.spv-side-card .text-muted {
+    color: #e8d7bc !important;
+}
+
+.post-views,
+.post-actions a,
+.comment-author a,
+.spv-calendar-day--has-post,
+.spv-archive-link:hover,
+.spv-side-card a,
+.spv-box-content a {
+    color: #ffd89c;
+}
+
+.post-actions a:hover,
+.comment-author a:hover,
+.spv-filter-clear:hover,
+.spv-calendar-day:hover,
+.spv-archive-link:hover,
+.spv-side-card a:hover,
+.spv-box-content a:hover {
+    color: #fff0cf;
+}
+
+.spv-side-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.spv-side-card {
+    padding: 14px 16px 16px;
+}
+
+.spv-side-title,
+.spv-calendar-title,
+.spv-box-title,
+.spv-archive-title {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.18rem;
+    color: #fff0dc;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(255, 225, 185, 0.18);
+}
+
+.spv-profile-wrap .blog-profile-panel {
+    max-width: none;
+    width: 100%;
+    padding: 14px 16px 16px;
+    margin: 0;
+    color: #f2e3ce;
+}
+
+.spv-profile-wrap .blog-profile-panel__name,
+.spv-profile-wrap .blog-profile-panel__blog-name,
+.spv-profile-wrap .blog-profile-panel__stats,
+.spv-profile-wrap .blog-profile-panel__dropdown-toggle {
+    color: inherit;
+    text-shadow: none;
+}
+
+.spv-profile-wrap .blog-profile-panel__avatar {
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.24);
+}
+
+.spv-profile-wrap .btn-primary {
+    background: #d9b06f;
+    border-color: #d9b06f;
+    color: #2f2419;
+}
+
+.spv-profile-wrap .btn-primary:hover {
+    background: #f0c786;
+    border-color: #f0c786;
+    color: #24160d;
+}
+
+.spv-profile-wrap .btn-outline-primary {
+    color: #ffd89c;
+    border-color: #ffd89c;
+}
+
+.spv-profile-wrap .btn-outline-primary:hover {
+    background: #ffd89c;
+    color: #2f2419;
+}
+
+.spv-calendar-month {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #e3bc7b;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.spv-calendar-weekdays,
+.spv-calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 6px;
+    text-align: center;
+}
+
+.spv-calendar-weekdays {
+    font-size: 11px;
+    color: #ead7bc;
+    margin-bottom: 8px;
+}
+
+.spv-calendar-day,
+.spv-calendar-empty {
+    min-height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 12px;
+}
+
+.spv-calendar-day {
+    text-decoration: none;
+    background: rgba(255,255,255,0.035);
+    color: #fff0dc;
+    border: 1px solid rgba(255,225,185,0.12);
+}
+
+.spv-calendar-day:hover {
+    color: #fff7ea;
+    border-color: rgba(255,225,185,0.24);
+    background: rgba(255,255,255,0.10);
+}
+
+.spv-calendar-day--today {
+    background: rgba(217, 176, 111, 0.18);
+    color: #fff4e2;
+    border-color: rgba(217, 176, 111, 0.50);
+    box-shadow: 0 0 0 2px rgba(255,255,255,0.08), 0 0 0 4px rgba(217, 176, 111, 0.08);
+}
+
+.spv-archive-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.spv-archive-link {
+    display: block;
+    padding: 8px 10px;
+    text-decoration: none;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.035);
+    border: 1px solid rgba(255,225,185,0.12);
+    color: #f2e3ce;
+    font-size: 13px;
+}
+
+.spv-box-content,
+.spv-side-card,
+.spv-post,
+.spv-post p,
+.spv-post li,
+.spv-empty-copy {
+    color: #f2e3ce;
+}
+
+.spv-side-card .live-analytics-widget {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+
+.spv-filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 16px 0;
+    padding: 10px 12px;
+    background: rgba(47, 32, 20, 0.30);
+    border: 1px solid rgba(255,225,185,0.14);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.08);
+    color: #f2e3ce;
+    font-size: 13px;
+    backdrop-filter: blur(3px);
+}
+
+.spv-filter-chip {
+    padding: 5px 10px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.035);
+    border: 1px solid rgba(255,225,185,0.14);
+    color: #ffd89c;
+    font-weight: 700;
+}
+
+.spv-filter-clear {
+    margin-left: auto;
+    text-decoration: none;
+    color: #f3dfb6;
+    font-weight: 600;
+}
+
+.blog-action-outline,
+.btn-outline-light {
+    border-color: #ffd89c !important;
+    color: #ffd89c !important;
+    background: transparent !important;
+}
+
+.blog-action-outline:hover,
+.btn-outline-light:hover {
+    background: rgba(255, 216, 156, 0.16) !important;
+    color: #fff7ea !important;
+    box-shadow: 0 0 10px rgba(255,216,156,0.12);
+}
+
+.comment-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 100%;
+}
+
+.comment-row textarea,
+.comment-row .form-control {
+    flex: 1;
+    background: rgba(255,255,255,0.05) !important;
+    color: #f2e3ce !important;
+    border: 1px solid rgba(255,225,185,0.16) !important;
+    border-radius: 10px;
+    resize: none;
+    min-height: 48px;
+}
+
+.comment-row textarea:focus,
+.comment-row .form-control:focus {
+    border-color: rgba(255,216,156,0.34) !important;
+    box-shadow: 0 0 0 0.2rem rgba(255,216,156,0.08) !important;
+}
+
+.comment-row textarea::placeholder,
+.comment-row .form-control::placeholder {
+    color: #e8d2ab !important;
+}
+
+.comment-item {
+    align-items: flex-start;
+}
+
+.comment-avatar {
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 2px;
+}
+
+.comment-body {
+    position: relative;
+    background: rgba(255,255,255,0.035);
+    border: 1px solid rgba(255,225,185,0.14);
+    border-radius: 12px;
+    padding: 10px 44px 10px 12px;
+    backdrop-filter: blur(3px);
+}
+
+.comment-header {
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+    margin-bottom: 2px;
+}
+
+.comment-time {
+    font-size: 12px;
+    color: #dcb88a;
+}
+
+.comment-text {
+    color: #f2e3ce;
+    line-height: 1.35;
+}
+
+.comment-actions {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 120ms ease-in-out;
+}
+
+.comment-item:hover .comment-actions {
+    opacity: 0.9;
+}
+
+.comment-action-btn {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.035);
+    border: 1px solid rgba(255,225,185,0.16);
+    border-radius: 8px;
+    cursor: pointer;
+    color: rgba(242,227,206,0.84);
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+}
+
+.comment-action-btn i {
+    font-size: 14px;
+    line-height: 1;
+    display: block;
+}
+
+.comment-action-btn:hover {
+    color: #fff7ea;
+    border-color: rgba(255,225,185,0.24);
+    background: rgba(255,255,255,0.10);
+}
+
+.comment-action-danger:hover {
+    color: #ffd0a4;
+    border-color: rgba(255,208,164,0.28);
+    background: rgba(255,255,255,0.10);
+}
+
+@media (max-width: 991.98px) {
+    .spv-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .spv-theme {
+        max-width: 740px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .container-fluid.mt-3 {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+
+    .spv-theme {
+        padding: 0 4px;
+        margin-top: 8px;
+    }
+
+    .spv-layout {
+        margin-top: 64px;
+    }
+
+    .spv-title {
+        font-size: 2rem;
+    }
+
+    .spv-post {
+        padding: 18px 16px 16px;
+    }
+
+    .comment-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .comment-row .btn {
+        width: 100%;
+    }
+}
+</style>
+
+<div class="spv-theme">
+    <h1 class="spv-title">{{ blog.profile.blog_name|default:blog.username }}</h1>
+
+    {% if blog.profile.blog_tagline %}<p class="blog-tagline-shared">{{ blog.profile.blog_tagline }}</p>{% endif %}
+
+    {% if blog.profile.blog_banner %}
+    <div class="spv-banner" style="display:none;"></div>
+    {% endif %}
+
+    <div class="spv-layout">
+        <main>
+            {% if active_category or active_tag %}
+            <div class="spv-filter-bar">
+                <span>Filtrirano:</span>
+                {% if active_category_name %}
+                    <span class="spv-filter-chip">{{ active_category_name }}</span>
+                {% elif active_category %}
+                    <span class="spv-filter-chip">{{ active_category }}</span>
+                {% endif %}
+                {% if active_tag %}
+                    <span class="spv-filter-chip">#{{ active_tag }}</span>
+                {% endif %}
+                <a class="spv-filter-clear" href="{{ archive_base_url }}">Makni filter</a>
+            </div>
+            {% endif %}
+
+            {% for post in page_obj %}
+                <article class="spv-post">
+                    <div class="spv-post-date">{{ post.publication_datetime|date:"d.m.Y" }}</div>
+                    <div class="spv-post-divider"></div>
+                    <div class="d-flex flex-column" style="gap: 10px; min-width: 0;">
+                        <h4 class="mb-0">{{ post.title }}</h4>
+                        {% include "blog/components/post_meta.html" %}
+                    </div>
+
+                    <div class="mt-4">
+                        {% include "blog/components/post_body.html" %}
+                    </div>
+
+                    {% include "blog/components/post_actions.html" %}
+                    {% include "blog/components/post_comments.html" %}
+                </article>
+            {% empty %}
+                <div class="spv-post">
+                    <p class="mb-0">Nema postova.</p>
+                </div>
+            {% endfor %}
+
+            {% if page_obj.has_other_pages %}
+            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mt-3">
+                {% if page_obj.has_previous %}
+                    <a href="?page={{ page_obj.previous_page_number }}{{ pagination_query }}" class="btn btn-sm btn-outline-secondary">Prethodna</a>
+                {% else %}
+                    <span></span>
+                {% endif %}
+
+                <span class="small text-muted">Stranica {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}</span>
+
+                {% if page_obj.has_next %}
+                    <a href="?page={{ page_obj.next_page_number }}{{ pagination_query }}" class="btn btn-sm btn-outline-secondary">Sljedeća</a>
+                {% endif %}
+            </div>
+            {% endif %}
+        </main>
+
+        <aside class="spv-side-stack">
+            <div class="spv-profile-wrap spv-side-card">
+                <div class="spv-side-title">O autoru</div>
+                {% include "blog/components/blog_profile_actions_sidebar.html" %}
+            </div>
+
+            {% if blog_preferences.blog_archive_mode == "both" or blog_preferences.blog_archive_mode == "calendar" %}
+            <div class="spv-side-card">
+                <div class="spv-calendar-title">Kalendar</div>
+                <div class="spv-calendar-month calendar-month-nav"><a href="{{ prev_month_url }}" class="calendar-month-nav-link" aria-label="Prethodni mjesec">&#8249;</a><span>{{ current_month_hr|upper }}, {{ current_year }}</span><a href="{{ next_month_url }}" class="calendar-month-nav-link" aria-label="Sljedeći mjesec">&#8250;</a></div>
+                <div class="spv-calendar-weekdays">
+                    <div>P</div><div>U</div><div>S</div><div>Č</div><div>P</div><div>S</div><div>N</div>
+                </div>
+                <div class="spv-calendar-grid">
+                    {% for week in month_calendar %}
+                        {% for day in week %}
+                            {% if day == 0 %}
+                                <div class="spv-calendar-empty"></div>
+                            {% else %}
+                                {% with pid=day_single_post_map|get_item:day %}
+                                    {% if day in days_with_posts %}
+                                        {% if pid %}
+                                            <a href="{% url 'post_detail' pid %}" class="spv-calendar-day spv-calendar-day--has-post {% if day == current_day %}spv-calendar-day--today{% endif %}">{{ day }}</a>
+                                        {% else %}
+                                            <a href="{{ archive_base_url }}?year={{ current_year }}&month={{ current_month_num }}&day={{ day }}" class="spv-calendar-day spv-calendar-day--has-post {% if day == current_day %}spv-calendar-day--today{% endif %}">{{ day }}</a>
+                                        {% endif %}
+                                    {% else %}
+                                        <div class="spv-calendar-day {% if day == current_day %}spv-calendar-day--today{% endif %}">{{ day }}</div>
+                                    {% endif %}
+                                {% endwith %}
+                            {% endif %}
+                        {% endfor %}
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+
+            {% if blog_preferences.blog_archive_mode == "both" or blog_preferences.blog_archive_mode == "list" %}
+            <div class="spv-side-card">
+                <div class="spv-archive-title">Arhiva bloga</div>
+                <div class="spv-archive-list">
+                    {% for a in archives %}
+                        <a class="spv-archive-link" href="{{ archive_base_url }}?year={{ a.year }}&month={{ a.month }}">{{ a.label }} ({{ a.count }})</a>
+                    {% empty %}
+                        <div class="spv-empty-copy">Nema postova.</div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+
+            {% if blog_preferences.analytics_widget_side == 'left_top' or blog_preferences.analytics_widget_side == 'right_top' %}
+            <div class="spv-side-card">
+                {% include "blog/components/live_analytics_widget.html" with analytics_widget_class="" %}
+            </div>
+            {% endif %}
+
+            {% for box in left_boxes %}
+            <div class="spv-side-card">
+                <div class="spv-box-title">{{ box.title }}</div>
+                <div class="spv-box-content">{{ box.content|safe }}</div>
+            </div>
+            {% endfor %}
+
+            {% for box in right_boxes %}
+            <div class="spv-side-card">
+                <div class="spv-box-title">{{ box.title }}</div>
+                <div class="spv-box-content">{{ box.content|safe }}</div>
+            </div>
+            {% endfor %}
+
+            {% if blog_preferences.analytics_widget_side == 'left_bottom' or blog_preferences.analytics_widget_side == 'right_bottom' %}
+            <div class="spv-side-card">
+                {% include "blog/components/live_analytics_widget.html" with analytics_widget_class="" %}
+            </div>
+            {% endif %}
+        </aside>
+    </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".poll-bar").forEach(function (bar) {
+        const p = bar.getAttribute("data-percent") || "0";
+        bar.style.width = p + "%";
+    });
+
+    document.querySelectorAll(".js-scroll-to-comments").forEach(function (a) {
+        a.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href");
+            if (!targetId) return;
+            const el = document.querySelector(targetId);
+            if (!el) return;
+            el.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+    });
+});
+</script>
+{% endblock %}
+
+{% block left_sidebar %}{% endblock %}
+{% block right_sidebar %}{% endblock %}
+{% block content %}{% endblock %}
