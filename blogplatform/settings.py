@@ -8,6 +8,7 @@ Prije online objave obavezno postavi DEBUG=False i popuni prave vrijednosti u .e
 from pathlib import Path
 import os
 from datetime import timedelta
+from django.utils.csp import CSP
 # ==========================================================
 # PATHS
 # ==========================================================
@@ -116,6 +117,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    "django.middleware.csp.ContentSecurityPolicyMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -392,6 +394,109 @@ AUTHENTICATION_BACKENDS = [
     "axes.backends.AxesStandaloneBackend",
     "django.contrib.auth.backends.ModelBackend",
 ]
+
+# ==========================================================
+# CONTENT SECURITY POLICY / CSP
+# ==========================================================
+# CSP je zaštitni HTTP header koji ograničava odakle se smiju učitavati
+# skripte, stilovi, slike, fontovi, frameovi i ostali resursi.
+#
+# Za sada je default REPORT-ONLY da ne razbije stranicu dok testiraš.
+# Kad u browser konzoli više nema bitnih CSP upozorenja, u .env možeš staviti:
+# CSP_REPORT_ONLY=False
+
+CSP_REPORT_ONLY = env_bool("CSP_REPORT_ONLY", default=True)
+
+BLOGPLATFORM_CSP = {
+    "default-src": [CSP.SELF],
+
+    # Projekt trenutno ima dosta inline JS/CSS u templateovima, zato je unsafe-inline
+    # privremeno dopušten. Kasnije možemo ići na nonce i maknuti unsafe-inline.
+    "script-src": [
+        CSP.SELF,
+        CSP.UNSAFE_INLINE,
+        "https://cdn.jsdelivr.net",
+        "https://unpkg.com",
+        "https://cdnjs.cloudflare.com",
+        "https://challenges.cloudflare.com",
+        "https://www.youtube.com",
+        "https://www.youtube-nocookie.com",
+    ],
+    "script-src-elem": [
+        CSP.SELF,
+        CSP.UNSAFE_INLINE,
+        "https://cdn.jsdelivr.net",
+        "https://unpkg.com",
+        "https://cdnjs.cloudflare.com",
+        "https://challenges.cloudflare.com",
+        "https://www.youtube.com",
+        "https://www.youtube-nocookie.com",
+    ],
+    "style-src": [
+        CSP.SELF,
+        CSP.UNSAFE_INLINE,
+        "https://cdn.jsdelivr.net",
+        "https://unpkg.com",
+        "https://cdnjs.cloudflare.com",
+        "https://fonts.googleapis.com",
+        "https://cdn.cursors-4u.net",
+    ],
+    "style-src-elem": [
+        CSP.SELF,
+        CSP.UNSAFE_INLINE,
+        "https://cdn.jsdelivr.net",
+        "https://unpkg.com",
+        "https://cdnjs.cloudflare.com",
+        "https://fonts.googleapis.com",
+        "https://cdn.cursors-4u.net",
+    ],
+    "style-src-attr": [
+        CSP.SELF,
+        CSP.UNSAFE_INLINE,
+    ],
+    "img-src": [
+        CSP.SELF,
+        "data:",
+        "blob:",
+        "https:",
+        "https://cdn.cursors-4u.net",
+        "https://server.arcgisonline.com",
+    ],
+    "font-src": [
+        CSP.SELF,
+        "data:",
+        "https://cdn.jsdelivr.net",
+        "https://cdnjs.cloudflare.com",
+        "https://fonts.gstatic.com",
+    ],
+    "media-src": [
+        CSP.SELF,
+        "data:",
+        "blob:",
+        "https:",
+    ],
+    "connect-src": [
+        CSP.SELF,
+        "https://challenges.cloudflare.com",
+        "https://server.arcgisonline.com",
+    ],
+    "frame-src": [
+        CSP.SELF,
+        "https://challenges.cloudflare.com",
+        "https://www.youtube.com",
+        "https://www.youtube-nocookie.com",
+    ],
+    "object-src": [CSP.NONE],
+    "base-uri": [CSP.SELF],
+    "form-action": [CSP.SELF],
+    "frame-ancestors": [CSP.SELF],
+}
+
+if CSP_REPORT_ONLY:
+    SECURE_CSP_REPORT_ONLY = BLOGPLATFORM_CSP
+else:
+    SECURE_CSP = BLOGPLATFORM_CSP
+
 
 # ==========================================================
 # DJANGO-AXES
