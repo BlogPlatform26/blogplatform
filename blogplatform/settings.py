@@ -7,8 +7,7 @@ Prije online objave obavezno postavi DEBUG=False i popuni prave vrijednosti u .e
 
 from pathlib import Path
 import os
-
-
+from datetime import timedelta
 # ==========================================================
 # PATHS
 # ==========================================================
@@ -108,6 +107,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "axes",
 
     "blog",
     "ckeditor",
@@ -122,6 +122,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "axes.middleware.AxesMiddleware",
 ]
 
 
@@ -382,3 +383,37 @@ else:
 # ==========================================================
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# ==========================================================
+# AUTHENTICATION BACKENDS
+# ==========================================================
+
+AUTHENTICATION_BACKENDS = [
+    "axes.backends.AxesStandaloneBackend",
+    "django.contrib.auth.backends.ModelBackend",
+]
+
+# ==========================================================
+# DJANGO-AXES
+# ==========================================================
+# Dodatna zaštita od brute-force login napada.
+# Paket:
+#   python -m pip install "django-axes[ipware]"
+#
+# Nakon instalacije:
+#   python manage.py migrate
+
+AXES_ENABLED = env_bool("AXES_ENABLED", default=True)
+AXES_FAILURE_LIMIT = env_int("AXES_FAILURE_LIMIT", 5)
+AXES_COOLOFF_TIME = timedelta(minutes=env_int("AXES_COOLOFF_MINUTES", 10))
+AXES_RESET_ON_SUCCESS = True
+AXES_ENABLE_ADMIN = True
+AXES_VERBOSE = True
+
+# Zaključavanje po kombinaciji korisničkog imena/emaila i IP adrese.
+# To je opreznije nego blokirati cijeli IP za sve korisnike.
+AXES_LOCKOUT_PARAMETERS = [["username", "ip_address"]]
+
+# 429 = Too Many Requests
+AXES_HTTP_RESPONSE_CODE = 429
+

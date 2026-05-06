@@ -4,7 +4,6 @@ from django.contrib import admin, messages
 from django.utils import timezone
 
 from .models import (
-    AmbientMusicTrack,
     BugReport,
     Category,
     CategoryHomeImage,
@@ -257,20 +256,14 @@ admin.site.register(UserBlock)
 
 _ORIGINAL_GET_APP_LIST = admin.site.get_app_list
 
-
-@admin.register(AmbientMusicTrack)
-class AmbientMusicTrackAdmin(admin.ModelAdmin):
-    list_display = ("title", "category", "artist", "is_active", "created_at")
-    list_filter = ("category", "is_active")
-    search_fields = ("title", "artist", "description")
-    readonly_fields = ("created_at",)
-
 ADMIN_MODEL_GROUPS = [
     {
         "id": "security_moderation",
         "name": "Sigurnost i moderacija",
         "models": [
             "SecurityEvent",
+            "AccessAttempt",
+            "AccessLog",
             "UserRestriction",
             "UserBlock",
             "BugReport",
@@ -329,13 +322,6 @@ ADMIN_MODEL_GROUPS = [
             "SpecialDayEvent",
             "SpecialDayMessage",
             "SpecialDaySelection",
-        ],
-    },
-    {
-        "id": "design_multimedia",
-        "name": "Dizajn i multimedija",
-        "models": [
-            "AmbientMusicTrack",
         ],
     },
     {
