@@ -757,7 +757,7 @@
                                                 Uredi
                                             </a>
 
-                                            <form method="POST" style="display:inline;">
+                                            <form method="POST" style="display:inline;" onsubmit="return confirm('Jesi li siguran da želiš premjestiti ovaj post u otpad?');">
                                                 {% csrf_token %}
                                                 <input type="hidden" name="delete_post_id" value="{{ post.id }}">
                                                 <button type="submit" class="btn btn-sm btn-outline-danger">

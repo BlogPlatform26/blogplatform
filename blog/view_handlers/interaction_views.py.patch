@@ -1,0 +1,29 @@
+*** blog/view_handlers/interaction_views.py
+@@
+ @login_required
+ def edit_comment(request, comment_id):
+     comment = get_object_or_404(Comment, id=comment_id, author=request.user)
++    comment_anchor = f"#comment-{comment.id}"
++    referer = request.META.get('HTTP_REFERER')
++    fallback_url = f"{reverse('post_detail', args=[comment.post.id])}{comment_anchor}"
++
+     if request.method == 'POST':
+         form = CommentForm(request.POST, instance=comment)
+         if form.is_valid():
+             form.save()
+-            return redirect('post_detail', post_id=comment.post.id)
+-    else:
+-        form = CommentForm(instance=comment)
+-    return render(request, 'blog/edit_comment.html', {'form': form})
++            if referer:
++                return redirect(f"{referer.split('#')[0]}{comment_anchor}")
++            return redirect(fallback_url)
++
++        messages.error(request, 'Komentar nije spremljen. Provjeri tekst komentara.')
++        if referer:
++            return redirect(f"{referer.split('#')[0]}{comment_anchor}")
++        return redirect(fallback_url)
++
++    if referer:
++        return redirect(f"{referer.split('#')[0]}{comment_anchor}")
++    return redirect(fallback_url)
