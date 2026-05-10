@@ -2,10 +2,14 @@ from django import forms
 from django.conf import settings
 from django.utils import timezone
 from django.utils.html import strip_tags
+
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from ckeditor.widgets import CKEditorWidget
+
 import re
+
+from .html_sanitizer import sanitize_post_html
 from .models import Category, Post, Comment, Profile, UserBox, BugReport, AuthorQuestion, extract_youtube_video_id
 
 
@@ -105,6 +109,7 @@ class PostForm(forms.ModelForm):
 
     def clean_tags_input(self):
         raw = (self.cleaned_data.get("tags_input") or "").strip()
+
         if not raw:
             self.cleaned_data["tags_list"] = []
             return ""
@@ -115,20 +120,16 @@ class PostForm(forms.ModelForm):
             raise forms.ValidationError("Možeš staviti najviše 5 tagova.")
 
         allowed = re.compile(r"^[A-Za-z0-9_ČĆĐŠŽčćđšž]+$")
-
         cleaned = []
         seen = set()
 
         for t in parts:
             if " " in t:
                 raise forms.ValidationError("Tag mora biti jedna riječ (bez razmaka).")
-
             if not allowed.match(t):
                 raise forms.ValidationError("Tag smije sadržavati samo slova, brojeve i znak _.")
-
             if t.startswith("_") or t.endswith("_"):
                 raise forms.ValidationError("Tag ne smije početi ili završiti s _.")
-
             if "__" in t:
                 raise forms.ValidationError("Tag ne smije imati dva '_' zaredom (__).")
 
@@ -157,16 +158,19 @@ class PostForm(forms.ModelForm):
 
     def clean_content(self):
         content = self.cleaned_data.get("content") or ""
-        plain_text = strip_tags(content).replace(" ", " ").strip()
+        sanitized_content = sanitize_post_html(content)
+
+        plain_text = strip_tags(sanitized_content).replace("\xa0", " ")
+        plain_text = re.sub(r"\s+", " ", plain_text).strip()
 
         if not plain_text:
             raise forms.ValidationError("Sadržaj posta je obavezan.")
 
-        return content
-
+        return sanitized_content
 
     def clean(self):
         cleaned_data = super().clean()
+
         publish_at = cleaned_data.get("publish_at")
 
         if publish_at and timezone.is_naive(publish_at):
@@ -178,7 +182,6 @@ class PostForm(forms.ModelForm):
             cleaned_data["publish_at"] = publish_at
 
         return cleaned_data
-
 
 
 class CommentForm(forms.ModelForm):
@@ -318,10 +321,13 @@ class AuthorQuestionForm(forms.ModelForm):
 
     def clean_question(self):
         question = (self.cleaned_data.get("question") or "").strip()
+
         if len(question) < 3:
             raise forms.ValidationError("Pitanje mora imati barem 3 znaka.")
+
         if len(question) > 1200:
             raise forms.ValidationError("Pitanje može imati najviše 1200 znakova.")
+
         return question
 
 
@@ -396,6 +402,7 @@ class UserBoxForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+
         self.fields["title"].widget.attrs.update({
             "class": "form-control",
             "maxlength": str(self.MAX_TITLE_LENGTH),
@@ -418,7 +425,9 @@ class UserBoxForm(forms.ModelForm):
 
     def clean_content(self):
         content = self.cleaned_data.get("content") or ""
-        plain_text = strip_tags(content).replace(" ", " ")
+        sanitized_content = sanitize_post_html(content)
+
+        plain_text = strip_tags(sanitized_content).replace("\xa0", " ")
         plain_text = re.sub(r"\s+", " ", plain_text).strip()
 
         if len(plain_text) > self.MAX_CONTENT_LENGTH:
@@ -426,7 +435,7 @@ class UserBoxForm(forms.ModelForm):
                 f"Tekst može imati najviše {self.MAX_CONTENT_LENGTH} znakova."
             )
 
-        return content
+        return sanitized_content
 
 
 class ProfileForm(forms.ModelForm):
@@ -448,6 +457,7 @@ class BugReportForm(forms.ModelForm):
         required=False,
         widget=forms.HiddenInput(),
     )
+
     email = forms.EmailField(
         required=False,
         label="Email",

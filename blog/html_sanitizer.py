@@ -2,29 +2,35 @@
 HTML sanitizer za CKEditor sadržaj.
 
 Cilj:
-- dopustiti normalno formatiranje teksta
+- dopustiti normalno formatiranje teksta iz CKEditora
 - maknuti opasne tagove: script, iframe, object, embed...
 - maknuti opasne atribute: onclick, onerror, onload...
 - dopustiti samo sigurne HTML elemente i atribute
 
-Ako bleach nije instaliran, fallback čuva običan tekst bez HTML-a.
-Za puni rad instaliraj:
-    python -m pip install bleach
+Napomena:
+- Ako je instaliran samo bleach, čuvamo HTML tagove kao strong, em, ul, li, a...
+- Ako je instaliran i tinycss2, čuvamo i sigurne style atribute kao text-align, color, font-size...
+- Ako bleach nije instaliran, fallback sprema običan tekst bez HTML-a.
+
+Preporučeno:
+python -m pip install bleach tinycss2
 """
 
 from __future__ import annotations
 
 import re
-from typing import Iterable
+from typing import Dict, List
 
 from django.utils.html import strip_tags
 
-
 try:
     import bleach
-    from bleach.css_sanitizer import CSSSanitizer
 except Exception:  # pragma: no cover
     bleach = None
+
+try:
+    from bleach.css_sanitizer import CSSSanitizer
+except Exception:  # pragma: no cover
     CSSSanitizer = None
 
 
@@ -46,7 +52,6 @@ DANGEROUS_BLOCK_TAGS = (
     "math",
 )
 
-
 ALLOWED_TAGS = [
     "p",
     "br",
@@ -62,9 +67,12 @@ ALLOWED_TAGS = [
     "ul",
     "ol",
     "li",
+    "h1",
     "h2",
     "h3",
     "h4",
+    "h5",
+    "h6",
     "hr",
     "a",
     "img",
@@ -78,13 +86,15 @@ ALLOWED_TAGS = [
     "td",
 ]
 
-
-ALLOWED_ATTRIBUTES = {
+BASE_ALLOWED_ATTRIBUTES = {
     "*": ["class", "title"],
     "a": ["href", "title", "target", "rel"],
     "img": ["src", "alt", "title", "width", "height", "loading"],
     "td": ["colspan", "rowspan"],
     "th": ["colspan", "rowspan"],
+}
+
+STYLE_ALLOWED_ATTRIBUTES = {
     "p": ["style", "class", "title"],
     "span": ["style", "class", "title"],
     "div": ["style", "class", "title"],
@@ -93,13 +103,11 @@ ALLOWED_ATTRIBUTES = {
     "th": ["style", "class", "title", "colspan", "rowspan"],
 }
 
-
 ALLOWED_PROTOCOLS = [
     "http",
     "https",
     "mailto",
 ]
-
 
 ALLOWED_CSS_PROPERTIES = [
     "text-align",
@@ -107,6 +115,8 @@ ALLOWED_CSS_PROPERTIES = [
     "background-color",
     "font-weight",
     "font-style",
+    "font-size",
+    "font-family",
     "text-decoration",
     "margin-left",
     "margin-right",
@@ -136,22 +146,42 @@ def _remove_dangerous_blocks(html: str) -> str:
     return cleaned
 
 
+def _allowed_attributes() -> Dict[str, List[str]]:
+    """
+    Ako CSSSanitizer postoji, smijemo pustiti sigurne style atribute.
+    Ako ne postoji, izbacujemo style atribute da bleach ne padne i da ne ode u fallback koji briše sav HTML.
+    """
+    attrs = {key: list(value) for key, value in BASE_ALLOWED_ATTRIBUTES.items()}
+
+    if CSSSanitizer is not None:
+        for key, value in STYLE_ALLOWED_ATTRIBUTES.items():
+            existing = attrs.get(key, [])
+            attrs[key] = list(dict.fromkeys(existing + value))
+
+    return attrs
+
+
 def _normalize_links(html: str) -> str:
     if bleach is None:
         return html
 
-    # target="_blank" bez rel može biti sigurnosni problem.
     def add_rel(attrs, new=False):
-        href = attrs.get((None, "href"))
+        href_key = (None, "href") if (None, "href") in attrs else "href"
+        target_key = (None, "target") if (None, "target") in attrs else "target"
+        rel_key = (None, "rel") if (None, "rel") in attrs else "rel"
 
-        if href:
-            target = attrs.get((None, "target"))
-            if target == "_blank":
-                attrs[(None, "rel")] = "noopener noreferrer"
+        href = attrs.get(href_key)
+        target = attrs.get(target_key)
+
+        if href and target == "_blank":
+            attrs[rel_key] = "noopener noreferrer"
 
         return attrs
 
-    return bleach.linkifier.Linker(callbacks=[add_rel]).linkify(html)
+    try:
+        return bleach.linkifier.Linker(callbacks=[add_rel], skip_tags=["pre", "code"]).linkify(html)
+    except Exception:
+        return html
 
 
 def sanitize_post_html(html: str) -> str:
@@ -161,23 +191,24 @@ def sanitize_post_html(html: str) -> str:
     raw_html = _remove_dangerous_blocks(html or "")
 
     if bleach is None:
-        # Siguran fallback: spremi samo običan tekst.
-        return strip_tags(raw_html)
+        return strip_tags(raw_html).strip()
 
     css_sanitizer = None
     if CSSSanitizer is not None:
         css_sanitizer = CSSSanitizer(allowed_css_properties=ALLOWED_CSS_PROPERTIES)
 
-    cleaned = bleach.clean(
-        raw_html,
-        tags=ALLOWED_TAGS,
-        attributes=ALLOWED_ATTRIBUTES,
-        protocols=ALLOWED_PROTOCOLS,
-        strip=True,
-        strip_comments=True,
-        css_sanitizer=css_sanitizer,
-    )
+    clean_kwargs = {
+        "tags": ALLOWED_TAGS,
+        "attributes": _allowed_attributes(),
+        "protocols": ALLOWED_PROTOCOLS,
+        "strip": True,
+        "strip_comments": True,
+    }
 
+    if css_sanitizer is not None:
+        clean_kwargs["css_sanitizer"] = css_sanitizer
+
+    cleaned = bleach.clean(raw_html, **clean_kwargs)
     cleaned = _normalize_links(cleaned)
 
     return cleaned.strip()
