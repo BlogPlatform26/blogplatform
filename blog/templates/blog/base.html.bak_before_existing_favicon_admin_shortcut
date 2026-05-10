@@ -1292,9 +1292,6 @@
                             Uredi blog
                         </a>
                     </li>
-{% if user.is_staff %}
-<li><a class="dropdown-item" href="{% url 'admin:index' %}">Administracija</a></li>
-{% endif %}
                     <li><a class="dropdown-item" href="/profile/edit/">Postavke korisničkog računa</a></li>
                     <li><a class="dropdown-item" href="/password_change/">Promijeni lozinku</a></li>
                     <li><hr class="dropdown-divider"></li>
