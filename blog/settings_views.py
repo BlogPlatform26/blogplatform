@@ -11,6 +11,7 @@ from django.http import HttpResponseForbidden
 from django.shortcuts import get_object_or_404, redirect, render
 from django.utils import timezone
 from PIL import Image, UnidentifiedImageError
+from django.views.decorators.http import require_POST
 
 from blog.forms import PostForm, UserBoxForm
 from blog.models import (
@@ -240,6 +241,7 @@ def _first_form_error(form, default_message='Molimo popunite sva obavezna polja.
 
 
 @staff_member_required
+@require_POST
 def update_site_message(request):
     if not (request.user.is_authenticated and request.user.is_superuser):
         return HttpResponseForbidden('Nemaš ovlasti.')

@@ -1,0 +1,25 @@
+*** PUTANJA: blog/view_handlers/settings_views.py
+*** PROMJENA: update_site_message smije raditi samo preko POST metode.
+
+1) U importima, odmah ispod ovog reda:
+
+from django.urls import reverse
+
+DODAJ ovaj red:
+
+from django.views.decorators.http import require_POST
+
+
+2) Kod funkcije update_site_message, pronađi ovo:
+
+@staff_member_required
+def update_site_message(request):
+
+ZAMIJENI s ovim:
+
+@staff_member_required
+@require_POST
+def update_site_message(request):
+
+
+Ne mijenjaj ništa drugo u datoteci.
