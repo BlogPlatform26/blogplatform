@@ -200,8 +200,6 @@ AUTH_PASSWORD_VALIDATORS = [
 
 CKEDITOR_CONFIGS = {
     "minimal": {
-
-        "removePlugins": "exportpdf",
         "toolbar": [
             ["Font", "FontSize"],
             ["Bold", "Italic", "Underline"],
