@@ -12,13 +12,11 @@ class ContentSecurityPolicyMiddleware:
             return response
 
         header_name = "Content-Security-Policy"
-
         if getattr(settings, "CSP_REPORT_ONLY", False):
             header_name = "Content-Security-Policy-Report-Only"
 
         if header_name not in response:
             policy = self.build_policy(getattr(settings, "CSP_DIRECTIVES", {}))
-
             if policy:
                 response[header_name] = policy
 
@@ -35,10 +33,8 @@ class ContentSecurityPolicyMiddleware:
                 values = [values]
 
             clean_values = []
-
             for value in values:
                 value = str(value).strip()
-
                 if value:
                     clean_values.append(value)
 

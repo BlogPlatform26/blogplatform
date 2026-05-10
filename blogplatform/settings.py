@@ -116,6 +116,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    "blogplatform.csp.ContentSecurityPolicyMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -350,6 +351,52 @@ X_FRAME_OPTIONS = os.environ.get(
     "X_FRAME_OPTIONS",
     "DENY" if IS_PRODUCTION else "SAMEORIGIN",
 )
+
+# ==========================================================
+# CONTENT SECURITY POLICY (CSP)
+# ==========================================================
+# Prvo koristimo report-only način. To znači da browser samo prijavi
+# što bi CSP blokirao, ali stranica se ne bi trebala pokvariti.
+# Kasnije, kad sve testiramo, CSP_REPORT_ONLY se može postaviti na False.
+CSP_ENABLED = env_bool("CSP_ENABLED", default=True)
+CSP_REPORT_ONLY = env_bool("CSP_REPORT_ONLY", default=True)
+
+CSP_DIRECTIVES = {
+    "default-src": ["'self'"],
+    "script-src": [
+        "'self'",
+        "'unsafe-inline'",
+        "'unsafe-eval'",
+        "https://cdn.jsdelivr.net",
+        "https://cdnjs.cloudflare.com",
+        "https://unpkg.com",
+        "https://challenges.cloudflare.com",
+    ],
+    "style-src": [
+        "'self'",
+        "'unsafe-inline'",
+        "https://cdn.jsdelivr.net",
+        "https://cdnjs.cloudflare.com",
+        "https://unpkg.com",
+        "https://fonts.googleapis.com",
+    ],
+    "img-src": ["'self'", "data:", "blob:", "https:"],
+    "font-src": [
+        "'self'",
+        "data:",
+        "https://cdn.jsdelivr.net",
+        "https://cdnjs.cloudflare.com",
+        "https://fonts.gstatic.com",
+    ],
+    "connect-src": ["'self'", "https://challenges.cloudflare.com"],
+    "media-src": ["'self'", "data:", "blob:"],
+    "frame-src": ["'self'", "https://challenges.cloudflare.com"],
+    "worker-src": ["'self'", "blob:"],
+    "object-src": ["'none'"],
+    "base-uri": ["'self'"],
+    "form-action": ["'self'"],
+    "frame-ancestors": ["'self'"],
+}
 
 # HTTPS produkcijske postavke
 if IS_PRODUCTION:
