@@ -338,22 +338,7 @@
         {% elif settings_tab == 'sigurnost' %}
             <div class="card p-4 mb-4 shadow-sm">
                 <h5 class="mb-1">Sigurnost i privatnost</h5>
-                <div class="text-muted small">Ovdje upravljaš blokiranim i ograničenim korisnicima.
-
-<div class="card border-0 shadow-sm mb-4">
-    <div class="card-body">
-        <h5 class="card-title mb-2">Izvoz mojih postova</h5>
-        <p class="text-muted mb-3">
-            Preuzmi ZIP datoteku sa svojim postovima. U izvoz ulaze tvoji postovi,
-            HTML prikaz postova, JSON/CSV pregled i slike koje pripadaju postovima.
-            Komentari drugih korisnika, lajkovi, notifikacije i sigurnosni zapisi nisu uključeni.
-        </p>
-        <a href="{% url 'export_my_posts' %}" class="btn btn-outline-primary">
-            Preuzmi moje postove
-        </a>
-    </div>
-</div>
-</div>
+                <div class="text-muted small">Ovdje upravljaš blokiranim i ograničenim korisnicima.</div>
             </div>
         {% endif %}
 
