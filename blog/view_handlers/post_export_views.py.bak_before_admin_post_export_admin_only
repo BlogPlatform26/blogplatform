@@ -6,17 +6,14 @@ import zipfile
 from pathlib import Path
 
 from django.conf import settings
-from django.contrib.auth import get_user_model
 from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.db.models import Count
 from django.http import HttpResponse
-from django.shortcuts import get_object_or_404, render
 from django.shortcuts import get_object_or_404
 from django.urls import reverse
 from django.utils import timezone
-from django.db.models import Q
 from django.utils.text import slugify
 
 from blog.models import Comment, Like, PollOption, Post, PostImage, QuizOption
