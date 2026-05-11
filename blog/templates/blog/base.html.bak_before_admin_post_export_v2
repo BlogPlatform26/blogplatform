@@ -1294,6 +1294,9 @@
                     </li>
 {% if user.is_staff %}
 <li><a class="dropdown-item" href="{% url 'admin:index' %}">Administracija</a></li>
+{% if request.user.is_staff %}
+<li><a class="dropdown-item" href="{% url 'admin_post_exports' %}">Izvoz postova korisnika</a></li>
+{% endif %}
 
 {% endif %}
                     <li><a class="dropdown-item" href="/profile/edit/">Postavke korisničkog računa</a></li>

@@ -1,0 +1,55 @@
+{% extends "admin/base_site.html" %}
+
+{% block content %}
+<div id="content-main">
+    <h1>Izvoz postova korisnika</h1>
+
+    <p>
+        Ovdje administrator može preuzeti ZIP s postovima odabranog korisnika.
+        Izvoz uključuje HTML postove i slike koje pripadaju postovima.
+    </p>
+
+    <p>
+        Ne izvoze se komentari drugih korisnika, notifikacije, IP adrese ni sigurnosni događaji.
+    </p>
+
+    <form method="get" style="margin: 20px 0;">
+        <label for="q"><strong>Pretraži korisnika:</strong></label>
+        <input type="text" name="q" id="q" value="{{ q }}" style="min-width: 280px;">
+        <button type="submit" class="button">Traži</button>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Korisnik</th>
+                <th>Email</th>
+                <th>Broj postova</th>
+                <th>Akcija</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in users_with_counts %}
+                <tr>
+                    <td>{{ row.user.username }}</td>
+                    <td>{{ row.user.email|default:"-" }}</td>
+                    <td>{{ row.post_count }}</td>
+                    <td>
+                        {% if row.post_count %}
+                            <a class="button" href="{% url 'admin_export_user_posts' row.user.id %}">
+                                Preuzmi postove
+                            </a>
+                        {% else %}
+                            <span style="color: #777;">Nema postova</span>
+                        {% endif %}
+                    </td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="4">Nema korisnika za prikaz.</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

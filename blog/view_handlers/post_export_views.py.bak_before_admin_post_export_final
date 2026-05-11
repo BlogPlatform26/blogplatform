@@ -1,0 +1,520 @@
+import html
+import io
+import os
+import re
+import zipfile
+from pathlib import Path
+
+from django.conf import settings
+from django.contrib.auth import get_user_model
+from django.contrib.admin.views.decorators import staff_member_required
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
+from django.db.models import Count
+from django.http import HttpResponse
+from django.shortcuts import get_object_or_404, render
+from django.shortcuts import get_object_or_404
+from django.urls import reverse
+from django.utils import timezone
+from django.db.models import Q
+from django.utils.text import slugify
+
+from blog.models import Comment, Like, PollOption, Post, PostImage, QuizOption
+
+try:
+    from blog.security import log_security_event
+except Exception:  # pragma: no cover
+    log_security_event = None
+
+
+_MEDIA_ATTR_RE = re.compile(r'(?P<attr>\b(?:src|href)=)(?P<quote>["\'])(?P<url>[^"\']+)(?P=quote)', re.IGNORECASE)
+
+
+def _safe_text(value, fallback=""):
+    if value is None:
+        return fallback
+    return str(value)
+
+
+def _first_attr(obj, names, fallback=""):
+    for name in names:
+        if hasattr(obj, name):
+            value = getattr(obj, name)
+            if value not in (None, ""):
+                return value
+    return fallback
+
+
+def _format_dt(value):
+    if not value:
+        return ""
+    try:
+        return timezone.localtime(value).strftime("%d.%m.%Y. %H:%M")
+    except Exception:
+        return str(value)
+
+
+def _post_status(post):
+    if getattr(post, "is_deleted", False):
+        return "U otpadu"
+    if getattr(post, "is_draft", False):
+        return "Nacrt"
+    status = getattr(post, "status", "")
+    if status:
+        return str(status)
+    if getattr(post, "published_at", None):
+        return "Objavljeno"
+    return "Objavljeno"
+
+
+def _archive_name_for_user(user):
+    username = slugify(user.username) or "korisnik"
+    timestamp = timezone.now().strftime("%Y%m%d_%H%M%S")
+    return f"postovi_{username}_{timestamp}.zip"
+
+
+def _safe_post_filename(post, used_names):
+    title = _safe_text(getattr(post, "title", "post"), "post")
+    slug = slugify(title) or f"post-{post.pk}"
+    filename = f"{slug}-{post.pk}.html"
+    counter = 2
+    while filename in used_names:
+        filename = f"{slug}-{post.pk}-{counter}.html"
+        counter += 1
+    used_names.add(filename)
+    return filename
+
+
+def _media_relative_name(field_file):
+    try:
+        name = field_file.name
+    except Exception:
+        return ""
+    return str(name or "").replace("\\", "/").lstrip("/")
+
+
+def _add_media_file(zip_file, field_file, copied_media):
+    relative_name = _media_relative_name(field_file)
+    if not relative_name:
+        return ""
+
+    zip_name = f"media/{relative_name}"
+    if zip_name in copied_media:
+        return zip_name
+
+    try:
+        file_path = Path(field_file.path)
+    except Exception:
+        file_path = None
+
+    if file_path and file_path.exists() and file_path.is_file():
+        zip_file.write(file_path, zip_name)
+        copied_media.add(zip_name)
+        return zip_name
+
+    try:
+        field_file.open("rb")
+        zip_file.writestr(zip_name, field_file.read())
+        field_file.close()
+        copied_media.add(zip_name)
+        return zip_name
+    except Exception:
+        return ""
+
+
+def _add_media_from_url(zip_file, url, copied_media):
+    if not url:
+        return ""
+
+    media_url = getattr(settings, "MEDIA_URL", "/media/") or "/media/"
+    normalized_url = url.split("?", 1)[0].split("#", 1)[0]
+
+    if normalized_url.startswith(media_url):
+        relative_name = normalized_url[len(media_url):].lstrip("/")
+    elif normalized_url.startswith("/media/"):
+        relative_name = normalized_url[len("/media/"):].lstrip("/")
+    else:
+        return ""
+
+    if not relative_name or ".." in Path(relative_name).parts:
+        return ""
+
+    source_path = Path(settings.MEDIA_ROOT) / relative_name
+    zip_name = f"media/{relative_name.replace('\\', '/')}"
+
+    if zip_name in copied_media:
+        return zip_name
+
+    if source_path.exists() and source_path.is_file():
+        zip_file.write(source_path, zip_name)
+        copied_media.add(zip_name)
+        return zip_name
+
+    return ""
+
+
+def _localize_media_links(content, zip_file, copied_media):
+    if not content:
+        return ""
+
+    def replace(match):
+        attr = match.group("attr")
+        quote = match.group("quote")
+        url = match.group("url")
+        zip_name = _add_media_from_url(zip_file, url, copied_media)
+        if not zip_name:
+            return match.group(0)
+        local_url = "../" + zip_name
+        return f"{attr}{quote}{local_url}{quote}"
+
+    return _MEDIA_ATTR_RE.sub(replace, content)
+
+
+def _post_images(post, zip_file, copied_media):
+    images = []
+
+    for field_name in ("image", "cover_image", "featured_image"):
+        field_file = getattr(post, field_name, None)
+        if field_file:
+            zip_name = _add_media_file(zip_file, field_file, copied_media)
+            if zip_name:
+                images.append((zip_name, ""))
+
+    try:
+        qs = PostImage.objects.filter(post=post)
+    except Exception:
+        qs = []
+
+    for image_obj in qs:
+        field_file = _first_attr(image_obj, ("image", "file", "photo"), None)
+        if not field_file:
+            continue
+        zip_name = _add_media_file(zip_file, field_file, copied_media)
+        if zip_name:
+            caption = _first_attr(image_obj, ("caption", "title", "alt_text"), "")
+            images.append((zip_name, _safe_text(caption)))
+
+    return images
+
+
+def _post_poll_options(post):
+    options = []
+    try:
+        qs = PollOption.objects.filter(post=post)
+    except Exception:
+        qs = []
+    for option in qs:
+        text = _first_attr(option, ("text", "option_text", "title", "label"), "")
+        votes = _first_attr(option, ("votes", "vote_count", "count"), "")
+        options.append({"text": _safe_text(text), "votes": _safe_text(votes)})
+    return options
+
+
+def _post_quiz_options(post):
+    options = []
+    try:
+        qs = QuizOption.objects.filter(post=post)
+    except Exception:
+        qs = []
+    for option in qs:
+        text = _first_attr(option, ("text", "option_text", "title", "label"), "")
+        is_correct = bool(getattr(option, "is_correct", False))
+        options.append({"text": _safe_text(text), "is_correct": is_correct})
+    return options
+
+
+def _post_counts(post):
+    try:
+        comments_count = Comment.objects.filter(post=post).count()
+    except Exception:
+        comments_count = 0
+    try:
+        likes_count = Like.objects.filter(post=post).count()
+    except Exception:
+        likes_count = 0
+    return comments_count, likes_count
+
+
+def _render_post_html(post, content, images):
+    title = html.escape(_safe_text(getattr(post, "title", "Bez naslova"), "Bez naslova"))
+    created_at = html.escape(_format_dt(getattr(post, "created_at", None)))
+    published_at = html.escape(_format_dt(getattr(post, "published_at", None)))
+    status = html.escape(_post_status(post))
+    category = getattr(getattr(post, "category", None), "name", "")
+    category = html.escape(_safe_text(category))
+
+    try:
+        tags = ", ".join(str(tag) for tag in post.tags.all())
+    except Exception:
+        tags = ""
+    tags = html.escape(tags)
+
+    comments_count, likes_count = _post_counts(post)
+    poll_options = _post_poll_options(post)
+    quiz_options = _post_quiz_options(post)
+
+    image_html = ""
+    if images:
+        image_parts = []
+        for zip_name, caption in images:
+            src = "../" + zip_name
+            image_parts.append(
+                f'<figure><img src="{html.escape(src)}" alt="" style="max-width:100%;height:auto;">'
+                f'<figcaption>{html.escape(caption)}</figcaption></figure>'
+            )
+        image_html = "<h2>Slike</h2>" + "\n".join(image_parts)
+
+    poll_html = ""
+    if poll_options:
+        item_parts = []
+        for opt in poll_options:
+            votes_text = f" — glasovi: {html.escape(opt['votes'])}" if opt["votes"] else ""
+            item_parts.append(f"<li>{html.escape(opt['text'])}{votes_text}</li>")
+        items = "".join(item_parts)
+        poll_html = f"<h2>Anketa</h2><ul>{items}</ul>"
+
+    quiz_html = ""
+    if quiz_options:
+        items = "".join(
+            f"<li>{html.escape(opt['text'])}"
+            f"{' — točan odgovor' if opt['is_correct'] else ''}</li>"
+            for opt in quiz_options
+        )
+        quiz_html = f"<h2>Kviz</h2><ul>{items}</ul>"
+
+    return f"""<!doctype html>
+<html lang="hr">
+<head>
+  <meta charset="utf-8">
+  <title>{title}</title>
+  <style>
+    body {{ font-family: Arial, sans-serif; line-height: 1.6; max-width: 900px; margin: 40px auto; padding: 0 18px; color: #222; }}
+    .meta {{ background: #f5f5f5; border: 1px solid #ddd; padding: 12px; border-radius: 8px; margin-bottom: 24px; }}
+    img {{ border-radius: 8px; }}
+    a {{ color: #0d6efd; }}
+  </style>
+</head>
+<body>
+  <p><a href="../index.html">← Povratak na popis postova</a></p>
+  <h1>{title}</h1>
+  <div class="meta">
+    <div><strong>Status:</strong> {status}</div>
+    <div><strong>Kreirano:</strong> {created_at}</div>
+    <div><strong>Objavljeno:</strong> {published_at}</div>
+    <div><strong>Kategorija:</strong> {category}</div>
+    <div><strong>Tagovi:</strong> {tags}</div>
+    <div><strong>Lajkovi:</strong> {likes_count}</div>
+    <div><strong>Komentari:</strong> {comments_count}</div>
+  </div>
+  <article>{content}</article>
+  {image_html}
+  {poll_html}
+  {quiz_html}
+</body>
+</html>
+"""
+
+
+def _build_posts_export_zip(user, exported_by=None):
+    buffer = io.BytesIO()
+    used_names = set()
+    copied_media = set()
+    index_items = []
+
+    posts = Post.objects.filter(author=user).order_by("-created_at", "-id")
+
+    with zipfile.ZipFile(buffer, "w", zipfile.ZIP_DEFLATED) as zip_file:
+        for post in posts:
+            filename = _safe_post_filename(post, used_names)
+            raw_content = _safe_text(getattr(post, "content", ""))
+            content = _localize_media_links(raw_content, zip_file, copied_media)
+            images = _post_images(post, zip_file, copied_media)
+            post_html = _render_post_html(post, content, images)
+            zip_file.writestr(f"postovi_html/{filename}", post_html)
+
+            index_items.append(
+                {
+                    "title": _safe_text(getattr(post, "title", "Bez naslova"), "Bez naslova"),
+                    "filename": filename,
+                    "status": _post_status(post),
+                    "created_at": _format_dt(getattr(post, "created_at", None)),
+                    "published_at": _format_dt(getattr(post, "published_at", None)),
+                }
+            )
+
+        index_html = _render_index_html(user, index_items, exported_by)
+        zip_file.writestr("index.html", index_html)
+        zip_file.writestr("README.txt", _render_readme(user, len(index_items), exported_by))
+
+    buffer.seek(0)
+    return buffer
+
+
+def _render_index_html(user, items, exported_by=None):
+    username = html.escape(user.username)
+    blog_name = html.escape(getattr(getattr(user, "profile", None), "blog_name", "") or user.username)
+    exported_at = html.escape(timezone.localtime(timezone.now()).strftime("%d.%m.%Y. %H:%M"))
+    exported_by_text = ""
+    if exported_by and exported_by != user:
+        exported_by_text = f"<p><strong>Izvoz napravio admin:</strong> {html.escape(exported_by.username)}</p>"
+
+    if items:
+        rows = "".join(
+            "<tr>"
+            f"<td><a href=\"postovi_html/{html.escape(item['filename'])}\">{html.escape(item['title'])}</a></td>"
+            f"<td>{html.escape(item['status'])}</td>"
+            f"<td>{html.escape(item['created_at'])}</td>"
+            f"<td>{html.escape(item['published_at'])}</td>"
+            "</tr>"
+            for item in items
+        )
+    else:
+        rows = '<tr><td colspan="4">Nema postova za izvoz.</td></tr>'
+
+    return f"""<!doctype html>
+<html lang="hr">
+<head>
+  <meta charset="utf-8">
+  <title>Izvoz postova - {blog_name}</title>
+  <style>
+    body {{ font-family: Arial, sans-serif; line-height: 1.5; max-width: 1000px; margin: 40px auto; padding: 0 18px; color: #222; }}
+    table {{ width: 100%; border-collapse: collapse; margin-top: 20px; }}
+    th, td {{ border: 1px solid #ddd; padding: 10px; text-align: left; }}
+    th {{ background: #f5f5f5; }}
+    a {{ color: #0d6efd; }}
+  </style>
+</head>
+<body>
+  <h1>Izvoz postova</h1>
+  <p><strong>Korisnik:</strong> {username}</p>
+  <p><strong>Naziv bloga:</strong> {blog_name}</p>
+  <p><strong>Vrijeme izvoza:</strong> {exported_at}</p>
+  {exported_by_text}
+  <p>Prvo raspakiraj ZIP, zatim otvori ovu datoteku. Linkovi i slike najbolje rade iz raspakiranog foldera.</p>
+  <table>
+    <thead>
+      <tr><th>Post</th><th>Status</th><th>Kreirano</th><th>Objavljeno</th></tr>
+    </thead>
+    <tbody>{rows}</tbody>
+  </table>
+</body>
+</html>
+"""
+
+
+def _render_readme(user, count, exported_by=None):
+    lines = [
+        "Izvoz postova",
+        "==============",
+        "",
+        f"Korisnik: {user.username}",
+        f"Broj postova: {count}",
+        f"Vrijeme izvoza: {timezone.localtime(timezone.now()).strftime('%d.%m.%Y. %H:%M')}",
+        "",
+        "Kako koristiti:",
+        "1. Raspakiraj ZIP u običan folder.",
+        "2. Otvori index.html.",
+        "3. Klikni na post koji želiš otvoriti.",
+        "",
+        "U izvoz ne ulaze komentari drugih korisnika, notifikacije, IP adrese ni sigurnosni događaji.",
+    ]
+    if exported_by and exported_by != user:
+        lines.insert(5, f"Izvoz napravio admin: {exported_by.username}")
+    return "\n".join(lines)
+
+
+def _export_response(user, exported_by=None):
+    buffer = _build_posts_export_zip(user, exported_by=exported_by)
+    filename = _archive_name_for_user(user)
+    response = HttpResponse(buffer.getvalue(), content_type="application/zip")
+    response["Content-Disposition"] = f'attachment; filename="{filename}"'
+    return response
+
+
+@login_required
+def export_my_posts(request):
+    if log_security_event:
+        log_security_event(
+            request=request,
+            event_type="post_export_self",
+            severity="info",
+            message="Korisnik je izvezao svoje postove.",
+            user=request.user,
+            username=request.user.username,
+        )
+    return _export_response(request.user, exported_by=request.user)
+
+
+@staff_member_required
+def admin_post_exports(request):
+    query = (request.GET.get("q") or "").strip()
+    users = User.objects.annotate(post_count=Count("post"))
+
+    if query:
+        users = users.filter(username__icontains=query)
+
+    users = users.filter(post_count__gt=0).order_by("username")[:200]
+
+    rows = "".join(
+        f"<tr>"
+        f"<td>{html.escape(user.username)}</td>"
+        f"<td>{html.escape(getattr(getattr(user, 'profile', None), 'blog_name', '') or '-')}</td>"
+        f"<td>{user.post_count}</td>"
+        f"<td><a class='button' href='{reverse('admin_export_user_posts', args=[user.username])}'>Preuzmi postove</a></td>"
+        f"</tr>"
+        for user in users
+    )
+
+    if not rows:
+        rows = "<tr><td colspan='4'>Nema korisnika s postovima za ovaj upit.</td></tr>"
+
+    page = f"""<!doctype html>
+<html lang="hr">
+<head>
+  <meta charset="utf-8">
+  <title>Izvoz postova korisnika</title>
+  <style>
+    body {{ font-family: Arial, sans-serif; line-height: 1.5; max-width: 1050px; margin: 40px auto; padding: 0 18px; color: #222; }}
+    table {{ width: 100%; border-collapse: collapse; margin-top: 20px; }}
+    th, td {{ border: 1px solid #ddd; padding: 10px; text-align: left; }}
+    th {{ background: #f5f5f5; }}
+    input {{ padding: 8px; min-width: 260px; }}
+    button, .button {{ display: inline-block; padding: 8px 12px; border: 1px solid #0d6efd; border-radius: 6px; background: #0d6efd; color: white; text-decoration: none; cursor: pointer; }}
+    a {{ color: #0d6efd; }}
+  </style>
+</head>
+<body>
+  <p><a href="/admin/">← Povratak u administraciju</a></p>
+  <h1>Izvoz postova korisnika</h1>
+  <p>Ovdje admin može preuzeti ZIP izvoz postova za određenog korisnika.</p>
+  <form method="get">
+    <label for="q">Pretraga po korisničkom imenu</label><br>
+    <input id="q" name="q" value="{html.escape(query)}" placeholder="npr. mario">
+    <button type="submit">Pretraži</button>
+  </form>
+  <table>
+    <thead>
+      <tr><th>Korisnik</th><th>Naziv bloga</th><th>Broj postova</th><th>Izvoz</th></tr>
+    </thead>
+    <tbody>{rows}</tbody>
+  </table>
+</body>
+</html>
+"""
+    return HttpResponse(page)
+
+
+@staff_member_required
+def admin_export_user_posts(request, username):
+    target_user = get_object_or_404(User, username=username)
+    if log_security_event:
+        log_security_event(
+            request=request,
+            event_type="post_export_admin",
+            severity="info",
+            message=f"Admin je izvezao postove korisnika {target_user.username}.",
+            user=request.user,
+            username=request.user.username,
+            metadata={"target_username": target_user.username, "target_user_id": target_user.id},
+        )
+    return _export_response(target_user, exported_by=request.user)
