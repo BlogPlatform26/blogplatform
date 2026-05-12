@@ -150,14 +150,45 @@ WSGI_APPLICATION = "blogplatform.wsgi.application"
 # ==========================================================
 # DATABASE
 # ==========================================================
+# Lokalno, bez DATABASE_URL, projekt ostaje na SQLite bazi:
+#   db.sqlite3
+#
+# Na hostingu, ako postaviš DATABASE_URL, projekt može koristiti PostgreSQL.
+# Primjer:
+#   DATABASE_URL=postgresql://korisnik:lozinka@host:5432/naziv_baze
+#
+# Važno:
+# - lokalno ne moraš ništa mijenjati
+# - PostgreSQL pakete treba instalirati tek kad stvarno koristiš DATABASE_URL
+def get_database_config():
+    database_url = os.environ.get("DATABASE_URL", "").strip()
 
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / os.environ.get("SQLITE_DB_NAME", "db.sqlite3"),
+    if database_url:
+        try:
+            import dj_database_url
+        except ImportError as exc:
+            raise RuntimeError(
+                "DATABASE_URL je postavljen, ali paket dj-database-url nije instaliran. "
+                "Za PostgreSQL hosting instaliraj: python -m pip install dj-database-url psycopg[binary]"
+            ) from exc
+
+        return {
+            "default": dj_database_url.parse(
+                database_url,
+                conn_max_age=env_int("DATABASE_CONN_MAX_AGE", 600),
+                ssl_require=env_bool("DATABASE_SSL_REQUIRE", default=not DEBUG),
+            )
+        }
+
+    return {
+        "default": {
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": BASE_DIR / os.environ.get("SQLITE_DB_NAME", "db.sqlite3"),
+        }
     }
-}
 
+
+DATABASES = get_database_config()
 
 # ==========================================================
 # PASSWORD HASHING / VALIDATION

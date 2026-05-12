@@ -1,0 +1,5 @@
+# Paketi potrebni tek kad na hostingu koristiš PostgreSQL preko DATABASE_URL.
+# Ne moraš ih instalirati sada ako lokalno ostaješ na SQLite.
+
+dj-database-url>=2.3,<3
+psycopg[binary]>=3.1.12,<4
