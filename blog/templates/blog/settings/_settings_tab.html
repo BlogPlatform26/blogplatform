@@ -441,3 +441,166 @@
     {% endif %}
 
 {% endif %}
+
+{# === Banner preview phase 4B === #}
+<style>
+    .banner-preview-phase4b {
+        margin-top: 14px;
+        padding: 14px;
+        border: 1px solid rgba(0, 0, 0, 0.12);
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.7);
+    }
+
+    .banner-preview-phase4b-title {
+        font-weight: 700;
+        margin-bottom: 6px;
+    }
+
+    .banner-preview-phase4b-help {
+        margin-bottom: 10px;
+        font-size: 0.92rem;
+        opacity: 0.75;
+    }
+
+    .banner-preview-phase4b-frame {
+        width: 100%;
+        max-width: 820px;
+        aspect-ratio: 4 / 1;
+        border-radius: 16px;
+        border: 1px dashed rgba(0, 0, 0, 0.25);
+        background-color: rgba(0, 0, 0, 0.04);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        color: rgba(0, 0, 0, 0.55);
+        text-align: center;
+        padding: 12px;
+    }
+
+    .banner-preview-phase4b-frame.has-image {
+        color: transparent;
+    }
+</style>
+
+<script>
+(function () {
+    function ready(fn) {
+        if (document.readyState !== "loading") {
+            fn();
+        } else {
+            document.addEventListener("DOMContentLoaded", fn);
+        }
+    }
+
+    ready(function () {
+        const fileInput = document.querySelector(
+            'input[type="file"][name="blog_banner"], input[type="file"][id*="blog_banner"], input[type="file"][name*="banner"]'
+        );
+
+        if (!fileInput) {
+            return;
+        }
+
+        if (document.querySelector(".banner-preview-phase4b")) {
+            return;
+        }
+
+        const wrapper = document.createElement("div");
+        wrapper.className = "banner-preview-phase4b";
+        wrapper.innerHTML = `
+            <div class="banner-preview-phase4b-title">Preview bannera prije spremanja</div>
+            <div class="banner-preview-phase4b-help">
+                Odaberi novu sliku i odmah ćeš vidjeti kako bi otprilike izgledala na vrhu bloga.
+                Pozicija slike prati odabir lijevo / sredina / desno.
+            </div>
+            <div class="banner-preview-phase4b-frame">
+                Ovdje će se prikazati preview nove banner slike.
+            </div>
+        `;
+
+        const insertTarget = fileInput.closest(".mb-3, .form-group, .card-body, div") || fileInput.parentElement;
+        insertTarget.insertAdjacentElement("afterend", wrapper);
+
+        const frame = wrapper.querySelector(".banner-preview-phase4b-frame");
+
+        function getPositionValue() {
+            const selectedRadio = document.querySelector(
+                'input[name="blog_banner_position"]:checked, input[name*="banner_position"]:checked'
+            );
+            if (selectedRadio) {
+                return selectedRadio.value;
+            }
+
+            const select = document.querySelector(
+                'select[name="blog_banner_position"], select[name*="banner_position"]'
+            );
+            if (select) {
+                return select.value;
+            }
+
+            return "center";
+        }
+
+        function normalizePosition(value) {
+            value = String(value || "center").toLowerCase();
+
+            if (value.includes("left") || value.includes("lijevo")) {
+                return "left center";
+            }
+
+            if (value.includes("right") || value.includes("desno")) {
+                return "right center";
+            }
+
+            return "center center";
+        }
+
+        function updatePosition() {
+            frame.style.backgroundPosition = normalizePosition(getPositionValue());
+        }
+
+        document.querySelectorAll(
+            'input[name="blog_banner_position"], input[name*="banner_position"], select[name="blog_banner_position"], select[name*="banner_position"]'
+        ).forEach(function (control) {
+            control.addEventListener("change", updatePosition);
+        });
+
+        fileInput.addEventListener("change", function () {
+            const file = fileInput.files && fileInput.files[0];
+
+            if (!file) {
+                frame.classList.remove("has-image");
+                frame.style.backgroundImage = "";
+                frame.textContent = "Ovdje će se prikazati preview nove banner slike.";
+                return;
+            }
+
+            if (!file.type || !file.type.startsWith("image/")) {
+                frame.classList.remove("has-image");
+                frame.style.backgroundImage = "";
+                frame.textContent = "Odabrana datoteka nije slika.";
+                return;
+            }
+
+            const reader = new FileReader();
+
+            reader.onload = function (event) {
+                frame.textContent = "";
+                frame.classList.add("has-image");
+                frame.style.backgroundImage = `url("${event.target.result}")`;
+                updatePosition();
+            };
+
+            reader.readAsDataURL(file);
+        });
+
+        updatePosition();
+    });
+})();
+</script>
+

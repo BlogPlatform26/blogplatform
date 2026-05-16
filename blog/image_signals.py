@@ -1,7 +1,7 @@
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 
-from .image_utils import optimize_image_field
+from .image_utils import optimize_blog_banner_field, optimize_image_field
 from .models import (
     CategoryHomeImage,
     Post,
@@ -24,7 +24,7 @@ def optimize_post_extra_image(sender, instance, **kwargs):
 @receiver(post_save, sender=Profile)
 def optimize_profile_images(sender, instance, **kwargs):
     optimize_image_field(instance, "avatar")
-    optimize_image_field(instance, "blog_banner")
+    optimize_blog_banner_field(instance, "blog_banner")
     optimize_image_field(instance, "simple_background_image")
     optimize_image_field(instance, "soho_hero_image")
 

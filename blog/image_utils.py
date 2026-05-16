@@ -8,7 +8,16 @@ DEFAULT_MAX_WIDTH = int(os.environ.get("IMAGE_OPTIMIZE_MAX_WIDTH", 1600))
 DEFAULT_MAX_HEIGHT = int(os.environ.get("IMAGE_OPTIMIZE_MAX_HEIGHT", 1600))
 DEFAULT_QUALITY = int(os.environ.get("IMAGE_OPTIMIZE_QUALITY", 82))
 
+BLOG_BANNER_MAX_WIDTH = int(os.environ.get("BLOG_BANNER_MAX_WIDTH", 2200))
+BLOG_BANNER_MAX_HEIGHT = int(os.environ.get("BLOG_BANNER_MAX_HEIGHT", 900))
+BLOG_BANNER_QUALITY = int(os.environ.get("BLOG_BANNER_OPTIMIZE_QUALITY", 82))
+
 SUPPORTED_FORMATS = {"JPEG", "PNG", "WEBP"}
+
+try:
+    RESAMPLE_LANCZOS = Image.Resampling.LANCZOS
+except AttributeError:
+    RESAMPLE_LANCZOS = Image.LANCZOS
 
 
 def _safe_int(value, default):
@@ -44,13 +53,14 @@ def optimize_image_path(path, max_width=None, max_height=None, quality=None):
             img = ImageOps.exif_transpose(img)
 
             if img.width > max_width or img.height > max_height:
-                img.thumbnail((max_width, max_height), Image.Resampling.LANCZOS)
+                img.thumbnail((max_width, max_height), RESAMPLE_LANCZOS)
 
             save_kwargs = {}
 
             if image_format == "JPEG":
                 if img.mode not in ("RGB", "L"):
                     img = img.convert("RGB")
+
                 save_kwargs.update({
                     "format": "JPEG",
                     "quality": quality,
@@ -99,4 +109,19 @@ def optimize_image_field(instance, field_name, max_width=None, max_height=None, 
         max_width=max_width,
         max_height=max_height,
         quality=quality,
+    )
+
+
+def optimize_blog_banner_field(instance, field_name="blog_banner"):
+    """
+    Banner ima svoja pravila jer treba biti širi od običnih slika.
+    Ako je veći od 2200 x 900 px, automatski se smanjuje unutar tih granica.
+    Slika se ne reže automatski, samo se smanjuje i komprimira.
+    """
+    return optimize_image_field(
+        instance,
+        field_name,
+        max_width=BLOG_BANNER_MAX_WIDTH,
+        max_height=BLOG_BANNER_MAX_HEIGHT,
+        quality=BLOG_BANNER_QUALITY,
     )

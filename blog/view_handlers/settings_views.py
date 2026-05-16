@@ -62,7 +62,7 @@ from blog.services import (
 from blog.security import log_security_event
 
 
-MAX_BLOG_BANNER_SIZE = 2 * 1024 * 1024
+MAX_BLOG_BANNER_SIZE = 8 * 1024 * 1024
 MAX_BLOG_BANNER_WIDTH = 2200
 MAX_BLOG_BANNER_HEIGHT = 900
 MAX_BOXES_PER_SIDE = 3
@@ -416,15 +416,20 @@ def validate_box_layout_counts(layout_items):
 
 
 def validate_blog_banner(upload):
+    """
+    Provjerava samo je li banner sigurna slikovna datoteka i nije li pretežak za upload.
+    Dimenzije više ne odbijamo ovdje jer se banner nakon spremanja automatski smanjuje.
+    """
     if not upload:
         return None
 
     if upload.size > MAX_BLOG_BANNER_SIZE:
-        return 'Banner slika je prevelika. Maksimalna veličina je 2 MB.'
+        max_mb = MAX_BLOG_BANNER_SIZE // (1024 * 1024)
+        return f'Banner slika je prevelika. Maksimalna veličina za upload je {max_mb} MB.'
 
     try:
         image = Image.open(upload)
-        width, height = image.size
+        image.verify()
         upload.seek(0)
     except (UnidentifiedImageError, OSError, ValueError):
         try:
@@ -433,14 +438,7 @@ def validate_blog_banner(upload):
             pass
         return 'Banner slika nije ispravna slikovna datoteka.'
 
-    if width > MAX_BLOG_BANNER_WIDTH or height > MAX_BLOG_BANNER_HEIGHT:
-        return (
-            'Banner slika je prevelikih dimenzija. '
-            f'Maksimalno je dopušteno {MAX_BLOG_BANNER_WIDTH} x {MAX_BLOG_BANNER_HEIGHT} px.'
-        )
-
     return None
-
 
 def validate_design_background_upload(upload):
     if not upload:
