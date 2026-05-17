@@ -68,6 +68,8 @@ MAX_BLOG_BANNER_HEIGHT = 900
 MAX_BOXES_PER_SIDE = 3
 MAX_CUSTOM_CURSOR_SIZE = 512 * 1024
 ALLOWED_CUSTOM_CURSOR_EXTENSIONS = {'.png', '.svg', '.webp', '.cur'}
+BANNER_DISPLAY_CHOICES = {'cover', 'contain'}
+BANNER_FOCUS_CHOICES = {'top', 'center', 'bottom'}
 
 
 DESIGN_TEMPLATE_META = {
@@ -1396,6 +1398,7 @@ def blog_settings(request):
                 selected_position = request.POST.get('blog_banner_position')
                 if selected_position in {'left', 'center', 'right'} and profile.blog_banner_position != selected_position:
                     profile.blog_banner_position = selected_position
+
                     banner_changed = True
                     settings_changed = True
 
@@ -1406,7 +1409,60 @@ def blog_settings(request):
                     banner_changed = True
                     settings_changed = True
 
-                if request.FILES.get('blog_banner'):
+                cropped_banner_data = request.POST.get('cropped_blog_banner')
+
+                if cropped_banner_data:
+
+                    try:
+
+                        image_format, imgstr = cropped_banner_data.split(';base64,')
+
+                        ext = image_format.split('/')[-1].lower()
+
+                        if ext == 'jpeg':
+
+                            ext = 'jpg'
+
+                        file = ContentFile(base64.b64decode(imgstr), name=f'blog_banner.{ext}')
+
+                    except (ValueError, TypeError, base64.binascii.Error):
+
+                        messages.error(request, 'Banner sliku nije moguće spremiti. Pokušaj ponovno.')
+
+                        return redirect(f'/blog/settings/?tab=postavke&settings_tab={settings_tab}')
+
+                
+
+                    banner_error = validate_blog_banner(file)
+
+                    if banner_error:
+
+                        messages.error(request, banner_error)
+
+                        return redirect(f'/blog/settings/?tab=postavke&settings_tab={settings_tab}')
+
+                    try:
+
+                        file.seek(0)
+
+                    except Exception:
+
+                        pass
+
+                
+
+                    if profile.blog_banner and profile.blog_banner.name:
+
+                        profile.blog_banner.delete(save=False)
+
+                    profile.blog_banner = file
+
+                    banner_changed = True
+
+                    settings_changed = True
+
+                elif request.FILES.get('blog_banner'):
+
                     new_banner = request.FILES['blog_banner']
                     banner_error = validate_blog_banner(new_banner)
                     if banner_error:

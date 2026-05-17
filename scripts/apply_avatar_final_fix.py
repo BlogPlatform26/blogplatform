@@ -1,4 +1,45 @@
-document.addEventListener("DOMContentLoaded", function () {
+from pathlib import Path
+from datetime import datetime
+import re
+
+ROOT = Path.cwd()
+HTML_PATH = ROOT / "blog" / "templates" / "blog" / "settings" / "_settings_tab.html"
+JS_PATH = ROOT / "blog" / "static" / "blog" / "js" / "blog_settings_avatar.js"
+STAMP = datetime.now().strftime("%Y%m%d_%H%M%S")
+BACKUP_DIR = ROOT / "scripts" / "_avatar_final_backup"
+BACKUP_DIR.mkdir(parents=True, exist_ok=True)
+
+for path in (HTML_PATH, JS_PATH):
+    if path.exists():
+        backup = BACKUP_DIR / f"{path.name}.{STAMP}.bak"
+        backup.write_text(path.read_text(encoding="utf-8"), encoding="utf-8")
+        print(f"Backup: {backup}")
+    else:
+        raise FileNotFoundError(f"Ne postoji: {path}")
+
+html = HTML_PATH.read_text(encoding="utf-8")
+
+# Profesionalniji tekstovi bez diranja strukture forme/modala.
+replacements = {
+    "Okrugli izrez kao na Gmailu, s pomicanjem, zumom i rotacijom.": "Uredite avatar prije spremanja.",
+    "Odaberi sliku, pomakni kadar, zumiraj i spremi okrugli izrez.": "Odaberite sliku i namjestite izrez avatara.",
+    "Obrezivanje avatara": "Uređivanje avatara",
+    "Povuci sliku, zumiraj i spremi okrugli izrez.": "Namjestite sliku unutar okvira prije spremanja.",
+    "Zum": "Uvećanje",
+    "Reset": "Vrati",
+}
+for old, new in replacements.items():
+    html = html.replace(old, new)
+
+# Ako je prijašnji pokušaj ubacio CSS kao tekst u gumbe, popravi najčešće kvarove.
+html = re.sub(r">\s*padding:[^<]*>\s*Zakreni\s*<", ">Zakreni<", html, flags=re.S)
+html = re.sub(r">\s*padding:[^<]*>\s*Vrati\s*<", ">Vrati<", html, flags=re.S)
+html = re.sub(r">\s*padding:[^<]*>\s*Reset\s*<", ">Vrati<", html, flags=re.S)
+html = re.sub(r">\s*padding:[^<]*>\s*Primijeni avatar\s*<", ">Primijeni avatar<", html, flags=re.S)
+
+HTML_PATH.write_text(html, encoding="utf-8")
+
+js = r'''document.addEventListener("DOMContentLoaded", function () {
     let cropper = null;
     let avatarModal = null;
     let pendingImageSource = "";
@@ -532,3 +573,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+'''
+
+JS_PATH.write_text(js, encoding="utf-8")
+print("Gotovo: avatar editor je postavljen na stabilnu završnu verziju.")
+print("Pokreni: python manage.py check")
