@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+﻿document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("avatarForm");
     const input = document.getElementById("avatarInput");
     const triggerBtn = document.getElementById("avatarChangeBtn");
@@ -318,7 +318,27 @@ document.addEventListener("DOMContentLoaded", function () {
     frame.addEventListener("pointercancel", stopDragging);
     frame.addEventListener("pointerleave", stopDragging);
 
-    if (modalEl && zoomRange) { const avatarScrollZoomOnlyTarget = modalEl.querySelector(".avatar-crop-frame") || modalEl.querySelector(".avatar-crop-stage") || modalEl; avatarScrollZoomOnlyTarget.addEventListener("wheel", function (event) { if (!cropper || !zoomRange) return; event.preventDefault(); const currentValue = Number(zoomRange.value || 0); const minValue = Number(zoomRange.min || 0); const maxValue = Number(zoomRange.max || 100); const step = event.deltaY < 0 ? 5 : -5; const nextValue = Math.max(minValue, Math.min(maxValue, currentValue + step)); if (nextValue === currentValue) return; zoomRange.value = String(nextValue); setZoomFromRange(nextValue); }, { passive: false }); } if (rotateBtn) {
+    const avatarWheelArea = modalEl ? modalEl.querySelector(".avatar-crop-frame") : null;
+    if (avatarWheelArea && zoomRange) {
+        avatarWheelArea.addEventListener("wheel", function (event) {
+            if (!cropper) return;
+
+            event.preventDefault();
+
+            const minValue = Number(zoomRange.min || 0);
+            const maxValue = Number(zoomRange.max || 100);
+            const currentValue = Number(zoomRange.value || 0);
+            const step = event.deltaY < 0 ? 5 : -5;
+            const nextValue = Math.max(minValue, Math.min(maxValue, currentValue + step));
+
+            if (nextValue === currentValue) return;
+
+            zoomRange.value = String(nextValue);
+            setZoomFromRange(nextValue);
+        }, { passive: false });
+    }
+
+    if (frame && zoomRange) { frame.addEventListener("wheel", function (event) { if (!imageLoaded) return; event.preventDefault(); const currentValue = Number(zoomRange.value || 0); const minValue = Number(zoomRange.min || 0); const maxValue = Number(zoomRange.max || 100); const step = event.deltaY < 0 ? 4 : -4; const nextValue = Math.max(minValue, Math.min(maxValue, currentValue + step)); if (nextValue === currentValue) return; zoomRange.value = String(nextValue); handleZoomChange(); }, { passive: false }); } if (rotateBtn) {
         rotateBtn.addEventListener("click", function () {
             if (!imageLoaded) return;
             state.rotation = (state.rotation + 90) % 360;
@@ -371,4 +391,26 @@ document.addEventListener("DOMContentLoaded", function () {
             }, { once: true });
         }
     }
+
+    /* avatarWheelZoomOnly */
+    if (modalEl && zoomRange) {
+        modalEl.addEventListener("wheel", function (event) {
+            const isInsideAvatarEditor = event.target.closest(".avatar-crop-frame, .avatar-crop-stage, .cropper-container");
+
+            if (!isInsideAvatarEditor || !cropper) {
+                return;
+            }
+
+            event.preventDefault();
+
+            const currentValue = Number(zoomRange.value || 0);
+            const step = event.deltaY < 0 ? 5 : -5;
+            const nextValue = Math.max(0, Math.min(100, currentValue + step));
+
+            zoomRange.value = String(nextValue);
+            setZoomFromRange(nextValue);
+        }, { passive: false });
+    }
 });
+
+
