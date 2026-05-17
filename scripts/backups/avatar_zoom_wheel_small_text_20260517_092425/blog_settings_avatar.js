@@ -318,7 +318,7 @@ document.addEventListener("DOMContentLoaded", function () {
     frame.addEventListener("pointercancel", stopDragging);
     frame.addEventListener("pointerleave", stopDragging);
 
-    if (modalEl && zoomRange) { const avatarScrollZoomOnlyTarget = modalEl.querySelector(".avatar-crop-frame") || modalEl.querySelector(".avatar-crop-stage") || modalEl; avatarScrollZoomOnlyTarget.addEventListener("wheel", function (event) { if (!cropper || !zoomRange) return; event.preventDefault(); const currentValue = Number(zoomRange.value || 0); const minValue = Number(zoomRange.min || 0); const maxValue = Number(zoomRange.max || 100); const step = event.deltaY < 0 ? 5 : -5; const nextValue = Math.max(minValue, Math.min(maxValue, currentValue + step)); if (nextValue === currentValue) return; zoomRange.value = String(nextValue); setZoomFromRange(nextValue); }, { passive: false }); } if (rotateBtn) {
+    if (rotateBtn) {
         rotateBtn.addEventListener("click", function () {
             if (!imageLoaded) return;
             state.rotation = (state.rotation + 90) % 360;

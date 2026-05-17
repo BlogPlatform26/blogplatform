@@ -1,4 +1,213 @@
-document.addEventListener("DOMContentLoaded", function () {
+from pathlib import Path
+import re
+
+ROOT = Path.cwd()
+HTML_PATH = ROOT / 'blog' / 'templates' / 'blog' / 'settings' / '_settings_tab.html'
+JS_PATH = ROOT / 'blog' / 'static' / 'blog' / 'js' / 'blog_settings_avatar.js'
+BACKUP_DIR = ROOT / 'scripts' / 'avatar_editor_backup_normal'
+BACKUP_DIR.mkdir(parents=True, exist_ok=True)
+
+if not HTML_PATH.exists():
+    raise FileNotFoundError(f'Nema filea: {HTML_PATH}')
+if not JS_PATH.exists():
+    raise FileNotFoundError(f'Nema filea: {JS_PATH}')
+
+# Backup samo prvi put, da se uvijek može vratiti stanje prije ovog fixa.
+html_backup = BACKUP_DIR / '_settings_tab.html'
+js_backup = BACKUP_DIR / 'blog_settings_avatar.js'
+if not html_backup.exists():
+    html_backup.write_text(HTML_PATH.read_text(encoding='utf-8'), encoding='utf-8')
+if not js_backup.exists():
+    js_backup.write_text(JS_PATH.read_text(encoding='utf-8'), encoding='utf-8')
+
+html = HTML_PATH.read_text(encoding='utf-8')
+
+# Normalniji tekstovi.
+html = html.replace('Okrugli izrez kao na Gmailu, s pomicanjem, zumom i rotacijom.', 'Uredite avatar prije spremanja.')
+html = html.replace('Povuci sliku, zumiraj i spremi okrugli izrez.', 'Namjestite sliku unutar okvira prije spremanja.')
+html = html.replace('Zum', 'Uvećanje')
+html = html.replace('Reset', 'Vrati')
+
+# Popravi tekst gumba ako je ranije slučajno upao CSS tekst u button.
+button_texts = {
+    'avatarRotateBtn': 'Zakreni',
+    'avatarResetBtn': 'Vrati',
+    'avatarApplyBtn': 'Primijeni avatar',
+}
+for button_id, text in button_texts.items():
+    pattern = r'(<button[^>]*\bid=["\']' + re.escape(button_id) + r'["\'][^>]*>).*?(</button>)'
+    html = re.sub(pattern, r'\1' + text + r'\2', html, flags=re.DOTALL | re.IGNORECASE)
+
+# Ukloni stare kopije našeg CSS bloka ako postoje.
+html = re.sub(
+    r'\n?<style id=["\']avatar-editor-normal-style["\']>.*?</style>\n?',
+    '\n',
+    html,
+    flags=re.DOTALL | re.IGNORECASE,
+)
+
+css = r'''
+<style id="avatar-editor-normal-style">
+/* Avatar editor - stabilan prikaz, bez diranja ostatka stranice */
+#avatarCropModal .modal-dialog {
+    max-width: 760px !important;
+    margin: 1.5rem auto !important;
+}
+
+#avatarCropModal .modal-content,
+#avatarCropModal .avatar-crop-modal {
+    border-radius: 20px !important;
+    padding: 18px 24px !important;
+}
+
+#avatarCropModal .modal-header {
+    padding: 0 0 10px 0 !important;
+    border-bottom: 0 !important;
+}
+
+#avatarCropModal .modal-title,
+#avatarCropModal h1,
+#avatarCropModal h2,
+#avatarCropModal h3,
+#avatarCropModal h4,
+#avatarCropModal h5 {
+    font-size: 24px !important;
+    line-height: 1.2 !important;
+    margin: 0 0 4px 0 !important;
+}
+
+#avatarCropModal p,
+#avatarCropModal .text-muted,
+#avatarCropModal .form-text {
+    font-size: 13px !important;
+    line-height: 1.35 !important;
+    margin-bottom: 10px !important;
+}
+
+#avatarCropModal .btn-close {
+    width: 22px !important;
+    height: 22px !important;
+    padding: 0 !important;
+    transform: scale(0.8) !important;
+    opacity: 0.85 !important;
+}
+
+#avatarCropModal .modal-body {
+    padding: 0 !important;
+}
+
+#avatarCropModal .avatar-crop-stage {
+    max-width: 560px !important;
+    margin: 14px auto 12px auto !important;
+    padding: 10px !important;
+    border-radius: 18px !important;
+}
+
+#avatarCropModal .avatar-crop-frame {
+    width: 100% !important;
+    height: 250px !important;
+    min-height: 250px !important;
+    max-height: 250px !important;
+    position: relative !important;
+    overflow: hidden !important;
+    border-radius: 14px !important;
+    background: #05080d !important;
+}
+
+#avatarCropModal #avatarCropImage {
+    position: absolute !important;
+    left: 0;
+    top: 0;
+    max-width: none !important;
+    max-height: none !important;
+    width: auto !important;
+    height: auto !important;
+    user-select: none !important;
+    -webkit-user-drag: none !important;
+    cursor: grab;
+    transform-origin: center center !important;
+}
+
+#avatarCropModal #avatarCropImage.is-dragging {
+    cursor: grabbing;
+}
+
+#avatarCropModal .avatar-crop-frame::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: var(--avatar-crop-size, 170px);
+    height: var(--avatar-crop-size, 170px);
+    transform: translate(-50%, -50%);
+    border: 3px solid rgba(255, 255, 255, 0.95);
+    border-radius: 50%;
+    box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.34);
+    pointer-events: none;
+    z-index: 3;
+}
+
+#avatarCropModal .avatar-crop-controls,
+#avatarCropModal .avatar-editor-controls {
+    max-width: 560px !important;
+    margin: 0 auto !important;
+}
+
+#avatarCropModal label,
+#avatarCropModal .form-label {
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    margin-bottom: 4px !important;
+}
+
+#avatarCropModal #avatarZoomRange {
+    height: 5px !important;
+}
+
+#avatarCropModal .btn,
+#avatarCropModal button {
+    font-size: 14px !important;
+    line-height: 1.2 !important;
+    padding: 7px 12px !important;
+    border-radius: 8px !important;
+    min-height: 0 !important;
+}
+
+#avatarCropModal #avatarApplyBtn {
+    font-size: 15px !important;
+    padding: 8px 18px !important;
+    min-width: 160px !important;
+}
+
+#avatarCropModal .modal-footer {
+    padding: 10px 0 0 0 !important;
+    border-top: 0 !important;
+}
+
+@media (max-width: 768px) {
+    #avatarCropModal .modal-dialog {
+        max-width: calc(100vw - 18px) !important;
+        margin: 0.75rem auto !important;
+    }
+
+    #avatarCropModal .modal-content,
+    #avatarCropModal .avatar-crop-modal {
+        padding: 14px !important;
+    }
+
+    #avatarCropModal .avatar-crop-frame {
+        height: 220px !important;
+        min-height: 220px !important;
+        max-height: 220px !important;
+    }
+}
+</style>
+'''
+
+html = html.rstrip() + '\n' + css + '\n'
+HTML_PATH.write_text(html, encoding='utf-8')
+
+js = r'''document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("avatarForm");
     const input = document.getElementById("avatarInput");
     const triggerBtn = document.getElementById("avatarChangeBtn");
@@ -318,7 +527,7 @@ document.addEventListener("DOMContentLoaded", function () {
     frame.addEventListener("pointercancel", stopDragging);
     frame.addEventListener("pointerleave", stopDragging);
 
-    if (modalEl && zoomRange) { const avatarScrollZoomOnlyTarget = modalEl.querySelector(".avatar-crop-frame") || modalEl.querySelector(".avatar-crop-stage") || modalEl; avatarScrollZoomOnlyTarget.addEventListener("wheel", function (event) { if (!cropper || !zoomRange) return; event.preventDefault(); const currentValue = Number(zoomRange.value || 0); const minValue = Number(zoomRange.min || 0); const maxValue = Number(zoomRange.max || 100); const step = event.deltaY < 0 ? 5 : -5; const nextValue = Math.max(minValue, Math.min(maxValue, currentValue + step)); if (nextValue === currentValue) return; zoomRange.value = String(nextValue); setZoomFromRange(nextValue); }, { passive: false }); } if (rotateBtn) {
+    if (rotateBtn) {
         rotateBtn.addEventListener("click", function () {
             if (!imageLoaded) return;
             state.rotation = (state.rotation + 90) % 360;
@@ -372,3 +581,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 });
+'''
+
+JS_PATH.write_text(js, encoding='utf-8')
+
+print('Avatar editor je primijenjen. Pokreni: python manage.py check')
