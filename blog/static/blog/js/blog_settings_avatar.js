@@ -255,7 +255,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function applyCropToHiddenInput() {
-        const canvas = getCroppedCanvas(1000);
+        const canvas = getCroppedCanvas(1200);
         if (!canvas) return false;
 
         hiddenInput.value = canvas.toDataURL("image/png");
