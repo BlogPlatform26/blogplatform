@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const resetBtn = document.getElementById("avatarResetBtn");
     const applyBtn = document.getElementById("avatarApplyBtn");
 
-    if (!form || !input || !hiddenInput || !previewCanvas || !previewMiniCanvas || !modalEl || !cropImage) {
+    if (!form || !input || !hiddenInput || !modalEl || !cropImage) {
         return;
     }
 
@@ -432,3 +432,49 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 });
+
+/* hideAvatarPreviewBlocks - safe UI cleanup */
+(function () {
+    function hideAvatarPreviewBlocks() {
+        const previewIds = ["avatarPreviewCanvas", "avatarPreviewMiniCanvas"];
+
+        previewIds.forEach(function (id) {
+            const el = document.getElementById(id);
+            if (!el) return;
+
+            const block = el.closest(
+                ".avatar-preview-block, .avatar-preview-item, .avatar-preview, .col-md-4, .col-lg-4, .col-sm-6, .col, .text-center"
+            );
+
+            if (block) {
+                block.style.display = "none";
+            } else {
+                el.style.display = "none";
+            }
+        });
+
+        const labelsToHide = ["Preview (okruglo)", "Kako izgleda pored imena"];
+
+        document.querySelectorAll("p, small, span, div").forEach(function (el) {
+            const text = (el.textContent || "").trim();
+            if (!labelsToHide.includes(text)) return;
+
+            const block = el.closest(
+                ".avatar-preview-block, .avatar-preview-item, .avatar-preview, .col-md-4, .col-lg-4, .col-sm-6, .col, .text-center"
+            );
+
+            if (block) {
+                block.style.display = "none";
+            } else {
+                el.style.display = "none";
+            }
+        });
+    }
+
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", hideAvatarPreviewBlocks);
+    } else {
+        hideAvatarPreviewBlocks();
+    }
+})();
+
