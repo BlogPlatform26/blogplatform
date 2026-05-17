@@ -23,7 +23,7 @@ def optimize_post_extra_image(sender, instance, **kwargs):
 
 @receiver(post_save, sender=Profile)
 def optimize_profile_images(sender, instance, **kwargs):
-    optimize_image_field(instance, "avatar")
+    optimize_image_field(instance, "avatar", max_width=900, max_height=900, quality=95)
     optimize_blog_banner_field(instance, "blog_banner")
     optimize_image_field(instance, "simple_background_image")
     optimize_image_field(instance, "soho_hero_image")

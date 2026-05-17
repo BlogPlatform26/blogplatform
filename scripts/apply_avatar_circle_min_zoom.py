@@ -1,4 +1,9 @@
-document.addEventListener("DOMContentLoaded", function () {
+from pathlib import Path
+
+JS_PATH = Path("blog/static/blog/js/blog_settings_avatar.js")
+BACKUP_PATH = Path("blog/static/blog/js/blog_settings_avatar.js.bak_before_avatar_circle_min_zoom")
+
+NEW_JS = r'''document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("avatarForm");
     const input = document.getElementById("avatarInput");
     const triggerBtn = document.getElementById("avatarChangeBtn");
@@ -432,3 +437,20 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 });
+'''
+
+
+def main():
+    if not JS_PATH.exists():
+        raise FileNotFoundError(f"Ne postoji: {JS_PATH}")
+
+    if not BACKUP_PATH.exists():
+        BACKUP_PATH.write_text(JS_PATH.read_text(encoding="utf-8"), encoding="utf-8")
+
+    JS_PATH.write_text(NEW_JS, encoding="utf-8")
+    print("Gotovo: avatar JS je zamijenjen čistom verzijom s min-zoomom po krugu i scroll zoomom.")
+    print(f"Backup: {BACKUP_PATH}")
+
+
+if __name__ == "__main__":
+    main()
