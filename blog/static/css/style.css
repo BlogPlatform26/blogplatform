@@ -2577,3 +2577,79 @@ body.blog-banner-modal-open {
     }
 }
 /* BANNER_EDITOR_FINAL_REPAIR_END */
+
+
+/* Banner modal hard reset - start */
+body.bp-banner-modal-open { overflow: hidden !important; }
+
+#blogBannerCropModal {
+    display: none !important;
+    position: fixed !important;
+    inset: 0 !important;
+    z-index: 99999 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    max-width: none !important;
+    max-height: none !important;
+    margin: 0 !important;
+    padding: 18px !important;
+    overflow: auto !important;
+    background: rgba(0, 0, 0, 0.58) !important;
+    box-sizing: border-box !important;
+}
+
+#blogBannerCropModal.bp-banner-open {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+#blogBannerCropModal .modal-dialog,
+#blogBannerCropModal .modal-content,
+#blogBannerCropModal .banner-crop-content,
+#blogBannerCropModal .blog-banner-crop-content {
+    max-width: min(1180px, calc(100vw - 48px)) !important;
+    width: 100% !important;
+    max-height: calc(100vh - 48px) !important;
+    overflow: auto !important;
+    margin: 0 auto !important;
+    border-radius: 22px !important;
+    background: #0f172a !important;
+    color: #f8fafc !important;
+    box-sizing: border-box !important;
+}
+
+#blogBannerCropFrame {
+    position: relative !important;
+    width: min(1060px, calc(100vw - 120px)) !important;
+    aspect-ratio: 22 / 9 !important;
+    height: auto !important;
+    max-height: 58vh !important;
+    overflow: hidden !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    background: #020617 !important;
+    border: 2px solid rgba(255,255,255,.9) !important;
+    border-radius: 16px !important;
+    cursor: grab !important;
+    box-sizing: border-box !important;
+}
+
+#blogBannerCropFrame.is-dragging { cursor: grabbing !important; }
+
+#blogBannerCropImage {
+    user-select: none !important;
+    -webkit-user-drag: none !important;
+    pointer-events: none !important;
+}
+
+#blogBannerZoomRange { width: min(860px, 100%) !important; }
+
+#blogBannerApplyBtn,
+#blogBannerResetBtn {
+    font-size: 15px !important;
+    padding: 8px 16px !important;
+    border-radius: 8px !important;
+}
+/* Banner modal hard reset - end */
+

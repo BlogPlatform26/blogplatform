@@ -1,4 +1,22 @@
-(function () {
+from pathlib import Path
+
+BASE = Path.cwd()
+js_path = BASE / "blog" / "static" / "blog" / "js" / "blog_settings_banner.js"
+tpl_path = BASE / "blog" / "templates" / "blog" / "settings" / "_settings_tab.html"
+
+if not js_path.parent.exists():
+    js_path.parent.mkdir(parents=True, exist_ok=True)
+
+backup_dir = BASE / "scripts" / "_banner_final_modal_backups"
+backup_dir.mkdir(parents=True, exist_ok=True)
+
+if js_path.exists():
+    (backup_dir / "blog_settings_banner.js.bak").write_text(js_path.read_text(encoding="utf-8", errors="replace"), encoding="utf-8")
+if tpl_path.exists():
+    (backup_dir / "_settings_tab.html.bak").write_text(tpl_path.read_text(encoding="utf-8", errors="replace"), encoding="utf-8")
+
+# Čisti, samostalan banner editor. Ne koristi stari HTML editor iz templatea.
+js_code = r'''(function () {
     "use strict";
 
     function ready(fn) {
@@ -503,3 +521,18 @@
         });
     });
 })();
+'''
+
+js_path.write_text(js_code, encoding="utf-8")
+
+# Ako template ne učitava banner JS, dodaj ga. Ovo ne dira avatar.
+if tpl_path.exists():
+    tpl = tpl_path.read_text(encoding="utf-8", errors="replace")
+    script_line = "<script src=\"{% static 'blog/js/blog_settings_banner.js' %}\"></script>"
+    if "blog_settings_banner.js" not in tpl:
+        marker = "{% if settings_tab == 'opcenito' %}"
+        # Dodaj na kraj templatea unutar jednostavnog uvjeta.
+        tpl = tpl.rstrip() + "\n{% if settings_tab == 'opcenito' %}\n" + script_line + "\n{% endif %}\n"
+        tpl_path.write_text(tpl, encoding="utf-8")
+
+print("Banner modal JS je zamijenjen čistom verzijom. Stari banner editor se uklanja iz prikaza preko JS-a.")
