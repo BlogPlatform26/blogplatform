@@ -1,4 +1,3 @@
-
 (function () {
     "use strict";
 
@@ -12,10 +11,7 @@
 
     ready(function () {
         const fileInput = document.getElementById("blogBannerInput") || document.querySelector('input[type="file"][name="blog_banner"]');
-        const hiddenInput = document.getElementById("croppedBlogBanner") || document.querySelector('input[name="cropped_blog_banner"]');
         const changeBtn = document.getElementById("blogBannerChangeBtn");
-        const selectedName = document.getElementById("blogBannerSelectedName");
-
         const modalEl = document.getElementById("blogBannerCropModal");
         const frame = document.getElementById("blogBannerCropFrame");
         const img = document.getElementById("blogBannerCropImage");
@@ -23,8 +19,19 @@
         const applyBtn = document.getElementById("blogBannerApplyBtn");
         const resetBtn = document.getElementById("blogBannerResetBtn");
 
-        if (!fileInput || !hiddenInput || !changeBtn || !modalEl || !frame || !img || !zoomRange || !applyBtn) {
+        if (!fileInput || !changeBtn || !modalEl || !frame || !img || !zoomRange || !applyBtn) {
             return;
+        }
+
+        let form = fileInput.closest("form") || document.querySelector("form");
+        let hiddenInput = document.getElementById("croppedBlogBanner") || document.querySelector('input[name="cropped_blog_banner"]');
+
+        if (!hiddenInput && form) {
+            hiddenInput = document.createElement("input");
+            hiddenInput.type = "hidden";
+            hiddenInput.name = "cropped_blog_banner";
+            hiddenInput.id = "croppedBlogBanner";
+            form.appendChild(hiddenInput);
         }
 
         let modal = null;
@@ -32,215 +39,228 @@
             modal = new window.bootstrap.Modal(modalEl);
         }
 
-        let imageLoaded = false;
-        let naturalWidth = 0;
-        let naturalHeight = 0;
-        let minScale = 1;
-        let maxScale = 4;
-        let scale = 1;
-        let x = 0;
-        let y = 0;
-        let isDragging = false;
-        let dragStartX = 0;
-        let dragStartY = 0;
-        let startX = 0;
-        let startY = 0;
-        let objectUrl = null;
+        const state = {
+            loaded: false,
+            naturalWidth: 0,
+            naturalHeight: 0,
+            scale: 1,
+            minScale: 1,
+            maxScale: 4,
+            x: 0,
+            y: 0,
+            dragging: false,
+            dragStartX: 0,
+            dragStartY: 0,
+            startX: 0,
+            startY: 0
+        };
+
+        let sourceDataUrl = "";
 
         function showModal() {
             if (modal) {
                 modal.show();
-                return;
+            } else {
+                modalEl.style.display = "block";
+                modalEl.classList.add("show");
+                document.body.classList.add("modal-open");
             }
-            modalEl.style.display = "block";
-            modalEl.classList.add("show");
-            document.body.classList.add("modal-open");
         }
 
         function hideModal() {
             if (modal) {
                 modal.hide();
-                return;
+            } else {
+                modalEl.classList.remove("show");
+                modalEl.style.display = "none";
+                document.body.classList.remove("modal-open");
             }
-            modalEl.classList.remove("show");
-            modalEl.style.display = "none";
-            document.body.classList.remove("modal-open");
         }
 
-        function frameSize() {
+        function getFrameSize() {
             const rect = frame.getBoundingClientRect();
             return {
-                width: Math.max(1, rect.width),
-                height: Math.max(1, rect.height)
+                width: Math.max(1, Math.round(rect.width)),
+                height: Math.max(1, Math.round(rect.height))
             };
         }
 
         function calculateLimits() {
-            const size = frameSize();
-            minScale = Math.max(size.width / naturalWidth, size.height / naturalHeight);
-            maxScale = minScale * 4;
+            const size = getFrameSize();
+            state.minScale = Math.max(
+                size.width / state.naturalWidth,
+                size.height / state.naturalHeight
+            );
 
-            if (!Number.isFinite(minScale) || minScale <= 0) {
-                minScale = 1;
+            if (!Number.isFinite(state.minScale) || state.minScale <= 0) {
+                state.minScale = 1;
             }
-            if (!Number.isFinite(maxScale) || maxScale <= minScale) {
-                maxScale = minScale + 1;
-            }
+
+            state.maxScale = state.minScale * 4;
         }
 
         function clampPosition() {
-            const size = frameSize();
-            const scaledWidth = naturalWidth * scale;
-            const scaledHeight = naturalHeight * scale;
+            const size = getFrameSize();
+            const scaledWidth = state.naturalWidth * state.scale;
+            const scaledHeight = state.naturalHeight * state.scale;
 
             if (scaledWidth <= size.width) {
-                x = (size.width - scaledWidth) / 2;
+                state.x = (size.width - scaledWidth) / 2;
             } else {
-                x = Math.min(0, Math.max(size.width - scaledWidth, x));
+                state.x = Math.min(0, Math.max(size.width - scaledWidth, state.x));
             }
 
             if (scaledHeight <= size.height) {
-                y = (size.height - scaledHeight) / 2;
+                state.y = (size.height - scaledHeight) / 2;
             } else {
-                y = Math.min(0, Math.max(size.height - scaledHeight, y));
+                state.y = Math.min(0, Math.max(size.height - scaledHeight, state.y));
             }
         }
 
         function render() {
+            if (!state.loaded) return;
+
             clampPosition();
-            img.style.width = naturalWidth + "px";
-            img.style.height = naturalHeight + "px";
-            img.style.transform = "translate(" + x + "px, " + y + "px) scale(" + scale + ")";
-        }
 
-        function setZoomFromRange(value) {
-            if (!imageLoaded) {
-                return;
-            }
-
-            const oldScale = scale;
-            const size = frameSize();
-            const centerX = size.width / 2;
-            const centerY = size.height / 2;
-            const ratio = Math.max(0, Math.min(100, Number(value))) / 100;
-
-            scale = minScale + (maxScale - minScale) * ratio;
-
-            const imagePointX = (centerX - x) / oldScale;
-            const imagePointY = (centerY - y) / oldScale;
-            x = centerX - imagePointX * scale;
-            y = centerY - imagePointY * scale;
-
-            render();
+            img.style.setProperty("display", "block", "important");
+            img.style.setProperty("position", "absolute", "important");
+            img.style.setProperty("left", "0px", "important");
+            img.style.setProperty("top", "0px", "important");
+            img.style.setProperty("max-width", "none", "important");
+            img.style.setProperty("max-height", "none", "important");
+            img.style.setProperty("width", state.naturalWidth + "px", "important");
+            img.style.setProperty("height", state.naturalHeight + "px", "important");
+            img.style.setProperty("transform-origin", "top left", "important");
+            img.style.setProperty("transform", "translate(" + state.x + "px, " + state.y + "px) scale(" + state.scale + ")", "important");
         }
 
         function resetEditor() {
-            if (!imageLoaded) {
-                return;
-            }
+            if (!state.loaded) return;
 
             calculateLimits();
-            scale = minScale;
-            const size = frameSize();
-            x = (size.width - naturalWidth * scale) / 2;
-            y = (size.height - naturalHeight * scale) / 2;
+            state.scale = state.minScale;
+
+            const size = getFrameSize();
+            state.x = (size.width - state.naturalWidth * state.scale) / 2;
+            state.y = (size.height - state.naturalHeight * state.scale) / 2;
+
             zoomRange.value = "0";
             render();
         }
 
-        function openSelectedFile(file) {
-            if (!file || !file.type || !file.type.startsWith("image/")) {
-                return;
-            }
+        function setZoomValue(value) {
+            if (!state.loaded) return;
 
-            hiddenInput.value = "";
+            const oldScale = state.scale;
+            const safeValue = Math.max(0, Math.min(100, Number(value || 0)));
+            const ratio = safeValue / 100;
+            const nextScale = state.minScale + (state.maxScale - state.minScale) * ratio;
 
-            if (objectUrl) {
-                URL.revokeObjectURL(objectUrl);
-                objectUrl = null;
-            }
+            const size = getFrameSize();
+            const centerX = size.width / 2;
+            const centerY = size.height / 2;
 
-            objectUrl = URL.createObjectURL(file);
-            imageLoaded = false;
-            img.onload = function () {
-                naturalWidth = img.naturalWidth;
-                naturalHeight = img.naturalHeight;
-                imageLoaded = true;
-                showModal();
-                window.setTimeout(resetEditor, 80);
-            };
-            img.src = objectUrl;
+            const imagePointX = (centerX - state.x) / oldScale;
+            const imagePointY = (centerY - state.y) / oldScale;
 
-            if (selectedName) {
-                selectedName.textContent = file.name || "Odabrana slika";
-            }
+            state.scale = nextScale;
+            state.x = centerX - imagePointX * state.scale;
+            state.y = centerY - imagePointY * state.scale;
+
+            zoomRange.value = String(safeValue);
+            render();
         }
 
-        changeBtn.addEventListener("click", function () {
+        function openFile(file) {
+            if (!file || !file.type || !file.type.startsWith("image/")) return;
+
+            if (hiddenInput) {
+                hiddenInput.value = "";
+            }
+
+            const reader = new FileReader();
+
+            reader.onload = function (event) {
+                sourceDataUrl = event.target.result;
+                state.loaded = false;
+
+                img.onload = function () {
+                    state.naturalWidth = img.naturalWidth;
+                    state.naturalHeight = img.naturalHeight;
+                    state.loaded = true;
+
+                    showModal();
+
+                    // Bootstrap modal ima mali delay. Zato reset ide nakon prikaza.
+                    window.setTimeout(resetEditor, 120);
+                };
+
+                img.src = sourceDataUrl;
+            };
+
+            reader.readAsDataURL(file);
+        }
+
+        changeBtn.addEventListener("click", function (event) {
+            event.preventDefault();
+            event.stopPropagation();
             fileInput.click();
         });
 
         fileInput.addEventListener("change", function () {
             const file = fileInput.files && fileInput.files[0];
-            openSelectedFile(file);
+            openFile(file);
         });
 
         zoomRange.addEventListener("input", function () {
-            setZoomFromRange(zoomRange.value);
+            setZoomValue(zoomRange.value);
         });
 
-        if (resetBtn) {
-            resetBtn.addEventListener("click", function () {
-                resetEditor();
-            });
-        }
-
         frame.addEventListener("wheel", function (event) {
-            if (!imageLoaded) {
-                return;
-            }
+            if (!state.loaded) return;
             event.preventDefault();
+
             const current = Number(zoomRange.value || 0);
             const step = event.deltaY < 0 ? 5 : -5;
             const next = Math.max(0, Math.min(100, current + step));
-            zoomRange.value = String(next);
-            setZoomFromRange(next);
+
+            setZoomValue(next);
         }, { passive: false });
 
         frame.addEventListener("pointerdown", function (event) {
-            if (!imageLoaded) {
-                return;
-            }
-            isDragging = true;
-            dragStartX = event.clientX;
-            dragStartY = event.clientY;
-            startX = x;
-            startY = y;
+            if (!state.loaded) return;
+
+            state.dragging = true;
+            state.dragStartX = event.clientX;
+            state.dragStartY = event.clientY;
+            state.startX = state.x;
+            state.startY = state.y;
+
             frame.setPointerCapture(event.pointerId);
             img.classList.add("is-dragging");
         });
 
         frame.addEventListener("pointermove", function (event) {
-            if (!isDragging || !imageLoaded) {
-                return;
-            }
-            x = startX + (event.clientX - dragStartX);
-            y = startY + (event.clientY - dragStartY);
+            if (!state.dragging || !state.loaded) return;
+
+            state.x = state.startX + (event.clientX - state.dragStartX);
+            state.y = state.startY + (event.clientY - state.dragStartY);
+
             render();
         });
 
         function stopDragging(event) {
-            if (!isDragging) {
-                return;
-            }
-            isDragging = false;
+            if (!state.dragging) return;
+
+            state.dragging = false;
             img.classList.remove("is-dragging");
-            if (event && frame.releasePointerCapture) {
-                try {
+
+            try {
+                if (event && frame.hasPointerCapture && frame.hasPointerCapture(event.pointerId)) {
                     frame.releasePointerCapture(event.pointerId);
-                } catch (error) {
-                    // nije važno ako pointer više nije aktivan
                 }
+            } catch (error) {
+                // nije važno
             }
         }
 
@@ -248,27 +268,45 @@
         frame.addEventListener("pointercancel", stopDragging);
         frame.addEventListener("pointerleave", stopDragging);
 
-        applyBtn.addEventListener("click", function () {
-            if (!imageLoaded) {
-                return;
-            }
+        if (resetBtn) {
+            resetBtn.addEventListener("click", function () {
+                resetEditor();
+            });
+        }
 
-            const size = frameSize();
+        function setFileInputFromBlob(blob) {
+            try {
+                const file = new File([blob], "blog_banner.jpg", { type: "image/jpeg" });
+                const dataTransfer = new DataTransfer();
+                dataTransfer.items.add(file);
+                fileInput.files = dataTransfer.files;
+            } catch (error) {
+                // Ako browser ne dopušta postavljanje file inputa, hidden input i dalje šalje banner.
+            }
+        }
+
+        applyBtn.addEventListener("click", function () {
+            if (!state.loaded) return;
+
+            const size = getFrameSize();
             const outputWidth = 2200;
             const outputHeight = 900;
-            const canvas = document.createElement("canvas");
-            const ctx = canvas.getContext("2d");
 
+            const sourceX = Math.max(0, -state.x / state.scale);
+            const sourceY = Math.max(0, -state.y / state.scale);
+            const sourceWidth = Math.min(state.naturalWidth - sourceX, size.width / state.scale);
+            const sourceHeight = Math.min(state.naturalHeight - sourceY, size.height / state.scale);
+
+            const canvas = document.createElement("canvas");
             canvas.width = outputWidth;
             canvas.height = outputHeight;
 
-            const sourceX = Math.max(0, -x / scale);
-            const sourceY = Math.max(0, -y / scale);
-            const sourceWidth = Math.min(naturalWidth - sourceX, size.width / scale);
-            const sourceHeight = Math.min(naturalHeight - sourceY, size.height / scale);
-
+            const ctx = canvas.getContext("2d");
             ctx.fillStyle = "#ffffff";
             ctx.fillRect(0, 0, outputWidth, outputHeight);
+            ctx.imageSmoothingEnabled = true;
+            ctx.imageSmoothingQuality = "high";
+
             ctx.drawImage(
                 img,
                 sourceX,
@@ -281,17 +319,38 @@
                 outputHeight
             );
 
-            hiddenInput.value = canvas.toDataURL("image/jpeg", 0.96);
+            const dataUrl = canvas.toDataURL("image/jpeg", 0.9);
 
-            if (selectedName) {
-                selectedName.textContent = "Banner je pripremljen. Klikni Spremi promjene.";
+            if (hiddenInput) {
+                hiddenInput.value = dataUrl;
             }
 
-            hideModal();
+            canvas.toBlob(function (blob) {
+                if (blob) {
+                    setFileInputFromBlob(blob);
+                }
+                hideModal();
+            }, "image/jpeg", 0.9);
+        });
+
+        if (form) {
+            form.addEventListener("submit", function () {
+                // Ako korisnik odabere sliku, ali zaboravi kliknuti Primijeni banner,
+                // spremi trenutni izrez automatski.
+                if (state.loaded && hiddenInput && !hiddenInput.value) {
+                    applyBtn.click();
+                }
+            });
+        }
+
+        modalEl.addEventListener("shown.bs.modal", function () {
+            if (state.loaded) {
+                resetEditor();
+            }
         });
 
         window.addEventListener("resize", function () {
-            if (imageLoaded && modalEl.classList.contains("show")) {
+            if (state.loaded && modalEl.classList.contains("show")) {
                 resetEditor();
             }
         });

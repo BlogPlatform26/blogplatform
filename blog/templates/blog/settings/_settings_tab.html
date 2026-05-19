@@ -39,6 +39,8 @@
 
     <form method="POST" enctype="multipart/form-data" id="avatarForm">
         {% csrf_token %}
+<input type="hidden" name="cropped_blog_banner" id="croppedBlogBanner">
+
 
         {% if settings_tab == 'opcenito' %}
             <div class="card p-4 mb-4 shadow-sm">

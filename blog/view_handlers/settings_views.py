@@ -1423,7 +1423,7 @@ def blog_settings(request):
 
                             ext = 'jpg'
 
-                        file = ContentFile(base64.b64decode(imgstr), name=f'blog_banner.{ext}')
+                        file = ContentFile(base64.b64decode(imgstr), name=f'blog_banner_{uuid.uuid4().hex}.{ext}')
 
                     except (ValueError, TypeError, base64.binascii.Error):
 
