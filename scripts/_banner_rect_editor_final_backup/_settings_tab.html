@@ -119,6 +119,7 @@
                 <div class="mb-3">
                     <label class="form-label d-block">Odaberi sliku</label>
                     <input type="file" name="blog_banner" id="blogBannerInput" accept="image/*" class="form-control d-none">
+<input type="hidden" name="cropped_blog_banner" id="croppedBlogBanner">
 <button type="button" class="btn btn-outline-primary btn-sm" id="blogBannerChangeBtn">
     Odaberi i uredi banner
 </button>
@@ -158,40 +159,36 @@
 
             
 
-
-    </div>
-</div>
-
-
-
-    </div>
-</div>
-
-
 <div class="modal fade banner-crop-modal" id="blogBannerCropModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
             <div class="modal-header border-0">
                 <div>
                     <h5 class="modal-title mb-1">Uređivanje bannera</h5>
-                    <div class="small text-muted">Namjestite pravokutni izrez prije spremanja.</div>
+                    <div class="small text-muted">Namjestite sliku unutar pravokutnika prije spremanja.</div>
                 </div>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zatvori"></button>
             </div>
+
             <div class="modal-body pt-0">
                 <div class="banner-crop-stage">
-                    <div class="banner-crop-frame" id="blogBannerCropFrame">
+                    <div class="banner-crop-frame">
                         <img id="blogBannerCropImage" alt="Banner preview">
                     </div>
                 </div>
+
                 <div class="banner-crop-controls mt-3">
                     <div class="banner-crop-control-row">
-                        <label for="blogBannerZoomRange" class="form-label mb-1">Uvećanje</label>
+                        <label for="blogBannerZoomRange" class="form-label mb-0">Uvećanje</label>
                         <input type="range" id="blogBannerZoomRange" min="0" max="100" value="0" class="form-range">
                     </div>
+
                     <div class="d-flex flex-wrap gap-2 justify-content-between align-items-center mt-3">
-                        <button type="button" class="btn btn-outline-secondary btn-sm" id="blogBannerResetBtn">Vrati</button>
-                        <button type="button" class="btn btn-primary btn-sm" id="blogBannerApplyBtn">Primijeni banner</button>
+                        <div class="d-flex gap-2">
+                            <button type="button" class="btn btn-outline-secondary btn-sm" id="blogBannerRotateBtn">Zakreni</button>
+                            <button type="button" class="btn btn-outline-secondary btn-sm" id="blogBannerResetBtn">Vrati</button>
+                        </div>
+                        <button type="button" class="btn btn-primary" id="blogBannerApplyBtn">Primijeni banner</button>
                     </div>
                 </div>
             </div>
@@ -487,107 +484,6 @@
     {% endif %}
 
 {% endif %}
-
-
-<style id="banner-rect-editor-style">
-#blogBannerCropModal .modal-dialog {
-    max-width: 900px !important;
-    margin: 1.25rem auto !important;
-}
-#blogBannerCropModal .modal-content {
-    border-radius: 20px !important;
-    padding: 18px 24px !important;
-}
-#blogBannerCropModal .modal-header {
-    padding: 0 0 10px 0 !important;
-    border-bottom: 0 !important;
-}
-#blogBannerCropModal .modal-title {
-    font-size: 24px !important;
-    line-height: 1.2 !important;
-    margin: 0 0 4px 0 !important;
-}
-#blogBannerCropModal .text-muted {
-    font-size: 13px !important;
-}
-#blogBannerCropModal .btn-close {
-    width: 22px !important;
-    height: 22px !important;
-    padding: 0 !important;
-    transform: scale(0.8) !important;
-    opacity: 0.85 !important;
-}
-#blogBannerCropModal .modal-body {
-    padding: 0 !important;
-}
-#blogBannerCropModal .banner-crop-stage {
-    max-width: 820px !important;
-    margin: 12px auto 10px auto !important;
-    padding: 10px !important;
-    border-radius: 18px !important;
-    background: #05080d !important;
-}
-#blogBannerCropModal .banner-crop-frame {
-    width: 100% !important;
-    aspect-ratio: 22 / 9;
-    position: relative !important;
-    overflow: hidden !important;
-    border-radius: 14px !important;
-    background: #05080d !important;
-    cursor: grab;
-}
-#blogBannerCropModal .banner-crop-frame::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border: 3px solid rgba(255, 255, 255, 0.95);
-    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.25), 0 0 0 9999px rgba(0, 0, 0, 0.12);
-    pointer-events: none;
-    z-index: 3;
-}
-#blogBannerCropModal #blogBannerCropImage {
-    position: absolute !important;
-    left: 0;
-    top: 0;
-    max-width: none !important;
-    max-height: none !important;
-    width: auto !important;
-    height: auto !important;
-    user-select: none !important;
-    -webkit-user-drag: none !important;
-    transform-origin: top left !important;
-    cursor: grab;
-}
-#blogBannerCropModal #blogBannerCropImage.is-dragging,
-#blogBannerCropModal .banner-crop-frame:active {
-    cursor: grabbing;
-}
-#blogBannerCropModal .banner-crop-controls {
-    max-width: 820px !important;
-    margin: 0 auto !important;
-}
-#blogBannerCropModal label,
-#blogBannerCropModal .form-label {
-    font-size: 15px !important;
-    font-weight: 600 !important;
-}
-#blogBannerCropModal .btn,
-#blogBannerCropModal button {
-    font-size: 14px !important;
-    line-height: 1.2 !important;
-    padding: 7px 14px !important;
-    border-radius: 8px !important;
-}
-@media (max-width: 768px) {
-    #blogBannerCropModal .modal-dialog {
-        max-width: calc(100vw - 18px) !important;
-        margin: 0.75rem auto !important;
-    }
-    #blogBannerCropModal .modal-content {
-        padding: 14px !important;
-    }
-}
-</style>
 
 <style id="avatar-editor-normal-style">
 /* Avatar editor - stabilan prikaz, bez diranja ostatka stranice */
