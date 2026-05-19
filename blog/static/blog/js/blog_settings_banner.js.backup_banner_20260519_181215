@@ -1,0 +1,362 @@
+(function () {
+    "use strict";
+
+    function ready(fn) {
+        if (document.readyState !== "loading") {
+            fn();
+        } else {
+            document.addEventListener("DOMContentLoaded", fn);
+        }
+    }
+
+    ready(function () {
+        const fileInput =
+            document.getElementById("blogBannerInput") ||
+            document.querySelector('input[type="file"][name="blog_banner"]');
+
+        const changeBtn =
+            document.getElementById("blogBannerChangeBtn") ||
+            Array.from(document.querySelectorAll("button, a, label")).find(function (el) {
+                return (el.textContent || "").trim().toLowerCase().includes("odaberi i uredi banner");
+            });
+
+        if (!fileInput || !changeBtn) {
+            return;
+        }
+
+        const form = fileInput.closest("form") || document.querySelector("form");
+
+        let hiddenInput =
+            document.getElementById("croppedBlogBanner") ||
+            document.querySelector('input[name="cropped_blog_banner"]');
+
+        if (!hiddenInput && form) {
+            hiddenInput = document.createElement("input");
+            hiddenInput.type = "hidden";
+            hiddenInput.name = "cropped_blog_banner";
+            hiddenInput.id = "croppedBlogBanner";
+            form.appendChild(hiddenInput);
+        }
+
+        document.querySelectorAll("#blogBannerCropModal").forEach(function (el) {
+            el.remove();
+        });
+
+        const style = document.createElement("style");
+        style.textContent = `
+            #blogBannerCropModal {
+                position: fixed !important;
+                inset: 0 !important;
+                z-index: 20000 !important;
+                display: none !important;
+                align-items: center !important;
+                justify-content: center !important;
+                padding: 20px !important;
+                background: rgba(0, 0, 0, 0.58) !important;
+            }
+            #blogBannerCropModal.is-open { display: flex !important; }
+            #blogBannerCropModal .banner-editor-dialog {
+                width: min(980px, calc(100vw - 42px)) !important;
+                max-height: calc(100vh - 42px) !important;
+                overflow: auto !important;
+                background: #111827 !important;
+                color: #f8fafc !important;
+                border-radius: 22px !important;
+                box-shadow: 0 24px 70px rgba(0,0,0,.42) !important;
+                padding: 26px !important;
+            }
+            #blogBannerCropModal .banner-editor-header {
+                display: flex !important;
+                align-items: flex-start !important;
+                justify-content: space-between !important;
+                gap: 16px !important;
+                margin-bottom: 16px !important;
+            }
+            #blogBannerCropModal .banner-editor-title {
+                font-size: 26px !important;
+                line-height: 1.15 !important;
+                margin: 0 0 5px 0 !important;
+                font-weight: 700 !important;
+            }
+            #blogBannerCropModal .banner-editor-help {
+                margin: 0 !important;
+                color: rgba(248,250,252,.72) !important;
+                font-size: 14px !important;
+            }
+            #blogBannerCropModal .banner-editor-close {
+                border: 0 !important;
+                background: transparent !important;
+                color: #f8fafc !important;
+                font-size: 28px !important;
+                line-height: 1 !important;
+                padding: 0 !important;
+                width: 32px !important;
+                height: 32px !important;
+                cursor: pointer !important;
+                opacity: .85 !important;
+            }
+            #blogBannerCropFrame {
+                position: relative !important;
+                width: 100% !important;
+                aspect-ratio: 22 / 9 !important;
+                overflow: hidden !important;
+                background: #020617 !important;
+                border: 2px solid rgba(248,250,252,.9) !important;
+                border-radius: 18px !important;
+                touch-action: none !important;
+                user-select: none !important;
+                cursor: grab !important;
+            }
+            #blogBannerCropFrame.is-dragging { cursor: grabbing !important; }
+            #blogBannerCropImage {
+                position: absolute !important;
+                left: 0 !important;
+                top: 0 !important;
+                max-width: none !important;
+                max-height: none !important;
+                user-select: none !important;
+                pointer-events: none !important;
+                display: none !important;
+                transform-origin: top left !important;
+            }
+            #blogBannerCropModal .banner-editor-controls {
+                margin-top: 16px !important;
+                display: grid !important;
+                grid-template-columns: 115px 1fr !important;
+                align-items: center !important;
+                gap: 12px !important;
+            }
+            #blogBannerCropModal .banner-editor-controls label {
+                margin: 0 !important;
+                font-weight: 600 !important;
+                color: #e5e7eb !important;
+                font-size: 15px !important;
+            }
+            #blogBannerZoomRange { width: 100% !important; }
+            #blogBannerCropModal .banner-editor-actions {
+                margin-top: 16px !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: space-between !important;
+                gap: 12px !important;
+            }
+            #blogBannerCropModal .banner-editor-btn {
+                font-size: 14px !important;
+                padding: 7px 13px !important;
+                border-radius: 8px !important;
+                border: 1px solid rgba(248,250,252,.35) !important;
+                background: transparent !important;
+                color: #e5e7eb !important;
+                cursor: pointer !important;
+            }
+            #blogBannerCropModal .banner-editor-btn-primary {
+                background: #0d6efd !important;
+                border-color: #0d6efd !important;
+                color: #fff !important;
+                font-size: 15px !important;
+                padding: 9px 20px !important;
+            }
+        `;
+        document.head.appendChild(style);
+
+        const modalEl = document.createElement("div");
+        modalEl.id = "blogBannerCropModal";
+        modalEl.setAttribute("aria-hidden", "true");
+        modalEl.innerHTML = `
+            <div class="banner-editor-dialog" role="dialog" aria-modal="true" aria-label="Uređivanje bannera">
+                <div class="banner-editor-header">
+                    <div>
+                        <h2 class="banner-editor-title">Uređivanje bannera</h2>
+                        <p class="banner-editor-help">Namjestite pravokutni izrez prije spremanja.</p>
+                    </div>
+                    <button type="button" class="banner-editor-close" id="blogBannerCloseBtn" aria-label="Zatvori">×</button>
+                </div>
+                <div id="blogBannerCropFrame"><img id="blogBannerCropImage" alt="Banner preview"></div>
+                <div class="banner-editor-controls">
+                    <label for="blogBannerZoomRange">Uvećanje</label>
+                    <input type="range" min="0" max="100" value="0" id="blogBannerZoomRange">
+                </div>
+                <div class="banner-editor-actions">
+                    <button type="button" class="banner-editor-btn" id="blogBannerResetBtn">Vrati</button>
+                    <button type="button" class="banner-editor-btn banner-editor-btn-primary" id="blogBannerApplyBtn">Primijeni banner</button>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(modalEl);
+
+        const frame = document.getElementById("blogBannerCropFrame");
+        const img = document.getElementById("blogBannerCropImage");
+        const zoomRange = document.getElementById("blogBannerZoomRange");
+        const applyBtn = document.getElementById("blogBannerApplyBtn");
+        const resetBtn = document.getElementById("blogBannerResetBtn");
+        const closeBtn = document.getElementById("blogBannerCloseBtn");
+
+        const state = { loaded: false, naturalWidth: 0, naturalHeight: 0, scale: 1, minScale: 1, maxScale: 4, x: 0, y: 0, dragging: false, dragStartX: 0, dragStartY: 0, startX: 0, startY: 0 };
+
+        function openModal() {
+            modalEl.classList.add("is-open");
+            modalEl.setAttribute("aria-hidden", "false");
+            document.body.style.overflow = "hidden";
+        }
+        function closeModal() {
+            modalEl.classList.remove("is-open");
+            modalEl.setAttribute("aria-hidden", "true");
+            document.body.style.overflow = "";
+        }
+        function getFrameSize() {
+            const rect = frame.getBoundingClientRect();
+            return { width: Math.max(1, Math.round(rect.width)), height: Math.max(1, Math.round(rect.height)) };
+        }
+        function calculateLimits() {
+            const size = getFrameSize();
+            state.minScale = Math.max(size.width / state.naturalWidth, size.height / state.naturalHeight);
+            if (!Number.isFinite(state.minScale) || state.minScale <= 0) state.minScale = 1;
+            state.maxScale = state.minScale * 4;
+        }
+        function clampPosition() {
+            const size = getFrameSize();
+            const scaledWidth = state.naturalWidth * state.scale;
+            const scaledHeight = state.naturalHeight * state.scale;
+            if (scaledWidth <= size.width) state.x = (size.width - scaledWidth) / 2;
+            else state.x = Math.min(0, Math.max(size.width - scaledWidth, state.x));
+            if (scaledHeight <= size.height) state.y = (size.height - scaledHeight) / 2;
+            else state.y = Math.min(0, Math.max(size.height - scaledHeight, state.y));
+        }
+        function render() {
+            if (!state.loaded) return;
+            clampPosition();
+            img.style.display = "block";
+            img.style.width = state.naturalWidth + "px";
+            img.style.height = state.naturalHeight + "px";
+            img.style.transform = "translate(" + state.x + "px, " + state.y + "px) scale(" + state.scale + ")";
+        }
+        function resetEditor() {
+            if (!state.loaded) return;
+            calculateLimits();
+            state.scale = state.minScale;
+            const size = getFrameSize();
+            state.x = (size.width - state.naturalWidth * state.scale) / 2;
+            state.y = (size.height - state.naturalHeight * state.scale) / 2;
+            zoomRange.value = "0";
+            render();
+        }
+        function setZoomValue(value) {
+            if (!state.loaded) return;
+            const oldScale = state.scale;
+            const safeValue = Math.max(0, Math.min(100, Number(value || 0)));
+            const ratio = safeValue / 100;
+            const nextScale = state.minScale + (state.maxScale - state.minScale) * ratio;
+            const size = getFrameSize();
+            const centerX = size.width / 2;
+            const centerY = size.height / 2;
+            const imagePointX = (centerX - state.x) / oldScale;
+            const imagePointY = (centerY - state.y) / oldScale;
+            state.scale = nextScale;
+            state.x = centerX - imagePointX * state.scale;
+            state.y = centerY - imagePointY * state.scale;
+            zoomRange.value = String(safeValue);
+            render();
+        }
+        function openFile(file) {
+            if (!file || !file.type || !file.type.startsWith("image/")) return;
+            if (hiddenInput) hiddenInput.value = "";
+            const reader = new FileReader();
+            reader.onload = function (event) {
+                state.loaded = false;
+                img.onload = function () {
+                    state.naturalWidth = img.naturalWidth;
+                    state.naturalHeight = img.naturalHeight;
+                    state.loaded = true;
+                    openModal();
+                    window.requestAnimationFrame(function () { window.requestAnimationFrame(resetEditor); });
+                };
+                img.src = event.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+        function cropToDataUrl() {
+            const size = getFrameSize();
+            const outputWidth = 2200;
+            const outputHeight = 900;
+            const sourceX = Math.max(0, -state.x / state.scale);
+            const sourceY = Math.max(0, -state.y / state.scale);
+            const sourceWidth = Math.min(state.naturalWidth - sourceX, size.width / state.scale);
+            const sourceHeight = Math.min(state.naturalHeight - sourceY, size.height / state.scale);
+            const canvas = document.createElement("canvas");
+            canvas.width = outputWidth;
+            canvas.height = outputHeight;
+            const ctx = canvas.getContext("2d");
+            ctx.fillStyle = "#ffffff";
+            ctx.fillRect(0, 0, outputWidth, outputHeight);
+            ctx.imageSmoothingEnabled = true;
+            ctx.imageSmoothingQuality = "high";
+            ctx.drawImage(img, sourceX, sourceY, sourceWidth, sourceHeight, 0, 0, outputWidth, outputHeight);
+            return canvas.toDataURL("image/jpeg", 0.95);
+        }
+        function applyBanner() {
+            if (!state.loaded) return;
+            const dataUrl = cropToDataUrl();
+            if (hiddenInput) hiddenInput.value = dataUrl;
+            closeModal();
+        }
+
+        changeBtn.addEventListener("click", function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+            fileInput.click();
+        });
+        fileInput.addEventListener("change", function () {
+            const file = fileInput.files && fileInput.files[0];
+            openFile(file);
+        });
+        closeBtn.addEventListener("click", closeModal);
+        modalEl.addEventListener("click", function (event) { if (event.target === modalEl) closeModal(); });
+        document.addEventListener("keydown", function (event) { if (event.key === "Escape" && modalEl.classList.contains("is-open")) closeModal(); });
+        resetBtn.addEventListener("click", resetEditor);
+        applyBtn.addEventListener("click", applyBanner);
+        zoomRange.addEventListener("input", function () { setZoomValue(zoomRange.value); });
+        frame.addEventListener("wheel", function (event) {
+            if (!state.loaded) return;
+            event.preventDefault();
+            const current = Number(zoomRange.value || 0);
+            const step = event.deltaY < 0 ? 5 : -5;
+            const next = Math.max(0, Math.min(100, current + step));
+            setZoomValue(next);
+        }, { passive: false });
+        frame.addEventListener("pointerdown", function (event) {
+            if (!state.loaded) return;
+            state.dragging = true;
+            state.dragStartX = event.clientX;
+            state.dragStartY = event.clientY;
+            state.startX = state.x;
+            state.startY = state.y;
+            frame.classList.add("is-dragging");
+            frame.setPointerCapture(event.pointerId);
+        });
+        frame.addEventListener("pointermove", function (event) {
+            if (!state.dragging || !state.loaded) return;
+            state.x = state.startX + (event.clientX - state.dragStartX);
+            state.y = state.startY + (event.clientY - state.dragStartY);
+            render();
+        });
+        function stopDragging(event) {
+            if (!state.dragging) return;
+            state.dragging = false;
+            frame.classList.remove("is-dragging");
+            try {
+                if (event && frame.hasPointerCapture && frame.hasPointerCapture(event.pointerId)) frame.releasePointerCapture(event.pointerId);
+            } catch (error) {}
+        }
+        frame.addEventListener("pointerup", stopDragging);
+        frame.addEventListener("pointercancel", stopDragging);
+        frame.addEventListener("pointerleave", stopDragging);
+        if (form) {
+            form.addEventListener("submit", function () {
+                if (state.loaded && hiddenInput && !hiddenInput.value) hiddenInput.value = cropToDataUrl();
+            });
+        }
+        window.addEventListener("resize", function () {
+            if (state.loaded && modalEl.classList.contains("is-open")) resetEditor();
+        });
+    });
+})();

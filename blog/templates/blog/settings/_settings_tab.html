@@ -747,6 +747,16 @@
 {% endif %}
 
 {% if settings_tab == 'opcenito' %}
-<script src="{% static 'blog/js/blog_settings_banner.js' %}?v=banner_modal_clean_real_1"></script>
+{% if settings_tab == 'opcenito' %}{% if settings_tab == 'opcenito' %}<script src="{% static 'blog/js/blog_settings_banner.js' %}?v=banner_fix_20260519"></script>{% endif %}{% endif %}
 {% endif %}
+
+<style id="banner-editor-fix-style">
+#blogBannerCropModal:not(.is-open):not(.show),
+.blog-banner-crop-modal:not(.is-open):not(.show),
+.banner-crop-modal:not(.is-open):not(.show),
+.banner-editor-modal:not(.is-open):not(.show),
+#avatarCropModal:not(.is-open):not(.show) {
+    display: none !important;
+}
+</style>
 

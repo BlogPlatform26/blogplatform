@@ -1,4 +1,16 @@
-(function () {
+from pathlib import Path
+from datetime import datetime
+import shutil
+import re
+import sys
+
+ROOT = Path.cwd()
+TEMPLATE_PATH = ROOT / "blog" / "templates" / "blog" / "settings" / "_settings_tab.html"
+JS_PATH = ROOT / "blog" / "static" / "blog" / "js" / "blog_settings_banner.js"
+
+STAMP = datetime.now().strftime("%Y%m%d_%H%M%S")
+
+BANNER_JS = r'''(function () {
     "use strict";
 
     const OUTPUT_WIDTH = 2200;
@@ -494,3 +506,134 @@
         });
     });
 })();
+'''
+
+TEMPLATE_STYLE = """
+
+<style id="banner-editor-fix-style">
+#blogBannerCropModal:not(.is-open):not(.show),
+.blog-banner-crop-modal:not(.is-open):not(.show),
+.banner-crop-modal:not(.is-open):not(.show),
+.banner-editor-modal:not(.is-open):not(.show),
+#avatarCropModal:not(.is-open):not(.show) {
+    display: none !important;
+}
+</style>
+"""
+
+SCRIPT_TAG = """{% if settings_tab == 'opcenito' %}<script src=\"{% static 'blog/js/blog_settings_banner.js' %}?v=banner_fix_20260519\"></script>{% endif %}"""
+
+
+def backup_file(path: Path) -> Path:
+    backup = path.with_name(path.name + f".backup_banner_{STAMP}")
+    shutil.copy2(path, backup)
+    return backup
+
+
+def read_text(path: Path) -> str:
+    return path.read_text(encoding="utf-8")
+
+
+def write_text(path: Path, content: str) -> None:
+    path.write_text(content, encoding="utf-8", newline="\n")
+
+
+def patch_template(content: str) -> tuple[str, list[str]]:
+    notes = []
+
+    if 'id="blogBannerInput"' not in content and "id='blogBannerInput'" not in content:
+        def add_input_id(match: re.Match) -> str:
+            tag = match.group(0)
+            if " id=" not in tag:
+                tag = tag[:-1] + ' id="blogBannerInput">'
+            if " accept=" not in tag:
+                tag = tag[:-1] + ' accept="image/*">'
+            return tag
+
+        content, count = re.subn(
+            r'<input\b(?=[^>]*\bname=["\']blog_banner["\'])(?=[^>]*\btype=["\']file["\'])[^>]*>',
+            add_input_id,
+            content,
+            count=1,
+            flags=re.IGNORECASE,
+        )
+        if count:
+            notes.append("Dodan je id blogBannerInput na input za banner.")
+
+    if 'id="blogBannerChangeBtn"' not in content and "id='blogBannerChangeBtn'" not in content:
+        def add_button_id(match: re.Match) -> str:
+            button_start = match.group(1)
+            rest = match.group(2)
+            if " id=" not in button_start:
+                button_start = button_start[:-1] + ' id="blogBannerChangeBtn">'
+            return button_start + rest
+
+        content, count = re.subn(
+            r'(<button\b[^>]*>)(\s*Odaberi\s+i\s+uredi\s+banner\s*</button>)',
+            add_button_id,
+            content,
+            count=1,
+            flags=re.IGNORECASE | re.DOTALL,
+        )
+        if count:
+            notes.append("Dodan je id blogBannerChangeBtn na gumb za banner.")
+
+    if "banner-editor-fix-style" not in content:
+        content = content.rstrip() + TEMPLATE_STYLE + "\n"
+        notes.append("Dodan je mali CSS koji skriva editor dok nije otvoren.")
+
+    script_pattern = re.compile(
+        r'<script\s+src=["\']\{%\s*static\s+["\']blog/js/blog_settings_banner\.js["\']\s*%\}(?:\?v=[^"\']*)?["\']\s*>\s*</script>',
+        re.IGNORECASE,
+    )
+
+    if script_pattern.search(content):
+        content, count = script_pattern.subn(SCRIPT_TAG, content, count=1)
+        if count:
+            notes.append("Osvježena je verzija blog_settings_banner.js skripte.")
+    elif "blog_settings_banner.js" not in content:
+        content = content.rstrip() + "\n" + SCRIPT_TAG + "\n"
+        notes.append("Dodan je script tag za blog_settings_banner.js.")
+    else:
+        notes.append("Script tag već postoji, ali ga nisam mogao sigurno promijeniti. Ako se stara verzija učita, ručno dodaj ?v=banner_fix_20260519.")
+
+    return content, notes
+
+
+def main() -> int:
+    print("=== Popravak banner editora ===")
+    print(f"Radni folder: {ROOT}")
+
+    missing = [str(path) for path in [TEMPLATE_PATH, JS_PATH] if not path.exists()]
+    if missing:
+        print("\nNisam našao ove datoteke:")
+        for item in missing:
+            print(f"- {item}")
+        print("\nPokreni skriptu iz glavnog foldera projekta, tamo gdje je manage.py.")
+        return 1
+
+    template_backup = backup_file(TEMPLATE_PATH)
+    js_backup = backup_file(JS_PATH)
+
+    template_content = read_text(TEMPLATE_PATH)
+    new_template, notes = patch_template(template_content)
+    write_text(TEMPLATE_PATH, new_template)
+    write_text(JS_PATH, BANNER_JS)
+
+    print("\nGotovo.")
+    print("Backup datoteke:")
+    print(f"- {template_backup}")
+    print(f"- {js_backup}")
+
+    if notes:
+        print("\nŠto je promijenjeno:")
+        for note in notes:
+            print(f"- {note}")
+
+    print("\nSada pokreni server i u browseru napravi hard refresh: Ctrl + F5.")
+    print("Test: Postavke bloga > Općenito > Odaberi i uredi banner > Primijeni banner > Spremi promjene.")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

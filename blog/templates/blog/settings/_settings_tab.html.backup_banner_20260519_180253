@@ -203,38 +203,7 @@
 </div>
 {% endif %}
 
-<h5 class="modal-title mb-1">Uređivanje bannera</h5>
-                    <div class="small text-muted">Namjestite pravokutni izrez prije spremanja.</div>
-                </div>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zatvori" data-banner-close></button>
-            </div>
-            <div class="modal-body pt-0">
-                <div class="banner-crop-stage">
-                    <div class="banner-crop-frame" id="blogBannerCropFrame">
-                        <img id="blogBannerCropImage" alt="Banner preview">
-                    </div>
-                </div>
-                <div class="banner-crop-controls mt-3">
-                    <div class="banner-crop-control-row">
-                        <label for="blogBannerZoomRange" class="form-label mb-1">Uvećanje</label>
-                        <input type="range" id="blogBannerZoomRange" min="0" max="100" value="0" class="form-range">
-                    </div>
-                    <div class="d-flex flex-wrap gap-2 justify-content-between align-items-center mt-3">
-                        <button type="button" class="btn btn-outline-secondary btn-sm" id="blogBannerResetBtn">Vrati</button>
-                        <button type="button" class="btn btn-primary btn-sm" id="blogBannerApplyBtn">Primijeni banner</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade avatar-crop-modal" id="avatarCropModal" tabindex="-1" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered modal-lg">
-                    <div class="modal-content">
-                        <div class="modal-header border-0">
-                            <div>
-                                <h5 class="modal-title mb-1">Uređivanje avatara</h5>
+<h5 class="modal-title mb-1">Uređivanje avatara</h5>
                                 <div class="small text-muted">Namjestite sliku prije spremanja.</div>
                             </div>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zatvori" data-banner-close></button>
