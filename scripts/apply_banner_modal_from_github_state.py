@@ -1,4 +1,15 @@
-(function () {
+from pathlib import Path
+from datetime import datetime
+import shutil
+import re
+import textwrap
+
+ROOT = Path.cwd()
+TPL = ROOT / "blog" / "templates" / "blog" / "settings" / "_settings_tab.html"
+JS = ROOT / "blog" / "static" / "blog" / "js" / "blog_settings_banner.js"
+BACKUP_DIR = ROOT / "scripts" / ("_banner_modal_fix_backup_" + datetime.now().strftime("%Y%m%d_%H%M%S"))
+
+BANNER_JS = r'''(function () {
     "use strict";
 
     function ready(fn) {
@@ -442,3 +453,66 @@
         });
     });
 })();
+'''
+
+def backup_file(path: Path):
+    if path.exists():
+        BACKUP_DIR.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(path, BACKUP_DIR / path.name)
+
+def remove_static_banner_editor(html: str) -> str:
+    # Najvažnije: maknuti blok koji u formi prikazuje "Uređivanje bannera" na dnu stranice.
+    marker_banner = "Uređivanje bannera"
+    marker_avatar = "Uređivanje avatara"
+    b = html.find(marker_banner)
+    if b == -1:
+        return html
+    a = html.find(marker_avatar, b)
+    if a == -1:
+        # Ako nema avatar markera, ne riskiramo brisanje velikog dijela templatea.
+        return html
+
+    # Kreni od najbližeg block elementa prije naslova bannera, ako postoji.
+    search_start = max(0, b - 2500)
+    candidates = [html.rfind(token, search_start, b) for token in ("<div", "<section", "<h1", "<h2", "<h3", "<h4", "<h5")]
+    start = max(candidates)
+    if start == -1:
+        start = html.rfind("\n", 0, b) + 1
+
+    # Završetak je prije naslova avatara, ali od početka reda/bloka avatara.
+    avatar_line_start = html.rfind("\n", 0, a) + 1
+    if avatar_line_start < 0:
+        avatar_line_start = a
+
+    cleaned = html[:start].rstrip() + "\n\n" + html[avatar_line_start:].lstrip()
+    return cleaned
+
+def ensure_script_include(html: str) -> str:
+    script_line = '<script src="{% static \'blog/js/blog_settings_banner.js\' %}"></script>'
+    if "blog_settings_banner.js" in html:
+        return html
+    # Dodaj na sam kraj templatea. Učitat će se samo kad je ovaj include na stranici.
+    return html.rstrip() + "\n" + script_line + "\n"
+
+def main():
+    if not TPL.exists():
+        raise FileNotFoundError(f"Ne postoji: {TPL}")
+
+    backup_file(TPL)
+    backup_file(JS)
+
+    html = TPL.read_text(encoding="utf-8")
+    html = remove_static_banner_editor(html)
+    html = ensure_script_include(html)
+    TPL.write_text(html, encoding="utf-8")
+
+    JS.parent.mkdir(parents=True, exist_ok=True)
+    JS.write_text(BANNER_JS, encoding="utf-8")
+
+    print("Popravljeno:")
+    print("- maknut statični banner editor iz templatea")
+    print("- postavljen čisti blog_settings_banner.js")
+    print("- backup je u:", BACKUP_DIR)
+
+if __name__ == "__main__":
+    main()

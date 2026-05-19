@@ -9,25 +9,20 @@
         }
     }
 
-    function findButtonByText(text) {
-        const wanted = text.toLowerCase();
-        return Array.from(document.querySelectorAll("button, a, label"))
-            .find(function (el) {
-                return (el.textContent || "").trim().toLowerCase().includes(wanted);
-            });
-    }
-
     ready(function () {
         const fileInput = document.getElementById("blogBannerInput") || document.querySelector('input[type="file"][name="blog_banner"]');
-        const triggerBtn = document.getElementById("blogBannerChangeBtn") || findButtonByText("odaberi i uredi banner");
-        const form = fileInput ? fileInput.closest("form") : document.querySelector("form");
+        const changeBtn = document.getElementById("blogBannerChangeBtn") || Array.from(document.querySelectorAll("button, a, label")).find(function (el) {
+            return (el.textContent || "").trim().toLowerCase().includes("odaberi i uredi banner");
+        });
 
-        if (!fileInput || !triggerBtn || !form) {
+        if (!fileInput || !changeBtn) {
             return;
         }
 
+        const form = fileInput.closest("form") || document.querySelector("form");
         let hiddenInput = document.getElementById("croppedBlogBanner") || document.querySelector('input[name="cropped_blog_banner"]');
-        if (!hiddenInput) {
+
+        if (!hiddenInput && form) {
             hiddenInput = document.createElement("input");
             hiddenInput.type = "hidden";
             hiddenInput.name = "cropped_blog_banner";
@@ -35,61 +30,90 @@
             form.appendChild(hiddenInput);
         }
 
-        // Makni stare pokušaje modala ako su ostali u templateu ili ih je napravio stari JS.
-        document.querySelectorAll("#blogBannerCropModal, .blog-banner-crop-modal, .banner-crop-modal, .banner-editor-modal").forEach(function (el) {
-            el.remove();
-        });
+        function removeLegacyBannerEditors() {
+            document.querySelectorAll("#blogBannerCropModal, #blogBannerEditorModal, .blog-banner-crop-modal, .blog-banner-editor-modal, .banner-crop-modal, .banner-editor-modal").forEach(function (el) {
+                el.remove();
+            });
+
+            const headings = Array.from(document.querySelectorAll("h1, h2, h3, h4, h5, h6"));
+            headings.forEach(function (heading) {
+                const title = (heading.textContent || "").replace(/\s+/g, " ").trim().toLowerCase();
+                if (title !== "uređivanje bannera") {
+                    return;
+                }
+
+                let node = heading;
+                while (node) {
+                    const next = node.nextElementSibling;
+                    const text = (node.textContent || "").replace(/\s+/g, " ").trim().toLowerCase();
+                    node.remove();
+
+                    if (!next) {
+                        break;
+                    }
+
+                    const nextText = (next.textContent || "").replace(/\s+/g, " ").trim().toLowerCase();
+                    if (next.matches("h1, h2, h3, h4, h5, h6") || nextText.includes("uređivanje avatara")) {
+                        break;
+                    }
+
+                    node = next;
+                }
+            });
+        }
+
+        removeLegacyBannerEditors();
 
         const style = document.createElement("style");
         style.textContent = `
-            #blogBannerCropModal {
+            #bpBannerModal {
                 position: fixed !important;
                 inset: 0 !important;
-                z-index: 30000 !important;
+                z-index: 20000 !important;
                 display: none !important;
                 align-items: center !important;
                 justify-content: center !important;
                 padding: 18px !important;
-                background: rgba(0, 0, 0, 0.62) !important;
+                background: rgba(0, 0, 0, 0.58) !important;
             }
 
-            #blogBannerCropModal.is-open {
+            #bpBannerModal.bp-open {
                 display: flex !important;
             }
 
-            #blogBannerCropModal .banner-editor-dialog {
-                width: min(1040px, calc(100vw - 36px)) !important;
+            #bpBannerModal .bp-dialog {
+                width: min(980px, calc(100vw - 36px)) !important;
                 max-height: calc(100vh - 36px) !important;
                 overflow-y: auto !important;
                 background: #111827 !important;
                 color: #f8fafc !important;
                 border-radius: 22px !important;
                 box-shadow: 0 24px 70px rgba(0,0,0,.42) !important;
-                padding: 24px !important;
+                padding: 22px !important;
             }
 
-            #blogBannerCropModal .banner-editor-header {
+            #bpBannerModal .bp-header {
                 display: flex !important;
+                align-items: flex-start !important;
                 justify-content: space-between !important;
                 gap: 16px !important;
-                align-items: flex-start !important;
-                margin-bottom: 16px !important;
+                margin-bottom: 14px !important;
             }
 
-            #blogBannerCropModal .banner-editor-title {
-                margin: 0 0 4px 0 !important;
+            #bpBannerModal .bp-title {
                 font-size: 26px !important;
                 line-height: 1.15 !important;
+                margin: 0 0 5px 0 !important;
                 font-weight: 700 !important;
             }
 
-            #blogBannerCropModal .banner-editor-help {
+            #bpBannerModal .bp-help {
                 margin: 0 !important;
                 color: rgba(248,250,252,.72) !important;
                 font-size: 14px !important;
             }
 
-            #blogBannerCropModal .banner-editor-close {
+            #bpBannerModal .bp-close {
                 border: 0 !important;
                 background: transparent !important;
                 color: #f8fafc !important;
@@ -102,24 +126,24 @@
                 opacity: .85 !important;
             }
 
-            #blogBannerCropFrame {
+            #bpBannerFrame {
                 position: relative !important;
                 width: 100% !important;
                 aspect-ratio: 22 / 9 !important;
                 overflow: hidden !important;
                 background: #020617 !important;
                 border: 2px solid rgba(248,250,252,.92) !important;
-                border-radius: 18px !important;
+                border-radius: 16px !important;
                 touch-action: none !important;
                 user-select: none !important;
                 cursor: grab !important;
             }
 
-            #blogBannerCropFrame.is-dragging {
+            #bpBannerFrame.bp-dragging {
                 cursor: grabbing !important;
             }
 
-            #blogBannerCropImage {
+            #bpBannerImage {
                 position: absolute !important;
                 left: 0 !important;
                 top: 0 !important;
@@ -131,34 +155,34 @@
                 transform-origin: top left !important;
             }
 
-            #blogBannerCropModal .banner-editor-controls {
+            #bpBannerModal .bp-controls {
                 margin-top: 14px !important;
                 display: grid !important;
                 grid-template-columns: 110px 1fr !important;
-                gap: 12px !important;
                 align-items: center !important;
+                gap: 12px !important;
             }
 
-            #blogBannerCropModal .banner-editor-controls label {
+            #bpBannerModal .bp-controls label {
                 margin: 0 !important;
-                font-size: 15px !important;
                 font-weight: 600 !important;
                 color: #e5e7eb !important;
+                font-size: 15px !important;
             }
 
-            #blogBannerZoomRange {
+            #bpBannerZoom {
                 width: 100% !important;
             }
 
-            #blogBannerCropModal .banner-editor-actions {
+            #bpBannerModal .bp-actions {
                 margin-top: 14px !important;
                 display: flex !important;
                 align-items: center !important;
                 justify-content: space-between !important;
-                gap: 12px !important;
+                gap: 10px !important;
             }
 
-            #blogBannerCropModal .banner-editor-btn {
+            #bpBannerModal .bp-btn {
                 font-size: 14px !important;
                 padding: 7px 13px !important;
                 border-radius: 8px !important;
@@ -168,59 +192,60 @@
                 cursor: pointer !important;
             }
 
-            #blogBannerCropModal .banner-editor-btn-primary {
+            #bpBannerModal .bp-btn-primary {
                 background: #0d6efd !important;
                 border-color: #0d6efd !important;
                 color: #fff !important;
                 font-size: 15px !important;
-                padding: 9px 18px !important;
+                padding: 9px 20px !important;
             }
 
             @media (max-width: 700px) {
-                #blogBannerCropModal { padding: 10px !important; }
-                #blogBannerCropModal .banner-editor-dialog { width: calc(100vw - 20px) !important; padding: 18px !important; }
-                #blogBannerCropModal .banner-editor-title { font-size: 22px !important; }
-                #blogBannerCropModal .banner-editor-controls { grid-template-columns: 1fr !important; }
+                #bpBannerModal { padding: 10px !important; }
+                #bpBannerModal .bp-dialog { width: calc(100vw - 20px) !important; padding: 16px !important; }
+                #bpBannerModal .bp-title { font-size: 22px !important; }
+                #bpBannerModal .bp-controls { grid-template-columns: 1fr !important; }
+                #bpBannerModal .bp-actions { flex-direction: column !important; align-items: stretch !important; }
             }
         `;
         document.head.appendChild(style);
 
-        const modalEl = document.createElement("div");
-        modalEl.id = "blogBannerCropModal";
-        modalEl.setAttribute("aria-hidden", "true");
-        modalEl.innerHTML = `
-            <div class="banner-editor-dialog" role="dialog" aria-modal="true" aria-label="Uređivanje bannera">
-                <div class="banner-editor-header">
+        const modal = document.createElement("div");
+        modal.id = "bpBannerModal";
+        modal.setAttribute("aria-hidden", "true");
+        modal.innerHTML = `
+            <div class="bp-dialog" role="dialog" aria-modal="true" aria-label="Uređivanje bannera">
+                <div class="bp-header">
                     <div>
-                        <h2 class="banner-editor-title">Uređivanje bannera</h2>
-                        <p class="banner-editor-help">Namjestite pravokutni izrez prije spremanja.</p>
+                        <h3 class="bp-title">Uređivanje bannera</h3>
+                        <p class="bp-help">Namjestite pravokutni izrez prije spremanja.</p>
                     </div>
-                    <button type="button" class="banner-editor-close" id="blogBannerCloseBtn" aria-label="Zatvori">&times;</button>
+                    <button type="button" class="bp-close" id="bpBannerClose" aria-label="Zatvori">×</button>
                 </div>
 
-                <div id="blogBannerCropFrame">
-                    <img id="blogBannerCropImage" alt="Banner preview">
+                <div id="bpBannerFrame">
+                    <img id="bpBannerImage" alt="Banner preview">
                 </div>
 
-                <div class="banner-editor-controls">
-                    <label for="blogBannerZoomRange">Uvećanje</label>
-                    <input id="blogBannerZoomRange" type="range" min="0" max="100" step="1" value="0">
+                <div class="bp-controls">
+                    <label for="bpBannerZoom">Uvećanje</label>
+                    <input type="range" id="bpBannerZoom" min="0" max="100" value="0">
                 </div>
 
-                <div class="banner-editor-actions">
-                    <button type="button" class="banner-editor-btn" id="blogBannerResetBtn">Vrati</button>
-                    <button type="button" class="banner-editor-btn banner-editor-btn-primary" id="blogBannerApplyBtn">Primijeni banner</button>
+                <div class="bp-actions">
+                    <button type="button" class="bp-btn" id="bpBannerReset">Vrati</button>
+                    <button type="button" class="bp-btn bp-btn-primary" id="bpBannerApply">Primijeni banner</button>
                 </div>
             </div>
         `;
-        document.body.appendChild(modalEl);
+        document.body.appendChild(modal);
 
-        const frame = document.getElementById("blogBannerCropFrame");
-        const img = document.getElementById("blogBannerCropImage");
-        const zoomRange = document.getElementById("blogBannerZoomRange");
-        const applyBtn = document.getElementById("blogBannerApplyBtn");
-        const resetBtn = document.getElementById("blogBannerResetBtn");
-        const closeBtn = document.getElementById("blogBannerCloseBtn");
+        const frame = document.getElementById("bpBannerFrame");
+        const img = document.getElementById("bpBannerImage");
+        const zoom = document.getElementById("bpBannerZoom");
+        const closeBtn = document.getElementById("bpBannerClose");
+        const resetBtn = document.getElementById("bpBannerReset");
+        const applyBtn = document.getElementById("bpBannerApply");
 
         const state = {
             loaded: false,
@@ -239,18 +264,18 @@
         };
 
         function openModal() {
-            modalEl.classList.add("is-open");
-            modalEl.setAttribute("aria-hidden", "false");
+            modal.classList.add("bp-open");
+            modal.setAttribute("aria-hidden", "false");
             document.body.style.overflow = "hidden";
         }
 
         function closeModal() {
-            modalEl.classList.remove("is-open");
-            modalEl.setAttribute("aria-hidden", "true");
+            modal.classList.remove("bp-open");
+            modal.setAttribute("aria-hidden", "true");
             document.body.style.overflow = "";
         }
 
-        function getFrameSize() {
+        function frameSize() {
             const rect = frame.getBoundingClientRect();
             return {
                 width: Math.max(1, Math.round(rect.width)),
@@ -258,30 +283,35 @@
             };
         }
 
-        function calculateLimits() {
-            const size = getFrameSize();
-            state.minScale = Math.max(size.width / state.naturalWidth, size.height / state.naturalHeight);
+        function calculateScale() {
+            const size = frameSize();
+
+            // Banner kreće tako da se vidi cijela slika ako je moguće.
+            // Ako korisnik želi više popuniti prostor, koristi zoom.
+            state.minScale = Math.min(size.width / state.naturalWidth, size.height / state.naturalHeight);
+
             if (!Number.isFinite(state.minScale) || state.minScale <= 0) {
                 state.minScale = 1;
             }
-            state.maxScale = state.minScale * 4;
+
+            state.maxScale = state.minScale * 5;
         }
 
         function clampPosition() {
-            const size = getFrameSize();
-            const scaledWidth = state.naturalWidth * state.scale;
-            const scaledHeight = state.naturalHeight * state.scale;
+            const size = frameSize();
+            const scaledW = state.naturalWidth * state.scale;
+            const scaledH = state.naturalHeight * state.scale;
 
-            if (scaledWidth <= size.width) {
-                state.x = (size.width - scaledWidth) / 2;
+            if (scaledW <= size.width) {
+                state.x = (size.width - scaledW) / 2;
             } else {
-                state.x = Math.min(0, Math.max(size.width - scaledWidth, state.x));
+                state.x = Math.min(0, Math.max(size.width - scaledW, state.x));
             }
 
-            if (scaledHeight <= size.height) {
-                state.y = (size.height - scaledHeight) / 2;
+            if (scaledH <= size.height) {
+                state.y = (size.height - scaledH) / 2;
             } else {
-                state.y = Math.min(0, Math.max(size.height - scaledHeight, state.y));
+                state.y = Math.min(0, Math.max(size.height - scaledH, state.y));
             }
         }
 
@@ -296,37 +326,42 @@
 
         function resetEditor() {
             if (!state.loaded) return;
-            calculateLimits();
+            calculateScale();
             state.scale = state.minScale;
-            const size = getFrameSize();
+            const size = frameSize();
             state.x = (size.width - state.naturalWidth * state.scale) / 2;
             state.y = (size.height - state.naturalHeight * state.scale) / 2;
-            zoomRange.value = "0";
+            zoom.value = "0";
             render();
         }
 
-        function setZoomValue(value) {
+        function setZoom(value) {
             if (!state.loaded) return;
+
+            const safe = Math.max(0, Math.min(100, Number(value || 0)));
             const oldScale = state.scale;
-            const safeValue = Math.max(0, Math.min(100, Number(value || 0)));
-            const ratio = safeValue / 100;
+            const ratio = safe / 100;
             const nextScale = state.minScale + (state.maxScale - state.minScale) * ratio;
-            const size = getFrameSize();
+            const size = frameSize();
             const centerX = size.width / 2;
             const centerY = size.height / 2;
-            const imagePointX = (centerX - state.x) / oldScale;
-            const imagePointY = (centerY - state.y) / oldScale;
+            const imageX = (centerX - state.x) / oldScale;
+            const imageY = (centerY - state.y) / oldScale;
 
             state.scale = nextScale;
-            state.x = centerX - imagePointX * state.scale;
-            state.y = centerY - imagePointY * state.scale;
-            zoomRange.value = String(safeValue);
+            state.x = centerX - imageX * state.scale;
+            state.y = centerY - imageY * state.scale;
+            zoom.value = String(safe);
             render();
         }
 
         function openFile(file) {
             if (!file || !file.type || !file.type.startsWith("image/")) return;
-            hiddenInput.value = "";
+
+            if (hiddenInput) {
+                hiddenInput.value = "";
+            }
+
             const reader = new FileReader();
             reader.onload = function (event) {
                 state.loaded = false;
@@ -345,33 +380,44 @@
         }
 
         function cropToDataUrl() {
-            const size = getFrameSize();
-            const outputWidth = 2200;
-            const outputHeight = 900;
-            const sourceX = Math.max(0, -state.x / state.scale);
-            const sourceY = Math.max(0, -state.y / state.scale);
-            const sourceWidth = Math.min(state.naturalWidth - sourceX, size.width / state.scale);
-            const sourceHeight = Math.min(state.naturalHeight - sourceY, size.height / state.scale);
-
+            const size = frameSize();
+            const outputW = 2200;
+            const outputH = 900;
+            const scaleX = outputW / size.width;
+            const scaleY = outputH / size.height;
             const canvas = document.createElement("canvas");
-            canvas.width = outputWidth;
-            canvas.height = outputHeight;
+            canvas.width = outputW;
+            canvas.height = outputH;
             const ctx = canvas.getContext("2d");
+
             ctx.fillStyle = "#ffffff";
-            ctx.fillRect(0, 0, outputWidth, outputHeight);
+            ctx.fillRect(0, 0, outputW, outputH);
             ctx.imageSmoothingEnabled = true;
             ctx.imageSmoothingQuality = "high";
-            ctx.drawImage(img, sourceX, sourceY, sourceWidth, sourceHeight, 0, 0, outputWidth, outputHeight);
-            return canvas.toDataURL("image/jpeg", 0.95);
+
+            ctx.drawImage(
+                img,
+                state.x * scaleX,
+                state.y * scaleY,
+                state.naturalWidth * state.scale * scaleX,
+                state.naturalHeight * state.scale * scaleY
+            );
+
+            return canvas.toDataURL("image/jpeg", 0.96);
         }
 
         function applyBanner() {
             if (!state.loaded) return;
-            hiddenInput.value = cropToDataUrl();
+
+            const dataUrl = cropToDataUrl();
+            if (hiddenInput) {
+                hiddenInput.value = dataUrl;
+            }
+
             closeModal();
         }
 
-        triggerBtn.addEventListener("click", function (event) {
+        changeBtn.addEventListener("click", function (event) {
             event.preventDefault();
             event.stopPropagation();
             fileInput.click();
@@ -383,23 +429,30 @@
         });
 
         closeBtn.addEventListener("click", closeModal);
-        modalEl.addEventListener("click", function (event) {
-            if (event.target === modalEl) closeModal();
-        });
-        document.addEventListener("keydown", function (event) {
-            if (event.key === "Escape" && modalEl.classList.contains("is-open")) closeModal();
-        });
         resetBtn.addEventListener("click", resetEditor);
         applyBtn.addEventListener("click", applyBanner);
-        zoomRange.addEventListener("input", function () { setZoomValue(zoomRange.value); });
+        zoom.addEventListener("input", function () {
+            setZoom(zoom.value);
+        });
+
+        modal.addEventListener("click", function (event) {
+            if (event.target === modal) {
+                closeModal();
+            }
+        });
+
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape" && modal.classList.contains("bp-open")) {
+                closeModal();
+            }
+        });
 
         frame.addEventListener("wheel", function (event) {
             if (!state.loaded) return;
             event.preventDefault();
-            const current = Number(zoomRange.value || 0);
+            const current = Number(zoom.value || 0);
             const step = event.deltaY < 0 ? 5 : -5;
-            const next = Math.max(0, Math.min(100, current + step));
-            setZoomValue(next);
+            setZoom(Math.max(0, Math.min(100, current + step)));
         }, { passive: false });
 
         frame.addEventListener("pointerdown", function (event) {
@@ -409,7 +462,7 @@
             state.dragStartY = event.clientY;
             state.startX = state.x;
             state.startY = state.y;
-            frame.classList.add("is-dragging");
+            frame.classList.add("bp-dragging");
             frame.setPointerCapture(event.pointerId);
         });
 
@@ -420,10 +473,10 @@
             render();
         });
 
-        function stopDragging(event) {
+        function stopDrag(event) {
             if (!state.dragging) return;
             state.dragging = false;
-            frame.classList.remove("is-dragging");
+            frame.classList.remove("bp-dragging");
             try {
                 if (event && frame.hasPointerCapture && frame.hasPointerCapture(event.pointerId)) {
                     frame.releasePointerCapture(event.pointerId);
@@ -431,13 +484,21 @@
             } catch (error) {}
         }
 
-        frame.addEventListener("pointerup", stopDragging);
-        frame.addEventListener("pointercancel", stopDragging);
-        frame.addEventListener("pointerleave", stopDragging);
+        frame.addEventListener("pointerup", stopDrag);
+        frame.addEventListener("pointercancel", stopDrag);
+        frame.addEventListener("pointerleave", stopDrag);
 
-        form.addEventListener("submit", function () {
-            if (state.loaded && !hiddenInput.value) {
-                hiddenInput.value = cropToDataUrl();
+        if (form) {
+            form.addEventListener("submit", function () {
+                if (state.loaded && hiddenInput && !hiddenInput.value) {
+                    hiddenInput.value = cropToDataUrl();
+                }
+            });
+        }
+
+        window.addEventListener("resize", function () {
+            if (state.loaded && modal.classList.contains("bp-open")) {
+                resetEditor();
             }
         });
     });
