@@ -1,4 +1,8 @@
-document.addEventListener("DOMContentLoaded", function () {
+from pathlib import Path
+import re
+from datetime import datetime
+
+GOOD_AVATAR_JS = r'''document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("avatarForm");
     const input = document.getElementById("avatarInput");
     const triggerBtn = document.getElementById("avatarChangeBtn");
@@ -476,3 +480,102 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 });
+'''
+
+
+def find_project_root() -> Path:
+    start = Path.cwd().resolve()
+    candidates = [start] + list(start.parents)
+    for c in candidates:
+        if (c / "manage.py").exists() and (c / "blog").exists():
+            return c
+    # Ako je skripta u scripts folderu, probaj roditelja.
+    if start.name.lower() == "scripts" and (start.parent / "manage.py").exists():
+        return start.parent
+    raise SystemExit("Nisam našao glavni folder projekta. Pokreni iz foldera gdje je manage.py ili iz scripts foldera.")
+
+
+def backup_file(path: Path) -> None:
+    stamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    backup = path.with_suffix(path.suffix + f".avatar_backup_{stamp}")
+    backup.write_text(path.read_text(encoding="utf-8"), encoding="utf-8")
+    print(f"Backup: {backup}")
+
+
+def patch_template(template_path: Path) -> None:
+    text = template_path.read_text(encoding="utf-8")
+    original = text
+
+    # Sakrij native file input za avatar ako se slučajno prikazuje.
+    def fix_avatar_input(match):
+        tag = match.group(0)
+        if "d-none" not in tag:
+            if "class=" in tag:
+                tag = re.sub(r'class=(\"|\')([^\"\']*)(\"|\')', lambda m: f'class={m.group(1)}{m.group(2)} d-none{m.group(3)}', tag, count=1)
+            else:
+                tag = tag[:-1] + ' class="d-none">'
+        # osiguraj da je id dobar
+        if 'id=' not in tag:
+            tag = tag[:-1] + ' id="avatarInput">'
+        return tag
+
+    text = re.sub(
+        r'<input\b(?=[^>]*\btype=[\"\']file[\"\'])(?=[^>]*\bname=[\"\']avatar[\"\'])[^>]*>',
+        fix_avatar_input,
+        text,
+        flags=re.IGNORECASE,
+    )
+
+    # Ako hidden cropped input nedostaje, dodaj ga odmah poslije avatar inputa.
+    if 'id="croppedImage"' not in text and "id='croppedImage'" not in text:
+        text = re.sub(
+            r'(<input\b(?=[^>]*\btype=[\"\']file[\"\'])(?=[^>]*\bname=[\"\']avatar[\"\'])[^>]*>)',
+            r'\1\n<input type="hidden" name="cropped_image" id="croppedImage">',
+            text,
+            count=1,
+            flags=re.IGNORECASE,
+        )
+
+    # Osvježi cache za avatar JS.
+    text = re.sub(
+        r"\{\% static ['\"]blog/js/blog_settings_avatar\.js['\"] \%\}(\?v=[^'\"]*)?",
+        "{% static 'blog/js/blog_settings_avatar.js' %}?v=avatar_restore_3",
+        text,
+    )
+
+    if text != original:
+        backup_file(template_path)
+        template_path.write_text(text, encoding="utf-8")
+        print("Popravljen template: _settings_tab.html")
+    else:
+        print("Template nije trebalo mijenjati.")
+
+
+def main():
+    root = find_project_root()
+    print("=== Vraćanje avatar editora ===")
+    print(f"Projekt: {root}")
+
+    avatar_js = root / "blog" / "static" / "blog" / "js" / "blog_settings_avatar.js"
+    template = root / "blog" / "templates" / "blog" / "settings" / "_settings_tab.html"
+
+    missing = [p for p in [avatar_js, template] if not p.exists()]
+    if missing:
+        print("Nisam našao ove datoteke:")
+        for p in missing:
+            print("-", p)
+        raise SystemExit(1)
+
+    backup_file(avatar_js)
+    avatar_js.write_text(GOOD_AVATAR_JS, encoding="utf-8")
+    print("Popravljen JS: blog_settings_avatar.js")
+
+    patch_template(template)
+
+    print("\nGOTOVO.")
+    print("Sada pokreni server i u browseru napravi Ctrl + F5.")
+    print("Test: Odaberi i uredi avatar -> odaberi sliku -> mora se otvoriti editor -> kotačić miša mora zumirati.")
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,480 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const form =
+        document.getElementById("avatarForm") ||
+        document.querySelector("form");
+
+    const input =
+        document.getElementById("avatarInput") ||
+        document.querySelector('input[type="file"][name="avatar"]');
+
+    const triggerBtn =
+        document.getElementById("avatarChangeBtn") ||
+        Array.from(document.querySelectorAll("button, a, label")).find(function (el) {
+            return (el.textContent || "").trim().toLowerCase().includes("odaberi i uredi avatar");
+        });
+
+    if (!form || !input || !triggerBtn) {
+        return;
+    }
+
+    input.style.display = "none";
+
+    let hiddenInput =
+        document.getElementById("croppedImage") ||
+        document.querySelector('input[name="cropped_image"]');
+
+    if (!hiddenInput) {
+        hiddenInput = document.createElement("input");
+        hiddenInput.type = "hidden";
+        hiddenInput.name = "cropped_image";
+        hiddenInput.id = "croppedImage";
+        form.appendChild(hiddenInput);
+    }
+
+    function hideRightPreview() {
+        const ids = ["avatarPreviewCanvas", "avatarPreviewMiniCanvas"];
+
+        ids.forEach(function (id) {
+            const el = document.getElementById(id);
+            if (!el) return;
+
+            const block = el.closest(".col-md-4, .col-lg-4, .col-sm-6, .col, .text-center, div");
+            if (block) {
+                block.style.display = "none";
+            } else {
+                el.style.display = "none";
+            }
+        });
+
+        ["Preview (okruglo)", "Kako izgleda pored imena"].forEach(function (txt) {
+            Array.from(document.querySelectorAll("p, small, span, div")).forEach(function (el) {
+                if ((el.textContent || "").trim() === txt) {
+                    const block = el.closest(".col-md-4, .col-lg-4, .col-sm-6, .col, .text-center, div");
+                    if (block) {
+                        block.style.display = "none";
+                    } else {
+                        el.style.display = "none";
+                    }
+                }
+            });
+        });
+    }
+
+    hideRightPreview();
+
+    const style = document.createElement("style");
+    style.textContent = `
+        .avatar-editor-backdrop {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.65);
+            z-index: 99999;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .avatar-editor-box {
+            width: min(760px, 96vw);
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+            overflow: hidden;
+        }
+
+        .avatar-editor-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 20px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .avatar-editor-header h5 {
+            margin: 0;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .avatar-editor-close {
+            border: 0;
+            background: transparent;
+            font-size: 30px;
+            line-height: 1;
+            cursor: pointer;
+        }
+
+        .avatar-editor-body {
+            padding: 18px 20px;
+        }
+
+        .avatar-editor-stage {
+            position: relative;
+            width: 100%;
+            height: 420px;
+            background: #111827;
+            border-radius: 16px;
+            overflow: hidden;
+            touch-action: none;
+            user-select: none;
+        }
+
+        .avatar-editor-stage img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            transform-origin: center center;
+            user-select: none;
+            pointer-events: none;
+            max-width: none;
+        }
+
+        .avatar-editor-circle {
+            position: absolute;
+            width: 220px;
+            height: 220px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border: 3px solid #ffffff;
+            border-radius: 50%;
+            box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.45);
+            pointer-events: none;
+        }
+
+        .avatar-editor-controls {
+            margin-top: 16px;
+        }
+
+        .avatar-editor-controls label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .avatar-editor-controls input {
+            width: 100%;
+        }
+
+        .avatar-editor-footer {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            padding: 16px 20px;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .avatar-editor-btn {
+            border: 1px solid #0d6efd;
+            background: #0d6efd;
+            color: white;
+            padding: 9px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .avatar-editor-btn.secondary {
+            background: white;
+            color: #111827;
+            border-color: #9ca3af;
+        }
+
+        .avatar-editor-btn:hover {
+            opacity: 0.9;
+        }
+    `;
+    document.head.appendChild(style);
+
+    const modal = document.createElement("div");
+    modal.className = "avatar-editor-backdrop";
+    modal.innerHTML = `
+        <div class="avatar-editor-box">
+            <div class="avatar-editor-header">
+                <h5>Uređivanje avatara</h5>
+                <button type="button" class="avatar-editor-close">&times;</button>
+            </div>
+
+            <div class="avatar-editor-body">
+                <div class="avatar-editor-stage">
+                    <img alt="Avatar editor">
+                    <div class="avatar-editor-circle"></div>
+                </div>
+
+                <div class="avatar-editor-controls">
+                    <label>Uvećanje</label>
+                    <input type="range" min="0" max="100" value="0">
+                </div>
+            </div>
+
+            <div class="avatar-editor-footer">
+                <button type="button" class="avatar-editor-btn secondary" data-action="reset">Vrati</button>
+                <button type="button" class="avatar-editor-btn" data-action="apply">Primijeni avatar</button>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(modal);
+
+    const closeBtn = modal.querySelector(".avatar-editor-close");
+    const resetBtn = modal.querySelector('[data-action="reset"]');
+    const applyBtn = modal.querySelector('[data-action="apply"]');
+    const stage = modal.querySelector(".avatar-editor-stage");
+    const img = modal.querySelector("img");
+    const zoomRange = modal.querySelector('input[type="range"]');
+
+    let imageLoaded = false;
+    let naturalWidth = 0;
+    let naturalHeight = 0;
+    let x = 0;
+    let y = 0;
+    let scale = 1;
+    let minScale = 1;
+    let dragging = false;
+    let startMouseX = 0;
+    let startMouseY = 0;
+    let startX = 0;
+    let startY = 0;
+
+    const cropSize = 220;
+
+    function showModal() {
+        modal.style.display = "flex";
+    }
+
+    function hideModal() {
+        modal.style.display = "none";
+    }
+
+    function getStageRect() {
+        return stage.getBoundingClientRect();
+    }
+
+    function clampPosition() {
+        const rect = getStageRect();
+        const renderedWidth = naturalWidth * scale;
+        const renderedHeight = naturalHeight * scale;
+
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const half = cropSize / 2;
+
+        const minX = centerX + half - renderedWidth / 2;
+        const maxX = centerX - half + renderedWidth / 2;
+        const minY = centerY + half - renderedHeight / 2;
+        const maxY = centerY - half + renderedHeight / 2;
+
+        if (minX <= maxX) {
+            x = Math.min(Math.max(x, minX), maxX);
+        } else {
+            x = centerX;
+        }
+
+        if (minY <= maxY) {
+            y = Math.min(Math.max(y, minY), maxY);
+        } else {
+            y = centerY;
+        }
+    }
+
+    function updateTransform() {
+        img.style.width = naturalWidth + "px";
+        img.style.height = naturalHeight + "px";
+        img.style.transform =
+            "translate(" + (x - naturalWidth / 2) + "px, " + (y - naturalHeight / 2) + "px) scale(" + scale + ")";
+    }
+
+    function resetImagePosition() {
+        const rect = getStageRect();
+
+        minScale = Math.max(
+            cropSize / naturalWidth,
+            cropSize / naturalHeight
+        );
+
+        scale = minScale;
+        x = rect.width / 2;
+        y = rect.height / 2;
+        zoomRange.value = "0";
+
+        clampPosition();
+        updateTransform();
+    }
+
+    function setZoom(value) {
+        if (!imageLoaded) return;
+
+        const safeValue = Math.max(0, Math.min(100, Number(value || 0)));
+        const oldScale = scale;
+        const nextScale = minScale * (1 + safeValue * 0.03);
+
+        const rect = getStageRect();
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const ratio = nextScale / oldScale;
+
+        x = centerX + (x - centerX) * ratio;
+        y = centerY + (y - centerY) * ratio;
+        scale = nextScale;
+
+        clampPosition();
+        updateTransform();
+    }
+
+    function createCroppedCanvas() {
+        const rect = getStageRect();
+
+        const stageCanvas = document.createElement("canvas");
+        stageCanvas.width = Math.round(rect.width);
+        stageCanvas.height = Math.round(rect.height);
+
+        const sctx = stageCanvas.getContext("2d");
+        sctx.fillStyle = "#ffffff";
+        sctx.fillRect(0, 0, stageCanvas.width, stageCanvas.height);
+
+        sctx.save();
+        sctx.translate(x, y);
+        sctx.scale(scale, scale);
+        sctx.imageSmoothingEnabled = true;
+        sctx.imageSmoothingQuality = "high";
+        sctx.drawImage(img, -naturalWidth / 2, -naturalHeight / 2, naturalWidth, naturalHeight);
+        sctx.restore();
+
+        const output = document.createElement("canvas");
+        output.width = 1200;
+        output.height = 1200;
+
+        const octx = output.getContext("2d");
+        octx.imageSmoothingEnabled = true;
+        octx.imageSmoothingQuality = "high";
+
+        const sourceX = Math.round(rect.width / 2 - cropSize / 2);
+        const sourceY = Math.round(rect.height / 2 - cropSize / 2);
+
+        octx.drawImage(
+            stageCanvas,
+            sourceX,
+            sourceY,
+            cropSize,
+            cropSize,
+            0,
+            0,
+            1200,
+            1200
+        );
+
+        return output;
+    }
+
+    function openFile(file) {
+        if (!file || !file.type || !file.type.startsWith("image/")) {
+            return;
+        }
+
+        const reader = new FileReader();
+
+        reader.onload = function (event) {
+            imageLoaded = false;
+            hiddenInput.value = "";
+            img.src = event.target.result;
+            showModal();
+        };
+
+        reader.readAsDataURL(file);
+    }
+
+    triggerBtn.addEventListener("click", function (event) {
+        event.preventDefault();
+        input.click();
+    });
+
+    input.addEventListener("change", function () {
+        const file = input.files && input.files[0];
+        if (!file) return;
+        openFile(file);
+    });
+
+    img.addEventListener("load", function () {
+        naturalWidth = img.naturalWidth;
+        naturalHeight = img.naturalHeight;
+
+        if (!naturalWidth || !naturalHeight) {
+            return;
+        }
+
+        imageLoaded = true;
+
+        requestAnimationFrame(function () {
+            resetImagePosition();
+        });
+    });
+
+    zoomRange.addEventListener("input", function () {
+        setZoom(zoomRange.value);
+    });
+
+    stage.addEventListener("pointerdown", function (event) {
+        if (!imageLoaded) return;
+
+        dragging = true;
+        stage.setPointerCapture(event.pointerId);
+
+        startMouseX = event.clientX;
+        startMouseY = event.clientY;
+        startX = x;
+        startY = y;
+    });
+
+    stage.addEventListener("pointermove", function (event) {
+        if (!dragging || !imageLoaded) return;
+
+        x = startX + (event.clientX - startMouseX);
+        y = startY + (event.clientY - startMouseY);
+
+        clampPosition();
+        updateTransform();
+    });
+
+    function stopDragging(event) {
+        dragging = false;
+
+        if (event && stage.hasPointerCapture(event.pointerId)) {
+            stage.releasePointerCapture(event.pointerId);
+        }
+    }
+
+    stage.addEventListener("pointerup", stopDragging);
+    stage.addEventListener("pointercancel", stopDragging);
+    stage.addEventListener("pointerleave", stopDragging);
+
+    resetBtn.addEventListener("click", function () {
+        if (!imageLoaded) return;
+        resetImagePosition();
+    });
+
+    applyBtn.addEventListener("click", function () {
+        if (!imageLoaded) return;
+
+        const canvas = createCroppedCanvas();
+        hiddenInput.value = canvas.toDataURL("image/png");
+
+        hideModal();
+    });
+
+    closeBtn.addEventListener("click", function () {
+        hideModal();
+    });
+
+    modal.addEventListener("click", function (event) {
+        if (event.target === modal) {
+            hideModal();
+        }
+    });
+
+    form.addEventListener("submit", function () {
+        if (imageLoaded && !hiddenInput.value) {
+            const canvas = createCroppedCanvas();
+            hiddenInput.value = canvas.toDataURL("image/png");
+        }
+    });
+});
