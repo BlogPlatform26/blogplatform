@@ -17,13 +17,8 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
     }
 
-    // File input mora biti sakriven. Koristi se samo gumb "Odaberi i uredi avatar".
-    input.classList.add("d-none");
-    input.style.display = "none";
-
     const frame = modalEl.querySelector(".avatar-crop-frame") || cropImage.parentElement;
     let avatarModal = null;
-    let manualBackdrop = null;
     let imageLoaded = false;
     let isDragging = false;
     let dragStartX = 0;
@@ -44,47 +39,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (window.bootstrap) {
         avatarModal = new bootstrap.Modal(modalEl);
-    }
-
-    function showAvatarModal() {
-        if (avatarModal) {
-            avatarModal.show();
-            return;
-        }
-
-        modalEl.style.display = "block";
-        modalEl.removeAttribute("aria-hidden");
-        modalEl.setAttribute("aria-modal", "true");
-        modalEl.classList.add("show");
-        document.body.classList.add("modal-open");
-
-        if (!manualBackdrop) {
-            manualBackdrop = document.createElement("div");
-            manualBackdrop.className = "modal-backdrop fade show";
-            document.body.appendChild(manualBackdrop);
-        }
-
-        setTimeout(function () {
-            modalEl.dispatchEvent(new Event("shown.bs.modal"));
-        }, 0);
-    }
-
-    function hideAvatarModal() {
-        if (avatarModal) {
-            avatarModal.hide();
-            return;
-        }
-
-        modalEl.classList.remove("show");
-        modalEl.style.display = "none";
-        modalEl.setAttribute("aria-hidden", "true");
-        modalEl.removeAttribute("aria-modal");
-        document.body.classList.remove("modal-open");
-
-        if (manualBackdrop) {
-            manualBackdrop.remove();
-            manualBackdrop = null;
-        }
     }
 
     function clearCanvas(targetCanvas) {
@@ -195,8 +149,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         updateCropSize();
 
-        // Minimalni zoom se računa po krugu avatara.
-        // Tako slika potpuno pokriva krug, ali se ipak može vidjeti što veći dio slike.
+        // Važno: minimalni zoom se računa po krugu avatara, ne po cijelom pravokutnom okviru.
+        // Tako se može vidjeti više slike, dok god slika još uvijek potpuno pokriva krug.
         state.minScale = Math.max(
             state.cropSize / baseSize.width,
             state.cropSize / baseSize.height
@@ -329,14 +283,16 @@ document.addEventListener("DOMContentLoaded", function () {
         reader.onload = function (event) {
             imageLoaded = false;
             cropImage.src = event.target.result;
-            showAvatarModal();
+
+            if (avatarModal) {
+                avatarModal.show();
+            }
         };
         reader.readAsDataURL(file);
     }
 
     if (triggerBtn) {
-        triggerBtn.addEventListener("click", function (event) {
-            event.preventDefault();
+        triggerBtn.addEventListener("click", function () {
             input.click();
         });
     }
@@ -440,8 +396,8 @@ document.addEventListener("DOMContentLoaded", function () {
         applyBtn.addEventListener("click", function () {
             const applied = applyCropToHiddenInput();
 
-            if (applied) {
-                hideAvatarModal();
+            if (applied && avatarModal) {
+                avatarModal.hide();
             }
         });
     }
@@ -476,3 +432,49 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 });
+
+/* hideAvatarPreviewBlocks - safe UI cleanup */
+(function () {
+    function hideAvatarPreviewBlocks() {
+        const previewIds = ["avatarPreviewCanvas", "avatarPreviewMiniCanvas"];
+
+        previewIds.forEach(function (id) {
+            const el = document.getElementById(id);
+            if (!el) return;
+
+            const block = el.closest(
+                ".avatar-preview-block, .avatar-preview-item, .avatar-preview, .col-md-4, .col-lg-4, .col-sm-6, .col, .text-center"
+            );
+
+            if (block) {
+                block.style.display = "none";
+            } else {
+                el.style.display = "none";
+            }
+        });
+
+        const labelsToHide = ["Preview (okruglo)", "Kako izgleda pored imena"];
+
+        document.querySelectorAll("p, small, span, div").forEach(function (el) {
+            const text = (el.textContent || "").trim();
+            if (!labelsToHide.includes(text)) return;
+
+            const block = el.closest(
+                ".avatar-preview-block, .avatar-preview-item, .avatar-preview, .col-md-4, .col-lg-4, .col-sm-6, .col, .text-center"
+            );
+
+            if (block) {
+                block.style.display = "none";
+            } else {
+                el.style.display = "none";
+            }
+        });
+    }
+
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", hideAvatarPreviewBlocks);
+    } else {
+        hideAvatarPreviewBlocks();
+    }
+})();
+

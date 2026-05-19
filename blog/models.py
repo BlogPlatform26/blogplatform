@@ -310,19 +310,6 @@ class Profile(models.Model):
         ("center", "Sredina"),
         ("right", "Desno"),
     )
-    BLOG_BANNER_SIZE_CHOICES = (
-        ("xsmall", "Vrlo malo"),
-        ("small", "Malo"),
-        ("medium", "Srednje"),
-        ("large", "Veliko"),
-    )
-    blog_banner_size = models.CharField(
-        max_length=10,
-        choices=BLOG_BANNER_SIZE_CHOICES,
-        default="medium",
-    )
-
-
 
     blog_banner = models.ImageField(
         upload_to="blog_banners/",
