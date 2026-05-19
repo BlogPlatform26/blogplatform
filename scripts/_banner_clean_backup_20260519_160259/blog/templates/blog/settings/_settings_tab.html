@@ -116,97 +116,69 @@
             </div>
 
             <div class="card p-4 mt-4 shadow-sm">
-                <h5 class="mt-4">Slika na vrhu bloga</h5>
+                <h5 class="mb-3">Slika na vrhu bloga</h5>
 
-<div class="mb-3">
-    <label class="form-label d-block">Odaberi sliku</label>
+                <div class="mb-3">
+                    <label class="form-label d-block">Odaberi sliku</label>
+                    <input type="file" name="blog_banner" id="blogBannerInput" accept="image/*" class="form-control d-none">
+<button type="button" class="btn btn-outline-primary btn-sm" id="blogBannerChangeBtn">
+    Odaberi i uredi banner
+</button>
+                    <div class="small text-muted mt-2">
+                        Slika će se prikazivati na vrhu tvog bloga. Maksimalna veličina je 2 MB,
+                        a maksimalne dimenzije 2200 x 900 px.
+                    </div>
+                </div>
 
-    <input
-        type="file"
-        name="blog_banner"
-        id="blogBannerInput"
-        accept="image/*"
-        class="d-none"
-    >
+                <div class="mb-3">
+                    <label class="form-label d-block">Pozicija slike</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="blog_banner_position" value="left" id="bannerLeft" {% if user.profile.blog_banner_position == "left" %}checked{% endif %}>
+                        <label class="form-check-label" for="bannerLeft">Lijevo</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="blog_banner_position" value="center" id="bannerCenter" {% if user.profile.blog_banner_position == "center" %}checked{% endif %}>
+                        <label class="form-check-label" for="bannerCenter">Sredina</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="blog_banner_position" value="right" id="bannerRight" {% if user.profile.blog_banner_position == "right" %}checked{% endif %}>
+                        <label class="form-check-label" for="bannerRight">Desno</label>
+                    </div>
+                </div>
 
-    <input type="hidden" name="cropped_blog_banner" id="croppedBlogBanner">
+                {% if user.profile.blog_banner %}
+                    <div class="mb-3">
+                        <label class="form-label d-block">Trenutna slika</label>
+                        <img src="{{ user.profile.blog_banner.url }}" class="img-fluid rounded" style="max-height:180px; object-fit:contain;">
+                        <div class="form-check mt-2">
+                            <input class="form-check-input" type="checkbox" name="delete_blog_banner" value="1" id="deleteBlogBanner">
+                            <label class="form-check-label" for="deleteBlogBanner">Izbriši sliku</label>
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
 
-    <button type="button" class="btn btn-outline-primary" id="blogBannerChangeBtn">
-        Odaberi i uredi banner
-    </button>
+            
 
-    <div class="form-text mt-2">
-        Slika će se prikazivati na vrhu tvog bloga. Maksimalna veličina je 2 MB, a maksimalne dimenzije 2200 x 900 px.
+
     </div>
 </div>
 
-<div class="mb-3">
-    <label class="form-label d-block">Pozicija slike</label>
 
-    <div class="d-flex flex-wrap gap-4 align-items-center">
-        {% with banner_position=user.profile.blog_banner_position|default:"center" %}
-        <label class="form-check-label d-inline-flex align-items-center gap-2">
-            <input class="form-check-input m-0" type="radio" name="blog_banner_position" value="left" {% if banner_position == "left" %}checked{% endif %}>
-            Lijevo
-        </label>
 
-        <label class="form-check-label d-inline-flex align-items-center gap-2">
-            <input class="form-check-input m-0" type="radio" name="blog_banner_position" value="center" {% if banner_position == "center" %}checked{% endif %}>
-            Sredina
-        </label>
-
-        <label class="form-check-label d-inline-flex align-items-center gap-2">
-            <input class="form-check-input m-0" type="radio" name="blog_banner_position" value="right" {% if banner_position == "right" %}checked{% endif %}>
-            Desno
-        </label>
-        {% endwith %}
     </div>
 </div>
 
-<div class="mb-3">
-    <label class="form-label d-block">Veličina prikaza bannera</label>
 
-    <div class="d-flex flex-wrap gap-4 align-items-center">
-        {% with banner_size=user.profile.blog_banner_size|default:"medium" %}
-        <label class="form-check-label d-inline-flex align-items-center gap-2">
-            <input class="form-check-input m-0" type="radio" name="blog_banner_size" value="xsmall" {% if banner_size == "xsmall" %}checked{% endif %}>
-            Vrlo malo
-        </label>
-
-        <label class="form-check-label d-inline-flex align-items-center gap-2">
-            <input class="form-check-input m-0" type="radio" name="blog_banner_size" value="small" {% if banner_size == "small" %}checked{% endif %}>
-            Malo
-        </label>
-
-        <label class="form-check-label d-inline-flex align-items-center gap-2">
-            <input class="form-check-input m-0" type="radio" name="blog_banner_size" value="medium" {% if banner_size == "medium" %}checked{% endif %}>
-            Srednje
-        </label>
-
-        <label class="form-check-label d-inline-flex align-items-center gap-2">
-            <input class="form-check-input m-0" type="radio" name="blog_banner_size" value="large" {% if banner_size == "large" %}checked{% endif %}>
-            Veliko
-        </label>
-        {% endwith %}
-    </div>
-</div>
-
-{% if user.profile.blog_banner %}
-<div class="mb-3">
-    <label class="form-label d-block">Trenutna slika</label>
-    <img src="{{ user.profile.blog_banner.url }}" alt="Trenutna banner slika" class="img-fluid rounded border" style="max-width: 640px; max-height: 260px; object-fit: contain;">
-
-    <div class="form-check mt-3">
-        <input class="form-check-input" type="checkbox" name="delete_blog_banner" value="1" id="deleteBlogBanner">
-        <label class="form-check-label" for="deleteBlogBanner">Izbriši sliku</label>
-    </div>
-</div>
-{% endif %}
-
-<h5 class="modal-title mb-1">Uređivanje bannera</h5>
+<div class="modal fade banner-crop-modal" id="blogBannerCropModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+            <div class="modal-header border-0">
+                <div>
+                    <h5 class="modal-title mb-1">Uređivanje bannera</h5>
                     <div class="small text-muted">Namjestite pravokutni izrez prije spremanja.</div>
                 </div>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zatvori" data-banner-close></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zatvori"></button>
             </div>
             <div class="modal-body pt-0">
                 <div class="banner-crop-stage">
@@ -237,7 +209,7 @@
                                 <h5 class="modal-title mb-1">Uređivanje avatara</h5>
                                 <div class="small text-muted">Namjestite sliku prije spremanja.</div>
                             </div>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zatvori" data-banner-close></button>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zatvori"></button>
                         </div>
 
                         <div class="modal-body pt-0">
@@ -774,10 +746,4 @@
     }
 }
 </style>
-{% if settings_tab == 'opcenito' %}
-{% endif %}
-
-{% if settings_tab == 'opcenito' %}
-<script src="{% static 'blog/js/blog_settings_banner.js' %}?v=banner_modal_clean_real_1"></script>
-{% endif %}
-
+{% if settings_tab == 'opcenito' %}<script src="{% static 'blog/js/blog_settings_banner.js' %}"></script>{% endif %}
