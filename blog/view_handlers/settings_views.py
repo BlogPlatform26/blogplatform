@@ -1402,6 +1402,12 @@ def blog_settings(request):
                     banner_changed = True
                     settings_changed = True
 
+                selected_banner_size = request.POST.get('blog_banner_size')
+                if selected_banner_size in {'mini', 'small', 'medium', 'large', 'huge'} and profile.blog_banner_size != selected_banner_size:
+                    profile.blog_banner_size = selected_banner_size
+                    banner_changed = True
+                    settings_changed = True
+
                 if request.POST.get('delete_blog_banner') == '1':
                     if profile.blog_banner:
                         profile.blog_banner.delete(save=False)

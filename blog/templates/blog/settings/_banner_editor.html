@@ -106,6 +106,23 @@
                     >
                     <label class="form-check-label" for="bannerRight">Desno</label>
                 </div>
+
+                <div class="mt-3">
+                    <label class="form-label">Veličina prikaza</label>
+
+                    <select name="blog_banner_size" class="form-select">
+                        <option value="mini" {% if user.profile.blog_banner_size == "mini" %}selected{% endif %}>Mini</option>
+                        <option value="small" {% if user.profile.blog_banner_size == "small" %}selected{% endif %}>Malo</option>
+                        <option value="medium" {% if user.profile.blog_banner_size == "medium" or not user.profile.blog_banner_size %}selected{% endif %}>Srednje</option>
+                        <option value="large" {% if user.profile.blog_banner_size == "large" %}selected{% endif %}>Veliko</option>
+                        <option value="huge" {% if user.profile.blog_banner_size == "huge" %}selected{% endif %}>Ogromno</option>
+                    </select>
+
+                    <div class="form-text">
+                        Veličina je ista za lijevo, sredinu i desno. Pozicija samo pomiče banner.
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>

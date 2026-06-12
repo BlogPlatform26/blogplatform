@@ -36,39 +36,11 @@
         </div>
     {% endif %}
 
-    {% if blog.profile.blog_banner %}
-        {% with banner_position=blog.profile.blog_banner_position|default:'center' %}
-            <div class="blog-banner-strip">
-                <div class="row gx-4">
-                    <div class="col-md-3">
-                        {% if banner_position == 'left' %}
-                            <div class="blog-banner-slot blog-banner-slot-left">
-                                <div class="blog-banner">
-                                    <img src="{{ blog.profile.blog_banner.url }}" alt="Blog banner" class="blog-banner-img blog-banner-display-{{ blog.profile.blog_banner_display|default:'cover' }} blog-banner-focus-{{ blog.profile.blog_banner_focus|default:'center' }}">
-                                </div>
-                            </div>
-                        {% endif %}
-                    </div>
-
-                    <div class="col-md-6">
-                        {% if banner_position == 'center' %}
-                            <div class="blog-banner-slot blog-banner-slot-center">
-                                <div class="blog-banner">
-                                    <img src="{{ blog.profile.blog_banner.url }}" alt="Blog banner" class="blog-banner-img blog-banner-display-{{ blog.profile.blog_banner_display|default:'cover' }} blog-banner-focus-{{ blog.profile.blog_banner_focus|default:'center' }}">
-                                </div>
-                            </div>
-                        {% endif %}
-                    </div>
-
-                    <div class="col-md-3">
-                        {% if banner_position == 'right' %}
-                            <div class="blog-banner-slot blog-banner-slot-right">
-                                <div class="blog-banner">
-                                    <img src="{{ blog.profile.blog_banner.url }}" alt="Blog banner" class="blog-banner-img blog-banner-display-{{ blog.profile.blog_banner_display|default:'cover' }} blog-banner-focus-{{ blog.profile.blog_banner_focus|default:'center' }}">
-                                </div>
-                            </div>
-                        {% endif %}
-                    </div>
+        {% if blog.profile.blog_banner %}
+        {% with banner_position=blog.profile.blog_banner_position|default:'center' banner_size=blog.profile.blog_banner_size|default:'medium' %}
+            <div class="blog-banner-strip blog-banner-strip-{{ banner_position }}">
+                <div class="blog-banner blog-banner-size-{{ banner_size }}">
+                    <img src="{{ blog.profile.blog_banner.url }}" alt="Blog banner" class="blog-banner-img blog-banner-display-{{ blog.profile.blog_banner_display|default:'cover' }} blog-banner-focus-{{ blog.profile.blog_banner_focus|default:'center' }}">
                 </div>
             </div>
         {% endwith %}
@@ -159,11 +131,77 @@
 
 
 
+.blog-banner-strip {
+  width: 100%;
+  display: flex;
+  margin-top: 18px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.blog-banner-strip-left {
+  justify-content: flex-start;
+}
+
+.blog-banner-strip-center {
+  justify-content: center;
+}
+
+.blog-banner-strip-right {
+  justify-content: flex-end;
+}
+
+.blog-banner {
+  width: 640px;
+  max-width: 100%;
+  aspect-ratio: 22 / 9;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.blog-banner-size-mini {
+  width: 320px;
+}
+
+.blog-banner-size-small {
+  width: 480px;
+}
+
+.blog-banner-size-medium {
+  width: 640px;
+}
+
+.blog-banner-size-large {
+  width: 860px;
+}
+
+.blog-banner-size-huge {
+  width: 1100px;
+}
+
 .blog-banner-img {
   width: 100%;
-  height: 180px;
+  height: 100%;
   display: block;
   border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+  .blog-banner-strip,
+  .blog-banner-strip-left,
+  .blog-banner-strip-center,
+  .blog-banner-strip-right {
+    justify-content: center;
+  }
+
+  .blog-banner,
+  .blog-banner-size-mini,
+  .blog-banner-size-small,
+  .blog-banner-size-medium,
+  .blog-banner-size-large,
+  .blog-banner-size-huge {
+    width: 100%;
+  }
 }
 
 .blog-banner-display-cover {
@@ -185,6 +223,107 @@
 
 .blog-banner-focus-bottom {
   object-position: center bottom;
+}
+
+
+
+/* === Banner: ista veličina za lijevo/sredina/desno === */
+.blog-banner-strip {
+    width: 100% !important;
+    display: flex !important;
+    margin-top: 18px !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+    box-sizing: border-box !important;
+}
+
+.blog-banner-strip-left {
+    justify-content: flex-start !important;
+}
+
+.blog-banner-strip-center {
+    justify-content: center !important;
+}
+
+.blog-banner-strip-right {
+    justify-content: flex-end !important;
+}
+
+.blog-banner {
+    max-width: 100% !important;
+    aspect-ratio: 22 / 9 !important;
+    height: auto !important;
+    overflow: hidden !important;
+    border-radius: 12px !important;
+}
+
+/* Namjerno su razlike velike da se odmah vide */
+.blog-banner-size-mini {
+    width: 240px !important;
+}
+
+.blog-banner-size-small {
+    width: 420px !important;
+}
+
+.blog-banner-size-medium {
+    width: 640px !important;
+}
+
+.blog-banner-size-large {
+    width: 880px !important;
+}
+
+.blog-banner-size-huge {
+    width: 1180px !important;
+}
+
+.blog-banner-img {
+    width: 100% !important;
+    height: 100% !important;
+    display: block !important;
+    border-radius: 12px !important;
+}
+
+.blog-banner-display-cover {
+    object-fit: cover !important;
+}
+
+.blog-banner-display-contain {
+    object-fit: contain !important;
+    background: rgba(255, 255, 255, 0.35) !important;
+}
+
+.blog-banner-focus-top {
+    object-position: center top !important;
+}
+
+.blog-banner-focus-center {
+    object-position: center center !important;
+}
+
+.blog-banner-focus-bottom {
+    object-position: center bottom !important;
+}
+
+@media (max-width: 768px) {
+    .blog-banner-strip,
+    .blog-banner-strip-left,
+    .blog-banner-strip-center,
+    .blog-banner-strip-right {
+        justify-content: center !important;
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+    }
+
+    .blog-banner,
+    .blog-banner-size-mini,
+    .blog-banner-size-small,
+    .blog-banner-size-medium,
+    .blog-banner-size-large,
+    .blog-banner-size-huge {
+        width: 100% !important;
+    }
 }
 
 </style>
