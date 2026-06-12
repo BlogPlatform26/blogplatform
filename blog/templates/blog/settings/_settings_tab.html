@@ -113,45 +113,8 @@
                 </div>
             </div>
 
-            <div class="card p-4 mt-4 shadow-sm">
-                <h5 class="mb-3">Slika na vrhu bloga</h5>
+            {% include "blog/settings/_banner_editor.html" %}
 
-                <div class="mb-3">
-                    <label class="form-label d-block">Odaberi sliku</label>
-                    <input type="file" name="blog_banner" class="form-control" accept="image/*">
-                    <div class="small text-muted mt-2">
-                        Slika će se prikazivati na vrhu tvog bloga. Maksimalna veličina je 2 MB,
-                        a maksimalne dimenzije 2200 x 900 px.
-                    </div>
-                </div>
-
-                <div class="mb-3">
-                    <label class="form-label d-block">Pozicija slike</label>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="blog_banner_position" value="left" id="bannerLeft" {% if user.profile.blog_banner_position == "left" %}checked{% endif %}>
-                        <label class="form-check-label" for="bannerLeft">Lijevo</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="blog_banner_position" value="center" id="bannerCenter" {% if user.profile.blog_banner_position == "center" %}checked{% endif %}>
-                        <label class="form-check-label" for="bannerCenter">Sredina</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="blog_banner_position" value="right" id="bannerRight" {% if user.profile.blog_banner_position == "right" %}checked{% endif %}>
-                        <label class="form-check-label" for="bannerRight">Desno</label>
-                    </div>
-                </div>
-
-                {% if user.profile.blog_banner %}
-                    <div class="mb-3">
-                        <label class="form-label d-block">Trenutna slika</label>
-                        <img src="{{ user.profile.blog_banner.url }}" class="img-fluid rounded" style="max-height:180px; object-fit:contain;">
-                        <div class="form-check mt-2">
-                            <input class="form-check-input" type="checkbox" name="delete_blog_banner" value="1" id="deleteBlogBanner">
-                            <label class="form-check-label" for="deleteBlogBanner">Izbriši sliku</label>
-                        </div>
-                    </div>
-                {% endif %}
-            </div>
 
             <div class="modal fade avatar-crop-modal" id="avatarCropModal" tabindex="-1" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-lg">
