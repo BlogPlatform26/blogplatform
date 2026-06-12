@@ -1,0 +1,480 @@
+{# Banner editor - odvojeno od avatara #}
+
+<div class="card p-4 mt-4 shadow-sm">
+    <h5 class="mb-3">Slika na vrhu bloga</h5>
+
+    <p class="small text-muted mb-3">
+        Odaberi sliku i namjesti dio koji će se prikazati kao banner.
+    </p>
+
+    <input type="hidden" name="cropped_blog_banner" id="croppedBlogBannerInput">
+
+    <div class="row g-3 align-items-start">
+        <div class="col-md-4">
+            <label class="form-label d-block">Trenutna slika</label>
+
+            <div class="blog-banner-current-preview" id="blogBannerCurrentPreview">
+                {% if user.profile.blog_banner %}
+                    <img
+                        src="{{ user.profile.blog_banner.url }}"
+                        alt="Trenutna slika na vrhu bloga"
+                        id="blogBannerPreviewImage"
+                    >
+                {% else %}
+                    <div class="blog-banner-empty-preview" id="blogBannerEmptyPreview">
+                        Nema dodane slike na vrhu bloga.
+                    </div>
+
+                    <img
+                        src=""
+                        alt="Pregled bannera"
+                        id="blogBannerPreviewImage"
+                        style="display:none;"
+                    >
+                {% endif %}
+            </div>
+
+            {% if user.profile.blog_banner %}
+                <div class="form-check mt-2">
+                    <input
+                        class="form-check-input"
+                        type="checkbox"
+                        name="delete_blog_banner"
+                        value="1"
+                        id="deleteBlogBanner"
+                    >
+                    <label class="form-check-label" for="deleteBlogBanner">
+                        Izbriši sliku
+                    </label>
+                </div>
+            {% endif %}
+        </div>
+
+        <div class="col-md-8">
+            <label class="form-label d-block" for="blogBannerFileInput">Promijeni banner</label>
+
+            <input
+                type="file"
+                id="blogBannerFileInput"
+                class="form-control"
+                accept="image/*"
+            >
+
+            <div class="small text-muted mt-2 mb-3">
+                Nakon odabira slike otvorit će se uređivanje bannera.
+            </div>
+
+            <button type="button" class="btn btn-outline-primary btn-sm" id="openBlogBannerEditorBtn">
+                Odaberi i uredi banner
+            </button>
+
+            <div class="mt-4">
+                <label class="form-label d-block">Pozicija slike</label>
+
+                <div class="form-check">
+                    <input
+                        class="form-check-input"
+                        type="radio"
+                        name="blog_banner_position"
+                        value="left"
+                        id="bannerLeft"
+                        {% if user.profile.blog_banner_position == "left" %}checked{% endif %}
+                    >
+                    <label class="form-check-label" for="bannerLeft">Lijevo</label>
+                </div>
+
+                <div class="form-check">
+                    <input
+                        class="form-check-input"
+                        type="radio"
+                        name="blog_banner_position"
+                        value="center"
+                        id="bannerCenter"
+                        {% if user.profile.blog_banner_position == "center" %}checked{% endif %}
+                    >
+                    <label class="form-check-label" for="bannerCenter">Sredina</label>
+                </div>
+
+                <div class="form-check">
+                    <input
+                        class="form-check-input"
+                        type="radio"
+                        name="blog_banner_position"
+                        value="right"
+                        id="bannerRight"
+                        {% if user.profile.blog_banner_position == "right" %}checked{% endif %}
+                    >
+                    <label class="form-check-label" for="bannerRight">Desno</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade blog-banner-crop-modal" id="blogBannerCropModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content blog-banner-crop-content">
+            <div class="modal-header border-0">
+                <div>
+                    <h5 class="modal-title mb-1">Uređivanje bannera</h5>
+                    <div class="small text-muted">Namjesti sliku prije spremanja.</div>
+                </div>
+
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Zatvori"></button>
+            </div>
+
+            <div class="modal-body pt-0">
+                <div class="blog-banner-crop-stage">
+                    <img id="blogBannerCropImage" alt="Banner preview">
+                </div>
+
+                <div class="blog-banner-crop-controls mt-4">
+                    <div class="blog-banner-crop-control-row">
+                        <label for="blogBannerZoomRange" class="form-label mb-0">Uvećanje</label>
+                        <input type="range" id="blogBannerZoomRange" min="0" max="100" value="50" class="form-range">
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center gap-2 flex-wrap mt-3">
+                        <div class="d-flex gap-2 flex-wrap">
+                            <button type="button" class="btn btn-outline-secondary btn-sm" id="blogBannerRotateBtn">Zakreni</button>
+                            <button type="button" class="btn btn-outline-secondary btn-sm" id="blogBannerResetBtn">Vrati</button>
+                        </div>
+
+                        <button type="button" class="btn btn-primary" id="blogBannerApplyBtn">Primijeni banner</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cropperjs@1.6.2/dist/cropper.min.css">
+<script src="https://cdn.jsdelivr.net/npm/cropperjs@1.6.2/dist/cropper.min.js"></script>
+
+<style id="blog-banner-editor-style">
+.blog-banner-current-preview {
+    width: 100%;
+    max-width: 360px;
+    aspect-ratio: 22 / 9;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px dashed rgba(0, 0, 0, 0.25);
+    background: #f8fafc;
+}
+
+.blog-banner-current-preview img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.blog-banner-empty-preview {
+    width: 100%;
+    height: 100%;
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #64748b;
+    text-align: center;
+    padding: 16px;
+}
+
+#blogBannerCropModal .modal-dialog {
+    max-width: 760px !important;
+}
+
+#blogBannerCropModal .modal-content {
+    background: #111827 !important;
+    color: #f9fafb !important;
+    border: 0 !important;
+    border-radius: 22px !important;
+    overflow: hidden !important;
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45) !important;
+}
+
+#blogBannerCropModal .modal-header {
+    padding: 24px 28px 12px !important;
+}
+
+#blogBannerCropModal .modal-title {
+    color: #f9fafb !important;
+    font-size: 25px !important;
+    font-weight: 700 !important;
+}
+
+#blogBannerCropModal .text-muted {
+    color: #cbd5e1 !important;
+}
+
+#blogBannerCropModal .modal-body {
+    padding: 16px 28px 28px !important;
+}
+
+#blogBannerCropModal .blog-banner-crop-stage {
+    width: 100%;
+    max-width: 640px;
+    aspect-ratio: 22 / 9;
+    margin: 0 auto;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #020617;
+}
+
+#blogBannerCropModal #blogBannerCropImage {
+    display: block;
+    max-width: 100%;
+}
+
+#blogBannerCropModal .blog-banner-crop-controls {
+    width: 100%;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#blogBannerCropModal .blog-banner-crop-control-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+#blogBannerCropModal .form-label {
+    color: #f9fafb !important;
+    font-weight: 600 !important;
+    white-space: nowrap;
+}
+
+#blogBannerCropModal .form-range {
+    width: 100%;
+}
+
+#blogBannerCropModal .btn-outline-secondary {
+    color: #f9fafb !important;
+    border-color: rgba(255, 255, 255, 0.45) !important;
+}
+
+#blogBannerCropModal .cropper-line,
+#blogBannerCropModal .cropper-point {
+    display: none !important;
+}
+
+#blogBannerCropModal .cropper-view-box {
+    outline: 3px solid rgba(255, 255, 255, 0.95) !important;
+}
+
+#blogBannerCropModal .cropper-face,
+#blogBannerCropModal .cropper-view-box {
+    border-radius: 0 !important;
+}
+
+@media (max-width: 768px) {
+    #blogBannerCropModal .modal-dialog {
+        max-width: calc(100% - 24px) !important;
+    }
+
+    #blogBannerCropModal .modal-header,
+    #blogBannerCropModal .modal-body {
+        padding-left: 18px !important;
+        padding-right: 18px !important;
+    }
+}
+</style>
+
+<script id="blog-banner-editor-script">
+(function () {
+    function ready(fn) {
+        if (document.readyState !== "loading") {
+            fn();
+        } else {
+            document.addEventListener("DOMContentLoaded", fn);
+        }
+    }
+
+    ready(function () {
+        const fileInput = document.getElementById("blogBannerFileInput");
+        const openButton = document.getElementById("openBlogBannerEditorBtn");
+        const modalElement = document.getElementById("blogBannerCropModal");
+        const cropImage = document.getElementById("blogBannerCropImage");
+        const zoomRange = document.getElementById("blogBannerZoomRange");
+        const rotateButton = document.getElementById("blogBannerRotateBtn");
+        const resetButton = document.getElementById("blogBannerResetBtn");
+        const applyButton = document.getElementById("blogBannerApplyBtn");
+        const hiddenInput = document.getElementById("croppedBlogBannerInput");
+        const previewImage = document.getElementById("blogBannerPreviewImage");
+        const emptyPreview = document.getElementById("blogBannerEmptyPreview");
+
+        if (!fileInput || !openButton || !modalElement || !cropImage || !hiddenInput) {
+            return;
+        }
+
+        if (typeof Cropper === "undefined") {
+            console.error("CropperJS nije učitan.");
+            return;
+        }
+
+        let cropper = null;
+        let modal = null;
+        let objectUrl = null;
+
+        if (typeof bootstrap !== "undefined" && bootstrap.Modal) {
+            modal = new bootstrap.Modal(modalElement);
+        }
+
+        function destroyCropper() {
+            if (cropper) {
+                cropper.destroy();
+                cropper = null;
+            }
+        }
+
+        function openModal() {
+            if (modal) {
+                modal.show();
+            } else {
+                modalElement.style.display = "block";
+                modalElement.classList.add("show");
+                startCropper();
+            }
+        }
+
+        function closeModal() {
+            if (modal) {
+                modal.hide();
+            } else {
+                modalElement.style.display = "none";
+                modalElement.classList.remove("show");
+                destroyCropper();
+            }
+        }
+
+        function startCropper() {
+            destroyCropper();
+
+            cropper = new Cropper(cropImage, {
+                aspectRatio: 2200 / 900,
+                viewMode: 1,
+                dragMode: "move",
+                autoCropArea: 0.95,
+                background: false,
+                responsive: true,
+                guides: true,
+                center: true,
+                highlight: false,
+                cropBoxMovable: false,
+                cropBoxResizable: false,
+                toggleDragModeOnDblclick: false,
+                zoomOnWheel: true,
+                wheelZoomRatio: 0.08,
+
+                ready: function () {
+                    zoomRange.value = "50";
+                },
+
+                zoom: function (event) {
+                    const ratio = event.detail.ratio || 1;
+                    let value = Math.round(((ratio - 0.2) / (3 - 0.2)) * 100);
+                    value = Math.max(0, Math.min(100, value));
+                    zoomRange.value = String(value);
+                }
+            });
+        }
+
+        function openSelectedFile() {
+            const file = fileInput.files && fileInput.files[0];
+
+            if (!file) {
+                fileInput.click();
+                return;
+            }
+
+            if (!file.type || !file.type.startsWith("image/")) {
+                alert("Odaberi sliku.");
+                fileInput.value = "";
+                return;
+            }
+
+            if (objectUrl) {
+                URL.revokeObjectURL(objectUrl);
+            }
+
+            objectUrl = URL.createObjectURL(file);
+            cropImage.src = objectUrl;
+            openModal();
+        }
+
+        fileInput.addEventListener("change", openSelectedFile);
+
+        openButton.addEventListener("click", function () {
+            fileInput.click();
+        });
+
+        modalElement.addEventListener("shown.bs.modal", function () {
+            if (cropImage.src) {
+                startCropper();
+            }
+        });
+
+        modalElement.addEventListener("hidden.bs.modal", function () {
+            destroyCropper();
+        });
+
+        zoomRange.addEventListener("input", function () {
+            if (!cropper) {
+                return;
+            }
+
+            const value = Number(zoomRange.value);
+            const ratio = 0.2 + ((value / 100) * (3 - 0.2));
+            cropper.zoomTo(ratio);
+        });
+
+        rotateButton.addEventListener("click", function () {
+            if (cropper) {
+                cropper.rotate(90);
+            }
+        });
+
+        resetButton.addEventListener("click", function () {
+            if (cropper) {
+                cropper.reset();
+                zoomRange.value = "50";
+            }
+        });
+
+        applyButton.addEventListener("click", function () {
+            if (!cropper) {
+                return;
+            }
+
+            const canvas = cropper.getCroppedCanvas({
+                width: 2200,
+                height: 900,
+                imageSmoothingEnabled: true,
+                imageSmoothingQuality: "high",
+                fillColor: "#ffffff"
+            });
+
+            if (!canvas) {
+                alert("Banner nije moguće pripremiti.");
+                return;
+            }
+
+            const dataUrl = canvas.toDataURL("image/jpeg", 0.92);
+            hiddenInput.value = dataUrl;
+
+            if (previewImage) {
+                previewImage.src = dataUrl;
+                previewImage.style.display = "block";
+            }
+
+            if (emptyPreview) {
+                emptyPreview.style.display = "none";
+            }
+
+            closeModal();
+        });
+    });
+})();
+</script>
