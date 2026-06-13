@@ -877,22 +877,6 @@ def blog_settings(request):
     user_posts = None
     post_form = PostForm()
 
-    post_search_query = request.GET.get('post_q', '').strip()
-    post_category_filter = request.GET.get('post_category', '').strip()
-    post_tag_filter = request.GET.get('post_tag', '').strip()
-    post_type_filter = request.GET.get('post_type', '').strip()
-    post_year_filter = request.GET.get('post_year', '').strip()
-    post_month_filter = request.GET.get('post_month', '').strip()
-
-    post_filter_values = {
-        'q': post_search_query,
-        'category': post_category_filter,
-        'tag': post_tag_filter,
-        'type': post_type_filter,
-        'year': post_year_filter,
-        'month': post_month_filter,
-    }
-
     settings_tab = request.GET.get('settings_tab', 'opcenito')
     design_tab = request.GET.get('design_tab', 'predlosci')
 
@@ -1564,66 +1548,6 @@ def blog_settings(request):
     elif post_filter == 'deleted':
         user_posts = Post.objects.filter(author=request.user, status='deleted').order_by('-created_at')
 
-    if post_filter in {'published', 'draft', 'deleted'} and user_posts is not None:
-        if post_search_query:
-            user_posts = user_posts.filter(title__icontains=post_search_query)
-
-        if post_category_filter.isdigit():
-            user_posts = user_posts.filter(category_id=int(post_category_filter))
-
-        if post_tag_filter:
-            user_posts = user_posts.filter(tags__name__icontains=post_tag_filter).distinct()
-
-        if post_type_filter in {'post', 'quiz', 'poll'}:
-            user_posts = user_posts.filter(post_type=post_type_filter)
-
-        year_value = int(post_year_filter) if post_year_filter.isdigit() else None
-        month_value = int(post_month_filter) if post_month_filter.isdigit() else None
-
-        if month_value is not None and not 1 <= month_value <= 12:
-            month_value = None
-
-        if year_value and month_value:
-            user_posts = user_posts.filter(
-                Q(created_at__year=year_value, created_at__month=month_value)
-                | Q(publish_at__year=year_value, publish_at__month=month_value)
-            )
-        elif year_value:
-            user_posts = user_posts.filter(
-                Q(created_at__year=year_value)
-                | Q(publish_at__year=year_value)
-            )
-        elif month_value:
-            user_posts = user_posts.filter(
-                Q(created_at__month=month_value)
-                | Q(publish_at__month=month_value)
-            )
-
-    available_post_years = sorted({
-        date_value.year
-        for date_value in Post.objects.filter(
-            author=request.user,
-            status__in=['published', 'draft', 'deleted']
-        ).dates('created_at', 'year', order='DESC')
-    }, reverse=True)
-
-    post_month_choices = [
-        (1, 'Siječanj'),
-        (2, 'Veljača'),
-        (3, 'Ožujak'),
-        (4, 'Travanj'),
-        (5, 'Svibanj'),
-        (6, 'Lipanj'),
-        (7, 'Srpanj'),
-        (8, 'Kolovoz'),
-        (9, 'Rujan'),
-        (10, 'Listopad'),
-        (11, 'Studeni'),
-        (12, 'Prosinac'),
-    ]
-
-    has_active_post_filters = any(post_filter_values.values())
-
     blog_preferences = apply_blog_preferences_to_profile(profile, request.user)
     design_customizations = blog_preferences.get('design_customizations', {})
     active_design_template = profile.template if profile.template in DESIGN_TEMPLATE_LABELS else 'default'
@@ -1663,10 +1587,6 @@ def blog_settings(request):
         'author_questions_unanswered_count': author_questions_unanswered_count,
         'user_posts': user_posts,
         'post_filter': post_filter,
-        'post_filter_values': post_filter_values,
-        'post_month_choices': post_month_choices,
-        'available_post_years': available_post_years,
-        'has_active_post_filters': has_active_post_filters,
         'edit_post': edit_post,
         'categories': Category.objects.all().order_by('group', 'name'),
         'published_count': Post.objects.filter(author=request.user, status='published').count(),

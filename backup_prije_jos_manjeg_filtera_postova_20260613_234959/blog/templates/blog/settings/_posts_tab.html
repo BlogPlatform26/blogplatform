@@ -112,7 +112,7 @@
                                     name="post_tag"
                                     value="{{ post_filter_values.tag }}"
                                     class="form-control form-control-sm post-filter-input"
-                                    placeholder="npr. motivacija">
+                                    placeholder="npr. film_serije">
                             </div>
 
                             <div class="post-filter-field">
@@ -187,7 +187,7 @@
                                     <label class="form-label d-block">Naslov</label>
                                     <input type="text" name="title"
                                         value="{{ edit_post.title }}"
-                                        class="form-control form-control-sm post-filter-input">
+                                        class="form-control">
                                 </div>
 
                                 <div class="mb-3">
@@ -233,13 +233,13 @@
 
                                 <div class="mb-3">
                                     <label class="form-label d-block">Dodaj nove slike</label>
-                                    <input type="file" name="images" class="form-control form-control-sm post-filter-input" accept="image/*" multiple>
+                                    <input type="file" name="images" class="form-control" accept="image/*" multiple>
                                 </div>
 
                             </div>
 
                             <!-- DESNA STRANA -->
-                            <div class="post-filter-field">
+                            <div class="col-md-4">
 
                                 <div class="card">
                                     <div class="card-body category-card">
@@ -279,7 +279,7 @@
                                 </div>
 
                                 <div class="mb-3 mt-3">
-                                    <label class="form-label post-filter-label">Tagovi</label>
+                                    <label class="form-label">Tagovi</label>
                                     {{ post_form.tags_input }}
                                     <div class="small text-muted mt-1">
                                         Odvoji zarezom. Bez razmaka. Primjer: ljubav, film_serije, co2
@@ -378,7 +378,7 @@
 
                                     <div class="mb-3">
                                         <label class="form-label d-block">Slike</label>
-                                        <input type="file" name="images" class="form-control form-control-sm post-filter-input" accept="image/*" multiple>
+                                        <input type="file" name="images" class="form-control" accept="image/*" multiple>
                                         <div class="small text-muted mt-1">Možeš odabrati više slika odjednom.</div>
                                     </div>
 
@@ -427,7 +427,7 @@
                                 </div>
 
                                 <div class="mb-3 mt-3 pe-4">
-                                    <label class="form-label post-filter-label">Tagovi</label>
+                                    <label class="form-label">Tagovi</label>
                                     {{ post_form.tags_input }}
                                     <div class="small text-muted mt-1">
                                         Odvoji zarezom. Bez razmaka. Dopušteno: slova, brojevi i _. Primjer: ljubav, film_serije, co2
@@ -486,7 +486,7 @@
 
                                 <div class="mb-3">
                                     <label class="form-label d-block">Pitanje <span class="text-danger">*</span></label>
-                                    <input type="text" name="question" class="form-control form-control-sm post-filter-input" placeholder="Upiši pitanje...">
+                                    <input type="text" name="question" class="form-control" placeholder="Upiši pitanje...">
                                 </div>
 
                                 <div class="mb-3">
@@ -495,12 +495,12 @@
                                     <div id="quizOptions">
                                         <div class="d-flex gap-2 mb-2 align-items-center">
                                             <input type="radio" name="correct_option" value="0">
-                                            <input type="text" name="quiz_option" class="form-control form-control-sm post-filter-input" placeholder="Odgovor 1">
+                                            <input type="text" name="quiz_option" class="form-control" placeholder="Odgovor 1">
                                         </div>
 
                                         <div class="d-flex gap-2 mb-2 align-items-center">
                                             <input type="radio" name="correct_option" value="1">
-                                            <input type="text" name="quiz_option" class="form-control form-control-sm post-filter-input" placeholder="Odgovor 2">
+                                            <input type="text" name="quiz_option" class="form-control" placeholder="Odgovor 2">
                                         </div>
                                     </div>
 
@@ -515,7 +515,7 @@
 
                                 <div class="mb-3">
                                     <label class="form-label d-block">Slika (opcionalno)</label>
-                                    <input type="file" name="image" class="form-control form-control-sm post-filter-input" accept="image/*">
+                                    <input type="file" name="image" class="form-control" accept="image/*">
                                 </div>
 
                                 <div class="form-check mb-3">
@@ -527,7 +527,7 @@
 
                                 <div class="mb-3">
                                     <label class="form-label d-block" for="quizPublishAt">Datum i vrijeme objave</label>
-                                    <input type="datetime-local" name="publish_at" id="quizPublishAt" class="form-control form-control-sm post-filter-input">
+                                    <input type="datetime-local" name="publish_at" id="quizPublishAt" class="form-control">
                                     <div class="small text-muted mt-1">
                                         Ako upišeš datum i vrijeme pa klikneš Objavi kviz, kviz će biti objavljen tada. Ako ostaviš prazno, objavit će se odmah.
                                     </div>
@@ -535,7 +535,7 @@
 
                             </div>
 
-                            <div class="post-filter-field">
+                            <div class="col-md-4">
 
                                 <div class="card">
                                     <div class="card-body category-card">
@@ -605,7 +605,7 @@
 
                                 <div class="mb-3">
                                     <label class="form-label d-block">Pitanje ankete <span class="text-danger">*</span></label>
-                                    <input type="text" name="question" class="form-control form-control-sm post-filter-input" placeholder="Upiši pitanje...">
+                                    <input type="text" name="question" class="form-control" placeholder="Upiši pitanje...">
                                 </div>
 
                                 <div class="mb-3">
@@ -613,11 +613,11 @@
 
                                     <div id="pollOptions">
                                         <div class="d-flex gap-2 mb-2 align-items-center">
-                                            <input type="text" name="poll_option" class="form-control form-control-sm post-filter-input" placeholder="Opcija 1">
+                                            <input type="text" name="poll_option" class="form-control" placeholder="Opcija 1">
                                         </div>
 
                                         <div class="d-flex gap-2 mb-2 align-items-center">
-                                            <input type="text" name="poll_option" class="form-control form-control-sm post-filter-input" placeholder="Opcija 2">
+                                            <input type="text" name="poll_option" class="form-control" placeholder="Opcija 2">
                                         </div>
                                     </div>
 
@@ -628,7 +628,7 @@
 
                                 <div class="mb-3">
                                     <label class="form-label d-block">Slika (opcionalno)</label>
-                                    <input type="file" name="image" class="form-control form-control-sm post-filter-input" accept="image/*">
+                                    <input type="file" name="image" class="form-control" accept="image/*">
                                 </div>
 
                                 <div class="form-check mb-3">
@@ -640,7 +640,7 @@
 
                                 <div class="mb-3">
                                     <label class="form-label d-block" for="pollPublishAt">Datum i vrijeme objave</label>
-                                    <input type="datetime-local" name="publish_at" id="pollPublishAt" class="form-control form-control-sm post-filter-input">
+                                    <input type="datetime-local" name="publish_at" id="pollPublishAt" class="form-control">
                                     <div class="small text-muted mt-1">
                                         Ako upišeš datum i vrijeme pa klikneš Objavi anketu, anketa će biti objavljena tada. Ako ostaviš prazno, objavit će se odmah.
                                     </div>
@@ -648,7 +648,7 @@
 
                             </div>
 
-                            <div class="post-filter-field">
+                            <div class="col-md-4">
 
                                 <div class="card">
                                     <div class="card-body category-card">
@@ -959,143 +959,5 @@
             width: 100%;
         }
     }
-</style>
-
-
-
-<style>
-/* === Super kompaktan filter postova === */
-.post-filter-panel-compact {
-    margin-bottom: 14px !important;
-}
-
-.post-filter-panel-compact .card-body {
-    padding: 8px 10px !important;
-}
-
-.post-filter-form-compact {
-    display: grid !important;
-    grid-template-columns: minmax(130px, 1.2fr) minmax(130px, 1.15fr) minmax(105px, .85fr) minmax(88px, .68fr) minmax(88px, .68fr) minmax(96px, .75fr) auto !important;
-    gap: 6px !important;
-    align-items: end !important;
-}
-
-.post-filter-field,
-.post-filter-actions {
-    min-width: 0 !important;
-}
-
-.post-filter-label {
-    font-size: 0.72rem !important;
-    line-height: 1.1 !important;
-    margin-bottom: 2px !important;
-    white-space: nowrap !important;
-}
-
-.post-filter-input {
-    min-height: 28px !important;
-    height: 28px !important;
-    font-size: 0.78rem !important;
-    line-height: 1.1 !important;
-    padding: 2px 8px !important;
-}
-
-.post-filter-actions {
-    display: flex !important;
-    gap: 5px !important;
-    align-items: end !important;
-    grid-column: auto !important;
-}
-
-.post-filter-btn {
-    min-width: 58px !important;
-    height: 28px !important;
-    min-height: 28px !important;
-    font-size: 0.76rem !important;
-    line-height: 1 !important;
-    padding: 3px 8px !important;
-    white-space: nowrap !important;
-}
-
-.post-filter-panel-compact .small.text-muted {
-    margin-top: 6px !important;
-    font-size: 0.72rem !important;
-}
-
-/* Ne prelamaj u 2 reda na desktopu */
-@media (min-width: 901px) {
-    .post-filter-form-compact {
-        grid-template-columns: minmax(130px, 1.2fr) minmax(130px, 1.15fr) minmax(105px, .85fr) minmax(88px, .68fr) minmax(88px, .68fr) minmax(96px, .75fr) auto !important;
-    }
-
-    .post-filter-actions {
-        grid-column: auto !important;
-        flex-direction: row !important;
-    }
-}
-
-/* Tek na manjim ekranima prelamaj */
-@media (max-width: 900px) {
-    .post-filter-form-compact {
-        grid-template-columns: 1fr 1fr !important;
-    }
-
-    .post-filter-actions {
-        grid-column: span 2 !important;
-    }
-}
-
-@media (max-width: 560px) {
-    .post-filter-form-compact {
-        grid-template-columns: 1fr !important;
-    }
-
-    .post-filter-actions {
-        grid-column: auto !important;
-        flex-direction: column !important;
-        align-items: stretch !important;
-    }
-
-    .post-filter-btn {
-        width: 100% !important;
-    }
-}
-</style>
-
-
-
-
-
-
-
-<style>
-/* === Tamnija pozadina filter panela postova === */
-.post-filter-panel,
-.post-filter-panel-compact {
-    background: #f1f3f5 !important;
-    border: 1px solid #d7dbe0 !important;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04) !important;
-}
-
-.post-filter-panel .card-body,
-.post-filter-panel-compact .card-body {
-    background: #f1f3f5 !important;
-}
-
-.post-filter-panel .post-filter-input,
-.post-filter-panel-compact .post-filter-input {
-    background: #ffffff !important;
-    border-color: #cfd6dd !important;
-}
-
-.post-filter-panel .post-filter-input:focus,
-.post-filter-panel-compact .post-filter-input:focus {
-    background: #ffffff !important;
-}
-
-.post-filter-panel .post-filter-label,
-.post-filter-panel-compact .post-filter-label {
-    color: #2f3b46 !important;
-}
 </style>
 
