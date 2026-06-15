@@ -1,0 +1,152 @@
+[
+  {
+    "name": "Ekonomija",
+    "slug": "ekonomija",
+    "group": "drustvo"
+  },
+  {
+    "name": "Filozofija",
+    "slug": "filozofija",
+    "group": "drustvo"
+  },
+  {
+    "name": "Politika",
+    "slug": "politika",
+    "group": "drustvo"
+  },
+  {
+    "name": "Religija",
+    "slug": "religija",
+    "group": "drustvo"
+  },
+  {
+    "name": "Zajednica",
+    "slug": "zajednica",
+    "group": "drustvo"
+  },
+  {
+    "name": "Arhitektura",
+    "slug": "arhitektura",
+    "group": "kultura"
+  },
+  {
+    "name": "Filmovi & Serije",
+    "slug": "filmovi-serije",
+    "group": "kultura"
+  },
+  {
+    "name": "Fotografije",
+    "slug": "fotografije",
+    "group": "kultura"
+  },
+  {
+    "name": "Glazba",
+    "slug": "glazba",
+    "group": "kultura"
+  },
+  {
+    "name": "Kazalište",
+    "slug": "kazaliste",
+    "group": "kultura"
+  },
+  {
+    "name": "Poezija",
+    "slug": "poezija",
+    "group": "kultura"
+  },
+  {
+    "name": "Priče",
+    "slug": "Price",
+    "group": "kultura"
+  },
+  {
+    "name": "Umjetnost",
+    "slug": "umjetnost",
+    "group": "kultura"
+  },
+  {
+    "name": "Biljke",
+    "slug": "biljke",
+    "group": "priroda"
+  },
+  {
+    "name": "Pejzaž",
+    "slug": "pejzaz",
+    "group": "priroda"
+  },
+  {
+    "name": "Životinje",
+    "slug": "zivotinje",
+    "group": "priroda"
+  },
+  {
+    "name": "Anketa",
+    "slug": "anketa",
+    "group": "razno"
+  },
+  {
+    "name": "Gastro",
+    "slug": "gastro",
+    "group": "razno"
+  },
+  {
+    "name": "Kviz",
+    "slug": "kviz",
+    "group": "razno"
+  },
+  {
+    "name": "Moda",
+    "slug": "moda",
+    "group": "razno"
+  },
+  {
+    "name": "Putovanja",
+    "slug": "putovanja",
+    "group": "razno"
+  },
+  {
+    "name": "Rezencije",
+    "slug": "rezencije",
+    "group": "razno"
+  },
+  {
+    "name": "Ljubav",
+    "slug": "ljubav",
+    "group": "zivot"
+  },
+  {
+    "name": "Odnosi",
+    "slug": "odnosi",
+    "group": "zivot"
+  },
+  {
+    "name": "Osobno",
+    "slug": "osobno",
+    "group": "zivot"
+  },
+  {
+    "name": "Psihologija",
+    "slug": "psihologija",
+    "group": "zivot"
+  },
+  {
+    "name": "Edukacija",
+    "slug": "edukacija",
+    "group": "znanje"
+  },
+  {
+    "name": "Povijest",
+    "slug": "povijest",
+    "group": "znanje"
+  },
+  {
+    "name": "Tehnologija",
+    "slug": "tehnologija",
+    "group": "znanje"
+  },
+  {
+    "name": "Znanost",
+    "slug": "znanost",
+    "group": "znanje"
+  }
+]
