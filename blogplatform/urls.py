@@ -111,5 +111,4 @@ urlpatterns = [
 
 # Media datoteke Django smije služiti samo lokalno dok je DEBUG=True.
 # U produkciji media/static datoteke treba služiti hosting/server.
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
