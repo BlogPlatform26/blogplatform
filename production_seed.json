@@ -1,0 +1,3374 @@
+{
+  "categories": [
+    {
+      "id": 11,
+      "name": "Ekonomija",
+      "slug": "ekonomija",
+      "group": "drustvo"
+    },
+    {
+      "id": 13,
+      "name": "Filozofija",
+      "slug": "filozofija",
+      "group": "drustvo"
+    },
+    {
+      "id": 12,
+      "name": "Politika",
+      "slug": "politika",
+      "group": "drustvo"
+    },
+    {
+      "id": 10,
+      "name": "Religija",
+      "slug": "religija",
+      "group": "drustvo"
+    },
+    {
+      "id": 9,
+      "name": "Zajednica",
+      "slug": "zajednica",
+      "group": "drustvo"
+    },
+    {
+      "id": 29,
+      "name": "Arhitektura",
+      "slug": "arhitektura",
+      "group": "kultura"
+    },
+    {
+      "id": 19,
+      "name": "Filmovi & Serije",
+      "slug": "filmovi-serije",
+      "group": "kultura"
+    },
+    {
+      "id": 17,
+      "name": "Fotografije",
+      "slug": "fotografije",
+      "group": "kultura"
+    },
+    {
+      "id": 18,
+      "name": "Glazba",
+      "slug": "glazba",
+      "group": "kultura"
+    },
+    {
+      "id": 31,
+      "name": "Kazalište",
+      "slug": "kazaliste",
+      "group": "kultura"
+    },
+    {
+      "id": 14,
+      "name": "Poezija",
+      "slug": "poezija",
+      "group": "kultura"
+    },
+    {
+      "id": 15,
+      "name": "Priče",
+      "slug": "Price",
+      "group": "kultura"
+    },
+    {
+      "id": 16,
+      "name": "Umjetnost",
+      "slug": "umjetnost",
+      "group": "kultura"
+    },
+    {
+      "id": 20,
+      "name": "Biljke",
+      "slug": "biljke",
+      "group": "priroda"
+    },
+    {
+      "id": 30,
+      "name": "Pejzaž",
+      "slug": "pejzaz",
+      "group": "priroda"
+    },
+    {
+      "id": 21,
+      "name": "Životinje",
+      "slug": "zivotinje",
+      "group": "priroda"
+    },
+    {
+      "id": 27,
+      "name": "Anketa",
+      "slug": "anketa",
+      "group": "razno"
+    },
+    {
+      "id": 24,
+      "name": "Gastro",
+      "slug": "gastro",
+      "group": "razno"
+    },
+    {
+      "id": 26,
+      "name": "Kviz",
+      "slug": "kviz",
+      "group": "razno"
+    },
+    {
+      "id": 23,
+      "name": "Moda",
+      "slug": "moda",
+      "group": "razno"
+    },
+    {
+      "id": 25,
+      "name": "Putovanja",
+      "slug": "putovanja",
+      "group": "razno"
+    },
+    {
+      "id": 22,
+      "name": "Rezencije",
+      "slug": "rezencije",
+      "group": "razno"
+    },
+    {
+      "id": 5,
+      "name": "Ljubav",
+      "slug": "ljubav",
+      "group": "zivot"
+    },
+    {
+      "id": 6,
+      "name": "Odnosi",
+      "slug": "odnosi",
+      "group": "zivot"
+    },
+    {
+      "id": 7,
+      "name": "Osobno",
+      "slug": "osobno",
+      "group": "zivot"
+    },
+    {
+      "id": 8,
+      "name": "Psihologija",
+      "slug": "psihologija",
+      "group": "zivot"
+    },
+    {
+      "id": 2,
+      "name": "Edukacija",
+      "slug": "edukacija",
+      "group": "znanje"
+    },
+    {
+      "id": 4,
+      "name": "Povijest",
+      "slug": "povijest",
+      "group": "znanje"
+    },
+    {
+      "id": 3,
+      "name": "Tehnologija",
+      "slug": "tehnologija",
+      "group": "znanje"
+    },
+    {
+      "id": 1,
+      "name": "Znanost",
+      "slug": "znanost",
+      "group": "znanje"
+    }
+  ],
+  "category_home_images": [
+    {
+      "category_slug": "ekonomija",
+      "title": "Slika10",
+      "image": "category_home_images/Slika10_jRZqusU.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "ekonomija",
+      "title": "Slika9",
+      "image": "category_home_images/Slika9_CJGvOaT.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "ekonomija",
+      "title": "Slika8",
+      "image": "category_home_images/Slika8_ZxznO9v.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "ekonomija",
+      "title": "Slika7",
+      "image": "category_home_images/Slika7_RKWUhqF.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "ekonomija",
+      "title": "Slika6",
+      "image": "category_home_images/Slika6_2WYdSBl.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "ekonomija",
+      "title": "Slika5",
+      "image": "category_home_images/Slika5_iMVcobr.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "ekonomija",
+      "title": "Slika4",
+      "image": "category_home_images/Slika4_xOoKLH0.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "ekonomija",
+      "title": "Slika3",
+      "image": "category_home_images/Slika3_BmYSVbb.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "ekonomija",
+      "title": "Slika2",
+      "image": "category_home_images/Slika2_DctzitW.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "ekonomija",
+      "title": "Slika1",
+      "image": "category_home_images/Slika1_6mE7Rkk.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "filozofija",
+      "title": "Slika12",
+      "image": "category_home_images/Slika12_UgMt2bD.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "filozofija",
+      "title": "Slika11",
+      "image": "category_home_images/Slika11_uCZEhW7.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "filozofija",
+      "title": "Slika10",
+      "image": "category_home_images/Slika10_vGZBjkV.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "filozofija",
+      "title": "Slika9",
+      "image": "category_home_images/Slika9_1EAEkI4.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "filozofija",
+      "title": "Slika8",
+      "image": "category_home_images/Slika8_zhjjjid.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "filozofija",
+      "title": "Slika7",
+      "image": "category_home_images/Slika7_d9Vc9wY.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "filozofija",
+      "title": "Slika6",
+      "image": "category_home_images/Slika6_84YOM2D.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "filozofija",
+      "title": "Slika5",
+      "image": "category_home_images/Slika5_Le2kWNm.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "filozofija",
+      "title": "Slika4",
+      "image": "category_home_images/Slika4_HJfzMFV.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "filozofija",
+      "title": "Slika3",
+      "image": "category_home_images/Slika3_5wEDXQn.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "filozofija",
+      "title": "Slika2",
+      "image": "category_home_images/Slika2_tzEyt14.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "filozofija",
+      "title": "Slika1",
+      "image": "category_home_images/Slika1_ycvZ4sL.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "politika",
+      "title": "Slika13",
+      "image": "category_home_images/Slika13_PNoqXIN.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "politika",
+      "title": "Slika12",
+      "image": "category_home_images/Slika12_kO9Iihz.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "politika",
+      "title": "Slika11",
+      "image": "category_home_images/Slika11_Wp52FPQ.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "politika",
+      "title": "Slika10",
+      "image": "category_home_images/Slika10_vIpzAIa.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "politika",
+      "title": "Slika9",
+      "image": "category_home_images/Slika9_5ke7G6h.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "politika",
+      "title": "Slika8",
+      "image": "category_home_images/Slika8_tui4cGq.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "politika",
+      "title": "Slika7",
+      "image": "category_home_images/Slika7_KtPHoT2.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "politika",
+      "title": "Slika6",
+      "image": "category_home_images/Slika6_OPlVLJ2.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "politika",
+      "title": "Slika5",
+      "image": "category_home_images/Slika5_E1N2fB4.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "politika",
+      "title": "Slika4",
+      "image": "category_home_images/Slika4_TBAj04s.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "politika",
+      "title": "Slika3",
+      "image": "category_home_images/Slika3_zgHJsgm.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "politika",
+      "title": "Slika2",
+      "image": "category_home_images/Slika2_HYbmuEJ.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "politika",
+      "title": "Slika1",
+      "image": "category_home_images/Slika1_OHfzfDs.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "religija",
+      "title": "Slika14",
+      "image": "category_home_images/Slika14_jTE1B8r.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "religija",
+      "title": "Slika13",
+      "image": "category_home_images/Slika13_nxEiK4m.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "religija",
+      "title": "Slika12",
+      "image": "category_home_images/Slika12_Lg6RLqO.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "religija",
+      "title": "Slika11",
+      "image": "category_home_images/Slika11_WwtYZ20.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "religija",
+      "title": "Slika10",
+      "image": "category_home_images/Slika10_oVuAzoS.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "religija",
+      "title": "Slika9",
+      "image": "category_home_images/Slika9_18g7fmO.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "religija",
+      "title": "Slika8",
+      "image": "category_home_images/Slika8_AYkhRdF.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "religija",
+      "title": "Slika7",
+      "image": "category_home_images/Slika7_6M5eY63.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "religija",
+      "title": "Slika6",
+      "image": "category_home_images/Slika6_rcWwGFp.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "religija",
+      "title": "Slika5",
+      "image": "category_home_images/Slika5_OtqQTcM.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "religija",
+      "title": "Slika4",
+      "image": "category_home_images/Slika4_JqJrz5o.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "religija",
+      "title": "Slika3",
+      "image": "category_home_images/Slika3_bKA2Vec.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "religija",
+      "title": "Slika2",
+      "image": "category_home_images/Slika2_15A2us0.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "religija",
+      "title": "Slika1",
+      "image": "category_home_images/Slika1_aYdhZXL.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "zajednica",
+      "title": "Slika13",
+      "image": "category_home_images/Slika13_tAk5qBN.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "zajednica",
+      "title": "Slika12",
+      "image": "category_home_images/Slika12_vIRwiyB.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "zajednica",
+      "title": "Slika11",
+      "image": "category_home_images/Slika11_Rx21PEs.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "zajednica",
+      "title": "Slika10",
+      "image": "category_home_images/Slika10_24k7fKZ.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "zajednica",
+      "title": "Slika9",
+      "image": "category_home_images/Slika9_8nLHrPA.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "zajednica",
+      "title": "Slika8",
+      "image": "category_home_images/Slika8_5FxXzo5.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "zajednica",
+      "title": "Slika7",
+      "image": "category_home_images/Slika7_f9THJQH.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "zajednica",
+      "title": "Slika6",
+      "image": "category_home_images/Slika6_jeXEmjf.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "zajednica",
+      "title": "Slika5",
+      "image": "category_home_images/Slika5_DAWldha.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "zajednica",
+      "title": "Slika4",
+      "image": "category_home_images/Slika4_s9lUbY9.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "zajednica",
+      "title": "Slika3",
+      "image": "category_home_images/Slika3_VN2e9ID.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "zajednica",
+      "title": "Slika2",
+      "image": "category_home_images/Slika2_dxvpPhA.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "zajednica",
+      "title": "Slika1",
+      "image": "category_home_images/Slika1_ZxvNbr8.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "arhitektura",
+      "title": "Slika18",
+      "image": "category_home_images/Slika18.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "arhitektura",
+      "title": "Slika17",
+      "image": "category_home_images/Slika17.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "arhitektura",
+      "title": "Slika16",
+      "image": "category_home_images/Slika16_nWokwE2.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "arhitektura",
+      "title": "Slika15",
+      "image": "category_home_images/Slika15_UyCxKAS.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "arhitektura",
+      "title": "Slika14",
+      "image": "category_home_images/Slika14_oy4UptR.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "arhitektura",
+      "title": "Slika13",
+      "image": "category_home_images/Slika13_C33fWIK.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "arhitektura",
+      "title": "Slika12",
+      "image": "category_home_images/Slika12_2272Cox.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "arhitektura",
+      "title": "Slika11",
+      "image": "category_home_images/Slika11_o7Ur8lQ.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "arhitektura",
+      "title": "Slika10",
+      "image": "category_home_images/Slika10_yXikxgG.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "arhitektura",
+      "title": "Slika9",
+      "image": "category_home_images/Slika9_CQm3Yab.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "arhitektura",
+      "title": "Slika8",
+      "image": "category_home_images/Slika8_NE4U5pa.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "arhitektura",
+      "title": "Slika7",
+      "image": "category_home_images/Slika7_DyRYtZA.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "arhitektura",
+      "title": "Slika6",
+      "image": "category_home_images/Slika6_joQqn4u.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "arhitektura",
+      "title": "Slika5",
+      "image": "category_home_images/Slika5_6H4Vexe.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "arhitektura",
+      "title": "Slika4",
+      "image": "category_home_images/Slika4_TigjSyE.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "arhitektura",
+      "title": "Slika3",
+      "image": "category_home_images/Slika3_CGlLBFy.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "arhitektura",
+      "title": "Slika2",
+      "image": "category_home_images/Slika2_JOofdef.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "arhitektura",
+      "title": "Slika1",
+      "image": "category_home_images/Slika1_MjrpHCe.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "filmovi-serije",
+      "title": "Slika12",
+      "image": "category_home_images/Slika12_wBEFbH5.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "filmovi-serije",
+      "title": "Slika11",
+      "image": "category_home_images/Slika11_391AiTn.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "filmovi-serije",
+      "title": "Slika10",
+      "image": "category_home_images/Slika10_ZOFg2lp.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "filmovi-serije",
+      "title": "Slika9",
+      "image": "category_home_images/Slika9_3bcxo5s.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "filmovi-serije",
+      "title": "Slika8",
+      "image": "category_home_images/Slika8_Gbajbso.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "filmovi-serije",
+      "title": "Slika7",
+      "image": "category_home_images/Slika7_uUKAjxA.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "filmovi-serije",
+      "title": "Slika6",
+      "image": "category_home_images/Slika6_xMFGdEl.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "filmovi-serije",
+      "title": "Slika5",
+      "image": "category_home_images/Slika5_k4x0Tmq.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "filmovi-serije",
+      "title": "Slika4",
+      "image": "category_home_images/Slika4_C170amN.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "filmovi-serije",
+      "title": "Slika3",
+      "image": "category_home_images/Slika3_bs2gp8S.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "filmovi-serije",
+      "title": "Slika2",
+      "image": "category_home_images/Slika2_NEATt0W.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "filmovi-serije",
+      "title": "Slika1",
+      "image": "category_home_images/Slika1_UB25IaA.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "fotografije",
+      "title": "Slika15",
+      "image": "category_home_images/Slika15_ABrsqWA.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "fotografije",
+      "title": "Slika14",
+      "image": "category_home_images/Slika14_WEUC3nu.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "fotografije",
+      "title": "Slika13",
+      "image": "category_home_images/Slika13_6OjdlbV.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "fotografije",
+      "title": "Slika12",
+      "image": "category_home_images/Slika12_IIhNilf.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "fotografije",
+      "title": "Slika11",
+      "image": "category_home_images/Slika11_PhNiwDQ.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "fotografije",
+      "title": "Slika10",
+      "image": "category_home_images/Slika10_VGhUDMs.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "fotografije",
+      "title": "Slika9",
+      "image": "category_home_images/Slika9_gbx1o7Z.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "fotografije",
+      "title": "Slika8",
+      "image": "category_home_images/Slika8_GFODRUj.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "fotografije",
+      "title": "Slika7",
+      "image": "category_home_images/Slika7_81UDtDH.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "fotografije",
+      "title": "Slika6",
+      "image": "category_home_images/Slika6_sMJhLgs.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "fotografije",
+      "title": "Slika5",
+      "image": "category_home_images/Slika5_bVBVPup.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "fotografije",
+      "title": "Slika4",
+      "image": "category_home_images/Slika4_VEzpgq1.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "fotografije",
+      "title": "Slika3",
+      "image": "category_home_images/Slika3_5gslLQ6.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "fotografije",
+      "title": "Slika2",
+      "image": "category_home_images/Slika2_763yYsk.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "fotografije",
+      "title": "Slika1",
+      "image": "category_home_images/Slika1_UhZZIab.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "glazba",
+      "title": "Slika17",
+      "image": "category_home_images/Slika17_5vIYtQ5.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "glazba",
+      "title": "Slika16",
+      "image": "category_home_images/Slika16_LkixwMp.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "glazba",
+      "title": "Slika15",
+      "image": "category_home_images/Slika15_0EWk09x.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "glazba",
+      "title": "Slika14",
+      "image": "category_home_images/Slika14_p1hgcOX.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "glazba",
+      "title": "Slika13",
+      "image": "category_home_images/Slika13_XFjX3ql.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "glazba",
+      "title": "Slika12",
+      "image": "category_home_images/Slika12_Qd9S7sZ.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "glazba",
+      "title": "Slika11",
+      "image": "category_home_images/Slika11_DzsQ4Le.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "glazba",
+      "title": "Slika10",
+      "image": "category_home_images/Slika10_m3bwdZh.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "glazba",
+      "title": "Slika9",
+      "image": "category_home_images/Slika9_D1SpCuY.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "glazba",
+      "title": "Slika8",
+      "image": "category_home_images/Slika8_mzmFbs2.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "glazba",
+      "title": "Slika7",
+      "image": "category_home_images/Slika7_6VNnnId.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "glazba",
+      "title": "Slika6",
+      "image": "category_home_images/Slika6_d6Hq2yG.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "glazba",
+      "title": "Slika5",
+      "image": "category_home_images/Slika5_bzKyov0.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "glazba",
+      "title": "Slika4",
+      "image": "category_home_images/Slika4_CNYiueS.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "glazba",
+      "title": "Slika3",
+      "image": "category_home_images/Slika3_oHKCRLV.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "glazba",
+      "title": "Slika2",
+      "image": "category_home_images/Slika2_M9MpfmB.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "glazba",
+      "title": "Slika1",
+      "image": "category_home_images/Slika1_HDf6FBx.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "kazaliste",
+      "title": "Slika15",
+      "image": "category_home_images/Slika15_RPSq8Mt.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "kazaliste",
+      "title": "Slika14",
+      "image": "category_home_images/Slika14_ittcEDk.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "kazaliste",
+      "title": "Slika13",
+      "image": "category_home_images/Slika13_KRZOLRs.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "kazaliste",
+      "title": "Slika12",
+      "image": "category_home_images/Slika12_FzWxONL.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "kazaliste",
+      "title": "Slika11",
+      "image": "category_home_images/Slika11_dnBdH7N.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "kazaliste",
+      "title": "Slika10",
+      "image": "category_home_images/Slika10_EWcrgTn.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "kazaliste",
+      "title": "Slika9",
+      "image": "category_home_images/Slika9_Say6qdg.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "kazaliste",
+      "title": "Slika8",
+      "image": "category_home_images/Slika8_30yN8gu.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "kazaliste",
+      "title": "Slika7",
+      "image": "category_home_images/Slika7_hjd5aMy.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "kazaliste",
+      "title": "Slika6",
+      "image": "category_home_images/Slika5_Xg4fLm0.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "kazaliste",
+      "title": "Slika5",
+      "image": "category_home_images/Slika5_EhGNOqw.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "kazaliste",
+      "title": "Slika4",
+      "image": "category_home_images/Slika4_RwpsOAs.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "kazaliste",
+      "title": "Slika3",
+      "image": "category_home_images/Slika3_eF18Vg1.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "kazaliste",
+      "title": "Slika2",
+      "image": "category_home_images/Slika2_W21S8Y9.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "kazaliste",
+      "title": "Slika1",
+      "image": "category_home_images/Slika1_CmolCkv.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "poezija",
+      "title": "Slika15",
+      "image": "category_home_images/Slika15_I20nOTh.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "poezija",
+      "title": "Slika14",
+      "image": "category_home_images/Slika14_jQGbaPE.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "poezija",
+      "title": "Slika13",
+      "image": "category_home_images/Slika13_zkYfGZ7.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "poezija",
+      "title": "Slika12",
+      "image": "category_home_images/Slika12_XTftnJW.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "poezija",
+      "title": "Slika11",
+      "image": "category_home_images/Slika11_TO6nii7.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "poezija",
+      "title": "Slika10",
+      "image": "category_home_images/Slika10_GIIx8T7.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "poezija",
+      "title": "Slika9",
+      "image": "category_home_images/Slika9_mAspXvE.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "poezija",
+      "title": "Slika8",
+      "image": "category_home_images/Slika8_dJKCxEO.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "poezija",
+      "title": "Slika7",
+      "image": "category_home_images/Slika7_mo4604R.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "poezija",
+      "title": "Slika6",
+      "image": "category_home_images/Slika6_EZUMemB.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "poezija",
+      "title": "Slika5",
+      "image": "category_home_images/Slika5_z2tDxCx.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "poezija",
+      "title": "Slika4",
+      "image": "category_home_images/Slika4_GvERj0A.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "poezija",
+      "title": "Slika3",
+      "image": "category_home_images/Slika3_K2eObfM.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "poezija",
+      "title": "Slika2",
+      "image": "category_home_images/Slika2_j8uUxIY.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "poezija",
+      "title": "Slika1",
+      "image": "category_home_images/Slika1_YZhBatB.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "Price",
+      "title": "Slika16",
+      "image": "category_home_images/Slika16_iONwzc9.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "Price",
+      "title": "Slika15",
+      "image": "category_home_images/Slika15_RBApbIw.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "Price",
+      "title": "Slika14",
+      "image": "category_home_images/Slika14_ClFSzym.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "Price",
+      "title": "Slika13",
+      "image": "category_home_images/Slika13_td5fphE.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "Price",
+      "title": "Slika12",
+      "image": "category_home_images/Slika12_4xhTHYP.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "Price",
+      "title": "Slika11",
+      "image": "category_home_images/Slika11_IiNX2xs.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "Price",
+      "title": "Slika10",
+      "image": "category_home_images/Slika10_bvl6dxx.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "Price",
+      "title": "Slika9",
+      "image": "category_home_images/Slika9_YHMPZdX.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "Price",
+      "title": "Slika8",
+      "image": "category_home_images/Slika8_t7JgyrU.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "Price",
+      "title": "Slika7",
+      "image": "category_home_images/Slika7_5MyziYA.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "Price",
+      "title": "Slika6",
+      "image": "category_home_images/Slika6_kWT1upg.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "Price",
+      "title": "Slika5",
+      "image": "category_home_images/Slika5_OZVkE9l.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "Price",
+      "title": "Slika4",
+      "image": "category_home_images/Slika4_waJT03N.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "Price",
+      "title": "Slika3",
+      "image": "category_home_images/Slika3_7ObX6P8.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "Price",
+      "title": "Slika2",
+      "image": "category_home_images/Slika2_bqBlT1W.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "Price",
+      "title": "Slika1",
+      "image": "category_home_images/Slika1_z2nVW6c.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "umjetnost",
+      "title": "Slika15",
+      "image": "category_home_images/Slika15_RhrYqXi.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "umjetnost",
+      "title": "Slika14",
+      "image": "category_home_images/Slika14_ZoodRQs.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "umjetnost",
+      "title": "Slika13",
+      "image": "category_home_images/Slika13_gy2pLuC.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "umjetnost",
+      "title": "Slika12",
+      "image": "category_home_images/Slika12_5hGU9MZ.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "umjetnost",
+      "title": "Slika11",
+      "image": "category_home_images/Slika11_kBCBTK0.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "umjetnost",
+      "title": "Slika10",
+      "image": "category_home_images/Slika10_sXtvrkk.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "umjetnost",
+      "title": "Slika9",
+      "image": "category_home_images/Slika9_2yMzhlu.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "umjetnost",
+      "title": "Slika8",
+      "image": "category_home_images/Slika8_WeN9KgY.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "umjetnost",
+      "title": "Slika7",
+      "image": "category_home_images/Slika7_hle044I.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "umjetnost",
+      "title": "Slika6",
+      "image": "category_home_images/Slika6_j1z5fsO.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "umjetnost",
+      "title": "Slika5",
+      "image": "category_home_images/Slika5_3cs5Hxr.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "umjetnost",
+      "title": "Slika4",
+      "image": "category_home_images/Slika4_7jeXfXx.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "umjetnost",
+      "title": "Slika3",
+      "image": "category_home_images/Slika3_T7OlQBn.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "umjetnost",
+      "title": "Slika2",
+      "image": "category_home_images/Slika2_K9hgnXG.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "umjetnost",
+      "title": "Slika1",
+      "image": "category_home_images/Slika1_n7e23ae.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "biljke",
+      "title": "Slika9",
+      "image": "category_home_images/Slika9.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "biljke",
+      "title": "Slika8",
+      "image": "category_home_images/Slika8.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "biljke",
+      "title": "Slika7",
+      "image": "category_home_images/Slika7.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "biljke",
+      "title": "Slika5",
+      "image": "category_home_images/Slika5_z2V36k6.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "biljke",
+      "title": "Slika6",
+      "image": "category_home_images/Slika6.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "biljke",
+      "title": "Slika4",
+      "image": "category_home_images/Slika4.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "biljke",
+      "title": "Slika3",
+      "image": "category_home_images/Slika3.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "biljke",
+      "title": "Slika2",
+      "image": "category_home_images/Slika2.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "biljke",
+      "title": "Slika1",
+      "image": "category_home_images/Slika1.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "pejzaz",
+      "title": "Slika7",
+      "image": "category_home_images/daniela-kokina-hOhlYhAiizc-unsplash.jpg",
+      "is_active": true
+    },
+    {
+      "category_slug": "pejzaz",
+      "title": "Slika6",
+      "image": "category_home_images/damiano-baschiera-d4feocYfzAM-unsplash.jpg",
+      "is_active": true
+    },
+    {
+      "category_slug": "pejzaz",
+      "title": "Slika5",
+      "image": "category_home_images/johannes-andersson-UCd78vfC8vU-unsplash.jpg",
+      "is_active": true
+    },
+    {
+      "category_slug": "pejzaz",
+      "title": "Slika4",
+      "image": "category_home_images/6cd60f74-ef8a-49e1-b122-97a4232d216b.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "pejzaz",
+      "title": "Slika4",
+      "image": "category_home_images/pejzaz_1_1240x2047_do_2MB.jpg",
+      "is_active": true
+    },
+    {
+      "category_slug": "pejzaz",
+      "title": "Slika3",
+      "image": "category_home_images/pejzaz_2_1240x2047_do_2MB.jpg",
+      "is_active": true
+    },
+    {
+      "category_slug": "pejzaz",
+      "title": "Slika2",
+      "image": "category_home_images/pejzaz_3_1240x2047_do_2MB.jpg",
+      "is_active": true
+    },
+    {
+      "category_slug": "pejzaz",
+      "title": "Slika1",
+      "image": "category_home_images/pejzaz_4_1240x2047_do_2MB.jpg",
+      "is_active": true
+    },
+    {
+      "category_slug": "zivotinje",
+      "title": "Slika12",
+      "image": "category_home_images/Slika12.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "zivotinje",
+      "title": "Slika11",
+      "image": "category_home_images/Slika11.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "zivotinje",
+      "title": "Slika10",
+      "image": "category_home_images/Slika10.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "zivotinje",
+      "title": "Slika9",
+      "image": "category_home_images/Slika9_ieG5ral.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "zivotinje",
+      "title": "Slika8",
+      "image": "category_home_images/Slika8_cpgKmzN.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "zivotinje",
+      "title": "Slika7",
+      "image": "category_home_images/Slika7_0qVJjBt.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "zivotinje",
+      "title": "Slika6",
+      "image": "category_home_images/Slika6_ustb7kq.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "zivotinje",
+      "title": "Slika5",
+      "image": "category_home_images/Slika5_sSPUHUr.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "zivotinje",
+      "title": "Slika4",
+      "image": "category_home_images/Slika4_jt3iBy8.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "zivotinje",
+      "title": "Slika3",
+      "image": "category_home_images/Slika3_6MKrjww.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "zivotinje",
+      "title": "Slika2",
+      "image": "category_home_images/Slika2_ve5Vchh.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "zivotinje",
+      "title": "Slika1",
+      "image": "category_home_images/Slika1_53k0J4p.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "anketa",
+      "title": "Slika15",
+      "image": "category_home_images/Slika15_T66sdou.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "anketa",
+      "title": "Slika14",
+      "image": "category_home_images/Slika14_osuieWq.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "anketa",
+      "title": "Slika13",
+      "image": "category_home_images/Slika13_G3WWtln.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "anketa",
+      "title": "Slika12",
+      "image": "category_home_images/Slika12_05sHB1w.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "anketa",
+      "title": "Slika11",
+      "image": "category_home_images/Slika11_2gK2MRv.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "anketa",
+      "title": "Slika10",
+      "image": "category_home_images/Slika10_JTr3I0f.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "anketa",
+      "title": "Slika9",
+      "image": "category_home_images/Slika9_r9j1GnM.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "anketa",
+      "title": "Slika8",
+      "image": "category_home_images/Slika8_d1odHiX.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "anketa",
+      "title": "Slika7",
+      "image": "category_home_images/Slika7_nYNFlVX.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "anketa",
+      "title": "Slika6",
+      "image": "category_home_images/Slika6_O3tU48v.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "anketa",
+      "title": "Slika5",
+      "image": "category_home_images/Slika5_dobjMqw.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "anketa",
+      "title": "Slika4",
+      "image": "category_home_images/Slika4_N8mfTum.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "anketa",
+      "title": "Slika3",
+      "image": "category_home_images/Slika3_6BfiCUt.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "anketa",
+      "title": "Slika2",
+      "image": "category_home_images/Slika2_AcUkxBW.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "anketa",
+      "title": "Slika1",
+      "image": "category_home_images/Slika1_rutwQrG.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "gastro",
+      "title": "Slika17",
+      "image": "category_home_images/Slika17_2aizwWe.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "gastro",
+      "title": "Slika16",
+      "image": "category_home_images/Slika16_r9JIqFu.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "gastro",
+      "title": "Slika15",
+      "image": "category_home_images/Slika15_wWTtjD3.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "gastro",
+      "title": "Slika14",
+      "image": "category_home_images/Slika14_xEHACts.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "gastro",
+      "title": "Slika13",
+      "image": "category_home_images/Slika13_CWWjuQZ.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "gastro",
+      "title": "Slika12",
+      "image": "category_home_images/Slika12_k4F3efU.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "gastro",
+      "title": "Slika11",
+      "image": "category_home_images/Slika11_hl7vmqL.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "gastro",
+      "title": "Slika10",
+      "image": "category_home_images/Slika10_vwCuZGT.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "gastro",
+      "title": "Slika9",
+      "image": "category_home_images/Slika9_8vmWKUL.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "gastro",
+      "title": "Slika8",
+      "image": "category_home_images/Slika8_3QvIaBn.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "gastro",
+      "title": "Slika7",
+      "image": "category_home_images/Slika7_kzNVICM.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "gastro",
+      "title": "Slika6",
+      "image": "category_home_images/Slika6_cJhSZkd.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "gastro",
+      "title": "Slika5",
+      "image": "category_home_images/Slika5_qbGFcdm.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "gastro",
+      "title": "Slika4",
+      "image": "category_home_images/Slika4_faPTYA9.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "gastro",
+      "title": "Slika3",
+      "image": "category_home_images/Slika3_Y8uG8gI.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "gastro",
+      "title": "Slika2",
+      "image": "category_home_images/Slika2_6hwx0tv.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "gastro",
+      "title": "Slika1",
+      "image": "category_home_images/Slika1_v0ugJQD.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "kviz",
+      "title": "Slika14",
+      "image": "category_home_images/Slika14_GkYkWxo.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "kviz",
+      "title": "Slika13",
+      "image": "category_home_images/Slika13_UNKW3KC.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "kviz",
+      "title": "Slika12",
+      "image": "category_home_images/Slika12_7IhhCxL.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "kviz",
+      "title": "Slika11",
+      "image": "category_home_images/Slika11_QqlMRur.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "kviz",
+      "title": "Slika10",
+      "image": "category_home_images/Slika10_B3sQd5J.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "kviz",
+      "title": "Slika9",
+      "image": "category_home_images/Slika9_D7BanNY.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "kviz",
+      "title": "Slika8",
+      "image": "category_home_images/Slika8_huNVuhZ.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "kviz",
+      "title": "Slika7",
+      "image": "category_home_images/Slika7_uo6zisy.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "kviz",
+      "title": "Slika6",
+      "image": "category_home_images/Slika6_gIeRo00.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "kviz",
+      "title": "Slika5",
+      "image": "category_home_images/Slika5_A09mpod.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "kviz",
+      "title": "Slika4",
+      "image": "category_home_images/Slika4_sKYRLeH.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "kviz",
+      "title": "Slika3",
+      "image": "category_home_images/Slika3_1fmboNu.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "kviz",
+      "title": "Slika2",
+      "image": "category_home_images/Slika2_HF7XLCz.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "kviz",
+      "title": "Slika1",
+      "image": "category_home_images/Slika1_2YtrlRF.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "moda",
+      "title": "Slika15",
+      "image": "category_home_images/Slika15_sqJGood.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "moda",
+      "title": "Slika14",
+      "image": "category_home_images/Slika14_ImLt46C.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "moda",
+      "title": "Slika13",
+      "image": "category_home_images/Slika13_01jWXx1.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "moda",
+      "title": "Slika12",
+      "image": "category_home_images/Slika12_bfLDfdo.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "moda",
+      "title": "Slika11",
+      "image": "category_home_images/Slika11_Zymz1Ip.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "moda",
+      "title": "Slika10",
+      "image": "category_home_images/Slika10_tArKxpO.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "moda",
+      "title": "Slika9",
+      "image": "category_home_images/Slika9_kIawLQt.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "moda",
+      "title": "Slika8",
+      "image": "category_home_images/Slika8_z0kLz8K.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "moda",
+      "title": "Slika7",
+      "image": "category_home_images/Slika7_KM8ZW9n.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "moda",
+      "title": "Slika6",
+      "image": "category_home_images/Slika6_XBdaan3.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "moda",
+      "title": "Slika5",
+      "image": "category_home_images/Slika5_E0WGpP4.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "moda",
+      "title": "Slika4",
+      "image": "category_home_images/Slika4_3qLzm9e.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "moda",
+      "title": "Slika3",
+      "image": "category_home_images/Slika3_KOjinnQ.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "moda",
+      "title": "Slika2",
+      "image": "category_home_images/Slika2_Z5ZTYe9.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "moda",
+      "title": "Slika1",
+      "image": "category_home_images/Slika1_aYxB7J1.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "putovanja",
+      "title": "Slika15",
+      "image": "category_home_images/Slika15_q1fRQQR.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "putovanja",
+      "title": "Slika14",
+      "image": "category_home_images/Slika14_hDUxwZE.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "putovanja",
+      "title": "Slika13",
+      "image": "category_home_images/Slika13_phYRAS2.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "putovanja",
+      "title": "Slika12",
+      "image": "category_home_images/Slika12_AJtWoBr.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "putovanja",
+      "title": "Slika11",
+      "image": "category_home_images/Slika11_CcHhAkQ.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "putovanja",
+      "title": "Slika10",
+      "image": "category_home_images/Slika10_OKbOWn9.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "putovanja",
+      "title": "Slika9",
+      "image": "category_home_images/Slika9_6jPAJCc.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "putovanja",
+      "title": "Slika8",
+      "image": "category_home_images/Slika8_CcVxLlx.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "putovanja",
+      "title": "Slika7",
+      "image": "category_home_images/Slika7_SG0jlTS.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "putovanja",
+      "title": "Slika6",
+      "image": "category_home_images/Slika6_3OdRymA.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "putovanja",
+      "title": "Slika5",
+      "image": "category_home_images/Slika5_g4ciL4j.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "putovanja",
+      "title": "Slika4",
+      "image": "category_home_images/Slika4_AXJviya.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "putovanja",
+      "title": "Slika3",
+      "image": "category_home_images/Slika3_ZAgemRP.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "putovanja",
+      "title": "Slika2",
+      "image": "category_home_images/Slika2_2A8uZN5.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "putovanja",
+      "title": "Slika1",
+      "image": "category_home_images/Slika1_ATchV6u.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "rezencije",
+      "title": "Slika13",
+      "image": "category_home_images/Slika13_5m29fhA.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "rezencije",
+      "title": "Slika12",
+      "image": "category_home_images/Slika12_K80edCd.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "rezencije",
+      "title": "Slika11",
+      "image": "category_home_images/Slika11_6dEJttz.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "rezencije",
+      "title": "Slika10",
+      "image": "category_home_images/Slika10_SI6xpRP.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "rezencije",
+      "title": "Slika9",
+      "image": "category_home_images/Slika9_vDf2MIL.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "rezencije",
+      "title": "Slika8",
+      "image": "category_home_images/Slika8_qcdyDxy.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "rezencije",
+      "title": "Slika7",
+      "image": "category_home_images/Slika7_wNGQkzK.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "rezencije",
+      "title": "Slika6",
+      "image": "category_home_images/Slika6_b6MgXkQ.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "rezencije",
+      "title": "Slika5",
+      "image": "category_home_images/Slika5_d8n7vse.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "rezencije",
+      "title": "Slika4",
+      "image": "category_home_images/Slika4_RkAOyen.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "rezencije",
+      "title": "Slika3",
+      "image": "category_home_images/Slika3_heKvgLm.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "rezencije",
+      "title": "Slika2",
+      "image": "category_home_images/Slika2_EQuSlch.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "rezencije",
+      "title": "Slika1",
+      "image": "category_home_images/Slika1_YgbFXeN.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "ljubav",
+      "title": "Slika13",
+      "image": "category_home_images/Slika13_Jz6uzKK.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "ljubav",
+      "title": "Slika12",
+      "image": "category_home_images/Slika11_UR56d8l.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "ljubav",
+      "title": "Slika11",
+      "image": "category_home_images/Slika12_uVUEv1z.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "ljubav",
+      "title": "Slika10",
+      "image": "category_home_images/Slika10_IL83w9q.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "ljubav",
+      "title": "Slika9",
+      "image": "category_home_images/Slika9_3jrAqNB.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "ljubav",
+      "title": "Slika8",
+      "image": "category_home_images/Slika8_bPL7Tov.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "ljubav",
+      "title": "Slika7",
+      "image": "category_home_images/Slika7_qyLvttR.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "ljubav",
+      "title": "Slika6",
+      "image": "category_home_images/Slika6_3Lk9qkE.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "ljubav",
+      "title": "Slika5",
+      "image": "category_home_images/Slika5_yUA7FhM.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "ljubav",
+      "title": "Slika4",
+      "image": "category_home_images/Slika4_aSoc9WY.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "ljubav",
+      "title": "Slika3",
+      "image": "category_home_images/Slika3_5YAbGJv.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "ljubav",
+      "title": "Slika2",
+      "image": "category_home_images/Slika2_ROsmc72.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "ljubav",
+      "title": "Slika1",
+      "image": "category_home_images/Slika1_cC3YDwC.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "odnosi",
+      "title": "Slika10",
+      "image": "category_home_images/Slika10_3YycmMr.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "odnosi",
+      "title": "Slika9",
+      "image": "category_home_images/Slika9_zA7lkje.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "odnosi",
+      "title": "Slika8",
+      "image": "category_home_images/Slika8_s1ohU1R.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "odnosi",
+      "title": "Slika7",
+      "image": "category_home_images/Slika7_1jH9dEo.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "odnosi",
+      "title": "Slika6",
+      "image": "category_home_images/Slika6_52gcBgC.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "odnosi",
+      "title": "Slika5",
+      "image": "category_home_images/Slika5_7rT6jRG.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "odnosi",
+      "title": "Slika4",
+      "image": "category_home_images/Slika4_ILOnJxN.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "odnosi",
+      "title": "Slika3",
+      "image": "category_home_images/Slika3_yBLrhg4.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "odnosi",
+      "title": "Slika2",
+      "image": "category_home_images/Slika2_j4U4oM7.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "odnosi",
+      "title": "Slika1",
+      "image": "category_home_images/Slika1_EqYXDIB.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "osobno",
+      "title": "Slika11",
+      "image": "category_home_images/Slika11_RuOnJMA.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "osobno",
+      "title": "Slika10",
+      "image": "category_home_images/Slika10_ZM58ep3.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "osobno",
+      "title": "Slika9",
+      "image": "category_home_images/Slika9_Hk1mw3k.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "osobno",
+      "title": "Slika8",
+      "image": "category_home_images/Slika8_dEgQ2Q2.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "osobno",
+      "title": "Slika7",
+      "image": "category_home_images/Slika7_19Z8y8D.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "osobno",
+      "title": "Slika6",
+      "image": "category_home_images/Slika6_9VOjqx2.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "osobno",
+      "title": "Slika5",
+      "image": "category_home_images/Slika5_LAItyhb.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "osobno",
+      "title": "Slika4",
+      "image": "category_home_images/Slika4_lvHEe4p.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "osobno",
+      "title": "Slika3",
+      "image": "category_home_images/Slika3_A9oBifa.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "osobno",
+      "title": "Slika2",
+      "image": "category_home_images/Slika2_yQVRZFq.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "osobno",
+      "title": "Slika1",
+      "image": "category_home_images/Slika1_xZHo1EM.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "psihologija",
+      "title": "Slika16",
+      "image": "category_home_images/Slika16.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "psihologija",
+      "title": "Slika15",
+      "image": "category_home_images/Slika15.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "psihologija",
+      "title": "Slika14",
+      "image": "category_home_images/Slika14_43bAJAM.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "psihologija",
+      "title": "Slika13",
+      "image": "category_home_images/Slika13_zO87CLH.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "psihologija",
+      "title": "Slika12",
+      "image": "category_home_images/Slika12_PwQhFDx.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "psihologija",
+      "title": "Slika11",
+      "image": "category_home_images/Slika11_3KVog4D.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "psihologija",
+      "title": "Slika10",
+      "image": "category_home_images/Slika10_R1wcJBr.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "psihologija",
+      "title": "Slika9",
+      "image": "category_home_images/Slika9_ceRDwYn.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "psihologija",
+      "title": "Slika8",
+      "image": "category_home_images/Slika8_hppLmjj.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "psihologija",
+      "title": "Slika7",
+      "image": "category_home_images/Slika7_G64X2v5.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "psihologija",
+      "title": "Slika6",
+      "image": "category_home_images/Slika6_p54JCmW.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "psihologija",
+      "title": "Slika5",
+      "image": "category_home_images/Slika5_NM2nI5Q.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "psihologija",
+      "title": "Slika4",
+      "image": "category_home_images/Slika4_MykI6JP.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "psihologija",
+      "title": "Slika3",
+      "image": "category_home_images/Slika3_n0mV8q0.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "psihologija",
+      "title": "Slika2",
+      "image": "category_home_images/Slika2_32qk4ZU.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "psihologija",
+      "title": "Slika1",
+      "image": "category_home_images/Slika1_6dil7qj.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "edukacija",
+      "title": "Slika10",
+      "image": "category_home_images/Slika10_PTqtpH6.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "edukacija",
+      "title": "Slika9",
+      "image": "category_home_images/Slika9_xJ8Yn8d.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "edukacija",
+      "title": "Slika8",
+      "image": "category_home_images/Slika8_2kGbngr.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "edukacija",
+      "title": "Slika7",
+      "image": "category_home_images/Slika7_XdPRjun.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "edukacija",
+      "title": "Slika6",
+      "image": "category_home_images/Slika6_7zqmjeh.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "edukacija",
+      "title": "Slika5",
+      "image": "category_home_images/Slika5_Ye9gWQE.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "edukacija",
+      "title": "Slika4",
+      "image": "category_home_images/Slika4_RdBX6Sn.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "edukacija",
+      "title": "Slika3",
+      "image": "category_home_images/Slika3_hR7dcEA.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "edukacija",
+      "title": "Slika2",
+      "image": "category_home_images/Slika2_fs0trfp.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "edukacija",
+      "title": "Slika1",
+      "image": "category_home_images/Slika1_S8ArT2D.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "povijest",
+      "title": "Slika14",
+      "image": "category_home_images/Slika14.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "povijest",
+      "title": "Slika13",
+      "image": "category_home_images/Slika13.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "povijest",
+      "title": "Slika12",
+      "image": "category_home_images/Slika12_J0YpBKt.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "povijest",
+      "title": "Slika11",
+      "image": "category_home_images/Slika11_8Lq0mzE.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "povijest",
+      "title": "Slika10",
+      "image": "category_home_images/Slika10_HehSBdL.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "povijest",
+      "title": "Slika9",
+      "image": "category_home_images/Slika9_A9YH7yI.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "povijest",
+      "title": "Slika8",
+      "image": "category_home_images/Slika8_Dwo6dbZ.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "povijest",
+      "title": "Slika7",
+      "image": "category_home_images/Slika7_krngxds.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "povijest",
+      "title": "Slika6",
+      "image": "category_home_images/Slika6_6muT7ZS.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "povijest",
+      "title": "Slika5",
+      "image": "category_home_images/Slika5_zXZFvzl.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "povijest",
+      "title": "Slika4",
+      "image": "category_home_images/Slika4_gWoelTs.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "povijest",
+      "title": "Slika3",
+      "image": "category_home_images/Slika3_N8cB4uA.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "povijest",
+      "title": "Slika2",
+      "image": "category_home_images/Slika2_ODLU8eT.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "povijest",
+      "title": "Slika1",
+      "image": "category_home_images/Slika1_1wutYtI.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "tehnologija",
+      "title": "Slika12",
+      "image": "category_home_images/Slika12_hkvMjDZ.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "tehnologija",
+      "title": "Slika11",
+      "image": "category_home_images/Slika11_ja4Jd6S.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "tehnologija",
+      "title": "Slika10",
+      "image": "category_home_images/Slika10_rLgm1Vh.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "tehnologija",
+      "title": "Slika9",
+      "image": "category_home_images/Slika9_D2PtJtd.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "tehnologija",
+      "title": "Slika8",
+      "image": "category_home_images/Slika8_6H5OaM1.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "tehnologija",
+      "title": "Slika7",
+      "image": "category_home_images/Slika7_LLJHhbt.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "tehnologija",
+      "title": "Slika6",
+      "image": "category_home_images/Slika6_iOcD6da.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "tehnologija",
+      "title": "Slika5",
+      "image": "category_home_images/Slika5_Fx79f7d.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "tehnologija",
+      "title": "Slika4",
+      "image": "category_home_images/Slika4_I8hnv0x.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "tehnologija",
+      "title": "Slika3",
+      "image": "category_home_images/Slika3_SX0qeJm.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "tehnologija",
+      "title": "Slika2",
+      "image": "category_home_images/Slika2_zBJ4iuV.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "tehnologija",
+      "title": "Slika1",
+      "image": "category_home_images/Slika1_s8dv5jU.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "znanost",
+      "title": "Slika13",
+      "image": "category_home_images/Slika13_jVmfC6k.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "znanost",
+      "title": "Slika12",
+      "image": "category_home_images/Slika12_a0GHMqG.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "znanost",
+      "title": "Slika11",
+      "image": "category_home_images/Slika11_RDTd37D.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "znanost",
+      "title": "Slika10",
+      "image": "category_home_images/Slika10_nOLJ89l.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "znanost",
+      "title": "Slika9",
+      "image": "category_home_images/Slika9_y6kQ8ql.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "znanost",
+      "title": "Slika8",
+      "image": "category_home_images/Slika8_I7fgTkU.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "znanost",
+      "title": "Slika7",
+      "image": "category_home_images/Slika7_af9BGJl.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "znanost",
+      "title": "Slika6",
+      "image": "category_home_images/Slika6_Vi3cPR1.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "znanost",
+      "title": "Slika5",
+      "image": "category_home_images/Slika5_MVF1I4c.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "znanost",
+      "title": "Slika4",
+      "image": "category_home_images/Slika4_KgtrfDm.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "znanost",
+      "title": "Slika3",
+      "image": "category_home_images/Slika3_lV0f0FC.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "znanost",
+      "title": "Slika2",
+      "image": "category_home_images/Slika2_B0RKY8E.png",
+      "is_active": true
+    },
+    {
+      "category_slug": "znanost",
+      "title": "Slika1",
+      "image": "category_home_images/Slika1_Fuk1H5O.png",
+      "is_active": true
+    }
+  ],
+  "special_day_events": [
+    {
+      "old_id": 9,
+      "id": 9,
+      "name": "Božić",
+      "is_active": true,
+      "priority": 5,
+      "position": "top",
+      "theme": "christmas",
+      "date_type": "fixed",
+      "month": 12,
+      "day": 25,
+      "start_month": null,
+      "start_day": null,
+      "end_month": null,
+      "end_day": null,
+      "nth_month": null,
+      "nth_week": null,
+      "nth_weekday": null,
+      "accent_label": ""
+    },
+    {
+      "old_id": 8,
+      "id": 8,
+      "name": "Badnjak",
+      "is_active": true,
+      "priority": 8,
+      "position": "top",
+      "theme": "christmas",
+      "date_type": "fixed",
+      "month": 12,
+      "day": 24,
+      "start_month": null,
+      "start_day": null,
+      "end_month": null,
+      "end_day": null,
+      "nth_month": null,
+      "nth_week": null,
+      "nth_weekday": null,
+      "accent_label": ""
+    },
+    {
+      "old_id": 1,
+      "id": 1,
+      "name": "Dan žena",
+      "is_active": true,
+      "priority": 10,
+      "position": "top",
+      "theme": "womens_day",
+      "date_type": "fixed",
+      "month": 3,
+      "day": 8,
+      "start_month": null,
+      "start_day": null,
+      "end_month": null,
+      "end_day": null,
+      "nth_month": null,
+      "nth_week": null,
+      "nth_weekday": null,
+      "accent_label": ""
+    },
+    {
+      "old_id": 2,
+      "id": 2,
+      "name": "Nova godina",
+      "is_active": true,
+      "priority": 10,
+      "position": "top",
+      "theme": "new_year",
+      "date_type": "fixed",
+      "month": 1,
+      "day": 1,
+      "start_month": null,
+      "start_day": null,
+      "end_month": null,
+      "end_day": null,
+      "nth_month": null,
+      "nth_week": null,
+      "nth_weekday": null,
+      "accent_label": ""
+    },
+    {
+      "old_id": 4,
+      "id": 4,
+      "name": "Uskrs",
+      "is_active": true,
+      "priority": 10,
+      "position": "top",
+      "theme": "easter",
+      "date_type": "easter",
+      "month": null,
+      "day": null,
+      "start_month": null,
+      "start_day": null,
+      "end_month": null,
+      "end_day": null,
+      "nth_month": null,
+      "nth_week": null,
+      "nth_weekday": null,
+      "accent_label": ""
+    },
+    {
+      "old_id": 10,
+      "id": 10,
+      "name": "Stara godina",
+      "is_active": true,
+      "priority": 12,
+      "position": "top",
+      "theme": "new_year",
+      "date_type": "fixed",
+      "month": 12,
+      "day": 31,
+      "start_month": null,
+      "start_day": null,
+      "end_month": null,
+      "end_day": null,
+      "nth_month": null,
+      "nth_week": null,
+      "nth_weekday": null,
+      "accent_label": ""
+    },
+    {
+      "old_id": 11,
+      "id": 11,
+      "name": "Advent",
+      "is_active": true,
+      "priority": 15,
+      "position": "left",
+      "theme": "advent",
+      "date_type": "advent",
+      "month": null,
+      "day": null,
+      "start_month": null,
+      "start_day": null,
+      "end_month": null,
+      "end_day": null,
+      "nth_month": null,
+      "nth_week": null,
+      "nth_weekday": null,
+      "accent_label": ""
+    },
+    {
+      "old_id": 16,
+      "id": 16,
+      "name": "1. nedjelja došašća",
+      "is_active": true,
+      "priority": 16,
+      "position": "right",
+      "theme": "advent",
+      "date_type": "advent_sunday",
+      "month": null,
+      "day": null,
+      "start_month": null,
+      "start_day": null,
+      "end_month": null,
+      "end_day": null,
+      "nth_month": null,
+      "nth_week": 1,
+      "nth_weekday": null,
+      "accent_label": ""
+    },
+    {
+      "old_id": 17,
+      "id": 17,
+      "name": "2. nedjelja došašća",
+      "is_active": true,
+      "priority": 16,
+      "position": "right",
+      "theme": "advent",
+      "date_type": "advent_sunday",
+      "month": null,
+      "day": null,
+      "start_month": null,
+      "start_day": null,
+      "end_month": null,
+      "end_day": null,
+      "nth_month": null,
+      "nth_week": 2,
+      "nth_weekday": null,
+      "accent_label": ""
+    },
+    {
+      "old_id": 18,
+      "id": 18,
+      "name": "3. nedjelja došašća",
+      "is_active": true,
+      "priority": 16,
+      "position": "right",
+      "theme": "advent",
+      "date_type": "advent_sunday",
+      "month": null,
+      "day": null,
+      "start_month": null,
+      "start_day": null,
+      "end_month": null,
+      "end_day": null,
+      "nth_month": null,
+      "nth_week": 3,
+      "nth_weekday": null,
+      "accent_label": ""
+    },
+    {
+      "old_id": 19,
+      "id": 19,
+      "name": "4. nedjelja došašća",
+      "is_active": true,
+      "priority": 16,
+      "position": "right",
+      "theme": "advent",
+      "date_type": "advent_sunday",
+      "month": null,
+      "day": null,
+      "start_month": null,
+      "start_day": null,
+      "end_month": null,
+      "end_day": null,
+      "nth_month": null,
+      "nth_week": 4,
+      "nth_weekday": null,
+      "accent_label": ""
+    },
+    {
+      "old_id": 3,
+      "id": 3,
+      "name": "Valentinovo",
+      "is_active": true,
+      "priority": 20,
+      "position": "top",
+      "theme": "romance",
+      "date_type": "fixed",
+      "month": 2,
+      "day": 14,
+      "start_month": null,
+      "start_day": null,
+      "end_month": null,
+      "end_day": null,
+      "nth_month": null,
+      "nth_week": null,
+      "nth_weekday": null,
+      "accent_label": ""
+    },
+    {
+      "old_id": 5,
+      "id": 5,
+      "name": "Majčin dan",
+      "is_active": true,
+      "priority": 20,
+      "position": "top",
+      "theme": "womens_day",
+      "date_type": "nth_weekday",
+      "month": null,
+      "day": null,
+      "start_month": null,
+      "start_day": null,
+      "end_month": null,
+      "end_day": null,
+      "nth_month": 5,
+      "nth_week": 2,
+      "nth_weekday": 6,
+      "accent_label": ""
+    },
+    {
+      "old_id": 6,
+      "id": 6,
+      "name": "Dan planeta Zemlje",
+      "is_active": true,
+      "priority": 30,
+      "position": "top",
+      "theme": "earth",
+      "date_type": "fixed",
+      "month": 4,
+      "day": 22,
+      "start_month": null,
+      "start_day": null,
+      "end_month": null,
+      "end_day": null,
+      "nth_month": null,
+      "nth_week": null,
+      "nth_weekday": null,
+      "accent_label": ""
+    },
+    {
+      "old_id": 7,
+      "id": 7,
+      "name": "Svjetski dan knjige",
+      "is_active": true,
+      "priority": 30,
+      "position": "top",
+      "theme": "general",
+      "date_type": "fixed",
+      "month": 4,
+      "day": 23,
+      "start_month": null,
+      "start_day": null,
+      "end_month": null,
+      "end_day": null,
+      "nth_month": null,
+      "nth_week": null,
+      "nth_weekday": null,
+      "accent_label": ""
+    },
+    {
+      "old_id": 15,
+      "id": 15,
+      "name": "Dan očeva",
+      "is_active": true,
+      "priority": 40,
+      "position": "right",
+      "theme": "general",
+      "date_type": "fixed",
+      "month": 3,
+      "day": 19,
+      "start_month": null,
+      "start_day": null,
+      "end_month": null,
+      "end_day": null,
+      "nth_month": null,
+      "nth_week": null,
+      "nth_weekday": null,
+      "accent_label": ""
+    },
+    {
+      "old_id": 12,
+      "id": 12,
+      "name": "Dani kruha",
+      "is_active": true,
+      "priority": 50,
+      "position": "left",
+      "theme": "bread",
+      "date_type": "range",
+      "month": null,
+      "day": null,
+      "start_month": 10,
+      "start_day": 13,
+      "end_month": 10,
+      "end_day": 19,
+      "nth_month": null,
+      "nth_week": null,
+      "nth_weekday": null,
+      "accent_label": ""
+    },
+    {
+      "old_id": 13,
+      "id": 13,
+      "name": "Prvi dan proljeća",
+      "is_active": true,
+      "priority": 60,
+      "position": "left",
+      "theme": "spring",
+      "date_type": "fixed",
+      "month": 3,
+      "day": 21,
+      "start_month": null,
+      "start_day": null,
+      "end_month": null,
+      "end_day": null,
+      "nth_month": null,
+      "nth_week": null,
+      "nth_weekday": null,
+      "accent_label": ""
+    },
+    {
+      "old_id": 14,
+      "id": 14,
+      "name": "Početak ljeta",
+      "is_active": true,
+      "priority": 70,
+      "position": "left",
+      "theme": "summer",
+      "date_type": "fixed",
+      "month": 6,
+      "day": 21,
+      "start_month": null,
+      "start_day": null,
+      "end_month": null,
+      "end_day": null,
+      "nth_month": null,
+      "nth_week": null,
+      "nth_weekday": null,
+      "accent_label": ""
+    }
+  ],
+  "special_day_messages": [
+    {
+      "old_event_id": 1,
+      "id": 1,
+      "title": "Sretan dan žena",
+      "body": "Danas slavimo snagu, dostojanstvo i vrijednost svake žene. Neka ovaj dan bude ispunjen poštovanjem, toplinom i lijepim riječima.",
+      "is_active": true,
+      "order": 0
+    },
+    {
+      "old_event_id": 1,
+      "id": 2,
+      "title": "Dan žena",
+      "body": "Svim ženama želimo miran, lijep i ispunjen dan. Hvala na snazi, dobroti i svemu što svakodnevno unosite u živote drugih.",
+      "is_active": true,
+      "order": 0
+    },
+    {
+      "old_event_id": 1,
+      "id": 3,
+      "title": "Sretan 8. mart",
+      "body": "Neka ovaj dan bude podsjetnik na važnost, sposobnost i vrijednost svake žene. Uz poštovanje i iskrene lijepe želje, sretan Dan žena.",
+      "is_active": true,
+      "order": 0
+    },
+    {
+      "old_event_id": 1,
+      "id": 4,
+      "title": "Drage žene",
+      "body": "Dan žena prilika je da se istakne snaga, mudrost i ljepota koje žene nose u svakodnevnom životu. Sretan Dan žena.",
+      "is_active": true,
+      "order": 0
+    },
+    {
+      "old_event_id": 2,
+      "id": 5,
+      "title": "",
+      "body": "Neka vam nova godina donese mir, zdravlje i lijepe početke",
+      "is_active": true,
+      "order": 0
+    },
+    {
+      "old_event_id": 2,
+      "id": 6,
+      "title": "",
+      "body": "Želimo vam godinu  punu radosti, snage i dobrih vijesti.",
+      "is_active": true,
+      "order": 0
+    },
+    {
+      "old_event_id": 2,
+      "id": 7,
+      "title": "",
+      "body": "Neka svaki novi dan donese razlog za osmijeh.",
+      "is_active": true,
+      "order": 0
+    },
+    {
+      "old_event_id": 2,
+      "id": 8,
+      "title": "Sretna nova godina!",
+      "body": "U novu godinu zakoračite s nadom, hrabrošću i vjerom u dobro",
+      "is_active": true,
+      "order": 0
+    },
+    {
+      "old_event_id": 2,
+      "id": 9,
+      "title": "Sretna nova godina",
+      "body": "Želimo vam mnogo sreće, topline i uspjeha u novoj godini.",
+      "is_active": true,
+      "order": 0
+    },
+    {
+      "old_event_id": 2,
+      "id": 10,
+      "title": "Sretna nova godina",
+      "body": "Neka vam nova godina bude ispunjena malim sretnim trenucima.",
+      "is_active": true,
+      "order": 0
+    },
+    {
+      "old_event_id": 2,
+      "id": 11,
+      "title": "",
+      "body": "Pred vama je nova stranica, ispišite je lijepim riječima i djelima.",
+      "is_active": true,
+      "order": 0
+    },
+    {
+      "old_event_id": 2,
+      "id": 12,
+      "title": "",
+      "body": "Neka vam nova godina donese više mira, manje briga i puno radosti.",
+      "is_active": true,
+      "order": 0
+    },
+    {
+      "old_event_id": 2,
+      "id": 13,
+      "title": "",
+      "body": "Želimo vam godinu dobrih odluka, lijepih susreta i toplih uspomena.",
+      "is_active": true,
+      "order": 0
+    },
+    {
+      "old_event_id": 2,
+      "id": 14,
+      "title": "",
+      "body": "Sretna Nova godina i puno svjetla na svakom novom koraku.",
+      "is_active": true,
+      "order": 0
+    },
+    {
+      "old_event_id": 3,
+      "id": 15,
+      "title": "Sretan dan zaljubljenih",
+      "body": "Neka ovaj dan bude ispunjen toplinom, pažnjom i lijepim osejćajima.",
+      "is_active": true,
+      "order": 0
+    },
+    {
+      "old_event_id": 3,
+      "id": 16,
+      "title": "Valentinovo",
+      "body": "Ljubav se često skriva u malim riječima i jednostavnim gestama.",
+      "is_active": true,
+      "order": 0
+    },
+    {
+      "old_event_id": 3,
+      "id": 17,
+      "title": "Sretno valentinovo",
+      "body": "Želimo vam dan pun nježnosti, mira i lijepih trenutaka",
+      "is_active": true,
+      "order": 0
+    },
+    {
+      "old_event_id": 3,
+      "id": 18,
+      "title": "Sretan dan zaljubljenih",
+      "body": "Neka Valentinovo podsjeti na vrijednost bliskosti i dobrote.",
+      "is_active": true,
+      "order": 0
+    },
+    {
+      "old_event_id": 3,
+      "id": 19,
+      "title": "Sretno Valentinovo",
+      "body": "Ljubav je ljepša kada se dijeli iskreno i jednsotavno.",
+      "is_active": true,
+      "order": 0
+    },
+    {
+      "old_event_id": 5,
+      "id": 30,
+      "title": "",
+      "body": "Svim mamama želimo sretan Majčin dan!",
+      "is_active": true,
+      "order": 0
+    },
+    {
+      "old_event_id": 5,
+      "id": 31,
+      "title": "",
+      "body": "Sretan Majčin dan svim majkama koje svakodnevno daju ljubav, snagu i podršku.",
+      "is_active": true,
+      "order": 0
+    },
+    {
+      "old_event_id": 5,
+      "id": 32,
+      "title": "",
+      "body": "Danas slavimo sve mame i njihovu posebnu ulogu u našim životima.",
+      "is_active": true,
+      "order": 0
+    },
+    {
+      "old_event_id": 5,
+      "id": 33,
+      "title": "",
+      "body": "Svim divnim majkama želimo dan ispunjen ljubavlju, mirom i srećom.",
+      "is_active": true,
+      "order": 0
+    },
+    {
+      "old_event_id": 5,
+      "id": 34,
+      "title": "",
+      "body": "Sretan Majčin dan svim mamama koje svojim srcem čine svijet ljepšim.",
+      "is_active": true,
+      "order": 0
+    },
+    {
+      "old_event_id": 5,
+      "id": 35,
+      "title": "",
+      "body": "Neka današnji dan bude posvećen svim majkama i njihovoj bezuvjetnoj ljubavi.",
+      "is_active": true,
+      "order": 0
+    },
+    {
+      "old_event_id": 5,
+      "id": 36,
+      "title": "",
+      "body": "Svim mamama želimo puno osmijeha, radosti i lijepih trenutaka na njihov dan.",
+      "is_active": true,
+      "order": 0
+    },
+    {
+      "old_event_id": 5,
+      "id": 37,
+      "title": "",
+      "body": "Sretan Majčin dan svim majkama, bakama i svima koje nose majčinsku ljubav u srcu.",
+      "is_active": true,
+      "order": 0
+    },
+    {
+      "old_event_id": 5,
+      "id": 38,
+      "title": "",
+      "body": "Danas zahvaljujemo svim mamama na ljubavi, brizi i svemu što čine.",
+      "is_active": true,
+      "order": 0
+    },
+    {
+      "old_event_id": 5,
+      "id": 39,
+      "title": "",
+      "body": "Sretan Majčin dan svim mamama — hvala vam što svijet činite toplijim mjestom.",
+      "is_active": true,
+      "order": 0
+    },
+    {
+      "old_event_id": 14,
+      "id": 40,
+      "title": "",
+      "body": "Svim našim prijateljima želimo sretan i sunčan početak ljeta!",
+      "is_active": true,
+      "order": 0
+    },
+    {
+      "old_event_id": 14,
+      "id": 41,
+      "title": "",
+      "body": "Neka vam početak ljeta donese puno osmijeha, odmora i lijepih trenutaka.",
+      "is_active": true,
+      "order": 0
+    },
+    {
+      "old_event_id": 14,
+      "id": 42,
+      "title": "",
+      "body": "Stiglo je ljeto — vrijeme je za sunce, more i dobre uspomene!",
+      "is_active": true,
+      "order": 0
+    },
+    {
+      "old_event_id": 14,
+      "id": 43,
+      "title": "",
+      "body": "Želimo vam veseli početak ljeta ispunjen toplinom, radošću i zabavom.",
+      "is_active": true,
+      "order": 0
+    },
+    {
+      "old_event_id": 14,
+      "id": 44,
+      "title": "",
+      "body": "Neka ovo ljeto bude puno lijepih dana, dobrog društva i nezaboravnih trenutaka.",
+      "is_active": true,
+      "order": 0
+    },
+    {
+      "old_event_id": 14,
+      "id": 45,
+      "title": "",
+      "body": "Sretan početak ljeta svima! Uživajte u suncu i malim radostima.",
+      "is_active": true,
+      "order": 0
+    },
+    {
+      "old_event_id": 14,
+      "id": 46,
+      "title": "",
+      "body": "Ljeto je stiglo, a s njim i vrijeme za opuštanje, putovanja i nove uspomene.",
+      "is_active": true,
+      "order": 0
+    },
+    {
+      "old_event_id": 14,
+      "id": 47,
+      "title": "",
+      "body": "Želimo vam ljeto puno sreće, smijeha i lijepih trenutaka.",
+      "is_active": true,
+      "order": 0
+    },
+    {
+      "old_event_id": 14,
+      "id": 48,
+      "title": "",
+      "body": "Neka vam svaki ljetni dan donese nešto lijepo.",
+      "is_active": true,
+      "order": 0
+    },
+    {
+      "old_event_id": 14,
+      "id": 49,
+      "title": "",
+      "body": "Svim našim dragim ljudima želimo predivan, veseo i bezbrižan početak ljeta.",
+      "is_active": true,
+      "order": 0
+    },
+    {
+      "old_event_id": 15,
+      "id": 20,
+      "title": "Dan očeva",
+      "body": "Hvala svim očevima na podršci, snazi i brizi.",
+      "is_active": true,
+      "order": 0
+    },
+    {
+      "old_event_id": 15,
+      "id": 21,
+      "title": "Dan očeva",
+      "body": "Sretan Dan očeva uz poštovanje i iskrene lijepe želje.",
+      "is_active": true,
+      "order": 0
+    },
+    {
+      "old_event_id": 15,
+      "id": 22,
+      "title": "Dan očeva",
+      "body": "Danas slavimo očevu prisutnost, trud i toplinu.",
+      "is_active": true,
+      "order": 0
+    },
+    {
+      "old_event_id": 15,
+      "id": 23,
+      "title": "Za sve očeve",
+      "body": "Neka ovaj dan bude mali znak velike zahvalnosti.",
+      "is_active": true,
+      "order": 0
+    },
+    {
+      "old_event_id": 15,
+      "id": 24,
+      "title": "",
+      "body": "Hvala na riječima podrške, zaštiti i osloncu.",
+      "is_active": true,
+      "order": 0
+    },
+    {
+      "old_event_id": 15,
+      "id": 25,
+      "title": "",
+      "body": "Sretan Dan očeva svima koji svakodnevno daju najbolje od sebe.",
+      "is_active": true,
+      "order": 0
+    },
+    {
+      "old_event_id": 15,
+      "id": 26,
+      "title": "",
+      "body": "Očeva briga često se vidi u djelima više nego u riječima.",
+      "is_active": true,
+      "order": 0
+    },
+    {
+      "old_event_id": 15,
+      "id": 27,
+      "title": "",
+      "body": "Neka današnji dan bude ispunjen pažnjom i poštovanjem.",
+      "is_active": true,
+      "order": 0
+    },
+    {
+      "old_event_id": 15,
+      "id": 28,
+      "title": "",
+      "body": "Hvala na snazi, strpljenju i svemu što dajete srcem.",
+      "is_active": true,
+      "order": 0
+    },
+    {
+      "old_event_id": 15,
+      "id": 29,
+      "title": "",
+      "body": "Sretan Dan očeva i puno lijepih obiteljskih trenutaka.",
+      "is_active": true,
+      "order": 0
+    }
+  ]
+}
