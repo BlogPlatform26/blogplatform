@@ -108,6 +108,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "storages",
 
     "blog",
     "ckeditor",
@@ -348,6 +349,38 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"
+
+USE_SPACES = env_bool("USE_SPACES", default=False)
+
+if USE_SPACES:
+    AWS_ACCESS_KEY_ID = os.environ.get("SPACES_ACCESS_KEY_ID", "")
+    AWS_SECRET_ACCESS_KEY = os.environ.get("SPACES_SECRET_ACCESS_KEY", "")
+    AWS_STORAGE_BUCKET_NAME = os.environ.get("SPACES_BUCKET_NAME", "")
+    AWS_S3_REGION_NAME = os.environ.get("SPACES_REGION", "fra1")
+    AWS_S3_ENDPOINT_URL = os.environ.get(
+        "SPACES_ENDPOINT_URL",
+        f"https://{AWS_S3_REGION_NAME}.digitaloceanspaces.com",
+    )
+
+    AWS_S3_CUSTOM_DOMAIN = os.environ.get(
+        "SPACES_CUSTOM_DOMAIN",
+        f"{AWS_STORAGE_BUCKET_NAME}.{AWS_S3_REGION_NAME}.digitaloceanspaces.com",
+    )
+
+    AWS_DEFAULT_ACL = "public-read"
+    AWS_QUERYSTRING_AUTH = False
+    AWS_S3_FILE_OVERWRITE = False
+
+    MEDIA_URL = f"https://{AWS_S3_CUSTOM_DOMAIN}/"
+
+    STORAGES = {
+        "default": {
+            "BACKEND": "storages.backends.s3.S3Storage",
+        },
+        "staticfiles": {
+            "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage",
+        },
+    }
 
 
 # ==========================================================
