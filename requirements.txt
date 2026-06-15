@@ -1,4 +1,4 @@
-Django==6.0.2
+﻿Django==6.0.2
 Pillow>=10.0
 django-ckeditor>=6.7,<7
 argon2-cffi>=23.1
