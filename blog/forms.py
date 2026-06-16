@@ -91,6 +91,35 @@ class PostForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
+        group_order = {
+            "znanje": 1,
+            "zivot": 2,
+            "drustvo": 3,
+            "kultura": 4,
+            "priroda": 5,
+            "razno": 99,
+        }
+
+        categories = list(
+            Category.objects.all().order_by("name", "id")
+        )
+
+        categories.sort(
+            key=lambda c: (
+                group_order.get(c.group, 50),
+                c.name.lower(),
+                c.id,
+            )
+        )
+
+        self.fields["category"].queryset = Category.objects.filter(
+            id__in=[c.id for c in categories]
+        )
+
+        self.fields["category"].choices = [
+            (c.id, c.name) for c in categories
+        ]
+
         self.fields["title"].widget.attrs.update({"class": "form-control"})
         self.fields["category"].widget.attrs.update({"class": "form-select"})
         self.fields["image"].widget.attrs.update({"class": "form-control"})
