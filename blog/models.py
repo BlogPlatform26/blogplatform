@@ -243,7 +243,7 @@ class Like(models.Model):
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
 
-    blog_name = models.CharField(max_length=200)
+    blog_name = models.CharField(max_length=200, blank=True, default="")
     blog_tagline = models.CharField(max_length=220, blank=True, default="")
     background_color = models.CharField(max_length=20, default="#ffffff")
 
@@ -431,12 +431,23 @@ class Profile(models.Model):
 @receiver(post_save, sender=User)
 def create_user_profile(sender, instance, created, **kwargs):
     if created:
-        Profile.objects.create(user=instance)
+        Profile.objects.get_or_create(
+            user=instance,
+            defaults={
+                "blog_name": instance.username or "",
+            }
+        )
 
 
 @receiver(post_save, sender=User)
 def save_user_profile(sender, instance, **kwargs):
-    instance.profile.save()
+    profile, created = Profile.objects.get_or_create(
+        user=instance,
+        defaults={
+            "blog_name": instance.username or "",
+        }
+    )
+    profile.save()
 
 
 class UserBox(models.Model):
