@@ -1388,9 +1388,9 @@ def blog_settings(request):
                     except (ValueError, TypeError, base64.binascii.Error):
                         messages.error(request, 'Avatar nije moguće spremiti. Pokušaj ponovno.')
                         return redirect(f'/blog/settings/?tab=postavke&settings_tab={settings_tab}')
-
-                    if profile.avatar and profile.avatar.path and os.path.isfile(profile.avatar.path):
-                        os.remove(profile.avatar.path)
+                    
+                    if profile.avatar:
+                        profile.avatar.delete(save=False)
 
                     profile.avatar = file
                     settings_changed = True
