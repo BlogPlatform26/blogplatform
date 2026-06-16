@@ -53,15 +53,7 @@
 
                     <div class="mb-4">
                         <label class="form-label fw-semibold" for="{{ form.password1.id_for_label }}">Lozinka</label>
-                        <div class="input-group password-toggle-group">
-                            {{ form.password1 }}
-                            <button type="button"
-                                    class="btn btn-outline-secondary password-toggle-btn"
-                                    aria-label="Prikaži lozinku"
-                                    title="Prikaži lozinku">
-                                <i class="bi bi-eye"></i>
-                            </button>
-                        </div>
+                        {{ form.password1 }}
                         {% if form.password1.help_text %}
                             <div class="form-text">{{ form.password1.help_text }}</div>
                         {% endif %}
@@ -72,15 +64,7 @@
 
                     <div class="mb-4">
                         <label class="form-label fw-semibold" for="{{ form.password2.id_for_label }}">Potvrdi lozinku</label>
-                        <div class="input-group password-toggle-group">
-                            {{ form.password2 }}
-                            <button type="button"
-                                    class="btn btn-outline-secondary password-toggle-btn"
-                                    aria-label="Prikaži lozinku"
-                                    title="Prikaži lozinku">
-                                <i class="bi bi-eye"></i>
-                            </button>
-                        </div>
+                        {{ form.password2 }}
                         {% if form.password2.help_text %}
                             <div class="form-text">{{ form.password2.help_text }}</div>
                         {% endif %}
