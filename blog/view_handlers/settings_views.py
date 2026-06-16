@@ -10,7 +10,7 @@ from django.contrib import messages
 from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib.auth.decorators import login_required
 from django.core.files.base import ContentFile
-from django.db.models import Count, Q, Sum
+from django.db.models import Case, Count, IntegerField, Q, Sum, Value, When
 from django.http import HttpResponseForbidden
 from django.shortcuts import get_object_or_404, redirect, render
 from django.utils import timezone
@@ -1582,7 +1582,18 @@ def blog_settings(request):
         'user_posts': user_posts,
         'post_filter': post_filter,
         'edit_post': edit_post,
-        'categories': Category.objects.all().order_by('group', 'name'),
+        'categories': Category.objects.annotate(
+            group_order=Case(
+                When(group="znanje", then=Value(1)),
+                When(group="zivot", then=Value(2)),
+                When(group="drustvo", then=Value(3)),
+                When(group="kultura", then=Value(4)),
+                When(group="priroda", then=Value(5)),
+                When(group="razno", then=Value(99)),
+                default=Value(50),
+                output_field=IntegerField(),
+            )
+        ).order_by('group_order', 'name', 'id'),
         'published_count': Post.objects.filter(author=request.user, status='published').count(),
         'draft_count': Post.objects.filter(author=request.user, status='draft').count(),
         'scheduled_count': Post.objects.filter(author=request.user, status='scheduled').count(),
