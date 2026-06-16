@@ -2653,3 +2653,91 @@ body.bp-banner-modal-open { overflow: hidden !important; }
 }
 /* Banner modal hard reset - end */
 
+/* ==========================================================
+   PUBLIC BLOG BANNER SIZE / POSITION FIX
+   ========================================================== */
+
+.blog-banner-strip {
+    width: 100%;
+    margin: 2rem 0;
+}
+
+.blog-banner-row {
+    display: flex !important;
+    width: 100%;
+    align-items: center;
+}
+
+.blog-banner-pos-left {
+    justify-content: flex-start !important;
+}
+
+.blog-banner-pos-center {
+    justify-content: center !important;
+}
+
+.blog-banner-pos-right {
+    justify-content: flex-end !important;
+}
+
+.blog-banner-row .blog-banner {
+    width: 820px;
+    max-width: 100%;
+    aspect-ratio: 22 / 9;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.blog-banner-size-xsmall .blog-banner {
+    width: 360px;
+}
+
+.blog-banner-size-small .blog-banner {
+    width: 560px;
+}
+
+.blog-banner-size-medium .blog-banner {
+    width: 820px;
+}
+
+.blog-banner-size-large .blog-banner {
+    width: 1080px;
+}
+
+.blog-banner-row .blog-banner-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blog-banner-row .blog-banner-display-cover {
+    object-fit: cover;
+}
+
+.blog-banner-row .blog-banner-display-contain {
+    object-fit: contain;
+}
+
+.blog-banner-row .blog-banner-focus-top {
+    object-position: center top;
+}
+
+.blog-banner-row .blog-banner-focus-center {
+    object-position: center center;
+}
+
+.blog-banner-row .blog-banner-focus-bottom {
+    object-position: center bottom;
+}
+
+@media (max-width: 768px) {
+    .blog-banner-row {
+        justify-content: center !important;
+    }
+
+    .blog-banner-row .blog-banner {
+        width: 100% !important;
+        border-radius: 12px;
+    }
+}

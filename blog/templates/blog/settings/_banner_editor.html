@@ -107,6 +107,69 @@
                     <label class="form-check-label" for="bannerRight">Desno</label>
                 </div>
             </div>
+
+            <div class="mt-3">
+    <label class="form-label d-block">Veličina bannera</label>
+
+    <div class="d-flex flex-wrap gap-3">
+        <div class="form-check">
+            <input
+                class="form-check-input"
+                type="radio"
+                name="blog_banner_size"
+                id="blogBannerSizeXsmall"
+                value="xsmall"
+                {% if user.profile.blog_banner_size == "xsmall" %}checked{% endif %}
+            >
+            <label class="form-check-label" for="blogBannerSizeXsmall">
+                Vrlo malo
+            </label>
+        </div>
+
+        <div class="form-check">
+            <input
+                class="form-check-input"
+                type="radio"
+                name="blog_banner_size"
+                id="blogBannerSizeSmall"
+                value="small"
+                {% if user.profile.blog_banner_size == "small" %}checked{% endif %}
+            >
+            <label class="form-check-label" for="blogBannerSizeSmall">
+                Malo
+            </label>
+        </div>
+
+        <div class="form-check">
+            <input
+                class="form-check-input"
+                type="radio"
+                name="blog_banner_size"
+                id="blogBannerSizeMedium"
+                value="medium"
+                {% if not user.profile.blog_banner_size or user.profile.blog_banner_size == "medium" %}checked{% endif %}
+            >
+            <label class="form-check-label" for="blogBannerSizeMedium">
+                Srednje
+            </label>
+        </div>
+
+        <div class="form-check">
+            <input
+                class="form-check-input"
+                type="radio"
+                name="blog_banner_size"
+                id="blogBannerSizeLarge"
+                value="large"
+                {% if user.profile.blog_banner_size == "large" %}checked{% endif %}
+            >
+            <label class="form-check-label" for="blogBannerSizeLarge">
+                Veliko
+            </label>
+        </div>
+    </div>
+</div>
+
         </div>
     </div>
 </div>

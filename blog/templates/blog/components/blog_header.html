@@ -37,37 +37,15 @@
     {% endif %}
 
     {% if blog.profile.blog_banner %}
-        {% with banner_position=blog.profile.blog_banner_position|default:'center' %}
+        {% with banner_position=blog.profile.blog_banner_position|default:'center' banner_size=blog.profile.blog_banner_size|default:'medium' %}
             <div class="blog-banner-strip">
-                <div class="row gx-4">
-                    <div class="col-md-3">
-                        {% if banner_position == 'left' %}
-                            <div class="blog-banner-slot blog-banner-slot-left">
-                                <div class="blog-banner">
-                                    <img src="{{ blog.profile.blog_banner.url }}" alt="Blog banner" class="blog-banner-img blog-banner-display-{{ blog.profile.blog_banner_display|default:'cover' }} blog-banner-focus-{{ blog.profile.blog_banner_focus|default:'center' }}">
-                                </div>
-                            </div>
-                        {% endif %}
-                    </div>
-
-                    <div class="col-md-6">
-                        {% if banner_position == 'center' %}
-                            <div class="blog-banner-slot blog-banner-slot-center">
-                                <div class="blog-banner">
-                                    <img src="{{ blog.profile.blog_banner.url }}" alt="Blog banner" class="blog-banner-img blog-banner-display-{{ blog.profile.blog_banner_display|default:'cover' }} blog-banner-focus-{{ blog.profile.blog_banner_focus|default:'center' }}">
-                                </div>
-                            </div>
-                        {% endif %}
-                    </div>
-
-                    <div class="col-md-3">
-                        {% if banner_position == 'right' %}
-                            <div class="blog-banner-slot blog-banner-slot-right">
-                                <div class="blog-banner">
-                                    <img src="{{ blog.profile.blog_banner.url }}" alt="Blog banner" class="blog-banner-img blog-banner-display-{{ blog.profile.blog_banner_display|default:'cover' }} blog-banner-focus-{{ blog.profile.blog_banner_focus|default:'center' }}">
-                                </div>
-                            </div>
-                        {% endif %}
+                <div class="blog-banner-row blog-banner-pos-{{ banner_position }} blog-banner-size-{{ banner_size }}">
+                    <div class="blog-banner">
+                        <img
+                            src="{{ blog.profile.blog_banner.url }}"
+                            alt="Blog banner"
+                            class="blog-banner-img blog-banner-display-{{ blog.profile.blog_banner_display|default:'cover' }} blog-banner-focus-{{ blog.profile.blog_banner_focus|default:'center' }}"
+                        >
                     </div>
                 </div>
             </div>
