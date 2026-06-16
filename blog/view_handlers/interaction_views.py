@@ -178,8 +178,6 @@ def notification_redirect(request, notification_id):
 def delete_avatar(request):
     profile = request.user.profile
     if profile.avatar:
-        if profile.avatar.path and os.path.isfile(profile.avatar.path):
-            os.remove(profile.avatar.path)
         profile.avatar.delete(save=False)
         profile.avatar = None
         profile.save()
