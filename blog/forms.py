@@ -2,10 +2,10 @@ from django import forms
 from django.conf import settings
 from django.utils import timezone
 from django.utils.html import strip_tags
-
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from ckeditor.widgets import CKEditorWidget
+from django.db.models import Case, When, Value, IntegerField
 
 import re
 
@@ -13,14 +13,24 @@ from .html_sanitizer import sanitize_post_html
 from .models import Category, Post, Comment, Profile, UserBox, BugReport, AuthorQuestion, extract_youtube_video_id
 
 
-class PostForm(forms.ModelForm):
-    category = forms.ModelChoiceField(
-        queryset=Category.objects.all().order_by("group", "name", "id"),
-        required=False,
-        empty_label="Odaberi kategoriju",
-        label="Kategorija",
-        widget=forms.Select(attrs={"class": "form-select"})
-    )
+category = forms.ModelChoiceField(
+    queryset=Category.objects.annotate(
+        group_order=Case(
+            When(group="znanje", then=Value(1)),
+            When(group="zivot", then=Value(2)),
+            When(group="drustvo", then=Value(3)),
+            When(group="kultura", then=Value(4)),
+            When(group="priroda", then=Value(5)),
+            When(group="razno", then=Value(99)),
+            default=Value(50),
+            output_field=IntegerField(),
+        )
+    ).order_by("group_order", "name", "id"),
+    required=False,
+    empty_label="Odaberi kategoriju",
+    label="Kategorija",
+    widget=forms.Select(attrs={"class": "form-select"})
+)
 
     tags_input = forms.CharField(
         required=False,
