@@ -1383,8 +1383,14 @@ def blog_settings(request):
                 if cropped_image_data:
                     try:
                         image_format, imgstr = cropped_image_data.split(';base64,')
-                        ext = image_format.split('/')[-1]
-                        file = ContentFile(base64.b64decode(imgstr), name=f'avatar.{ext}')
+                        ext = image_format.split('/')[-1].lower()
+                        if ext == 'jpeg':
+                            ext = 'jpg'
+
+                        file = ContentFile(
+                            base64.b64decode(imgstr),
+                            name=f"avatar_{uuid.uuid4().hex}.{ext}"
+                        )
                     except (ValueError, TypeError, base64.binascii.Error):
                         messages.error(request, 'Avatar nije moguće spremiti. Pokušaj ponovno.')
                         return redirect(f'/blog/settings/?tab=postavke&settings_tab={settings_tab}')
