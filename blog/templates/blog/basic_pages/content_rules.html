@@ -1,0 +1,102 @@
+{% extends "blog/base.html" %}
+
+{% block title %}Pravila komentiranja i sadržaja | BlogPlatform{% endblock %}
+
+{% block left_sidebar %}
+<div class="card mb-4 sidebar-box home-sidebar-box" style="margin-top: 90px;">
+    <div class="sidebar-title">Informacije</div>
+
+    <div class="card-body small">
+        <a href="{% url 'terms_of_use' %}" class="d-block mb-2 text-muted text-decoration-none">
+            Pravila korištenja
+        </a>
+
+        <a href="{% url 'privacy_policy' %}" class="d-block mb-2 text-muted text-decoration-none">
+            Politika privatnosti
+        </a>
+
+        <a href="{% url 'content_rules' %}" class="d-block fw-bold text-dark text-decoration-none">
+            Pravila komentiranja
+        </a>
+    </div>
+</div>
+{% endblock %}
+
+{% block right_sidebar %}{% endblock %}
+
+{% block content %}
+<style>
+    .basic-page-content {
+        max-width: 780px;
+    }
+
+    .basic-page-content h1 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .basic-page-content h2 {
+        font-size: 1.25rem;
+        margin-top: 1.7rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .basic-page-content p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 0.9rem;
+    }
+</style>
+
+<div class="page-card basic-page-content">
+    <h1>Pravila komentiranja i sadržaja</h1>
+
+    <p>
+        BlogPlatform je mjesto za objavu blogova, komentiranje i razmjenu mišljenja.
+        Da bi stranica ostala sigurna i ugodna za korištenje, korisnici se trebaju pridržavati ovih pravila.
+    </p>
+
+    <h2>Pristojna komunikacija</h2>
+    <p>
+        Komentari i objave trebaju biti pristojni. Dopušteno je ne slagati se s drugima,
+        ali nije dopušteno vrijeđanje, omalovažavanje, prijetnje, uznemiravanje ili namjerno provociranje korisnika.
+    </p>
+
+    <h2>Zabranjen sadržaj</h2>
+    <p>
+        Nije dopušteno objavljivati sadržaj koji potiče mržnju, nasilje, diskriminaciju,
+        prijetnje, spam, prijevare ili bilo kakvo nezakonito ponašanje.
+    </p>
+
+    <h2>Spam i zloupotreba</h2>
+    <p>
+        Nije dopušteno objavljivati ponavljajuće komentare, neželjene reklame,
+        lažne linkove, pokušaje prijevare ili sadržaj koji namjerno ometa normalan rad stranice.
+    </p>
+
+    <h2>Slike i autorska prava</h2>
+    <p>
+        Korisnici trebaju objavljivati samo slike i sadržaj koji smiju koristiti.
+        Nije dopušteno objavljivati tuđe slike, tekstove ili druge materijale bez dopuštenja
+        ako time krše tuđa prava.
+    </p>
+
+    <h2>Privatni podaci</h2>
+    <p>
+        Nije dopušteno objavljivati tuđe privatne podatke bez dopuštenja.
+        To uključuje email adrese, brojeve telefona, adrese, privatne poruke i slične osobne informacije.
+    </p>
+
+    <h2>Moderiranje sadržaja</h2>
+    <p>
+        Administracija može ukloniti komentare, postove, slike ili druge sadržaje koji krše ova pravila.
+        U slučaju ozbiljnog ili ponovljenog kršenja pravila, korisnički račun može biti ograničen ili uklonjen.
+    </p>
+
+    <h2>Prijava problema</h2>
+    <p>
+        Ako korisnik primijeti sadržaj koji krši pravila, može prijaviti problem putem stranice Pomoć i podrška
+        ili putem kontakt emaila navedenog na stranici.
+    </p>
+</div>
+{% endblock %}

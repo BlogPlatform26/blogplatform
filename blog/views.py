@@ -9,3 +9,4 @@ from blog.view_handlers.settings_views import *
 from blog.view_handlers.user_views import *
 from blog.view_handlers.post_export_views import *
 from blog.view_handlers.admin_post_export_views import *
+from blog.view_handlers.basic_pages_views import *

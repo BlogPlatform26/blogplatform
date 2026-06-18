@@ -1,0 +1,110 @@
+{% extends "blog/base.html" %}
+
+{% block title %}Politika privatnosti | BlogPlatform{% endblock %}
+
+{% block left_sidebar %}
+<div class="card mb-4 sidebar-box home-sidebar-box" style="margin-top: 90px;">
+    <div class="sidebar-title">Informacije</div>
+
+    <div class="card-body small">
+        <a href="{% url 'terms_of_use' %}" class="d-block mb-2 text-muted text-decoration-none">
+            Pravila korištenja
+        </a>
+
+        <a href="{% url 'privacy_policy' %}" class="d-block mb-2 fw-bold text-dark text-decoration-none">
+            Politika privatnosti
+        </a>
+
+        <a href="{% url 'content_rules' %}" class="d-block text-muted text-decoration-none">
+            Pravila komentiranja
+        </a>
+    </div>
+</div>
+{% endblock %}
+
+{% block right_sidebar %}{% endblock %}
+
+{% block content %}
+<style>
+    .basic-page-content {
+        max-width: 780px;
+    }
+
+    .basic-page-content h1 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .basic-page-content h2 {
+        font-size: 1.25rem;
+        margin-top: 1.7rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .basic-page-content p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 0.9rem;
+    }
+</style>
+
+<div class="page-card basic-page-content">
+    <h1>Politika privatnosti</h1>
+
+    <p>
+        Ova Politika privatnosti objašnjava koje podatke BlogPlatform prikuplja,
+        kako se ti podaci koriste i kako korisnici mogu upravljati svojim računom.
+    </p>
+
+    <h2>Podaci koje prikupljamo</h2>
+    <p>
+        Prilikom registracije korisnik unosi podatke potrebne za izradu korisničkog računa,
+        kao što su korisničko ime, email adresa i lozinka.
+        Lozinke se ne spremaju kao običan tekst, nego se spremaju u zaštićenom obliku.
+    </p>
+
+    <h2>Korisnički sadržaj</h2>
+    <p>
+        Korisnici mogu objavljivati blog postove, komentare, slike profila, bannere i druge sadržaje.
+        Ti se podaci prikazuju na stranici ovisno o tome kako korisnik koristi platformu.
+    </p>
+
+    <h2>Email poruke</h2>
+    <p>
+        Email adresa koristi se za aktivaciju računa, reset lozinke i važne poruke vezane uz korisnički račun.
+        BlogPlatform ne prodaje korisničke email adrese trećim stranama.
+    </p>
+
+    <h2>Kolačići</h2>
+    <p>
+        Stranica koristi osnovne kolačiće potrebne za prijavu korisnika, sigurnost sesije i normalan rad stranice.
+        Bez tih kolačića neke funkcije, poput prijave i komentiranja, ne bi radile ispravno.
+    </p>
+
+    <h2>Slike i media sadržaj</h2>
+    <p>
+        Slike koje korisnik učita, kao što su slike u postovima, avatar ili banner,
+        spremaju se u vanjski storage servis koji se koristi za prikaz media sadržaja na stranici.
+    </p>
+
+    <h2>Sigurnost</h2>
+    <p>
+        BlogPlatform koristi osnovne sigurnosne mjere kao što su HTTPS, sigurne sesije,
+        zaštita od CSRF napada i ograničenja za određene radnje.
+        Ipak, nijedan sustav nije potpuno siguran i korisnici trebaju čuvati svoje podatke za prijavu.
+    </p>
+
+    <h2>Brisanje i promjena podataka</h2>
+    <p>
+        Korisnik može uređivati dio svojih podataka kroz svoj profil.
+        Ako korisnik želi prijaviti problem ili zatražiti pomoć u vezi računa,
+        može koristiti stranicu Pomoć i podrška ili kontakt email naveden na stranici.
+    </p>
+
+    <h2>Promjene politike privatnosti</h2>
+    <p>
+        Ova Politika privatnosti može se povremeno promijeniti.
+        Nova verzija bit će objavljena na ovoj stranici.
+    </p>
+</div>
+{% endblock %}

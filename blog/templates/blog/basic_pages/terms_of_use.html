@@ -1,0 +1,95 @@
+{% extends "blog/base.html" %}
+
+{% block title %}Pravila korištenja | BlogPlatform{% endblock %}
+
+{% block left_sidebar %}
+<div class="card mb-4 sidebar-box home-sidebar-box" style="margin-top: 90px;">
+    <div class="sidebar-title">Informacije</div>
+
+    <div class="card-body small">
+        <a href="{% url 'terms_of_use' %}" class="d-block mb-2 fw-bold text-dark text-decoration-none">
+            Pravila korištenja
+        </a>
+
+        <a href="{% url 'privacy_policy' %}" class="d-block mb-2 text-muted text-decoration-none">
+            Politika privatnosti
+        </a>
+
+        <a href="{% url 'content_rules' %}" class="d-block text-muted text-decoration-none">
+            Pravila komentiranja
+        </a>
+    </div>
+</div>
+{% endblock %}
+
+{% block right_sidebar %}{% endblock %}
+
+{% block content %}
+<style>
+    .basic-page-content {
+        max-width: 780px;
+    }
+
+    .basic-page-content h1 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .basic-page-content h2 {
+        font-size: 1.25rem;
+        margin-top: 1.7rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .basic-page-content p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 0.9rem;
+    }
+</style>
+
+<div class="page-card basic-page-content">
+    <h1>Pravila korištenja</h1>
+
+    <p>
+        Dobrodošli na BlogPlatform. Korištenjem ove stranice prihvaćate osnovna pravila korištenja.
+        Cilj platforme je omogućiti korisnicima objavu blogova, komentiranje i razmjenu mišljenja na siguran i pristojan način.
+    </p>
+
+    <h2>Korisnički račun</h2>
+    <p>
+        Korisnik je odgovoran za svoj korisnički račun, lozinku i sadržaj koji objavljuje.
+        Nije dopušteno koristiti tuđi račun, lažno se predstavljati ili pokušavati zaobići sigurnosna ograničenja stranice.
+    </p>
+
+    <h2>Objava sadržaja</h2>
+    <p>
+        Korisnici smiju objavljivati vlastite tekstove, slike i komentare.
+        Nije dopušteno objavljivati sadržaj koji vrijeđa druge korisnike, potiče mržnju, nasilje, prijetnje,
+        spam ili krši tuđa autorska prava.
+    </p>
+
+    <h2>Komentari i ponašanje</h2>
+    <p>
+        Komentari trebaju biti pristojni i vezani uz temu.
+        Rasprava je dopuštena, ali vrijeđanje, uznemiravanje i namjerno provociranje drugih korisnika nije dopušteno.
+    </p>
+
+    <h2>Administracija</h2>
+    <p>
+        Administracija može ukloniti sadržaj koji krši pravila, ograničiti korisnički račun ili poduzeti druge mjere
+        ako je to potrebno za sigurnost i normalan rad platforme.
+    </p>
+
+    <h2>Dostupnost stranice</h2>
+    <p>
+        BlogPlatform se razvija i održava, ali nije moguće garantirati da će stranica uvijek raditi bez prekida.
+        Povremeno su moguće tehničke promjene, održavanje ili privremeni problemi.
+    </p>
+
+    <h2>Promjene pravila</h2>
+    <p>
+        Pravila korištenja mogu se povremeno promijeniti. Nova verzija pravila bit će objavljena na ovoj stranici.
+    </p>
+</div>
+{% endblock %}
