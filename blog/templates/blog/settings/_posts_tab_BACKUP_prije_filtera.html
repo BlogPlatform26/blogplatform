@@ -607,82 +607,6 @@
 
             <div class="card shadow-sm">
 
-            {% if post_filter == "published" or post_filter == "draft" or post_filter == "scheduled" or post_filter == "deleted" %}
-                <div class="post-list-filter-bar border-bottom bg-light px-2 py-2 rounded-top">
-                    <div class="row g-2 align-items-end">
-
-                        <div class="col-12 col-md-3">
-                            <label class="form-label mb-1" for="postListSearch">Pretraži</label>
-                            <input type="text"
-                                class="form-control form-control-sm"
-                                id="postListSearch"
-                                placeholder="Naziv ili tag...">
-                        </div>
-
-                        <div class="col-6 col-md-2">
-                            <label class="form-label mb-1" for="postListCategory">Kategorija</label>
-                            <select class="form-select form-select-sm" id="postListCategory">
-                                <option value="">Sve</option>
-                                {% for category in categories %}
-                                    <option value="{{ category.name|lower }}">{{ category.name }}</option>
-                                {% endfor %}
-                            </select>
-                        </div>
-
-                        <div class="col-6 col-md-2">
-                            <label class="form-label mb-1" for="postListType">Vrsta</label>
-                            <select class="form-select form-select-sm" id="postListType">
-                                <option value="">Sve</option>
-                                <option value="post">Post</option>
-                                <option value="quiz">Kviz</option>
-                                <option value="poll">Anketa</option>
-                            </select>
-                        </div>
-
-                        <div class="col-6 col-md-2">
-                            <label class="form-label mb-1" for="postListMonth">Mjesec</label>
-                            <select class="form-select form-select-sm" id="postListMonth">
-                                <option value="">Svi</option>
-                                <option value="01">Siječanj</option>
-                                <option value="02">Veljača</option>
-                                <option value="03">Ožujak</option>
-                                <option value="04">Travanj</option>
-                                <option value="05">Svibanj</option>
-                                <option value="06">Lipanj</option>
-                                <option value="07">Srpanj</option>
-                                <option value="08">Kolovoz</option>
-                                <option value="09">Rujan</option>
-                                <option value="10">Listopad</option>
-                                <option value="11">Studeni</option>
-                                <option value="12">Prosinac</option>
-                            </select>
-                        </div>
-
-                        <div class="col-6 col-md-1">
-                            <label class="form-label mb-1" for="postListYear">Godina</label>
-                            <select class="form-select form-select-sm" id="postListYear">
-                                <option value="">Sve</option>
-                            </select>
-                        </div>
-
-                        <div class="col-12 col-md-2">
-                            <button type="button"
-                                    class="btn btn-sm btn-outline-secondary w-100"
-                                    id="clearPostListFilter">
-                                Očisti
-                            </button>
-                        </div>
-
-                    </div>
-
-                    <div class="small text-muted mt-1 d-none" id="postListNoResults">
-                        Nema rezultata za odabrani filter.
-                    </div>
-                </div>
-            {% endif %}
-
-
-
                 {% if post_filter == "deleted" %}
                     <form method="POST" id="trashBulkForm">
                         {% csrf_token %}
@@ -719,13 +643,7 @@
                             {% if user_posts %}
                                 {% for post in user_posts %}
 
-                                    <div class="list-group-item d-flex justify-content-between align-items-center post-list-filter-item"
-                                        data-title="{{ post.title|lower }}"
-                                        data-category="{% if post.category %}{{ post.category.name|lower }}{% endif %}"
-                                        data-tags="{% for tag in post.tags.all %}{{ tag.name|lower }} {% endfor %}"
-                                        data-type="{{ post.post_type }}"
-                                        data-month="{{ post.publication_datetime|date:'m' }}"
-                                        data-year="{{ post.publication_datetime|date:'Y' }}">
+                                    <div class="list-group-item d-flex justify-content-between align-items-center">
 
                                         <div class="d-flex align-items-center gap-3">
 
@@ -810,13 +728,7 @@
                         {% if user_posts %}
                             {% for post in user_posts %}
 
-                                    <div class="list-group-item d-flex justify-content-between align-items-center post-list-filter-item"
-                                        data-title="{{ post.title|lower }}"
-                                        data-category="{% if post.category %}{{ post.category.name|lower }}{% endif %}"
-                                        data-tags="{% for tag in post.tags.all %}{{ tag.name|lower }} {% endfor %}"
-                                        data-type="{{ post.post_type }}"
-                                        data-month="{{ post.publication_datetime|date:'m' }}"
-                                        data-year="{{ post.publication_datetime|date:'Y' }}">
+                                <div class="list-group-item d-flex justify-content-between align-items-center">
 
                                     <div>
                                         {% if post.status == "published" %}
@@ -871,104 +783,5 @@
 
             </div>
 
-                        <script>
-                            document.addEventListener("DOMContentLoaded", function () {
-                                const searchInput = document.getElementById("postListSearch");
-                                const categorySelect = document.getElementById("postListCategory");
-                                const typeSelect = document.getElementById("postListType");
-                                const monthSelect = document.getElementById("postListMonth");
-                                const yearSelect = document.getElementById("postListYear");
-                                const clearButton = document.getElementById("clearPostListFilter");
-                                const noResultsText = document.getElementById("postListNoResults");
-                                const postItems = document.querySelectorAll(".post-list-filter-item");
-
-                                if (!searchInput || !categorySelect || !typeSelect || !monthSelect || !yearSelect || !postItems.length) {
-                                    return;
-                                }
-
-                                const years = new Set();
-
-                                postItems.forEach(function (item) {
-                                    const year = item.dataset.year || "";
-                                    if (year) {
-                                        years.add(year);
-                                    }
-                                });
-
-                                Array.from(years).sort().reverse().forEach(function (year) {
-                                    const option = document.createElement("option");
-                                    option.value = year;
-                                    option.textContent = year;
-                                    yearSelect.appendChild(option);
-                                });
-
-                                function filterPosts() {
-                                    const searchValue = searchInput.value.trim().toLowerCase();
-                                    const categoryValue = categorySelect.value.trim().toLowerCase();
-                                    const typeValue = typeSelect.value.trim().toLowerCase();
-                                    const monthValue = monthSelect.value.trim();
-                                    const yearValue = yearSelect.value.trim();
-
-                                    let visibleCount = 0;
-
-                                    postItems.forEach(function (item) {
-                                        const title = item.dataset.title || "";
-                                        const category = item.dataset.category || "";
-                                        const tags = item.dataset.tags || "";
-                                        const type = item.dataset.type || "";
-                                        const month = item.dataset.month || "";
-                                        const year = item.dataset.year || "";
-
-                                        const matchesSearch =
-                                            !searchValue ||
-                                            title.includes(searchValue) ||
-                                            tags.includes(searchValue);
-
-                                        const matchesCategory =
-                                            !categoryValue ||
-                                            category === categoryValue;
-
-                                        const matchesType =
-                                            !typeValue ||
-                                            type === typeValue;
-
-                                        const matchesMonth =
-                                            !monthValue ||
-                                            month === monthValue;
-
-                                        const matchesYear =
-                                            !yearValue ||
-                                            year === yearValue;
-
-                                        if (matchesSearch && matchesCategory && matchesType && matchesMonth && matchesYear) {
-                                            item.classList.remove("d-none");
-                                            visibleCount++;
-                                        } else {
-                                            item.classList.add("d-none");
-                                        }
-                                    });
-
-                                    if (noResultsText) {
-                                        noResultsText.classList.toggle("d-none", visibleCount !== 0);
-                                    }
-                                }
-
-                                searchInput.addEventListener("input", filterPosts);
-                                categorySelect.addEventListener("change", filterPosts);
-                                typeSelect.addEventListener("change", filterPosts);
-                                monthSelect.addEventListener("change", filterPosts);
-                                yearSelect.addEventListener("change", filterPosts);
-
-                                clearButton.addEventListener("click", function () {
-                                    searchInput.value = "";
-                                    categorySelect.value = "";
-                                    typeSelect.value = "";
-                                    monthSelect.value = "";
-                                    yearSelect.value = "";
-                                    filterPosts();
-                                });
-                            });
-                        </script>
-     
             {% endif %}
             {% endif %}

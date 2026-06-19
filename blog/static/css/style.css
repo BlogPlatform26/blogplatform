@@ -2770,3 +2770,49 @@ body.bp-banner-modal-open { overflow: hidden !important; }
     padding-top: 12px;
     padding-bottom: 12px;
 }
+
+/* Vrlo tanak filter za listu postova */
+.post-list-filter-bar {
+    font-size: 0.78rem;
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+}
+
+.post-list-filter-bar .form-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    margin-bottom: 2px !important;
+}
+
+.post-list-filter-bar .form-control-sm,
+.post-list-filter-bar .form-select-sm {
+    min-height: 26px !important;
+    height: 26px !important;
+    padding: 1px 8px !important;
+    font-size: 0.78rem !important;
+    line-height: 1.1 !important;
+}
+
+.post-list-filter-bar .btn-sm {
+    min-height: 26px !important;
+    height: 26px !important;
+    padding: 1px 10px !important;
+    font-size: 0.78rem !important;
+    line-height: 1.1 !important;
+}
+
+#clearPostListFilter {
+    max-width: 90px;
+    margin-left: auto;
+}
+
+.post-list-filter-bar .row {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.post-list-filter-bar .col-12,
+.post-list-filter-bar .col-6 {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
