@@ -2750,3 +2750,23 @@ body.bp-banner-modal-open { overflow: hidden !important; }
     overflow-wrap: normal;
     font-size: 1rem;
 }
+
+/* Stranica: Provjeri email */
+.activation-card-wrapper {
+    max-width: 620px;
+}
+
+.activation-email-text {
+    display: block;
+    white-space: nowrap;
+    word-break: normal;
+    overflow-wrap: normal;
+    font-size: 1.15rem;
+    margin-top: 6px;
+}
+
+.activation-resend-btn {
+    font-size: 1.05rem;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}

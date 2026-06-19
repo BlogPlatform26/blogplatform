@@ -1,14 +1,18 @@
 {% extends "blog/base.html" %}
+
 {% block left_sidebar %}{% endblock %}
 {% block right_sidebar %}{% endblock %}
+
 {% block title %}Provjeri email{% endblock %}
 
 {% block content %}
+
 <div class="row justify-content-center">
-    <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5">
+    <div class="col-12 activation-card-wrapper">
         <div class="card shadow-sm">
-            <div class="card-body p-4">
-                <h3 class="mb-3 text-center">Provjeri email</h3>
+            <div class="card-body p-4 p-md-5">
+
+                <h3 class="mb-4 text-center">Provjeri email</h3>
 
                 {% if messages %}
                     {% for message in messages %}
@@ -18,29 +22,32 @@
                     {% endfor %}
                 {% endif %}
 
-                <p class="text-center mb-2">
+                <p class="text-center mb-3">
                     Poslali smo aktivacijski link na:<br>
                     <strong class="activation-email-text">{{ pending_user_email }}</strong>
                 </p>
 
-                <p class="text-center text-muted small mb-3">
+                <p class="text-center text-muted mb-4">
                     Provjeri inbox, spam i promotions. Ako ga nema, klikni ponovno slanje ispod.
                 </p>
 
-                <form method="POST" class="mb-3">
+                <form method="POST" class="mb-4">
                     {% csrf_token %}
-                    <button type="submit" class="btn btn-outline-primary w-100">
+
+                    <button type="submit" class="btn btn-outline-primary w-100 activation-resend-btn">
                         Pošalji aktivacijski mail ponovno
                     </button>
                 </form>
 
-                <p class="text-center mb-0 small text-muted">
+                <p class="text-center mb-0 text-muted">
                     Ako si već aktivirao račun, možeš se vratiti na
                     <a href="{% url 'login' %}">prijavu</a>.
                 </p>
+
             </div>
         </div>
     </div>
 </div>
+
 {% endblock %}
 
