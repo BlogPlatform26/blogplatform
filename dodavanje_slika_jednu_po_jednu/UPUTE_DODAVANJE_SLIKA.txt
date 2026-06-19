@@ -1,0 +1,48 @@
+UPUTE - DODAVANJE SLIKA JEDNU PO JEDNU
+
+Ovaj ZIP dodaje mogućnost da u novom postu i kod uređivanja posta možeš:
+- odabrati više slika odjednom kao i do sada
+- kliknuti + Dodaj još sliku
+- dodavati slike jednu po jednu
+- imati maksimalno 5 slika po slanju forme
+
+KAKO POKRENUTI
+
+1. Raspakiraj ZIP.
+
+2. File apply_image_upload_inputs.py kopiraj u root projekta:
+
+   C:\Users\mario\blogplatform
+
+   Znači tamo gdje su manage.py, blog/, staticfiles/ itd.
+
+3. Otvori PowerShell u projektu:
+
+   cd C:\Users\mario\blogplatform
+
+4. Pokreni:
+
+   python apply_image_upload_inputs.py
+
+5. Ako napiše GOTOVO, pokreni server:
+
+   python manage.py runserver
+
+6. Otvori Novi post i napravi Ctrl + F5.
+
+ŠTO SKRIPTA MIJENJA
+
+- blog/templates/blog/settings/_posts_tab.html
+- blog/static/css/style.css
+
+Skripta automatski napravi backup prije promjene.
+Backup će izgledati slično ovome:
+
+- _posts_tab.html.bak_image_inputs_20260619_141000
+- style.css.bak_image_inputs_20260619_141000
+
+AKO NEŠTO NE BUDE DOBRO
+
+Nemoj paničariti. Backup je napravljen u istom folderu.
+Možeš vratiti backup ručno tako da sadržaj backup filea kopiraš natrag u originalni file.
+

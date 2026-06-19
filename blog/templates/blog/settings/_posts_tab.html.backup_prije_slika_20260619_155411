@@ -128,31 +128,9 @@
                                 </div>
                                 {% endif %}
 
-                                <div class="mb-3 post-image-upload-box">
+                                <div class="mb-3">
                                     <label class="form-label d-block">Dodaj nove slike</label>
-
-                                    <div class="post-image-inputs" data-max-images="5">
-                                        <div class="post-image-input-row mb-2">
-                                            <input type="file"
-                                                   name="images"
-                                                   class="form-control post-image-input"
-                                                   accept="image/*"
-                                                   multiple>
-                                        </div>
-                                    </div>
-
-                                    <button type="button"
-                                            class="btn btn-sm btn-outline-primary mt-1 add-post-image-input">
-                                        + Dodaj još sliku
-                                    </button>
-
-                                    <div class="small text-muted mt-1">
-                                        Možeš dodati više slika odjednom ili jednu po jednu. Maksimalno 5 slika.
-                                    </div>
-
-                                    <div class="small text-danger mt-1 d-none post-image-limit-message">
-                                        Možeš dodati najviše 5 slika.
-                                    </div>
+                                    <input type="file" name="images" class="form-control" accept="image/*" multiple>
                                 </div>
 
                             </div>
@@ -295,31 +273,10 @@
                                         </div>
                                     </div>
 
-                                    <div class="mb-3 post-image-upload-box">
+                                    <div class="mb-3">
                                         <label class="form-label d-block">Slike</label>
-
-                                        <div class="post-image-inputs" data-max-images="5">
-                                            <div class="post-image-input-row mb-2">
-                                                <input type="file"
-                                                       name="images"
-                                                       class="form-control post-image-input"
-                                                       accept="image/*"
-                                                       multiple>
-                                            </div>
-                                        </div>
-
-                                        <button type="button"
-                                                class="btn btn-sm btn-outline-primary mt-1 add-post-image-input">
-                                            + Dodaj još sliku
-                                        </button>
-
-                                        <div class="small text-muted mt-1">
-                                            Možeš odabrati više slika odjednom ili dodavati jednu po jednu. Maksimalno 5 slika.
-                                        </div>
-
-                                        <div class="small text-danger mt-1 d-none post-image-limit-message">
-                                            Možeš dodati najviše 5 slika.
-                                        </div>
+                                        <input type="file" name="images" class="form-control" accept="image/*" multiple>
+                                        <div class="small text-muted mt-1">Možeš odabrati više slika odjednom.</div>
                                     </div>
 
                                 </div>
@@ -1015,86 +972,3 @@
      
             {% endif %}
             {% endif %}
-
-<!-- POST_IMAGE_INPUTS_SCRIPT_START -->
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        document.querySelectorAll(".add-post-image-input").forEach(function (button) {
-            button.addEventListener("click", function () {
-                const wrapper = button.closest(".post-image-upload-box");
-                if (!wrapper) {
-                    return;
-                }
-
-                const inputsBox = wrapper.querySelector(".post-image-inputs");
-                const message = wrapper.querySelector(".post-image-limit-message");
-                const maxImages = Number(inputsBox.dataset.maxImages || 5);
-                const currentInputs = inputsBox.querySelectorAll(".post-image-input").length;
-
-                if (currentInputs >= maxImages) {
-                    if (message) {
-                        message.classList.remove("d-none");
-                    }
-                    return;
-                }
-
-                if (message) {
-                    message.classList.add("d-none");
-                }
-
-                const row = document.createElement("div");
-                row.className = "post-image-input-row mb-2 d-flex gap-2";
-
-                row.innerHTML = `
-                    <input type="file"
-                           name="images"
-                           class="form-control post-image-input"
-                           accept="image/*"
-                           multiple>
-
-                    <button type="button"
-                            class="btn btn-sm btn-outline-danger remove-post-image-input">
-                        ×
-                    </button>
-                `;
-
-                inputsBox.appendChild(row);
-
-                row.querySelector(".remove-post-image-input").addEventListener("click", function () {
-                    row.remove();
-                    if (message) {
-                        message.classList.add("d-none");
-                    }
-                });
-            });
-        });
-
-        document.querySelectorAll("form").forEach(function (form) {
-            form.addEventListener("submit", function (event) {
-                const inputsBox = form.querySelector(".post-image-inputs");
-
-                if (!inputsBox) {
-                    return;
-                }
-
-                const message = form.querySelector(".post-image-limit-message");
-                const maxImages = Number(inputsBox.dataset.maxImages || 5);
-                let totalFiles = 0;
-
-                inputsBox.querySelectorAll(".post-image-input").forEach(function (input) {
-                    totalFiles += input.files.length;
-                });
-
-                if (totalFiles > maxImages) {
-                    event.preventDefault();
-
-                    if (message) {
-                        message.classList.remove("d-none");
-                    }
-                }
-            });
-        });
-    });
-</script>
-<!-- POST_IMAGE_INPUTS_SCRIPT_END -->
-

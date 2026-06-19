@@ -2816,10 +2816,3 @@ body.bp-banner-modal-open { overflow: hidden !important; }
     padding-top: 0 !important;
     padding-bottom: 0 !important;
 }
-
-/* POST_IMAGE_INPUTS_CSS_START */
-.post-image-input-row .remove-post-image-input {
-    min-width: 38px;
-}
-/* POST_IMAGE_INPUTS_CSS_END */
-
