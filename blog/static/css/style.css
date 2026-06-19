@@ -2741,3 +2741,12 @@ body.bp-banner-modal-open { overflow: hidden !important; }
         border-radius: 12px;
     }
 }
+
+/* Stranica: provjeri email */
+.activation-email-text {
+    display: block;
+    white-space: nowrap;
+    word-break: normal;
+    overflow-wrap: normal;
+    font-size: 1rem;
+}
