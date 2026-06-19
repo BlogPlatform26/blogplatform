@@ -605,55 +605,6 @@
             <!-- LISTA POSTOVA -->
             {% else %}
 
-            <div class="card shadow-sm mb-3 post-list-filter-card">
-                <div class="card-body">
-                    <div class="row g-2 align-items-end">
-
-                        <div class="col-12 col-md-5">
-                            <label class="form-label mb-1" for="postListSearch">
-                                Pretraži
-                            </label>
-                            <input type="text"
-                                   class="form-control"
-                                   id="postListSearch"
-                                   placeholder="Naziv posta ili tag...">
-                        </div>
-
-                        <div class="col-12 col-md-4">
-                            <label class="form-label mb-1" for="postListCategory">
-                                Kategorija
-                            </label>
-                            <select class="form-select" id="postListCategory">
-                                <option value="">Sve kategorije</option>
-
-                                {% for category in categories %}
-                                    <option value="{{ category.name|lower }}">
-                                        {{ category.name }}
-                                    </option>
-                                {% endfor %}
-                            </select>
-                        </div>
-
-                        <div class="col-12 col-md-3">
-                            <button type="button"
-                                    class="btn btn-outline-secondary w-100"
-                                    id="clearPostListFilter">
-                                Očisti filter
-                            </button>
-                        </div>
-
-                    </div>
-
-                    <div class="small text-muted mt-2">
-                        Filter radi po prikazanim postovima u trenutno otvorenom tabu.
-                    </div>
-                </div>
-            </div>
-
-            <div class="alert alert-light border text-muted d-none" id="postListNoResults">
-                Nema postova koji odgovaraju ovom filteru.
-            </div>
-
             <div class="card shadow-sm">
 
                 {% if post_filter == "deleted" %}
@@ -692,10 +643,7 @@
                             {% if user_posts %}
                                 {% for post in user_posts %}
 
-                                    <div class="list-group-item d-flex justify-content-between align-items-center post-list-filter-item"
-                                         data-title="{{ post.title|lower }}"
-                                         data-category="{% if post.category %}{{ post.category.name|lower }}{% endif %}"
-                                         data-tags="{% for tag in post.tags.all %}{{ tag.name|lower }} {% endfor %}">
+                                    <div class="list-group-item d-flex justify-content-between align-items-center">
 
                                         <div class="d-flex align-items-center gap-3">
 
@@ -780,10 +728,7 @@
                         {% if user_posts %}
                             {% for post in user_posts %}
 
-                                <div class="list-group-item d-flex justify-content-between align-items-center post-list-filter-item"
-                                         data-title="{{ post.title|lower }}"
-                                         data-category="{% if post.category %}{{ post.category.name|lower }}{% endif %}"
-                                         data-tags="{% for tag in post.tags.all %}{{ tag.name|lower }} {% endfor %}">
+                                <div class="list-group-item d-flex justify-content-between align-items-center">
 
                                     <div>
                                         {% if post.status == "published" %}
@@ -837,63 +782,6 @@
                 {% endif %}
 
             </div>
-
-            <script>
-                document.addEventListener("DOMContentLoaded", function () {
-                    const searchInput = document.getElementById("postListSearch");
-                    const categorySelect = document.getElementById("postListCategory");
-                    const clearButton = document.getElementById("clearPostListFilter");
-                    const noResults = document.getElementById("postListNoResults");
-                    const postItems = Array.from(document.querySelectorAll(".post-list-filter-item"));
-
-                    if (!searchInput || !categorySelect || postItems.length === 0) {
-                        return;
-                    }
-
-                    function filterPosts() {
-                        const searchValue = searchInput.value.trim().toLowerCase();
-                        const categoryValue = categorySelect.value.trim().toLowerCase();
-                        let visibleCount = 0;
-
-                        postItems.forEach(function (item) {
-                            const title = item.dataset.title || "";
-                            const category = item.dataset.category || "";
-                            const tags = item.dataset.tags || "";
-
-                            const matchesSearch =
-                                !searchValue ||
-                                title.includes(searchValue) ||
-                                tags.includes(searchValue);
-
-                            const matchesCategory =
-                                !categoryValue ||
-                                category === categoryValue;
-
-                            if (matchesSearch && matchesCategory) {
-                                item.classList.remove("d-none");
-                                visibleCount += 1;
-                            } else {
-                                item.classList.add("d-none");
-                            }
-                        });
-
-                        if (noResults) {
-                            noResults.classList.toggle("d-none", visibleCount > 0);
-                        }
-                    }
-
-                    searchInput.addEventListener("input", filterPosts);
-                    categorySelect.addEventListener("change", filterPosts);
-
-                    if (clearButton) {
-                        clearButton.addEventListener("click", function () {
-                            searchInput.value = "";
-                            categorySelect.value = "";
-                            filterPosts();
-                        });
-                    }
-                });
-            </script>
 
             {% endif %}
             {% endif %}
