@@ -6,6 +6,35 @@
 {% block title %}Prijava{% endblock %}
 
 {% block content %}
+
+<style>
+    .login-card .form-control {
+        background-color: #ffffff;
+        border: 1px solid #ced4da;
+        border-radius: 8px;
+        min-height: 48px;
+        padding: 10px 12px;
+        font-size: 1rem;
+        color: #212529;
+    }
+
+    .login-card .form-control:focus {
+        border-color: #86b7fe;
+        box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+        outline: none;
+    }
+
+    .login-card .form-label {
+        margin-bottom: 8px;
+    }
+
+    .login-card .btn-primary {
+        min-height: 48px;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+</style>
+
 <div class="row justify-content-center">
     <div class="col-12 col-md-11 col-lg-9 col-xl-8 col-xxl-7">
         <div class="card shadow-sm login-card">
