@@ -53,6 +53,7 @@ urlpatterns = [
     path('password_change/done/', auth_views.PasswordChangeDoneView.as_view(template_name='blog/password_change_done.html'), name='password_change_done'),
     path('post/<int:post_id>/like/', like_post, name='like_post'),
     path("blog/settings/", views.blog_settings, name="blog_settings"),
+    path("blog/settings/autosave-post-draft/", views.autosave_post_draft, name="autosave_post_draft"),
     path("blog/settings/live-editor/naslovi/", views.design_live_editor_titles, name="design_live_editor_titles"),
     path('blog/<str:username>/upoznaj-autora/', views.author_detail, name='author_detail'),
     path('blog/<str:username>/upoznaj-autora/pitanje/', views.submit_author_question, name='submit_author_question'),

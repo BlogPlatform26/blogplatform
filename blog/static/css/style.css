@@ -2823,3 +2823,8 @@ body.bp-banner-modal-open { overflow: hidden !important; }
 }
 /* POST_IMAGE_INPUTS_CSS_END */
 
+/* Automatsko spremanje posta u skicu */
+.post-autosave-status {
+    min-height: 18px;
+    font-size: 0.82rem;
+}

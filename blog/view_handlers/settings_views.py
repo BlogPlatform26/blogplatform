@@ -9,9 +9,10 @@ from django.conf import settings
 from django.contrib import messages
 from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib.auth.decorators import login_required
+from django.views.decorators.http import require_POST
 from django.core.files.base import ContentFile
 from django.db.models import Case, Count, IntegerField, Q, Sum, Value, When
-from django.http import HttpResponseForbidden
+from django.http import HttpResponseForbidden, JsonResponse
 from django.shortcuts import get_object_or_404, redirect, render
 from django.utils import timezone
 from django.urls import reverse
@@ -857,6 +858,74 @@ def delete_box(request, box_id):
     return render(request, 'blog/delete_box.html', {'box': box})
 
 
+
+
+@login_required
+@require_POST
+def autosave_post_draft(request):
+    """Automatski sprema novi obični post kao skicu bez uploadanja slika."""
+    import re
+
+    title = (request.POST.get('title') or '').strip()
+    content = request.POST.get('content') or ''
+    video_url = (request.POST.get('video_url') or '').strip()
+    tags_raw = (request.POST.get('tags_input') or '').strip()
+    category_id = request.POST.get('category')
+    publish_at_raw = request.POST.get('publish_at')
+
+    plain_content = re.sub(r'<[^>]*>', '', content)
+    plain_content = plain_content.replace('&nbsp;', ' ').strip()
+
+    # Ne stvaraj prazne skice čim korisnik samo otvori stranicu.
+    if not any([title, plain_content, video_url, tags_raw, category_id, publish_at_raw]):
+        return JsonResponse({
+            'ok': True,
+            'saved': False,
+            'message': 'Nema sadržaja za spremanje.',
+        })
+
+    draft_id = request.POST.get('autosave_draft_id')
+    post = None
+
+    if draft_id:
+        post = Post.objects.filter(
+            id=draft_id,
+            author=request.user,
+            status='draft',
+            post_type='post',
+        ).first()
+
+    if post is None:
+        post = Post(author=request.user, post_type='post', status='draft')
+
+    post.title = title or 'Skica bez naslova'
+
+    try:
+        from blog.html_sanitizer import sanitize_post_html
+        post.content = sanitize_post_html(content)
+    except Exception:
+        post.content = content
+
+    if hasattr(post, 'video_url'):
+        post.video_url = video_url
+
+    post.allow_comments = request.POST.get('allow_comments') in {'on', '1', 'true', 'True'}
+    post.category = Category.objects.filter(id=category_id).first() if category_id else None
+    post.publish_at = _normalize_publish_at(publish_at_raw) if publish_at_raw else None
+    post.status = 'draft'
+    post.save()
+
+    tags_list = [tag.strip() for tag in tags_raw.split(',') if tag.strip()]
+    apply_tags_to_post(post, tags_list)
+
+    return JsonResponse({
+        'ok': True,
+        'saved': True,
+        'draft_id': post.id,
+        'message': 'Automatski spremljeno u skice.',
+        'saved_at': timezone.localtime(timezone.now()).strftime('%H:%M:%S'),
+    })
+
 @login_required
 def blog_settings(request):
     publish_due_posts(request.user)
@@ -1232,7 +1301,16 @@ def blog_settings(request):
                 return redirect(f'/blog/settings/?tab=postovi&post_filter=edit&post_id={post.id}')
 
         if 'publish_post' in request.POST or 'save_draft' in request.POST:
-            form = PostForm(request.POST, request.FILES)
+            autosave_draft_id = request.POST.get('autosave_draft_id')
+            autosave_draft = None
+            if autosave_draft_id:
+                autosave_draft = Post.objects.filter(
+                    id=autosave_draft_id,
+                    author=request.user,
+                    status='draft',
+                    post_type='post',
+                ).first()
+            form = PostForm(request.POST, request.FILES, instance=autosave_draft) if autosave_draft else PostForm(request.POST, request.FILES)
             if form.is_valid():
                 post = form.save(commit=False)
                 post.author = request.user

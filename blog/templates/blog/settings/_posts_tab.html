@@ -266,8 +266,10 @@
             {% elif post_filter == "new" %}
 
                 <div class="shadow-sm border rounded-start-3" style="border-right:0;">
-                    <form method="POST" enctype="multipart/form-data">
+                    <form method="POST" enctype="multipart/form-data" id="newPostForm" data-local-draft-key="blogplatform_new_post_draft_{{ request.user.id }}">
                         {% csrf_token %}
+                        <input type="hidden" name="autosave_draft_id" id="autosaveDraftId" value="">
+
 
                         <div class="row g-0">
 
@@ -408,10 +410,270 @@
                             <button type="submit" name="save_draft" class="btn btn-secondary">
                                 Spremi kao draft
                             </button>
-                        </div>
+</div>
 
                     </form>
-                </div>
+
+                    <script id="new-post-recovery-script">
+                        document.addEventListener("DOMContentLoaded", function () {
+                            const form = document.getElementById("newPostForm");
+
+                            if (!form) {
+                                return;
+                            }
+
+                            const localKey = form.dataset.localDraftKey || "blogplatform_new_post_draft";
+                            const draftSaveUrl = "";
+                            const draftInput = document.getElementById("autosaveDraftId");
+                            const csrfInput = form.querySelector('input[name="csrfmiddlewaretoken"]');
+                            let submitStarted = false;
+                            let ckeditorReady = false;
+
+                            function updateCkeditorTextarea() {
+                                if (window.CKEDITOR && CKEDITOR.instances) {
+                                    Object.keys(CKEDITOR.instances).forEach(function (name) {
+                                        CKEDITOR.instances[name].updateElement();
+                                    });
+                                }
+                            }
+
+                            function setCkeditorData(value) {
+                                if (window.CKEDITOR && CKEDITOR.instances) {
+                                    Object.keys(CKEDITOR.instances).forEach(function (name) {
+                                        CKEDITOR.instances[name].setData(value || "");
+                                    });
+                                }
+                            }
+
+                            function field(selector) {
+                                return form.querySelector(selector);
+                            }
+
+                            function getValue(selector) {
+                                const input = field(selector);
+                                return input ? input.value : "";
+                            }
+
+                            function setValue(selector, value) {
+                                const input = field(selector);
+
+                                if (input) {
+                                    input.value = value || "";
+                                }
+                            }
+
+                            function getSelectedCategory() {
+                                const checked = form.querySelector('input[name="category"]:checked');
+                                return checked ? checked.value : "";
+                            }
+
+                            function setSelectedCategory(value) {
+                                if (!value) {
+                                    return;
+                                }
+
+                                const radio = form.querySelector('input[name="category"][value="' + CSS.escape(value) + '"]');
+
+                                if (radio) {
+                                    radio.checked = true;
+                                }
+                            }
+
+                            function getAllowComments() {
+                                const input = field('input[name="allow_comments"]');
+                                return input ? input.checked : true;
+                            }
+
+                            function setAllowComments(value) {
+                                const input = field('input[name="allow_comments"]');
+
+                                if (input) {
+                                    input.checked = value !== false;
+                                }
+                            }
+
+                            function collectDraft() {
+                                updateCkeditorTextarea();
+
+                                return {
+                                    title: getValue('input[name="title"]'),
+                                    content: getValue('textarea[name="content"]'),
+                                    video_url: getValue('input[name="video_url"]'),
+                                    category: getSelectedCategory(),
+                                    tags_input: getValue('input[name="tags_input"]'),
+                                    publish_at: getValue('input[name="publish_at"]'),
+                                    allow_comments: getAllowComments(),
+                                    autosave_draft_id: draftInput ? draftInput.value : "",
+                                    saved_locally_at: Date.now()
+                                };
+                            }
+
+                            function hasContent(draft) {
+                                const contentText = String(draft.content || "")
+                                    .replace(/<[^>]*>/g, "")
+                                    .replace(/&nbsp;/g, " ")
+                                    .trim();
+
+                                return Boolean(
+                                    String(draft.title || "").trim() ||
+                                    contentText ||
+                                    String(draft.video_url || "").trim() ||
+                                    String(draft.category || "").trim() ||
+                                    String(draft.tags_input || "").trim() ||
+                                    String(draft.publish_at || "").trim()
+                                );
+                            }
+
+                            function saveLocalDraft() {
+                                const draft = collectDraft();
+
+                                if (!hasContent(draft)) {
+                                    localStorage.removeItem(localKey);
+                                    return;
+                                }
+
+                                localStorage.setItem(localKey, JSON.stringify(draft));
+                            }
+
+                            function restoreLocalDraft() {
+                                const raw = localStorage.getItem(localKey);
+
+                                if (!raw) {
+                                    return;
+                                }
+
+                                let draft;
+
+                                try {
+                                    draft = JSON.parse(raw);
+                                } catch (error) {
+                                    localStorage.removeItem(localKey);
+                                    return;
+                                }
+
+                                if (!hasContent(draft)) {
+                                    localStorage.removeItem(localKey);
+                                    return;
+                                }
+
+                                setValue('input[name="title"]', draft.title);
+                                setValue('textarea[name="content"]', draft.content);
+                                setValue('input[name="video_url"]', draft.video_url);
+                                setValue('input[name="tags_input"]', draft.tags_input);
+                                setValue('input[name="publish_at"]', draft.publish_at);
+                                setSelectedCategory(draft.category);
+                                setAllowComments(draft.allow_comments);
+
+                                if (draftInput && draft.autosave_draft_id) {
+                                    draftInput.value = draft.autosave_draft_id;
+                                }
+
+                                setCkeditorData(draft.content);
+                            }
+
+                            function buildServerFormData() {
+                                const draft = collectDraft();
+
+                                if (!hasContent(draft)) {
+                                    return null;
+                                }
+
+                                const data = new FormData();
+                                data.append("csrfmiddlewaretoken", csrfInput ? csrfInput.value : "");
+                                data.append("autosave_draft_id", draft.autosave_draft_id || "");
+                                data.append("title", draft.title || "");
+                                data.append("content", draft.content || "");
+                                data.append("video_url", draft.video_url || "");
+                                data.append("category", draft.category || "");
+                                data.append("tags_input", draft.tags_input || "");
+                                data.append("publish_at", draft.publish_at || "");
+                                data.append("allow_comments", draft.allow_comments ? "on" : "");
+
+                                return data;
+                            }
+
+                            function saveToServerOnLeave() {
+                                if (!draftSaveUrl || submitStarted || !navigator.onLine) {
+                                    return;
+                                }
+
+                                const data = buildServerFormData();
+
+                                if (!data) {
+                                    return;
+                                }
+
+                                if (navigator.sendBeacon) {
+                                    navigator.sendBeacon(draftSaveUrl, data);
+                                    return;
+                                }
+
+                                fetch(draftSaveUrl, {
+                                    method: "POST",
+                                    body: data,
+                                    credentials: "same-origin",
+                                    keepalive: true,
+                                    headers: {
+                                        "X-Requested-With": "XMLHttpRequest"
+                                    }
+                                }).catch(function () {});
+                            }
+
+                            function attachCkeditorEvents() {
+                                if (!window.CKEDITOR || !CKEDITOR.instances) {
+                                    return false;
+                                }
+
+                                Object.keys(CKEDITOR.instances).forEach(function (name) {
+                                    CKEDITOR.instances[name].on("change", saveLocalDraft);
+                                    CKEDITOR.instances[name].on("blur", saveLocalDraft);
+                                });
+
+                                ckeditorReady = true;
+                                return true;
+                            }
+
+                            restoreLocalDraft();
+
+                            if (!attachCkeditorEvents()) {
+                                let tries = 0;
+                                const interval = setInterval(function () {
+                                    tries++;
+
+                                    if (attachCkeditorEvents() || tries >= 20) {
+                                        clearInterval(interval);
+                                    }
+                                }, 300);
+                            }
+
+                            form.addEventListener("input", saveLocalDraft);
+                            form.addEventListener("change", saveLocalDraft);
+
+                            form.addEventListener("submit", function () {
+                                submitStarted = true;
+                                updateCkeditorTextarea();
+                                localStorage.removeItem(localKey);
+                            });
+
+                            window.addEventListener("pagehide", function () {
+                                saveLocalDraft();
+                                saveToServerOnLeave();
+                            });
+
+                            document.addEventListener("visibilitychange", function () {
+                                if (document.visibilityState === "hidden") {
+                                    saveLocalDraft();
+                                    saveToServerOnLeave();
+                                }
+                            });
+
+                            window.addEventListener("online", function () {
+                                saveLocalDraft();
+                            });
+                        });
+                    </script>
+
+</div>
 
             <!-- ✅ NOVO: KVIZ -->
             {% elif post_filter == "quiz_new" %}
@@ -1012,8 +1274,7 @@
                                 });
                             });
                         </script>
-     
-            {% endif %}
+{% endif %}
             {% endif %}
 
 <!-- POST_IMAGE_INPUTS_SCRIPT_START -->
