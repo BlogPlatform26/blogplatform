@@ -677,7 +677,7 @@
 
 </div>
 
-            <!-- ✅ NOVO: KVIZ -->
+            
                 <script id="newPostAutoDraftScript">
                 document.addEventListener("DOMContentLoaded", function () {
                     const form = document.getElementById("newPostForm");
@@ -688,32 +688,41 @@
                         return;
                     }
 
-                    const clearFlagKey = "blogplatform_new_post_autodraft_saved";
-                    let normalSubmit = false;
-                    let autoDraftInProgress = false;
+                    const storageKey = "blogplatform_new_post_form";
+                    const clearFlagKey = "blogplatform_new_post_clear_after_autodraft";
+                    let isSubmitting = false;
+                    let isRestoring = false;
 
-                    function getEditorInstance() {
+                    function getEditor() {
                         if (window.CKEDITOR && CKEDITOR.instances && CKEDITOR.instances.id_content) {
                             return CKEDITOR.instances.id_content;
                         }
                         return null;
                     }
 
+                    function getField(id) {
+                        return document.getElementById(id);
+                    }
+
                     function getContentHtml() {
-                        const editor = getEditorInstance();
+                        const editor = getEditor();
 
                         if (editor) {
                             editor.updateElement();
                             return editor.getData() || "";
                         }
 
-                        const textarea = document.getElementById("id_content");
+                        const textarea = getField("id_content");
                         return textarea ? textarea.value : "";
                     }
 
                     function setContentHtml(value) {
-                        const editor = getEditorInstance();
+                        const textarea = getField("id_content");
+                        if (textarea) {
+                            textarea.value = value || "";
+                        }
 
+                        const editor = getEditor();
                         if (editor) {
                             if (editor.status === "ready") {
                                 editor.setData(value || "");
@@ -723,39 +732,87 @@
                                 });
                             }
                         }
-
-                        const textarea = document.getElementById("id_content");
-                        if (textarea) {
-                            textarea.value = value || "";
-                        }
                     }
 
-                    function getPlainTextFromHtml(html) {
+                    function plainTextFromHtml(html) {
                         const temp = document.createElement("div");
                         temp.innerHTML = html || "";
                         return (temp.textContent || temp.innerText || "").replace(/\s+/g, " ").trim();
                     }
 
-                    function hasDraftContent() {
-                        const titleInput = document.getElementById("id_title");
-                        const title = titleInput ? titleInput.value.trim() : "";
-                        const contentText = getPlainTextFromHtml(getContentHtml());
-
-                        return title.length > 0 && contentText.length > 0;
+                    function getSelectedCategory() {
+                        const checked = form.querySelector('input[name="category"]:checked');
+                        return checked ? checked.value : "";
                     }
 
-                    function clearNewPostForm() {
-                        const titleInput = document.getElementById("id_title");
-                        const videoInput = document.getElementById("id_video_url");
-                        const tagsInput = document.getElementById("id_tags_input");
-                        const publishAtInput = document.getElementById("id_publish_at");
-                        const allowCommentsInput = document.getElementById("id_allow_comments");
+                    function setSelectedCategory(value) {
+                        if (!value) return;
+
+                        const input = form.querySelector('input[name="category"][value="' + CSS.escape(value) + '"]');
+                        if (input) {
+                            input.checked = true;
+                        }
+                    }
+
+                    function getFormDataForStorage() {
+                        const titleInput = getField("id_title");
+                        const videoInput = getField("id_video_url");
+                        const tagsInput = getField("id_tags_input");
+                        const publishAtInput = getField("id_publish_at");
+                        const allowCommentsInput = getField("id_allow_comments");
+
+                        return {
+                            title: titleInput ? titleInput.value : "",
+                            content: getContentHtml(),
+                            video_url: videoInput ? videoInput.value : "",
+                            tags_input: tagsInput ? tagsInput.value : "",
+                            publish_at: publishAtInput ? publishAtInput.value : "",
+                            allow_comments: allowCommentsInput ? allowCommentsInput.checked : true,
+                            category: getSelectedCategory()
+                        };
+                    }
+
+                    function hasUsefulContent(data) {
+                        const title = (data.title || "").trim();
+                        const text = plainTextFromHtml(data.content || "");
+                        return title.length > 0 || text.length > 0;
+                    }
+
+                    function saveLocalDraft() {
+                        if (isRestoring || isSubmitting) {
+                            return;
+                        }
+
+                        const data = getFormDataForStorage();
+
+                        if (!hasUsefulContent(data)) {
+                            localStorage.removeItem(storageKey);
+                            return;
+                        }
+
+                        localStorage.setItem(storageKey, JSON.stringify(data));
+                    }
+
+                    function clearLocalDraft() {
+                        localStorage.removeItem(storageKey);
+                    }
+
+                    function clearForm() {
+                        const titleInput = getField("id_title");
+                        const videoInput = getField("id_video_url");
+                        const tagsInput = getField("id_tags_input");
+                        const publishAtInput = getField("id_publish_at");
+                        const allowCommentsInput = getField("id_allow_comments");
 
                         if (titleInput) titleInput.value = "";
                         if (videoInput) videoInput.value = "";
                         if (tagsInput) tagsInput.value = "";
                         if (publishAtInput) publishAtInput.value = "";
                         if (allowCommentsInput) allowCommentsInput.checked = true;
+
+                        form.querySelectorAll('input[name="category"]').forEach(function (input) {
+                            input.checked = false;
+                        });
 
                         form.querySelectorAll('input[type="file"]').forEach(function (input) {
                             input.value = "";
@@ -765,24 +822,124 @@
                         nextUrlInput.value = "";
                     }
 
-                    if (sessionStorage.getItem(clearFlagKey) === "1") {
-                        clearNewPostForm();
+                    function restoreLocalDraft() {
+                        const raw = localStorage.getItem(storageKey);
+                        if (!raw) {
+                            return;
+                        }
+
+                        let data = null;
+
+                        try {
+                            data = JSON.parse(raw);
+                        } catch (error) {
+                            localStorage.removeItem(storageKey);
+                            return;
+                        }
+
+                        if (!hasUsefulContent(data)) {
+                            localStorage.removeItem(storageKey);
+                            return;
+                        }
+
+                        isRestoring = true;
+
+                        const titleInput = getField("id_title");
+                        const videoInput = getField("id_video_url");
+                        const tagsInput = getField("id_tags_input");
+                        const publishAtInput = getField("id_publish_at");
+                        const allowCommentsInput = getField("id_allow_comments");
+
+                        if (titleInput) titleInput.value = data.title || "";
+                        if (videoInput) videoInput.value = data.video_url || "";
+                        if (tagsInput) tagsInput.value = data.tags_input || "";
+                        if (publishAtInput) publishAtInput.value = data.publish_at || "";
+                        if (allowCommentsInput) allowCommentsInput.checked = data.allow_comments !== false;
+
+                        setSelectedCategory(data.category || "");
+                        setContentHtml(data.content || "");
 
                         setTimeout(function () {
-                            clearNewPostForm();
-                        }, 250);
+                            isRestoring = false;
+                        }, 300);
+                    }
 
+                    function attachLocalSaveListeners() {
+                        form.addEventListener("input", saveLocalDraft);
+                        form.addEventListener("change", saveLocalDraft);
+
+                        const editor = getEditor();
+                        if (editor) {
+                            editor.on("instanceReady", function () {
+                                restoreLocalDraft();
+                                editor.on("change", saveLocalDraft);
+                            });
+
+                            if (editor.status === "ready") {
+                                restoreLocalDraft();
+                                editor.on("change", saveLocalDraft);
+                            }
+                        } else {
+                            restoreLocalDraft();
+                        }
+                    }
+
+                    function submitAsDraftAndGo(url) {
+                        if (isSubmitting) {
+                            return;
+                        }
+
+                        const data = getFormDataForStorage();
+
+                        if (!hasUsefulContent(data)) {
+                            window.location.href = url;
+                            return;
+                        }
+
+                        isSubmitting = true;
+
+                        clearLocalDraft();
+                        sessionStorage.setItem(clearFlagKey, "1");
+
+                        nextUrlInput.value = url;
+
+                        if (form.requestSubmit) {
+                            form.requestSubmit(saveDraftButton);
+                        } else {
+                            const hidden = document.createElement("input");
+                            hidden.type = "hidden";
+                            hidden.name = "save_draft";
+                            hidden.value = "1";
+                            form.appendChild(hidden);
+                            form.submit();
+                        }
+                    }
+
+                    if (sessionStorage.getItem(clearFlagKey) === "1") {
+                        clearLocalDraft();
+                        clearForm();
                         sessionStorage.removeItem(clearFlagKey);
                     }
 
+                    attachLocalSaveListeners();
+
+                    window.addEventListener("pageshow", function () {
+                        if (sessionStorage.getItem(clearFlagKey) === "1") {
+                            clearLocalDraft();
+                            clearForm();
+                            sessionStorage.removeItem(clearFlagKey);
+                        }
+                    });
+
                     form.addEventListener("submit", function () {
-                        normalSubmit = true;
+                        isSubmitting = true;
+                        clearLocalDraft();
                     });
 
                     document.addEventListener("click", function (event) {
                         const link = event.target.closest("a[href]");
 
-                        if (!link || normalSubmit || autoDraftInProgress) {
+                        if (!link || isSubmitting) {
                             return;
                         }
 
@@ -800,21 +957,12 @@
                             return;
                         }
 
-                        if (!hasDraftContent()) {
-                            return;
-                        }
-
                         event.preventDefault();
-
-                        autoDraftInProgress = true;
-                        sessionStorage.setItem(clearFlagKey, "1");
-
-                        nextUrlInput.value = link.href;
-                        saveDraftButton.disabled = true;
-                        saveDraftButton.click();
+                        submitAsDraftAndGo(link.href);
                     }, true);
                 });
                 </script>
+<!-- ✅ NOVO: KVIZ -->
 {% elif post_filter == "quiz_new" %}
 
                 <div class="card p-4 shadow-sm">
