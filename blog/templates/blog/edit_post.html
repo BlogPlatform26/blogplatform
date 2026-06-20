@@ -1,48 +1,519 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Uredi post</title>
-</head>
-<body>
+{% extends "blog/base.html" %}
 
-    <h1>Uredi post</h1>
+{% block left_sidebar %}{% endblock %}
+{% block right_sidebar %}{% endblock %}
 
-    <form method="POST" enctype="multipart/form-data">
+{% block title %}Uredi post{% endblock %}
+
+{% block content %}
+
+{{ form.media }}
+
+<style id="editPostLayoutCss">
+    .edit-post-card {
+        max-width: 100%;
+        background: #ffffff;
+        border: 1px solid #dee2e6;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+    }
+
+    .edit-post-top {
+        padding: 14px 18px 12px 18px;
+    }
+
+    .edit-post-title-box {
+        max-width: 520px;
+    }
+
+    .edit-post-title-box .form-control {
+        height: 36px;
+        min-height: 36px;
+        font-size: 0.9rem;
+    }
+
+    .edit-post-content-box {
+        max-width: 100%;
+    }
+
+    #cke_id_content,
+    .django-ckeditor-widget,
+    .ck-editor {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    .ck-editor__editable {
+        min-height: 250px;
+    }
+
+    .edit-post-options {
+        border-top: 1px solid #e9ecef;
+        padding: 12px 18px 14px 18px;
+        background: #fbfbfc;
+    }
+
+    .edit-post-options-inner {
+        display: grid;
+        grid-template-columns: minmax(380px, 560px) minmax(300px, 380px);
+        gap: 16px;
+        align-items: start;
+    }
+
+    .edit-post-panel {
+        background: #ffffff;
+        border: 1px solid #e3e7ec;
+        border-radius: 10px;
+        padding: 10px 12px;
+    }
+
+    .edit-post-panel-title {
+        font-size: 0.88rem;
+        font-weight: 700;
+        margin-bottom: 9px;
+    }
+
+    .edit-post-card .form-label,
+    .edit-post-card label {
+        font-size: 0.8rem;
+        font-weight: 600;
+        margin-bottom: 4px;
+    }
+
+    .edit-post-card .form-control,
+    .edit-post-card .form-select {
+        min-height: 30px;
+        height: 30px;
+        padding: 3px 8px;
+        font-size: 0.8rem;
+        border-radius: 6px;
+    }
+
+    .edit-post-card input[type="file"].form-control {
+        height: 30px;
+        padding: 2px 6px;
+        max-width: 390px;
+        font-size: 0.8rem;
+    }
+
+    .edit-post-card .small,
+    .edit-post-card .form-text,
+    .edit-post-card .text-muted {
+        font-size: 0.7rem;
+        line-height: 1.2;
+    }
+
+    .edit-post-field {
+        margin-bottom: 8px;
+        max-width: 500px;
+    }
+
+    .edit-post-field.narrow {
+        max-width: 300px;
+    }
+
+    .edit-post-inline-row {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 6px;
+        align-items: start;
+    }
+
+    .edit-post-comment-row {
+        margin-top: 2px;
+    }
+
+    .edit-post-comment-row .form-check-input {
+        width: 0.9rem;
+        height: 0.9rem;
+        margin-top: 0.18rem;
+    }
+
+    .edit-post-comment-row .form-check-label {
+        font-size: 0.82rem;
+    }
+
+    .edit-post-categories {
+        max-width: 380px;
+    }
+
+    .edit-post-category-scroll {
+        max-height: 335px;
+        overflow-y: auto;
+        padding-right: 3px;
+    }
+
+    .edit-post-category-group {
+        margin-bottom: 6px;
+    }
+
+    .edit-post-category-title {
+        font-size: 0.78rem;
+        font-weight: 700;
+        margin-bottom: 3px;
+    }
+
+    .edit-post-category-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 6px;
+        row-gap: 0;
+    }
+
+    .edit-post-category-grid .form-check {
+        min-height: 20px;
+        margin-bottom: 2px;
+        padding-left: 0;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .edit-post-category-grid .form-check-input {
+        width: 0.78rem;
+        height: 0.78rem;
+        margin: 0;
+        flex: 0 0 auto;
+    }
+
+    .edit-post-category-grid .form-check-label {
+        font-size: 0.74rem;
+        font-weight: 500;
+        line-height: 1.1;
+        margin: 0;
+        cursor: pointer;
+    }
+
+    .edit-post-image-preview {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+        gap: 8px;
+        max-width: 420px;
+    }
+
+    .edit-post-image-card {
+        border: 1px solid #e3e7ec;
+        border-radius: 8px;
+        padding: 6px;
+        background: #fff;
+    }
+
+    .edit-post-image-card img {
+        width: 100%;
+        height: 70px;
+        object-fit: cover;
+        border-radius: 6px;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .edit-post-image-card label {
+        font-size: 0.7rem;
+        font-weight: 500;
+    }
+
+    .edit-post-actions {
+        border-top: 1px solid #e9ecef;
+        padding: 10px 18px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        background: #ffffff;
+        border-radius: 0 0 12px 12px;
+    }
+
+    .edit-post-actions .btn {
+        padding: 5px 12px;
+        font-size: 0.84rem;
+    }
+
+    .edit-post-image-add {
+        padding: 3px 9px;
+        font-size: 0.76rem;
+    }
+
+    @media (max-width: 992px) {
+        .edit-post-options-inner {
+            grid-template-columns: 1fr;
+        }
+
+        .edit-post-categories {
+            max-width: 100%;
+        }
+
+        .edit-post-category-scroll {
+            max-height: none;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .edit-post-card,
+        .edit-post-title-box,
+        .edit-post-content-box,
+        #cke_id_content,
+        .django-ckeditor-widget,
+        .ck-editor {
+            max-width: 100% !important;
+        }
+    }
+</style>
+
+<div class="mb-3">
+    <a href="{% url 'blog_settings' %}?tab=postovi" class="btn btn-outline-secondary btn-sm">
+        ← Natrag na postove
+    </a>
+</div>
+
+<div class="edit-post-card">
+    <form method="POST" enctype="multipart/form-data" id="editPostForm">
         {% csrf_token %}
 
-    {{ form.media }}
-
         {% if form.non_field_errors %}
-            <div class="alert alert-danger">{{ form.non_field_errors }}</div>
-        {% endif %}
-
-        <div class="mb-3">{{ form.title.label_tag }}{{ form.title }}{% for error in form.title.errors %}<div class="text-danger small mt-1">{{ error }}</div>{% endfor %}</div>
-        <div class="mb-3">{{ form.category.label_tag }}{{ form.category }}{% for error in form.category.errors %}<div class="text-danger small mt-1">{{ error }}</div>{% endfor %}</div>
-        <div class="mb-3">{{ form.content.label_tag }}{{ form.content }}{% for error in form.content.errors %}<div class="text-danger small mt-1">{{ error }}</div>{% endfor %}</div>
-        <div class="mb-3">{{ form.image.label_tag }}{{ form.image }}{% for error in form.image.errors %}<div class="text-danger small mt-1">{{ error }}</div>{% endfor %}</div>
-        <div class="mb-3">{{ form.video_url.label_tag }}{{ form.video_url }}{% for error in form.video_url.errors %}<div class="text-danger small mt-1">{{ error }}</div>{% endfor %}</div>
-        <div class="mb-3">{{ form.tags_input.label_tag }}{{ form.tags_input }}{% for error in form.tags_input.errors %}<div class="text-danger small mt-1">{{ error }}</div>{% endfor %}</div>
-        <div class="form-check mb-3">{{ form.allow_comments }} <label class="form-check-label" for="{{ form.allow_comments.id_for_label }}">{{ form.allow_comments.label }}</label>{% for error in form.allow_comments.errors %}<div class="text-danger small mt-1">{{ error }}</div>{% endfor %}</div>
-        <div class="mb-3">{{ form.publish_at.label_tag }}{{ form.publish_at }}<div class="small text-muted mt-1">Ako upišeš datum i vrijeme pa klikneš Objavi, post će biti objavljen tada. Ako ostaviš prazno, objavit će se odmah.</div>{% for error in form.publish_at.errors %}<div class="text-danger small mt-1">{{ error }}</div>{% endfor %}</div>
-        {% if post.image %}
-            <div class="mb-3">
-                <p>Trenutna slika:</p>
-                <img src="{{ post.image.url }}" 
-                    class="img-fluid rounded mb-2"
-                    style="max-height:300px; object-fit:contain;">
-                
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" name="delete_image" id="deleteImage">
-                    <label class="form-check-label" for="deleteImage">
-                        Izbriši sliku
-                    </label>
-                </div>
+            <div class="alert alert-danger m-3">
+                {{ form.non_field_errors }}
             </div>
         {% endif %}
-        <button type="submit" name="publish_post">Objavi</button>
-        <button type="submit" name="save_draft">Spremi kao draft</button>
-    </form>
-    <a href="/">Natrag</a>
 
-</body>
-</html>
+        <div class="edit-post-top">
+
+            <div class="edit-post-title-box mb-3">
+                <label class="form-label d-block">
+                    Naslov <span class="text-danger">*</span>
+                </label>
+                {{ form.title }}
+                {% for error in form.title.errors %}
+                    <div class="text-danger small mt-1">{{ error }}</div>
+                {% endfor %}
+            </div>
+
+            <div class="edit-post-content-box">
+                <label class="form-label d-block">
+                    Sadržaj <span class="text-danger">*</span>
+                </label>
+                {{ form.content }}
+                {% for error in form.content.errors %}
+                    <div class="text-danger small mt-1">{{ error }}</div>
+                {% endfor %}
+            </div>
+
+        </div>
+
+        <div class="edit-post-options">
+            <div class="edit-post-options-inner">
+
+                <div class="edit-post-panel">
+                    <div class="edit-post-panel-title">
+                        Postavke i dodaci
+                    </div>
+
+                    <div class="edit-post-field">
+                        <label class="form-label d-block">
+                            YouTube video link
+                        </label>
+                        {{ form.video_url }}
+                        <div class="small text-muted mt-1">
+                            Zalijepi obični YouTube link ako želiš dodati video.
+                        </div>
+                        {% for error in form.video_url.errors %}
+                            <div class="text-danger small mt-1">{{ error }}</div>
+                        {% endfor %}
+                    </div>
+
+                    <div class="edit-post-inline-row">
+                        <div class="edit-post-field">
+                            <label class="form-label d-block">
+                                Dodaj nove slike
+                            </label>
+
+                            <div id="editPostImagesWrapper">
+                                <input type="file" name="images" class="form-control" accept="image/*" multiple>
+                            </div>
+
+                            <button type="button" class="btn btn-outline-primary edit-post-image-add mt-2" id="addEditPostImageInput">
+                                + Dodaj još sliku
+                            </button>
+
+                            <div class="small text-muted mt-1">
+                                Možeš odabrati više slika odjednom ili dodati jednu po jednu.
+                            </div>
+                        </div>
+
+                        <div class="edit-post-field narrow">
+                            <label class="form-label d-block">
+                                Datum objave
+                            </label>
+                            {{ form.publish_at }}
+                            <div class="small text-muted mt-1">
+                                Prazno znači objava odmah.
+                            </div>
+                            {% for error in form.publish_at.errors %}
+                                <div class="text-danger small mt-1">{{ error }}</div>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    {% if post.image %}
+                        <div class="edit-post-field">
+                            <label class="form-label d-block">
+                                Stara glavna slika
+                            </label>
+                            <div class="edit-post-image-preview">
+                                <div class="edit-post-image-card">
+                                    <img src="{{ post.image.url }}" alt="">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="delete_image" id="deleteImage">
+                                        <label class="form-check-label" for="deleteImage">
+                                            Izbriši
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+
+                    <div class="edit-post-field">
+                        <label class="form-label d-block">
+                            Postojeće slike
+                        </label>
+
+                        <div class="edit-post-image-preview">
+                            {% for post_image in post.images.all %}
+                                <div class="edit-post-image-card">
+                                    <img src="{{ post_image.image.url }}" alt="">
+                                    <div class="form-check">
+                                        <input class="form-check-input"
+                                               type="checkbox"
+                                               name="delete_post_image_ids"
+                                               value="{{ post_image.id }}"
+                                               id="deletePostImage{{ post_image.id }}">
+                                        <label class="form-check-label" for="deletePostImage{{ post_image.id }}">
+                                            Izbriši
+                                        </label>
+                                    </div>
+                                </div>
+                            {% empty %}
+                                <div class="small text-muted">
+                                    Nema dodatnih slika.
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <div class="edit-post-field">
+                        <label class="form-label d-block">
+                            Tagovi
+                        </label>
+                        {{ form.tags_input }}
+                        <div class="small text-muted mt-1">
+                            Odvoji zarezom. Primjer: ljubav, film_serije, co2
+                        </div>
+                        {% for error in form.tags_input.errors %}
+                            <div class="text-danger small mt-1">{{ error }}</div>
+                        {% endfor %}
+                    </div>
+
+                    <div class="edit-post-comment-row">
+                        <div class="form-check">
+                            {{ form.allow_comments }}
+                            <label class="form-check-label" for="{{ form.allow_comments.id_for_label }}">
+                                {{ form.allow_comments.label }}
+                            </label>
+                            {% for error in form.allow_comments.errors %}
+                                <div class="text-danger small mt-1">{{ error }}</div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="edit-post-panel edit-post-categories">
+                    <div class="edit-post-panel-title">
+                        Kategorije <span class="text-danger">*</span>
+                    </div>
+
+                    <div class="edit-post-category-scroll">
+                        {% regroup categories by group as category_groups %}
+
+                        {% for group in category_groups %}
+                            <div class="edit-post-category-group">
+                                <div class="edit-post-category-title">
+                                    {{ group.list.0.get_group_display }}
+                                </div>
+
+                                <div class="edit-post-category-grid">
+                                    {% for category in group.list %}
+                                        <div class="form-check">
+                                            <input class="form-check-input"
+                                                type="radio"
+                                                name="category"
+                                                value="{{ category.id }}"
+                                                id="editCat{{ category.id }}"
+                                                {% if request.POST.category == category.id|stringformat:"s" %}
+                                                    checked
+                                                {% elif not request.POST.category and post.category and post.category.id == category.id %}
+                                                    checked
+                                                {% endif %}>
+
+                                            <label class="form-check-label" for="editCat{{ category.id }}">
+                                                {{ category.name }}
+                                            </label>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+
+                    {% for error in form.category.errors %}
+                        <div class="text-danger small mt-1">{{ error }}</div>
+                    {% endfor %}
+                </div>
+
+            </div>
+        </div>
+
+        <div class="edit-post-actions">
+            <button type="submit" name="publish_post" class="btn btn-primary">
+                Objavi
+            </button>
+
+            <button type="submit" name="save_draft" class="btn btn-secondary">
+                Spremi kao skicu
+            </button>
+        </div>
+
+    </form>
+</div>
+
+<script id="editPostExtraImagesScript">
+document.addEventListener("DOMContentLoaded", function () {
+    const wrapper = document.getElementById("editPostImagesWrapper");
+    const addButton = document.getElementById("addEditPostImageInput");
+
+    if (!wrapper || !addButton) {
+        return;
+    }
+
+    addButton.addEventListener("click", function () {
+        const currentInputs = wrapper.querySelectorAll('input[type="file"][name="images"]');
+
+        if (currentInputs.length >= 5) {
+            addButton.disabled = true;
+            return;
+        }
+
+        const input = document.createElement("input");
+        input.type = "file";
+        input.name = "images";
+        input.accept = "image/*";
+        input.className = "form-control mt-2";
+
+        wrapper.appendChild(input);
+
+        if (wrapper.querySelectorAll('input[type="file"][name="images"]').length >= 5) {
+            addButton.disabled = true;
+        }
+    });
+});
+</script>
+
+{% endblock %}

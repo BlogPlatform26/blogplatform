@@ -111,7 +111,7 @@ INSTALLED_APPS = [
     "storages",
 
     "blog",
-    "ckeditor",
+    "django_ckeditor_5",
 ]
 
 
@@ -231,35 +231,52 @@ AUTH_PASSWORD_VALIDATORS = [
 # CKEDITOR
 # ==========================================================
 
-CKEDITOR_CONFIGS = {
+CKEDITOR_5_CUSTOM_CSS = "blog/css/ckeditor5-custom.css"
+
+CKEDITOR_5_CONFIGS = {
     "minimal": {
-        "removePlugins": "exportpdf",
-        "toolbar": [
-            ["Font", "FontSize", "Format"],
-            ["Bold", "Italic", "Underline", "Strike"],
-            ["TextColor", "BGColor"],
-            ["Link", "Unlink"],
-            ["NumberedList", "BulletedList", "Outdent", "Indent"],
-            ["JustifyLeft", "JustifyCenter", "JustifyRight", "JustifyBlock"],
-            ["Blockquote"],
-            ["Undo", "Redo"],
-            ["RemoveFormat"],
-        ],
-        "font_defaultLabel": "Arial",
-        "font_names": (
-            "Arial/Arial, Helvetica, sans-serif;"
-            "Times New Roman/Times New Roman, Times, serif;"
-            "Verdana/Verdana, Geneva, sans-serif;"
-            "Georgia/Georgia, serif;"
-            "Courier New/Courier New, Courier, monospace"
-        ),
-        "fontSize_defaultLabel": "12",
-        "fontSize_sizes": "10/10px;12/12px;14/14px;16/16px;18/18px;20/20px;24/24px;28/28px;32/32px",
-        "contentsCss": ["/static/blog/css/ckeditor-content.css"],
-        "height": 250,
-        "width": "100%",
+        "toolbar": {
+            "items": [
+                "fontFamily", "fontSize", "|",
+                "heading", "|",
+                "bold", "italic", "underline", "strikethrough", "|",
+                "fontColor", "fontBackgroundColor", "|",
+                "link", "|",
+                "bulletedList", "numberedList", "|",
+                "outdent", "indent", "|",
+                "alignment", "|",
+                "blockQuote", "|",
+                "undo", "redo", "|",
+                "removeFormat",
+            ],
+            "shouldNotGroupWhenFull": True,
+        },
+        "fontFamily": {
+            "options": [
+                "Arial, Helvetica, sans-serif",
+                "Times New Roman, Times, serif",
+                "Verdana, Geneva, sans-serif",
+                "Georgia, serif",
+                "Courier New, Courier, monospace",
+            ],
+            "supportAllValues": True,
+        },
+        "fontSize": {
+            "options": [10, 12, 14, 16, 18, 20, 24, 28, 32],
+            "supportAllValues": True,
+        },
+        "heading": {
+            "options": [
+                {"model": "paragraph", "title": "Normalno", "class": "ck-heading_paragraph"},
+                {"model": "heading2", "view": "h2", "title": "Naslov 2", "class": "ck-heading_heading2"},
+                {"model": "heading3", "view": "h3", "title": "Naslov 3", "class": "ck-heading_heading3"},
+            ]
+        },
+        "language": "hr",
     }
 }
+
+CKEDITOR_5_FILE_UPLOAD_PERMISSION = "staff"
 
 # ==========================================================
 # INTERNATIONALIZATION

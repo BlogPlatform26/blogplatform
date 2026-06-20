@@ -1,0 +1,61 @@
+.ck-editor__editable,
+.ck-content {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.ck-editor__editable {
+    min-height: 250px;
+}
+
+/* BlogPlatform blockquote style */
+.ck-content blockquote {
+    margin: 1rem 0;
+    padding: 0.75rem 1rem;
+    border-left: 4px solid #8b5cf6;
+    background: rgba(139, 92, 246, 0.08);
+    color: #374151;
+    font-style: italic;
+    border-radius: 0 8px 8px 0;
+}
+
+.ck-content blockquote p {
+    margin-bottom: 0.4rem;
+}
+
+.ck-content blockquote p:last-child {
+    margin-bottom: 0;
+}
+
+/* BlogPlatform strong CKEditor blockquote style */
+.ck-content blockquote {
+    display: block !important;
+    margin: 1rem 0 !important;
+    padding: 0.8rem 1rem 0.8rem 1.1rem !important;
+    border-left: 5px solid #8b5cf6 !important;
+    background: #f3edff !important;
+    color: #2f2937 !important;
+    font-style: italic !important;
+    border-radius: 0 10px 10px 0 !important;
+    line-height: 1.55 !important;
+}
+
+.ck-content blockquote::before {
+    content: "“";
+    display: inline-block;
+    margin-right: 0.25rem;
+    color: #8b5cf6;
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1;
+    vertical-align: -0.15rem;
+}
+
+.ck-content blockquote p {
+    margin: 0 0 0.45rem 0 !important;
+}
+
+.ck-content blockquote p:last-child {
+    margin-bottom: 0 !important;
+}

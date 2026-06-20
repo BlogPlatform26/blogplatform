@@ -11,6 +11,79 @@
     {% csrf_token %}
 
     {{ form.media }}
+<script id="ckeditor5CompatibilityShim">
+(function () {
+    window.CKEDITOR = window.CKEDITOR || {};
+    window.CKEDITOR.instances = window.CKEDITOR.instances || {};
+
+    function installWrapper(id, editor) {
+        if (!editor) return;
+
+        window.CKEDITOR.instances[id] = {
+            status: "ready",
+            getData: function () {
+                return editor.getData ? editor.getData() : "";
+            },
+            setData: function (value) {
+                if (editor.setData) {
+                    editor.setData(value || "");
+                }
+            },
+            updateElement: function () {
+                var textarea = document.getElementById(id);
+                if (textarea && editor.getData) {
+                    textarea.value = editor.getData();
+                }
+            },
+            on: function (eventName, callback) {
+                if (eventName === "instanceReady") {
+                    callback();
+                    return;
+                }
+
+                if (eventName === "change" && editor.model && editor.model.document) {
+                    editor.model.document.on("change:data", callback);
+                }
+            }
+        };
+    }
+
+    function tryInstall(id) {
+        if (window.editors && window.editors[id]) {
+            installWrapper(id, window.editors[id]);
+            return true;
+        }
+
+        return false;
+    }
+
+    function watchEditor(id) {
+        var tries = 0;
+
+        if (tryInstall(id)) {
+            return;
+        }
+
+        if (window.ckeditorRegisterCallback) {
+            window.ckeditorRegisterCallback(id, function (editor) {
+                installWrapper(id, editor);
+            });
+        }
+
+        var timer = window.setInterval(function () {
+            tries += 1;
+
+            if (tryInstall(id) || tries > 100) {
+                window.clearInterval(timer);
+            }
+        }, 100);
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        watchEditor("id_content");
+    });
+})();
+</script>
 
     {% if form.non_field_errors %}
         <div class="alert alert-danger">{{ form.non_field_errors }}</div>

@@ -7,7 +7,7 @@ from django.utils import timezone
 
 from blog.forms import CommentForm, PostForm
 from blog.analytics import build_live_analytics_context, build_tracking_context
-from blog.models import Comment, Notification, Post, UserBox
+from blog.models import Category, Comment, Notification, Post, PostImage, UserBox
 from blog.services import (
     ANONYMOUS_COMMENT_USERNAME,
     apply_blog_preferences_to_profile,
@@ -226,13 +226,29 @@ def create_post(request):
 
 @login_required
 def edit_post(request, post_id):
-    post = get_object_or_404(Post, id=post_id, author=request.user)
+    post = get_object_or_404(
+        Post.objects.prefetch_related('images', 'tags'),
+        id=post_id,
+        author=request.user
+    )
+
+    categories = Category.objects.all().order_by('group', 'name', 'id')
+
     if request.method == 'POST':
         form = PostForm(request.POST, request.FILES, instance=post)
+
         if request.POST.get('delete_image') and post.image:
             post.image.delete(save=False)
             post.image = None
-            post.save()
+            post.save(update_fields=['image'])
+
+        for image_id in request.POST.getlist('delete_post_image_ids'):
+            post_image = post.images.filter(id=image_id).first()
+
+            if post_image:
+                post_image.image.delete(save=False)
+                post_image.delete()
+
         if form.is_valid():
             post = form.save(commit=False)
             post.allow_comments = form.cleaned_data.get('allow_comments', True)
@@ -246,11 +262,29 @@ def edit_post(request, post_id):
             else:
                 post.save()
                 apply_tags_to_post(post, form.cleaned_data.get('tags_list', []))
-                return redirect('post_detail', post_id=post.id)
+
+                for upload in request.FILES.getlist('images'):
+                    PostImage.objects.create(post=post, image=upload)
+
+                if post.status == 'published':
+                    return redirect('post_detail', post_id=post.id)
+
+                if post.status == 'scheduled':
+                    return redirect('/blog/settings/?tab=postovi&post_filter=scheduled')
+
+                return redirect('/blog/settings/?tab=postovi&post_filter=draft')
     else:
         form = PostForm(instance=post)
-    return render(request, 'blog/edit_post.html', {'form': form, 'post': post})
 
+    return render(
+        request,
+        'blog/edit_post.html',
+        {
+            'form': form,
+            'post': post,
+            'categories': categories,
+        }
+    )
 
 @login_required
 def delete_post(request, post_id):

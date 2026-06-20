@@ -177,6 +177,79 @@
 
                         {% if active_box_form %}
                             {{ active_box_form.media }}
+<script id="ckeditor5CompatibilityShim">
+(function () {
+    window.CKEDITOR = window.CKEDITOR || {};
+    window.CKEDITOR.instances = window.CKEDITOR.instances || {};
+
+    function installWrapper(id, editor) {
+        if (!editor) return;
+
+        window.CKEDITOR.instances[id] = {
+            status: "ready",
+            getData: function () {
+                return editor.getData ? editor.getData() : "";
+            },
+            setData: function (value) {
+                if (editor.setData) {
+                    editor.setData(value || "");
+                }
+            },
+            updateElement: function () {
+                var textarea = document.getElementById(id);
+                if (textarea && editor.getData) {
+                    textarea.value = editor.getData();
+                }
+            },
+            on: function (eventName, callback) {
+                if (eventName === "instanceReady") {
+                    callback();
+                    return;
+                }
+
+                if (eventName === "change" && editor.model && editor.model.document) {
+                    editor.model.document.on("change:data", callback);
+                }
+            }
+        };
+    }
+
+    function tryInstall(id) {
+        if (window.editors && window.editors[id]) {
+            installWrapper(id, window.editors[id]);
+            return true;
+        }
+
+        return false;
+    }
+
+    function watchEditor(id) {
+        var tries = 0;
+
+        if (tryInstall(id)) {
+            return;
+        }
+
+        if (window.ckeditorRegisterCallback) {
+            window.ckeditorRegisterCallback(id, function (editor) {
+                installWrapper(id, editor);
+            });
+        }
+
+        var timer = window.setInterval(function () {
+            tries += 1;
+
+            if (tryInstall(id) || tries > 100) {
+                window.clearInterval(timer);
+            }
+        }, 100);
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        watchEditor("id_content");
+    });
+})();
+</script>
                         {% endif %}
 
                         <div class="d-flex flex-wrap justify-content-between align-items-start gap-3 mb-3">

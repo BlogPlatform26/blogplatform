@@ -4,7 +4,7 @@ from django.utils import timezone
 from django.utils.html import strip_tags
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
-from ckeditor.widgets import CKEditorWidget
+from django_ckeditor_5.widgets import CKEditor5Widget
 from django.db.models import Case, When, Value, IntegerField
 
 import re
@@ -53,7 +53,7 @@ class PostForm(forms.ModelForm):
     )
 
     content = forms.CharField(
-        widget=CKEditorWidget(config_name="minimal")
+        widget=CKEditor5Widget(attrs={"class": "django_ckeditor_5"}, config_name="minimal")
     )
 
     allow_comments = forms.BooleanField(
@@ -433,7 +433,7 @@ class UserBoxForm(forms.ModelForm):
 
     content = forms.CharField(
         required=False,
-        widget=CKEditorWidget(config_name="minimal")
+        widget=CKEditor5Widget(attrs={"class": "django_ckeditor_5"}, config_name="minimal")
     )
 
     class Meta:

@@ -17,7 +17,9 @@ from blog.views import analytics_ping, blog_analytics_summary
 
 
 urlpatterns = [
-    path("blog/settings/export-posts/", export_my_posts, name="export_my_posts"),
+    
+    path("ckeditor5/", include("django_ckeditor_5.urls")),
+path("blog/settings/export-posts/", export_my_posts, name="export_my_posts"),
 
     path(
         "favicon.ico",
