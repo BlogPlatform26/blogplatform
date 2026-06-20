@@ -403,11 +403,13 @@
                         </div>
 
                         <div class="p-4 pt-0">
+                            <input type="hidden" name="next_url" id="newPostNextUrl" value="">
+
                             <button type="submit" name="publish_post" class="btn btn-primary">
                                 Objavi
                             </button>
 
-                            <button type="submit" name="save_draft" class="btn btn-secondary">
+                            <button type="submit" name="save_draft" class="btn btn-secondary" id="newPostSaveDraftButton">
                                 Spremi kao draft
                             </button>
 </div>
@@ -676,7 +678,80 @@
 </div>
 
             <!-- ✅ NOVO: KVIZ -->
-            {% elif post_filter == "quiz_new" %}
+            
+                <script id="newPostAutoDraftScript">
+                document.addEventListener("DOMContentLoaded", function () {
+                    const form = document.getElementById("newPostForm");
+                    const saveDraftButton = document.getElementById("newPostSaveDraftButton");
+                    const nextUrlInput = document.getElementById("newPostNextUrl");
+
+                    if (!form || !saveDraftButton || !nextUrlInput) {
+                        return;
+                    }
+
+                    let normalSubmit = false;
+
+                    form.addEventListener("submit", function () {
+                        normalSubmit = true;
+                    });
+
+                    function getContentHtml() {
+                        if (window.CKEDITOR && CKEDITOR.instances && CKEDITOR.instances.id_content) {
+                            CKEDITOR.instances.id_content.updateElement();
+                            return CKEDITOR.instances.id_content.getData() || "";
+                        }
+
+                        const textarea = document.getElementById("id_content");
+                        return textarea ? textarea.value : "";
+                    }
+
+                    function getPlainTextFromHtml(html) {
+                        const temp = document.createElement("div");
+                        temp.innerHTML = html || "";
+                        return (temp.textContent || temp.innerText || "").replace(/\s+/g, " ").trim();
+                    }
+
+                    function hasDraftContent() {
+                        const titleInput = document.getElementById("id_title");
+                        const title = titleInput ? titleInput.value.trim() : "";
+                        const contentText = getPlainTextFromHtml(getContentHtml());
+
+                        return title.length > 0 && contentText.length > 0;
+                    }
+
+                    document.addEventListener("click", function (event) {
+                        const link = event.target.closest("a[href]");
+
+                        if (!link || normalSubmit) {
+                            return;
+                        }
+
+                        if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) {
+                            return;
+                        }
+
+                        if (link.target && link.target !== "_self") {
+                            return;
+                        }
+
+                        const href = link.getAttribute("href");
+
+                        if (!href || href.startsWith("#") || href.startsWith("javascript:")) {
+                            return;
+                        }
+
+                        if (!hasDraftContent()) {
+                            return;
+                        }
+
+                        event.preventDefault();
+
+                        nextUrlInput.value = link.href;
+                        saveDraftButton.click();
+                    }, true);
+                });
+                </script>
+{% elif post_filter == "quiz_new" %}
 
                 <div class="card p-4 shadow-sm">
                     <form method="POST" enctype="multipart/form-data">

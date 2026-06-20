@@ -15,6 +15,7 @@ from django.db.models import Case, Count, IntegerField, Q, Sum, Value, When
 from django.http import HttpResponseForbidden, JsonResponse
 from django.shortcuts import get_object_or_404, redirect, render
 from django.utils import timezone
+from django.utils.http import url_has_allowed_host_and_scheme
 from django.urls import reverse
 from PIL import Image, UnidentifiedImageError
 
@@ -1333,6 +1334,20 @@ def blog_settings(request):
                     apply_tags_to_post(post, form.cleaned_data.get('tags_list', []))
                     for upload in request.FILES.getlist('images'):
                         PostImage.objects.create(post=post, image=upload)
+
+                    next_url = request.POST.get('next_url', '').strip()
+
+                    if (
+                        submit_action == 'draft'
+                        and next_url
+                        and url_has_allowed_host_and_scheme(
+                            next_url,
+                            allowed_hosts={request.get_host()},
+                            require_https=request.is_secure()
+                        )
+                    ):
+                        return redirect(next_url)
+
                     return redirect(f'/blog/settings/?tab=postovi&post_filter={post.status}')
             else:
                 messages.error(request, _first_form_error(form))
