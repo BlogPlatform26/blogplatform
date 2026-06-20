@@ -233,21 +233,33 @@ AUTH_PASSWORD_VALIDATORS = [
 
 CKEDITOR_CONFIGS = {
     "minimal": {
-
         "removePlugins": "exportpdf",
         "toolbar": [
-            ["Font", "FontSize"],
-            ["Bold", "Italic", "Underline"],
+            ["Font", "FontSize", "Format"],
+            ["Bold", "Italic", "Underline", "Strike"],
+            ["TextColor", "BGColor"],
             ["Link", "Unlink"],
-            ["NumberedList", "BulletedList"],
-            ["JustifyLeft", "JustifyCenter", "JustifyRight"],
+            ["NumberedList", "BulletedList", "Outdent", "Indent"],
+            ["JustifyLeft", "JustifyCenter", "JustifyRight", "JustifyBlock"],
+            ["Blockquote"],
+            ["Undo", "Redo"],
             ["RemoveFormat"],
         ],
+        "font_defaultLabel": "Arial",
+        "font_names": (
+            "Arial/Arial, Helvetica, sans-serif;"
+            "Times New Roman/Times New Roman, Times, serif;"
+            "Verdana/Verdana, Geneva, sans-serif;"
+            "Georgia/Georgia, serif;"
+            "Courier New/Courier New, Courier, monospace"
+        ),
+        "fontSize_defaultLabel": "12",
+        "fontSize_sizes": "10/10px;12/12px;14/14px;16/16px;18/18px;20/20px;24/24px;28/28px;32/32px",
+        "contentsCss": ["/static/blog/css/ckeditor-content.css"],
         "height": 250,
         "width": "100%",
     }
 }
-
 
 # ==========================================================
 # INTERNATIONALIZATION
