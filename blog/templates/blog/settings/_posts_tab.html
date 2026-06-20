@@ -678,7 +678,6 @@
 </div>
 
             <!-- ✅ NOVO: KVIZ -->
-            
                 <script id="newPostAutoDraftScript">
                 document.addEventListener("DOMContentLoaded", function () {
                     const form = document.getElementById("newPostForm");
@@ -689,20 +688,46 @@
                         return;
                     }
 
+                    const clearFlagKey = "blogplatform_new_post_autodraft_saved";
                     let normalSubmit = false;
+                    let autoDraftInProgress = false;
 
-                    form.addEventListener("submit", function () {
-                        normalSubmit = true;
-                    });
+                    function getEditorInstance() {
+                        if (window.CKEDITOR && CKEDITOR.instances && CKEDITOR.instances.id_content) {
+                            return CKEDITOR.instances.id_content;
+                        }
+                        return null;
+                    }
 
                     function getContentHtml() {
-                        if (window.CKEDITOR && CKEDITOR.instances && CKEDITOR.instances.id_content) {
-                            CKEDITOR.instances.id_content.updateElement();
-                            return CKEDITOR.instances.id_content.getData() || "";
+                        const editor = getEditorInstance();
+
+                        if (editor) {
+                            editor.updateElement();
+                            return editor.getData() || "";
                         }
 
                         const textarea = document.getElementById("id_content");
                         return textarea ? textarea.value : "";
+                    }
+
+                    function setContentHtml(value) {
+                        const editor = getEditorInstance();
+
+                        if (editor) {
+                            if (editor.status === "ready") {
+                                editor.setData(value || "");
+                            } else {
+                                editor.on("instanceReady", function () {
+                                    editor.setData(value || "");
+                                });
+                            }
+                        }
+
+                        const textarea = document.getElementById("id_content");
+                        if (textarea) {
+                            textarea.value = value || "";
+                        }
                     }
 
                     function getPlainTextFromHtml(html) {
@@ -719,10 +744,45 @@
                         return title.length > 0 && contentText.length > 0;
                     }
 
+                    function clearNewPostForm() {
+                        const titleInput = document.getElementById("id_title");
+                        const videoInput = document.getElementById("id_video_url");
+                        const tagsInput = document.getElementById("id_tags_input");
+                        const publishAtInput = document.getElementById("id_publish_at");
+                        const allowCommentsInput = document.getElementById("id_allow_comments");
+
+                        if (titleInput) titleInput.value = "";
+                        if (videoInput) videoInput.value = "";
+                        if (tagsInput) tagsInput.value = "";
+                        if (publishAtInput) publishAtInput.value = "";
+                        if (allowCommentsInput) allowCommentsInput.checked = true;
+
+                        form.querySelectorAll('input[type="file"]').forEach(function (input) {
+                            input.value = "";
+                        });
+
+                        setContentHtml("");
+                        nextUrlInput.value = "";
+                    }
+
+                    if (sessionStorage.getItem(clearFlagKey) === "1") {
+                        clearNewPostForm();
+
+                        setTimeout(function () {
+                            clearNewPostForm();
+                        }, 250);
+
+                        sessionStorage.removeItem(clearFlagKey);
+                    }
+
+                    form.addEventListener("submit", function () {
+                        normalSubmit = true;
+                    });
+
                     document.addEventListener("click", function (event) {
                         const link = event.target.closest("a[href]");
 
-                        if (!link || normalSubmit) {
+                        if (!link || normalSubmit || autoDraftInProgress) {
                             return;
                         }
 
@@ -746,7 +806,11 @@
 
                         event.preventDefault();
 
+                        autoDraftInProgress = true;
+                        sessionStorage.setItem(clearFlagKey, "1");
+
                         nextUrlInput.value = link.href;
+                        saveDraftButton.disabled = true;
                         saveDraftButton.click();
                     }, true);
                 });
