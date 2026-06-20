@@ -262,422 +262,414 @@
                     </form>
                 </div>
 
-            <!-- NOVI POST -->
+                        <!-- NOVI POST -->
             {% elif post_filter == "new" %}
 
-                <div class="shadow-sm border rounded-start-3" style="border-right:0;">
-                    <form method="POST" enctype="multipart/form-data" id="newPostForm" data-local-draft-key="blogplatform_new_post_draft_{{ request.user.id }}">
+                <style id="newPostRealLayoutCss">
+    .new-post-card {
+        max-width: 100%;
+        background: #ffffff;
+        border: 1px solid #dee2e6;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+    }
+
+    .new-post-top {
+        padding: 14px 18px 12px 18px;
+    }
+
+    .new-post-title-box {
+        max-width: 520px;
+    }
+
+    .new-post-title-box .form-control {
+        height: 36px;
+        min-height: 36px;
+        font-size: 0.9rem;
+    }
+
+    .new-post-content-box {
+        max-width: 100%;
+    }
+
+    #cke_id_content,
+    .django-ckeditor-widget {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    .new-post-options {
+        border-top: 1px solid #e9ecef;
+        padding: 12px 18px 14px 18px;
+        background: #fbfbfc;
+    }
+
+    .new-post-options-inner {
+        display: grid;
+        grid-template-columns: minmax(380px, 560px) minmax(300px, 380px);
+        gap: 16px;
+        align-items: start;
+    }
+
+    .new-post-panel {
+        background: #ffffff;
+        border: 1px solid #e3e7ec;
+        border-radius: 10px;
+        padding: 10px 12px;
+    }
+
+    .new-post-panel-title {
+        font-size: 0.88rem;
+        font-weight: 700;
+        margin-bottom: 9px;
+    }
+
+    .new-post-card .form-label,
+    .new-post-card label {
+        font-size: 0.8rem;
+        font-weight: 600;
+        margin-bottom: 4px;
+    }
+
+    .new-post-card .form-control,
+    .new-post-card .form-select {
+        min-height: 30px;
+        height: 30px;
+        padding: 3px 8px;
+        font-size: 0.8rem;
+        border-radius: 6px;
+    }
+
+    .new-post-card textarea.form-control {
+        height: auto;
+    }
+
+    .new-post-card input[type="file"].form-control {
+        height: 30px;
+        padding: 2px 6px;
+        max-width: 390px;
+        font-size: 0.8rem;
+    }
+
+    .new-post-card .small,
+    .new-post-card .form-text,
+    .new-post-card .text-muted {
+        font-size: 0.7rem;
+        line-height: 1.2;
+    }
+
+    .new-post-field {
+        margin-bottom: 8px;
+        max-width: 500px;
+    }
+
+    .new-post-field.narrow {
+        max-width: 300px;
+    }
+
+    .new-post-inline-row {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 6px;
+        align-items: start;
+    }
+
+    .new-post-comment-row {
+        margin-top: 2px;
+    }
+
+    .new-post-comment-row .form-check {
+        margin-bottom: 0;
+    }
+
+    .new-post-comment-row .form-check-input {
+        width: 0.9rem;
+        height: 0.9rem;
+        margin-top: 0.18rem;
+    }
+
+    .new-post-comment-row .form-check-label {
+        font-size: 0.82rem;
+    }
+
+    .new-post-categories {
+        max-width: 380px;
+    }
+
+    .new-post-category-scroll {
+        max-height: 335px;
+        overflow-y: auto;
+        padding-right: 3px;
+    }
+
+    .new-post-category-group {
+        margin-bottom: 6px;
+    }
+
+    .new-post-category-title {
+        font-size: 0.78rem;
+        font-weight: 700;
+        margin-bottom: 3px;
+    }
+
+    .new-post-category-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 6px;
+        row-gap: 0;
+    }
+
+    .new-post-category-grid .form-check {
+        min-height: 20px;
+        margin-bottom: 2px;
+        padding-left: 0;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .new-post-category-grid .form-check-input {
+        width: 0.78rem;
+        height: 0.78rem;
+        margin: 0;
+        flex: 0 0 auto;
+    }
+
+    .new-post-category-grid .form-check-label {
+        font-size: 0.74rem;
+        font-weight: 500;
+        line-height: 1.1;
+        margin: 0;
+        cursor: pointer;
+    }
+
+    .new-post-actions {
+        border-top: 1px solid #e9ecef;
+        padding: 10px 18px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        background: #ffffff;
+        border-radius: 0 0 12px 12px;
+    }
+
+    .new-post-actions .btn {
+        padding: 5px 12px;
+        font-size: 0.84rem;
+    }
+
+    .new-post-image-add {
+        padding: 3px 9px;
+        font-size: 0.76rem;
+    }
+
+    @media (max-width: 992px) {
+        .new-post-options-inner {
+            grid-template-columns: 1fr;
+        }
+
+        .new-post-categories {
+            max-width: 100%;
+        }
+
+        .new-post-category-scroll {
+            max-height: none;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .new-post-card,
+        .new-post-title-box,
+        .new-post-content-box,
+        #cke_id_content,
+        .django-ckeditor-widget {
+            max-width: 100% !important;
+        }
+    }
+</style>
+
+                <div class="new-post-card">
+                    <form method="POST" enctype="multipart/form-data" id="newPostForm" data-local-draft-key="blogplatform_new_post_draft_{{ request.user.id }}" autocomplete="off">
                         {% csrf_token %}
-                        <input type="hidden" name="autosave_draft_id" id="autosaveDraftId" value="">
 
+                        <input type="hidden" name="autosave_draft_id" id="autosavedraftId" value="">
+                        <input type="hidden" name="next_url" id="newPostNextUrl" value="">
 
-                        <div class="row g-0">
+                        <div class="new-post-top">
 
-                            <!-- LIJEVO: ograniči širinu da izgleda uredno -->
-                            <div class="col-md-8">
-                                <div class="ps-4 pe-4 py-3 w-100">
+                            <div class="new-post-title-box mb-3">
+                                <label class="form-label d-block">
+                                    Naslov <span class="text-danger">*</span>
+                                </label>
+                                {{ post_form.title }}
+                            </div>
 
-                                    <div class="mb-3">
-                                        <label class="form-label d-block">Naslov <span class="text-danger">*</span></label>
-                                        {{ post_form.title }}
+                            <div class="new-post-content-box">
+                                <label class="form-label d-block">
+                                    Sadržaj <span class="text-danger">*</span>
+                                </label>
+                                {{ post_form.content }}
+                            </div>
+
+                        </div>
+
+                        <div class="new-post-options">
+                            <div class="new-post-options-inner">
+
+                                <div class="new-post-panel">
+                                    <div class="new-post-panel-title">
+                                        Postavke i dodaci
                                     </div>
 
-                                    <div class="mb-3">
-                                        <label class="form-label d-block">Sadržaj<span class="text-danger">*</span></label>
-                                        <div>
-                                            {{ post_form.content }}
-                                        </div>
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label class="form-label d-block">YouTube video link</label>
+                                    <div class="new-post-field">
+                                        <label class="form-label d-block">
+                                            YouTube video link
+                                        </label>
                                         {{ post_form.video_url }}
                                         <div class="small text-muted mt-1">
-                                            Zalijepi obični YouTube link. Primjer: https://www.youtube.com/watch?v=...
+                                            Zalijepi obični YouTube link ako želiš dodati video.
                                         </div>
                                     </div>
 
-                                    <div class="mb-3 post-image-upload-box">
-                                        <label class="form-label d-block">Slike</label>
+                                    <div class="new-post-inline-row">
+                                        <div class="new-post-field">
+                                            <label class="form-label d-block">
+                                                Slike
+                                            </label>
 
-                                        <div class="post-image-inputs" data-max-images="5">
-                                            <div class="post-image-input-row mb-2">
-                                                <input type="file"
-                                                       name="images"
-                                                       class="form-control post-image-input"
-                                                       accept="image/*"
-                                                       multiple>
+                                            <div id="newPostImagesWrapper">
+                                                <input type="file" name="images" class="form-control" accept="image/*" multiple>
+                                            </div>
+
+                                            <button type="button" class="btn btn-outline-primary new-post-image-add mt-2" id="addNewPostImageInput">
+                                                + Dodaj još sliku
+                                            </button>
+
+                                            <div class="small text-muted mt-1">
+                                                Možeš odabrati više slika odjednom ili dodati jednu po jednu. Maksimalno 5 slika.
                                             </div>
                                         </div>
 
-                                        <button type="button"
-                                                class="btn btn-sm btn-outline-primary mt-1 add-post-image-input">
-                                            + Dodaj još sliku
-                                        </button>
-
-                                        <div class="small text-muted mt-1">
-                                            Možeš odabrati više slika odjednom ili dodavati jednu po jednu. Maksimalno 5 slika.
-                                        </div>
-
-                                        <div class="small text-danger mt-1 d-none post-image-limit-message">
-                                            Možeš dodati najviše 5 slika.
+                                        <div class="new-post-field narrow">
+                                            <label class="form-label d-block">
+                                                Datum objave
+                                            </label>
+                                            {{ post_form.publish_at }}
+                                            <div class="small text-muted mt-1">
+                                                Prazno znači objava odmah.
+                                            </div>
+                                            {% for error in post_form.publish_at.errors %}
+                                                <div class="text-danger small mt-1">{{ error }}</div>
+                                            {% endfor %}
                                         </div>
                                     </div>
 
+                                    <div class="new-post-field">
+                                        <label class="form-label d-block">
+                                            Tagovi
+                                        </label>
+                                        {{ post_form.tags_input }}
+                                        <div class="small text-muted mt-1">
+                                            Odvoji zarezom. Primjer: ljubav, film_serije, co2
+                                        </div>
+                                    </div>
+
+                                    <div class="new-post-comment-row">
+                                        <div class="form-check">
+                                            {{ post_form.allow_comments }}
+                                            <label class="form-check-label" for="{{ post_form.allow_comments.id_for_label }}">
+                                                {{ post_form.allow_comments.label }}
+                                            </label>
+                                            {% for error in post_form.allow_comments.errors %}
+                                                <div class="text-danger small mt-1">{{ error }}</div>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <!-- DESNO: ide do kraja -->
-                            <div class="col-md-4 pe-0 ps-3 py-3">
+                                <div class="new-post-panel new-post-categories">
+                                    <div class="new-post-panel-title">
+                                        Kategorije <span class="text-danger">*</span>
+                                    </div>
 
-                                <div class="card">
-                                    <div class="card-body category-card">
-                                        <label class="form-label d-block">Kategorije<span class="text-danger">*</span></label>
-
+                                    <div class="new-post-category-scroll">
                                         {% regroup categories by group as category_groups %}
 
                                         {% for group in category_groups %}
-                                            <div class="mb-3">
-                                                <strong class="d-block mb-2">
-                                                    <div class="category-group-title">
-                                                        {{ group.list.0.get_group_display }}
-                                                    </div>
-                                                </strong>
+                                            <div class="new-post-category-group">
+                                                <div class="new-post-category-title">
+                                                    {{ group.list.0.get_group_display }}
+                                                </div>
 
-                                                <div class="row">
+                                                <div class="new-post-category-grid">
                                                     {% for category in group.list %}
-                                                        <div class="col-6">
-                                                            <div class="form-check category-option">
-                                                                <input class="form-check-input"
-                                                                    type="radio"
-                                                                    name="category"
-                                                                    value="{{ category.id }}"
-                                                                    id="cat{{ category.id }}"
-                                                                    {% if request.POST.category == category.id|stringformat:"s" %}checked{% endif %}>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input"
+                                                                type="radio"
+                                                                name="category"
+                                                                value="{{ category.id }}"
+                                                                id="cat{{ category.id }}"
+                                                                {% if request.POST.category == category.id|stringformat:"s" %}checked{% endif %}>
 
-                                                                <label class="form-check-label" for="cat{{ category.id }}">
-                                                                    {{ category.name }}
-                                                                </label>
-                                                            </div>
+                                                            <label class="form-check-label" for="cat{{ category.id }}">
+                                                                {{ category.name }}
+                                                            </label>
                                                         </div>
                                                     {% endfor %}
                                                 </div>
                                             </div>
                                         {% endfor %}
-
-                                    </div>
-                                </div>
-
-                                <div class="mb-3 mt-3 pe-4">
-                                    <label class="form-label">Tagovi</label>
-                                    {{ post_form.tags_input }}
-                                    <div class="small text-muted mt-1">
-                                        Odvoji zarezom. Bez razmaka. Dopušteno: slova, brojevi i _. Primjer: ljubav, film_serije, co2
                                     </div>
                                 </div>
 
                             </div>
                         </div>
 
-                        <div class="px-4 pt-2 pb-3">
-                            <div class="form-check mb-3">
-                                {{ post_form.allow_comments }}
-                                <label class="form-check-label" for="{{ post_form.allow_comments.id_for_label }}">
-                                    {{ post_form.allow_comments.label }}
-                                </label>
-                                {% for error in post_form.allow_comments.errors %}
-                                    <div class="text-danger small mt-1">{{ error }}</div>
-                                {% endfor %}
-                            </div>
-
-                            <div class="mb-3" style="max-width: 320px;">
-                                {{ post_form.publish_at.label_tag }}
-                                {{ post_form.publish_at }}
-                                <div class="small text-muted mt-1">
-                                    Ako upišeš datum i vrijeme pa klikneš Objavi, post će biti objavljen tada. Ako ostaviš prazno, objavit će se odmah.
-                                </div>
-                                {% for error in post_form.publish_at.errors %}
-                                    <div class="text-danger small mt-1">{{ error }}</div>
-                                {% endfor %}
-                            </div>
-                        </div>
-
-                        <div class="p-4 pt-0">
-                            <input type="hidden" name="next_url" id="newPostNextUrl" value="">
-
+                        <div class="new-post-actions">
                             <button type="submit" name="publish_post" class="btn btn-primary">
                                 Objavi
                             </button>
 
-                            <button type="submit" name="save_draft" class="btn btn-secondary" id="newPostSaveDraftButton">
+                            <button type="submit" name="save_draft" id="newPostSaveDraftButton" class="btn btn-secondary">
                                 Spremi kao draft
                             </button>
-</div>
+                        </div>
 
                     </form>
+                </div>
 
-                    <script id="new-post-recovery-script">
-                        document.addEventListener("DOMContentLoaded", function () {
-                            const form = document.getElementById("newPostForm");
+                <script id="newPostExtraImagesScript">
+                document.addEventListener("DOMContentLoaded", function () {
+                    const wrapper = document.getElementById("newPostImagesWrapper");
+                    const addButton = document.getElementById("addNewPostImageInput");
 
-                            if (!form) {
-                                return;
-                            }
+                    if (!wrapper || !addButton) {
+                        return;
+                    }
 
-                            const localKey = form.dataset.localDraftKey || "blogplatform_new_post_draft";
-                            const draftSaveUrl = "";
-                            const draftInput = document.getElementById("autosaveDraftId");
-                            const csrfInput = form.querySelector('input[name="csrfmiddlewaretoken"]');
-                            let submitStarted = false;
-                            let ckeditorReady = false;
+                    addButton.addEventListener("click", function () {
+                        const currentInputs = wrapper.querySelectorAll('input[type="file"][name="images"]');
 
-                            function updateCkeditorTextarea() {
-                                if (window.CKEDITOR && CKEDITOR.instances) {
-                                    Object.keys(CKEDITOR.instances).forEach(function (name) {
-                                        CKEDITOR.instances[name].updateElement();
-                                    });
-                                }
-                            }
+                        if (currentInputs.length >= 5) {
+                            addButton.disabled = true;
+                            return;
+                        }
 
-                            function setCkeditorData(value) {
-                                if (window.CKEDITOR && CKEDITOR.instances) {
-                                    Object.keys(CKEDITOR.instances).forEach(function (name) {
-                                        CKEDITOR.instances[name].setData(value || "");
-                                    });
-                                }
-                            }
+                        const input = document.createElement("input");
+                        input.type = "file";
+                        input.name = "images";
+                        input.accept = "image/*";
+                        input.className = "form-control mt-2";
 
-                            function field(selector) {
-                                return form.querySelector(selector);
-                            }
+                        wrapper.appendChild(input);
 
-                            function getValue(selector) {
-                                const input = field(selector);
-                                return input ? input.value : "";
-                            }
+                        if (wrapper.querySelectorAll('input[type="file"][name="images"]').length >= 5) {
+                            addButton.disabled = true;
+                        }
+                    });
+                });
+                </script>
 
-                            function setValue(selector, value) {
-                                const input = field(selector);
-
-                                if (input) {
-                                    input.value = value || "";
-                                }
-                            }
-
-                            function getSelectedCategory() {
-                                const checked = form.querySelector('input[name="category"]:checked');
-                                return checked ? checked.value : "";
-                            }
-
-                            function setSelectedCategory(value) {
-                                if (!value) {
-                                    return;
-                                }
-
-                                const radio = form.querySelector('input[name="category"][value="' + CSS.escape(value) + '"]');
-
-                                if (radio) {
-                                    radio.checked = true;
-                                }
-                            }
-
-                            function getAllowComments() {
-                                const input = field('input[name="allow_comments"]');
-                                return input ? input.checked : true;
-                            }
-
-                            function setAllowComments(value) {
-                                const input = field('input[name="allow_comments"]');
-
-                                if (input) {
-                                    input.checked = value !== false;
-                                }
-                            }
-
-                            function collectDraft() {
-                                updateCkeditorTextarea();
-
-                                return {
-                                    title: getValue('input[name="title"]'),
-                                    content: getValue('textarea[name="content"]'),
-                                    video_url: getValue('input[name="video_url"]'),
-                                    category: getSelectedCategory(),
-                                    tags_input: getValue('input[name="tags_input"]'),
-                                    publish_at: getValue('input[name="publish_at"]'),
-                                    allow_comments: getAllowComments(),
-                                    autosave_draft_id: draftInput ? draftInput.value : "",
-                                    saved_locally_at: Date.now()
-                                };
-                            }
-
-                            function hasContent(draft) {
-                                const contentText = String(draft.content || "")
-                                    .replace(/<[^>]*>/g, "")
-                                    .replace(/&nbsp;/g, " ")
-                                    .trim();
-
-                                return Boolean(
-                                    String(draft.title || "").trim() ||
-                                    contentText ||
-                                    String(draft.video_url || "").trim() ||
-                                    String(draft.category || "").trim() ||
-                                    String(draft.tags_input || "").trim() ||
-                                    String(draft.publish_at || "").trim()
-                                );
-                            }
-
-                            function saveLocalDraft() {
-                                const draft = collectDraft();
-
-                                if (!hasContent(draft)) {
-                                    localStorage.removeItem(localKey);
-                                    return;
-                                }
-
-                                localStorage.setItem(localKey, JSON.stringify(draft));
-                            }
-
-                            function restoreLocalDraft() {
-                                const raw = localStorage.getItem(localKey);
-
-                                if (!raw) {
-                                    return;
-                                }
-
-                                let draft;
-
-                                try {
-                                    draft = JSON.parse(raw);
-                                } catch (error) {
-                                    localStorage.removeItem(localKey);
-                                    return;
-                                }
-
-                                if (!hasContent(draft)) {
-                                    localStorage.removeItem(localKey);
-                                    return;
-                                }
-
-                                setValue('input[name="title"]', draft.title);
-                                setValue('textarea[name="content"]', draft.content);
-                                setValue('input[name="video_url"]', draft.video_url);
-                                setValue('input[name="tags_input"]', draft.tags_input);
-                                setValue('input[name="publish_at"]', draft.publish_at);
-                                setSelectedCategory(draft.category);
-                                setAllowComments(draft.allow_comments);
-
-                                if (draftInput && draft.autosave_draft_id) {
-                                    draftInput.value = draft.autosave_draft_id;
-                                }
-
-                                setCkeditorData(draft.content);
-                            }
-
-                            function buildServerFormData() {
-                                const draft = collectDraft();
-
-                                if (!hasContent(draft)) {
-                                    return null;
-                                }
-
-                                const data = new FormData();
-                                data.append("csrfmiddlewaretoken", csrfInput ? csrfInput.value : "");
-                                data.append("autosave_draft_id", draft.autosave_draft_id || "");
-                                data.append("title", draft.title || "");
-                                data.append("content", draft.content || "");
-                                data.append("video_url", draft.video_url || "");
-                                data.append("category", draft.category || "");
-                                data.append("tags_input", draft.tags_input || "");
-                                data.append("publish_at", draft.publish_at || "");
-                                data.append("allow_comments", draft.allow_comments ? "on" : "");
-
-                                return data;
-                            }
-
-                            function saveToServerOnLeave() {
-                                if (!draftSaveUrl || submitStarted || !navigator.onLine) {
-                                    return;
-                                }
-
-                                const data = buildServerFormData();
-
-                                if (!data) {
-                                    return;
-                                }
-
-                                if (navigator.sendBeacon) {
-                                    navigator.sendBeacon(draftSaveUrl, data);
-                                    return;
-                                }
-
-                                fetch(draftSaveUrl, {
-                                    method: "POST",
-                                    body: data,
-                                    credentials: "same-origin",
-                                    keepalive: true,
-                                    headers: {
-                                        "X-Requested-With": "XMLHttpRequest"
-                                    }
-                                }).catch(function () {});
-                            }
-
-                            function attachCkeditorEvents() {
-                                if (!window.CKEDITOR || !CKEDITOR.instances) {
-                                    return false;
-                                }
-
-                                Object.keys(CKEDITOR.instances).forEach(function (name) {
-                                    CKEDITOR.instances[name].on("change", saveLocalDraft);
-                                    CKEDITOR.instances[name].on("blur", saveLocalDraft);
-                                });
-
-                                ckeditorReady = true;
-                                return true;
-                            }
-
-                            restoreLocalDraft();
-
-                            if (!attachCkeditorEvents()) {
-                                let tries = 0;
-                                const interval = setInterval(function () {
-                                    tries++;
-
-                                    if (attachCkeditorEvents() || tries >= 20) {
-                                        clearInterval(interval);
-                                    }
-                                }, 300);
-                            }
-
-                            form.addEventListener("input", saveLocalDraft);
-                            form.addEventListener("change", saveLocalDraft);
-
-                            form.addEventListener("submit", function () {
-                                submitStarted = true;
-                                updateCkeditorTextarea();
-                                localStorage.removeItem(localKey);
-                            });
-
-                            window.addEventListener("pagehide", function () {
-                                saveLocalDraft();
-                                saveToServerOnLeave();
-                            });
-
-                            document.addEventListener("visibilitychange", function () {
-                                if (document.visibilityState === "hidden") {
-                                    saveLocalDraft();
-                                    saveToServerOnLeave();
-                                }
-                            });
-
-                            window.addEventListener("online", function () {
-                                saveLocalDraft();
-                            });
-                        });
-                    </script>
-
-</div>
-
-            
                 <script id="newPostAutoDraftScript">
                 document.addEventListener("DOMContentLoaded", function () {
                     const form = document.getElementById("newPostForm");
