@@ -50,33 +50,35 @@
                     {% endfor %}
                 {% endif %}
 
-                {% if form.non_field_errors %}
-                    {% for error in form.non_field_errors %}
-                        <div class="alert alert-danger">{{ error }}</div>
-                    {% endfor %}
-                {% endif %}
-
                 <form method="POST">
                     {% csrf_token %}
 
                     <div class="mb-4">
-                        <label class="form-label fw-semibold" for="{{ form.username.id_for_label }}">
+                        <label class="form-label fw-semibold" for="id_username">
                             Korisničko ime ili email adresa
                         </label>
-                        {{ form.username }}
-                        {% for error in form.username.errors %}
-                            <div class="text-danger small mt-1">{{ error }}</div>
-                        {% endfor %}
+                        <input
+                            type="text"
+                            name="username"
+                            id="id_username"
+                            class="form-control"
+                            autocomplete="username"
+                            required
+                        >
                     </div>
 
                     <div class="mb-4">
-                        <label class="form-label fw-semibold" for="{{ form.password.id_for_label }}">
+                        <label class="form-label fw-semibold" for="id_password">
                             Lozinka
                         </label>
-                        {{ form.password }}
-                        {% for error in form.password.errors %}
-                            <div class="text-danger small mt-1">{{ error }}</div>
-                        {% endfor %}
+                        <input
+                            type="password"
+                            name="password"
+                            id="id_password"
+                            class="form-control password-toggle-input"
+                            autocomplete="current-password"
+                            required
+                        >
                     </div>
 
                     <button type="submit" class="btn btn-primary w-100 mb-4">
