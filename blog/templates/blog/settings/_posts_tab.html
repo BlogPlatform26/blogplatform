@@ -2276,3 +2276,33 @@
     }, true);
 })();
 </script>
+
+<script id="blogplatformDisableEditorSpellcheckScript">
+(function () {
+    function disableSpellcheck() {
+        document.querySelectorAll(".ck-editor__editable").forEach(function (editor) {
+            editor.setAttribute("spellcheck", "false");
+            editor.setAttribute("autocomplete", "off");
+            editor.setAttribute("autocorrect", "off");
+            editor.setAttribute("autocapitalize", "off");
+        });
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        disableSpellcheck();
+
+        var tries = 0;
+        var timer = setInterval(function () {
+            disableSpellcheck();
+            tries += 1;
+            if (tries > 40) {
+                clearInterval(timer);
+            }
+        }, 250);
+    });
+
+    document.addEventListener("click", function () {
+        setTimeout(disableSpellcheck, 100);
+    }, true);
+})();
+</script>
