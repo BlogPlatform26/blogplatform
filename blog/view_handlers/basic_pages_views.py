@@ -61,3 +61,9 @@ def robots_txt(request):
     ]
 
     return HttpResponse("\n".join(lines), content_type="text/plain")
+
+def google_site_verification(request):
+    return HttpResponse(
+        "google-site-verification: google971f18637c646cba.html",
+        content_type="text/plain"
+    )
