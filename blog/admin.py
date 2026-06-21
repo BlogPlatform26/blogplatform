@@ -1,3 +1,10 @@
+from blog.ambient_music_importer import import_ambient_music_from_path
+from django.urls import path
+from django.template.response import TemplateResponse
+from django.shortcuts import redirect
+from django.contrib import messages
+from pathlib import Path
+import tempfile
 from datetime import timedelta
 
 from django.contrib import admin, messages
@@ -463,6 +470,8 @@ admin.site.get_app_list = _get_app_list_with_post_export_v2
 
 @admin.register(AmbientMusicTrack)
 class AmbientMusicTrackAdmin(admin.ModelAdmin):
+    change_list_template = "admin/blog/ambientmusictrack/change_list.html"
+
     list_display = ("title", "category", "artist", "is_active", "order", "created_at")
     list_filter = ("category", "is_active", "source_name")
     search_fields = ("title", "track_id", "artist", "description")
@@ -500,6 +509,62 @@ class AmbientMusicTrackAdmin(admin.ModelAdmin):
         }),
     )
 
+    def get_urls(self):
+        urls = super().get_urls()
+        custom_urls = [
+            path(
+                "import-zip/",
+                self.admin_site.admin_view(self.import_zip_view),
+                name="blog_ambientmusictrack_import_zip",
+            ),
+        ]
+        return custom_urls + urls
+
+    def import_zip_view(self, request):
+        context = {
+            **self.admin_site.each_context(request),
+            "title": "Import glazbe iz ZIP-a",
+            "opts": self.model._meta,
+        }
+
+        if request.method == "POST":
+            upload = request.FILES.get("zip_file")
+            replace = request.POST.get("replace") == "1"
+
+            if not upload:
+                messages.error(request, "Odaberi ZIP datoteku.")
+                return TemplateResponse(request, "admin/blog/ambientmusictrack/import_zip.html", context)
+
+            if not upload.name.lower().endswith(".zip"):
+                messages.error(request, "Datoteka mora biti .zip.")
+                return TemplateResponse(request, "admin/blog/ambientmusictrack/import_zip.html", context)
+
+            with tempfile.TemporaryDirectory(prefix="ambient_music_admin_") as temp_dir:
+                zip_path = Path(temp_dir) / upload.name
+
+                with zip_path.open("wb") as destination:
+                    for chunk in upload.chunks():
+                        destination.write(chunk)
+
+                result = import_ambient_music_from_path(
+                    zip_path,
+                    replace=replace,
+                    is_active=True,
+                )
+
+            messages.success(
+                request,
+                (
+                    "Import glazbe je zavrsen. "
+                    f"Dodano: {result['created']}, "
+                    f"azurirano: {result['updated']}, "
+                    f"preskoceno: {result['skipped']}."
+                ),
+            )
+            return redirect("..")
+
+        return TemplateResponse(request, "admin/blog/ambientmusictrack/import_zip.html", context)
+
     @admin.display(description="Preview")
     def audio_preview(self, obj):
         if obj and obj.audio_file:
@@ -510,4 +575,3 @@ class AmbientMusicTrackAdmin(admin.ModelAdmin):
                 obj.audio_file.url,
             )
         return "-"
-

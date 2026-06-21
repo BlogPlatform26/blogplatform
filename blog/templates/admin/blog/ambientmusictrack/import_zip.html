@@ -1,0 +1,34 @@
+{% extends "admin/base_site.html" %}
+
+{% block content %}
+<div id="content-main">
+    <form method="post" enctype="multipart/form-data" style="max-width: 720px;">
+        {% csrf_token %}
+
+        <fieldset class="module aligned">
+            <h2>Import glazbe iz ZIP-a</h2>
+
+            <div class="form-row">
+                <label for="id_zip_file"><strong>ZIP datoteka:</strong></label>
+                <input type="file" name="zip_file" id="id_zip_file" accept=".zip" required>
+                <p class="help">
+                    Odaberi glazba.zip. Sve audio datoteke iz ZIP-a spremit će se kroz storage.
+                    Na produkciji to znači DigitalOcean Spaces ako su media datoteke spojene na Spaces.
+                </p>
+            </div>
+
+            <div class="form-row">
+                <label>
+                    <input type="checkbox" name="replace" value="1">
+                    Zamijeni postojeće pjesme s istim Track ID-em
+                </label>
+            </div>
+        </fieldset>
+
+        <div class="submit-row">
+            <input type="submit" value="Importiraj ZIP" class="default">
+            <a href=".." class="button cancel-link">Odustani</a>
+        </div>
+    </form>
+</div>
+{% endblock %}

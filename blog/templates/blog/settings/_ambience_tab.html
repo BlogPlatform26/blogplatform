@@ -19,6 +19,12 @@
                 <div class="ambience-field-block">
                     <label for="cursorStyleSelect" class="form-label fw-semibold mb-2">Odaberi kursor</label>
                     <select name="cursor_style" id="cursorStyleSelect" class="form-select ambience-select">
+                        <option value="default"
+                                data-description="Standardni obični kursor bez posebnog stila."
+                                data-preview-target="cursorPreviewMarkup-default"
+                                {% if selected_cursor_style == "default" %}selected{% endif %}>
+                            Obican kursor
+                        </option>
                         {% for cursor in cursor_choices %}
                             <option value="{{ cursor.value }}"
                                     data-description="{{ cursor.description }}"
@@ -226,6 +232,7 @@
         </div>
 
         <div class="d-none">
+            <div id="cursorPreviewMarkup-default">↖</div>
             {% for cursor in cursor_choices %}
                 <div id="cursorPreviewMarkup-{{ cursor.value }}">{{ cursor.preview_html|safe }}</div>
             {% endfor %}
