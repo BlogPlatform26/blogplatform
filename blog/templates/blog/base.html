@@ -1193,7 +1193,7 @@
         <i class="bi bi-play-fill" id="ambientMusicToggleIcon"></i>
     </button>
     <audio id="ambientMusicPlayer" loop preload="auto">
-        <source src="{% static blog_preferences.ambient_music_track_data.static_path %}" type="audio/mpeg">
+        <source src="{{ blog_preferences.ambient_music_track_data.audio_url }}" type="audio/mpeg">
     </audio>
 </div>
 {% endif %}

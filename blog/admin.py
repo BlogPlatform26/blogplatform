@@ -2,8 +2,10 @@ from datetime import timedelta
 
 from django.contrib import admin, messages
 from django.utils import timezone
+from django.utils.html import format_html
 
 from .models import (
+    AmbientMusicTrack,
     BugReport,
     Category,
     CategoryHomeImage,
@@ -456,3 +458,56 @@ def _get_app_list_with_post_export_v2(request, app_label=None):
     return app_list
 
 admin.site.get_app_list = _get_app_list_with_post_export_v2
+
+
+
+@admin.register(AmbientMusicTrack)
+class AmbientMusicTrackAdmin(admin.ModelAdmin):
+    list_display = ("title", "category", "artist", "is_active", "order", "created_at")
+    list_filter = ("category", "is_active", "source_name")
+    search_fields = ("title", "track_id", "artist", "description")
+    readonly_fields = ("created_at", "updated_at", "audio_preview")
+    ordering = ("category", "order", "title")
+    list_editable = ("is_active", "order")
+
+    fieldsets = (
+        ("Osnovno", {
+            "fields": (
+                "title",
+                "track_id",
+                "category",
+                "description",
+                "audio_file",
+                "audio_preview",
+                "is_active",
+                "order",
+            )
+        }),
+        ("Autor i licenca", {
+            "fields": (
+                "artist",
+                "artist_url",
+                "source_name",
+                "source_url",
+                "license_label",
+            )
+        }),
+        ("Datumi", {
+            "fields": (
+                "created_at",
+                "updated_at",
+            )
+        }),
+    )
+
+    @admin.display(description="Preview")
+    def audio_preview(self, obj):
+        if obj and obj.audio_file:
+            return format_html(
+                '<audio controls style="width: 320px; max-width: 100%;">'
+                '<source src="{}" type="audio/mpeg">'
+                '</audio>',
+                obj.audio_file.url,
+            )
+        return "-"
+

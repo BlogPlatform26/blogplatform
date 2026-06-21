@@ -999,3 +999,80 @@ class SecurityEvent(models.Model):
         who = self.username or (self.user.username if self.user else "anonimno")
         return f"{self.get_event_type_display()} - {who} - {self.created_at:%d.%m.%Y %H:%M}"
 
+class AmbientMusicTrack(models.Model):
+    CATEGORY_CHOICES = [
+        ("calm", "Mirno i opustajuce"),
+        ("romantic", "Njezno i romanticno"),
+        ("jazz", "Jazz i lounge"),
+        ("fantasy", "Carobno i fantasy"),
+        ("mystery", "Tajanstveno i napeto"),
+        ("cinematic", "Putovanje i filmski ugodaj"),
+        ("fun", "Veselo i posebno"),
+    ]
+
+    track_id = models.SlugField(
+        max_length=220,
+        unique=True,
+        help_text="Stalni ID pjesme. Najbolje koristiti naziv datoteke bez .mp3. Ne mijenjaj ako je korisnici vec koriste.",
+    )
+    title = models.CharField("Naziv", max_length=180)
+    category = models.CharField("Kategorija", max_length=30, choices=CATEGORY_CHOICES, default="calm")
+    description = models.CharField("Opis", max_length=255, blank=True)
+    artist = models.CharField("Autor", max_length=180, blank=True)
+    artist_url = models.URLField("Link autora", max_length=500, blank=True)
+    source_name = models.CharField("Izvor", max_length=80, blank=True, default="Pixabay")
+    source_url = models.URLField("Link izvora/licence", max_length=500, blank=True)
+    license_label = models.CharField("Licenca", max_length=120, blank=True, default="Pixabay licenca")
+    audio_file = models.FileField(
+        "Audio datoteka",
+        upload_to="ambient_music/",
+        validators=[validate_audio_size],
+    )
+    is_active = models.BooleanField("Aktivna", default=True)
+    order = models.PositiveIntegerField("Redoslijed", default=0)
+    created_at = models.DateTimeField("Dodano", auto_now_add=True)
+    updated_at = models.DateTimeField("Azurirano", auto_now=True)
+
+    class Meta:
+        ordering = ["category", "order", "title"]
+        verbose_name = "Ambijentalna glazba"
+        verbose_name_plural = "Ambijentalna glazba"
+
+    def __str__(self):
+        return self.title
+
+    @property
+    def category_label(self):
+        return dict(self.CATEGORY_CHOICES).get(self.category, self.category)
+
+    @property
+    def audio_url(self):
+        try:
+            return self.audio_file.url
+        except Exception:
+            return ""
+
+    @property
+    def filename(self):
+        try:
+            return os.path.basename(self.audio_file.name)
+        except Exception:
+            return ""
+
+    def as_library_item(self):
+        return {
+            "id": self.track_id,
+            "title": self.title,
+            "category": self.category,
+            "category_label": self.category_label,
+            "description": self.description,
+            "artist": self.artist,
+            "artist_url": self.artist_url,
+            "source_name": self.source_name,
+            "source_url": self.source_url,
+            "license_label": self.license_label,
+            "filename": self.filename,
+            "static_path": "",
+            "audio_url": self.audio_url,
+        }
+
