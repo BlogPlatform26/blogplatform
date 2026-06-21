@@ -1,3 +1,4 @@
+{% load post_image_tags %}
 {% if post.post_type == "quiz" %}
     {% if post.image %}
         <img src="{{ post.image.url }}" class="img-fluid rounded mt-3" style="width:100%; max-height:500px; object-fit:contain;">
@@ -91,13 +92,15 @@
         </div>
     {% endif %}
 
-    <div class="mt-4 blog-rich-content">{{ post.content|safe }}</div>
+    <div class="mt-4 blog-rich-content">{{ post|render_inline_post_images }}</div>
 
     {% if post.image %}
         <img src="{{ post.image.url }}" class="img-fluid rounded mt-4" style="width:100%; max-height:500px; object-fit:contain;">
     {% endif %}
+    {% if not post.content|has_inline_image_markers %}
 
     {% for img in post.images.all %}
         <img src="{{ img.image.url }}" class="img-fluid rounded mt-3" style="width:100%; max-height:500px; object-fit:contain;">
     {% endfor %}
+    {% endif %}
 {% endif %}

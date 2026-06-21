@@ -1,4 +1,5 @@
 {% extends "blog/base.html" %}
+{% load post_image_tags %}
 
 {% block title %}Profil{% endblock %}
 
@@ -42,7 +43,7 @@
             {% endif %}
         </div>
 
-        <p>{{ post.content|safe }}</p>
+        <p>{{ post.content|remove_inline_image_markers|safe }}</p>
 
         {% if post.image %}
             <img src="{{ post.image.url }}"

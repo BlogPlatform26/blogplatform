@@ -1,4 +1,5 @@
 {% extends "blog/base.html" %}
+{% load post_image_tags %}
 {% load custom_tags %}
 {% load static %}
 
@@ -249,7 +250,7 @@
                                     </div>
 
                                     <div class="home-post-preview">
-                                        {{ post.content|safe }}
+                                        {{ post.content|remove_inline_image_markers|safe }}
                                         <div class="home-post-preview-fade"></div>
                                     </div>
 
@@ -357,7 +358,7 @@
                                     </div>
 
                                     <div class="home-post-preview">
-                                        {{ post.content|safe }}
+                                        {{ post.content|remove_inline_image_markers|safe }}
                                         <div class="home-post-preview-fade"></div>
                                     </div>
 

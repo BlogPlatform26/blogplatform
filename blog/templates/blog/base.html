@@ -1105,6 +1105,40 @@
         margin-bottom: 0 !important;
     }
 </style>
+<style id="blogplatformInlineImagesStyle">
+    .blog-rich-content .blog-inline-image,
+    .card-body .blog-inline-image,
+    .post-content .blog-inline-image,
+    .blog-inline-image {
+        margin: 1.1rem 0;
+        text-align: center;
+    }
+
+    .blog-rich-content .blog-inline-image img,
+    .card-body .blog-inline-image img,
+    .post-content .blog-inline-image img,
+    .blog-inline-image img {
+        display: block;
+        max-width: 100%;
+        max-height: 520px;
+        width: auto;
+        height: auto;
+        margin: 0 auto;
+        object-fit: contain;
+        border-radius: 10px;
+        border: 1px solid #e5e7eb;
+        background: #ffffff;
+    }
+
+    .blog-rich-content .blog-inline-image figcaption,
+    .card-body .blog-inline-image figcaption,
+    .post-content .blog-inline-image figcaption,
+    .blog-inline-image figcaption {
+        margin-top: 0.35rem;
+        font-size: 0.82rem;
+        color: #6b7280;
+    }
+</style>
 </head>
 
 <body class="{% if request.resolver_match.url_name != 'login' and request.resolver_match.url_name != 'register' and request.resolver_match.url_name != 'activation_sent' and request.resolver_match.url_name != 'author_onboarding' and request.resolver_match.url_name != 'password_reset' and request.resolver_match.url_name != 'password_reset_done' and request.resolver_match.url_name != 'password_reset_confirm' and request.resolver_match.url_name != 'password_reset_complete' %}blog-cursor-theme blog-cursor-{{ blog_preferences.cursor_style|default:'default' }} blog-cursor-effect-{{ blog_preferences.cursor_effect|default:'none' }}{% if blog_preferences.cursor_stylesheet_url %} blog-cursor-external-style{% endif %}{% endif %}" data-blog-cursor-effect="{{ blog_preferences.cursor_effect|default:'none' }}" style="
