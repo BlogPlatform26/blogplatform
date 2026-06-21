@@ -517,3 +517,257 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 
 {% endblock %}
+
+<style id="blogplatformDirectSpacingStyle">
+    .bp-direct-spacing-control {
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 6px !important;
+        height: 38px !important;
+        padding: 0 10px !important;
+        border-left: 1px solid #ccced1 !important;
+        border-right: 1px solid #ccced1 !important;
+        background: #ffffff !important;
+        font-size: 14px !important;
+        color: #111827 !important;
+        white-space: nowrap !important;
+    }
+
+    .bp-direct-spacing-control label {
+        margin: 0 !important;
+        font-weight: 600 !important;
+        color: #111827 !important;
+    }
+
+    .bp-direct-spacing-control select {
+        height: 30px !important;
+        min-width: 72px !important;
+        padding: 2px 8px !important;
+        border: 1px solid #d1d5db !important;
+        border-radius: 6px !important;
+        background: #ffffff !important;
+        font-size: 14px !important;
+        color: #111827 !important;
+        cursor: pointer !important;
+    }
+</style>
+
+<script id="blogplatformDirectSpacingScript">
+(function () {
+    var ATTRIBUTE = "bpLineHeight";
+    var installedEditors = [];
+
+    function normalize(value) {
+        return String(value || "1.5").replace(",", ".");
+    }
+
+    function getEditorKey(editor) {
+        try {
+            if (editor.sourceElement && editor.sourceElement.id) {
+                return editor.sourceElement.id;
+            }
+        } catch (error) {}
+
+        return String(Math.random());
+    }
+
+    function registerConversion(editor) {
+        if (!editor || editor.__bpDirectSpacingRegistered) {
+            return;
+        }
+
+        editor.__bpDirectSpacingRegistered = true;
+
+        try {
+            editor.model.schema.extend("$block", {
+                allowAttributes: ATTRIBUTE
+            });
+        } catch (error) {}
+
+        try {
+            editor.conversion.for("downcast").attributeToAttribute({
+                model: ATTRIBUTE,
+                view: function (value) {
+                    return {
+                        key: "style",
+                        value: {
+                            "line-height": value
+                        }
+                    };
+                }
+            });
+        } catch (error) {}
+
+        try {
+            editor.conversion.for("upcast").attributeToAttribute({
+                view: {
+                    styles: {
+                        "line-height": /[\s\S]+/
+                    }
+                },
+                model: {
+                    key: ATTRIBUTE,
+                    value: function (viewElement) {
+                        return viewElement.getStyle("line-height");
+                    }
+                }
+            });
+        } catch (error) {}
+    }
+
+    function applySpacing(editor, value) {
+        registerConversion(editor);
+
+        try {
+            editor.editing.view.focus();
+        } catch (error) {}
+
+        try {
+            editor.model.change(function (writer) {
+                var selection = editor.model.document.selection;
+                var blocks = Array.from(selection.getSelectedBlocks());
+
+                if (!blocks.length) {
+                    return;
+                }
+
+                blocks.forEach(function (block) {
+                    writer.setAttribute(ATTRIBUTE, normalize(value), block);
+                });
+            });
+        } catch (error) {
+            alert("Ne mogu primijeniti razmak u ovom editoru.");
+        }
+    }
+
+    function updateSelectFromSelection(editor, select) {
+        registerConversion(editor);
+
+        try {
+            var selection = editor.model.document.selection;
+            var firstBlock = Array.from(selection.getSelectedBlocks())[0];
+
+            if (!firstBlock) {
+                return;
+            }
+
+            var value = firstBlock.getAttribute(ATTRIBUTE);
+
+            if (!value) {
+                return;
+            }
+
+            value = normalize(value);
+
+            if (select.querySelector('option[value="' + value + '"]')) {
+                select.value = value;
+            }
+        } catch (error) {}
+    }
+
+    function installForEditor(editor) {
+        if (!editor) {
+            return;
+        }
+
+        var key = getEditorKey(editor);
+
+        if (installedEditors.indexOf(key) !== -1) {
+            return;
+        }
+
+        var toolbar = null;
+
+        try {
+            toolbar = editor.ui.view.toolbar.element;
+        } catch (error) {}
+
+        if (!toolbar) {
+            return;
+        }
+
+        var toolbarItems = toolbar.querySelector(".ck-toolbar__items") || toolbar;
+
+        if (!toolbarItems || toolbarItems.querySelector(".bp-direct-spacing-control")) {
+            return;
+        }
+
+        installedEditors.push(key);
+        registerConversion(editor);
+
+        var control = document.createElement("span");
+        control.className = "bp-direct-spacing-control";
+        control.innerHTML = ''
+            + '<label>Razmak</label>'
+            + '<select aria-label="Razmak redova">'
+            + '<option value="1">1</option>'
+            + '<option value="1.15">1,15</option>'
+            + '<option value="1.5" selected>1,5</option>'
+            + '<option value="2">2</option>'
+            + '<option value="2.5">2,5</option>'
+            + '<option value="3">3</option>'
+            + '</select>';
+
+        var firstDropdown = toolbarItems.querySelector(".ck-dropdown");
+
+        if (firstDropdown && firstDropdown.nextSibling) {
+            toolbarItems.insertBefore(control, firstDropdown.nextSibling);
+        } else {
+            toolbarItems.insertBefore(control, toolbarItems.firstChild);
+        }
+
+        var select = control.querySelector("select");
+
+        select.addEventListener("change", function () {
+            applySpacing(editor, select.value);
+        });
+
+        try {
+            editor.model.document.selection.on("change:range", function () {
+                updateSelectFromSelection(editor, select);
+            });
+
+            editor.model.document.selection.on("change:attribute", function () {
+                updateSelectFromSelection(editor, select);
+            });
+        } catch (error) {}
+
+        updateSelectFromSelection(editor, select);
+    }
+
+    function scanEditors() {
+        if (window.editors) {
+            Object.keys(window.editors).forEach(function (key) {
+                installForEditor(window.editors[key]);
+            });
+        }
+    }
+
+    if (typeof window.ckeditorRegisterCallback === "function") {
+        window.ckeditorRegisterCallback(function (editor) {
+            setTimeout(function () {
+                installForEditor(editor);
+            }, 50);
+        });
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        var tries = 0;
+
+        var timer = setInterval(function () {
+            scanEditors();
+            tries += 1;
+
+            if (tries > 120) {
+                clearInterval(timer);
+            }
+        }, 150);
+    });
+
+    document.addEventListener("click", function () {
+        setTimeout(scanEditors, 50);
+        setTimeout(scanEditors, 250);
+        setTimeout(scanEditors, 600);
+    }, true);
+})();
+</script>

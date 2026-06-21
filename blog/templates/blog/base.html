@@ -1139,6 +1139,13 @@
         color: #6b7280;
     }
 </style>
+
+
+
+
+
+
+
 </head>
 
 <body class="{% if request.resolver_match.url_name != 'login' and request.resolver_match.url_name != 'register' and request.resolver_match.url_name != 'activation_sent' and request.resolver_match.url_name != 'author_onboarding' and request.resolver_match.url_name != 'password_reset' and request.resolver_match.url_name != 'password_reset_done' and request.resolver_match.url_name != 'password_reset_confirm' and request.resolver_match.url_name != 'password_reset_complete' %}blog-cursor-theme blog-cursor-{{ blog_preferences.cursor_style|default:'default' }} blog-cursor-effect-{{ blog_preferences.cursor_effect|default:'none' }}{% if blog_preferences.cursor_stylesheet_url %} blog-cursor-external-style{% endif %}{% endif %}" data-blog-cursor-effect="{{ blog_preferences.cursor_effect|default:'none' }}" style="
@@ -3381,6 +3388,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 </script>
+
+
+
+
+
 
 </body>
 </html>
