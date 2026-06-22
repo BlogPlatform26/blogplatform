@@ -1,6 +1,9 @@
+import hashlib
 from django.contrib import messages
+from django.core.cache import cache
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
+from django.db.models import F
 from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse
 from django.utils import timezone
@@ -29,6 +32,84 @@ from blog.comment_rate_limit import check_comment_allowed, remember_comment_sent
 from blog.security import log_security_event
 
 
+
+POST_VIEW_COOLDOWN_SECONDS = 60 * 60 * 12
+
+BOT_USER_AGENT_PARTS = (
+    "bot",
+    "crawl",
+    "spider",
+    "slurp",
+    "facebookexternalhit",
+    "whatsapp",
+    "telegrambot",
+    "discordbot",
+    "linkedinbot",
+    "preview",
+    "python-requests",
+    "curl",
+    "wget",
+)
+
+
+def _get_client_ip(request):
+    forwarded_for = request.META.get("HTTP_X_FORWARDED_FOR", "")
+    if forwarded_for:
+        return forwarded_for.split(",")[0].strip()
+    return request.META.get("REMOTE_ADDR", "")
+
+
+def _is_probably_bot(request):
+    user_agent = (request.META.get("HTTP_USER_AGENT") or "").lower()
+    if not user_agent:
+        return True
+    return any(part in user_agent for part in BOT_USER_AGENT_PARTS)
+
+
+def _should_count_post_view(request, post):
+    if request.method != "GET":
+        return False
+
+    if _is_probably_bot(request):
+        return False
+
+    if request.user.is_authenticated:
+        if request.user == post.author:
+            return False
+        if request.user.is_staff or request.user.is_superuser:
+            return False
+
+    return True
+
+
+def _post_view_cache_key(request, post):
+    if request.user.is_authenticated:
+        viewer_key = f"user:{request.user.pk}"
+    else:
+        session_key = request.session.session_key
+        if not session_key:
+            request.session.save()
+            session_key = request.session.session_key
+
+        ip = _get_client_ip(request)
+        user_agent = request.META.get("HTTP_USER_AGENT", "")
+        raw_key = f"anon:{session_key}:{ip}:{user_agent}"
+        viewer_key = hashlib.sha256(raw_key.encode("utf-8")).hexdigest()
+
+    return f"post-view:{post.pk}:{viewer_key}"
+
+
+def _count_post_view(request, post):
+    if not _should_count_post_view(request, post):
+        return
+
+    cache_key = _post_view_cache_key(request, post)
+
+    if not cache.add(cache_key, True, POST_VIEW_COOLDOWN_SECONDS):
+        return
+
+    Post.objects.filter(pk=post.pk).update(views=F("views") + 1)
+    post.views = (post.views or 0) + 1
 def _apply_submit_action_to_post(post, submit_action, publish_at):
     if submit_action == 'draft':
         post.status = 'draft'
