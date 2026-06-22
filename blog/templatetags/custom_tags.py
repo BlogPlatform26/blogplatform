@@ -237,3 +237,54 @@ def notification_message(notification):
 
     return mark_safe("Nova obavijest.")
 # BLOGPLATFORM_MENTION_LINKS_END
+
+# BLOGPLATFORM_NOTIFICATION_DROPDOWN_START
+@register.filter
+def bp_notification_icon(notification):
+    notification_type = getattr(notification, "notification_type", "")
+
+    if notification_type == "like":
+        return "bi bi-heart"
+    if notification_type == "comment":
+        return "bi bi-chat-left-text"
+    if notification_type == "follow":
+        return "bi bi-person-plus"
+    if notification_type == "mention":
+        return "bi bi-at"
+
+    return "bi bi-bell"
+
+
+@register.filter
+def bp_notification_message(notification):
+    from django.utils.html import escape
+    from django.utils.safestring import mark_safe
+
+    sender = getattr(notification, "sender", None)
+    sender_name = escape(getattr(sender, "username", "Korisnik"))
+
+    post = getattr(notification, "post", None)
+    post_title = escape(getattr(post, "title", "")) if post else ""
+
+    notification_type = getattr(notification, "notification_type", "")
+
+    if notification_type == "like":
+        if post_title:
+            return mark_safe(f'<strong>{sender_name}</strong> je lajkao vaš post <strong>"{post_title}"</strong>')
+        return mark_safe(f'<strong>{sender_name}</strong> je lajkao vaš post')
+
+    if notification_type == "comment":
+        if post_title:
+            return mark_safe(f'<strong>{sender_name}</strong> je komentirao vaš post <strong>"{post_title}"</strong>')
+        return mark_safe(f'<strong>{sender_name}</strong> je komentirao vaš post')
+
+    if notification_type == "follow":
+        return mark_safe(f'<strong>{sender_name}</strong> vas je zapratio.')
+
+    if notification_type == "mention":
+        if post_title:
+            return mark_safe(f'<strong>{sender_name}</strong> vas je označio/la u komentaru na postu <strong>"{post_title}"</strong>')
+        return mark_safe(f'<strong>{sender_name}</strong> vas je označio/la u komentaru')
+
+    return mark_safe("Nova obavijest")
+# BLOGPLATFORM_NOTIFICATION_DROPDOWN_END

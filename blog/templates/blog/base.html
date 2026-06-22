@@ -1330,54 +1330,15 @@
                     </li>
                     <li><hr class="dropdown-divider my-0"></li>
                     {% for notification in latest_notifications %}
-                        <li>
-                            {% if notification.notification_type == "follow" %}
-                                <a class="dropdown-item small {% if not notification.is_read %}unread-notification
-{% elif notification.notification_type == "mention" %}
+
 <a href="{% url 'notification_redirect' notification.id %}" class="dropdown-item notification-item">
-    <i class="bi bi-at"></i>
-    <strong>{{ notification.sender.username }}</strong> vas je označio/la u komentaru{% if notification.post %} na postu <strong>"{{ notification.post.title }}"</strong>{% endif %}
+    <i class="{{ notification|bp_notification_icon }}"></i>
+    {{ notification|bp_notification_message }}
     <br>
     <small>{{ notification.created_at|date:"d.m.Y H:i" }}</small>
 </a>
 
-{% endif %}"
-                                   href="{% url 'notification_redirect' notification.id %}">
-                                    <div class="d-flex align-items-start gap-2">
-                                        <i class="bi bi-person-plus"></i>
-                                        <div>
-                                            <div><strong>{{ notification.sender.username }}</strong> vas je zapratio.</div>
-                                            <div class="text-muted small">{{ notification.created_at|date:"d.m.Y H:i" }}</div>
-                                        </div>
-                                    </div>
-                                </a>
-
-                            {% elif notification.notification_type == "like" %}
-                                <a class="dropdown-item small {% if not notification.is_read %}unread-notification{% endif %}"
-                                   href="{% url 'notification_redirect' notification.id %}">
-                                    <div class="d-flex align-items-start gap-2">
-                                        <i class="bi bi-heart"></i>
-                                        <div>
-                                            <div><strong>{{ notification.sender.username }}</strong> je lajkao vaš post <strong>"{{ notification.post.title }}"</strong></div>
-                                            <div class="text-muted small">{{ notification.created_at|date:"d.m.Y H:i" }}</div>
-                                        </div>
-                                    </div>
-                                </a>
-
-                            {% elif notification.notification_type == "comment" %}
-                                <a class="dropdown-item small {% if not notification.is_read %}unread-notification{% endif %}"
-                                   href="{% url 'notification_redirect' notification.id %}">
-                                    <div class="d-flex align-items-start gap-2">
-                                        <i class="bi bi-chat-left-text"></i>
-                                        <div>
-                                            <div><strong>{{ notification.sender.username }}</strong> je komentirao vaš post <strong>"{{ notification.post.title }}"</strong></div>
-                                            <div class="text-muted small">{{ notification.created_at|date:"d.m.Y H:i" }}</div>
-                                        </div>
-                                    </div>
-                                </a>
-                            {% endif %}
-                        </li>
-                    {% empty %}
+{% empty %}
                         <li><span class="dropdown-item text-muted">Nema notifikacija.</span></li>
                     {% endfor %}
                 </ul>
