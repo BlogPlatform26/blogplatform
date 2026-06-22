@@ -1,4 +1,33 @@
-{% load custom_tags static %}
+﻿{% load custom_tags static %}
+<style id="bp-comment-final-fix">
+.comment-body {
+    min-width: 0 !important;
+    max-width: 100% !important;
+}
+
+.comment-text {
+    font-size: 12px !important;
+    line-height: 1.35 !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    word-wrap: normal !important;
+    hyphens: none !important;
+    letter-spacing: normal !important;
+    text-align: left !important;
+}
+
+.comment-text * {
+    font-size: 12px !important;
+    line-height: 1.35 !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    word-wrap: normal !important;
+    hyphens: none !important;
+    letter-spacing: normal !important;
+}
+</style>
 <div class="mt-5" id="comments-{% if is_detail %}detail{% else %}{{ post.id }}{% endif %}">
 
   <h6>Komentari:</h6>
@@ -54,7 +83,7 @@
 
   {% csrf_token %}
 
-  <button type="submit" class="comment-action-btn comment-action-danger" title="Izbriši" onclick="return confirm('Jeste li sigurni da želite izbrisati komentar?')">
+  <button type="submit" class="comment-action-btn comment-action-danger" title="IzbriÅ¡i" onclick="return confirm('Jeste li sigurni da Å¾elite izbrisati komentar?')">
 
   <i class="bi bi-trash"></i>
 
@@ -156,7 +185,7 @@
   <form method="POST" action="{% url 'delete_comment' comment.id %}" class="d-inline">
 
   {% csrf_token %}
-  <button type="submit" class="comment-action-btn comment-action-danger" title="Izbriši" onclick="return confirm('Jeste li sigurni da želite izbrisati komentar?')">
+  <button type="submit" class="comment-action-btn comment-action-danger" title="IzbriÅ¡i" onclick="return confirm('Jeste li sigurni da Å¾elite izbrisati komentar?')">
 
   <i class="bi bi-trash"></i>
 
@@ -214,7 +243,7 @@
 
   <a href="{% url 'post_detail' post.id %}#comments-detail" class="text-decoration-none">
 
-  Prikaži sve komentare ({{ post.comments.count }})
+  PrikaÅ¾i sve komentare ({{ post.comments.count }})
 
   </a>
 
@@ -231,7 +260,7 @@
 
   {% if is_restricted %}
 
-  <p class="small text-muted">Autor te je ograničio pa ne možeš komentirati.</p>
+  <p class="small text-muted">Autor te je ograniÄio pa ne moÅ¾eÅ¡ komentirati.</p>
 
   {% elif user.is_authenticated or post.allow_anonymous_comments %}
 
@@ -268,7 +297,7 @@
 
   {% else %}
 
-  <p class="small text-muted">Komentiranje je isključeno na ovom blogu.</p>
+  <p class="small text-muted">Komentiranje je iskljuÄeno na ovom blogu.</p>
   {% endif %}
 
 </div>
@@ -316,3 +345,4 @@
     });
   });
 </script>
+
