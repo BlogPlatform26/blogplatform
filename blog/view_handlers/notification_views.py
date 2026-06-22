@@ -43,6 +43,10 @@ def notification_redirect(request, notification_id):
     if notification.notification_type == "follow" and notification.sender_id:
         return redirect("user_blog", username=notification.sender.username)
 
+    if notification.notification_type == "mention" and notification.post_id:
+        if notification.comment_id:
+            return redirect(f"{reverse('post_detail', args=[notification.post_id])}#comment-{notification.comment_id}")
+        return redirect("post_detail", post_id=notification.post_id)
     if notification.notification_type == "comment" and notification.post_id:
         if notification.comment_id:
             return redirect(

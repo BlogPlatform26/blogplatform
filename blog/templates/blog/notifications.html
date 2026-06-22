@@ -1,44 +1,30 @@
 {% extends "blog/base.html" %}
+{% load custom_tags %}
 
 {% block content %}
-<h4 class="mb-4">Notifikacije</h4>
+<div class="container py-4" style="max-width: 900px;">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <div>
+            <h4 class="mb-1">Notifikacije</h4>
+            <div class="text-muted">Pregled svih obavijesti</div>
+        </div>
 
-<div class="d-flex justify-content-between align-items-center mb-3">
-    <div class="text-muted small">
-        Pregled svih obavijesti
+        <form method="POST" action="{% url 'mark_all_notifications_read' %}">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-outline-primary btn-sm">
+                Označi sve pročitano
+            </button>
+        </form>
     </div>
 
-    <form method="POST" action="{% url 'mark_all_notifications_read' %}" class="m-0">
-        {% csrf_token %}
-        <button type="submit" class="btn btn-outline-primary btn-sm">
-            Označi sve pročitano
-        </button>
-    </form>
-</div>
+    <div class="list-group shadow-sm">
+        {% for notification in notifications %}
+            <a href="{{ notification|notification_url }}" class="list-group-item list-group-item-action">
+                <div>
+                    {{ notification|notification_message }}
+                </div>
 
-{% for notification in notifications %}
-    <a href="{% url 'notification_redirect' notification.id %}" class="text-decoration-none text-reset">
-        <div class="card mb-2 {% if not notification.is_read %}unread-notification{% endif %}">
-            <div class="card-body">
-                {% if notification.notification_type == "follow" %}
-                    <strong>{{ notification.sender.username }}</strong> vas je zapratio.
-                {% elif notification.notification_type == "like" %}
-                    <strong>{{ notification.sender.username }}</strong> je lajkao vaš post
-                    {% if notification.post %}
-                        "{{ notification.post.title }}".
-                    {% else %}
-                        .
-                    {% endif %}
-                {% elif notification.notification_type == "comment" %}
-                    <strong>{{ notification.sender.username }}</strong> je komentirao vaš post
-                    {% if notification.post %}
-                        "{{ notification.post.title }}".
-                    {% else %}
-                        .
-                    {% endif %}
-                {% endif %}
-
-                <div class="small text-muted">
+                <div class="small text-muted mt-1">
                     {{ notification.created_at|date:"d.m.Y H:i" }}
                     {% if notification.is_read %}
                         · Pročitano
@@ -46,10 +32,12 @@
                         · Novo
                     {% endif %}
                 </div>
+            </a>
+        {% empty %}
+            <div class="list-group-item text-muted">
+                Nema notifikacija.
             </div>
-        </div>
-    </a>
-{% empty %}
-    <p>Nema notifikacija.</p>
-{% endfor %}
+        {% endfor %}
+    </div>
+</div>
 {% endblock %}

@@ -39,7 +39,7 @@ def mention_search(request):
     def _view(request):
         q = (request.GET.get("q") or "").strip()
 
-        users = User.objects.filter(is_active=True).exclude(username="anonimno")
+        users = User.objects.filter(is_active=True)
 
         if q:
             users = users.filter(username__icontains=q)
@@ -49,12 +49,13 @@ def mention_search(request):
         results = []
 
         for user in users:
-            label = ""
+            label = user.username
 
             try:
-                label = user.profile.blog_name or user.username
+                if user.profile.blog_name:
+                    label = user.profile.blog_name
             except Exception:
-                label = user.username
+                pass
 
             results.append({
                 "username": user.username,

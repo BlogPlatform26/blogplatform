@@ -18,6 +18,61 @@ from blog.comment_rate_limit import check_comment_allowed, remember_comment_sent
 from blog.security import log_security_event
 
 
+# BLOGPLATFORM_MENTION_NOTIFICATIONS_START
+def _bp_extract_mentioned_usernames(content):
+    import re
+
+    if not content:
+        return []
+
+    found = re.findall(r"(?<!\w)@([A-Za-z0-9_.+-]{2,150})", str(content))
+    usernames = []
+
+    for username in found:
+        username = username.strip(".,!?;:()[]{}<>\"'")
+
+        if not username:
+            continue
+
+        if username.lower() not in [item.lower() for item in usernames]:
+            usernames.append(username)
+
+    return usernames[:20]
+
+
+def _create_mention_notifications(comment):
+    if not comment:
+        return
+
+    if getattr(comment, "is_anonymous", False):
+        return
+
+    if not getattr(comment, "author_id", None):
+        return
+
+    mentioned_usernames = _bp_extract_mentioned_usernames(comment.content)
+
+    if not mentioned_usernames:
+        return
+
+    for username in mentioned_usernames:
+        mentioned_user = User.objects.filter(username__iexact=username, is_active=True).first()
+
+        if not mentioned_user:
+            continue
+
+        if mentioned_user.id == comment.author_id:
+            continue
+
+        Notification.objects.get_or_create(
+            recipient=mentioned_user,
+            sender=comment.author,
+            post=comment.post,
+            comment=comment,
+            notification_type="mention",
+        )
+# BLOGPLATFORM_MENTION_NOTIFICATIONS_END
+
 @require_POST
 def create_comment(request, pk):
     publish_due_posts()
@@ -167,6 +222,10 @@ def notification_redirect(request, notification_id):
     if notification.notification_type == 'follow':
         return redirect('user_blog', username=notification.sender.username)
     if notification.notification_type == 'like':
+        return redirect('post_detail', post_id=notification.post.id)
+    if notification.notification_type == 'mention' and notification.post_id:
+        if notification.comment_id:
+            return redirect(f"{reverse('post_detail', args=[notification.post.id])}#comment-{notification.comment.id}")
         return redirect('post_detail', post_id=notification.post.id)
     if notification.notification_type == 'comment':
         return redirect(f"{reverse('post_detail', args=[notification.post.id])}#comment-{notification.comment.id}")

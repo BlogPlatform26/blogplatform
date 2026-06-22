@@ -170,14 +170,10 @@ def link_mentions(value):
             typed_username = match.group(1)
             punctuation = match.group(2) or ""
 
-            user = User.objects.filter(
-                username__iexact=typed_username,
-                is_active=True
-            ).first()
+            user = User.objects.filter(username__iexact=typed_username, is_active=True).first()
 
             if user:
                 url = reverse("user_blog", args=[user.username])
-
                 html_parts.append(
                     f'<a class="bp-mention-link bp-comment-word" href="{escape(url)}">'
                     f'@{escape(user.username)}'
@@ -185,9 +181,7 @@ def link_mentions(value):
                 )
                 continue
 
-        html_parts.append(
-            f'<span class="bp-comment-word">{escape(token)}</span>'
-        )
+        html_parts.append(f'<span class="bp-comment-word">{escape(token)}</span>')
 
     return mark_safe(" ".join(html_parts))
 
@@ -218,12 +212,10 @@ def notification_message(notification):
     sender = getattr(notification, "sender", None)
     sender_name = escape(getattr(sender, "username", "Korisnik"))
 
-    notification_type = getattr(notification, "notification_type", "")
     post = getattr(notification, "post", None)
+    post_title = escape(getattr(post, "title", "")) if post else ""
 
-    post_title = ""
-    if post:
-        post_title = escape(getattr(post, "title", ""))
+    notification_type = getattr(notification, "notification_type", "")
 
     if notification_type == "follow":
         return mark_safe(f'<strong>{sender_name}</strong> vas je zapratio.')
