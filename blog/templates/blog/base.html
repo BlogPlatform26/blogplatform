@@ -1331,14 +1331,21 @@
                     <li><hr class="dropdown-divider my-0"></li>
                     {% for notification in latest_notifications %}
                         <li>
-                            {{ notification|notification_message }} {{ notification.created_at|date:"d.m.Y H:i" }}</div>
+                            {% if notification.notification_type == "follow" %}
+                                <a class="dropdown-item small {% if not notification.is_read %}unread-notification{% endif %}"
+                                   href="{% url 'notification_redirect' notification.id %}">
+                                    <div class="d-flex align-items-start gap-2">
+                                        <i class="bi bi-person-plus"></i>
+                                        <div>
+                                            <div><strong>{{ notification.sender.username }}</strong> vas je zapratio.</div>
+                                            <div class="text-muted small">{{ notification.created_at|date:"d.m.Y H:i" }}</div>
                                         </div>
                                     </div>
                                 </a>
 
                             {% elif notification.notification_type == "like" %}
                                 <a class="dropdown-item small {% if not notification.is_read %}unread-notification{% endif %}"
-                                   href="{{ notification|notification_url }}">
+                                   href="{% url 'notification_redirect' notification.id %}">
                                     <div class="d-flex align-items-start gap-2">
                                         <i class="bi bi-heart"></i>
                                         <div>
@@ -1346,9 +1353,11 @@
                                             <div class="text-muted small">{{ notification.created_at|date:"d.m.Y H:i" }}</div>
                                         </div>
                                     </div>
-                                </a>{% endif %} {% elif notification.notification_type == "comment" %}
+                                </a>
+
+                            {% elif notification.notification_type == "comment" %}
                                 <a class="dropdown-item small {% if not notification.is_read %}unread-notification{% endif %}"
-                                   href="{{ notification|notification_url }}">
+                                   href="{% url 'notification_redirect' notification.id %}">
                                     <div class="d-flex align-items-start gap-2">
                                         <i class="bi bi-chat-left-text"></i>
                                         <div>
