@@ -1,0 +1,39 @@
+/* BlogPlatform komentari */
+
+.comment-body {
+    min-width: 0 !important;
+    max-width: 100% !important;
+}
+
+.comment-text {
+    font-size: 12px !important;
+    line-height: 1.35 !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    word-wrap: normal !important;
+    hyphens: none !important;
+    letter-spacing: normal !important;
+    text-align: left !important;
+}
+
+.comment-text * {
+    font-size: 12px !important;
+    line-height: 1.35 !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    word-wrap: normal !important;
+    hyphens: none !important;
+    letter-spacing: normal !important;
+}
+
+.bp-comment-text {
+    display: block !important;
+}
+
+.bp-comment-word {
+    display: inline-block !important;
+    white-space: nowrap !important;
+    vertical-align: baseline !important;
+}

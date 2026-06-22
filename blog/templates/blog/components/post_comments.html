@@ -1,5 +1,5 @@
 ﻿{% load custom_tags static %}
-<style id="bp-comment-final-fix">
+<style id="bp-comment-word-fix">
 .comment-body {
     min-width: 0 !important;
     max-width: 100% !important;
@@ -26,6 +26,16 @@
     word-wrap: normal !important;
     hyphens: none !important;
     letter-spacing: normal !important;
+}
+
+.bp-comment-text {
+    display: block !important;
+}
+
+.bp-comment-word {
+    display: inline-block !important;
+    white-space: nowrap !important;
+    vertical-align: baseline !important;
 }
 </style>
 <div class="mt-5" id="comments-{% if is_detail %}detail{% else %}{{ post.id }}{% endif %}">
@@ -110,7 +120,7 @@
 
   </div>
 
-  <div class="comment-text" data-comment-text="{{ comment.id }}">{{ comment.content }}</div>
+  <div class="comment-text" data-comment-text="{{ comment.id }}"><span class="bp-comment-text">{{ comment.content|comment_words }}</span></div>
 
   {% if user.is_authenticated and user == comment.author and comment.author.username != anonymous_comment_username %}
   <form method="POST" action="{% url 'edit_comment' comment.id %}" class="comment-edit-form mt-2 d-none" data-edit-comment-form="{{ comment.id }}">
@@ -212,7 +222,7 @@
 
   </div>
 
-  <div class="comment-text" data-comment-text="{{ comment.id }}">{{ comment.content }}</div>
+  <div class="comment-text" data-comment-text="{{ comment.id }}"><span class="bp-comment-text">{{ comment.content|comment_words }}</span></div>
 
   {% if user.is_authenticated and user == comment.author and comment.author.username != anonymous_comment_username %}
   <form method="POST" action="{% url 'edit_comment' comment.id %}" class="comment-edit-form mt-2 d-none" data-edit-comment-form="{{ comment.id }}">

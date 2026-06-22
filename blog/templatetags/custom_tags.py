@@ -104,3 +104,38 @@ def get_item(d, key):
     if d is None:
         return None
     return d.get(key)
+
+
+@register.filter
+def comment_words(value):
+    import re
+    from django.utils.html import escape
+    from django.utils.safestring import mark_safe
+
+    if value is None:
+        return ""
+
+    text = str(value)
+    text = text.replace("\r\n", "\n").replace("\r", "\n")
+    text = text.replace("\xa0", " ")
+
+    # Ako je u tekstu slučajno ostao HTML iz starih pokušaja, makni ga.
+    text = re.sub(r"<br\s*/?>", " ", text, flags=re.IGNORECASE)
+    text = re.sub(r"<[^>]+>", "", text)
+
+    # Makni umjetne prijelome reda.
+    # Cilj je da komentar bude običan tekst koji browser sam prelama.
+    text = re.sub(r"\s+", " ", text).strip()
+
+    if not text:
+        return ""
+
+    words = text.split(" ")
+
+    html_words = []
+    for word in words:
+        safe_word = escape(word)
+        html_words.append(f'<span class="bp-comment-word">{safe_word}</span>')
+
+    return mark_safe(" ".join(html_words))
+
