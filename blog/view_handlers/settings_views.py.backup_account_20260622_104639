@@ -1,4 +1,3 @@
-from blog.models import AccountStatus
 from django.shortcuts import redirect, render
 from django.contrib.auth import logout
 import base64

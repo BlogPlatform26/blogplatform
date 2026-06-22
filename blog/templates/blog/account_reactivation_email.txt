@@ -1,0 +1,17 @@
+Pozdrav {{ user.username }},
+
+{% if account_state.status == "delete_requested" %}
+Zaprimili smo pokušaj prijave na tvoj BlogPlatform račun koji je u postupku brisanja.
+
+Ako želiš otkazati brisanje i ponovno aktivirati račun, klikni na ovaj link:
+{{ reactivation_url }}
+
+Ako to nisi bio/la ti, ignoriraj ovu poruku.
+{% else %}
+Zaprimili smo pokušaj prijave na tvoj deaktivirani BlogPlatform račun.
+
+Ako želiš ponovno aktivirati račun, klikni na ovaj link:
+{{ reactivation_url }}
+
+Ako to nisi bio/la ti, ignoriraj ovu poruku.
+{% endif %}

@@ -1076,34 +1076,3 @@ class AmbientMusicTrack(models.Model):
             "audio_url": self.audio_url,
         }
 
-class AccountStatus(models.Model):
-    STATUS_ACTIVE = "active"
-    STATUS_DEACTIVATED = "deactivated"
-    STATUS_DELETE_REQUESTED = "delete_requested"
-
-    STATUS_CHOICES = (
-        (STATUS_ACTIVE, "Aktivan"),
-        (STATUS_DEACTIVATED, "Deaktiviran"),
-        (STATUS_DELETE_REQUESTED, "Zatraženo brisanje"),
-    )
-
-    user = models.OneToOneField(
-        User,
-        on_delete=models.CASCADE,
-        related_name="account_status_state"
-    )
-    status = models.CharField(
-        max_length=30,
-        choices=STATUS_CHOICES,
-        default=STATUS_ACTIVE
-    )
-    deactivated_at = models.DateTimeField(blank=True, null=True)
-    deletion_requested_at = models.DateTimeField(blank=True, null=True)
-    updated_at = models.DateTimeField(auto_now=True)
-
-    class Meta:
-        verbose_name = "Status korisničkog računa"
-        verbose_name_plural = "Statusi korisničkih računa"
-
-    def __str__(self):
-        return f"{self.user.username} - {self.get_status_display()}"

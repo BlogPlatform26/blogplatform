@@ -1,0 +1,72 @@
+{% extends "blog/base.html" %}
+
+{% block title %}Deaktivacija računa{% endblock %}
+
+{% block left_sidebar %}{% endblock %}
+{% block right_sidebar %}{% endblock %}
+
+{% block content %}
+<div class="container py-4" style="max-width: 720px;">
+    <div class="card shadow-sm border-danger">
+        <div class="card-body">
+            <h3 class="mb-3 text-danger">Deaktivacija računa</h3>
+
+            <p class="mb-2">
+                Jesi li siguran da želiš deaktivirati svoj račun?
+            </p>
+
+            <p class="text-muted">
+                Nakon deaktivacije više se nećeš moći prijaviti.
+                Tvoje objave i komentari ostaju spremljeni, ali račun više neće biti aktivan.
+                Ako se kasnije želiš vratiti, administrator mora ponovno aktivirati račun.
+            </p>
+
+            <div class="alert alert-warning">
+                Za potvrdu upiši <strong>deaktiviraj</strong>.
+            </div>
+
+            <form method="POST" class="mt-4">
+                {% csrf_token %}
+
+                <div class="mb-3">
+                    <label class="form-label" for="confirmText">Potvrda</label>
+                    <input
+                        type="text"
+                        id="confirmText"
+                        name="confirm_text"
+                        class="form-control"
+                        placeholder="deaktiviraj"
+                        required>
+                </div>
+
+                {% if request.user.has_usable_password %}
+                <div class="mb-3">
+                    <label class="form-label" for="passwordInput">Lozinka</label>
+                    <input
+                        type="password"
+                        id="passwordInput"
+                        name="password"
+                        class="form-control"
+                        autocomplete="current-password"
+                        required>
+
+                    <div class="form-text">
+                        Lozinka je potrebna zbog sigurnosti.
+                    </div>
+                </div>
+                {% endif %}
+
+                <div class="d-flex flex-wrap gap-2">
+                    <button type="submit" class="btn btn-danger">
+                        Deaktiviraj račun
+                    </button>
+
+                    <a href="{% url 'blog_settings' %}?tab=postavke&settings_tab=sigurnost" class="btn btn-outline-secondary">
+                        Odustani
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

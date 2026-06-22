@@ -1,0 +1,38 @@
+{% extends "blog/base.html" %}
+
+{% block title %}Provjeri email{% endblock %}
+
+{% block left_sidebar %}{% endblock %}
+{% block right_sidebar %}{% endblock %}
+
+{% block content %}
+<div class="container py-4" style="max-width: 720px;">
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <h3 class="mb-3">Provjeri email</h3>
+
+            {% if account_status == "delete_requested" %}
+                <p>
+                    Tvoj račun je u postupku brisanja.
+                    Poslali smo ti email s linkom kojim možeš otkazati brisanje i ponovno aktivirati račun.
+                </p>
+            {% else %}
+                <p>
+                    Tvoj račun je deaktiviran.
+                    Poslali smo ti email s linkom za ponovno aktiviranje računa.
+                </p>
+            {% endif %}
+
+            {% if email %}
+                <p class="text-muted">
+                    Email je poslan na: <strong>{{ email }}</strong>
+                </p>
+            {% endif %}
+
+            <a href="{% url 'login' %}" class="btn btn-primary">
+                Natrag na prijavu
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

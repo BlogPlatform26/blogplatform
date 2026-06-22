@@ -401,8 +401,7 @@
             <div class="text-muted small">Trenutno nemaš ograničenih korisnika.</div>
         {% endif %}
     </div>
-
-{% endif %}
+    {% endif %}
 
 {% endif %}
 
@@ -724,43 +723,3 @@
 }
 </style>
 
-{% if settings_tab == 'sigurnost' %}
-<div class="card p-4 mt-4 shadow-sm border-danger">
-    <div class="mb-3">
-        <h5 class="mb-1 text-danger">Deaktivacija/brisanje računa</h5>
-        <div class="text-muted small">
-            Ovdje možeš privremeno deaktivirati račun ili zatražiti brisanje računa.
-        </div>
-    </div>
-
-    <div class="border rounded p-3 mb-3">
-        <div class="d-flex flex-wrap justify-content-between align-items-start gap-3">
-            <div>
-                <h6 class="mb-1">Deaktivacija računa</h6>
-                <div class="text-muted small">
-                    Račun se privremeno gasi. Možeš ga kasnije ponovno aktivirati preko emaila kada se pokušaš prijaviti.
-                </div>
-            </div>
-
-            <a href="{% url 'deactivate_account' %}" class="btn btn-outline-danger">
-                Deaktiviraj račun
-            </a>
-        </div>
-    </div>
-
-    <div class="border rounded p-3">
-        <div class="d-flex flex-wrap justify-content-between align-items-start gap-3">
-            <div>
-                <h6 class="mb-1">Brisanje računa</h6>
-                <div class="text-muted small">
-                    Račun se odmah deaktivira i označi za brisanje. Ako se predomisliš, možeš otkazati brisanje preko emaila pri ponovnoj prijavi.
-                </div>
-            </div>
-
-            <a href="{% url 'request_delete_account' %}" class="btn btn-danger">
-                Zatraži brisanje
-            </a>
-        </div>
-    </div>
-</div>
-{% endif %}

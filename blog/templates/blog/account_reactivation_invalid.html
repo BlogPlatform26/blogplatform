@@ -1,0 +1,28 @@
+{% extends "blog/base.html" %}
+
+{% block title %}Link nije valjan{% endblock %}
+
+{% block left_sidebar %}{% endblock %}
+{% block right_sidebar %}{% endblock %}
+
+{% block content %}
+<div class="container py-4" style="max-width: 720px;">
+    <div class="card shadow-sm border-warning">
+        <div class="card-body">
+            <h3 class="mb-3 text-warning">Link nije valjan</h3>
+
+            <p>
+                Link za ponovno aktiviranje računa nije valjan ili je istekao.
+            </p>
+
+            <p class="text-muted">
+                Pokušaj se ponovno prijaviti kako bismo ti poslali novi email.
+            </p>
+
+            <a href="{% url 'login' %}" class="btn btn-primary">
+                Idi na prijavu
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

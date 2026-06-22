@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="hr">
+<body style="font-family: Arial, sans-serif; line-height: 1.5;">
+    <h2>BlogPlatform</h2>
+
+    <p>Pozdrav {{ user.username }},</p>
+
+    {% if account_state.status == "delete_requested" %}
+        <p>
+            Zaprimili smo pokušaj prijave na tvoj BlogPlatform račun koji je u postupku brisanja.
+        </p>
+
+        <p>
+            Ako želiš otkazati brisanje i ponovno aktivirati račun, klikni na gumb ispod.
+        </p>
+
+        <p>
+            <a href="{{ reactivation_url }}"
+               style="display:inline-block;padding:10px 16px;background:#dc3545;color:#ffffff;text-decoration:none;border-radius:6px;">
+                Otkaži brisanje i aktiviraj račun
+            </a>
+        </p>
+    {% else %}
+        <p>
+            Zaprimili smo pokušaj prijave na tvoj deaktivirani BlogPlatform račun.
+        </p>
+
+        <p>
+            Ako želiš ponovno aktivirati račun, klikni na gumb ispod.
+        </p>
+
+        <p>
+            <a href="{{ reactivation_url }}"
+               style="display:inline-block;padding:10px 16px;background:#0d6efd;color:#ffffff;text-decoration:none;border-radius:6px;">
+                Aktiviraj račun
+            </a>
+        </p>
+    {% endif %}
+
+    <p>Ako to nisi bio/la ti, ignoriraj ovu poruku.</p>
+</body>
+</html>
