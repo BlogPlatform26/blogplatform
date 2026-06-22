@@ -1,4 +1,229 @@
-﻿{% load custom_tags static %}
+{% load custom_tags static %}
+<style id="bp-mention-style">
+.bp-mention-box {
+    position: absolute;
+    z-index: 99999;
+    min-width: 220px;
+    max-width: 320px;
+    background: #fff;
+    border: 1px solid rgba(111, 66, 193, 0.25);
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    padding: 6px;
+    display: none;
+}
+
+.bp-mention-item {
+    width: 100%;
+    border: 0;
+    background: transparent;
+    text-align: left;
+    padding: 8px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.bp-mention-item:hover,
+.bp-mention-item.active {
+    background: rgba(111, 66, 193, 0.10);
+}
+
+.bp-mention-username {
+    font-weight: 700;
+    color: #6f2cff;
+}
+
+.bp-mention-empty {
+    padding: 8px 10px;
+    font-size: 13px;
+    color: #666;
+}
+</style>
+
+<script id="bp-mention-script">
+(function () {
+    const searchUrl = "{% url 'mention_search' %}";
+    let activeTextarea = null;
+    let activeStart = null;
+    let activeEnd = null;
+    let results = [];
+    let selectedIndex = 0;
+
+    const box = document.createElement("div");
+    box.className = "bp-mention-box";
+    document.body.appendChild(box);
+
+    function getMentionInfo(textarea) {
+        const cursor = textarea.selectionStart;
+        const textBeforeCursor = textarea.value.slice(0, cursor);
+        const match = textBeforeCursor.match(/(^|\s)@([A-Za-z0-9_.+-]{0,40})$/);
+
+        if (!match) {
+            return null;
+        }
+
+        const query = match[2] || "";
+        const start = cursor - query.length - 1;
+
+        return {
+            query: query,
+            start: start,
+            end: cursor
+        };
+    }
+
+    function positionBox(textarea) {
+        const rect = textarea.getBoundingClientRect();
+
+        box.style.left = (window.scrollX + rect.left) + "px";
+        box.style.top = (window.scrollY + rect.bottom + 6) + "px";
+        box.style.width = Math.min(rect.width, 320) + "px";
+    }
+
+    function hideBox() {
+        box.style.display = "none";
+        box.innerHTML = "";
+        activeTextarea = null;
+        activeStart = null;
+        activeEnd = null;
+        results = [];
+        selectedIndex = 0;
+    }
+
+    function insertMention(user) {
+        if (!activeTextarea || activeStart === null || activeEnd === null) {
+            return;
+        }
+
+        const before = activeTextarea.value.slice(0, activeStart);
+        const after = activeTextarea.value.slice(activeEnd);
+        const mention = "@" + user.username + " ";
+
+        activeTextarea.value = before + mention + after;
+
+        const newCursor = (before + mention).length;
+        activeTextarea.focus();
+        activeTextarea.setSelectionRange(newCursor, newCursor);
+
+        hideBox();
+    }
+
+    function renderResults() {
+        box.innerHTML = "";
+
+        if (!results.length) {
+            const empty = document.createElement("div");
+            empty.className = "bp-mention-empty";
+            empty.textContent = "Nema korisnika.";
+            box.appendChild(empty);
+            box.style.display = "block";
+            return;
+        }
+
+        results.forEach(function (user, index) {
+            const button = document.createElement("button");
+            button.type = "button";
+            button.className = "bp-mention-item" + (index === selectedIndex ? " active" : "");
+            button.innerHTML = '<span class="bp-mention-username">@' + user.username + '</span>';
+
+            if (user.label && user.label !== user.username) {
+                button.innerHTML += '<br><small>' + user.label + '</small>';
+            }
+
+            button.addEventListener("mousedown", function (event) {
+                event.preventDefault();
+                insertMention(user);
+            });
+
+            box.appendChild(button);
+        });
+
+        box.style.display = "block";
+    }
+
+    async function searchUsers(textarea) {
+        const info = getMentionInfo(textarea);
+
+        if (!info) {
+            hideBox();
+            return;
+        }
+
+        activeTextarea = textarea;
+        activeStart = info.start;
+        activeEnd = info.end;
+
+        positionBox(textarea);
+
+        try {
+            const response = await fetch(searchUrl + "?q=" + encodeURIComponent(info.query), {
+                headers: {
+                    "X-Requested-With": "XMLHttpRequest"
+                }
+            });
+
+            if (!response.ok) {
+                hideBox();
+                return;
+            }
+
+            const data = await response.json();
+            results = data.results || [];
+            selectedIndex = 0;
+            renderResults();
+        } catch (error) {
+            hideBox();
+        }
+    }
+
+    document.addEventListener("input", function (event) {
+        const textarea = event.target;
+
+        if (!textarea || textarea.tagName !== "TEXTAREA" || textarea.name !== "content") {
+            return;
+        }
+
+        searchUsers(textarea);
+    });
+
+    document.addEventListener("keydown", function (event) {
+        if (box.style.display !== "block" || !activeTextarea) {
+            return;
+        }
+
+        if (event.key === "ArrowDown") {
+            event.preventDefault();
+            selectedIndex = Math.min(selectedIndex + 1, results.length - 1);
+            renderResults();
+        }
+
+        if (event.key === "ArrowUp") {
+            event.preventDefault();
+            selectedIndex = Math.max(selectedIndex - 1, 0);
+            renderResults();
+        }
+
+        if (event.key === "Enter" && results.length) {
+            event.preventDefault();
+            insertMention(results[selectedIndex]);
+        }
+
+        if (event.key === "Escape") {
+            hideBox();
+        }
+    });
+
+    document.addEventListener("click", function (event) {
+        if (!box.contains(event.target)) {
+            hideBox();
+        }
+    });
+
+    window.addEventListener("resize", hideBox);
+    window.addEventListener("scroll", hideBox, true);
+})();
+</script>
 <style id="bp-comment-word-fix">
 .comment-body {
     min-width: 0 !important;
@@ -93,7 +318,7 @@
 
   {% csrf_token %}
 
-  <button type="submit" class="comment-action-btn comment-action-danger" title="IzbriÅ¡i" onclick="return confirm('Jeste li sigurni da Å¾elite izbrisati komentar?')">
+  <button type="submit" class="comment-action-btn comment-action-danger" title="Izbriši" onclick="return confirm('Jeste li sigurni da želite izbrisati komentar?')">
 
   <i class="bi bi-trash"></i>
 
@@ -195,7 +420,7 @@
   <form method="POST" action="{% url 'delete_comment' comment.id %}" class="d-inline">
 
   {% csrf_token %}
-  <button type="submit" class="comment-action-btn comment-action-danger" title="IzbriÅ¡i" onclick="return confirm('Jeste li sigurni da Å¾elite izbrisati komentar?')">
+  <button type="submit" class="comment-action-btn comment-action-danger" title="Izbriši" onclick="return confirm('Jeste li sigurni da želite izbrisati komentar?')">
 
   <i class="bi bi-trash"></i>
 
@@ -253,7 +478,7 @@
 
   <a href="{% url 'post_detail' post.id %}#comments-detail" class="text-decoration-none">
 
-  PrikaÅ¾i sve komentare ({{ post.comments.count }})
+  Prikaži sve komentare ({{ post.comments.count }})
 
   </a>
 
@@ -270,7 +495,7 @@
 
   {% if is_restricted %}
 
-  <p class="small text-muted">Autor te je ograniÄio pa ne moÅ¾eÅ¡ komentirati.</p>
+  <p class="small text-muted">Autor te je ograničio pa ne možeš komentirati.</p>
 
   {% elif user.is_authenticated or post.allow_anonymous_comments %}
 
@@ -307,7 +532,7 @@
 
   {% else %}
 
-  <p class="small text-muted">Komentiranje je iskljuÄeno na ovom blogu.</p>
+  <p class="small text-muted">Komentiranje je isključeno na ovom blogu.</p>
   {% endif %}
 
 </div>

@@ -29,7 +29,7 @@
                     {% else %}
                         .
                     {% endif %}
-                {% elif notification.notification_type == "comment" %}
+                {% elif notification.notification_type == "mention" %} {{ notification.sender.username }} te označio/la u komentaru{% if notification.post %} na postu "{{ notification.post.title }}".{% else %}.{% endif %} {% elif notification.notification_type == "comment" %}
                     <strong>{{ notification.sender.username }}</strong> je komentirao vaš post
                     {% if notification.post %}
                         "{{ notification.post.title }}".

@@ -1355,7 +1355,7 @@
                                     </div>
                                 </a>
 
-                            {% elif notification.notification_type == "comment" %}
+                            {% elif notification.notification_type == "mention" %} {{ notification.sender.username }} te označio/la u komentaru{% if notification.post %} na postu "{{ notification.post.title }}".{% else %}.{% endif %} {% elif notification.notification_type == "comment" %}
                                 <a class="dropdown-item small {% if not notification.is_read %}unread-notification{% endif %}"
                                    href="{% url 'notification_redirect' notification.id %}">
                                     <div class="d-flex align-items-start gap-2">

@@ -17,6 +17,7 @@ from blog.views import analytics_ping, blog_analytics_summary
 
 
 urlpatterns = [
+    path("mentions/search/", views.mention_search, name="mention_search"),
     
     path("ckeditor5/", include("django_ckeditor_5.urls")),
 path("blog/settings/export-posts/", export_my_posts, name="export_my_posts"),

@@ -28,3 +28,40 @@ def request_delete_account(request, *args, **kwargs):
 def reactivate_account(request, *args, **kwargs):
     from blog.view_handlers.auth_views import reactivate_account as _view
     return _view(request, *args, **kwargs)
+
+# BLOGPLATFORM_MENTION_SEARCH_START
+def mention_search(request):
+    from django.contrib.auth.decorators import login_required
+    from django.contrib.auth.models import User
+    from django.http import JsonResponse
+
+    @login_required
+    def _view(request):
+        q = (request.GET.get("q") or "").strip()
+
+        users = User.objects.filter(is_active=True).exclude(username="anonimno")
+
+        if q:
+            users = users.filter(username__icontains=q)
+
+        users = users.order_by("username")[:8]
+
+        results = []
+
+        for user in users:
+            label = ""
+
+            try:
+                label = user.profile.blog_name or user.username
+            except Exception:
+                label = user.username
+
+            results.append({
+                "username": user.username,
+                "label": label,
+            })
+
+        return JsonResponse({"results": results})
+
+    return _view(request)
+# BLOGPLATFORM_MENTION_SEARCH_END

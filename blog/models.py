@@ -1107,3 +1107,58 @@ class AccountStatus(models.Model):
 
     def __str__(self):
         return f"{self.user.username} - {self.get_status_display()}"
+
+# BLOGPLATFORM_MENTION_NOTIFICATIONS_START
+from django.db.models.signals import post_save as _bp_mention_post_save
+from django.dispatch import receiver as _bp_mention_receiver
+
+def _bp_extract_mentions(text):
+    import re
+
+    if not text:
+        return []
+
+    found = re.findall(r"(?<!\w)@([A-Za-z0-9_.+-]{2,150})", str(text))
+    cleaned = []
+
+    for username in found:
+        username = username.strip(".,!?;:()[]{}<>\"'")
+        if username and username.lower() not in [x.lower() for x in cleaned]:
+            cleaned.append(username)
+
+    return cleaned[:20]
+
+
+@_bp_mention_receiver(_bp_mention_post_save, sender=Comment)
+def _bp_create_mention_notifications(sender, instance, created, **kwargs):
+    if not created:
+        return
+
+    if not instance or not instance.author_id:
+        return
+
+    if getattr(instance, "is_anonymous", False):
+        return
+
+    mentioned_usernames = _bp_extract_mentions(instance.content)
+
+    if not mentioned_usernames:
+        return
+
+    for username in mentioned_usernames:
+        mentioned_user = User.objects.filter(username__iexact=username, is_active=True).first()
+
+        if not mentioned_user:
+            continue
+
+        if mentioned_user.id == instance.author_id:
+            continue
+
+        Notification.objects.get_or_create(
+            recipient=mentioned_user,
+            sender=instance.author,
+            post=instance.post,
+            comment=instance,
+            notification_type="mention",
+        )
+# BLOGPLATFORM_MENTION_NOTIFICATIONS_END
