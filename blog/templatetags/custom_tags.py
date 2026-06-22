@@ -139,3 +139,109 @@ def comment_words(value):
 
     return mark_safe(" ".join(html_words))
 
+# BLOGPLATFORM_MENTION_LINKS_START
+@register.filter
+def link_mentions(value):
+    import re
+    from django.contrib.auth.models import User
+    from django.urls import reverse
+    from django.utils.html import escape
+    from django.utils.safestring import mark_safe
+
+    if value is None:
+        return ""
+
+    text = str(value)
+    text = text.replace("\r\n", "\n").replace("\r", "\n")
+    text = text.replace("\xa0", " ")
+    text = re.sub(r"<br\s*/?>", " ", text, flags=re.IGNORECASE)
+    text = re.sub(r"<[^>]+>", "", text)
+    text = re.sub(r"\s+", " ", text).strip()
+
+    if not text:
+        return ""
+
+    html_parts = []
+
+    for token in text.split(" "):
+        match = re.match(r"^@([A-Za-z0-9_.+-]{2,150})([.,!?;:]*)$", token)
+
+        if match:
+            typed_username = match.group(1)
+            punctuation = match.group(2) or ""
+
+            user = User.objects.filter(
+                username__iexact=typed_username,
+                is_active=True
+            ).first()
+
+            if user:
+                url = reverse("user_blog", args=[user.username])
+
+                html_parts.append(
+                    f'<a class="bp-mention-link bp-comment-word" href="{escape(url)}">'
+                    f'@{escape(user.username)}'
+                    f'</a>{escape(punctuation)}'
+                )
+                continue
+
+        html_parts.append(
+            f'<span class="bp-comment-word">{escape(token)}</span>'
+        )
+
+    return mark_safe(" ".join(html_parts))
+
+
+@register.filter
+def notification_url(notification):
+    from django.urls import reverse
+
+    if getattr(notification, "notification_type", "") == "follow" and getattr(notification, "sender_id", None):
+        return reverse("user_blog", args=[notification.sender.username])
+
+    if getattr(notification, "post_id", None):
+        url = reverse("post_detail", args=[notification.post.id])
+
+        if getattr(notification, "comment_id", None):
+            url += f"#comment-{notification.comment.id}"
+
+        return url
+
+    return reverse("notifications")
+
+
+@register.filter
+def notification_message(notification):
+    from django.utils.html import escape
+    from django.utils.safestring import mark_safe
+
+    sender = getattr(notification, "sender", None)
+    sender_name = escape(getattr(sender, "username", "Korisnik"))
+
+    notification_type = getattr(notification, "notification_type", "")
+    post = getattr(notification, "post", None)
+
+    post_title = ""
+    if post:
+        post_title = escape(getattr(post, "title", ""))
+
+    if notification_type == "follow":
+        return mark_safe(f'<strong>{sender_name}</strong> vas je zapratio.')
+
+    if notification_type == "like":
+        if post_title:
+            return mark_safe(f'<strong>{sender_name}</strong> je lajkao vaš post <strong>"{post_title}"</strong>.')
+        return mark_safe(f'<strong>{sender_name}</strong> je lajkao vaš post.')
+
+    if notification_type == "comment":
+        if post_title:
+            return mark_safe(f'<strong>{sender_name}</strong> je komentirao vaš post <strong>"{post_title}"</strong>.')
+        return mark_safe(f'<strong>{sender_name}</strong> je komentirao vaš post.')
+
+    if notification_type == "mention":
+        if post_title:
+            return mark_safe(f'<strong>{sender_name}</strong> vas je označio/la u komentaru na postu <strong>"{post_title}"</strong>.')
+        return mark_safe(f'<strong>{sender_name}</strong> vas je označio/la u komentaru.')
+
+    return mark_safe("Nova obavijest.")
+# BLOGPLATFORM_MENTION_LINKS_END
