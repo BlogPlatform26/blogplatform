@@ -464,6 +464,21 @@ def save_user_profile(sender, instance, **kwargs):
     profile.save()
 
 
+
+
+class BlogDesignPreference(models.Model):
+    template = models.CharField(max_length=80, unique=True)
+    data = models.JSONField(default=dict, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = "Postavke dizajna bloga"
+        verbose_name_plural = "Postavke dizajna blogova"
+
+    def __str__(self):
+        return self.template
+
 class UserBox(models.Model):
     POSITION_CHOICES = (
         ("left", "Left"),

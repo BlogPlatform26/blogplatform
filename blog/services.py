@@ -3510,3 +3510,130 @@ def get_blog_page_response(request, blog_user, template_name, allow_follow=True,
         archive_base_url=archive_base_url,
     )
     return response
+
+
+# BLOGPLATFORM_DB_DESIGN_PREFERENCES_START
+# Pravo rješenje: live uređivanje dizajna sprema se u bazu, ne u blog/blog_preferences.json.
+# JSON ostaje samo fallback/default za stare postavke i za vrijeme prije migrate.
+
+try:
+    _bp_legacy_get_blog_preferences = get_blog_preferences
+except NameError:
+    _bp_legacy_get_blog_preferences = None
+
+try:
+    _bp_legacy_set_blog_preferences = set_blog_preferences
+except NameError:
+    _bp_legacy_set_blog_preferences = None
+
+
+def _bp_design_template_key(user_or_template):
+    if isinstance(user_or_template, str):
+        return user_or_template.strip() or "default"
+
+    profile = getattr(user_or_template, "profile", None)
+
+    if profile is not None:
+        template = getattr(profile, "template", None)
+
+        if template:
+            return str(template).strip() or "default"
+
+    template = getattr(user_or_template, "template", None)
+
+    if template:
+        return str(template).strip() or "default"
+
+    return "default"
+
+
+def _bp_safe_legacy_blog_preferences(user_or_template):
+    if _bp_legacy_get_blog_preferences is None:
+        return {}
+
+    try:
+        legacy = _bp_legacy_get_blog_preferences(user_or_template)
+    except Exception:
+        return {}
+
+    if isinstance(legacy, dict):
+        return dict(legacy)
+
+    return {}
+
+
+def _bp_merge_design_preferences(base, stored):
+    result = dict(base or {})
+
+    if isinstance(stored, dict):
+        for key, value in stored.items():
+            if (
+                key in result
+                and isinstance(result.get(key), dict)
+                and isinstance(value, dict)
+            ):
+                merged = dict(result.get(key) or {})
+                merged.update(value)
+                result[key] = merged
+            else:
+                result[key] = value
+
+    return result
+
+
+def get_blog_preferences(user_or_template):
+    template = _bp_design_template_key(user_or_template)
+    base = _bp_safe_legacy_blog_preferences(user_or_template)
+
+    try:
+        from django.db.utils import OperationalError, ProgrammingError
+        from blog.models import BlogDesignPreference
+
+        obj = BlogDesignPreference.objects.filter(template=template).first()
+
+        if obj and isinstance(obj.data, dict):
+            return _bp_merge_design_preferences(base, obj.data)
+
+        return base
+
+    except (OperationalError, ProgrammingError):
+        # Tablica još ne postoji prije migrate-a.
+        return base
+
+    except Exception:
+        return base
+
+
+def set_blog_preferences(user_or_template, preferences):
+    template = _bp_design_template_key(user_or_template)
+
+    if not isinstance(preferences, dict):
+        preferences = {}
+
+    try:
+        from django.db.utils import OperationalError, ProgrammingError
+        from blog.models import BlogDesignPreference
+
+        BlogDesignPreference.objects.update_or_create(
+            template=template,
+            defaults={"data": preferences},
+        )
+
+        return preferences
+
+    except (OperationalError, ProgrammingError):
+        # Ako migrate još nije pokrenut, fallback na staro spremanje.
+        if _bp_legacy_set_blog_preferences is not None:
+            return _bp_legacy_set_blog_preferences(user_or_template, preferences)
+
+        return preferences
+
+    except Exception:
+        if _bp_legacy_set_blog_preferences is not None:
+            try:
+                return _bp_legacy_set_blog_preferences(user_or_template, preferences)
+            except Exception:
+                pass
+
+        return preferences
+# BLOGPLATFORM_DB_DESIGN_PREFERENCES_END
