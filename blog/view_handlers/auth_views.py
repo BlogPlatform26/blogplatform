@@ -270,10 +270,28 @@ def _format_seconds_as_minutes(seconds):
 
 
 
+def _turnstile_should_run(request=None):
+    if not getattr(settings, 'TURNSTILE_ENABLED', False):
+        return False
+
+    # Lokalno testiranje: ne prikazuj i ne provjeravaj Turnstile.
+    # Produkcija ostaje zaštićena jer DEBUG treba biti False.
+    if getattr(settings, 'DEBUG', False):
+        return False
+
+    if request is not None:
+        host = request.get_host().split(':')[0].lower()
+
+        if host in {'localhost', '127.0.0.1', '0.0.0.0'}:
+            return False
+
+    return True
+
+
 def _register_context(form):
     return {
         'form': form,
-        'turnstile_enabled': getattr(settings, 'TURNSTILE_ENABLED', False),
+        'turnstile_enabled': _turnstile_should_run(),
         'turnstile_site_key': getattr(settings, 'TURNSTILE_SITE_KEY', ''),
     }
 
@@ -281,9 +299,9 @@ def _register_context(form):
 def _verify_turnstile(request):
     """
     Provjerava Cloudflare Turnstile token na serveru.
-    Ako TURNSTILE_ENABLED=False, provjera se preskače.
+    Lokalno se preskače da ne smeta testiranju.
     """
-    if not getattr(settings, 'TURNSTILE_ENABLED', False):
+    if not _turnstile_should_run(request):
         return True, ''
 
     site_key = (getattr(settings, 'TURNSTILE_SITE_KEY', '') or '').strip()
@@ -293,6 +311,7 @@ def _verify_turnstile(request):
         return False, 'Sigurnosna provjera nije pravilno podešena.'
 
     token = (request.POST.get('cf-turnstile-response') or '').strip()
+
     if not token:
         return False, 'Potvrdi sigurnosnu provjeru prije registracije.'
 
@@ -312,6 +331,7 @@ def _verify_turnstile(request):
     try:
         with urllib.request.urlopen(verify_request, timeout=10) as response:
             result = json.loads(response.read().decode('utf-8'))
+
     except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError, json.JSONDecodeError):
         return False, 'Sigurnosna provjera trenutno nije dostupna. Pokušaj ponovno.'
 
