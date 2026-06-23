@@ -530,3 +530,127 @@ class BugReportForm(forms.ModelForm):
         value = (self.cleaned_data.get("request_type") or "kvar").strip().lower()
         allowed = {choice[0] for choice in self.REQUEST_TYPE_CHOICES}
         return value if value in allowed else "kvar"
+
+# BLOGPLATFORM_EMAIL_REQUIRED_PATCH_START
+# Stroga registracija: email je obavezan jer se račun aktivira preko emaila.
+
+class CustomUserCreationForm(UserCreationForm):
+    email = forms.EmailField(
+        required=True,
+        label="Email",
+        widget=forms.EmailInput(attrs={
+            "class": "form-control",
+            "autocomplete": "email",
+            "required": "required",
+            "placeholder": "Upiši email adresu",
+        })
+    )
+
+    blog_name = forms.CharField(
+        max_length=200,
+        required=True,
+        label="Naziv bloga",
+        widget=forms.TextInput(attrs={
+            "class": "form-control",
+            "required": "required",
+        })
+    )
+
+    class Meta:
+        model = User
+        fields = ["username", "email", "password1", "password2", "blog_name"]
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        min_length = getattr(settings, "PASSWORD_MIN_LENGTH", 10)
+
+        self.fields["username"].widget.attrs.update({
+            "class": "form-control",
+            "autocomplete": "username",
+            "required": "required",
+        })
+
+        self.fields["email"].widget.attrs.update({
+            "class": "form-control",
+            "autocomplete": "email",
+            "required": "required",
+        })
+
+        self.fields["password1"].widget.attrs.update({
+            "class": "form-control",
+            "autocomplete": "new-password",
+            "required": "required",
+        })
+
+        self.fields["password2"].widget.attrs.update({
+            "class": "form-control",
+            "autocomplete": "new-password",
+            "required": "required",
+        })
+
+        self.fields["blog_name"].widget.attrs.update({
+            "class": "form-control",
+            "required": "required",
+        })
+
+        self.fields["password1"].help_text = (
+            f"Lozinka mora imati najmanje {min_length} znakova. "
+            "Nemoj koristiti samo brojeve, prečestu lozinku ili podatke slične korisničkom imenu."
+        )
+        self.fields["password2"].help_text = "Ponovno upiši istu lozinku za potvrdu."
+
+    def clean_email(self):
+        email = (self.cleaned_data.get("email") or "").strip().lower()
+
+        if not email:
+            raise forms.ValidationError("Email adresa je obavezna.")
+
+        if User.objects.filter(email__iexact=email).exists():
+            raise forms.ValidationError("Korisnik s ovom email adresom već postoji.")
+
+        return email
+
+    def save(self, commit=True):
+        user = super().save(commit=False)
+        user.email = self.cleaned_data["email"].strip().lower()
+
+        if commit:
+            user.save()
+
+            profile = user.profile
+            profile.blog_name = self.cleaned_data["blog_name"].strip()
+            profile.save()
+
+        return user
+
+
+class UserUpdateForm(forms.ModelForm):
+    email = forms.EmailField(
+        required=True,
+        label="Email",
+        widget=forms.EmailInput(attrs={
+            "class": "form-control",
+            "required": "required",
+        })
+    )
+
+    class Meta:
+        model = User
+        fields = ["username", "email"]
+        widgets = {
+            "username": forms.TextInput(attrs={"class": "form-control"}),
+            "email": forms.EmailInput(attrs={"class": "form-control", "required": "required"}),
+        }
+
+    def clean_email(self):
+        email = (self.cleaned_data.get("email") or "").strip().lower()
+
+        if not email:
+            raise forms.ValidationError("Email adresa je obavezna.")
+
+        if User.objects.filter(email__iexact=email).exclude(pk=self.instance.pk).exists():
+            raise forms.ValidationError("Korisnik s ovom email adresom već postoji.")
+
+        return email
+# BLOGPLATFORM_EMAIL_REQUIRED_PATCH_END

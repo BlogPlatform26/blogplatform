@@ -425,6 +425,12 @@ def register(request):
             return render(request, 'blog/register.html', _register_context(form))
 
         if form.is_valid():
+            # BLOGPLATFORM_EMAIL_REQUIRED_REGISTER_GUARD
+            email = (form.cleaned_data.get('email') or '').strip().lower()
+            if not email:
+                form.add_error('email', 'Email adresa je obavezna.')
+                return render(request, 'blog/register.html', _register_context(form))
+
             user = form.save(commit=False)
             user.is_active = False
             user.save()
@@ -521,7 +527,11 @@ def activate(request, uidb64, token):
         user = None
 
     if user is not None and default_token_generator.check_token(user, token):
-        user.is_active = True
+        # BLOGPLATFORM_EMAIL_REQUIRED_BEFORE_ACTIVATION
+        if not (user.email or '').strip():
+            messages.error(request, 'Računblog/register.html', _register_context(form))
+
+            user = form.save(commit=False)
         user.save()
         login(request, user)
         _clear_pending_activation_user(request)
