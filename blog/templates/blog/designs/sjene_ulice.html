@@ -356,3 +356,36 @@ input.form-control::placeholder {
     </style>
     {% include "blog/components/blog_posts.html" %}
 {% endblock %}
+
+/* BLOGPLATFORM_COMMENT_WHITE_TEXT_START */
+.comment-body,
+.comment-body p,
+.comment-body div,
+.comment-text,
+.comment-text *,
+.bp-comment-text,
+.bp-comment-text *,
+.bp-comment-word,
+.comment-author,
+.comment-time,
+.comment-header,
+.comment-content {
+    color: #ffffff !important;
+}
+
+.comment-body a,
+.comment-text a,
+.bp-comment-text a {
+    color: #ffffff !important;
+    text-decoration: underline !important;
+}
+
+.comment-edit-form textarea,
+.comment-edit-form textarea.form-control {
+    color: #ffffff !important;
+}
+
+.comment-edit-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.75) !important;
+}
+/* BLOGPLATFORM_COMMENT_WHITE_TEXT_END */
