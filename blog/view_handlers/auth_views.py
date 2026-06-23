@@ -578,31 +578,56 @@ def activate(request, uidb64, token):
         user = None
 
     if user is not None and default_token_generator.check_token(user, token):
-        # BLOGPLATFORM_EMAIL_REQUIRED_BEFORE_ACTIVATION
-        if not (user.email or '').strip():
-            messages.error(request, 'Računblog/register.html', _register_context(form))
+        if not (user.email or "").strip():
+            messages.error(
+                request,
+                "Račun se ne može aktivirati bez email adrese."
+            )
+            return render(request, "blog/activation_invalid.html")
 
-            user = form.save(commit=False)
-        user.save()
-        login(request, user)
+        user.is_active = True
+        user.save(update_fields=["is_active"])
+
+        try:
+            from blog.models import AccountStatus
+
+            account_state, created = AccountStatus.objects.get_or_create(user=user)
+            account_state.status = AccountStatus.STATUS_ACTIVE
+            account_state.deactivated_at = None
+            account_state.deletion_requested_at = None
+            account_state.save(update_fields=[
+                "status",
+                "deactivated_at",
+                "deletion_requested_at",
+                "updated_at",
+            ])
+        except Exception:
+            pass
+
         _clear_pending_activation_user(request)
+
+        login(request, user)
+
         log_security_event(
             request,
-            event_type='activation_success',
+            event_type="activation_success",
             user=user,
-            severity='info',
-            message='Račun je uspješno aktiviran.',
+            severity="info",
+            message="Račun je uspješno aktiviran.",
         )
-        messages.success(request, 'Račun je uspješno aktiviran.')
-        return redirect('author_onboarding')
+
+        messages.success(request, "Račun je uspješno aktiviran.")
+        return redirect("author_onboarding")
+
     log_security_event(
         request,
-        event_type='activation_failed',
-        severity='warning',
-        message='Neuspješna aktivacija računa.',
-        metadata={'uidb64': uidb64},
+        event_type="activation_failed",
+        severity="warning",
+        message="Neuspješna aktivacija računa.",
+        metadata={"uidb64": uidb64},
     )
-    return render(request, 'blog/activation_invalid.html')
+
+    return render(request, "blog/activation_invalid.html")
 
 
 
