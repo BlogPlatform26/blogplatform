@@ -99,7 +99,7 @@ footer {
 
 .blog-page-title,
 .blog-page-title a {
-    color: #fff5ed !important;
+    color: var(--blog-title-color, #fff5ed) !important;
     text-decoration: none;
     text-shadow: 0 10px 26px rgba(0, 0, 0, 0.50);
 }
@@ -217,13 +217,13 @@ footer {
 .archive-title,
 .sidebar-box-title,
 .blog-box-title {
-    color: #d5b08a !important;
+    color: var(--box-title-color, #d5b08a) !important;
 }
 
 .blog-post-entry h4,
 .blog-post-title,
 .blog-post-entry h4 a {
-    color: #fff3ea !important;
+    color: var(--post-title-color, #fff3ea) !important;
 }
 
 .comment-author a,
@@ -355,85 +355,4 @@ input.form-control::placeholder {
 }
     </style>
     {% include "blog/components/blog_posts.html" %}
-{% firstof blog_preferences.active_design_customization.blog_title_color active_design_customization.blog_title_color design_customization.blog_title_color blog_title_color "#f3d0a5" as sjene_blog_title_color %}
-{% firstof blog_preferences.active_design_customization.post_title_color active_design_customization.post_title_color design_customization.post_title_color post_title_color "#f3d0a5" as sjene_post_title_color %}
-{% firstof blog_preferences.active_design_customization.box_title_color active_design_customization.box_title_color design_customization.box_title_color box_title_color "#f3d0a5" as sjene_box_title_color %}
-
-<style id="sjene-ulice-title-color-fix-final">
-    /* Sjene ulice - boje naslova iz uređivanja dizajna */
-
-    .blog-title,
-    .blog-title *,
-    .blog-name,
-    .blog-name *,
-    .blog-header-title,
-    .blog-header-title *,
-    .blog-hero-title,
-    .blog-hero-title *,
-    .hero-title,
-    .hero-title *,
-    .profile-blog-title,
-    .profile-blog-title *,
-    .site-title,
-    .site-title *,
-    .blog-header h1,
-    .blog-hero h1,
-    .hero h1,
-    .hero-section h1,
-    .profile-header h1 {
-        color: var(--blog-title-color, var(--bp-blog-title-color, {{ sjene_blog_title_color }})) !important;
-    }
-
-    .post-title,
-    .post-title *,
-    .blog-post-title,
-    .blog-post-title *,
-    .post-card-title,
-    .post-card-title *,
-    .post-card h1,
-    .post-card h2,
-    .post-card h3,
-    .post-card h4,
-    .post-item h1,
-    .post-item h2,
-    .post-item h3,
-    .post-item h4,
-    .blog-post h1,
-    .blog-post h2,
-    .blog-post h3,
-    .blog-post h4,
-    article h1,
-    article h2,
-    article h3,
-    article h4 {
-        color: var(--post-title-color, var(--bp-post-title-color, {{ sjene_post_title_color }})) !important;
-    }
-
-    .box-title,
-    .box-title *,
-    .user-box-title,
-    .user-box-title *,
-    .sidebar-box h1,
-    .sidebar-box h2,
-    .sidebar-box h3,
-    .sidebar-box h4,
-    .sidebar-box h5,
-    .calendar-box h1,
-    .calendar-box h2,
-    .calendar-box h3,
-    .calendar-box h4,
-    .calendar-box h5,
-    .archive-box h1,
-    .archive-box h2,
-    .archive-box h3,
-    .archive-box h4,
-    .archive-box h5,
-    .live-analytics-widget h1,
-    .live-analytics-widget h2,
-    .live-analytics-widget h3,
-    .live-analytics-widget h4,
-    .live-analytics-widget h5 {
-        color: var(--box-title-color, var(--bp-box-title-color, {{ sjene_box_title_color }})) !important;
-    }
-</style>
 {% endblock %}
