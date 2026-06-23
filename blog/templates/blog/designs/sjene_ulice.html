@@ -371,4 +371,75 @@ input.form-control::placeholder {
         text-decoration: underline !important;
     }
 </style>
+<style id="sjene-ulice-title-color-fix">
+    /* Sjene ulice - poštuj boje naslova iz uređivanja dizajna */
+
+    .blog-title,
+    .blog-title *,
+    .blog-header-title,
+    .blog-header-title *,
+    .blog-name,
+    .blog-name *,
+    .profile-blog-title,
+    .profile-blog-title *,
+    .blog-hero-title,
+    .blog-hero-title *,
+    .blog-design-title,
+    .blog-design-title * {
+        color: {{ blog_preferences.active_design_customization.blog_title_color|default:'#f3d0a5' }} !important;
+    }
+
+    .post-title,
+    .post-title *,
+    .post-card h1,
+    .post-card h2,
+    .post-card h3,
+    .post-card h4,
+    .post-item h1,
+    .post-item h2,
+    .post-item h3,
+    .post-item h4,
+    .blog-post h1,
+    .blog-post h2,
+    .blog-post h3,
+    .blog-post h4,
+    article h1,
+    article h2,
+    article h3,
+    article h4 {
+        color: {{ blog_preferences.active_design_customization.post_title_color|default:'#f3d0a5' }} !important;
+    }
+
+    .box-title,
+    .box-title *,
+    .user-box-title,
+    .user-box-title *,
+    .sidebar-box h1,
+    .sidebar-box h2,
+    .sidebar-box h3,
+    .sidebar-box h4,
+    .sidebar-box h5,
+    .archive-box h1,
+    .archive-box h2,
+    .archive-box h3,
+    .archive-box h4,
+    .archive-box h5,
+    .calendar-box h1,
+    .calendar-box h2,
+    .calendar-box h3,
+    .calendar-box h4,
+    .calendar-box h5,
+    .left-sidebar h1,
+    .left-sidebar h2,
+    .left-sidebar h3,
+    .left-sidebar h4,
+    .left-sidebar h5,
+    .right-sidebar h1,
+    .right-sidebar h2,
+    .right-sidebar h3,
+    .right-sidebar h4,
+    .right-sidebar h5 {
+        color: {{ blog_preferences.active_design_customization.box_title_color|default:'#f3d0a5' }} !important;
+    }
+</style>
 {% endblock %}
