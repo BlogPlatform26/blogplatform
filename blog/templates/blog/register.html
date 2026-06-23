@@ -106,12 +106,35 @@
                         </div>
 
                         {% if turnstile_enabled %}
-                            <div class="col-12">
-                                <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-                                <div class="cf-turnstile" data-sitekey="{{ turnstile_site_key }}"></div>
-                                <div class="form-text">Sigurnosna provjera protiv automatskih registracija.</div>
-                            </div>
-                        {% endif %}
+    <div class="mb-4">
+        <label class="form-label fw-semibold">
+            Sigurnosna provjera
+        </label>
+
+        {% if turnstile_site_key %}
+            <script
+                src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+                async
+                defer>
+            </script>
+
+            <div
+                class="cf-turnstile"
+                data-sitekey="{{ turnstile_site_key }}"
+                data-theme="light">
+            </div>
+
+            <div class="form-text mt-2">
+                Potvrdi sigurnosnu provjeru prije registracije.
+            </div>
+        {% else %}
+            <div class="alert alert-danger mb-0">
+                Sigurnosna provjera nije pravilno podešena.
+                Registracija trenutno nije dostupna.
+            </div>
+        {% endif %}
+    </div>
+{% endif %}
 
                         <div class="col-12">
                             <button type="submit" class="btn btn-primary w-100">
