@@ -371,75 +371,226 @@ input.form-control::placeholder {
         text-decoration: underline !important;
     }
 </style>
-<style id="sjene-ulice-title-color-fix">
-    /* Sjene ulice - poštuj boje naslova iz uređivanja dizajna */
+<style id="sjene-ulice-live-title-color-fix">
+    /*
+        Sjene ulice:
+        pusti live editor i spremljene postavke da pregaze fiksne boje dizajna.
+    */
 
     .blog-title,
     .blog-title *,
-    .blog-header-title,
-    .blog-header-title *,
     .blog-name,
     .blog-name *,
-    .profile-blog-title,
-    .profile-blog-title *,
+    .blog-header-title,
+    .blog-header-title *,
     .blog-hero-title,
     .blog-hero-title *,
-    .blog-design-title,
-    .blog-design-title * {
-        color: {{ blog_preferences.active_design_customization.blog_title_color|default:'#f3d0a5' }} !important;
+    .hero-title,
+    .hero-title *,
+    .profile-blog-title,
+    .profile-blog-title *,
+    .site-title,
+    .site-title *,
+    header h1,
+    .blog-header h1,
+    .blog-hero h1 {
+        color: var(--blog-title-color, var(--bp-blog-title-color, inherit)) !important;
     }
 
     .post-title,
     .post-title *,
+    .blog-post-title,
+    .blog-post-title *,
     .post-card h1,
     .post-card h2,
     .post-card h3,
-    .post-card h4,
     .post-item h1,
     .post-item h2,
     .post-item h3,
-    .post-item h4,
-    .blog-post h1,
-    .blog-post h2,
-    .blog-post h3,
-    .blog-post h4,
     article h1,
     article h2,
-    article h3,
-    article h4 {
-        color: {{ blog_preferences.active_design_customization.post_title_color|default:'#f3d0a5' }} !important;
+    article h3 {
+        color: var(--post-title-color, var(--bp-post-title-color, inherit)) !important;
     }
 
     .box-title,
     .box-title *,
-    .user-box-title,
-    .user-box-title *,
     .sidebar-box h1,
     .sidebar-box h2,
     .sidebar-box h3,
     .sidebar-box h4,
     .sidebar-box h5,
-    .archive-box h1,
-    .archive-box h2,
-    .archive-box h3,
-    .archive-box h4,
-    .archive-box h5,
     .calendar-box h1,
     .calendar-box h2,
     .calendar-box h3,
     .calendar-box h4,
     .calendar-box h5,
-    .left-sidebar h1,
-    .left-sidebar h2,
-    .left-sidebar h3,
-    .left-sidebar h4,
-    .left-sidebar h5,
-    .right-sidebar h1,
-    .right-sidebar h2,
-    .right-sidebar h3,
-    .right-sidebar h4,
-    .right-sidebar h5 {
-        color: {{ blog_preferences.active_design_customization.box_title_color|default:'#f3d0a5' }} !important;
+    .archive-box h1,
+    .archive-box h2,
+    .archive-box h3,
+    .archive-box h4,
+    .archive-box h5 {
+        color: var(--box-title-color, var(--bp-box-title-color, inherit)) !important;
     }
 </style>
+
+<script id="sjene-ulice-live-title-color-script">
+(function () {
+    function safeParentDocument() {
+        try {
+            if (window.parent && window.parent !== window && window.parent.document) {
+                return window.parent.document;
+            }
+        } catch (error) {
+            return null;
+        }
+
+        return null;
+    }
+
+    function findColorInputBySection(sectionText) {
+        const parentDoc = safeParentDocument();
+
+        if (!parentDoc) {
+            return null;
+        }
+
+        const inputs = Array.from(parentDoc.querySelectorAll('input[type="color"]'));
+
+        for (const input of inputs) {
+            let current = input;
+
+            for (let i = 0; i < 8 && current; i++) {
+                const text = (current.textContent || "").toLowerCase();
+
+                if (text.includes(sectionText.toLowerCase())) {
+                    return input;
+                }
+
+                current = current.parentElement;
+            }
+        }
+
+        return null;
+    }
+
+    function applyColorToSelectors(color, selectors) {
+        if (!color) {
+            return;
+        }
+
+        selectors.forEach(function (selector) {
+            document.querySelectorAll(selector).forEach(function (element) {
+                element.style.setProperty("color", color, "important");
+            });
+        });
+    }
+
+    function applyLiveColors() {
+        const blogTitleInput = findColorInputBySection("Naziv bloga");
+        const postTitleInput = findColorInputBySection("Naslov posta");
+        const boxTitleInput = findColorInputBySection("Naslov boxa");
+
+        if (blogTitleInput) {
+            applyColorToSelectors(blogTitleInput.value, [
+                ".blog-title",
+                ".blog-title *",
+                ".blog-name",
+                ".blog-name *",
+                ".blog-header-title",
+                ".blog-header-title *",
+                ".blog-hero-title",
+                ".blog-hero-title *",
+                ".hero-title",
+                ".hero-title *",
+                ".profile-blog-title",
+                ".profile-blog-title *",
+                ".site-title",
+                ".site-title *",
+                "header h1",
+                ".blog-header h1",
+                ".blog-hero h1"
+            ]);
+        }
+
+        if (postTitleInput) {
+            applyColorToSelectors(postTitleInput.value, [
+                ".post-title",
+                ".post-title *",
+                ".blog-post-title",
+                ".blog-post-title *",
+                ".post-card h1",
+                ".post-card h2",
+                ".post-card h3",
+                ".post-item h1",
+                ".post-item h2",
+                ".post-item h3",
+                "article h1",
+                "article h2",
+                "article h3"
+            ]);
+        }
+
+        if (boxTitleInput) {
+            applyColorToSelectors(boxTitleInput.value, [
+                ".box-title",
+                ".box-title *",
+                ".sidebar-box h1",
+                ".sidebar-box h2",
+                ".sidebar-box h3",
+                ".sidebar-box h4",
+                ".sidebar-box h5",
+                ".calendar-box h1",
+                ".calendar-box h2",
+                ".calendar-box h3",
+                ".calendar-box h4",
+                ".calendar-box h5",
+                ".archive-box h1",
+                ".archive-box h2",
+                ".archive-box h3",
+                ".archive-box h4",
+                ".archive-box h5"
+            ]);
+        }
+    }
+
+    function bindParentInputs() {
+        const parentDoc = safeParentDocument();
+
+        if (!parentDoc) {
+            return;
+        }
+
+        parentDoc.querySelectorAll('input[type="color"]').forEach(function (input) {
+            input.removeEventListener("input", applyLiveColors);
+            input.addEventListener("input", applyLiveColors);
+        });
+    }
+
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", function () {
+            bindParentInputs();
+            applyLiveColors();
+        });
+    } else {
+        bindParentInputs();
+        applyLiveColors();
+    }
+
+    window.addEventListener("load", function () {
+        bindParentInputs();
+        applyLiveColors();
+    });
+
+    setTimeout(function () {
+        bindParentInputs();
+        applyLiveColors();
+    }, 300);
+
+    setTimeout(function () {
+        bindParentInputs();
+        applyLiveColors();
+    }, 1000);
+})();
+</script>
 {% endblock %}
