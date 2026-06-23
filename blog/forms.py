@@ -654,3 +654,66 @@ class UserUpdateForm(forms.ModelForm):
 
         return email
 # BLOGPLATFORM_EMAIL_REQUIRED_PATCH_END
+
+# BLOGPLATFORM_REQUIRED_EMAIL_PUBLIC_REGISTRATION_START
+# Ova zakrpa sprječava registraciju bez emaila.
+# Email je obavezan jer se račun aktivira preko email linka.
+
+_BlogPlatformOriginalCustomUserCreationForm = CustomUserCreationForm
+
+class CustomUserCreationForm(_BlogPlatformOriginalCustomUserCreationForm):
+    email = forms.EmailField(
+        required=True,
+        label="Email",
+        error_messages={
+            "required": "Email adresa je obavezna.",
+            "invalid": "Upiši ispravnu email adresu.",
+        },
+        widget=forms.EmailInput(attrs={
+            "class": "form-control",
+            "required": "required",
+            "autocomplete": "email",
+            "placeholder": "Upiši email adresu",
+        })
+    )
+
+    def clean_email(self):
+        email = (self.cleaned_data.get("email") or "").strip().lower()
+
+        if not email:
+            raise forms.ValidationError("Email adresa je obavezna.")
+
+        if User.objects.filter(email__iexact=email).exists():
+            raise forms.ValidationError("Korisnik s ovom email adresom već postoji.")
+
+        return email
+
+    def clean(self):
+        cleaned_data = super().clean()
+
+        email = (cleaned_data.get("email") or "").strip().lower()
+
+        if not email:
+            self.add_error("email", "Email adresa je obavezna.")
+
+        return cleaned_data
+
+    def save(self, commit=True):
+        user = super().save(commit=False)
+        user.email = (self.cleaned_data.get("email") or "").strip().lower()
+
+        if commit:
+            user.save()
+
+            blog_name = self.cleaned_data.get("blog_name")
+
+            if blog_name is not None:
+                try:
+                    profile = user.profile
+                    profile.blog_name = str(blog_name).strip()
+                    profile.save()
+                except Exception:
+                    pass
+
+        return user
+# BLOGPLATFORM_REQUIRED_EMAIL_PUBLIC_REGISTRATION_END
