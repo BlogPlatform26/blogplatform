@@ -26,13 +26,9 @@ from blog.constants import MONTHS_HR
 
 @login_required
 def profile(request):
-    return get_blog_page_response(
-        request,
-        request.user,
-        resolve_design_template_name(request.user.profile.template),
-        allow_follow=False,
-        archive_base_url='/profile/',
-    )
+    return redirect('user_blog', username=request.user.username)
+
+
 
 
 def user_blog(request, username):
