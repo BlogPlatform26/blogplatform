@@ -995,7 +995,9 @@ def blog_settings(request):
         if request.GET.get('tab') == 'autor' and 'save_author_profile' in request.POST:
             author_form = AuthorProfileForm(request.POST, instance=profile)
             if author_form.is_valid():
-                author_form.save()
+                # BLOGPLATFORM_AUTHOR_PROFILE_SAVE_ONLY_AUTHOR_FIELDS
+                author_profile = author_form.save(commit=False)
+                author_profile.save(update_fields=list(AuthorProfileForm.Meta.fields))
                 messages.success(request, 'Podaci za Upoznaj autora su spremljeni.')
             else:
                 first_error = next(iter(author_form.errors.values()))[0] if author_form.errors else 'Provjeri unesene podatke.'
