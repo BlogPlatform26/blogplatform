@@ -473,12 +473,39 @@ def register(request):
 
 def activation_sent(request):
     pending_user = _get_pending_activation_user(request)
+
     if not pending_user:
         messages.info(request, 'Nema računa koji čeka aktivaciju.')
         return redirect('login')
 
     if request.method == 'POST':
+        current_email = (pending_user.email or '').strip()
+
+        if not current_email:
+            new_email = (request.POST.get('email') or '').strip().lower()
+
+            if not new_email:
+                messages.error(request, 'Email adresa je obavezna.')
+                return redirect('activation_sent')
+
+            if User.objects.filter(email__iexact=new_email).exclude(pk=pending_user.pk).exists():
+                messages.error(request, 'Korisnik s ovom email adresom već postoji.')
+                return redirect('activation_sent')
+
+            pending_user.email = new_email
+            pending_user.save(update_fields=['email'])
+
+            log_security_event(
+                request,
+                event_type='activation_email_added',
+                user=pending_user,
+                severity='info',
+                message='Korisnik je dodao email adresu za aktivaciju računa.',
+                metadata={'email': new_email},
+            )
+
         can_send, seconds_left = _can_resend_email(request, pending_user, 'activation')
+
         if not can_send:
             log_security_event(
                 request,
@@ -488,36 +515,40 @@ def activation_sent(request):
                 message='Blokirano ponovno slanje aktivacijskog emaila.',
                 metadata={'purpose': 'activation', 'seconds_left': seconds_left},
             )
+
             messages.error(
                 request,
                 f'Previše zahtjeva za ponovno slanje emaila. Pokušaj ponovno za {_format_seconds_as_minutes(seconds_left)}.'
             )
+
             return redirect('activation_sent')
 
         try:
             sent_count = _send_activation_email(request, pending_user)
+
             if sent_count == 1:
                 log_security_event(
                     request,
                     event_type='resend_email_success',
                     user=pending_user,
                     severity='info',
-                    message='Aktivacijski email je ponovno poslan.',
+                    message='Aktivacijski email je poslan.',
                     metadata={'purpose': 'activation'},
                 )
-                messages.success(request, 'Aktivacijski mail je ponovno poslan.')
+
+                messages.success(request, 'Aktivacijski mail je poslan.')
             else:
-                messages.error(request, 'Mail nije ponovno poslan.')
+                messages.error(request, 'Mail nije poslan.')
+
         except Exception as exc:
-            messages.error(request, f'Mail nije ponovno poslan: {exc}')
+            messages.error(request, f'Mail nije poslan: {exc}')
+
         return redirect('activation_sent')
 
     return render(request, 'blog/activation_sent.html', {
         'pending_user_email': pending_user.email,
         'pending_username': pending_user.username,
     })
-
-
 
 def activate(request, uidb64, token):
     try:

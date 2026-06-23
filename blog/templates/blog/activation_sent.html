@@ -22,22 +22,52 @@
                     {% endfor %}
                 {% endif %}
 
-                <p class="text-center mb-3">
-                    Poslali smo aktivacijski link na:<br>
-                    <strong class="activation-email-text">{{ pending_user_email }}</strong>
-                </p>
+                {% if pending_user_email %}
+                    <p class="text-center mb-3">
+                        Poslali smo aktivacijski link na:<br>
+                        <strong class="activation-email-text">{{ pending_user_email }}</strong>
+                    </p>
 
-                <p class="text-center text-muted mb-4">
-                    Provjeri inbox, spam i promotions. Ako ga nema, klikni ponovno slanje ispod.
-                </p>
+                    <p class="text-center text-muted mb-4">
+                        Provjeri inbox, spam i promotions. Ako ga nema, klikni ponovno slanje ispod.
+                    </p>
 
-                <form method="POST" class="mb-4">
-                    {% csrf_token %}
+                    <form method="POST" class="mb-4">
+                        {% csrf_token %}
 
-                    <button type="submit" class="btn btn-outline-primary w-100 activation-resend-btn">
-                        Pošalji aktivacijski mail ponovno
-                    </button>
-                </form>
+                        <button type="submit" class="btn btn-outline-primary w-100 activation-resend-btn">
+                            Pošalji aktivacijski mail ponovno
+                        </button>
+                    </form>
+                {% else %}
+                    <div class="alert alert-warning text-center mb-4">
+                        Ovaj račun nema email adresu.
+                        Dodaj email adresu kako bismo ti mogli poslati aktivacijski link.
+                    </div>
+
+                    <form method="POST" class="mb-4">
+                        {% csrf_token %}
+
+                        <div class="mb-3 text-start">
+                            <label for="activationEmailInput" class="form-label">
+                                Email adresa
+                            </label>
+
+                            <input
+                                type="email"
+                                id="activationEmailInput"
+                                name="email"
+                                class="form-control"
+                                placeholder="unesi@email.com"
+                                autocomplete="email"
+                                required>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100 activation-resend-btn">
+                            Dodaj email i pošalji aktivacijski link
+                        </button>
+                    </form>
+                {% endif %}
 
                 <p class="text-center mb-0 text-muted">
                     Ako si već aktivirao račun, možeš se vratiti na
@@ -50,4 +80,3 @@
 </div>
 
 {% endblock %}
-
