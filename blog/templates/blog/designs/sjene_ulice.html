@@ -353,6 +353,29 @@ input.form-control::placeholder {
         margin-top: 214px;
     }
 }
-    </style>
+
+/* BLOGPLATFORM_SJENE_ULICE_COMMENT_TEXT_WHITE_START */
+.comment-body .comment-text,
+.comment-body .comment-text *,
+.comment-body .bp-comment-text,
+.comment-body .bp-comment-text *,
+.comment-body .bp-comment-word {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+.comment-body .bp-mention-link,
+.comment-body .bp-mention-link * {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    text-decoration: underline !important;
+}
+
+.comment-body .comment-time {
+    color: rgba(255, 255, 255, 0.75) !important;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.75) !important;
+}
+/* BLOGPLATFORM_SJENE_ULICE_COMMENT_TEXT_WHITE_END */
+</style>
     {% include "blog/components/blog_posts.html" %}
 {% endblock %}
