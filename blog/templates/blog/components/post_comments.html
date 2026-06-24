@@ -1,4 +1,17 @@
 {% load custom_tags static %}
+<style id="blogplatform-comment-anchor-scroll">
+/* BLOGPLATFORM_COMMENT_ANCHOR_SCROLL_START */
+.comment-body[id^="comment-"],
+.comment-item[id^="comment-"] {
+    scroll-margin-top: 96px;
+}
+
+.comment-body:target {
+    outline: 2px solid rgba(255, 255, 255, 0.45);
+    outline-offset: 4px;
+}
+/* BLOGPLATFORM_COMMENT_ANCHOR_SCROLL_END */
+</style>
 <style id="bp-mention-style">
 .bp-mention-box {
     position: absolute;

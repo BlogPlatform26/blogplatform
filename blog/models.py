@@ -225,7 +225,10 @@ class Comment(models.Model):
     is_anonymous = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
 
-    def __str__(self):
+    
+    class Meta:
+        ordering = ["created_at", "id"]
+def __str__(self):
         return f"Comment by {self.author.username} on {self.post.title}"
 
 

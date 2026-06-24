@@ -10,6 +10,7 @@ from django.core.mail import EmailMessage
 from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse
 from django.views.decorators.http import require_POST
+from django.utils.text import slugify
 
 from blog.forms import BugReportForm, CommentForm
 from blog.models import Comment, Follow, Like, Notification, PollOption, PollVote, Post, QuizAnswer, QuizOption
@@ -73,6 +74,20 @@ def _create_mention_notifications(comment):
         )
 # BLOGPLATFORM_MENTION_NOTIFICATIONS_END
 
+# BLOGPLATFORM_INTERACTION_COMMENT_ANCHOR_URLS_START
+def _bp_post_public_slug(post):
+    slug = slugify(getattr(post, "title", "") or "", allow_unicode=False).strip("-")
+    return slug or f"post-{post.pk}"
+
+
+def _bp_post_public_url(post):
+    return reverse("post_detail_slug", args=[post.pk, _bp_post_public_slug(post)])
+
+
+def _bp_comment_public_url(comment):
+    return f"{_bp_post_public_url(comment.post)}#comment-{comment.pk}"
+# BLOGPLATFORM_INTERACTION_COMMENT_ANCHOR_URLS_END
+
 @require_POST
 def create_comment(request, pk):
     publish_due_posts()
@@ -123,21 +138,23 @@ def create_comment(request, pk):
             else:
                 author = request.user
 
-            comment = Comment.objects.create(post=post, author=author, content=content)
+            comment = Comment.objects.create(post=post, author=author, content=content, is_anonymous=is_anonymous_comment)
             remember_comment_sent(request, post, content)
+            _create_mention_notifications(comment)
             if request.user.is_authenticated and not is_anonymous_comment and request.user != post.author:
                 Notification.objects.create(recipient=post.author, sender=request.user, post=post, comment=comment, notification_type='comment')
 
-    return redirect(request.META.get('HTTP_REFERER') or reverse('user_blog', args=[post.author.username]))
+    return redirect(_bp_comment_public_url(comment))
 
 
 @login_required
 def delete_comment(request, comment_id):
     comment = get_object_or_404(Comment, id=comment_id, author=request.user)
-    post_id = comment.post.id
+    post = comment.post
+    post_id = post.id
     if request.method == 'POST':
         comment.delete()
-        return redirect('post_detail', post_id=post_id)
+        return redirect(_bp_post_public_url(post))
     return render(request, 'blog/delete_comment.html', {'comment': comment})
 
 
@@ -148,7 +165,7 @@ def edit_comment(request, comment_id):
         form = CommentForm(request.POST, instance=comment)
         if form.is_valid():
             form.save()
-            return redirect('post_detail', post_id=comment.post.id)
+            return redirect(_bp_comment_public_url(comment))
     else:
         form = CommentForm(instance=comment)
     return render(request, 'blog/edit_comment.html', {'form': form})
@@ -222,13 +239,13 @@ def notification_redirect(request, notification_id):
     if notification.notification_type == 'follow':
         return redirect('user_blog', username=notification.sender.username)
     if notification.notification_type == 'like':
-        return redirect('post_detail', post_id=notification.post.id)
+        return redirect(_bp_post_public_url(notification.post))
     if notification.notification_type == 'mention' and notification.post_id:
         if notification.comment_id:
-            return redirect(f"{reverse('post_detail', args=[notification.post.id])}#comment-{notification.comment.id}")
-        return redirect('post_detail', post_id=notification.post.id)
+            return redirect(f"{_bp_post_public_url(notification.post)}#comment-{notification.comment.id}")
+        return redirect(_bp_post_public_url(notification.post))
     if notification.notification_type == 'comment':
-        return redirect(f"{reverse('post_detail', args=[notification.post.id])}#comment-{notification.comment.id}")
+        return redirect(f"{_bp_post_public_url(notification.post)}#comment-{notification.comment.id}")
     return redirect('home')
 
 

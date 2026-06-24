@@ -36,6 +36,8 @@ path("blog/settings/export-posts/", export_my_posts, name="export_my_posts"),
     path("pravila-koristenja/", views.terms_of_use, name="terms_of_use"),
     path("politika-privatnosti/", views.privacy_policy, name="privacy_policy"),
     path("pravila-sadrzaja/", views.content_rules, name="content_rules"),
+    path('post/<int:post_id>/<slug:post_slug>/', post_detail, name='post_detail_slug'),
+
     path('post/<int:post_id>/', post_detail, name='post_detail'),
     path("sitemap.xml", views.sitemap_xml, name="sitemap_xml"),
     path("robots.txt", views.robots_txt, name="robots_txt"),

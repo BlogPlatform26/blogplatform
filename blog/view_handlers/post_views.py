@@ -7,6 +7,7 @@ from django.db.models import F
 from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse
 from django.utils import timezone
+from django.utils.text import slugify
 
 from blog.forms import CommentForm, PostForm
 from blog.analytics import build_live_analytics_context, build_tracking_context
@@ -32,6 +33,20 @@ from blog.comment_rate_limit import check_comment_allowed, remember_comment_sent
 from blog.security import log_security_event
 
 
+
+# BLOGPLATFORM_POST_COMMENT_ANCHOR_URLS_START
+def _bp_post_public_slug(post):
+    slug = slugify(getattr(post, "title", "") or "", allow_unicode=False).strip("-")
+    return slug or f"post-{post.pk}"
+
+
+def _bp_post_public_url(post):
+    return reverse("post_detail_slug", args=[post.pk, _bp_post_public_slug(post)])
+
+
+def _bp_comment_public_url(comment):
+    return f"{_bp_post_public_url(comment.post)}#comment-{comment.pk}"
+# BLOGPLATFORM_POST_COMMENT_ANCHOR_URLS_END
 
 POST_VIEW_COOLDOWN_SECONDS = 60 * 60 * 12
 
@@ -122,7 +137,7 @@ def _apply_submit_action_to_post(post, submit_action, publish_at):
         post.publish_at = None
 
 
-def post_detail(request, post_id):
+def post_detail(request, post_id, post_slug=None):
     publish_due_posts()
     post = get_object_or_404(
         Post.objects.select_related('author', 'author__profile', 'category').prefetch_related(
@@ -136,13 +151,19 @@ def post_detail(request, post_id):
         status='published'
     )
 
-    session_key = f'viewed_post_{post.id}'
+    
+    # BLOGPLATFORM_POST_CANONICAL_REDIRECT
+    if request.method == "GET":
+        expected_slug = _bp_post_public_slug(post)
+        if post_slug != expected_slug:
+            return redirect(_bp_post_public_url(post))
+session_key = f'viewed_post_{post.id}'
     if request.user != post.author and not request.session.get(session_key):
         post.views += 1
         post.save(update_fields=['views'])
         request.session[session_key] = True
 
-    comments = post.comments.all().order_by('-created_at')
+    comments = post.comments.all().order_by('created_at', 'id')
     blog_preferences = apply_blog_preferences_to_profile(post.author.profile, post.author)
     allow_anonymous_comments = get_allow_anonymous_comments(post.author)
     post.allow_anonymous_comments = allow_anonymous_comments
@@ -150,11 +171,11 @@ def post_detail(request, post_id):
     if request.method == 'POST':
         if not blog_preferences.get('allow_comments', True) or not post.allow_comments:
             messages.error(request, 'Komentari su isključeni za ovaj post.')
-            return redirect('post_detail', post_id=post.id)
+            return redirect(_bp_post_public_url(post))
 
         if request.user.is_authenticated and is_user_restricted(post.author, request.user):
             messages.error(request, 'Autor te je ograničio pa ne možeš komentirati.')
-            return redirect('post_detail', post_id=post.id)
+            return redirect(_bp_post_public_url(post))
 
         form = CommentForm(request.POST)
         if form.is_valid():
@@ -176,7 +197,7 @@ def post_detail(request, post_id):
                     metadata={'post_id': post.id, 'post_author': post.author.username},
                 )
                 messages.error(request, error_message)
-                return redirect('post_detail', post_id=post.id)
+                return redirect(_bp_post_public_url(post))
 
             comment = form.save(commit=False)
             comment.post = post
@@ -204,7 +225,7 @@ def post_detail(request, post_id):
                     notification_type='comment'
                 )
 
-            return redirect('post_detail', post_id=post.id)
+            return redirect(_bp_comment_public_url(comment))
     else:
         form = CommentForm()
 
@@ -238,7 +259,7 @@ def post_detail(request, post_id):
     month_calendar, days_with_posts, day_single_post_map = build_calendar_for_user(post.author, calendar_year, calendar_month)
     archives = build_archives_for_user(post.author)
     prev_month_url, next_month_url = build_month_navigation_urls(
-        reverse('post_detail', args=[post.id]),
+        _bp_post_public_url(post),
         calendar_year,
         calendar_month,
     )
@@ -348,7 +369,7 @@ def edit_post(request, post_id):
                     PostImage.objects.create(post=post, image=upload)
 
                 if post.status == 'published':
-                    return redirect('post_detail', post_id=post.id)
+                    return redirect(_bp_post_public_url(post))
 
                 if post.status == 'scheduled':
                     return redirect('/blog/settings/?tab=postovi&post_filter=scheduled')
