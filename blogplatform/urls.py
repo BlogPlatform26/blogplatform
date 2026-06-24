@@ -36,6 +36,9 @@ path("blog/settings/export-posts/", export_my_posts, name="export_my_posts"),
     path("pravila-koristenja/", views.terms_of_use, name="terms_of_use"),
     path("politika-privatnosti/", views.privacy_policy, name="privacy_policy"),
     path("pravila-sadrzaja/", views.content_rules, name="content_rules"),
+    # BLOGPLATFORM_LIKE_ROUTE_FIX_START
+    path('post/<int:post_id>/like/', views.like_post, name='like_post'),
+    # BLOGPLATFORM_LIKE_ROUTE_FIX_END
     path('post/<int:post_id>/<slug:post_slug>/', post_detail, name='post_detail_slug'),
 
     path('post/<int:post_id>/', post_detail, name='post_detail'),
@@ -61,7 +64,6 @@ path("blog/settings/export-posts/", export_my_posts, name="export_my_posts"),
     path('profile/edit/', edit_profile, name='edit_profile'),
     path('password_change/', auth_views.PasswordChangeView.as_view(template_name='blog/password_change.html'), name='password_change'),
     path('password_change/done/', auth_views.PasswordChangeDoneView.as_view(template_name='blog/password_change_done.html'), name='password_change_done'),
-    path('post/<int:post_id>/like/', like_post, name='like_post'),
     path("blog/settings/", views.blog_settings, name="blog_settings"),
     path("blog/settings/autosave-post-draft/", views.autosave_post_draft, name="autosave_post_draft"),
     path("blog/settings/live-editor/naslovi/", views.design_live_editor_titles, name="design_live_editor_titles"),
