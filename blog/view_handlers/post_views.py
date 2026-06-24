@@ -139,6 +139,7 @@ def _apply_submit_action_to_post(post, submit_action, publish_at):
 
 def post_detail(request, post_id, post_slug=None):
     publish_due_posts()
+
     post = get_object_or_404(
         Post.objects.select_related('author', 'author__profile', 'category').prefetch_related(
             'comments__author__profile',
@@ -151,13 +152,13 @@ def post_detail(request, post_id, post_slug=None):
         status='published'
     )
 
-    
-    # BLOGPLATFORM_POST_CANONICAL_REDIRECT
     if request.method == "GET":
         expected_slug = _bp_post_public_slug(post)
         if post_slug != expected_slug:
             return redirect(_bp_post_public_url(post))
-session_key = f'viewed_post_{post.id}'
+
+    session_key = f'viewed_post_{post.id}'
+
     if request.user != post.author and not request.session.get(session_key):
         post.views += 1
         post.save(update_fields=['views'])
@@ -178,6 +179,7 @@ session_key = f'viewed_post_{post.id}'
             return redirect(_bp_post_public_url(post))
 
         form = CommentForm(request.POST)
+
         if form.is_valid():
             wants_anonymous = form.cleaned_data.get('anonymous', False)
             is_anonymous_comment = allow_anonymous_comments and (wants_anonymous or not request.user.is_authenticated)
@@ -187,6 +189,7 @@ session_key = f'viewed_post_{post.id}'
 
             comment_content = (form.cleaned_data.get('content') or '').strip()
             allowed, error_message = check_comment_allowed(request, post, comment_content)
+
             if not allowed:
                 event_type = 'duplicate_comment_blocked' if 'isti komentar' in error_message.lower() else 'comment_rate_limited'
                 log_security_event(
@@ -255,9 +258,9 @@ session_key = f'viewed_post_{post.id}'
         calendar_month = base_month
 
     current_day = today.day if calendar_year == today.year and calendar_month == today.month else None
-
     month_calendar, days_with_posts, day_single_post_map = build_calendar_for_user(post.author, calendar_year, calendar_month)
     archives = build_archives_for_user(post.author)
+
     prev_month_url, next_month_url = build_month_navigation_urls(
         _bp_post_public_url(post),
         calendar_year,
@@ -299,6 +302,7 @@ session_key = f'viewed_post_{post.id}'
         'live_analytics': live_analytics,
         'analytics_tracking': analytics_tracking,
     }
+
     return render(request, resolve_design_template_name(post.author.profile.template), context)
 
 

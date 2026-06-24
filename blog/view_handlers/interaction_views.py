@@ -127,7 +127,7 @@ def create_comment(request, pk):
                     metadata={'post_id': post.id, 'post_author': post.author.username},
                 )
                 messages.error(request, error_message)
-                return redirect(request.META.get('HTTP_REFERER') or reverse('user_blog', args=[post.author.username]))
+                return redirect(_bp_comment_public_url(comment))
 
             if is_anonymous_comment:
                 anonymous_user, _ = User.objects.get_or_create(
