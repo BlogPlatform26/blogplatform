@@ -174,22 +174,40 @@ def edit_comment(request, comment_id):
 @login_required
 @require_POST
 def like_post(request, post_id):
-    post = get_object_or_404(Post, id=post_id)
+    publish_due_posts()
+
+    post = get_object_or_404(Post, id=post_id, status='published')
+
+    redirect_url = (
+        request.POST.get('next')
+        or request.META.get('HTTP_REFERER')
+        or reverse('post_detail', args=[post.id])
+    )
+
     if are_users_blocked(request.user, post.author):
         messages.error(request, 'Ne možeš lajkati ovaj post (blokiranje).')
-        return redirect(request.META.get('HTTP_REFERER', '/'))
+        return redirect(redirect_url)
+
     if is_user_restricted(post.author, request.user):
         messages.error(request, 'Autor te je ograničio pa ne možeš lajkati postove.')
-        return redirect(request.META.get('HTTP_REFERER', '/'))
+        return redirect(redirect_url)
 
-    like, created = Like.objects.get_or_create(user=request.user, post=post)
-    if created:
-        if request.user != post.author:
-            Notification.objects.create(recipient=post.author, sender=request.user, post=post, notification_type='like')
+    existing_like = Like.objects.filter(user=request.user, post=post).first()
+
+    if existing_like:
+        existing_like.delete()
     else:
-        like.delete()
-    return redirect(request.META.get('HTTP_REFERER', '/'))
+        Like.objects.create(user=request.user, post=post)
 
+        if request.user != post.author:
+            Notification.objects.get_or_create(
+                recipient=post.author,
+                sender=request.user,
+                post=post,
+                notification_type='like',
+            )
+
+    return redirect(redirect_url)
 
 @login_required
 def password_change(request):

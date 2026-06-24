@@ -139,6 +139,28 @@ def comment_words(value):
 
     return mark_safe(" ".join(html_words))
 
+# BLOGPLATFORM_LIKED_BY_FILTER_START
+@register.filter
+def liked_by(post, user):
+    """
+    Pouzdana provjera lajka za template.
+    Ako view već ima post.user_liked, koristi to.
+    Ako nema, provjeri bazu.
+    """
+    if not getattr(user, "is_authenticated", False):
+        return False
+
+    cached_value = getattr(post, "user_liked", None)
+
+    if isinstance(cached_value, bool):
+        return cached_value
+
+    try:
+        return post.likes.filter(user=user).exists()
+    except Exception:
+        return False
+# BLOGPLATFORM_LIKED_BY_FILTER_END
+
 # BLOGPLATFORM_MENTION_LINKS_START
 @register.filter
 def link_mentions(value):

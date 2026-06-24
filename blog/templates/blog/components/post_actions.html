@@ -11,7 +11,8 @@
     {% if not is_restricted %}
     <form method="POST" action="{% url 'like_post' post.id %}" class="d-inline m-0">
         {% csrf_token %}
-        <button type="submit" class="btn btn-link p-0 text-decoration-none align-baseline {% if post.user_liked %}fw-bold{% endif %}">
+  <input type="hidden" name="next" value="{{ request.get_full_path }}">
+        <button type="submit" class="btn btn-link p-0 text-decoration-none align-baseline {% if post|liked_by:request.user %}fw-bold liked-active{% endif %}">
             <i class="bi bi-hand-thumbs-up"></i> Sviđa mi se ({{ post.likes.count }})
         </button>
     </form>
