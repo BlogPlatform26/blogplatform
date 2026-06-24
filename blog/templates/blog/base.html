@@ -3360,7 +3360,7 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 
 <!-- BLOGPLATFORM_RUNTIME_DESIGN_VARS_START -->
-{% if blog_preferences.active_design_customization %}
+{% if blog_preferences.active_design_customization and request.resolver_match.url_name != 'home' %}
 {% with c=blog_preferences.active_design_customization %}
 <style id="blogplatform-runtime-design-vars">
 :root,
@@ -3451,7 +3451,7 @@ body,
 <!-- BLOGPLATFORM_RUNTIME_DESIGN_VARS_END -->
 
 <!-- BLOGPLATFORM_PUBLIC_DESIGN_RUNTIME_CSS_START -->
-{% if blog_preferences.active_design_customization %}
+{% if blog_preferences.active_design_customization and request.resolver_match.url_name != 'home' %}
 {% with c=blog_preferences.active_design_customization %}
 {% firstof c.post_date_color c.post_date_color_1 "#d97706" as runtime_post_date_color %}
 <style id="blogplatform-public-design-runtime-css">
@@ -3553,6 +3553,41 @@ body {
 {% endwith %}
 {% endif %}
 <!-- BLOGPLATFORM_PUBLIC_DESIGN_RUNTIME_CSS_END -->
+
+<!-- BLOGPLATFORM_HOME_TITLE_GRADIENT_FIX_START -->
+{% if request.resolver_match.url_name == "home" %}
+<style id="blogplatform-home-title-gradient-fix">
+/* Samo naslovna stranica: vrati gradijalne naslove postova.
+   Ovo ne dira javne blogove i ne dira live editor. */
+
+.featured-card-wrap .post-title,
+.featured-card-wrap .post-title a,
+.post-card .post-title,
+.post-card .post-title a,
+.featured-secondary-title {
+    background: linear-gradient(135deg, #8b2cff 0%, #ff7a00 52%, #ffd43b 100%) !important;
+    background-size: 100% 100% !important;
+    background-repeat: no-repeat !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    color: transparent !important;
+    -webkit-text-fill-color: transparent !important;
+    text-decoration: none !important;
+    text-shadow: none !important;
+}
+
+.featured-card-wrap .post-title a:hover,
+.post-card .post-title a:hover,
+.featured-secondary-link:hover .featured-secondary-title {
+    background: linear-gradient(135deg, #6d28d9 0%, #f97316 52%, #eab308 100%) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    color: transparent !important;
+    -webkit-text-fill-color: transparent !important;
+}
+</style>
+{% endif %}
+<!-- BLOGPLATFORM_HOME_TITLE_GRADIENT_FIX_END -->
 
 </body>
 </html>
