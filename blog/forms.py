@@ -232,7 +232,7 @@ class CommentForm(forms.ModelForm):
         fields = ["content"]
         widgets = {
             "content": forms.Textarea(attrs={
-                "class": "form-control",
+                "class": "form-control comment-textarea",
                 "rows": 3,
                 "placeholder": "Napiši komentar..."
             }),

@@ -4,8 +4,31 @@ from django.db.models import Count, Q
 from django.shortcuts import render
 from django.utils import timezone
 
-from blog.models import Category, Follow, Post, Tag
+from blog.models import Category, Follow, Like, Post, Tag
 from blog.services import annotate_publication_datetime, apply_blog_preferences_to_posts, get_active_category_name, get_home_featured_posts, get_special_day_cards, publish_due_home_featured_posts, publish_due_posts
+
+
+
+def _mark_liked_posts(posts, user):
+    post_list = list(posts or [])
+
+    if not post_list:
+        return
+
+    if not getattr(user, "is_authenticated", False):
+        for post in post_list:
+            post.user_liked = False
+        return
+
+    liked_ids = set(
+        Like.objects.filter(
+            user=user,
+            post_id__in=[post.id for post in post_list]
+        ).values_list("post_id", flat=True)
+    )
+
+    for post in post_list:
+        post.user_liked = post.id in liked_ids
 
 
 def home(request):
@@ -51,6 +74,7 @@ def home(request):
     if filter_type == 'featured':
         featured_posts = list(get_home_featured_posts(base_post_list, now=now) or [])
         apply_blog_preferences_to_posts(featured_posts)
+        _mark_liked_posts(featured_posts, request.user)
 
         featured_per_page = 6
         featured_page = Paginator(featured_posts, featured_per_page).get_page(request.GET.get('page'))
@@ -70,6 +94,7 @@ def home(request):
         apply_blog_preferences_to_posts(ordered_post_list)
         posts = Paginator(ordered_post_list, per_page).get_page(request.GET.get('page'))
         apply_blog_preferences_to_posts(posts)
+        _mark_liked_posts(posts, request.user)
 
     following_posts = []
     if request.user.is_authenticated:
@@ -120,6 +145,7 @@ def search(request):
         if scope in ('all', 'posts'):
             posts = Paginator(posts_qs, 5).get_page(request.GET.get('page'))
             apply_blog_preferences_to_posts(posts)
+            _mark_liked_posts(posts, request.user)
 
         users_qs = (
             User.objects.select_related('profile')

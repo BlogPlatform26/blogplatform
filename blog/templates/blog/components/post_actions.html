@@ -13,12 +13,12 @@
         {% csrf_token %}
   <input type="hidden" name="next" value="{{ request.get_full_path }}">
         <button type="submit" class="btn btn-link p-0 text-decoration-none align-baseline {% if post|liked_by:request.user %}fw-bold liked-active{% endif %}">
-            <i class="bi bi-hand-thumbs-up"></i> Sviđa mi se ({{ post.likes.count }})
+            <i class="bi bi-hand-thumbs-up"></i> {% if post.user_liked %}Ne sviđa mi se{% else %}Sviđa mi se{% endif %} ({{ post.likes.count }})
         </button>
     </form>
     {% else %}
     <span class="text-muted">
-        <i class="bi bi-hand-thumbs-up"></i> Sviđa mi se ({{ post.likes.count }})
+        <i class="bi bi-hand-thumbs-up"></i> {% if post.user_liked %}Ne sviđa mi se{% else %}Sviđa mi se{% endif %} ({{ post.likes.count }})
     </span>
     {% endif %}
 
