@@ -224,30 +224,114 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function applyTitlePreviewValues() {
-        const doc = getIframeDocument();
-        if (!doc || !doc.body) return;
-        ensureEditorStyle(doc);
+    const doc = getIframeDocument();
+    if (!doc || !doc.body || !doc.documentElement) return;
 
-        const blogColor = document.querySelector('[name="blog_title_color"]');
-        const blogSize = document.querySelector('[name="blog_title_size"]');
-        const postColor = document.querySelector('[name="post_title_color"]');
-        const postSize = document.querySelector('[name="post_title_size"]');
-        const boxColor = document.querySelector('[name="box_title_color"]');
-        const boxSize = document.querySelector('[name="box_title_size"]');
-        if (!blogColor || !blogSize || !postColor || !postSize || !boxColor || !boxSize) return;
+    ensureEditorStyle(doc);
 
-        doc.body.style.setProperty('--blog-title-font', getSelectedFontStack('blog_title_font'));
-        doc.body.style.setProperty('--blog-title-color', blogColor.value);
-        doc.body.style.setProperty('--blog-title-size', blogSize.value + 'px');
-        doc.body.style.setProperty('--post-title-font', getSelectedFontStack('post_title_font'));
-        doc.body.style.setProperty('--post-title-color', postColor.value);
-        doc.body.style.setProperty('--post-title-size', postSize.value + 'px');
-        doc.body.style.setProperty('--box-title-font', getSelectedFontStack('box_title_font'));
-        doc.body.style.setProperty('--box-title-color', boxColor.value);
-        doc.body.style.setProperty('--box-title-size', boxSize.value + 'px');
+    const blogColor = document.querySelector('[name="blog_title_color"]');
+    const blogSize = document.querySelector('[name="blog_title_size"]');
+    const postColor = document.querySelector('[name="post_title_color"]');
+    const postSize = document.querySelector('[name="post_title_size"]');
+    const boxColor = document.querySelector('[name="box_title_color"]');
+    const boxSize = document.querySelector('[name="box_title_size"]');
 
-        resizeIframe();
+    if (!blogColor || !blogSize || !postColor || !postSize || !boxColor || !boxSize) return;
+
+    const blogFont = getSelectedFontStack('blog_title_font') || 'Georgia, "Times New Roman", serif';
+    const postFont = getSelectedFontStack('post_title_font') || 'Georgia, "Times New Roman", serif';
+    const boxFont = getSelectedFontStack('box_title_font') || 'Georgia, "Times New Roman", serif';
+
+    const blogSizeValue = String(blogSize.value || '54').replace('px', '') + 'px';
+    const postSizeValue = String(postSize.value || '32').replace('px', '') + 'px';
+    const boxSizeValue = String(boxSize.value || '13').replace('px', '') + 'px';
+
+    [doc.documentElement, doc.body].forEach(function (target) {
+        target.style.setProperty('--blog-title-font', blogFont);
+        target.style.setProperty('--blog-title-color', blogColor.value);
+        target.style.setProperty('--blog-title-size', blogSizeValue);
+
+        target.style.setProperty('--post-title-font', postFont);
+        target.style.setProperty('--post-title-color', postColor.value);
+        target.style.setProperty('--post-title-size', postSizeValue);
+
+        target.style.setProperty('--box-title-font', boxFont);
+        target.style.setProperty('--box-title-color', boxColor.value);
+        target.style.setProperty('--box-title-size', boxSizeValue);
+    });
+
+    let runtimeStyle = doc.getElementById('blogplatform-live-title-override-style');
+
+    if (!runtimeStyle) {
+        runtimeStyle = doc.createElement('style');
+        runtimeStyle.id = 'blogplatform-live-title-override-style';
+        doc.head.appendChild(runtimeStyle);
     }
+
+    runtimeStyle.textContent = `
+        .blog-page-title,
+        .blog-page-title a,
+        .blog-page-title .blog-link,
+        .blog-header-main .blog-page-title,
+        .blog-header-main .blog-page-title a {
+            font-family: ${blogFont} !important;
+            color: ${blogColor.value} !important;
+            -webkit-text-fill-color: ${blogColor.value} !important;
+            font-size: ${blogSizeValue} !important;
+        }
+
+        .blog-page-subtitle {
+            color: ${blogColor.value} !important;
+            -webkit-text-fill-color: ${blogColor.value} !important;
+        }
+
+        .blog-post-entry h1,
+        .blog-post-entry h2,
+        .blog-post-entry h3,
+        .blog-post-entry h4,
+        .blog-post-entry h5,
+        .blog-post-entry h6,
+        .blog-post-entry h1 a,
+        .blog-post-entry h2 a,
+        .blog-post-entry h3 a,
+        .blog-post-entry h4 a,
+        .blog-post-entry h5 a,
+        .blog-post-entry h6 a,
+        .blog-post-title,
+        .blog-post-title a,
+        .post-title,
+        .post-title a,
+        .jus-post h4,
+        .jus-post h4 a,
+        .jus-post .blog-post-title,
+        .mj-post h4,
+        .mj-post h4 a,
+        .mj-post .blog-post-title,
+        .magazin-post-entry h4,
+        .magazin-post-entry h4 a,
+        .magazin-post-entry .blog-post-title {
+            font-family: ${postFont} !important;
+            color: ${postColor.value} !important;
+            -webkit-text-fill-color: ${postColor.value} !important;
+            font-size: ${postSizeValue} !important;
+        }
+
+        .calendar-title,
+        .archive-title,
+        .sidebar-box-title,
+        .blog-box-title,
+        .box-title,
+        .user-box-title,
+        .live-analytics-widget .small.fw-semibold {
+            font-family: ${boxFont} !important;
+            color: ${boxColor.value} !important;
+            -webkit-text-fill-color: ${boxColor.value} !important;
+            font-size: ${boxSizeValue} !important;
+        }
+    `;
+
+    resizeIframe();
+}
 
     function updateDateEditorMode() {
         const effectSelect = document.querySelector('[name="post_date_effect"]');
@@ -266,44 +350,68 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function applyDatePreviewValues() {
-        const doc = getIframeDocument();
-        if (!doc || !doc.body) return;
+    const doc = getIframeDocument();
+    if (!doc || !doc.body || !doc.documentElement) return;
 
-        const styleInput = document.querySelector('[name="post_date_style"]');
-        const effectInput = document.querySelector('[name="post_date_effect"]');
-        const color1Input = document.querySelector('[name="post_date_color_1"]');
-        const color2Input = document.querySelector('[name="post_date_color_2"]');
-        const sizeInput = document.querySelector('[name="post_date_size"]');
-        if (!styleInput || !effectInput || !color1Input || !sizeInput) return;
+    const styleInput = document.querySelector('[name="post_date_style"]');
+    const effectInput = document.querySelector('[name="post_date_effect"]');
+    const color1Input = document.querySelector('[name="post_date_color_1"]');
+    const color2Input = document.querySelector('[name="post_date_color_2"]');
+    const sizeInput = document.querySelector('[name="post_date_size"]');
 
-        const style = styleInput.value || 'classic_vertical';
-        const effect = effectInput.value || 'solid';
-        const color1 = color1Input.value || '#d97706';
-        const color2 = (color2Input && color2Input.value) ? color2Input.value : color1;
-        const size = sizeInput.value || '100';
+    if (!styleInput || !effectInput || !color1Input || !sizeInput) return;
 
-        doc.body.style.setProperty('--post-date-color', color1);
-        doc.body.style.setProperty('--post-date-color-1', color1);
-        doc.body.style.setProperty('--post-date-color-2', color2);
-        doc.body.style.setProperty('--post-date-scale', size);
-        doc.body.style.setProperty('--post-date-style', style);
-        doc.body.style.setProperty('--post-date-effect', effect);
+    const style = styleInput.value || 'classic_vertical';
+    const effect = effectInput.value || 'solid';
+    const color1 = color1Input.value || '#d97706';
+    const color2 = color2Input && color2Input.value ? color2Input.value : color1;
+    const size = sizeInput.value || '100';
 
-        doc.querySelectorAll('.blog-date-shell').forEach(function (element) {
-            Array.from(element.classList).forEach(function (className) {
-                if (className.indexOf('blog-date-style-') === 0 || className.indexOf('blog-date-effect-') === 0) {
-                    element.classList.remove(className);
-                }
-            });
-            element.classList.add('blog-date-style-' + style);
-            element.classList.add('blog-date-effect-' + effect);
-            element.setAttribute('data-date-style', style);
-            element.setAttribute('data-date-effect', effect);
+    [doc.documentElement, doc.body].forEach(function (target) {
+        target.style.setProperty('--post-date-color', color1);
+        target.style.setProperty('--post-date-color-1', color1);
+        target.style.setProperty('--post-date-color-2', color2);
+        target.style.setProperty('--post-date-scale', size);
+        target.style.setProperty('--post-date-style', style);
+        target.style.setProperty('--post-date-effect', effect);
+    });
+
+    doc.querySelectorAll('.blog-date-shell').forEach(function (element) {
+        Array.from(element.classList).forEach(function (className) {
+            if (className.indexOf('blog-date-style-') === 0 || className.indexOf('blog-date-effect-') === 0) {
+                element.classList.remove(className);
+            }
         });
 
-        updateDateEditorMode();
-        resizeIframe();
+        element.classList.add('blog-date-style-' + style);
+        element.classList.add('blog-date-effect-' + effect);
+        element.setAttribute('data-date-style', style);
+        element.setAttribute('data-date-effect', effect);
+    });
+
+    let runtimeStyle = doc.getElementById('blogplatform-live-date-override-style');
+
+    if (!runtimeStyle) {
+        runtimeStyle = doc.createElement('style');
+        runtimeStyle.id = 'blogplatform-live-date-override-style';
+        doc.head.appendChild(runtimeStyle);
     }
+
+    runtimeStyle.textContent = `
+        .blog-date-day,
+        .blog-date-month,
+        .blog-date-year,
+        .blog-date-inline,
+        .post-date,
+        .post-date-display {
+            color: ${color1} !important;
+            -webkit-text-fill-color: ${color1} !important;
+        }
+    `;
+
+    updateDateEditorMode();
+    resizeIframe();
+}
 
     function applyPreviewValues() {
         applyTitlePreviewValues();
