@@ -3450,5 +3450,109 @@ body,
 {% endif %}
 <!-- BLOGPLATFORM_RUNTIME_DESIGN_VARS_END -->
 
+<!-- BLOGPLATFORM_PUBLIC_DESIGN_RUNTIME_CSS_START -->
+{% if blog_preferences.active_design_customization %}
+{% with c=blog_preferences.active_design_customization %}
+{% firstof c.post_date_color c.post_date_color_1 "#d97706" as runtime_post_date_color %}
+<style id="blogplatform-public-design-runtime-css">
+:root,
+body {
+    --blog-title-color: {{ c.blog_title_color|default:'#3f3128' }};
+    --post-title-color: {{ c.post_title_color|default:'#111827' }};
+    --box-title-color: {{ c.box_title_color|default:'#3f3128' }};
+    --post-date-color: {{ runtime_post_date_color }};
+
+    --blog-title-size: {{ c.blog_title_size|default:'32'|cut:'px' }}px;
+    --post-title-size: {{ c.post_title_size|default:'24'|cut:'px' }}px;
+    --box-title-size: {{ c.box_title_size|default:'13'|cut:'px' }}px;
+
+    {% with f=c.blog_title_font|default:'georgia' %}
+    --blog-title-font: {% if f == 'system' %}-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif{% elif f == 'arial' %}Arial, Helvetica, sans-serif{% elif f == 'verdana' %}Verdana, Geneva, sans-serif{% elif f == 'trebuchet' %}"Trebuchet MS", Helvetica, sans-serif{% elif f == 'times' %}"Times New Roman", Times, serif{% elif f == 'garamond' %}Garamond, Georgia, serif{% elif f == 'palatino' %}"Palatino Linotype", Palatino, serif{% elif f == 'helvetica' %}Helvetica, Arial, sans-serif{% elif f == 'tahoma' %}Tahoma, Geneva, sans-serif{% else %}Georgia, "Times New Roman", serif{% endif %};
+    {% endwith %}
+
+    {% with f=c.post_title_font|default:'georgia' %}
+    --post-title-font: {% if f == 'system' %}-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif{% elif f == 'arial' %}Arial, Helvetica, sans-serif{% elif f == 'verdana' %}Verdana, Geneva, sans-serif{% elif f == 'trebuchet' %}"Trebuchet MS", Helvetica, sans-serif{% elif f == 'times' %}"Times New Roman", Times, serif{% elif f == 'garamond' %}Garamond, Georgia, serif{% elif f == 'palatino' %}"Palatino Linotype", Palatino, serif{% elif f == 'helvetica' %}Helvetica, Arial, sans-serif{% elif f == 'tahoma' %}Tahoma, Geneva, sans-serif{% else %}Georgia, "Times New Roman", serif{% endif %};
+    {% endwith %}
+
+    {% with f=c.box_title_font|default:'georgia' %}
+    --box-title-font: {% if f == 'system' %}-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif{% elif f == 'arial' %}Arial, Helvetica, sans-serif{% elif f == 'verdana' %}Verdana, Geneva, sans-serif{% elif f == 'trebuchet' %}"Trebuchet MS", Helvetica, sans-serif{% elif f == 'times' %}"Times New Roman", Times, serif{% elif f == 'garamond' %}Garamond, Georgia, serif{% elif f == 'palatino' %}"Palatino Linotype", Palatino, serif{% elif f == 'helvetica' %}Helvetica, Arial, sans-serif{% elif f == 'tahoma' %}Tahoma, Geneva, sans-serif{% else %}Georgia, "Times New Roman", serif{% endif %};
+    {% endwith %}
+}
+
+/* Ovo je namjerno na kraju stranice da pregazi dizajne koji imaju !important. */
+.blog-page-title,
+.blog-page-title a,
+.blog-page-title .blog-link,
+.blog-header-main .blog-page-title,
+.blog-header-main .blog-page-title a {
+    font-family: var(--blog-title-font) !important;
+    color: var(--blog-title-color) !important;
+    -webkit-text-fill-color: var(--blog-title-color) !important;
+    font-size: var(--blog-title-size) !important;
+}
+
+.blog-page-subtitle {
+    color: var(--blog-title-color) !important;
+    -webkit-text-fill-color: var(--blog-title-color) !important;
+}
+
+.blog-post-entry h1,
+.blog-post-entry h2,
+.blog-post-entry h3,
+.blog-post-entry h4,
+.blog-post-entry h5,
+.blog-post-entry h6,
+.blog-post-entry h1 a,
+.blog-post-entry h2 a,
+.blog-post-entry h3 a,
+.blog-post-entry h4 a,
+.blog-post-entry h5 a,
+.blog-post-entry h6 a,
+.blog-post-title,
+.blog-post-title a,
+.post-title,
+.post-title a,
+.jus-post h4,
+.jus-post h4 a,
+.jus-post .blog-post-title,
+.mj-post h4,
+.mj-post h4 a,
+.mj-post .blog-post-title,
+.magazin-post-entry h4,
+.magazin-post-entry h4 a,
+.magazin-post-entry .blog-post-title {
+    font-family: var(--post-title-font) !important;
+    color: var(--post-title-color) !important;
+    -webkit-text-fill-color: var(--post-title-color) !important;
+    font-size: var(--post-title-size) !important;
+}
+
+.calendar-title,
+.archive-title,
+.sidebar-box-title,
+.blog-box-title,
+.box-title,
+.user-box-title,
+.live-analytics-widget .small.fw-semibold {
+    font-family: var(--box-title-font) !important;
+    color: var(--box-title-color) !important;
+    -webkit-text-fill-color: var(--box-title-color) !important;
+    font-size: var(--box-title-size) !important;
+}
+
+.blog-date-day,
+.blog-date-month,
+.blog-date-year,
+.blog-date-inline,
+.post-date,
+.post-date-display {
+    color: var(--post-date-color) !important;
+    -webkit-text-fill-color: var(--post-date-color) !important;
+}
+</style>
+{% endwith %}
+{% endif %}
+<!-- BLOGPLATFORM_PUBLIC_DESIGN_RUNTIME_CSS_END -->
+
 </body>
 </html>

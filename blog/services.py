@@ -3637,3 +3637,142 @@ def set_blog_preferences(user_or_template, preferences):
 
         return preferences
 # BLOGPLATFORM_DB_DESIGN_PREFERENCES_END
+
+
+# BLOGPLATFORM_PUBLIC_DESIGN_ACTIVE_FIX_START
+# Javni blog mora dobiti aktivne postavke dizajna iz spremljenih design_customizations.
+# Bez ovoga editor pamti vrijednosti, ali javni blog koristi fallback boje.
+
+try:
+    _bp_original_apply_blog_preferences_to_profile = apply_blog_preferences_to_profile
+except NameError:
+    _bp_original_apply_blog_preferences_to_profile = None
+
+try:
+    _bp_original_get_blog_preferences_public_design = get_blog_preferences
+except NameError:
+    _bp_original_get_blog_preferences_public_design = None
+
+
+def _bp_public_design_template_key(profile_or_user_or_template):
+    if isinstance(profile_or_user_or_template, str):
+        return profile_or_user_or_template.strip() or "default"
+
+    profile = getattr(profile_or_user_or_template, "profile", None)
+
+    if profile is not None:
+        template = getattr(profile, "template", None)
+        if template:
+            return str(template).strip() or "default"
+
+    template = getattr(profile_or_user_or_template, "template", None)
+    if template:
+        return str(template).strip() or "default"
+
+    return "default"
+
+
+def _bp_deep_merge_public_design(base, extra):
+    result = dict(base or {})
+
+    if not isinstance(extra, dict):
+        return result
+
+    for key, value in extra.items():
+        if (
+            key in result
+            and isinstance(result.get(key), dict)
+            and isinstance(value, dict)
+        ):
+            result[key] = _bp_deep_merge_public_design(result.get(key), value)
+        else:
+            result[key] = value
+
+    return result
+
+
+def _bp_load_db_design_preferences(template):
+    try:
+        from django.db.utils import OperationalError, ProgrammingError
+        from blog.models import BlogDesignPreference
+
+        obj = BlogDesignPreference.objects.filter(template=template).first()
+
+        if obj and isinstance(obj.data, dict):
+            return dict(obj.data)
+
+    except (OperationalError, ProgrammingError):
+        return {}
+
+    except Exception:
+        return {}
+
+    return {}
+
+
+def _bp_public_design_with_active(prefs, template):
+    prefs = dict(prefs or {})
+
+    try:
+        design_customizations = normalize_design_customizations(
+            prefs.get("design_customizations")
+        )
+    except Exception:
+        design_customizations = prefs.get("design_customizations") or {}
+
+    if not isinstance(design_customizations, dict):
+        design_customizations = {}
+
+    current_design = design_customizations.get(template)
+
+    if not isinstance(current_design, dict):
+        current_design = prefs.get("active_design_customization") or {}
+
+    if not isinstance(current_design, dict):
+        current_design = {}
+
+    try:
+        prefs["active_design_customization"] = build_design_customization_payload(
+            current_design
+        )
+    except Exception:
+        prefs["active_design_customization"] = dict(current_design)
+
+    return prefs
+
+
+def get_blog_preferences(user_or_template):
+    template = _bp_public_design_template_key(user_or_template)
+    prefs = {}
+
+    if _bp_original_get_blog_preferences_public_design is not None:
+        try:
+            legacy = _bp_original_get_blog_preferences_public_design(user_or_template)
+            if isinstance(legacy, dict):
+                prefs = _bp_deep_merge_public_design(prefs, legacy)
+        except Exception:
+            pass
+
+    db_prefs = _bp_load_db_design_preferences(template)
+    prefs = _bp_deep_merge_public_design(prefs, db_prefs)
+
+    return _bp_public_design_with_active(prefs, template)
+
+
+def apply_blog_preferences_to_profile(profile, user=None):
+    template = _bp_public_design_template_key(profile)
+    prefs = {}
+
+    if _bp_original_apply_blog_preferences_to_profile is not None:
+        try:
+            legacy = _bp_original_apply_blog_preferences_to_profile(profile, user)
+            if isinstance(legacy, dict):
+                prefs = _bp_deep_merge_public_design(prefs, legacy)
+        except Exception:
+            pass
+
+    db_prefs = _bp_load_db_design_preferences(template)
+    prefs = _bp_deep_merge_public_design(prefs, db_prefs)
+
+    return _bp_public_design_with_active(prefs, template)
+# BLOGPLATFORM_PUBLIC_DESIGN_ACTIVE_FIX_END
