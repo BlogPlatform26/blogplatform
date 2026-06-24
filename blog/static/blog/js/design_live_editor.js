@@ -330,7 +330,56 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     `;
 
-    resizeIframe();
+    
+  // BLOGPLATFORM_DIRECT_TITLE_STYLE_START
+  function applyDirectLiveStyle(selector, styles) {
+    doc.querySelectorAll(selector).forEach(function (element) {
+      Object.keys(styles).forEach(function (property) {
+        element.style.setProperty(property, styles[property], 'important');
+      });
+    });
+  }
+
+  applyDirectLiveStyle(
+    '.blog-page-title, .blog-page-title *, .blog-page-title a, .blog-page-title a *, .blog-page-title .blog-link, .blog-page-title .blog-link *, .blog-header-main .blog-page-title, .blog-header-main .blog-page-title *, .blog-header-main .blog-page-title a, .blog-header-main .blog-page-title a *',
+    {
+      'font-family': blogFont,
+      'color': blogColor.value,
+      '-webkit-text-fill-color': blogColor.value,
+      'font-size': blogSizeValue
+    }
+  );
+
+  applyDirectLiveStyle(
+    '.blog-page-subtitle, .blog-page-subtitle *, .blog-subtitle, .blog-subtitle *',
+    {
+      'color': blogColor.value,
+      '-webkit-text-fill-color': blogColor.value
+    }
+  );
+
+  applyDirectLiveStyle(
+    '.blog-post-entry h1, .blog-post-entry h1 *, .blog-post-entry h2, .blog-post-entry h2 *, .blog-post-entry h3, .blog-post-entry h3 *, .blog-post-entry h4, .blog-post-entry h4 *, .blog-post-entry h5, .blog-post-entry h5 *, .blog-post-entry h6, .blog-post-entry h6 *, .blog-post-entry h1 a, .blog-post-entry h1 a *, .blog-post-entry h2 a, .blog-post-entry h2 a *, .blog-post-entry h3 a, .blog-post-entry h3 a *, .blog-post-entry h4 a, .blog-post-entry h4 a *, .blog-post-entry h5 a, .blog-post-entry h5 a *, .blog-post-entry h6 a, .blog-post-entry h6 a *, .blog-post-title, .blog-post-title *, .blog-post-title a, .blog-post-title a *, .post-title, .post-title *, .post-title a, .post-title a *, .jus-post h4, .jus-post h4 *, .jus-post h4 a, .jus-post h4 a *, .jus-post .blog-post-title, .jus-post .blog-post-title *, .mj-post h4, .mj-post h4 *, .mj-post h4 a, .mj-post h4 a *, .mj-post .blog-post-title, .mj-post .blog-post-title *, .magazin-post-entry h4, .magazin-post-entry h4 *, .magazin-post-entry h4 a, .magazin-post-entry h4 a *, .magazin-post-entry .blog-post-title, .magazin-post-entry .blog-post-title *',
+    {
+      'font-family': postFont,
+      'color': postColor.value,
+      '-webkit-text-fill-color': postColor.value,
+      'font-size': postSizeValue
+    }
+  );
+
+  applyDirectLiveStyle(
+    '.calendar-title, .calendar-title *, .archive-title, .archive-title *, .sidebar-box-title, .sidebar-box-title *, .blog-box-title, .blog-box-title *, .box-title, .box-title *, .user-box-title, .user-box-title *, .live-analytics-widget .small.fw-semibold, .live-analytics-widget .small.fw-semibold *',
+    {
+      'font-family': boxFont,
+      'color': boxColor.value,
+      '-webkit-text-fill-color': boxColor.value,
+      'font-size': boxSizeValue
+    }
+  );
+  // BLOGPLATFORM_DIRECT_TITLE_STYLE_END
+
+resizeIframe();
 }
 
     function updateDateEditorMode() {
@@ -409,7 +458,58 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     `;
 
-    updateDateEditorMode();
+    
+  // BLOGPLATFORM_DIRECT_DATE_STYLE_START
+  const dateScale = (parseInt(size, 10) || 100) / 100;
+
+  function applyDirectDateStyle(selector, styles) {
+    doc.querySelectorAll(selector).forEach(function (element) {
+      Object.keys(styles).forEach(function (property) {
+        element.style.setProperty(property, styles[property], 'important');
+      });
+    });
+  }
+
+  const shellStyles = {
+    'transform': 'scale(' + dateScale + ')',
+    'transform-origin': 'top left'
+  };
+
+  if (effect === 'gradient') {
+    shellStyles.background = 'linear-gradient(135deg, ' + color1 + ', ' + color2 + ')';
+    shellStyles['-webkit-background-clip'] = 'text';
+    shellStyles['background-clip'] = 'text';
+    shellStyles.color = 'transparent';
+    shellStyles['-webkit-text-fill-color'] = 'transparent';
+  } else {
+    shellStyles.background = 'none';
+    shellStyles.color = color1;
+    shellStyles['-webkit-text-fill-color'] = color1;
+  }
+
+  applyDirectDateStyle(
+    '.blog-date-shell, .blog-date-shell *',
+    shellStyles
+  );
+
+  applyDirectDateStyle(
+    '.blog-date-day, .blog-date-shell .blog-date-day',
+    {
+      'color': effect === 'gradient' ? 'transparent' : color1,
+      '-webkit-text-fill-color': effect === 'gradient' ? 'transparent' : color1
+    }
+  );
+
+  applyDirectDateStyle(
+    '.blog-date-month, .blog-date-year, .blog-date-shell .blog-date-month, .blog-date-shell .blog-date-year',
+    {
+      'color': effect === 'duo' ? color2 : effect === 'gradient' ? 'transparent' : color1,
+      '-webkit-text-fill-color': effect === 'duo' ? color2 : effect === 'gradient' ? 'transparent' : color1
+    }
+  );
+  // BLOGPLATFORM_DIRECT_DATE_STYLE_END
+
+updateDateEditorMode();
     resizeIframe();
 }
 
@@ -632,370 +732,3 @@ document.addEventListener('DOMContentLoaded', function () {
         updatePreviewScale();
     }, 120);
 });
-
-/* BLOGPLATFORM_LIVE_PREVIEW_RUNTIME_FIX_START */
-(function () {
-    function onReady(callback) {
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', callback);
-        } else {
-            callback();
-        }
-    }
-
-    function getIframe() {
-        return document.getElementById('designLivePreviewFrame');
-    }
-
-    function getPreviewDocument() {
-        var iframe = getIframe();
-
-        if (!iframe) {
-            return null;
-        }
-
-        try {
-            return iframe.contentDocument || (iframe.contentWindow && iframe.contentWindow.document) || null;
-        } catch (error) {
-            return null;
-        }
-    }
-
-    function ensureStyle(doc, id) {
-        if (!doc || !doc.head) {
-            return null;
-        }
-
-        var style = doc.getElementById(id);
-
-        if (!style) {
-            style = doc.createElement('style');
-            style.id = id;
-            doc.head.appendChild(style);
-        }
-
-        return style;
-    }
-
-    function fieldValue(name, fallback) {
-        var field = document.querySelector('[name="' + name + '"]');
-
-        if (!field) {
-            return fallback;
-        }
-
-        return field.value || fallback;
-    }
-
-    function toPx(value, fallback) {
-        var raw = String(value || fallback || '').replace('px', '').trim();
-        var number = parseInt(raw, 10);
-
-        if (!Number.isFinite(number) || number <= 0) {
-            number = parseInt(fallback, 10) || 16;
-        }
-
-        return number + 'px';
-    }
-
-    function selectedFontStack(name) {
-        var select = document.querySelector('[name="' + name + '"]');
-
-        if (!select) {
-            return 'Georgia, "Times New Roman", serif';
-        }
-
-        var option = select.options[select.selectedIndex];
-
-        if (option && option.dataset && option.dataset.fontStack) {
-            return option.dataset.fontStack;
-        }
-
-        var value = (select.value || '').toLowerCase();
-
-        var fallbackMap = {
-            system: '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
-            arial: 'Arial, Helvetica, sans-serif',
-            verdana: 'Verdana, Geneva, sans-serif',
-            trebuchet: '"Trebuchet MS", Helvetica, sans-serif',
-            times: '"Times New Roman", Times, serif',
-            georgia: 'Georgia, "Times New Roman", serif',
-            garamond: 'Garamond, Georgia, serif',
-            palatino: '"Palatino Linotype", Palatino, serif',
-            helvetica: 'Helvetica, Arial, sans-serif',
-            tahoma: 'Tahoma, Geneva, sans-serif'
-        };
-
-        return fallbackMap[value] || 'Georgia, "Times New Roman", serif';
-    }
-
-    function setVar(target, name, value) {
-        if (target && value !== undefined && value !== null && value !== '') {
-            target.style.setProperty(name, value);
-        }
-    }
-
-    function applyLiveTitles() {
-        var doc = getPreviewDocument();
-
-        if (!doc || !doc.body || !doc.documentElement) {
-            return;
-        }
-
-        var blogColor = fieldValue('blog_title_color', '#3f3128');
-        var postColor = fieldValue('post_title_color', '#111827');
-        var boxColor = fieldValue('box_title_color', '#3f3128');
-
-        var blogSize = toPx(fieldValue('blog_title_size', '54'), '54');
-        var postSize = toPx(fieldValue('post_title_size', '32'), '32');
-        var boxSize = toPx(fieldValue('box_title_size', '13'), '13');
-
-        var blogFont = selectedFontStack('blog_title_font');
-        var postFont = selectedFontStack('post_title_font');
-        var boxFont = selectedFontStack('box_title_font');
-
-        [doc.documentElement, doc.body].forEach(function (target) {
-            setVar(target, '--blog-title-font', blogFont);
-            setVar(target, '--blog-title-color', blogColor);
-            setVar(target, '--blog-title-size', blogSize);
-
-            setVar(target, '--post-title-font', postFont);
-            setVar(target, '--post-title-color', postColor);
-            setVar(target, '--post-title-size', postSize);
-
-            setVar(target, '--box-title-font', boxFont);
-            setVar(target, '--box-title-color', boxColor);
-            setVar(target, '--box-title-size', boxSize);
-        });
-
-        var style = ensureStyle(doc, 'blogplatform-live-editor-title-runtime-css');
-
-        if (!style) {
-            return;
-        }
-
-        style.textContent = `
-            .blog-page-title,
-            .blog-page-title a,
-            .blog-page-title .blog-link,
-            .blog-header-main .blog-page-title,
-            .blog-header-main .blog-page-title a {
-                font-family: ${blogFont} !important;
-                color: ${blogColor} !important;
-                -webkit-text-fill-color: ${blogColor} !important;
-                font-size: ${blogSize} !important;
-            }
-
-            .blog-page-subtitle {
-                color: ${blogColor} !important;
-                -webkit-text-fill-color: ${blogColor} !important;
-            }
-
-            .blog-post-entry h1,
-            .blog-post-entry h2,
-            .blog-post-entry h3,
-            .blog-post-entry h4,
-            .blog-post-entry h5,
-            .blog-post-entry h6,
-            .blog-post-entry h1 a,
-            .blog-post-entry h2 a,
-            .blog-post-entry h3 a,
-            .blog-post-entry h4 a,
-            .blog-post-entry h5 a,
-            .blog-post-entry h6 a,
-            .blog-post-title,
-            .blog-post-title a,
-            .post-title,
-            .post-title a,
-            .jus-post h4,
-            .jus-post h4 a,
-            .jus-post .blog-post-title,
-            .mj-post h4,
-            .mj-post h4 a,
-            .mj-post .blog-post-title,
-            .magazin-post-entry h4,
-            .magazin-post-entry h4 a,
-            .magazin-post-entry .blog-post-title {
-                font-family: ${postFont} !important;
-                color: ${postColor} !important;
-                -webkit-text-fill-color: ${postColor} !important;
-                font-size: ${postSize} !important;
-            }
-
-            .calendar-title,
-            .archive-title,
-            .sidebar-box-title,
-            .blog-box-title,
-            .box-title,
-            .user-box-title,
-            .live-analytics-widget .small.fw-semibold {
-                font-family: ${boxFont} !important;
-                color: ${boxColor} !important;
-                -webkit-text-fill-color: ${boxColor} !important;
-                font-size: ${boxSize} !important;
-            }
-        `;
-    }
-
-    function applyLiveDate() {
-        var doc = getPreviewDocument();
-
-        if (!doc || !doc.body || !doc.documentElement) {
-            return;
-        }
-
-        var color1 = fieldValue('post_date_color_1', fieldValue('post_date_color', '#d97706'));
-        var color2 = fieldValue('post_date_color_2', '#ffd200');
-        var styleValue = fieldValue('post_date_style', 'classic_vertical');
-        var effectValue = fieldValue('post_date_effect', 'solid');
-        var sizeValue = fieldValue('post_date_size', '100');
-
-        [doc.documentElement, doc.body].forEach(function (target) {
-            setVar(target, '--post-date-color', color1);
-            setVar(target, '--post-date-color-1', color1);
-            setVar(target, '--post-date-color-2', color2);
-            setVar(target, '--post-date-scale', sizeValue);
-            setVar(target, '--post-date-style', styleValue);
-            setVar(target, '--post-date-effect', effectValue);
-        });
-
-        doc.querySelectorAll('.blog-date-shell').forEach(function (element) {
-            Array.from(element.classList).forEach(function (className) {
-                if (className.indexOf('blog-date-style-') === 0 || className.indexOf('blog-date-effect-') === 0) {
-                    element.classList.remove(className);
-                }
-            });
-
-            element.classList.add('blog-date-style-' + styleValue);
-            element.classList.add('blog-date-effect-' + effectValue);
-            element.setAttribute('data-date-style', styleValue);
-            element.setAttribute('data-date-effect', effectValue);
-        });
-
-        var style = ensureStyle(doc, 'blogplatform-live-editor-date-runtime-css');
-
-        if (!style) {
-            return;
-        }
-
-        style.textContent = `
-            .blog-date-day,
-            .blog-date-month,
-            .blog-date-year,
-            .blog-date-inline,
-            .post-date,
-            .post-date-display {
-                color: ${color1} !important;
-                -webkit-text-fill-color: ${color1} !important;
-            }
-        `;
-    }
-
-    function applyLiveBackgrounds() {
-        var config = window.designLiveEditorConfig || {};
-
-        if (!config.supportsBackgroundEditor) {
-            return;
-        }
-
-        var doc = getPreviewDocument();
-
-        if (!doc || !doc.body || !doc.documentElement) {
-            return;
-        }
-
-        var headerColor = fieldValue('header_background_color_1', '#d98a37');
-        var contentColor = fieldValue('content_background_color', '#fffefb');
-        var boxColor = fieldValue('box_background_color', '#fffefb');
-
-        var outerMode = fieldValue('outer_background_mode', 'color');
-        var outer1 = fieldValue('outer_background_color_1', '#efe4c9');
-        var outer2 = fieldValue('outer_background_color_2', '#e1d0ac');
-        var direction = fieldValue('outer_background_gradient_direction', 'to bottom');
-
-        var outerBackground = outer1;
-
-        if (outerMode === 'gradient') {
-            outerBackground = 'linear-gradient(' + direction + ', ' + outer1 + ', ' + outer2 + ')';
-        }
-
-        var style = ensureStyle(doc, 'blogplatform-live-editor-background-runtime-css');
-
-        if (!style) {
-            return;
-        }
-
-        style.textContent = `
-            body {
-                background: ${outerBackground} !important;
-            }
-
-            .blog-header-main--simple {
-                background: ${headerColor} !important;
-            }
-
-            .blog-post-entry {
-                background: ${contentColor} !important;
-            }
-
-            .calendar-box,
-            .archive-box,
-            .sidebar-box,
-            .live-analytics-widget,
-            .sidebar-box--simple {
-                background: ${boxColor} !important;
-            }
-        `;
-    }
-
-    function applyLivePreviewNow() {
-        applyLiveTitles();
-        applyLiveDate();
-        applyLiveBackgrounds();
-    }
-
-    function applyLivePreviewSoon() {
-        applyLivePreviewNow();
-
-        setTimeout(applyLivePreviewNow, 40);
-        setTimeout(applyLivePreviewNow, 140);
-        setTimeout(applyLivePreviewNow, 400);
-    }
-
-    function bindLivePreviewFix() {
-        var iframe = getIframe();
-
-        document.querySelectorAll(
-            '[data-live-font], [data-live-color], [data-live-size], ' +
-            '[data-size-range], [data-size-input], ' +
-            '[data-live-date-style], [data-live-date-effect], [data-live-date-color], [data-live-date-size], ' +
-            '[data-live-background-mode], [data-live-background-color], [data-live-background-select]'
-        ).forEach(function (input) {
-            input.addEventListener('input', applyLivePreviewSoon);
-            input.addEventListener('change', applyLivePreviewSoon);
-            input.addEventListener('keyup', applyLivePreviewSoon);
-        });
-
-        document.querySelectorAll('[data-reset-card]').forEach(function (button) {
-            button.addEventListener('click', applyLivePreviewSoon);
-        });
-
-        var reloadBtn = document.getElementById('reloadPreviewBtn');
-
-        if (reloadBtn) {
-            reloadBtn.addEventListener('click', function () {
-                setTimeout(applyLivePreviewSoon, 120);
-                setTimeout(applyLivePreviewSoon, 700);
-            });
-        }
-
-        if (iframe) {
-            iframe.addEventListener('load', applyLivePreviewSoon);
-        }
-
-        applyLivePreviewSoon();
-    }
-
-    onReady(bindLivePreviewFix);
-}());
-/* BLOGPLATFORM_LIVE_PREVIEW_RUNTIME_FIX_END */
