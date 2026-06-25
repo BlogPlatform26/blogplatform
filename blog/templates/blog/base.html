@@ -1146,6 +1146,56 @@
 
 
 
+
+<!-- BLOGPLATFORM_NOTIFICATION_DROPDOWN_STYLE_START -->
+<style>
+    .dropdown-menu .bp-notification-item,
+    .notification-dropdown .bp-notification-item {
+        display: block !important;
+        width: auto !important;
+        white-space: normal !important;
+        text-decoration: none !important;
+        border-radius: 0 !important;
+        padding: 10px 14px !important;
+        margin: 0 !important;
+    }
+
+    .dropdown-menu .bp-notification-unread,
+    .notification-dropdown .bp-notification-unread {
+        background-color: #d1d5db !important;
+        color: #111827 !important;
+        font-weight: 700 !important;
+        opacity: 1 !important;
+    }
+
+    .dropdown-menu .bp-notification-unread *,
+    .notification-dropdown .bp-notification-unread * {
+        color: #111827 !important;
+        font-weight: 700 !important;
+        opacity: 1 !important;
+    }
+
+    .dropdown-menu .bp-notification-read,
+    .notification-dropdown .bp-notification-read {
+        background-color: #ffffff !important;
+        color: #111827 !important;
+        font-weight: 400 !important;
+        opacity: 1 !important;
+    }
+
+    .dropdown-menu .bp-notification-read *,
+    .notification-dropdown .bp-notification-read * {
+        font-weight: 400 !important;
+        opacity: 1 !important;
+    }
+
+    .dropdown-menu .bp-notification-unread:hover,
+    .notification-dropdown .bp-notification-unread:hover {
+        background-color: #c4c4c4 !important;
+    }
+</style>
+<!-- BLOGPLATFORM_NOTIFICATION_DROPDOWN_STYLE_END -->
+
 </head>
 
 <body class="{% if request.resolver_match.url_name != 'login' and request.resolver_match.url_name != 'register' and request.resolver_match.url_name != 'activation_sent' and request.resolver_match.url_name != 'author_onboarding' and request.resolver_match.url_name != 'password_reset' and request.resolver_match.url_name != 'password_reset_done' and request.resolver_match.url_name != 'password_reset_confirm' and request.resolver_match.url_name != 'password_reset_complete' %}blog-cursor-theme blog-cursor-{{ blog_preferences.cursor_style|default:'default' }} blog-cursor-effect-{{ blog_preferences.cursor_effect|default:'none' }}{% if blog_preferences.cursor_stylesheet_url %} blog-cursor-external-style{% endif %}{% endif %}" data-blog-cursor-effect="{{ blog_preferences.cursor_effect|default:'none' }}" style="
@@ -1331,7 +1381,7 @@
                     <li><hr class="dropdown-divider my-0"></li>
                     {% for notification in latest_notifications %}
 
-<a href="{% url 'notification_redirect' notification.id %}" class="dropdown-item notification-item">
+<a href="{% url 'notification_redirect' notification.id %}" class="dropdown-item notification-item bp-notification-item {% if notification.is_read %}bp-notification-read{% else %}bp-notification-unread{% endif %}">
     <i class="{{ notification|bp_notification_icon }}"></i>
     {{ notification|bp_notification_message }}
     <br>
