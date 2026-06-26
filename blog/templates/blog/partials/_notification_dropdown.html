@@ -1,0 +1,224 @@
+{% load custom_tags %}
+
+<!-- BLOGPLATFORM_FINAL_NOTIFICATION_DROPDOWN_START -->
+<style>
+    html body nav.navbar .bp-final-notification-menu {
+        width: 360px !important;
+        min-width: 360px !important;
+        max-width: calc(100vw - 20px) !important;
+        max-height: 420px !important;
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        border-radius: 8px !important;
+        background: #ffffff !important;
+        box-sizing: border-box !important;
+    }
+
+    @media (max-width: 600px) {
+        html body nav.navbar .bp-final-notification-menu {
+            width: calc(100vw - 20px) !important;
+            min-width: 0 !important;
+        }
+    }
+
+    html body nav.navbar .bp-final-notification-menu,
+    html body nav.navbar .bp-final-notification-menu * {
+        box-sizing: border-box !important;
+        max-width: 100% !important;
+    }
+
+    html body nav.navbar .bp-final-notification-header {
+        position: sticky !important;
+        top: 0 !important;
+        z-index: 5 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        gap: 12px !important;
+        width: 100% !important;
+        padding: 10px 16px !important;
+        margin: 0 !important;
+        list-style: none !important;
+        background: #ffffff !important;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+    }
+
+    html body nav.navbar .bp-final-notification-title {
+        font-weight: 700 !important;
+        color: #111827 !important;
+        white-space: nowrap !important;
+    }
+
+    html body nav.navbar .bp-final-notification-actions {
+        display: flex !important;
+        align-items: center !important;
+        gap: 10px !important;
+        white-space: nowrap !important;
+    }
+
+    html body nav.navbar .bp-final-notification-row {
+        display: block !important;
+        width: 100% !important;
+        min-width: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        list-style: none !important;
+        overflow: hidden !important;
+    }
+
+    html body nav.navbar .bp-final-notification-item {
+        display: flex !important;
+        align-items: flex-start !important;
+        gap: 10px !important;
+        width: 100% !important;
+        min-width: 0 !important;
+        padding: 10px 16px !important;
+        margin: 0 !important;
+        border: 0 !important;
+        border-radius: 0 !important;
+        color: #111827 !important;
+        text-decoration: none !important;
+        white-space: normal !important;
+        overflow: hidden !important;
+        line-height: 1.35 !important;
+        font-weight: 400 !important;
+    }
+
+    html body nav.navbar .bp-final-notification-icon {
+        flex: 0 0 22px !important;
+        width: 22px !important;
+        min-width: 22px !important;
+        max-width: 22px !important;
+        margin-top: 2px !important;
+        color: #111827 !important;
+        font-size: 1.05rem !important;
+        line-height: 1.2 !important;
+        text-align: center !important;
+    }
+
+    html body nav.navbar .bp-final-notification-body {
+        flex: 1 1 auto !important;
+        display: block !important;
+        min-width: 0 !important;
+        width: auto !important;
+        overflow: hidden !important;
+        white-space: normal !important;
+    }
+
+    html body nav.navbar .bp-final-notification-text {
+        display: block !important;
+        width: 100% !important;
+        min-width: 0 !important;
+        color: #111827 !important;
+        font-weight: 400 !important;
+        line-height: 1.35 !important;
+        white-space: normal !important;
+        overflow-wrap: break-word !important;
+        word-break: normal !important;
+    }
+
+    html body nav.navbar .bp-final-notification-text strong {
+        color: #111827 !important;
+        font-weight: 700 !important;
+        white-space: normal !important;
+        overflow-wrap: break-word !important;
+        word-break: normal !important;
+    }
+
+    html body nav.navbar .bp-final-notification-time {
+        display: block !important;
+        margin-top: 4px !important;
+        color: #374151 !important;
+        font-size: 0.875rem !important;
+        font-weight: 400 !important;
+        line-height: 1.25 !important;
+        white-space: normal !important;
+        overflow-wrap: break-word !important;
+    }
+
+    html body nav.navbar .bp-final-notification-unread {
+        background: #d1d5db !important;
+    }
+
+    html body nav.navbar .bp-final-notification-read {
+        background: #ffffff !important;
+    }
+
+    html body nav.navbar .bp-final-notification-item:hover {
+        background: #e5e7eb !important;
+        color: #111827 !important;
+    }
+
+    html body nav.navbar .bp-final-notification-empty {
+        display: block !important;
+        padding: 12px 16px !important;
+        color: #6b7280 !important;
+        list-style: none !important;
+        white-space: normal !important;
+    }
+</style>
+<!-- BLOGPLATFORM_FINAL_NOTIFICATION_DROPDOWN_END -->
+
+<div class="dropdown me-2 bp-final-notification-dropdown">
+    <a class="nav-icon dropdown-toggle"
+       href="#"
+       role="button"
+       data-bs-toggle="dropdown"
+       aria-expanded="false"
+       title="Notifikacije">
+        <span class="position-relative d-inline-flex align-items-center">
+            <i class="bi bi-bell fs-5"></i>
+
+            {% if unread_notifications_count > 0 %}
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger notif-badge">
+                {{ unread_notifications_count }}
+            </span>
+            {% endif %}
+        </span>
+    </a>
+
+    <ul class="dropdown-menu dropdown-menu-end bp-final-notification-menu">
+        <li class="bp-final-notification-header">
+            <span class="bp-final-notification-title">Obavijesti</span>
+
+            <span class="bp-final-notification-actions">
+                <form method="POST" action="{% url 'mark_all_notifications_read' %}" class="m-0">
+                    {% csrf_token %}
+                    <button type="submit"
+                            class="btn btn-link btn-sm p-0 text-decoration-none"
+                            {% if unread_notifications_count == 0 %}disabled{% endif %}>
+                        Označi sve pročitano
+                    </button>
+                </form>
+
+                <a href="{% url 'notifications' %}"
+                   class="btn btn-link btn-sm p-0 text-decoration-none">
+                    Vidi sve
+                </a>
+            </span>
+        </li>
+
+        {% for notification in latest_notifications %}
+        <li class="bp-final-notification-row">
+            <a href="{% url 'notification_redirect' notification.id %}"
+               class="bp-final-notification-item {% if notification.is_read %}bp-final-notification-read{% else %}bp-final-notification-unread{% endif %}">
+                <i class="{{ notification|bp_notification_icon }} bp-final-notification-icon"></i>
+
+                <span class="bp-final-notification-body">
+                    <span class="bp-final-notification-text">
+                        {{ notification|bp_notification_message }}
+                    </span>
+
+                    <span class="bp-final-notification-time">
+                        {{ notification.created_at|date:"d.m.Y H:i" }}
+                    </span>
+                </span>
+            </a>
+        </li>
+        {% empty %}
+        <li class="bp-final-notification-empty">Nema notifikacija.</li>
+        {% endfor %}
+    </ul>
+</div>

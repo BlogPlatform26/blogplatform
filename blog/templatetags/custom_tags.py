@@ -240,17 +240,17 @@ def notification_message(notification):
     notification_type = getattr(notification, "notification_type", "")
 
     if notification_type == "follow":
-        return mark_safe(f'<strong>{sender_name}</strong> vas je zapratio.')
+        return mark_safe(f'<strong>{sender_name}</strong> vas je zapratio/la.')
 
     if notification_type == "like":
         if post_title:
-            return mark_safe(f'<strong>{sender_name}</strong> je lajkao vaš post <strong>"{post_title}"</strong>.')
-        return mark_safe(f'<strong>{sender_name}</strong> je lajkao vaš post.')
+            return mark_safe(f'<strong>{sender_name}</strong> je lajkao/la vaš post <strong>"{post_title}"</strong>.')
+        return mark_safe(f'<strong>{sender_name}</strong> je lajkao/la vaš post.')
 
     if notification_type == "comment":
         if post_title:
-            return mark_safe(f'<strong>{sender_name}</strong> je komentirao vaš post <strong>"{post_title}"</strong>.')
-        return mark_safe(f'<strong>{sender_name}</strong> je komentirao vaš post.')
+            return mark_safe(f'<strong>{sender_name}</strong> je komentirao/la vaš post <strong>"{post_title}"</strong>.')
+        return mark_safe(f'<strong>{sender_name}</strong> je komentirao/la vaš post.')
 
     if notification_type == "mention":
         if post_title:
@@ -292,16 +292,16 @@ def bp_notification_message(notification):
 
     if notification_type == "like":
         if post_title:
-            return mark_safe(f'<strong>{sender_name}</strong> je lajkao vaš post <strong>"{post_title}"</strong>')
-        return mark_safe(f'<strong>{sender_name}</strong> je lajkao vaš post')
+            return mark_safe(f'<strong>{sender_name}</strong> je lajkao/la vaš post <strong>"{post_title}"</strong>')
+        return mark_safe(f'<strong>{sender_name}</strong> je lajkao/la vaš post')
 
     if notification_type == "comment":
         if post_title:
-            return mark_safe(f'<strong>{sender_name}</strong> je komentirao vaš post <strong>"{post_title}"</strong>')
-        return mark_safe(f'<strong>{sender_name}</strong> je komentirao vaš post')
+            return mark_safe(f'<strong>{sender_name}</strong> je komentirao/la vaš post <strong>"{post_title}"</strong>')
+        return mark_safe(f'<strong>{sender_name}</strong> je komentirao/la vaš post')
 
     if notification_type == "follow":
-        return mark_safe(f'<strong>{sender_name}</strong> vas je zapratio.')
+        return mark_safe(f'<strong>{sender_name}</strong> vas je zapratio/la.')
 
     if notification_type == "mention":
         if post_title:

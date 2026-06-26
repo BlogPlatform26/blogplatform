@@ -55,7 +55,6 @@
         }
         .nav-user-text{ line-height: 1; }
         .notif-badge{ font-size: 11px; padding: 3px 6px; }
-        .notif-menu{ width: 360px; max-height: 420px; overflow-y: auto; }
     .notif-actions-bar{
         position: sticky;
         top: 0;
@@ -235,90 +234,7 @@
             {% if user.is_authenticated %}
 
             <!-- NOTIFIKACIJE -->
-            <div class="dropdown me-2">
-                <a class="nav-icon dropdown-toggle"
-                   href="#"
-                   role="button"
-                   data-bs-toggle="dropdown"
-                   aria-expanded="false"
-                   title="Notifikacije">
-                    <span class="position-relative d-inline-flex align-items-center">
-                        <i class="bi bi-bell fs-5"></i>
-
-                        {% if unread_notifications_count > 0 %}
-                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger notif-badge">
-                            {{ unread_notifications_count }}
-                        </span>
-                        {% endif %}
-                    </span>
-                </a>
-
-                <ul class="dropdown-menu dropdown-menu-end notif-menu">
-                    <li class="notif-actions-bar">
-                        <div class="d-flex align-items-center justify-content-between gap-2 px-3 py-2">
-                            <span class="notif-actions-title small">Obavijesti</span>
-
-                            <div class="d-flex align-items-center gap-2">
-                                <form method="POST" action="{% url 'mark_all_notifications_read' %}" class="m-0">
-                                    {% csrf_token %}
-                                    <button type="submit"
-                                            class="notif-actions-btn"
-                                            {% if unread_notifications_count == 0 %}disabled{% endif %}>
-                                        Označi sve pročitano
-                                    </button>
-                                </form>
-
-                                <a href="{% url 'notifications' %}" class="notif-actions-link">
-                                    Vidi sve
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-
-                    {% for notification in latest_notifications %}
-                        <li>
-                            {% if notification.notification_type == "follow" %}
-                                <a class="dropdown-item small {% if not notification.is_read %}unread-notification{% endif %}"
-                                   href="{% url 'notification_redirect' notification.id %}">
-                                    <div class="d-flex align-items-start gap-2">
-                                        <i class="bi bi-person-plus"></i>
-                                        <div>
-                                            <div><strong>{{ notification.sender.username }}</strong> vas je zapratio.</div>
-                                            <div class="text-muted small">{{ notification.created_at|date:"d.m.Y H:i" }}</div>
-                                        </div>
-                                    </div>
-                                </a>
-
-                            {% elif notification.notification_type == "like" %}
-                                <a class="dropdown-item small {% if not notification.is_read %}unread-notification{% endif %}"
-                                   href="{% url 'notification_redirect' notification.id %}">
-                                    <div class="d-flex align-items-start gap-2">
-                                        <i class="bi bi-heart"></i>
-                                        <div>
-                                            <div><strong>{{ notification.sender.username }}</strong> je lajkao vaš post <strong>"{{ notification.post.title }}"</strong></div>
-                                            <div class="text-muted small">{{ notification.created_at|date:"d.m.Y H:i" }}</div>
-                                        </div>
-                                    </div>
-                                </a>
-
-                            {% elif notification.notification_type == "comment" %}
-                                <a class="dropdown-item small {% if not notification.is_read %}unread-notification{% endif %}"
-                                   href="{% url 'notification_redirect' notification.id %}">
-                                    <div class="d-flex align-items-start gap-2">
-                                        <i class="bi bi-chat-left-text"></i>
-                                        <div>
-                                            <div><strong>{{ notification.sender.username }}</strong> je komentirao vaš post <strong>"{{ notification.post.title }}"</strong></div>
-                                            <div class="text-muted small">{{ notification.created_at|date:"d.m.Y H:i" }}</div>
-                                        </div>
-                                    </div>
-                                </a>
-                            {% endif %}
-                        </li>
-                    {% empty %}
-                        <li><span class="dropdown-item text-muted">Nema notifikacija.</span></li>
-                    {% endfor %}
-                </ul>
-            </div>
+            {% include "blog/partials/_notification_dropdown.html" %}
 
             <!-- USER MENU -->
             <div class="dropdown">

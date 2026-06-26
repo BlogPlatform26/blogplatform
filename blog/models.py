@@ -1173,6 +1173,11 @@ def _bp_create_mention_notifications(sender, instance, created, **kwargs):
         if mentioned_user.id == instance.author_id:
             continue
 
+        # Ako je označen vlasnik posta, ne šaljemo dodatnu mention obavijest.
+        # Vlasnik posta već dobiva običnu comment obavijest.
+        if instance.post_id and mentioned_user.id == instance.post.author_id:
+            continue
+
         Notification.objects.get_or_create(
             recipient=mentioned_user,
             sender=instance.author,

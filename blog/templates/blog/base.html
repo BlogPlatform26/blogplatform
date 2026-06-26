@@ -65,7 +65,6 @@
     }
     .nav-user-text{ line-height: 1; }
     .notif-badge{ font-size: 11px; padding: 3px 6px; }
-    .notif-menu{ width: 360px; max-height: 420px; overflow-y: auto; }
     .notif-actions-bar{
         position: sticky;
         top: 0;
@@ -1140,62 +1139,6 @@
     }
 </style>
 
-
-
-
-
-
-
-
-<!-- BLOGPLATFORM_NOTIFICATION_DROPDOWN_STYLE_START -->
-<style>
-    .dropdown-menu .bp-notification-item,
-    .notification-dropdown .bp-notification-item {
-        display: block !important;
-        width: auto !important;
-        white-space: normal !important;
-        text-decoration: none !important;
-        border-radius: 0 !important;
-        padding: 10px 14px !important;
-        margin: 0 !important;
-    }
-
-    .dropdown-menu .bp-notification-unread,
-    .notification-dropdown .bp-notification-unread {
-        background-color: #d1d5db !important;
-        color: #111827 !important;
-        font-weight: 700 !important;
-        opacity: 1 !important;
-    }
-
-    .dropdown-menu .bp-notification-unread *,
-    .notification-dropdown .bp-notification-unread * {
-        color: #111827 !important;
-        font-weight: 700 !important;
-        opacity: 1 !important;
-    }
-
-    .dropdown-menu .bp-notification-read,
-    .notification-dropdown .bp-notification-read {
-        background-color: #ffffff !important;
-        color: #111827 !important;
-        font-weight: 400 !important;
-        opacity: 1 !important;
-    }
-
-    .dropdown-menu .bp-notification-read *,
-    .notification-dropdown .bp-notification-read * {
-        font-weight: 400 !important;
-        opacity: 1 !important;
-    }
-
-    .dropdown-menu .bp-notification-unread:hover,
-    .notification-dropdown .bp-notification-unread:hover {
-        background-color: #c4c4c4 !important;
-    }
-</style>
-<!-- BLOGPLATFORM_NOTIFICATION_DROPDOWN_STYLE_END -->
-
 </head>
 
 <body class="{% if request.resolver_match.url_name != 'login' and request.resolver_match.url_name != 'register' and request.resolver_match.url_name != 'activation_sent' and request.resolver_match.url_name != 'author_onboarding' and request.resolver_match.url_name != 'password_reset' and request.resolver_match.url_name != 'password_reset_done' and request.resolver_match.url_name != 'password_reset_confirm' and request.resolver_match.url_name != 'password_reset_complete' %}blog-cursor-theme blog-cursor-{{ blog_preferences.cursor_style|default:'default' }} blog-cursor-effect-{{ blog_preferences.cursor_effect|default:'none' }}{% if blog_preferences.cursor_stylesheet_url %} blog-cursor-external-style{% endif %}{% endif %}" data-blog-cursor-effect="{{ blog_preferences.cursor_effect|default:'none' }}" style="
@@ -1340,59 +1283,7 @@
             {% if user.is_authenticated %}
 
             <!-- NOTIFIKACIJE -->
-            <div class="dropdown me-2">
-                <a class="nav-icon dropdown-toggle"
-                   href="#"
-                   role="button"
-                   data-bs-toggle="dropdown"
-                   aria-expanded="false"
-                   title="Notifikacije">
-                    <span class="position-relative d-inline-flex align-items-center">
-                        <i class="bi bi-bell fs-5"></i>
-
-                        {% if unread_notifications_count > 0 %}
-                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger notif-badge">
-                            {{ unread_notifications_count }}
-                        </span>
-                        {% endif %}
-                    </span>
-                </a>
-
-                <ul class="dropdown-menu dropdown-menu-end notif-menu">
-                    <li class="notif-actions-bar">
-                        <div class="d-flex align-items-center justify-content-between gap-2 px-3 py-2">
-                            <span class="small text-muted">Obavijesti</span>
-                            <div class="d-flex align-items-center gap-2">
-                                <form method="POST" action="{% url 'mark_all_notifications_read' %}" class="m-0">
-                                    {% csrf_token %}
-                                    <button type="submit"
-                                            class="btn btn-link btn-sm p-0 text-decoration-none"
-                                            {% if unread_notifications_count == 0 %}disabled{% endif %}>
-                                        Označi sve pročitano
-                                    </button>
-                                </form>
-                                <a href="{% url 'notifications' %}"
-                                   class="btn btn-link btn-sm p-0 text-decoration-none">
-                                    Vidi sve
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-                    <li><hr class="dropdown-divider my-0"></li>
-                    {% for notification in latest_notifications %}
-
-<a href="{% url 'notification_redirect' notification.id %}" class="dropdown-item notification-item bp-notification-item {% if notification.is_read %}bp-notification-read{% else %}bp-notification-unread{% endif %}">
-    <i class="{{ notification|bp_notification_icon }}"></i>
-    {{ notification|bp_notification_message }}
-    <br>
-    <small>{{ notification.created_at|date:"d.m.Y H:i" }}</small>
-</a>
-
-{% empty %}
-                        <li><span class="dropdown-item text-muted">Nema notifikacija.</span></li>
-                    {% endfor %}
-                </ul>
-            </div>
+            {% include "blog/partials/_notification_dropdown.html" %}
 
             <!-- POZDRAV / USER MENU -->
             <div class="dropdown">
