@@ -1,10 +1,10 @@
-{% load custom_tags %}
+﻿{% load custom_tags %}
 
 <!-- BLOGPLATFORM_FINAL_NOTIFICATION_DROPDOWN_START -->
 <style>
     html body nav.navbar .bp-final-notification-menu {
-        width: 360px !important;
-        min-width: 360px !important;
+        width: 330px !important;
+        min-width: 330px !important;
         max-width: calc(100vw - 20px) !important;
         max-height: 420px !important;
         overflow-y: auto !important;
@@ -48,14 +48,14 @@
     html body nav.navbar .bp-final-notification-title {
         font-weight: 700 !important;
         color: #111827 !important;
-        white-space: nowrap !important;
+        white-space: normal !important;
     }
 
     html body nav.navbar .bp-final-notification-actions {
         display: flex !important;
         align-items: center !important;
         gap: 10px !important;
-        white-space: nowrap !important;
+        white-space: normal !important;
     }
 
     html body nav.navbar .bp-final-notification-row {
@@ -158,6 +158,117 @@
         list-style: none !important;
         white-space: normal !important;
     }
+
+
+    /* BLOGPLATFORM_SMALLER_NOTIFICATION_TEXT_START */
+    html body nav.navbar .bp-final-notification-title {
+        font-size: 10px !important;
+    }
+
+    html body nav.navbar .bp-final-notification-actions,
+    html body nav.navbar .bp-final-notification-actions .btn,
+    html body nav.navbar .bp-final-notification-actions a {
+        font-size: 11px !important;
+    }
+
+    html body nav.navbar .bp-final-notification-item {
+        padding: 6px 12px !important;
+    }
+
+    html body nav.navbar .bp-final-notification-icon {
+        font-size: 13px !important;
+    }
+
+    html body nav.navbar .bp-final-notification-text {
+        font-size: 10px !important;
+        line-height: 1.32 !important;
+    }
+
+    html body nav.navbar .bp-final-notification-text strong {
+        font-size: inherit !important;
+    }
+
+    html body nav.navbar .bp-final-notification-time {
+        font-size: 10px !important;
+        line-height: 1.25 !important;
+        margin-top: 2px !important;
+    }
+    /* BLOGPLATFORM_SMALLER_NOTIFICATION_TEXT_END */
+
+
+
+    /* BLOGPLATFORM_NOTIFICATION_NARROW_FIX_START */
+    html body .dropdown-menu.bp-final-notification-menu,
+    html body nav.navbar .dropdown-menu.bp-final-notification-menu,
+    html body .bp-final-notification-menu {
+        width: 300px !important;
+        min-width: 300px !important;
+        max-width: 300px !important;
+        overflow-x: hidden !important;
+    }
+
+    html body .bp-final-notification-header,
+    html body nav.navbar .bp-final-notification-header {
+        padding: 9px 10px !important;
+        gap: 8px !important;
+    }
+
+    html body .bp-final-notification-title,
+    html body nav.navbar .bp-final-notification-title {
+        font-size: 12px !important;
+        line-height: 1.2 !important;
+    }
+
+    html body .bp-final-notification-actions,
+    html body nav.navbar .bp-final-notification-actions {
+        display: flex !important;
+        align-items: center !important;
+        gap: 10px !important;
+        flex-wrap: nowrap !important;
+        white-space: nowrap !important;
+        margin-left: auto !important;
+    }
+
+    html body .bp-final-notification-actions a,
+    html body .bp-final-notification-actions button,
+    html body .bp-final-notification-actions .btn,
+    html body nav.navbar .bp-final-notification-actions a,
+    html body nav.navbar .bp-final-notification-actions button,
+    html body nav.navbar .bp-final-notification-actions .btn {
+        font-size: 11px !important;
+        line-height: 1.2 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        white-space: nowrap !important;
+    }
+
+    html body .bp-final-notification-item,
+    html body nav.navbar .bp-final-notification-item {
+        padding: 7px 10px !important;
+        gap: 8px !important;
+    }
+
+    html body .bp-final-notification-icon,
+    html body nav.navbar .bp-final-notification-icon {
+        font-size: 13px !important;
+        width: 18px !important;
+        min-width: 18px !important;
+    }
+
+    html body .bp-final-notification-text,
+    html body nav.navbar .bp-final-notification-text {
+        font-size: 12px !important;
+        line-height: 1.28 !important;
+    }
+
+    html body .bp-final-notification-time,
+    html body nav.navbar .bp-final-notification-time {
+        font-size: 10px !important;
+        line-height: 1.2 !important;
+        margin-top: 2px !important;
+    }
+    /* BLOGPLATFORM_NOTIFICATION_NARROW_FIX_END */
+
 </style>
 <!-- BLOGPLATFORM_FINAL_NOTIFICATION_DROPDOWN_END -->
 
@@ -189,7 +300,7 @@
                     <button type="submit"
                             class="btn btn-link btn-sm p-0 text-decoration-none"
                             {% if unread_notifications_count == 0 %}disabled{% endif %}>
-                        Označi sve pročitano
+                        Ozna&#269;i pro&#269;itano
                     </button>
                 </form>
 
@@ -222,3 +333,5 @@
         {% endfor %}
     </ul>
 </div>
+
+
