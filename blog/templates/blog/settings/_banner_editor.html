@@ -71,118 +71,126 @@
             <div class="mt-4">
                 <label class="form-label d-block">Pozicija slike</label>
 
-                <div class="form-check">
-                    <input
-                        class="form-check-input"
-                        type="radio"
-                        name="blog_banner_position"
-                        value="left"
-                        id="bannerLeft"
-                        {% if user.profile.blog_banner_position == "left" %}checked{% endif %}
-                    >
-                    <label class="form-check-label" for="bannerLeft">Lijevo</label>
-                </div>
+                <div class="blog-banner-options-row">
+                    <div class="form-check">
+                        <input
+                            class="form-check-input"
+                            type="radio"
+                            name="blog_banner_position"
+                            value="left"
+                            id="bannerLeft"
+                            {% if user.profile.blog_banner_position == "left" %}checked{% endif %}
+                        >
+                        <label class="form-check-label" for="bannerLeft">
+                            Lijevo
+                        </label>
+                    </div>
 
-                <div class="form-check">
-                    <input
-                        class="form-check-input"
-                        type="radio"
-                        name="blog_banner_position"
-                        value="center"
-                        id="bannerCenter"
-                        {% if user.profile.blog_banner_position == "center" %}checked{% endif %}
-                    >
-                    <label class="form-check-label" for="bannerCenter">Sredina</label>
-                </div>
+                    <div class="form-check">
+                        <input
+                            class="form-check-input"
+                            type="radio"
+                            name="blog_banner_position"
+                            value="center"
+                            id="bannerCenter"
+                            {% if user.profile.blog_banner_position == "center" %}checked{% endif %}
+                        >
+                        <label class="form-check-label" for="bannerCenter">
+                            Sredina
+                        </label>
+                    </div>
 
-                <div class="form-check">
-                    <input
-                        class="form-check-input"
-                        type="radio"
-                        name="blog_banner_position"
-                        value="right"
-                        id="bannerRight"
-                        {% if user.profile.blog_banner_position == "right" %}checked{% endif %}
-                    >
-                    <label class="form-check-label" for="bannerRight">Desno</label>
+                    <div class="form-check">
+                        <input
+                            class="form-check-input"
+                            type="radio"
+                            name="blog_banner_position"
+                            value="right"
+                            id="bannerRight"
+                            {% if user.profile.blog_banner_position == "right" %}checked{% endif %}
+                        >
+                        <label class="form-check-label" for="bannerRight">
+                            Desno
+                        </label>
+                    </div>
                 </div>
             </div>
 
             <div class="mt-3">
-    <label class="form-label d-block">Veličina bannera</label>
+                <label class="form-label d-block">Veličina bannera</label>
 
-    <div class="d-flex flex-wrap gap-3">
-        <div class="form-check">
-            <input
-                class="form-check-input"
-                type="radio"
-                name="blog_banner_size"
-                id="blogBannerSizeXsmall"
-                value="xsmall"
-                {% if user.profile.blog_banner_size == "xsmall" %}checked{% endif %}
-            >
-            <label class="form-check-label" for="blogBannerSizeXsmall">
-                Vrlo malo
-            </label>
-        </div>
+                <div class="blog-banner-options-row">
+                    <div class="form-check">
+                        <input
+                            class="form-check-input"
+                            type="radio"
+                            name="blog_banner_size"
+                            id="blogBannerSizeXsmall"
+                            value="xsmall"
+                            {% if user.profile.blog_banner_size == "xsmall" %}checked{% endif %}
+                        >
+                        <label class="form-check-label" for="blogBannerSizeXsmall">
+                            Vrlo malo
+                        </label>
+                    </div>
 
-        <div class="form-check">
-            <input
-                class="form-check-input"
-                type="radio"
-                name="blog_banner_size"
-                id="blogBannerSizeSmall"
-                value="small"
-                {% if user.profile.blog_banner_size == "small" %}checked{% endif %}
-            >
-            <label class="form-check-label" for="blogBannerSizeSmall">
-                Malo
-            </label>
-        </div>
+                    <div class="form-check">
+                        <input
+                            class="form-check-input"
+                            type="radio"
+                            name="blog_banner_size"
+                            id="blogBannerSizeSmall"
+                            value="small"
+                            {% if user.profile.blog_banner_size == "small" %}checked{% endif %}
+                        >
+                        <label class="form-check-label" for="blogBannerSizeSmall">
+                            Malo
+                        </label>
+                    </div>
 
-        <div class="form-check">
-            <input
-                class="form-check-input"
-                type="radio"
-                name="blog_banner_size"
-                id="blogBannerSizeMedium"
-                value="medium"
-                {% if not user.profile.blog_banner_size or user.profile.blog_banner_size == "medium" %}checked{% endif %}
-            >
-            <label class="form-check-label" for="blogBannerSizeMedium">
-                Srednje
-            </label>
-        </div>
+                    <div class="form-check">
+                        <input
+                            class="form-check-input"
+                            type="radio"
+                            name="blog_banner_size"
+                            id="blogBannerSizeMedium"
+                            value="medium"
+                            {% if not user.profile.blog_banner_size or user.profile.blog_banner_size == "medium" %}checked{% endif %}
+                        >
+                        <label class="form-check-label" for="blogBannerSizeMedium">
+                            Srednje
+                        </label>
+                    </div>
 
-        <div class="form-check">
-            <input
-                class="form-check-input"
-                type="radio"
-                name="blog_banner_size"
-                id="blogBannerSizeLarge"
-                value="large"
-                {% if user.profile.blog_banner_size == "large" %}checked{% endif %}
-            >
-            <label class="form-check-label" for="blogBannerSizeLarge">
-                Veliko
-            </label>
-        </div>
-        <div class="form-check">
-            <input
-                class="form-check-input"
-                type="radio"
-                name="blog_banner_size"
-                id="blogBannerSizeFullWidth"
-                value="full_width"
-                {% if user.profile.blog_banner_size == "full_width" %}checked{% endif %}
-            >
-            <label class="form-check-label" for="blogBannerSizeFullWidth">
-                Puna širina
-            </label>
-        </div>
-    </div>
-</div>
+                    <div class="form-check">
+                        <input
+                            class="form-check-input"
+                            type="radio"
+                            name="blog_banner_size"
+                            id="blogBannerSizeLarge"
+                            value="large"
+                            {% if user.profile.blog_banner_size == "large" %}checked{% endif %}
+                        >
+                        <label class="form-check-label" for="blogBannerSizeLarge">
+                            Veliko
+                        </label>
+                    </div>
 
+                    <div class="form-check">
+                        <input
+                            class="form-check-input"
+                            type="radio"
+                            name="blog_banner_size"
+                            id="blogBannerSizeFullWidth"
+                            value="full_width"
+                            {% if user.profile.blog_banner_size == "full_width" %}checked{% endif %}
+                        >
+                        <label class="form-check-label" for="blogBannerSizeFullWidth">
+                            Puna širina
+                        </label>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -196,7 +204,12 @@
                     <div class="small text-muted">Namjesti sliku prije spremanja.</div>
                 </div>
 
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Zatvori"></button>
+                <button
+                    type="button"
+                    class="btn-close btn-close-white"
+                    data-bs-dismiss="modal"
+                    aria-label="Zatvori"
+                ></button>
             </div>
 
             <div class="modal-body pt-0">
@@ -207,16 +220,30 @@
                 <div class="blog-banner-crop-controls mt-4">
                     <div class="blog-banner-crop-control-row">
                         <label for="blogBannerZoomRange" class="form-label mb-0">Uvećanje</label>
-                        <input type="range" id="blogBannerZoomRange" min="0" max="100" value="50" class="form-range">
+                        <input
+                            type="range"
+                            id="blogBannerZoomRange"
+                            min="0"
+                            max="100"
+                            value="50"
+                            class="form-range"
+                        >
                     </div>
 
                     <div class="d-flex justify-content-between align-items-center gap-2 flex-wrap mt-3">
                         <div class="d-flex gap-2 flex-wrap">
-                            <button type="button" class="btn btn-outline-secondary btn-sm" id="blogBannerRotateBtn">Zakreni</button>
-                            <button type="button" class="btn btn-outline-secondary btn-sm" id="blogBannerResetBtn">Vrati</button>
+                            <button type="button" class="btn btn-outline-secondary btn-sm" id="blogBannerRotateBtn">
+                                Zakreni
+                            </button>
+
+                            <button type="button" class="btn btn-outline-secondary btn-sm" id="blogBannerResetBtn">
+                                Vrati
+                            </button>
                         </div>
 
-                        <button type="button" class="btn btn-primary" id="blogBannerApplyBtn">Primijeni banner</button>
+                        <button type="button" class="btn btn-primary" id="blogBannerApplyBtn">
+                            Primijeni banner
+                        </button>
                     </div>
                 </div>
             </div>
@@ -255,6 +282,24 @@
     color: #64748b;
     text-align: center;
     padding: 16px;
+}
+
+.blog-banner-options-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem 1.5rem;
+}
+
+.blog-banner-options-row .form-check {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin-bottom: 0;
+}
+
+.blog-banner-options-row .form-check-input {
+    margin-top: 0;
 }
 
 #blogBannerCropModal .modal-dialog {
@@ -525,8 +570,8 @@
             }
 
             const canvas = cropper.getCroppedCanvas({
-                width: 2200,
-                height: 900,
+                width: 4400,
+                height: 1800,
                 imageSmoothingEnabled: true,
                 imageSmoothingQuality: "high",
                 fillColor: "#ffffff"
@@ -537,7 +582,7 @@
                 return;
             }
 
-            const dataUrl = canvas.toDataURL("image/jpeg", 0.92);
+            const dataUrl = canvas.toDataURL("image/jpeg", 0.98);
             hiddenInput.value = dataUrl;
 
             if (previewImage) {
