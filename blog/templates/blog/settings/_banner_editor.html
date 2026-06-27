@@ -167,6 +167,19 @@
                 Veliko
             </label>
         </div>
+        <div class="form-check">
+            <input
+                class="form-check-input"
+                type="radio"
+                name="blog_banner_size"
+                id="blogBannerSizeFullWidth"
+                value="full_width"
+                {% if user.profile.blog_banner_size == "full_width" %}checked{% endif %}
+            >
+            <label class="form-check-label" for="blogBannerSizeFullWidth">
+                Puna širina
+            </label>
+        </div>
     </div>
 </div>
 

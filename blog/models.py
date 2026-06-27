@@ -319,6 +319,7 @@ class Profile(models.Model):
         ("small", "Malo"),
         ("medium", "Srednje"),
         ("large", "Veliko"),
+        ("full_width", "Puna širina"),
     )
 
     blog_banner = models.ImageField(
