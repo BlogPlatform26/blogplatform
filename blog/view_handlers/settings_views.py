@@ -778,11 +778,14 @@ def update_site_message(request):
         
         msg, _ = SiteMessage.objects.get_or_create(id=1)
         msg.content_html = request.POST.get('content_html', '')
+
         if request.POST.get('remove_image') == '1' and msg.image:
             msg.image.delete(save=False)
             msg.image = None
+
         if 'image' in request.FILES:
             msg.image = request.FILES['image']
+
         msg.save()
         messages.success(request, 'Poruka je spremljena.')
     return redirect(request.META.get('HTTP_REFERER', 'home'))
@@ -1449,7 +1452,15 @@ def blog_settings(request):
             })
             return redirect('/blog/settings/?tab=dizajn&design_tab=uredivanje')
 
-        if request.GET.get('tab') == 'dizajn' and design_tab == 'ugodaj':
+        if (
+            request.GET.get('tab') == 'dizajn' and design_tab == 'ugodaj'
+        ) or (
+            'cursor_style' in request.POST
+            or 'cursor_effect' in request.POST
+            or 'ambient_music_track' in request.POST
+            or 'ambient_music_volume' in request.POST
+            or 'ambient_music_enabled' in request.POST
+        ):
             current_preferences = get_blog_preferences(request.user)
 
             if not isinstance(current_preferences, dict):

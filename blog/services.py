@@ -3738,6 +3738,61 @@ def _bp_public_design_with_active(prefs, template):
     except Exception:
         prefs["active_design_customization"] = dict(current_design)
 
+    # VAŽNO:
+    # Nakon spajanja spremljenih postavki ponovno izračunaj kursor.
+    # Inače se cursor_style spremi, ali cursor_css ostane stari/defaultni.
+    cursor_style = str(
+        prefs.get("cursor_style", DEFAULT_CURSOR_STYLE) or DEFAULT_CURSOR_STYLE
+    ).strip()
+
+    if cursor_style not in BLOG_CURSOR_VALUES:
+        cursor_style = DEFAULT_CURSOR_STYLE
+
+    prefs["cursor_style"] = cursor_style
+
+    cursor_choice = get_cursor_choice(cursor_style)
+    prefs["cursor_css"] = cursor_choice.get("cursor_css", "auto")
+    prefs["cursor_pointer_css"] = cursor_choice.get(
+        "pointer_cursor_css",
+        prefs["cursor_css"]
+    )
+    prefs["cursor_stylesheet_url"] = cursor_choice.get("cursor_stylesheet_url", "")
+
+    cursor_effect = str(
+        prefs.get("cursor_effect", "none") or "none"
+    ).strip()
+
+    if cursor_effect not in BLOG_CURSOR_EFFECT_VALUES:
+        cursor_effect = "none"
+
+    prefs["cursor_effect"] = cursor_effect
+
+    prefs["ambient_music_enabled"] = bool(
+        prefs.get("ambient_music_enabled", False)
+    )
+
+    raw_track_id = str(
+        prefs.get("ambient_music_track", "") or ""
+    ).strip()
+
+    ambient_track = get_ambient_music_track(raw_track_id)
+
+    if not ambient_track:
+        raw_track_id = ""
+        prefs["ambient_music_enabled"] = False
+
+    prefs["ambient_music_track"] = raw_track_id
+    prefs["ambient_music_track_data"] = ambient_track
+
+    try:
+        ambient_music_volume = int(
+            prefs.get("ambient_music_volume", 18) or 18
+        )
+    except Exception:
+        ambient_music_volume = 18
+
+    prefs["ambient_music_volume"] = max(0, min(100, ambient_music_volume))
+
     return prefs
 
 
