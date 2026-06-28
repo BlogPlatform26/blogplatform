@@ -524,6 +524,22 @@ def _delete_custom_cursor_file(relative_path):
             pass
 
 
+def update_blog_preferences_without_reset(user, updates):
+    """
+    Sprema samo ono što se mijenja.
+    Ne briše postojeći dizajn, kursor, glazbu, boje, fontove i ostale postavke.
+    """
+    current_preferences = get_blog_preferences(user)
+
+    if not isinstance(current_preferences, dict):
+        current_preferences = {}
+
+    if not isinstance(updates, dict):
+        updates = {}
+
+    current_preferences.update(updates)
+    set_blog_preferences(user, current_preferences)
+
 
 def _save_custom_cursor_file(user, upload):
     extension = os.path.splitext(upload.name or '')[1].lower()
@@ -538,7 +554,6 @@ def _save_custom_cursor_file(user, upload):
             destination.write(chunk)
 
     return os.path.join(relative_dir, filename).replace('\\', '/')
-
 
 def _normalize_publish_at(value):
     if not value:
@@ -929,6 +944,22 @@ def autosave_post_draft(request):
         'message': 'Automatski spremljeno u skice.',
         'saved_at': timezone.localtime(timezone.now()).strftime('%H:%M:%S'),
     })
+
+def update_blog_preferences_safely(user, updates):
+    """
+    Sigurno sprema samo promjene koje šaljemo.
+    Ne briše postojeći dizajn, kursor, boje, fontove i ostale postavke.
+    """
+    current_preferences = get_blog_preferences(user)
+
+    if not isinstance(current_preferences, dict):
+        current_preferences = {}
+
+    if not isinstance(updates, dict):
+        updates = {}
+
+    current_preferences.update(updates)
+    set_blog_preferences(user, current_preferences)
 
 @login_required
 def blog_settings(request):
@@ -1413,32 +1444,44 @@ def blog_settings(request):
                 messages.success(request, 'Uređivanje dizajna je spremljeno.')
 
             design_customizations[active_template] = current_design
-            set_blog_preferences(request.user, {
+            update_blog_preferences_safely(request.user, {
                 'design_customizations': design_customizations,
             })
             return redirect('/blog/settings/?tab=dizajn&design_tab=uredivanje')
 
-
         if request.GET.get('tab') == 'dizajn' and design_tab == 'ugodaj':
-            allowed_cursor_values = {item['value'] for item in get_blog_cursor_choices()}
-            allowed_cursor_effect_values = {item['value'] for item in get_blog_cursor_effect_choices()}
-            allowed_music_values = {item['id'] for item in get_ambient_music_tracks()}
-            selected_cursor_style = str(request.POST.get('cursor_style', 'default') or 'default').strip()
-            selected_cursor_effect = str(request.POST.get('cursor_effect', 'none') or 'none').strip()
+            current_preferences = get_blog_preferences(request.user)
+
+            if not isinstance(current_preferences, dict):
+                current_preferences = {}
+
+            selected_cursor_style = str(
+                request.POST.get('cursor_style', current_preferences.get('cursor_style', 'default')) or 'default'
+            ).strip()
+
+            selected_cursor_effect = str(
+                request.POST.get('cursor_effect', current_preferences.get('cursor_effect', 'none')) or 'none'
+            ).strip()
+
             ambient_music_enabled = request.POST.get('ambient_music_enabled') == '1'
-            ambient_music_track = str(request.POST.get('ambient_music_track', '') or '').strip()
+
+            ambient_music_track = str(
+                request.POST.get('ambient_music_track', current_preferences.get('ambient_music_track', '')) or ''
+            ).strip()
 
             try:
-                ambient_music_volume = int(request.POST.get('ambient_music_volume', 18) or 18)
+                ambient_music_volume = int(
+                    request.POST.get(
+                        'ambient_music_volume',
+                        current_preferences.get('ambient_music_volume', 18)
+                    ) or 18
+                )
             except Exception:
                 ambient_music_volume = 18
+
             ambient_music_volume = max(0, min(100, ambient_music_volume))
 
-            if selected_cursor_style not in allowed_cursor_values:
-                selected_cursor_style = 'default'
-
-            if selected_cursor_effect not in allowed_cursor_effect_values:
-                selected_cursor_effect = 'none'
+            allowed_music_values = {item['id'] for item in get_ambient_music_tracks()}
 
             if ambient_music_track not in allowed_music_values:
                 ambient_music_track = ''
@@ -1446,13 +1489,14 @@ def blog_settings(request):
             if ambient_music_track == '':
                 ambient_music_enabled = False
 
-            set_blog_preferences(request.user, {
+            update_blog_preferences_without_reset(request.user, {
                 'cursor_style': selected_cursor_style,
                 'cursor_effect': selected_cursor_effect,
                 'ambient_music_enabled': ambient_music_enabled,
                 'ambient_music_track': ambient_music_track,
                 'ambient_music_volume': ambient_music_volume,
             })
+
             messages.success(request, 'Kursor, efekt i glazba bloga su spremljeni.')
             return redirect('/blog/settings/?tab=dizajn&design_tab=ugodaj')
 
@@ -1626,7 +1670,7 @@ def blog_settings(request):
                     updated_preferences['analytics_stat_card_size'] = stat_card_size
 
             if updated_preferences:
-                set_blog_preferences(request.user, updated_preferences)
+                update_blog_preferences_safely(request.user, updated_preferences)
                 settings_changed = True
 
             if settings_changed:
@@ -1823,7 +1867,7 @@ def design_live_editor_titles(request):
                 messages.success(request, 'Promjene naslova i datuma su spremljene.')
 
             design_customizations[active_template] = current_design
-            set_blog_preferences(request.user, {
+            update_blog_preferences_safely(request.user, {
                 'design_customizations': design_customizations,
             })
             return redirect(reverse('design_live_editor_titles') + '?section=naslovi')
@@ -1880,7 +1924,7 @@ def design_live_editor_titles(request):
                 messages.success(request, 'Promjene pozadina su spremljene.')
 
             design_customizations[active_template] = current_design
-            set_blog_preferences(request.user, {
+            update_blog_preferences_safely(request.user, {
                 'design_customizations': design_customizations,
             })
             return redirect(reverse('design_live_editor_titles') + '?section=pozadine')
