@@ -1,0 +1,6653 @@
+{
+  "generated_at": "2026-07-01 22:18:35",
+  "summary": {
+    "design_count": 42,
+    "html_files_scanned": 114,
+    "groups": {
+      "zajednicki_layout": 24,
+      "right_sidebar": 3,
+      "posebni_single_sidebar": 9,
+      "posebni_hero": 2,
+      "simple": 4
+    },
+    "risk": {
+      "srednji": 20,
+      "nizak": 11,
+      "visok": 11
+    },
+    "special_count": 11
+  },
+  "global_fields": {
+    "active_design_customization": {
+      "blog_title_color": 5,
+      "box_title_color": 5,
+      "post_date_effect": 5,
+      "post_date_style": 5,
+      "post_title_color": 5,
+      "content_background_color": 5,
+      "post_date_color": 4,
+      "box_background_color": 4,
+      "content_border_color": 4,
+      "outer_background_color_1": 4,
+      "blog_title_font_stack": 3,
+      "blog_title_size": 3,
+      "body_font_stack": 3,
+      "body_text_color": 3,
+      "box_title_font_stack": 3,
+      "box_title_size": 3,
+      "post_title_font_stack": 3,
+      "post_title_size": 3,
+      "box_border_color": 3,
+      "header_background_color_1": 3,
+      "outer_background_asset": 3,
+      "right_box_columns": 3,
+      "post_date_color_1": 2,
+      "post_date_color_2": 2,
+      "post_date_size": 2,
+      "outer_background_color_2": 2,
+      "outer_background_gradient_direction": 2,
+      "outer_background_mode": 2,
+      "outer_background_pattern": 2,
+      "blog_title_font": 2,
+      "box_title_font": 2,
+      "post_title_font": 2,
+      "header_background_color_2": 1,
+      "header_background_gradient_direction": 1,
+      "header_background_mode": 1,
+      "outer_background_image": 1
+    },
+    "blog_preferences": {
+      "analytics_widget_side": 15,
+      "blog_archive_mode": 14,
+      "active_design_customization": 8,
+      "analytics_active_pages_enabled": 3,
+      "analytics_live_counter_enabled": 3,
+      "analytics_map_enabled": 3,
+      "analytics_map_variant": 3,
+      "ambient_music_enabled": 2,
+      "ambient_music_track_data": 2,
+      "ambient_music_volume": 2,
+      "cursor_effect": 2,
+      "cursor_style": 2,
+      "analytics_stat_card_size": 2,
+      "analytics_geo_enabled": 2,
+      "cursor_css": 1,
+      "cursor_pointer_css": 1,
+      "cursor_stylesheet_url": 1,
+      "ambient_music_track": 1,
+      "allow_comments": 1,
+      "posts_per_page": 1,
+      "show_post_comments": 1
+    },
+    "blog_profile": {
+      "blog_name": 15,
+      "blog_tagline": 13,
+      "blog_banner": 11,
+      "template": 8,
+      "simple_background_image": 3,
+      "has_active_premium": 3,
+      "avatar": 3,
+      "blog_banner_position": 2,
+      "allow_author_questions": 1,
+      "blog_banner_display": 1,
+      "blog_banner_focus": 1,
+      "blog_banner_size": 1
+    },
+    "css_vars": {
+      "post-title-color": 31,
+      "blog-title-color": 23,
+      "box-title-color": 23,
+      "body-text-color": 7,
+      "post-date-color": 6,
+      "blog-title-font": 3,
+      "box-title-font": 3,
+      "blog-title-size": 2,
+      "box-title-size": 2,
+      "post-title-font": 2,
+      "post-title-size": 2,
+      "analytics-map-card-bg": 1,
+      "analytics-map-card-border": 1,
+      "analytics-map-card-shadow": 1,
+      "analytics-page-row-bg": 1,
+      "analytics-page-row-border": 1,
+      "analytics-page-row-color": 1,
+      "analytics-stat-card-bg": 1,
+      "analytics-stat-card-border": 1,
+      "analytics-stat-card-color": 1,
+      "analytics-stat-card-padding-x": 1,
+      "analytics-stat-card-padding-y": 1,
+      "analytics-stat-card-shadow": 1,
+      "analytics-stat-gap": 1,
+      "analytics-stat-label-color": 1,
+      "analytics-stat-label-size": 1,
+      "analytics-stat-radius": 1,
+      "analytics-stat-value-color": 1,
+      "analytics-stat-value-size": 1,
+      "blog-selected-cursor": 1,
+      "blog-selected-pointer-cursor": 1,
+      "c1": 1,
+      "c2": 1,
+      "color": 1,
+      "dx": 1,
+      "dy": 1,
+      "h": 1,
+      "height": 1,
+      "opacity": 1,
+      "rotate": 1,
+      "size": 1,
+      "spin": 1,
+      "w": 1,
+      "width": 1,
+      "body-font": 1,
+      "date-accent-color": 1,
+      "date-bg-soft": 1,
+      "date-day-color": 1,
+      "date-muted-color": 1,
+      "date-primary": 1,
+      "date-scale-factor": 1,
+      "date-secondary": 1,
+      "date-text-color": 1,
+      "post-date-color-1": 1,
+      "post-date-color-2": 1,
+      "post-date-scale": 1,
+      "magazin-body-font": 1,
+      "magazin-box-font": 1,
+      "magazin-box-title": 1,
+      "magazin-content-bg": 1,
+      "magazin-content-border": 1,
+      "magazin-date": 1,
+      "magazin-main-bg": 1,
+      "magazin-post-font": 1,
+      "magazin-post-title": 1,
+      "magazin-section-bg": 1,
+      "magazin-section-border": 1,
+      "magazin-sidebar-bg": 1,
+      "magazin-text": 1,
+      "magazin-title-color": 1,
+      "magazin-title-font": 1,
+      "nebesko-box-border": 1,
+      "nebesko-content-border": 1,
+      "nebesko-link": 1,
+      "nebesko-link-strong": 1,
+      "nebesko-panel-bg": 1,
+      "nebesko-panel-bg-strong": 1,
+      "nebesko-shadow": 1,
+      "soho-body-font": 1,
+      "soho-box-font": 1,
+      "soho-box-title": 1,
+      "soho-content-bg": 1,
+      "soho-content-border": 1,
+      "soho-date": 1,
+      "soho-main-gap": 1,
+      "soho-page-bg": 1,
+      "soho-post-font": 1,
+      "soho-post-title": 1,
+      "soho-text": 1,
+      "soho-title-color": 1,
+      "soho-title-font": 1,
+      "panel-bg": 1,
+      "panel-border": 1,
+      "avatar-crop-size": 1
+    }
+  },
+  "designs": [
+    {
+      "name": "asfaltni_plamen",
+      "file": "blog/templates/blog/designs/asfaltni_plamen.html",
+      "group": "zajednicki_layout",
+      "extends": "blog/layouts/blog_design_base.html",
+      "is_special": false,
+      "includes_shared_styles": true,
+      "includes": [
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_posts.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": [
+          "blog-title-color",
+          "box-title-color",
+          "post-title-color"
+        ]
+      },
+      "risks": {
+        "important": 47,
+        "inline_style": 0,
+        "hardcoded_hex": 21,
+        "hardcoded_rgba": 45,
+        "font_family_decl": 0,
+        "color_decl": 23,
+        "background_decl": 15,
+        "fixed_banner_height": 2
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": false
+      },
+      "risk_score": 4,
+      "risk_label": "srednji",
+      "risk_reasons": [
+        "više !important pravila",
+        "mnogo direktnih boja/pozadina u CSS-u"
+      ],
+      "snippets": {
+        "banner": ".blog-header-wrap > .row,\n.blog-main-layout-row,\n.blog-banner-strip > .row {\n    --bs-gutter-x: 24px;\n}",
+        "title": "}\n\n.blog-page-title,\n.blog-page-title a {\n    color: var(--blog-title-color, #fff5e9) !important;",
+        "box": "\n.archive-empty,\n.sidebar-box-content,\n.calendar-title,\n.calendar-weekdays,"
+      }
+    },
+    {
+      "name": "carobna_ljubicasta",
+      "file": "blog/templates/blog/designs/carobna_ljubicasta.html",
+      "group": "zajednicki_layout",
+      "extends": "blog/layouts/blog_design_base.html",
+      "is_special": false,
+      "includes_shared_styles": true,
+      "includes": [
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_posts.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": [
+          "blog-title-color",
+          "box-title-color",
+          "post-title-color"
+        ]
+      },
+      "risks": {
+        "important": 51,
+        "inline_style": 0,
+        "hardcoded_hex": 25,
+        "hardcoded_rgba": 106,
+        "font_family_decl": 0,
+        "color_decl": 31,
+        "background_decl": 25,
+        "fixed_banner_height": 4
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": true
+      },
+      "risk_score": 4,
+      "risk_label": "srednji",
+      "risk_reasons": [
+        "više !important pravila",
+        "mnogo direktnih boja/pozadina u CSS-u"
+      ],
+      "snippets": {
+        "banner": ".blog-header-wrap > .row,\n.blog-main-layout-row,\n.blog-banner-strip > .row {\n    --bs-gutter-x: 22px;\n}",
+        "title": "}\n\n.blog-page-title,\n.blog-page-title a {\n    color: var(--blog-title-color, #fff3ff) !important;",
+        "box": "\n.archive-empty,\n.sidebar-box-content {\n    color: rgba(243, 232, 255, 0.88);\n}"
+      }
+    },
+    {
+      "name": "classic",
+      "file": "blog/templates/blog/designs/classic.html",
+      "group": "zajednicki_layout",
+      "extends": "blog/layouts/blog_design_base.html",
+      "is_special": false,
+      "includes_shared_styles": false,
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 0,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": false
+      },
+      "risk_score": 0,
+      "risk_label": "nizak",
+      "risk_reasons": [],
+      "snippets": {
+        "banner": "",
+        "title": "",
+        "box": ""
+      }
+    },
+    {
+      "name": "classic_right",
+      "file": "blog/templates/blog/designs/classic_right.html",
+      "group": "right_sidebar",
+      "extends": "blog/layouts/blog_design_base.html",
+      "is_special": false,
+      "includes_shared_styles": false,
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 0,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": false
+      },
+      "risk_score": 0,
+      "risk_label": "nizak",
+      "risk_reasons": [],
+      "snippets": {
+        "banner": "",
+        "title": "",
+        "box": ""
+      }
+    },
+    {
+      "name": "dark",
+      "file": "blog/templates/blog/designs/dark.html",
+      "group": "zajednicki_layout",
+      "extends": "blog/layouts/blog_design_base.html",
+      "is_special": false,
+      "includes_shared_styles": false,
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 0,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": false
+      },
+      "risk_score": 0,
+      "risk_label": "nizak",
+      "risk_reasons": [],
+      "snippets": {
+        "banner": "",
+        "title": "",
+        "box": ""
+      }
+    },
+    {
+      "name": "dark_right",
+      "file": "blog/templates/blog/designs/dark_right.html",
+      "group": "right_sidebar",
+      "extends": "blog/layouts/blog_design_base.html",
+      "is_special": false,
+      "includes_shared_styles": false,
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 0,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": false
+      },
+      "risk_score": 0,
+      "risk_label": "nizak",
+      "risk_reasons": [],
+      "snippets": {
+        "banner": "",
+        "title": "",
+        "box": ""
+      }
+    },
+    {
+      "name": "default",
+      "file": "blog/templates/blog/designs/default.html",
+      "group": "zajednicki_layout",
+      "extends": "blog/layouts/blog_design_base.html",
+      "is_special": false,
+      "includes_shared_styles": false,
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 0,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": false
+      },
+      "risk_score": 0,
+      "risk_label": "nizak",
+      "risk_reasons": [],
+      "snippets": {
+        "banner": "",
+        "title": "",
+        "box": ""
+      }
+    },
+    {
+      "name": "default_right",
+      "file": "blog/templates/blog/designs/default_right.html",
+      "group": "right_sidebar",
+      "extends": "blog/layouts/blog_design_base.html",
+      "is_special": false,
+      "includes_shared_styles": false,
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 0,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": false
+      },
+      "risk_score": 0,
+      "risk_label": "nizak",
+      "risk_reasons": [],
+      "snippets": {
+        "banner": "",
+        "title": "",
+        "box": ""
+      }
+    },
+    {
+      "name": "dimni_akordi",
+      "file": "blog/templates/blog/designs/dimni_akordi.html",
+      "group": "zajednicki_layout",
+      "extends": "blog/layouts/blog_design_base.html",
+      "is_special": false,
+      "includes_shared_styles": true,
+      "includes": [
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_posts.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": [
+          "blog-title-color",
+          "box-title-color",
+          "post-title-color"
+        ]
+      },
+      "risks": {
+        "important": 47,
+        "inline_style": 0,
+        "hardcoded_hex": 20,
+        "hardcoded_rgba": 45,
+        "font_family_decl": 0,
+        "color_decl": 22,
+        "background_decl": 15,
+        "fixed_banner_height": 2
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": false
+      },
+      "risk_score": 4,
+      "risk_label": "srednji",
+      "risk_reasons": [
+        "više !important pravila",
+        "mnogo direktnih boja/pozadina u CSS-u"
+      ],
+      "snippets": {
+        "banner": ".blog-header-wrap > .row,\n.blog-main-layout-row,\n.blog-banner-strip > .row {\n    --bs-gutter-x: 24px;\n}",
+        "title": "}\n\n.blog-page-title,\n.blog-page-title a {\n    color: var(--blog-title-color, #fff3e8) !important;",
+        "box": "\n.archive-empty,\n.sidebar-box-content,\n.calendar-title,\n.calendar-weekdays,"
+      }
+    },
+    {
+      "name": "iznad_oblaka",
+      "file": "blog/templates/blog/designs/iznad_oblaka.html",
+      "group": "zajednicki_layout",
+      "extends": "blog/layouts/blog_design_base.html",
+      "is_special": false,
+      "includes_shared_styles": true,
+      "includes": [
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_posts.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": [
+          "blog-title-color",
+          "box-title-color",
+          "post-title-color"
+        ]
+      },
+      "risks": {
+        "important": 45,
+        "inline_style": 0,
+        "hardcoded_hex": 26,
+        "hardcoded_rgba": 46,
+        "font_family_decl": 0,
+        "color_decl": 30,
+        "background_decl": 18,
+        "fixed_banner_height": 4
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": false
+      },
+      "risk_score": 4,
+      "risk_label": "srednji",
+      "risk_reasons": [
+        "više !important pravila",
+        "mnogo direktnih boja/pozadina u CSS-u"
+      ],
+      "snippets": {
+        "banner": ".blog-header-wrap > .row,\n.blog-main-layout-row,\n.blog-banner-strip > .row {\n    --bs-gutter-x: 22px;\n}",
+        "title": "}\n\n.blog-page-title,\n.blog-page-title a {\n    color: var(--blog-title-color, #5d6470) !important;",
+        "box": "\n.archive-empty,\n.sidebar-box-content {\n    color: rgba(95, 102, 112, 0.84);\n}"
+      }
+    },
+    {
+      "name": "jedro_u_suton",
+      "file": "blog/templates/blog/designs/jedro_u_suton.html",
+      "group": "posebni_single_sidebar",
+      "extends": "blog/base.html",
+      "is_special": true,
+      "includes_shared_styles": false,
+      "includes": [
+        "blog/components/blog_interaction_scripts.html",
+        "blog/components/blog_profile_actions_sidebar.html",
+        "blog/components/live_analytics_widget.html",
+        "blog/components/post_actions.html",
+        "blog/components/post_body.html",
+        "blog/components/post_comments.html",
+        "blog/components/post_meta.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [
+          "analytics_widget_side",
+          "blog_archive_mode"
+        ],
+        "blog_profile": [
+          "blog_banner",
+          "blog_name",
+          "blog_tagline"
+        ],
+        "css_vars": [
+          "post-title-color"
+        ]
+      },
+      "risks": {
+        "important": 30,
+        "inline_style": 3,
+        "hardcoded_hex": 37,
+        "hardcoded_rgba": 60,
+        "font_family_decl": 3,
+        "color_decl": 37,
+        "background_decl": 26,
+        "fixed_banner_height": 4
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": true
+      },
+      "risk_score": 12,
+      "risk_label": "visok",
+      "risk_reasons": [
+        "poseban dizajn",
+        "ne koristi zajednički blog_design_base layout",
+        "više !important pravila",
+        "ima inline style",
+        "mnogo direktnih boja/pozadina u CSS-u",
+        "dizajn direktno nameće fontove",
+        "malo customization/css-var referenci"
+      ],
+      "snippets": {
+        "banner": "    {% if blog.profile.blog_tagline %}<p class=\"blog-tagline-shared\">{{ blog.profile.blog_tagline }}</p>{% endif %}\n\n    {% if blog.profile.blog_banner %}\n    <div class=\"sa-banner\" style=\"margin-top: 6px; background: rgba(58, 34, 24, 0.12); border: 1px solid rgba(255, 232, 208, 0.10); padding: 8px; box-shadow: 0 12px 28px rgba(17, 10, 8, 0.12); backdrop-filter: blur(5px);\">\n        <img src=\"{{ blog.profile.blog_banner.url }}\" alt=\"Banner bloga\" style=\"width: 100%; max-height: 220px; object-fit: cover; display: block;\">",
+        "title": "}\n\n.jus-title {\n    display: inline-block;\n    margin: 0 0 18px;",
+        "box": ".jus-post strong,\n.jus-post em,\n.jus-box-content,\n.jus-section {\n    color: #fbefe3;"
+      }
+    },
+    {
+      "name": "kraljevska_pozornica",
+      "file": "blog/templates/blog/designs/kraljevska_pozornica.html",
+      "group": "zajednicki_layout",
+      "extends": "blog/layouts/blog_design_base.html",
+      "is_special": false,
+      "includes_shared_styles": true,
+      "includes": [
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_posts.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": [
+          "blog-title-color",
+          "box-title-color",
+          "post-title-color"
+        ]
+      },
+      "risks": {
+        "important": 30,
+        "inline_style": 0,
+        "hardcoded_hex": 25,
+        "hardcoded_rgba": 92,
+        "font_family_decl": 0,
+        "color_decl": 30,
+        "background_decl": 23,
+        "fixed_banner_height": 3
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": true
+      },
+      "risk_score": 4,
+      "risk_label": "srednji",
+      "risk_reasons": [
+        "više !important pravila",
+        "mnogo direktnih boja/pozadina u CSS-u"
+      ],
+      "snippets": {
+        "banner": ".blog-header-wrap > .row,\n.blog-main-layout-row,\n.blog-banner-strip > .row {\n    --bs-gutter-x: 22px;\n}",
+        "title": "}\n\n.blog-page-title,\n.blog-page-title a {\n    color: var(--blog-title-color, #fff1e1) !important;",
+        "box": "\n.archive-empty,\n.sidebar-box-content {\n    color: rgba(244, 221, 209, 0.88);\n}"
+      }
+    },
+    {
+      "name": "litica_noci",
+      "file": "blog/templates/blog/designs/litica_noci.html",
+      "group": "zajednicki_layout",
+      "extends": "blog/layouts/blog_design_base.html",
+      "is_special": false,
+      "includes_shared_styles": false,
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 0,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": false
+      },
+      "risk_score": 0,
+      "risk_label": "nizak",
+      "risk_reasons": [],
+      "snippets": {
+        "banner": "",
+        "title": "",
+        "box": ""
+      }
+    },
+    {
+      "name": "magazin",
+      "file": "blog/templates/blog/designs/magazin.html",
+      "group": "posebni_hero",
+      "extends": "blog/base.html",
+      "is_special": true,
+      "includes_shared_styles": false,
+      "includes": [
+        "blog/components/blog_interaction_scripts.html",
+        "blog/components/live_analytics_widget.html",
+        "blog/components/post_actions.html",
+        "blog/components/post_body.html",
+        "blog/components/post_comments.html",
+        "blog/components/post_meta.html"
+      ],
+      "fields": {
+        "active_design_customization": [
+          "blog_title_color",
+          "blog_title_font_stack",
+          "body_font_stack",
+          "body_text_color",
+          "box_background_color",
+          "box_border_color",
+          "box_title_color",
+          "box_title_font_stack",
+          "content_background_color",
+          "content_border_color",
+          "header_background_color_1",
+          "outer_background_asset",
+          "outer_background_color_1",
+          "post_date_color",
+          "post_date_effect",
+          "post_date_style",
+          "post_title_color",
+          "post_title_font_stack"
+        ],
+        "blog_preferences": [
+          "active_design_customization",
+          "analytics_widget_side",
+          "blog_archive_mode"
+        ],
+        "blog_profile": [
+          "avatar",
+          "blog_name",
+          "blog_tagline",
+          "simple_background_image"
+        ],
+        "css_vars": [
+          "magazin-body-font",
+          "magazin-box-font",
+          "magazin-box-title",
+          "magazin-content-bg",
+          "magazin-content-border",
+          "magazin-date",
+          "magazin-main-bg",
+          "magazin-post-font",
+          "magazin-post-title",
+          "magazin-section-bg",
+          "magazin-section-border",
+          "magazin-sidebar-bg",
+          "magazin-text",
+          "magazin-title-color",
+          "magazin-title-font"
+        ]
+      },
+      "risks": {
+        "important": 52,
+        "inline_style": 3,
+        "hardcoded_hex": 21,
+        "hardcoded_rgba": 12,
+        "font_family_decl": 5,
+        "color_decl": 22,
+        "background_decl": 17,
+        "fixed_banner_height": 6
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": true
+      },
+      "risk_score": 11,
+      "risk_label": "visok",
+      "risk_reasons": [
+        "poseban dizajn",
+        "ne koristi zajednički blog_design_base layout",
+        "više !important pravila",
+        "ima inline style",
+        "mnogo direktnih boja/pozadina u CSS-u",
+        "dizajn direktno nameće fontove"
+      ],
+      "snippets": {
+        "banner": "",
+        "title": "                           data-bs-toggle=\"dropdown\"\n                           aria-expanded=\"false\"\n                           title=\"Više opcija\">\n                            <i class=\"bi bi-three-dots fs-5\"></i>\n                        </a>",
+        "box": "        {% endif %}\n\n        {% for box in left_boxes %}\n        <section class=\"magazin-sidebar-section magazin-sidebar-section--box\">\n            <div class=\"magazin-section-title\">{{ box.title }}</div>"
+      }
+    },
+    {
+      "name": "misticno_jezero",
+      "file": "blog/templates/blog/designs/misticno_jezero.html",
+      "group": "posebni_single_sidebar",
+      "extends": "blog/base.html",
+      "is_special": true,
+      "includes_shared_styles": false,
+      "includes": [
+        "blog/components/blog_interaction_scripts.html",
+        "blog/components/blog_profile_actions_sidebar.html",
+        "blog/components/live_analytics_widget.html",
+        "blog/components/post_actions.html",
+        "blog/components/post_body.html",
+        "blog/components/post_comments.html",
+        "blog/components/post_meta.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [
+          "analytics_widget_side",
+          "blog_archive_mode"
+        ],
+        "blog_profile": [
+          "blog_banner",
+          "blog_name",
+          "blog_tagline"
+        ],
+        "css_vars": [
+          "post-title-color"
+        ]
+      },
+      "risks": {
+        "important": 28,
+        "inline_style": 1,
+        "hardcoded_hex": 53,
+        "hardcoded_rgba": 56,
+        "font_family_decl": 4,
+        "color_decl": 46,
+        "background_decl": 26,
+        "fixed_banner_height": 4
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": true
+      },
+      "risk_score": 12,
+      "risk_label": "visok",
+      "risk_reasons": [
+        "poseban dizajn",
+        "ne koristi zajednički blog_design_base layout",
+        "više !important pravila",
+        "ima inline style",
+        "mnogo direktnih boja/pozadina u CSS-u",
+        "dizajn direktno nameće fontove",
+        "malo customization/css-var referenci"
+      ],
+      "snippets": {
+        "banner": "}\n\n.mj-banner {\n    margin-top: 18px;\n    background: rgba(255, 247, 238, 0.08);",
+        "title": "}\n\n.mj-title {\n    margin: 0 0 8px 0;\n    font-family: Georgia, \"Times New Roman\", serif;",
+        "box": "}\n\n.mj-box-content,\n.mj-side-card,\n.mj-post,"
+      }
+    },
+    {
+      "name": "mjesecev_ples",
+      "file": "blog/templates/blog/designs/mjesecev_ples.html",
+      "group": "zajednicki_layout",
+      "extends": "blog/layouts/blog_design_base.html",
+      "is_special": false,
+      "includes_shared_styles": true,
+      "includes": [
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_posts.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": [
+          "blog-title-color",
+          "box-title-color",
+          "post-title-color"
+        ]
+      },
+      "risks": {
+        "important": 48,
+        "inline_style": 0,
+        "hardcoded_hex": 22,
+        "hardcoded_rgba": 45,
+        "font_family_decl": 0,
+        "color_decl": 24,
+        "background_decl": 15,
+        "fixed_banner_height": 2
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": false
+      },
+      "risk_score": 4,
+      "risk_label": "srednji",
+      "risk_reasons": [
+        "više !important pravila",
+        "mnogo direktnih boja/pozadina u CSS-u"
+      ],
+      "snippets": {
+        "banner": ".blog-header-wrap > .row,\n.blog-main-layout-row,\n.blog-banner-strip > .row {\n    --bs-gutter-x: 24px;\n}",
+        "title": "}\n\n.blog-page-title,\n.blog-page-title a {\n    color: var(--blog-title-color, #fff5e7) !important;",
+        "box": "\n.archive-empty,\n.sidebar-box-content,\n.calendar-title,\n.calendar-weekdays,"
+      }
+    },
+    {
+      "name": "morski_prijelaz",
+      "file": "blog/templates/blog/designs/morski_prijelaz.html",
+      "group": "zajednicki_layout",
+      "extends": "blog/layouts/blog_design_base.html",
+      "is_special": false,
+      "includes_shared_styles": true,
+      "includes": [
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_posts.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": [
+          "blog-title-color",
+          "body-text-color",
+          "box-title-color",
+          "post-title-color"
+        ]
+      },
+      "risks": {
+        "important": 45,
+        "inline_style": 0,
+        "hardcoded_hex": 23,
+        "hardcoded_rgba": 46,
+        "font_family_decl": 0,
+        "color_decl": 22,
+        "background_decl": 18,
+        "fixed_banner_height": 7
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": false
+      },
+      "risk_score": 4,
+      "risk_label": "srednji",
+      "risk_reasons": [
+        "više !important pravila",
+        "mnogo direktnih boja/pozadina u CSS-u"
+      ],
+      "snippets": {
+        "banner": "    .blog-header-wrap > .row,\n    .blog-main-layout-row,\n    .blog-banner-strip > .row {\n        --bs-gutter-x: 22px;\n    }",
+        "title": "    }\n\n    .blog-page-title,\n    .blog-page-title a {\n        color: var(--blog-title-color, #f1f6ff) !important;",
+        "box": "\n    .archive-empty,\n    .sidebar-box-content,\n    .post-meta,\n    .post-author-line,"
+      }
+    },
+    {
+      "name": "nebeska_klasika",
+      "file": "blog/templates/blog/designs/nebeska_klasika.html",
+      "group": "posebni_single_sidebar",
+      "extends": "blog/base.html",
+      "is_special": true,
+      "includes_shared_styles": false,
+      "includes": [
+        "blog/components/blog_interaction_scripts.html",
+        "blog/components/blog_profile_actions_sidebar.html",
+        "blog/components/live_analytics_widget.html",
+        "blog/components/post_actions.html",
+        "blog/components/post_body.html",
+        "blog/components/post_comments.html",
+        "blog/components/post_meta.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [
+          "analytics_widget_side",
+          "blog_archive_mode"
+        ],
+        "blog_profile": [
+          "blog_banner",
+          "blog_name",
+          "blog_tagline"
+        ],
+        "css_vars": [
+          "post-title-color"
+        ]
+      },
+      "risks": {
+        "important": 26,
+        "inline_style": 1,
+        "hardcoded_hex": 49,
+        "hardcoded_rgba": 46,
+        "font_family_decl": 4,
+        "color_decl": 41,
+        "background_decl": 23,
+        "fixed_banner_height": 4
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": true
+      },
+      "risk_score": 12,
+      "risk_label": "visok",
+      "risk_reasons": [
+        "poseban dizajn",
+        "ne koristi zajednički blog_design_base layout",
+        "više !important pravila",
+        "ima inline style",
+        "mnogo direktnih boja/pozadina u CSS-u",
+        "dizajn direktno nameće fontove",
+        "malo customization/css-var referenci"
+      ],
+      "snippets": {
+        "banner": "\n\n.nk-banner {\n    margin-top: 18px;\n    background: rgba(252, 249, 243, 0.72);",
+        "title": "}\n\n.nk-title {\n    margin: 0 0 6px 0;\n    font-family: Georgia, \"Times New Roman\", serif;",
+        "box": "}\n\n.nk-box-content,\n.nk-side-card,\n.nk-post,"
+      }
+    },
+    {
+      "name": "nebeski_mir",
+      "file": "blog/templates/blog/designs/nebeski_mir.html",
+      "group": "zajednicki_layout",
+      "extends": "blog/layouts/blog_design_base.html",
+      "is_special": false,
+      "includes_shared_styles": true,
+      "includes": [
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_posts.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": [
+          "blog-title-color",
+          "body-text-color",
+          "box-title-color",
+          "post-date-color",
+          "post-title-color"
+        ]
+      },
+      "risks": {
+        "important": 42,
+        "inline_style": 0,
+        "hardcoded_hex": 26,
+        "hardcoded_rgba": 35,
+        "font_family_decl": 0,
+        "color_decl": 24,
+        "background_decl": 17,
+        "fixed_banner_height": 2
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": false
+      },
+      "risk_score": 4,
+      "risk_label": "srednji",
+      "risk_reasons": [
+        "više !important pravila",
+        "mnogo direktnih boja/pozadina u CSS-u"
+      ],
+      "snippets": {
+        "banner": ".blog-header-wrap > .row,\n.blog-main-layout-row,\n.blog-banner-strip > .row {\n    --bs-gutter-x: 24px;\n}",
+        "title": "}\n\n.blog-page-title,\n.blog-page-title a {\n    color: var(--blog-title-color, #f5f7ff) !important;",
+        "box": "\n.archive-empty,\n.sidebar-box-content,\n.post-meta,\n.post-author-line,"
+      }
+    },
+    {
+      "name": "nebesko_polje",
+      "file": "blog/templates/blog/designs/nebesko_polje.html",
+      "group": "zajednicki_layout",
+      "extends": "blog/layouts/blog_design_base.html",
+      "is_special": false,
+      "includes_shared_styles": true,
+      "includes": [
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_header.html",
+        "blog/components/blog_posts.html"
+      ],
+      "fields": {
+        "active_design_customization": [
+          "box_background_color",
+          "box_border_color",
+          "content_background_color",
+          "content_border_color"
+        ],
+        "blog_preferences": [
+          "active_design_customization"
+        ],
+        "blog_profile": [],
+        "css_vars": [
+          "blog-title-color",
+          "body-text-color",
+          "box-title-color",
+          "nebesko-box-border",
+          "nebesko-content-border",
+          "nebesko-link",
+          "nebesko-link-strong",
+          "nebesko-panel-bg",
+          "nebesko-panel-bg-strong",
+          "nebesko-shadow",
+          "post-date-color",
+          "post-title-color"
+        ]
+      },
+      "risks": {
+        "important": 36,
+        "inline_style": 0,
+        "hardcoded_hex": 32,
+        "hardcoded_rgba": 84,
+        "font_family_decl": 0,
+        "color_decl": 30,
+        "background_decl": 20,
+        "fixed_banner_height": 4
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": false
+      },
+      "risk_score": 4,
+      "risk_label": "srednji",
+      "risk_reasons": [
+        "više !important pravila",
+        "mnogo direktnih boja/pozadina u CSS-u"
+      ],
+      "snippets": {
+        "banner": ".blog-main-layout-row,\n.blog-header-wrap > .row,\n.blog-banner-strip > .row {\n    --bs-gutter-x: 22px;\n}",
+        "title": "}\n\n.blog-page-title,\n.blog-page-title a {\n    color: var(--blog-title-color, #505a65) !important;",
+        "box": "\n.archive-empty,\n.sidebar-box-content,\n.blog-profile-panel__blog-name,\n.blog-profile-panel__stats,"
+      }
+    },
+    {
+      "name": "neonski_grad",
+      "file": "blog/templates/blog/designs/neonski_grad.html",
+      "group": "zajednicki_layout",
+      "extends": "blog/layouts/blog_design_base.html",
+      "is_special": false,
+      "includes_shared_styles": true,
+      "includes": [
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_posts.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": [
+          "blog-title-color",
+          "box-title-color",
+          "post-title-color"
+        ]
+      },
+      "risks": {
+        "important": 50,
+        "inline_style": 0,
+        "hardcoded_hex": 26,
+        "hardcoded_rgba": 79,
+        "font_family_decl": 0,
+        "color_decl": 31,
+        "background_decl": 19,
+        "fixed_banner_height": 4
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": false
+      },
+      "risk_score": 4,
+      "risk_label": "srednji",
+      "risk_reasons": [
+        "više !important pravila",
+        "mnogo direktnih boja/pozadina u CSS-u"
+      ],
+      "snippets": {
+        "banner": ".blog-header-wrap > .row,\n.blog-main-layout-row,\n.blog-banner-strip > .row {\n    --bs-gutter-x: 24px;\n}",
+        "title": "}\n\n.blog-page-title,\n.blog-page-title a {\n    color: var(--blog-title-color, #fff7ff) !important;",
+        "box": "\n.archive-empty,\n.sidebar-box-content {\n    color: rgba(240, 228, 255, 0.84);\n}"
+      }
+    },
+    {
+      "name": "planine_u_magli",
+      "file": "blog/templates/blog/designs/planine_u_magli.html",
+      "group": "zajednicki_layout",
+      "extends": "blog/layouts/blog_design_base.html",
+      "is_special": false,
+      "includes_shared_styles": true,
+      "includes": [
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_posts.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": [
+          "blog-title-color",
+          "body-text-color",
+          "box-title-color",
+          "post-date-color",
+          "post-title-color"
+        ]
+      },
+      "risks": {
+        "important": 45,
+        "inline_style": 0,
+        "hardcoded_hex": 26,
+        "hardcoded_rgba": 51,
+        "font_family_decl": 0,
+        "color_decl": 24,
+        "background_decl": 22,
+        "fixed_banner_height": 2
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": false
+      },
+      "risk_score": 4,
+      "risk_label": "srednji",
+      "risk_reasons": [
+        "više !important pravila",
+        "mnogo direktnih boja/pozadina u CSS-u"
+      ],
+      "snippets": {
+        "banner": ".blog-header-wrap > .row,\n.blog-main-layout-row,\n.blog-banner-strip > .row {\n    --bs-gutter-x: 24px;\n}",
+        "title": "}\n\n.blog-page-title,\n.blog-page-title a {\n    color: var(--blog-title-color, #5b6877) !important;",
+        "box": "\n.archive-empty,\n.sidebar-box-content,\n.post-meta,\n.post-author-line,"
+      }
+    },
+    {
+      "name": "podvodna_tisina",
+      "file": "blog/templates/blog/designs/podvodna_tisina.html",
+      "group": "zajednicki_layout",
+      "extends": "blog/layouts/blog_design_base.html",
+      "is_special": false,
+      "includes_shared_styles": true,
+      "includes": [
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_posts.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": [
+          "blog-title-color",
+          "body-text-color",
+          "box-title-color",
+          "post-title-color"
+        ]
+      },
+      "risks": {
+        "important": 37,
+        "inline_style": 0,
+        "hardcoded_hex": 23,
+        "hardcoded_rgba": 38,
+        "font_family_decl": 0,
+        "color_decl": 22,
+        "background_decl": 15,
+        "fixed_banner_height": 3
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": false
+      },
+      "risk_score": 4,
+      "risk_label": "srednji",
+      "risk_reasons": [
+        "više !important pravila",
+        "mnogo direktnih boja/pozadina u CSS-u"
+      ],
+      "snippets": {
+        "banner": "    .blog-header-wrap > .row,\n    .blog-main-layout-row,\n    .blog-banner-strip > .row {\n        --bs-gutter-x: 22px;\n    }",
+        "title": "    }\n\n    .blog-page-title,\n    .blog-page-title a {\n        color: var(--blog-title-color, #f1f6ff) !important;",
+        "box": "\n    .archive-empty,\n    .sidebar-box-content,\n    .post-meta,\n    .post-author-line,"
+      }
+    },
+    {
+      "name": "polarna_svjetlost",
+      "file": "blog/templates/blog/designs/polarna_svjetlost.html",
+      "group": "zajednicki_layout",
+      "extends": "blog/layouts/blog_design_base.html",
+      "is_special": false,
+      "includes_shared_styles": true,
+      "includes": [
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_posts.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": [
+          "blog-title-color",
+          "box-title-color",
+          "post-title-color"
+        ]
+      },
+      "risks": {
+        "important": 48,
+        "inline_style": 0,
+        "hardcoded_hex": 24,
+        "hardcoded_rgba": 49,
+        "font_family_decl": 0,
+        "color_decl": 29,
+        "background_decl": 19,
+        "fixed_banner_height": 4
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": false
+      },
+      "risk_score": 4,
+      "risk_label": "srednji",
+      "risk_reasons": [
+        "više !important pravila",
+        "mnogo direktnih boja/pozadina u CSS-u"
+      ],
+      "snippets": {
+        "banner": ".blog-header-wrap > .row,\n.blog-main-layout-row,\n.blog-banner-strip > .row {\n    --bs-gutter-x: 22px;\n}",
+        "title": "}\n\n.blog-page-title,\n.blog-page-title a {\n    color: var(--blog-title-color, #f4fdff) !important;",
+        "box": "\n.archive-empty,\n.sidebar-box-content {\n    color: rgba(222, 241, 255, 0.84);\n}"
+      }
+    },
+    {
+      "name": "polje_lavande",
+      "file": "blog/templates/blog/designs/polje_lavande.html",
+      "group": "zajednicki_layout",
+      "extends": "blog/layouts/blog_design_base.html",
+      "is_special": false,
+      "includes_shared_styles": true,
+      "includes": [
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_posts.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": [
+          "blog-title-color",
+          "box-title-color",
+          "post-title-color"
+        ]
+      },
+      "risks": {
+        "important": 53,
+        "inline_style": 0,
+        "hardcoded_hex": 25,
+        "hardcoded_rgba": 51,
+        "font_family_decl": 0,
+        "color_decl": 30,
+        "background_decl": 20,
+        "fixed_banner_height": 4
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": true
+      },
+      "risk_score": 4,
+      "risk_label": "srednji",
+      "risk_reasons": [
+        "više !important pravila",
+        "mnogo direktnih boja/pozadina u CSS-u"
+      ],
+      "snippets": {
+        "banner": ".blog-header-wrap > .row,\n.blog-main-layout-row,\n.blog-banner-strip > .row {\n    --bs-gutter-x: 22px;\n}",
+        "title": "}\n\n.blog-page-title,\n.blog-page-title a {\n    color: var(--blog-title-color, #4f2768) !important;",
+        "box": "\n.archive-empty,\n.sidebar-box-content {\n    color: rgba(90, 50, 113, 0.86);\n}"
+      }
+    },
+    {
+      "name": "ponocna_elegancija",
+      "file": "blog/templates/blog/designs/ponocna_elegancija.html",
+      "group": "posebni_single_sidebar",
+      "extends": "blog/base.html",
+      "is_special": true,
+      "includes_shared_styles": false,
+      "includes": [
+        "blog/components/blog_interaction_scripts.html",
+        "blog/components/blog_profile_actions_sidebar.html",
+        "blog/components/live_analytics_widget.html",
+        "blog/components/post_actions.html",
+        "blog/components/post_body.html",
+        "blog/components/post_comments.html",
+        "blog/components/post_meta.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [
+          "analytics_widget_side",
+          "blog_archive_mode"
+        ],
+        "blog_profile": [
+          "blog_banner",
+          "blog_name",
+          "blog_tagline"
+        ],
+        "css_vars": [
+          "post-title-color"
+        ]
+      },
+      "risks": {
+        "important": 28,
+        "inline_style": 1,
+        "hardcoded_hex": 54,
+        "hardcoded_rgba": 49,
+        "font_family_decl": 4,
+        "color_decl": 46,
+        "background_decl": 24,
+        "fixed_banner_height": 4
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": true
+      },
+      "risk_score": 12,
+      "risk_label": "visok",
+      "risk_reasons": [
+        "poseban dizajn",
+        "ne koristi zajednički blog_design_base layout",
+        "više !important pravila",
+        "ima inline style",
+        "mnogo direktnih boja/pozadina u CSS-u",
+        "dizajn direktno nameće fontove",
+        "malo customization/css-var referenci"
+      ],
+      "snippets": {
+        "banner": "}\n\n.pe-banner {\n    margin-top: 18px;\n    background: rgba(10, 14, 24, 0.48);",
+        "title": "}\n\n.pe-title {\n    margin: 0 0 6px 0;\n    font-family: Georgia, \"Times New Roman\", serif;",
+        "box": "}\n\n.pe-box-content,\n.pe-side-card,\n.pe-post,"
+      }
+    },
+    {
+      "name": "ruzicasti_vrt",
+      "file": "blog/templates/blog/designs/ruzicasti_vrt.html",
+      "group": "posebni_single_sidebar",
+      "extends": "blog/base.html",
+      "is_special": true,
+      "includes_shared_styles": false,
+      "includes": [
+        "blog/components/blog_interaction_scripts.html",
+        "blog/components/blog_profile_actions_sidebar.html",
+        "blog/components/live_analytics_widget.html",
+        "blog/components/post_actions.html",
+        "blog/components/post_body.html",
+        "blog/components/post_comments.html",
+        "blog/components/post_meta.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [
+          "analytics_widget_side",
+          "blog_archive_mode"
+        ],
+        "blog_profile": [
+          "blog_banner",
+          "blog_name",
+          "blog_tagline"
+        ],
+        "css_vars": [
+          "post-title-color"
+        ]
+      },
+      "risks": {
+        "important": 28,
+        "inline_style": 1,
+        "hardcoded_hex": 53,
+        "hardcoded_rgba": 50,
+        "font_family_decl": 4,
+        "color_decl": 45,
+        "background_decl": 24,
+        "fixed_banner_height": 4
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": true
+      },
+      "risk_score": 12,
+      "risk_label": "visok",
+      "risk_reasons": [
+        "poseban dizajn",
+        "ne koristi zajednički blog_design_base layout",
+        "više !important pravila",
+        "ima inline style",
+        "mnogo direktnih boja/pozadina u CSS-u",
+        "dizajn direktno nameće fontove",
+        "malo customization/css-var referenci"
+      ],
+      "snippets": {
+        "banner": "}\n\n.rv-banner {\n    margin-top: 18px;\n    background: rgba(255, 248, 246, 0.16);",
+        "title": "}\n\n.rv-title {\n    margin: 0 0 6px 0;\n    font-family: Georgia, \"Times New Roman\", serif;",
+        "box": "}\n\n.rv-box-content,\n.rv-side-card,\n.rv-post,"
+      }
+    },
+    {
+      "name": "simple",
+      "file": "blog/templates/blog/designs/simple.html",
+      "group": "simple",
+      "extends": "blog/layouts/blog_design_base.html",
+      "is_special": false,
+      "includes_shared_styles": false,
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 0,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": false
+      },
+      "risk_score": 0,
+      "risk_label": "nizak",
+      "risk_reasons": [],
+      "snippets": {
+        "banner": "",
+        "title": "",
+        "box": ""
+      }
+    },
+    {
+      "name": "simple_image",
+      "file": "blog/templates/blog/designs/simple_image.html",
+      "group": "simple",
+      "extends": "blog/layouts/blog_design_base.html",
+      "is_special": false,
+      "includes_shared_styles": false,
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 0,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": false
+      },
+      "risk_score": 0,
+      "risk_label": "nizak",
+      "risk_reasons": [],
+      "snippets": {
+        "banner": "",
+        "title": "",
+        "box": ""
+      }
+    },
+    {
+      "name": "simple_pattern",
+      "file": "blog/templates/blog/designs/simple_pattern.html",
+      "group": "simple",
+      "extends": "blog/layouts/blog_design_base.html",
+      "is_special": false,
+      "includes_shared_styles": false,
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 0,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": false
+      },
+      "risk_score": 0,
+      "risk_label": "nizak",
+      "risk_reasons": [],
+      "snippets": {
+        "banner": "",
+        "title": "",
+        "box": ""
+      }
+    },
+    {
+      "name": "simple_retro",
+      "file": "blog/templates/blog/designs/simple_retro.html",
+      "group": "simple",
+      "extends": "blog/layouts/blog_design_base.html",
+      "is_special": false,
+      "includes_shared_styles": false,
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 0,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": false
+      },
+      "risk_score": 0,
+      "risk_label": "nizak",
+      "risk_reasons": [],
+      "snippets": {
+        "banner": "",
+        "title": "",
+        "box": ""
+      }
+    },
+    {
+      "name": "sjene_ulice",
+      "file": "blog/templates/blog/designs/sjene_ulice.html",
+      "group": "zajednicki_layout",
+      "extends": "blog/layouts/blog_design_base.html",
+      "is_special": false,
+      "includes_shared_styles": true,
+      "includes": [
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_posts.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": [
+          "blog-title-color",
+          "box-title-color",
+          "post-title-color"
+        ]
+      },
+      "risks": {
+        "important": 53,
+        "inline_style": 0,
+        "hardcoded_hex": 24,
+        "hardcoded_rgba": 46,
+        "font_family_decl": 0,
+        "color_decl": 25,
+        "background_decl": 14,
+        "fixed_banner_height": 2
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": false
+      },
+      "risk_score": 4,
+      "risk_label": "srednji",
+      "risk_reasons": [
+        "više !important pravila",
+        "mnogo direktnih boja/pozadina u CSS-u"
+      ],
+      "snippets": {
+        "banner": ".blog-header-wrap > .row,\n.blog-main-layout-row,\n.blog-banner-strip > .row {\n    --bs-gutter-x: 22px;\n}",
+        "title": "}\n\n.blog-page-title,\n.blog-page-title a {\n    color: var(--blog-title-color, #fff5ed) !important;",
+        "box": "\n.archive-empty,\n.sidebar-box-content,\n.calendar-title,\n.calendar-weekdays,"
+      }
+    },
+    {
+      "name": "stara_aleja",
+      "file": "blog/templates/blog/designs/stara_aleja.html",
+      "group": "posebni_single_sidebar",
+      "extends": "blog/base.html",
+      "is_special": true,
+      "includes_shared_styles": false,
+      "includes": [
+        "blog/components/blog_interaction_scripts.html",
+        "blog/components/blog_profile_actions_sidebar.html",
+        "blog/components/live_analytics_widget.html",
+        "blog/components/post_actions.html",
+        "blog/components/post_body.html",
+        "blog/components/post_comments.html",
+        "blog/components/post_meta.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [
+          "analytics_widget_side",
+          "blog_archive_mode"
+        ],
+        "blog_profile": [
+          "blog_banner",
+          "blog_name",
+          "blog_tagline"
+        ],
+        "css_vars": [
+          "post-title-color"
+        ]
+      },
+      "risks": {
+        "important": 30,
+        "inline_style": 1,
+        "hardcoded_hex": 37,
+        "hardcoded_rgba": 60,
+        "font_family_decl": 3,
+        "color_decl": 37,
+        "background_decl": 26,
+        "fixed_banner_height": 4
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": true
+      },
+      "risk_score": 12,
+      "risk_label": "visok",
+      "risk_reasons": [
+        "poseban dizajn",
+        "ne koristi zajednički blog_design_base layout",
+        "više !important pravila",
+        "ima inline style",
+        "mnogo direktnih boja/pozadina u CSS-u",
+        "dizajn direktno nameće fontove",
+        "malo customization/css-var referenci"
+      ],
+      "snippets": {
+        "banner": "}\n\n.sa-banner {\n    margin-top: 6px;\n    background: rgba(102, 72, 47, 0.24);",
+        "title": "}\n\n.sa-title {\n    display: inline-block;\n    margin: 0 0 16px 0;",
+        "box": ".sa-post strong,\n.sa-post em,\n.sa-box-content,\n.sa-section {\n    color: #f7ede0;"
+      }
+    },
+    {
+      "name": "staza_prema_vrhovima",
+      "file": "blog/templates/blog/designs/staza_prema_vrhovima.html",
+      "group": "posebni_single_sidebar",
+      "extends": "blog/base.html",
+      "is_special": true,
+      "includes_shared_styles": false,
+      "includes": [
+        "blog/components/blog_interaction_scripts.html",
+        "blog/components/blog_profile_actions_sidebar.html",
+        "blog/components/live_analytics_widget.html",
+        "blog/components/post_actions.html",
+        "blog/components/post_body.html",
+        "blog/components/post_comments.html",
+        "blog/components/post_meta.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [
+          "analytics_widget_side",
+          "blog_archive_mode"
+        ],
+        "blog_profile": [
+          "blog_banner",
+          "blog_name",
+          "blog_tagline"
+        ],
+        "css_vars": [
+          "post-title-color"
+        ]
+      },
+      "risks": {
+        "important": 28,
+        "inline_style": 2,
+        "hardcoded_hex": 46,
+        "hardcoded_rgba": 46,
+        "font_family_decl": 3,
+        "color_decl": 39,
+        "background_decl": 22,
+        "fixed_banner_height": 3
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": true
+      },
+      "risk_score": 12,
+      "risk_label": "visok",
+      "risk_reasons": [
+        "poseban dizajn",
+        "ne koristi zajednički blog_design_base layout",
+        "više !important pravila",
+        "ima inline style",
+        "mnogo direktnih boja/pozadina u CSS-u",
+        "dizajn direktno nameće fontove",
+        "malo customization/css-var referenci"
+      ],
+      "snippets": {
+        "banner": "    {% if blog.profile.blog_tagline %}<p class=\"blog-tagline-shared\">{{ blog.profile.blog_tagline }}</p>{% endif %}\n\n    {% if blog.profile.blog_banner %}\n    <div class=\"spv-banner\" style=\"display:none;\"></div>\n    {% endif %}",
+        "title": "}\n\n.spv-title {\n    margin: 0 0 8px 0;\n    font-family: Georgia, \"Times New Roman\", serif;",
+        "box": ".spv-archive-link:hover,\n.spv-side-card a,\n.spv-box-content a {\n    color: #ffd89c;\n}"
+      }
+    },
+    {
+      "name": "studio",
+      "file": "blog/templates/blog/designs/studio.html",
+      "group": "posebni_hero",
+      "extends": "blog/base.html",
+      "is_special": true,
+      "includes_shared_styles": false,
+      "includes": [
+        "blog/components/blog_interaction_scripts.html",
+        "blog/components/live_analytics_widget.html",
+        "blog/components/post_actions.html",
+        "blog/components/post_body.html",
+        "blog/components/post_comments.html",
+        "blog/components/post_meta.html"
+      ],
+      "fields": {
+        "active_design_customization": [
+          "blog_title_color",
+          "blog_title_font_stack",
+          "body_font_stack",
+          "body_text_color",
+          "box_title_color",
+          "box_title_font_stack",
+          "content_background_color",
+          "content_border_color",
+          "outer_background_asset",
+          "outer_background_color_1",
+          "post_date_color",
+          "post_date_effect",
+          "post_date_style",
+          "post_title_color",
+          "post_title_font_stack"
+        ],
+        "blog_preferences": [
+          "active_design_customization",
+          "analytics_widget_side",
+          "blog_archive_mode"
+        ],
+        "blog_profile": [
+          "avatar",
+          "blog_banner",
+          "blog_banner_position",
+          "blog_name",
+          "blog_tagline",
+          "simple_background_image"
+        ],
+        "css_vars": [
+          "soho-body-font",
+          "soho-box-font",
+          "soho-box-title",
+          "soho-content-bg",
+          "soho-content-border",
+          "soho-date",
+          "soho-main-gap",
+          "soho-page-bg",
+          "soho-post-font",
+          "soho-post-title",
+          "soho-text",
+          "soho-title-color",
+          "soho-title-font"
+        ]
+      },
+      "risks": {
+        "important": 41,
+        "inline_style": 3,
+        "hardcoded_hex": 18,
+        "hardcoded_rgba": 7,
+        "font_family_decl": 5,
+        "color_decl": 23,
+        "background_decl": 12,
+        "fixed_banner_height": 4
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": true
+      },
+      "risk_score": 11,
+      "risk_label": "visok",
+      "risk_reasons": [
+        "poseban dizajn",
+        "ne koristi zajednički blog_design_base layout",
+        "više !important pravila",
+        "ima inline style",
+        "mnogo direktnih boja/pozadina u CSS-u",
+        "dizajn direktno nameće fontove"
+      ],
+      "snippets": {
+        "banner": "{% block left_sidebar %}\n<div class=\"soho-sidebar\">\n    {% if blog.profile.blog_banner %}\n    <div class=\"soho-sidebar-banner soho-sidebar-banner--{{ blog.profile.blog_banner_position|default:'center' }}\">\n        <img src=\"{{ blog.profile.blog_banner.url }}\" alt=\"Banner bloga\">",
+        "title": "                           data-bs-toggle=\"dropdown\"\n                           aria-expanded=\"false\"\n                           title=\"Više opcija\">\n                            <i class=\"bi bi-three-dots fs-5\"></i>\n                        </a>",
+        "box": "        {% endif %}\n\n        {% for box in left_boxes %}\n        <section class=\"soho-sidebar-section\">\n            <div class=\"soho-section-title\">{{ box.title }}</div>"
+      }
+    },
+    {
+      "name": "sumska_svjetlost",
+      "file": "blog/templates/blog/designs/sumska_svjetlost.html",
+      "group": "zajednicki_layout",
+      "extends": "blog/layouts/blog_design_base.html",
+      "is_special": false,
+      "includes_shared_styles": true,
+      "includes": [
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_posts.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": [
+          "blog-title-color",
+          "box-title-color",
+          "post-title-color"
+        ]
+      },
+      "risks": {
+        "important": 52,
+        "inline_style": 0,
+        "hardcoded_hex": 25,
+        "hardcoded_rgba": 49,
+        "font_family_decl": 0,
+        "color_decl": 30,
+        "background_decl": 21,
+        "fixed_banner_height": 4
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": false
+      },
+      "risk_score": 4,
+      "risk_label": "srednji",
+      "risk_reasons": [
+        "više !important pravila",
+        "mnogo direktnih boja/pozadina u CSS-u"
+      ],
+      "snippets": {
+        "banner": ".blog-header-wrap > .row,\n.blog-main-layout-row,\n.blog-banner-strip > .row {\n    --bs-gutter-x: 22px;\n}",
+        "title": "}\n\n.blog-page-title,\n.blog-page-title a {\n    color: var(--blog-title-color, #56614d) !important;",
+        "box": "\n.archive-empty,\n.sidebar-box-content {\n    color: rgba(93, 105, 87, 0.84);\n}"
+      }
+    },
+    {
+      "name": "svemirski_horizont",
+      "file": "blog/templates/blog/designs/svemirski_horizont.html",
+      "group": "zajednicki_layout",
+      "extends": "blog/layouts/blog_design_base.html",
+      "is_special": false,
+      "includes_shared_styles": true,
+      "includes": [
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_posts.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": [
+          "blog-title-color",
+          "box-title-color",
+          "post-title-color"
+        ]
+      },
+      "risks": {
+        "important": 48,
+        "inline_style": 0,
+        "hardcoded_hex": 24,
+        "hardcoded_rgba": 49,
+        "font_family_decl": 0,
+        "color_decl": 29,
+        "background_decl": 19,
+        "fixed_banner_height": 4
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": false
+      },
+      "risk_score": 4,
+      "risk_label": "srednji",
+      "risk_reasons": [
+        "više !important pravila",
+        "mnogo direktnih boja/pozadina u CSS-u"
+      ],
+      "snippets": {
+        "banner": ".blog-header-wrap > .row,\n.blog-main-layout-row,\n.blog-banner-strip > .row {\n    --bs-gutter-x: 22px;\n}",
+        "title": "}\n\n.blog-page-title,\n.blog-page-title a {\n    color: var(--blog-title-color, #f1f6ff) !important;",
+        "box": "\n.archive-empty,\n.sidebar-box-content {\n    color: rgba(216, 228, 255, 0.82);\n}"
+      }
+    },
+    {
+      "name": "vecer_uz_jezero",
+      "file": "blog/templates/blog/designs/vecer_uz_jezero.html",
+      "group": "posebni_single_sidebar",
+      "extends": "blog/base.html",
+      "is_special": true,
+      "includes_shared_styles": false,
+      "includes": [
+        "blog/components/blog_interaction_scripts.html",
+        "blog/components/blog_profile_actions_sidebar.html",
+        "blog/components/live_analytics_widget.html",
+        "blog/components/post_actions.html",
+        "blog/components/post_body.html",
+        "blog/components/post_comments.html",
+        "blog/components/post_meta.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [
+          "analytics_widget_side",
+          "blog_archive_mode"
+        ],
+        "blog_profile": [
+          "blog_banner",
+          "blog_name",
+          "blog_tagline"
+        ],
+        "css_vars": [
+          "post-title-color"
+        ]
+      },
+      "risks": {
+        "important": 28,
+        "inline_style": 1,
+        "hardcoded_hex": 53,
+        "hardcoded_rgba": 51,
+        "font_family_decl": 4,
+        "color_decl": 46,
+        "background_decl": 24,
+        "fixed_banner_height": 4
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": true
+      },
+      "risk_score": 12,
+      "risk_label": "visok",
+      "risk_reasons": [
+        "poseban dizajn",
+        "ne koristi zajednički blog_design_base layout",
+        "više !important pravila",
+        "ima inline style",
+        "mnogo direktnih boja/pozadina u CSS-u",
+        "dizajn direktno nameće fontove",
+        "malo customization/css-var referenci"
+      ],
+      "snippets": {
+        "banner": "}\n\n.vj-banner {\n    margin-top: 18px;\n    background: rgba(255, 245, 238, 0.10);",
+        "title": "}\n\n.vj-title {\n    margin: 0 0 8px 0;\n    font-family: Georgia, \"Times New Roman\", serif;",
+        "box": "}\n\n.vj-box-content,\n.vj-side-card,\n.vj-post,"
+      }
+    },
+    {
+      "name": "vecer_zaljubljenih",
+      "file": "blog/templates/blog/designs/vecer_zaljubljenih.html",
+      "group": "posebni_single_sidebar",
+      "extends": "blog/base.html",
+      "is_special": true,
+      "includes_shared_styles": false,
+      "includes": [
+        "blog/components/blog_profile_actions_sidebar.html",
+        "blog/components/post_actions.html",
+        "blog/components/post_body.html",
+        "blog/components/post_comments.html",
+        "blog/components/post_meta.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [
+          "blog_archive_mode"
+        ],
+        "blog_profile": [
+          "blog_banner",
+          "blog_name",
+          "blog_tagline"
+        ],
+        "css_vars": [
+          "post-title-color"
+        ]
+      },
+      "risks": {
+        "important": 28,
+        "inline_style": 1,
+        "hardcoded_hex": 54,
+        "hardcoded_rgba": 51,
+        "font_family_decl": 4,
+        "color_decl": 46,
+        "background_decl": 25,
+        "fixed_banner_height": 4
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": false
+      },
+      "risk_score": 12,
+      "risk_label": "visok",
+      "risk_reasons": [
+        "poseban dizajn",
+        "ne koristi zajednički blog_design_base layout",
+        "više !important pravila",
+        "ima inline style",
+        "mnogo direktnih boja/pozadina u CSS-u",
+        "dizajn direktno nameće fontove",
+        "malo customization/css-var referenci"
+      ],
+      "snippets": {
+        "banner": "}\n\n.vz-banner {\n    margin-top: 18px;\n    background: rgba(37, 11, 9, 0.22);",
+        "title": "}\n\n.vz-title {\n    margin: 0 0 6px 0;\n    font-family: Georgia, \"Times New Roman\", serif;",
+        "box": "}\n\n.vz-box-content,\n.vz-side-card,\n.vz-post,"
+      }
+    },
+    {
+      "name": "vodopad_u_magli",
+      "file": "blog/templates/blog/designs/vodopad_u_magli.html",
+      "group": "zajednicki_layout",
+      "extends": "blog/layouts/blog_design_base.html",
+      "is_special": false,
+      "includes_shared_styles": true,
+      "includes": [
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_posts.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": [
+          "blog-title-color",
+          "body-text-color",
+          "box-title-color",
+          "post-date-color",
+          "post-title-color"
+        ]
+      },
+      "risks": {
+        "important": 32,
+        "inline_style": 0,
+        "hardcoded_hex": 26,
+        "hardcoded_rgba": 44,
+        "font_family_decl": 0,
+        "color_decl": 24,
+        "background_decl": 18,
+        "fixed_banner_height": 2
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": false
+      },
+      "risk_score": 4,
+      "risk_label": "srednji",
+      "risk_reasons": [
+        "više !important pravila",
+        "mnogo direktnih boja/pozadina u CSS-u"
+      ],
+      "snippets": {
+        "banner": ".blog-header-wrap > .row,\n.blog-main-layout-row,\n.blog-banner-strip > .row {\n    --bs-gutter-x: 22px;\n}",
+        "title": "}\n\n.blog-page-title,\n.blog-page-title a {\n    color: var(--blog-title-color, #364033) !important;",
+        "box": "\n.archive-empty,\n.sidebar-box-content,\n.post-meta,\n.post-author-line,"
+      }
+    },
+    {
+      "name": "zlatni_horizont",
+      "file": "blog/templates/blog/designs/zlatni_horizont.html",
+      "group": "zajednicki_layout",
+      "extends": "blog/layouts/blog_design_base.html",
+      "is_special": false,
+      "includes_shared_styles": true,
+      "includes": [
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_posts.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": [
+          "blog-title-color",
+          "box-title-color",
+          "post-title-color"
+        ]
+      },
+      "risks": {
+        "important": 48,
+        "inline_style": 0,
+        "hardcoded_hex": 24,
+        "hardcoded_rgba": 49,
+        "font_family_decl": 0,
+        "color_decl": 29,
+        "background_decl": 19,
+        "fixed_banner_height": 4
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": false
+      },
+      "risk_score": 4,
+      "risk_label": "srednji",
+      "risk_reasons": [
+        "više !important pravila",
+        "mnogo direktnih boja/pozadina u CSS-u"
+      ],
+      "snippets": {
+        "banner": ".blog-header-wrap > .row,\n.blog-main-layout-row,\n.blog-banner-strip > .row {\n    --bs-gutter-x: 22px;\n}",
+        "title": "}\n\n.blog-page-title,\n.blog-page-title a {\n    color: var(--blog-title-color, #fff1e3) !important;",
+        "box": "\n.archive-empty,\n.sidebar-box-content {\n    color: rgba(245, 222, 201, 0.84);\n}"
+      }
+    },
+    {
+      "name": "zlatno_polje",
+      "file": "blog/templates/blog/designs/zlatno_polje.html",
+      "group": "zajednicki_layout",
+      "extends": "blog/layouts/blog_design_base.html",
+      "is_special": false,
+      "includes_shared_styles": true,
+      "includes": [
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_posts.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": [
+          "blog-title-color",
+          "box-title-color",
+          "panel-bg",
+          "panel-border",
+          "post-title-color"
+        ]
+      },
+      "risks": {
+        "important": 59,
+        "inline_style": 0,
+        "hardcoded_hex": 24,
+        "hardcoded_rgba": 49,
+        "font_family_decl": 0,
+        "color_decl": 29,
+        "background_decl": 21,
+        "fixed_banner_height": 4
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": false
+      },
+      "risk_score": 4,
+      "risk_label": "srednji",
+      "risk_reasons": [
+        "više !important pravila",
+        "mnogo direktnih boja/pozadina u CSS-u"
+      ],
+      "snippets": {
+        "banner": ".blog-header-wrap > .row,\n.blog-main-layout-row,\n.blog-banner-strip > .row {\n    --bs-gutter-x: 22px;\n}",
+        "title": ".blog-header-main::before,\n.blog-header-main::after,\n.blog-page-title::before,\n.blog-page-title::after {\n    content: none !important;",
+        "box": "\n.archive-empty,\n.sidebar-box-content {\n    color: rgba(95, 61, 16, 0.86);\n}"
+      }
+    }
+  ],
+  "files": [
+    {
+      "file": "blog/templates/blog/_like_button.html",
+      "extends": "",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 0,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/account_deactivate_confirm.html",
+      "extends": "blog/base.html",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 1,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": true
+      }
+    },
+    {
+      "file": "blog/templates/blog/account_delete_confirm.html",
+      "extends": "blog/base.html",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 0,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": true
+      }
+    },
+    {
+      "file": "blog/templates/blog/account_reactivation_email.html",
+      "extends": "",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 3,
+        "hardcoded_hex": 4,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 1,
+        "color_decl": 2,
+        "background_decl": 2,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": true,
+        "datum_posta": false,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/account_reactivation_invalid.html",
+      "extends": "blog/base.html",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 1,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": true
+      }
+    },
+    {
+      "file": "blog/templates/blog/account_reactivation_sent.html",
+      "extends": "blog/base.html",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 1,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": true
+      }
+    },
+    {
+      "file": "blog/templates/blog/activation_email.html",
+      "extends": "",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 3,
+        "hardcoded_hex": 3,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 1,
+        "color_decl": 2,
+        "background_decl": 1,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": true,
+        "datum_posta": false,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/activation_invalid.html",
+      "extends": "",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 0,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/activation_sent.html",
+      "extends": "blog/base.html",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 0,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": true
+      }
+    },
+    {
+      "file": "blog/templates/blog/add_box.html",
+      "extends": "blog/base.html",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 0,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": true,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": true
+      }
+    },
+    {
+      "file": "blog/templates/blog/author_detail.html",
+      "extends": "blog/base.html",
+      "includes": [
+        "blog/components/blog_design_styles.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [
+          "allow_author_questions",
+          "blog_name",
+          "blog_tagline"
+        ],
+        "css_vars": [
+          "blog-title-color",
+          "blog-title-font",
+          "box-title-color",
+          "box-title-font"
+        ]
+      },
+      "risks": {
+        "important": 4,
+        "inline_style": 0,
+        "hardcoded_hex": 8,
+        "hardcoded_rgba": 15,
+        "font_family_decl": 2,
+        "color_decl": 12,
+        "background_decl": 8,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": false,
+        "boxevi": true,
+        "banner": false,
+        "pozadina": true,
+        "datum_posta": false,
+        "layout_boxeva": true
+      }
+    },
+    {
+      "file": "blog/templates/blog/author_onboarding.html",
+      "extends": "blog/base.html",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 0,
+        "hardcoded_hex": 6,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 2,
+        "background_decl": 2,
+        "fixed_banner_height": 1
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": true,
+        "datum_posta": false,
+        "layout_boxeva": true
+      }
+    },
+    {
+      "file": "blog/templates/blog/base.html",
+      "extends": "",
+      "includes": [
+        "blog/components/live_analytics_widget.html",
+        "blog/footer.html",
+        "blog/partials/_notification_dropdown.html"
+      ],
+      "fields": {
+        "active_design_customization": [
+          "blog_title_color",
+          "blog_title_font_stack",
+          "blog_title_size",
+          "body_font_stack",
+          "body_text_color",
+          "box_title_color",
+          "box_title_font_stack",
+          "box_title_size",
+          "post_date_color",
+          "post_date_color_1",
+          "post_date_color_2",
+          "post_date_effect",
+          "post_date_size",
+          "post_date_style",
+          "post_title_color",
+          "post_title_font_stack",
+          "post_title_size"
+        ],
+        "blog_preferences": [
+          "active_design_customization",
+          "ambient_music_enabled",
+          "ambient_music_track_data",
+          "ambient_music_volume",
+          "analytics_widget_side",
+          "cursor_css",
+          "cursor_effect",
+          "cursor_pointer_css",
+          "cursor_style",
+          "cursor_stylesheet_url"
+        ],
+        "blog_profile": [
+          "template"
+        ],
+        "css_vars": [
+          "analytics-map-card-bg",
+          "analytics-map-card-border",
+          "analytics-map-card-shadow",
+          "analytics-page-row-bg",
+          "analytics-page-row-border",
+          "analytics-page-row-color",
+          "analytics-stat-card-bg",
+          "analytics-stat-card-border",
+          "analytics-stat-card-color",
+          "analytics-stat-card-padding-x",
+          "analytics-stat-card-padding-y",
+          "analytics-stat-card-shadow",
+          "analytics-stat-gap",
+          "analytics-stat-label-color",
+          "analytics-stat-label-size",
+          "analytics-stat-radius",
+          "analytics-stat-value-color",
+          "analytics-stat-value-size",
+          "blog-selected-cursor",
+          "blog-selected-pointer-cursor",
+          "blog-title-color",
+          "blog-title-font",
+          "blog-title-size",
+          "box-title-color",
+          "box-title-font",
+          "box-title-size",
+          "c1",
+          "c2",
+          "color",
+          "dx",
+          "dy",
+          "h",
+          "height",
+          "opacity",
+          "post-date-color",
+          "post-title-color",
+          "post-title-font",
+          "post-title-size",
+          "rotate",
+          "size",
+          "spin",
+          "w",
+          "width"
+        ]
+      },
+      "risks": {
+        "important": 81,
+        "inline_style": 10,
+        "hardcoded_hex": 174,
+        "hardcoded_rgba": 97,
+        "font_family_decl": 7,
+        "color_decl": 34,
+        "background_decl": 36,
+        "fixed_banner_height": 15
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": true
+      }
+    },
+    {
+      "file": "blog/templates/blog/basic_pages/content_rules.html",
+      "extends": "blog/base.html",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 1,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": true,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": true
+      }
+    },
+    {
+      "file": "blog/templates/blog/basic_pages/privacy_policy.html",
+      "extends": "blog/base.html",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 1,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": true
+      }
+    },
+    {
+      "file": "blog/templates/blog/basic_pages/terms_of_use.html",
+      "extends": "blog/base.html",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 1,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": true,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": true
+      }
+    },
+    {
+      "file": "blog/templates/blog/blog_list.html",
+      "extends": "blog/base.html",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 0,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/blog_settings.html",
+      "extends": "dashboard_base.html",
+      "includes": [
+        "blog/settings/_author_tab.html",
+        "blog/settings/_boxes_tab.html",
+        "blog/settings/_design_tab.html",
+        "blog/settings/_posts_tab.html",
+        "blog/settings/_settings_tab.html",
+        "blog/settings/_sidebar.html",
+        "blog/settings/_statistics_tab.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 0,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/change_email_email.html",
+      "extends": "",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 0,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/components/analytics_map.html",
+      "extends": "",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 1,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/components/blog_box.html",
+      "extends": "",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [
+          "template"
+        ],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 0,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": true,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/components/blog_design_styles.html",
+      "extends": "",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [
+          "box_background_color",
+          "box_border_color",
+          "content_background_color",
+          "content_border_color",
+          "header_background_color_1",
+          "header_background_color_2",
+          "header_background_gradient_direction",
+          "header_background_mode",
+          "outer_background_asset",
+          "outer_background_color_1",
+          "outer_background_color_2",
+          "outer_background_gradient_direction",
+          "outer_background_mode",
+          "outer_background_pattern",
+          "right_box_columns"
+        ],
+        "blog_preferences": [
+          "active_design_customization"
+        ],
+        "blog_profile": [
+          "simple_background_image",
+          "template"
+        ],
+        "css_vars": [
+          "blog-title-color",
+          "blog-title-font",
+          "blog-title-size",
+          "body-font",
+          "body-text-color",
+          "box-title-color",
+          "box-title-font",
+          "box-title-size",
+          "date-accent-color",
+          "date-bg-soft",
+          "date-day-color",
+          "date-muted-color",
+          "date-primary",
+          "date-scale-factor",
+          "date-secondary",
+          "date-text-color",
+          "post-date-color",
+          "post-date-color-1",
+          "post-date-color-2",
+          "post-date-scale",
+          "post-title-color",
+          "post-title-font",
+          "post-title-size"
+        ]
+      },
+      "risks": {
+        "important": 287,
+        "inline_style": 0,
+        "hardcoded_hex": 299,
+        "hardcoded_rgba": 194,
+        "font_family_decl": 7,
+        "color_decl": 183,
+        "background_decl": 136,
+        "fixed_banner_height": 21
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": true
+      }
+    },
+    {
+      "file": "blog/templates/blog/components/blog_header.html",
+      "extends": "",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [
+          "blog_banner",
+          "blog_banner_display",
+          "blog_banner_focus",
+          "blog_banner_position",
+          "blog_banner_size",
+          "blog_tagline",
+          "has_active_premium",
+          "template"
+        ],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 11,
+        "inline_style": 0,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 7,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 2,
+        "fixed_banner_height": 1
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": false,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/components/blog_interaction_scripts.html",
+      "extends": "",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 0,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/components/blog_left_sidebar.html",
+      "extends": "",
+      "includes": [
+        "blog/components/blog_box.html",
+        "blog/components/live_analytics_widget.html"
+      ],
+      "fields": {
+        "active_design_customization": [
+          "right_box_columns"
+        ],
+        "blog_preferences": [
+          "active_design_customization",
+          "analytics_widget_side",
+          "blog_archive_mode"
+        ],
+        "blog_profile": [
+          "template"
+        ],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 12,
+        "hardcoded_hex": 4,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 8
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": true,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": true
+      }
+    },
+    {
+      "file": "blog/templates/blog/components/blog_pagination.html",
+      "extends": "",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 0,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/components/blog_posts.html",
+      "extends": "",
+      "includes": [
+        "blog/components/blog_interaction_scripts.html",
+        "blog/components/blog_pagination.html",
+        "blog/components/post_card.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [
+          "template"
+        ],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 0,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/components/blog_profile_actions_sidebar.html",
+      "extends": "",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [
+          "avatar",
+          "blog_name",
+          "has_active_premium",
+          "template"
+        ],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 2,
+        "inline_style": 0,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 2,
+        "font_family_decl": 0,
+        "color_decl": 6,
+        "background_decl": 0,
+        "fixed_banner_height": 2
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": true,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/components/blog_right_sidebar.html",
+      "extends": "",
+      "includes": [
+        "blog/components/blog_box.html",
+        "blog/components/blog_profile_actions_sidebar.html",
+        "blog/components/live_analytics_widget.html"
+      ],
+      "fields": {
+        "active_design_customization": [
+          "right_box_columns"
+        ],
+        "blog_preferences": [
+          "active_design_customization",
+          "analytics_widget_side",
+          "blog_archive_mode"
+        ],
+        "blog_profile": [
+          "template"
+        ],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 12,
+        "hardcoded_hex": 4,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 8
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": true,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": true
+      }
+    },
+    {
+      "file": "blog/templates/blog/components/blog_title_patch.html",
+      "extends": "",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [
+          "blog_name",
+          "has_active_premium"
+        ],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 0,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/components/live_analytics_widget.html",
+      "extends": "",
+      "includes": [
+        "blog/components/analytics_map.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [
+          "analytics_active_pages_enabled",
+          "analytics_live_counter_enabled",
+          "analytics_map_enabled",
+          "analytics_map_variant",
+          "analytics_stat_card_size"
+        ],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 0,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": true,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/components/post_actions.html",
+      "extends": "",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 0,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/components/post_body.html",
+      "extends": "",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 5,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 5
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": true,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/components/post_card.html",
+      "extends": "",
+      "includes": [
+        "blog/components/post_actions.html",
+        "blog/components/post_body.html",
+        "blog/components/post_comments.html",
+        "blog/components/post_meta.html"
+      ],
+      "fields": {
+        "active_design_customization": [
+          "post_date_effect",
+          "post_date_style"
+        ],
+        "blog_preferences": [
+          "active_design_customization"
+        ],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 3,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": true,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/components/post_comments.html",
+      "extends": "",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 35,
+        "inline_style": 0,
+        "hardcoded_hex": 4,
+        "hardcoded_rgba": 4,
+        "font_family_decl": 0,
+        "color_decl": 3,
+        "background_decl": 3,
+        "fixed_banner_height": 2
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": true,
+        "datum_posta": false,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/components/post_meta.html",
+      "extends": "",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 0,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/create_post.html",
+      "extends": "blog/base.html",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 23,
+        "inline_style": 0,
+        "hardcoded_hex": 8,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 3,
+        "background_decl": 2,
+        "fixed_banner_height": 2
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": true,
+        "datum_posta": false,
+        "layout_boxeva": true
+      }
+    },
+    {
+      "file": "blog/templates/blog/delete_box.html",
+      "extends": "blog/base.html",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 0,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": true
+      }
+    },
+    {
+      "file": "blog/templates/blog/delete_comment.html",
+      "extends": "",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 0,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/delete_post.html",
+      "extends": "",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 0,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/deleted_profile.html",
+      "extends": "blog/base.html",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 0,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": true
+      }
+    },
+    {
+      "file": "blog/templates/blog/design_live_editor.html",
+      "extends": "",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [
+          "blog_title_color",
+          "blog_title_font",
+          "blog_title_size",
+          "box_background_color",
+          "box_title_color",
+          "box_title_font",
+          "box_title_size",
+          "content_background_color",
+          "header_background_color_1",
+          "outer_background_color_1",
+          "outer_background_color_2",
+          "outer_background_gradient_direction",
+          "outer_background_image",
+          "outer_background_mode",
+          "outer_background_pattern",
+          "post_date_color",
+          "post_date_color_1",
+          "post_date_color_2",
+          "post_date_effect",
+          "post_date_size",
+          "post_date_style",
+          "post_title_color",
+          "post_title_font",
+          "post_title_size"
+        ],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 6,
+        "inline_style": 5,
+        "hardcoded_hex": 46,
+        "hardcoded_rgba": 5,
+        "font_family_decl": 4,
+        "color_decl": 14,
+        "background_decl": 10,
+        "fixed_banner_height": 8
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/designs/asfaltni_plamen.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "includes": [
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_posts.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": [
+          "blog-title-color",
+          "box-title-color",
+          "post-title-color"
+        ]
+      },
+      "risks": {
+        "important": 47,
+        "inline_style": 0,
+        "hardcoded_hex": 21,
+        "hardcoded_rgba": 45,
+        "font_family_decl": 0,
+        "color_decl": 23,
+        "background_decl": 15,
+        "fixed_banner_height": 2
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/designs/carobna_ljubicasta.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "includes": [
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_posts.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": [
+          "blog-title-color",
+          "box-title-color",
+          "post-title-color"
+        ]
+      },
+      "risks": {
+        "important": 51,
+        "inline_style": 0,
+        "hardcoded_hex": 25,
+        "hardcoded_rgba": 106,
+        "font_family_decl": 0,
+        "color_decl": 31,
+        "background_decl": 25,
+        "fixed_banner_height": 4
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": true
+      }
+    },
+    {
+      "file": "blog/templates/blog/designs/classic.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 0,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/designs/classic_right.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 0,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/designs/dark.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 0,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/designs/dark_right.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 0,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/designs/default.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 0,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/designs/default_right.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 0,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/designs/dimni_akordi.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "includes": [
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_posts.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": [
+          "blog-title-color",
+          "box-title-color",
+          "post-title-color"
+        ]
+      },
+      "risks": {
+        "important": 47,
+        "inline_style": 0,
+        "hardcoded_hex": 20,
+        "hardcoded_rgba": 45,
+        "font_family_decl": 0,
+        "color_decl": 22,
+        "background_decl": 15,
+        "fixed_banner_height": 2
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/designs/iznad_oblaka.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "includes": [
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_posts.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": [
+          "blog-title-color",
+          "box-title-color",
+          "post-title-color"
+        ]
+      },
+      "risks": {
+        "important": 45,
+        "inline_style": 0,
+        "hardcoded_hex": 26,
+        "hardcoded_rgba": 46,
+        "font_family_decl": 0,
+        "color_decl": 30,
+        "background_decl": 18,
+        "fixed_banner_height": 4
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/designs/jedro_u_suton.html",
+      "extends": "blog/base.html",
+      "includes": [
+        "blog/components/blog_interaction_scripts.html",
+        "blog/components/blog_profile_actions_sidebar.html",
+        "blog/components/live_analytics_widget.html",
+        "blog/components/post_actions.html",
+        "blog/components/post_body.html",
+        "blog/components/post_comments.html",
+        "blog/components/post_meta.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [
+          "analytics_widget_side",
+          "blog_archive_mode"
+        ],
+        "blog_profile": [
+          "blog_banner",
+          "blog_name",
+          "blog_tagline"
+        ],
+        "css_vars": [
+          "post-title-color"
+        ]
+      },
+      "risks": {
+        "important": 30,
+        "inline_style": 3,
+        "hardcoded_hex": 37,
+        "hardcoded_rgba": 60,
+        "font_family_decl": 3,
+        "color_decl": 37,
+        "background_decl": 26,
+        "fixed_banner_height": 4
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": true
+      }
+    },
+    {
+      "file": "blog/templates/blog/designs/kraljevska_pozornica.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "includes": [
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_posts.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": [
+          "blog-title-color",
+          "box-title-color",
+          "post-title-color"
+        ]
+      },
+      "risks": {
+        "important": 30,
+        "inline_style": 0,
+        "hardcoded_hex": 25,
+        "hardcoded_rgba": 92,
+        "font_family_decl": 0,
+        "color_decl": 30,
+        "background_decl": 23,
+        "fixed_banner_height": 3
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": true
+      }
+    },
+    {
+      "file": "blog/templates/blog/designs/litica_noci.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 0,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/designs/magazin.html",
+      "extends": "blog/base.html",
+      "includes": [
+        "blog/components/blog_interaction_scripts.html",
+        "blog/components/live_analytics_widget.html",
+        "blog/components/post_actions.html",
+        "blog/components/post_body.html",
+        "blog/components/post_comments.html",
+        "blog/components/post_meta.html"
+      ],
+      "fields": {
+        "active_design_customization": [
+          "blog_title_color",
+          "blog_title_font_stack",
+          "body_font_stack",
+          "body_text_color",
+          "box_background_color",
+          "box_border_color",
+          "box_title_color",
+          "box_title_font_stack",
+          "content_background_color",
+          "content_border_color",
+          "header_background_color_1",
+          "outer_background_asset",
+          "outer_background_color_1",
+          "post_date_color",
+          "post_date_effect",
+          "post_date_style",
+          "post_title_color",
+          "post_title_font_stack"
+        ],
+        "blog_preferences": [
+          "active_design_customization",
+          "analytics_widget_side",
+          "blog_archive_mode"
+        ],
+        "blog_profile": [
+          "avatar",
+          "blog_name",
+          "blog_tagline",
+          "simple_background_image"
+        ],
+        "css_vars": [
+          "magazin-body-font",
+          "magazin-box-font",
+          "magazin-box-title",
+          "magazin-content-bg",
+          "magazin-content-border",
+          "magazin-date",
+          "magazin-main-bg",
+          "magazin-post-font",
+          "magazin-post-title",
+          "magazin-section-bg",
+          "magazin-section-border",
+          "magazin-sidebar-bg",
+          "magazin-text",
+          "magazin-title-color",
+          "magazin-title-font"
+        ]
+      },
+      "risks": {
+        "important": 52,
+        "inline_style": 3,
+        "hardcoded_hex": 21,
+        "hardcoded_rgba": 12,
+        "font_family_decl": 5,
+        "color_decl": 22,
+        "background_decl": 17,
+        "fixed_banner_height": 6
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": true
+      }
+    },
+    {
+      "file": "blog/templates/blog/designs/misticno_jezero.html",
+      "extends": "blog/base.html",
+      "includes": [
+        "blog/components/blog_interaction_scripts.html",
+        "blog/components/blog_profile_actions_sidebar.html",
+        "blog/components/live_analytics_widget.html",
+        "blog/components/post_actions.html",
+        "blog/components/post_body.html",
+        "blog/components/post_comments.html",
+        "blog/components/post_meta.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [
+          "analytics_widget_side",
+          "blog_archive_mode"
+        ],
+        "blog_profile": [
+          "blog_banner",
+          "blog_name",
+          "blog_tagline"
+        ],
+        "css_vars": [
+          "post-title-color"
+        ]
+      },
+      "risks": {
+        "important": 28,
+        "inline_style": 1,
+        "hardcoded_hex": 53,
+        "hardcoded_rgba": 56,
+        "font_family_decl": 4,
+        "color_decl": 46,
+        "background_decl": 26,
+        "fixed_banner_height": 4
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": true
+      }
+    },
+    {
+      "file": "blog/templates/blog/designs/mjesecev_ples.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "includes": [
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_posts.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": [
+          "blog-title-color",
+          "box-title-color",
+          "post-title-color"
+        ]
+      },
+      "risks": {
+        "important": 48,
+        "inline_style": 0,
+        "hardcoded_hex": 22,
+        "hardcoded_rgba": 45,
+        "font_family_decl": 0,
+        "color_decl": 24,
+        "background_decl": 15,
+        "fixed_banner_height": 2
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/designs/morski_prijelaz.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "includes": [
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_posts.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": [
+          "blog-title-color",
+          "body-text-color",
+          "box-title-color",
+          "post-title-color"
+        ]
+      },
+      "risks": {
+        "important": 45,
+        "inline_style": 0,
+        "hardcoded_hex": 23,
+        "hardcoded_rgba": 46,
+        "font_family_decl": 0,
+        "color_decl": 22,
+        "background_decl": 18,
+        "fixed_banner_height": 7
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/designs/nebeska_klasika.html",
+      "extends": "blog/base.html",
+      "includes": [
+        "blog/components/blog_interaction_scripts.html",
+        "blog/components/blog_profile_actions_sidebar.html",
+        "blog/components/live_analytics_widget.html",
+        "blog/components/post_actions.html",
+        "blog/components/post_body.html",
+        "blog/components/post_comments.html",
+        "blog/components/post_meta.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [
+          "analytics_widget_side",
+          "blog_archive_mode"
+        ],
+        "blog_profile": [
+          "blog_banner",
+          "blog_name",
+          "blog_tagline"
+        ],
+        "css_vars": [
+          "post-title-color"
+        ]
+      },
+      "risks": {
+        "important": 26,
+        "inline_style": 1,
+        "hardcoded_hex": 49,
+        "hardcoded_rgba": 46,
+        "font_family_decl": 4,
+        "color_decl": 41,
+        "background_decl": 23,
+        "fixed_banner_height": 4
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": true
+      }
+    },
+    {
+      "file": "blog/templates/blog/designs/nebeski_mir.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "includes": [
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_posts.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": [
+          "blog-title-color",
+          "body-text-color",
+          "box-title-color",
+          "post-date-color",
+          "post-title-color"
+        ]
+      },
+      "risks": {
+        "important": 42,
+        "inline_style": 0,
+        "hardcoded_hex": 26,
+        "hardcoded_rgba": 35,
+        "font_family_decl": 0,
+        "color_decl": 24,
+        "background_decl": 17,
+        "fixed_banner_height": 2
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/designs/nebesko_polje.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "includes": [
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_header.html",
+        "blog/components/blog_posts.html"
+      ],
+      "fields": {
+        "active_design_customization": [
+          "box_background_color",
+          "box_border_color",
+          "content_background_color",
+          "content_border_color"
+        ],
+        "blog_preferences": [
+          "active_design_customization"
+        ],
+        "blog_profile": [],
+        "css_vars": [
+          "blog-title-color",
+          "body-text-color",
+          "box-title-color",
+          "nebesko-box-border",
+          "nebesko-content-border",
+          "nebesko-link",
+          "nebesko-link-strong",
+          "nebesko-panel-bg",
+          "nebesko-panel-bg-strong",
+          "nebesko-shadow",
+          "post-date-color",
+          "post-title-color"
+        ]
+      },
+      "risks": {
+        "important": 36,
+        "inline_style": 0,
+        "hardcoded_hex": 32,
+        "hardcoded_rgba": 84,
+        "font_family_decl": 0,
+        "color_decl": 30,
+        "background_decl": 20,
+        "fixed_banner_height": 4
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/designs/neonski_grad.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "includes": [
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_posts.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": [
+          "blog-title-color",
+          "box-title-color",
+          "post-title-color"
+        ]
+      },
+      "risks": {
+        "important": 50,
+        "inline_style": 0,
+        "hardcoded_hex": 26,
+        "hardcoded_rgba": 79,
+        "font_family_decl": 0,
+        "color_decl": 31,
+        "background_decl": 19,
+        "fixed_banner_height": 4
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/designs/planine_u_magli.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "includes": [
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_posts.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": [
+          "blog-title-color",
+          "body-text-color",
+          "box-title-color",
+          "post-date-color",
+          "post-title-color"
+        ]
+      },
+      "risks": {
+        "important": 45,
+        "inline_style": 0,
+        "hardcoded_hex": 26,
+        "hardcoded_rgba": 51,
+        "font_family_decl": 0,
+        "color_decl": 24,
+        "background_decl": 22,
+        "fixed_banner_height": 2
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/designs/podvodna_tisina.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "includes": [
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_posts.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": [
+          "blog-title-color",
+          "body-text-color",
+          "box-title-color",
+          "post-title-color"
+        ]
+      },
+      "risks": {
+        "important": 37,
+        "inline_style": 0,
+        "hardcoded_hex": 23,
+        "hardcoded_rgba": 38,
+        "font_family_decl": 0,
+        "color_decl": 22,
+        "background_decl": 15,
+        "fixed_banner_height": 3
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/designs/polarna_svjetlost.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "includes": [
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_posts.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": [
+          "blog-title-color",
+          "box-title-color",
+          "post-title-color"
+        ]
+      },
+      "risks": {
+        "important": 48,
+        "inline_style": 0,
+        "hardcoded_hex": 24,
+        "hardcoded_rgba": 49,
+        "font_family_decl": 0,
+        "color_decl": 29,
+        "background_decl": 19,
+        "fixed_banner_height": 4
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/designs/polje_lavande.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "includes": [
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_posts.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": [
+          "blog-title-color",
+          "box-title-color",
+          "post-title-color"
+        ]
+      },
+      "risks": {
+        "important": 53,
+        "inline_style": 0,
+        "hardcoded_hex": 25,
+        "hardcoded_rgba": 51,
+        "font_family_decl": 0,
+        "color_decl": 30,
+        "background_decl": 20,
+        "fixed_banner_height": 4
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": true
+      }
+    },
+    {
+      "file": "blog/templates/blog/designs/ponocna_elegancija.html",
+      "extends": "blog/base.html",
+      "includes": [
+        "blog/components/blog_interaction_scripts.html",
+        "blog/components/blog_profile_actions_sidebar.html",
+        "blog/components/live_analytics_widget.html",
+        "blog/components/post_actions.html",
+        "blog/components/post_body.html",
+        "blog/components/post_comments.html",
+        "blog/components/post_meta.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [
+          "analytics_widget_side",
+          "blog_archive_mode"
+        ],
+        "blog_profile": [
+          "blog_banner",
+          "blog_name",
+          "blog_tagline"
+        ],
+        "css_vars": [
+          "post-title-color"
+        ]
+      },
+      "risks": {
+        "important": 28,
+        "inline_style": 1,
+        "hardcoded_hex": 54,
+        "hardcoded_rgba": 49,
+        "font_family_decl": 4,
+        "color_decl": 46,
+        "background_decl": 24,
+        "fixed_banner_height": 4
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": true
+      }
+    },
+    {
+      "file": "blog/templates/blog/designs/ruzicasti_vrt.html",
+      "extends": "blog/base.html",
+      "includes": [
+        "blog/components/blog_interaction_scripts.html",
+        "blog/components/blog_profile_actions_sidebar.html",
+        "blog/components/live_analytics_widget.html",
+        "blog/components/post_actions.html",
+        "blog/components/post_body.html",
+        "blog/components/post_comments.html",
+        "blog/components/post_meta.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [
+          "analytics_widget_side",
+          "blog_archive_mode"
+        ],
+        "blog_profile": [
+          "blog_banner",
+          "blog_name",
+          "blog_tagline"
+        ],
+        "css_vars": [
+          "post-title-color"
+        ]
+      },
+      "risks": {
+        "important": 28,
+        "inline_style": 1,
+        "hardcoded_hex": 53,
+        "hardcoded_rgba": 50,
+        "font_family_decl": 4,
+        "color_decl": 45,
+        "background_decl": 24,
+        "fixed_banner_height": 4
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": true
+      }
+    },
+    {
+      "file": "blog/templates/blog/designs/simple.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 0,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/designs/simple_image.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 0,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/designs/simple_pattern.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 0,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/designs/simple_retro.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 0,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/designs/sjene_ulice.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "includes": [
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_posts.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": [
+          "blog-title-color",
+          "box-title-color",
+          "post-title-color"
+        ]
+      },
+      "risks": {
+        "important": 53,
+        "inline_style": 0,
+        "hardcoded_hex": 24,
+        "hardcoded_rgba": 46,
+        "font_family_decl": 0,
+        "color_decl": 25,
+        "background_decl": 14,
+        "fixed_banner_height": 2
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/designs/stara_aleja.html",
+      "extends": "blog/base.html",
+      "includes": [
+        "blog/components/blog_interaction_scripts.html",
+        "blog/components/blog_profile_actions_sidebar.html",
+        "blog/components/live_analytics_widget.html",
+        "blog/components/post_actions.html",
+        "blog/components/post_body.html",
+        "blog/components/post_comments.html",
+        "blog/components/post_meta.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [
+          "analytics_widget_side",
+          "blog_archive_mode"
+        ],
+        "blog_profile": [
+          "blog_banner",
+          "blog_name",
+          "blog_tagline"
+        ],
+        "css_vars": [
+          "post-title-color"
+        ]
+      },
+      "risks": {
+        "important": 30,
+        "inline_style": 1,
+        "hardcoded_hex": 37,
+        "hardcoded_rgba": 60,
+        "font_family_decl": 3,
+        "color_decl": 37,
+        "background_decl": 26,
+        "fixed_banner_height": 4
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": true
+      }
+    },
+    {
+      "file": "blog/templates/blog/designs/staza_prema_vrhovima.html",
+      "extends": "blog/base.html",
+      "includes": [
+        "blog/components/blog_interaction_scripts.html",
+        "blog/components/blog_profile_actions_sidebar.html",
+        "blog/components/live_analytics_widget.html",
+        "blog/components/post_actions.html",
+        "blog/components/post_body.html",
+        "blog/components/post_comments.html",
+        "blog/components/post_meta.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [
+          "analytics_widget_side",
+          "blog_archive_mode"
+        ],
+        "blog_profile": [
+          "blog_banner",
+          "blog_name",
+          "blog_tagline"
+        ],
+        "css_vars": [
+          "post-title-color"
+        ]
+      },
+      "risks": {
+        "important": 28,
+        "inline_style": 2,
+        "hardcoded_hex": 46,
+        "hardcoded_rgba": 46,
+        "font_family_decl": 3,
+        "color_decl": 39,
+        "background_decl": 22,
+        "fixed_banner_height": 3
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": true
+      }
+    },
+    {
+      "file": "blog/templates/blog/designs/studio.html",
+      "extends": "blog/base.html",
+      "includes": [
+        "blog/components/blog_interaction_scripts.html",
+        "blog/components/live_analytics_widget.html",
+        "blog/components/post_actions.html",
+        "blog/components/post_body.html",
+        "blog/components/post_comments.html",
+        "blog/components/post_meta.html"
+      ],
+      "fields": {
+        "active_design_customization": [
+          "blog_title_color",
+          "blog_title_font_stack",
+          "body_font_stack",
+          "body_text_color",
+          "box_title_color",
+          "box_title_font_stack",
+          "content_background_color",
+          "content_border_color",
+          "outer_background_asset",
+          "outer_background_color_1",
+          "post_date_color",
+          "post_date_effect",
+          "post_date_style",
+          "post_title_color",
+          "post_title_font_stack"
+        ],
+        "blog_preferences": [
+          "active_design_customization",
+          "analytics_widget_side",
+          "blog_archive_mode"
+        ],
+        "blog_profile": [
+          "avatar",
+          "blog_banner",
+          "blog_banner_position",
+          "blog_name",
+          "blog_tagline",
+          "simple_background_image"
+        ],
+        "css_vars": [
+          "soho-body-font",
+          "soho-box-font",
+          "soho-box-title",
+          "soho-content-bg",
+          "soho-content-border",
+          "soho-date",
+          "soho-main-gap",
+          "soho-page-bg",
+          "soho-post-font",
+          "soho-post-title",
+          "soho-text",
+          "soho-title-color",
+          "soho-title-font"
+        ]
+      },
+      "risks": {
+        "important": 41,
+        "inline_style": 3,
+        "hardcoded_hex": 18,
+        "hardcoded_rgba": 7,
+        "font_family_decl": 5,
+        "color_decl": 23,
+        "background_decl": 12,
+        "fixed_banner_height": 4
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": true
+      }
+    },
+    {
+      "file": "blog/templates/blog/designs/sumska_svjetlost.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "includes": [
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_posts.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": [
+          "blog-title-color",
+          "box-title-color",
+          "post-title-color"
+        ]
+      },
+      "risks": {
+        "important": 52,
+        "inline_style": 0,
+        "hardcoded_hex": 25,
+        "hardcoded_rgba": 49,
+        "font_family_decl": 0,
+        "color_decl": 30,
+        "background_decl": 21,
+        "fixed_banner_height": 4
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/designs/svemirski_horizont.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "includes": [
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_posts.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": [
+          "blog-title-color",
+          "box-title-color",
+          "post-title-color"
+        ]
+      },
+      "risks": {
+        "important": 48,
+        "inline_style": 0,
+        "hardcoded_hex": 24,
+        "hardcoded_rgba": 49,
+        "font_family_decl": 0,
+        "color_decl": 29,
+        "background_decl": 19,
+        "fixed_banner_height": 4
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/designs/vecer_uz_jezero.html",
+      "extends": "blog/base.html",
+      "includes": [
+        "blog/components/blog_interaction_scripts.html",
+        "blog/components/blog_profile_actions_sidebar.html",
+        "blog/components/live_analytics_widget.html",
+        "blog/components/post_actions.html",
+        "blog/components/post_body.html",
+        "blog/components/post_comments.html",
+        "blog/components/post_meta.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [
+          "analytics_widget_side",
+          "blog_archive_mode"
+        ],
+        "blog_profile": [
+          "blog_banner",
+          "blog_name",
+          "blog_tagline"
+        ],
+        "css_vars": [
+          "post-title-color"
+        ]
+      },
+      "risks": {
+        "important": 28,
+        "inline_style": 1,
+        "hardcoded_hex": 53,
+        "hardcoded_rgba": 51,
+        "font_family_decl": 4,
+        "color_decl": 46,
+        "background_decl": 24,
+        "fixed_banner_height": 4
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": true
+      }
+    },
+    {
+      "file": "blog/templates/blog/designs/vecer_zaljubljenih.html",
+      "extends": "blog/base.html",
+      "includes": [
+        "blog/components/blog_profile_actions_sidebar.html",
+        "blog/components/post_actions.html",
+        "blog/components/post_body.html",
+        "blog/components/post_comments.html",
+        "blog/components/post_meta.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [
+          "blog_archive_mode"
+        ],
+        "blog_profile": [
+          "blog_banner",
+          "blog_name",
+          "blog_tagline"
+        ],
+        "css_vars": [
+          "post-title-color"
+        ]
+      },
+      "risks": {
+        "important": 28,
+        "inline_style": 1,
+        "hardcoded_hex": 54,
+        "hardcoded_rgba": 51,
+        "font_family_decl": 4,
+        "color_decl": 46,
+        "background_decl": 25,
+        "fixed_banner_height": 4
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/designs/vodopad_u_magli.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "includes": [
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_posts.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": [
+          "blog-title-color",
+          "body-text-color",
+          "box-title-color",
+          "post-date-color",
+          "post-title-color"
+        ]
+      },
+      "risks": {
+        "important": 32,
+        "inline_style": 0,
+        "hardcoded_hex": 26,
+        "hardcoded_rgba": 44,
+        "font_family_decl": 0,
+        "color_decl": 24,
+        "background_decl": 18,
+        "fixed_banner_height": 2
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/designs/zlatni_horizont.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "includes": [
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_posts.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": [
+          "blog-title-color",
+          "box-title-color",
+          "post-title-color"
+        ]
+      },
+      "risks": {
+        "important": 48,
+        "inline_style": 0,
+        "hardcoded_hex": 24,
+        "hardcoded_rgba": 49,
+        "font_family_decl": 0,
+        "color_decl": 29,
+        "background_decl": 19,
+        "fixed_banner_height": 4
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/designs/zlatno_polje.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "includes": [
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_posts.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": [
+          "blog-title-color",
+          "box-title-color",
+          "panel-bg",
+          "panel-border",
+          "post-title-color"
+        ]
+      },
+      "risks": {
+        "important": 59,
+        "inline_style": 0,
+        "hardcoded_hex": 24,
+        "hardcoded_rgba": 49,
+        "font_family_decl": 0,
+        "color_decl": 29,
+        "background_decl": 21,
+        "fixed_banner_height": 4
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": true,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/edit_box.html",
+      "extends": "blog/base.html",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 0,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": true
+      }
+    },
+    {
+      "file": "blog/templates/blog/edit_comment.html",
+      "extends": "",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 0,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/edit_post.html",
+      "extends": "blog/base.html",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 26,
+        "inline_style": 0,
+        "hardcoded_hex": 18,
+        "hardcoded_rgba": 1,
+        "font_family_decl": 0,
+        "color_decl": 3,
+        "background_decl": 7,
+        "fixed_banner_height": 11
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": true,
+        "boxevi": false,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": false,
+        "layout_boxeva": true
+      }
+    },
+    {
+      "file": "blog/templates/blog/edit_profile.html",
+      "extends": "dashboard_base.html",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 0,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/footer.html",
+      "extends": "",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 12,
+        "hardcoded_hex": 6,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 7,
+        "background_decl": 1,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": true,
+        "datum_posta": false,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/home.html",
+      "extends": "blog/base.html",
+      "includes": [
+        "blog/partials/special_day_card.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 8,
+        "hardcoded_hex": 2,
+        "hardcoded_rgba": 6,
+        "font_family_decl": 0,
+        "color_decl": 6,
+        "background_decl": 1,
+        "fixed_banner_height": 8
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": false,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": false,
+        "layout_boxeva": true
+      }
+    },
+    {
+      "file": "blog/templates/blog/layouts/blog_design_base.html",
+      "extends": "blog/base.html",
+      "includes": [
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_header.html",
+        "blog/components/blog_left_sidebar.html",
+        "blog/components/blog_posts.html",
+        "blog/components/blog_right_sidebar.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 0,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": true
+      }
+    },
+    {
+      "file": "blog/templates/blog/login.html",
+      "extends": "blog/base.html",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 0,
+        "hardcoded_hex": 4,
+        "hardcoded_rgba": 1,
+        "font_family_decl": 0,
+        "color_decl": 1,
+        "background_decl": 1,
+        "fixed_banner_height": 2
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": true,
+        "datum_posta": false,
+        "layout_boxeva": true
+      }
+    },
+    {
+      "file": "blog/templates/blog/notifications.html",
+      "extends": "blog/base.html",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 1,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/partials/_notification_dropdown.html",
+      "extends": "",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 142,
+        "inline_style": 0,
+        "hardcoded_hex": 15,
+        "hardcoded_rgba": 1,
+        "font_family_decl": 0,
+        "color_decl": 8,
+        "background_decl": 5,
+        "fixed_banner_height": 1
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": true,
+        "datum_posta": false,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/partials/special_day_card.html",
+      "extends": "",
+      "includes": [
+        "blog/partials/special_day_flower.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 0,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": true,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/partials/special_day_flower.html",
+      "extends": "",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 0,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/password_change.html",
+      "extends": "blog/base.html",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 0,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": true
+      }
+    },
+    {
+      "file": "blog/templates/blog/password_change_done.html",
+      "extends": "blog/base.html",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 0,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": true
+      }
+    },
+    {
+      "file": "blog/templates/blog/post_detail.html",
+      "extends": "blog/base.html",
+      "includes": [
+        "blog/_like_button.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 2,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 2
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": true,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": true
+      }
+    },
+    {
+      "file": "blog/templates/blog/profile.html",
+      "extends": "blog/base.html",
+      "includes": [
+        "blog/_like_button.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 1,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 1
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": true,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": true
+      }
+    },
+    {
+      "file": "blog/templates/blog/register.html",
+      "extends": "blog/base.html",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 2,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": true
+      }
+    },
+    {
+      "file": "blog/templates/blog/search.html",
+      "extends": "blog/base.html",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 0,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/settings/_ambience_tab.html",
+      "extends": "",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [
+          "ambient_music_enabled",
+          "ambient_music_track",
+          "ambient_music_track_data",
+          "ambient_music_volume",
+          "cursor_effect",
+          "cursor_style"
+        ],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 0,
+        "hardcoded_hex": 6,
+        "hardcoded_rgba": 7,
+        "font_family_decl": 0,
+        "color_decl": 6,
+        "background_decl": 4,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": true,
+        "datum_posta": false,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/settings/_author_tab.html",
+      "extends": "",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 0,
+        "hardcoded_hex": 14,
+        "hardcoded_rgba": 1,
+        "font_family_decl": 0,
+        "color_decl": 5,
+        "background_decl": 5,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": true,
+        "datum_posta": false,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/settings/_banner_editor.html",
+      "extends": "",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 23,
+        "inline_style": 1,
+        "hardcoded_hex": 10,
+        "hardcoded_rgba": 4,
+        "font_family_decl": 0,
+        "color_decl": 6,
+        "background_decl": 4,
+        "fixed_banner_height": 1
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": false,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/settings/_boxes_tab.html",
+      "extends": "",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 110,
+        "inline_style": 0,
+        "hardcoded_hex": 2,
+        "hardcoded_rgba": 2,
+        "font_family_decl": 0,
+        "color_decl": 2,
+        "background_decl": 0,
+        "fixed_banner_height": 6
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": true,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/settings/_design_tab.html",
+      "extends": "",
+      "includes": [
+        "blog/settings/_ambience_tab.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 0,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/settings/_design_titles_live_editor.html",
+      "extends": "",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [
+          "blog_title_color",
+          "blog_title_font",
+          "blog_title_size",
+          "box_title_color",
+          "box_title_font",
+          "box_title_size",
+          "post_title_color",
+          "post_title_font",
+          "post_title_size"
+        ],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 3,
+        "hardcoded_hex": 3,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 3,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": true,
+        "boxevi": true,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/settings/_posts_tab.html",
+      "extends": "",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 29,
+        "inline_style": 1,
+        "hardcoded_hex": 26,
+        "hardcoded_rgba": 2,
+        "font_family_decl": 0,
+        "color_decl": 3,
+        "background_decl": 11,
+        "fixed_banner_height": 18
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": true,
+        "boxevi": false,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": false,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/settings/_settings_tab.html",
+      "extends": "",
+      "includes": [
+        "blog/settings/_banner_editor.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [
+          "allow_comments",
+          "analytics_active_pages_enabled",
+          "analytics_geo_enabled",
+          "analytics_live_counter_enabled",
+          "analytics_map_enabled",
+          "analytics_map_variant",
+          "analytics_stat_card_size",
+          "analytics_widget_side",
+          "blog_archive_mode",
+          "posts_per_page",
+          "show_post_comments"
+        ],
+        "blog_profile": [],
+        "css_vars": [
+          "avatar-crop-size"
+        ]
+      },
+      "risks": {
+        "important": 60,
+        "inline_style": 6,
+        "hardcoded_hex": 1,
+        "hardcoded_rgba": 7,
+        "font_family_decl": 0,
+        "color_decl": 2,
+        "background_decl": 3,
+        "fixed_banner_height": 8
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": true,
+        "pozadina": true,
+        "datum_posta": false,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/settings/_sidebar.html",
+      "extends": "",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 0,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/settings/_statistics_tab.html",
+      "extends": "",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 3,
+        "hardcoded_hex": 27,
+        "hardcoded_rgba": 1,
+        "font_family_decl": 0,
+        "color_decl": 8,
+        "background_decl": 5,
+        "fixed_banner_height": 4
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": true,
+        "datum_posta": false,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/settings/_visitors_tab.html",
+      "extends": "",
+      "includes": [
+        "blog/components/analytics_map.html"
+      ],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [
+          "analytics_active_pages_enabled",
+          "analytics_geo_enabled",
+          "analytics_live_counter_enabled",
+          "analytics_map_enabled",
+          "analytics_map_variant",
+          "analytics_widget_side"
+        ],
+        "blog_profile": [],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 2,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 1
+      },
+      "areas": {
+        "naslov_bloga": false,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": false
+      }
+    },
+    {
+      "file": "blog/templates/blog/user_blog_page.html",
+      "extends": "blog/blog_base.html",
+      "includes": [],
+      "fields": {
+        "active_design_customization": [],
+        "blog_preferences": [],
+        "blog_profile": [
+          "blog_name"
+        ],
+        "css_vars": []
+      },
+      "risks": {
+        "important": 0,
+        "inline_style": 0,
+        "hardcoded_hex": 0,
+        "hardcoded_rgba": 0,
+        "font_family_decl": 0,
+        "color_decl": 0,
+        "background_decl": 0,
+        "fixed_banner_height": 0
+      },
+      "areas": {
+        "naslov_bloga": true,
+        "naslov_posta": false,
+        "boxevi": false,
+        "banner": false,
+        "pozadina": false,
+        "datum_posta": false,
+        "layout_boxeva": false
+      }
+    }
+  ]
+}
