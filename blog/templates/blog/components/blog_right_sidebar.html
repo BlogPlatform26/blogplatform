@@ -69,10 +69,7 @@
         {% endif %}
 
         {% for box in left_boxes %}
-            <div class="sidebar-box sidebar-left-align{% if blog.profile.template == 'simple_pattern' or blog.profile.template == 'simple_image' or blog.profile.template == 'simple_retro' %} sidebar-box--simple{% endif %}">
-                <div class="sidebar-box-title">{{ box.title }}</div>
-                <div class="sidebar-box-content">{{ box.content|safe }}</div>
-            </div>
+            {% include "blog/components/blog_box.html" with box=box box_align="sidebar-left-align" %}
         {% endfor %}
 
         {% if blog_preferences.analytics_widget_side == 'left_bottom' %}
@@ -85,10 +82,7 @@
     {% endif %}
 
     {% for box in right_boxes %}
-        <div class="sidebar-box sidebar-right-align{% if blog.profile.template == 'simple_pattern' or blog.profile.template == 'simple_image' or blog.profile.template == 'simple_retro' %} sidebar-box--simple{% endif %}">
-            <div class="sidebar-box-title">{{ box.title }}</div>
-            <div class="sidebar-box-content">{{ box.content|safe }}</div>
-        </div>
+        {% include "blog/components/blog_box.html" with box=box box_align="sidebar-right-align" %}
     {% endfor %}
 
     {% if blog_preferences.analytics_widget_side == 'right_bottom' %}
@@ -165,18 +159,12 @@
 
     {% if blog.profile.template == 'simple_retro' %}
         {% for box in left_boxes %}
-            <div class="sidebar-box sidebar-right-align sidebar-box--simple">
-                <div class="sidebar-box-title">{{ box.title }}</div>
-                <div class="sidebar-box-content">{{ box.content|safe }}</div>
-            </div>
+            {% include "blog/components/blog_box.html" with box=box box_align="sidebar-right-align" %}
         {% endfor %}
     {% endif %}
 
     {% for box in right_boxes %}
-        <div class="sidebar-box sidebar-right-align{% if blog.profile.template == 'simple_pattern' or blog.profile.template == 'simple_image' or blog.profile.template == 'simple_retro' %} sidebar-box--simple{% endif %}">
-            <div class="sidebar-box-title">{{ box.title }}</div>
-            <div class="sidebar-box-content">{{ box.content|safe }}</div>
-        </div>
+        {% include "blog/components/blog_box.html" with box=box box_align="sidebar-right-align" %}
     {% endfor %}
 
     {% if blog_preferences.analytics_widget_side == 'right_bottom' %}
