@@ -726,26 +726,7 @@ nav.navbar .dropdown-menu {
         </div>
     </div>
 </div>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll(".poll-bar").forEach(function (bar) {
-        const p = bar.getAttribute("data-percent") || "0";
-        bar.style.width = p + "%";
-    });
-
-    document.querySelectorAll(".js-scroll-to-comments").forEach(function (a) {
-        a.addEventListener("click", function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute("href");
-            if (!targetId) return;
-            const el = document.querySelector(targetId);
-            if (!el) return;
-            el.scrollIntoView({ behavior: "smooth", block: "start" });
-        });
-    });
-});
-</script>
+{% include "blog/components/blog_interaction_scripts.html" %}
 {% endblock %}
 
 {% block left_sidebar %}{% endblock %}

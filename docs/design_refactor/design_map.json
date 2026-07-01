@@ -1,0 +1,881 @@
+[
+  {
+    "name": "asfaltni_plamen",
+    "file": "blog\\templates\\blog\\designs\\asfaltni_plamen.html",
+    "extends": "blog/layouts/blog_design_base.html",
+    "layout_guess": "standard",
+    "box_position_guess": "zajednički layout: lijevi sidebar + sadržaj + desni sidebar",
+    "uses_shared_posts_component": true,
+    "uses_shared_header_component": true,
+    "has_own_post_loop": false,
+    "has_inline_style": true,
+    "risk": "srednji",
+    "length": 7923,
+    "includes": [
+      "blog/components/blog_design_styles.html",
+      "blog/components/blog_posts.html"
+    ],
+    "blocks": [
+      "content"
+    ]
+  },
+  {
+    "name": "carobna_ljubicasta",
+    "file": "blog\\templates\\blog\\designs\\carobna_ljubicasta.html",
+    "extends": "blog/layouts/blog_design_base.html",
+    "layout_guess": "standard",
+    "box_position_guess": "zajednički layout: lijevi sidebar + sadržaj + desni sidebar",
+    "uses_shared_posts_component": true,
+    "uses_shared_header_component": true,
+    "has_own_post_loop": false,
+    "has_inline_style": true,
+    "risk": "srednji",
+    "length": 17378,
+    "includes": [
+      "blog/components/blog_design_styles.html",
+      "blog/components/blog_posts.html"
+    ],
+    "blocks": [
+      "content"
+    ]
+  },
+  {
+    "name": "classic",
+    "file": "blog\\templates\\blog\\designs\\classic.html",
+    "extends": "blog/layouts/blog_design_base.html",
+    "layout_guess": "standard",
+    "box_position_guess": "zajednički layout: lijevi sidebar + sadržaj + desni sidebar",
+    "uses_shared_posts_component": false,
+    "uses_shared_header_component": true,
+    "has_own_post_loop": false,
+    "has_inline_style": false,
+    "risk": "nizak",
+    "length": 51,
+    "includes": [],
+    "blocks": []
+  },
+  {
+    "name": "classic_right",
+    "file": "blog\\templates\\blog\\designs\\classic_right.html",
+    "extends": "blog/layouts/blog_design_base.html",
+    "layout_guess": "right_boxes",
+    "box_position_guess": "svi boxevi desno / wide prikaz",
+    "uses_shared_posts_component": false,
+    "uses_shared_header_component": true,
+    "has_own_post_loop": false,
+    "has_inline_style": false,
+    "risk": "nizak",
+    "length": 51,
+    "includes": [],
+    "blocks": []
+  },
+  {
+    "name": "dark",
+    "file": "blog\\templates\\blog\\designs\\dark.html",
+    "extends": "blog/layouts/blog_design_base.html",
+    "layout_guess": "standard",
+    "box_position_guess": "zajednički layout: lijevi sidebar + sadržaj + desni sidebar",
+    "uses_shared_posts_component": false,
+    "uses_shared_header_component": true,
+    "has_own_post_loop": false,
+    "has_inline_style": false,
+    "risk": "nizak",
+    "length": 51,
+    "includes": [],
+    "blocks": []
+  },
+  {
+    "name": "dark_right",
+    "file": "blog\\templates\\blog\\designs\\dark_right.html",
+    "extends": "blog/layouts/blog_design_base.html",
+    "layout_guess": "right_boxes",
+    "box_position_guess": "svi boxevi desno / wide prikaz",
+    "uses_shared_posts_component": false,
+    "uses_shared_header_component": true,
+    "has_own_post_loop": false,
+    "has_inline_style": false,
+    "risk": "nizak",
+    "length": 51,
+    "includes": [],
+    "blocks": []
+  },
+  {
+    "name": "default",
+    "file": "blog\\templates\\blog\\designs\\default.html",
+    "extends": "blog/layouts/blog_design_base.html",
+    "layout_guess": "standard",
+    "box_position_guess": "zajednički layout: lijevi sidebar + sadržaj + desni sidebar",
+    "uses_shared_posts_component": false,
+    "uses_shared_header_component": true,
+    "has_own_post_loop": false,
+    "has_inline_style": false,
+    "risk": "nizak",
+    "length": 51,
+    "includes": [],
+    "blocks": []
+  },
+  {
+    "name": "default_right",
+    "file": "blog\\templates\\blog\\designs\\default_right.html",
+    "extends": "blog/layouts/blog_design_base.html",
+    "layout_guess": "right_boxes",
+    "box_position_guess": "svi boxevi desno / wide prikaz",
+    "uses_shared_posts_component": false,
+    "uses_shared_header_component": true,
+    "has_own_post_loop": false,
+    "has_inline_style": false,
+    "risk": "nizak",
+    "length": 51,
+    "includes": [],
+    "blocks": []
+  },
+  {
+    "name": "dimni_akordi",
+    "file": "blog\\templates\\blog\\designs\\dimni_akordi.html",
+    "extends": "blog/layouts/blog_design_base.html",
+    "layout_guess": "standard",
+    "box_position_guess": "zajednički layout: lijevi sidebar + sadržaj + desni sidebar",
+    "uses_shared_posts_component": true,
+    "uses_shared_header_component": true,
+    "has_own_post_loop": false,
+    "has_inline_style": true,
+    "risk": "srednji",
+    "length": 7747,
+    "includes": [
+      "blog/components/blog_design_styles.html",
+      "blog/components/blog_posts.html"
+    ],
+    "blocks": [
+      "content"
+    ]
+  },
+  {
+    "name": "iznad_oblaka",
+    "file": "blog\\templates\\blog\\designs\\iznad_oblaka.html",
+    "extends": "blog/layouts/blog_design_base.html",
+    "layout_guess": "standard",
+    "box_position_guess": "zajednički layout: lijevi sidebar + sadržaj + desni sidebar",
+    "uses_shared_posts_component": true,
+    "uses_shared_header_component": true,
+    "has_own_post_loop": false,
+    "has_inline_style": true,
+    "risk": "srednji",
+    "length": 10408,
+    "includes": [
+      "blog/components/blog_design_styles.html",
+      "blog/components/blog_posts.html"
+    ],
+    "blocks": [
+      "content"
+    ]
+  },
+  {
+    "name": "jedro_u_suton",
+    "file": "blog\\templates\\blog\\designs\\jedro_u_suton.html",
+    "extends": "blog/base.html",
+    "layout_guess": "single_right_sidebar",
+    "box_position_guess": "lijevi i desni boxevi spojeni u jedan poseban sidebar",
+    "uses_shared_posts_component": false,
+    "uses_shared_header_component": false,
+    "has_own_post_loop": true,
+    "has_inline_style": true,
+    "risk": "visok",
+    "length": 20562,
+    "includes": [
+      "blog/components/post_meta.html",
+      "blog/components/post_body.html",
+      "blog/components/post_actions.html",
+      "blog/components/post_comments.html",
+      "blog/components/blog_profile_actions_sidebar.html",
+      "blog/components/live_analytics_widget.html",
+      "blog/components/live_analytics_widget.html"
+    ],
+    "blocks": [
+      "header",
+      "blog_header",
+      "left_sidebar",
+      "right_sidebar",
+      "content"
+    ]
+  },
+  {
+    "name": "kraljevska_pozornica",
+    "file": "blog\\templates\\blog\\designs\\kraljevska_pozornica.html",
+    "extends": "blog/layouts/blog_design_base.html",
+    "layout_guess": "standard",
+    "box_position_guess": "zajednički layout: lijevi sidebar + sadržaj + desni sidebar",
+    "uses_shared_posts_component": true,
+    "uses_shared_header_component": true,
+    "has_own_post_loop": false,
+    "has_inline_style": true,
+    "risk": "srednji",
+    "length": 14413,
+    "includes": [
+      "blog/components/blog_design_styles.html",
+      "blog/components/blog_posts.html"
+    ],
+    "blocks": [
+      "content"
+    ]
+  },
+  {
+    "name": "litica_noci",
+    "file": "blog\\templates\\blog\\designs\\litica_noci.html",
+    "extends": "blog/layouts/blog_design_base.html",
+    "layout_guess": "standard",
+    "box_position_guess": "zajednički layout: lijevi sidebar + sadržaj + desni sidebar",
+    "uses_shared_posts_component": false,
+    "uses_shared_header_component": true,
+    "has_own_post_loop": false,
+    "has_inline_style": false,
+    "risk": "nizak",
+    "length": 51,
+    "includes": [],
+    "blocks": []
+  },
+  {
+    "name": "magazin",
+    "file": "blog\\templates\\blog\\designs\\magazin.html",
+    "extends": "blog/base.html",
+    "layout_guess": "magazine",
+    "box_position_guess": "lijevi i desni boxevi spojeni u jedan poseban sidebar",
+    "uses_shared_posts_component": false,
+    "uses_shared_header_component": false,
+    "has_own_post_loop": true,
+    "has_inline_style": true,
+    "risk": "visok",
+    "length": 25782,
+    "includes": [
+      "blog/components/live_analytics_widget.html",
+      "blog/components/live_analytics_widget.html",
+      "blog/components/live_analytics_widget.html",
+      "blog/components/post_meta.html",
+      "blog/components/post_body.html",
+      "blog/components/post_actions.html",
+      "blog/components/post_comments.html"
+    ],
+    "blocks": [
+      "blog_header",
+      "left_sidebar",
+      "right_sidebar",
+      "content"
+    ]
+  },
+  {
+    "name": "misticno_jezero",
+    "file": "blog\\templates\\blog\\designs\\misticno_jezero.html",
+    "extends": "blog/base.html",
+    "layout_guess": "single_right_sidebar",
+    "box_position_guess": "lijevi i desni boxevi spojeni u jedan poseban sidebar",
+    "uses_shared_posts_component": false,
+    "uses_shared_header_component": false,
+    "has_own_post_loop": true,
+    "has_inline_style": true,
+    "risk": "visok",
+    "length": 19521,
+    "includes": [
+      "blog/components/post_meta.html",
+      "blog/components/post_body.html",
+      "blog/components/post_actions.html",
+      "blog/components/post_comments.html",
+      "blog/components/blog_profile_actions_sidebar.html",
+      "blog/components/live_analytics_widget.html",
+      "blog/components/live_analytics_widget.html"
+    ],
+    "blocks": [
+      "header",
+      "blog_header",
+      "left_sidebar",
+      "right_sidebar",
+      "content"
+    ]
+  },
+  {
+    "name": "mjesecev_ples",
+    "file": "blog\\templates\\blog\\designs\\mjesecev_ples.html",
+    "extends": "blog/layouts/blog_design_base.html",
+    "layout_guess": "standard",
+    "box_position_guess": "zajednički layout: lijevi sidebar + sadržaj + desni sidebar",
+    "uses_shared_posts_component": true,
+    "uses_shared_header_component": true,
+    "has_own_post_loop": false,
+    "has_inline_style": true,
+    "risk": "srednji",
+    "length": 8042,
+    "includes": [
+      "blog/components/blog_design_styles.html",
+      "blog/components/blog_posts.html"
+    ],
+    "blocks": [
+      "content"
+    ]
+  },
+  {
+    "name": "morski_prijelaz",
+    "file": "blog\\templates\\blog\\designs\\morski_prijelaz.html",
+    "extends": "blog/layouts/blog_design_base.html",
+    "layout_guess": "standard",
+    "box_position_guess": "zajednički layout: lijevi sidebar + sadržaj + desni sidebar",
+    "uses_shared_posts_component": true,
+    "uses_shared_header_component": true,
+    "has_own_post_loop": false,
+    "has_inline_style": true,
+    "risk": "srednji",
+    "length": 11913,
+    "includes": [
+      "blog/components/blog_design_styles.html",
+      "blog/components/blog_posts.html"
+    ],
+    "blocks": [
+      "content"
+    ]
+  },
+  {
+    "name": "nebeska_klasika",
+    "file": "blog\\templates\\blog\\designs\\nebeska_klasika.html",
+    "extends": "blog/base.html",
+    "layout_guess": "single_right_sidebar",
+    "box_position_guess": "lijevi i desni boxevi spojeni u jedan poseban sidebar",
+    "uses_shared_posts_component": false,
+    "uses_shared_header_component": false,
+    "has_own_post_loop": true,
+    "has_inline_style": true,
+    "risk": "visok",
+    "length": 18570,
+    "includes": [
+      "blog/components/post_meta.html",
+      "blog/components/post_body.html",
+      "blog/components/post_actions.html",
+      "blog/components/post_comments.html",
+      "blog/components/blog_profile_actions_sidebar.html",
+      "blog/components/live_analytics_widget.html",
+      "blog/components/live_analytics_widget.html"
+    ],
+    "blocks": [
+      "header",
+      "blog_header",
+      "left_sidebar",
+      "right_sidebar",
+      "content"
+    ]
+  },
+  {
+    "name": "nebeski_mir",
+    "file": "blog\\templates\\blog\\designs\\nebeski_mir.html",
+    "extends": "blog/layouts/blog_design_base.html",
+    "layout_guess": "standard",
+    "box_position_guess": "zajednički layout: lijevi sidebar + sadržaj + desni sidebar",
+    "uses_shared_posts_component": true,
+    "uses_shared_header_component": true,
+    "has_own_post_loop": false,
+    "has_inline_style": true,
+    "risk": "srednji",
+    "length": 8874,
+    "includes": [
+      "blog/components/blog_design_styles.html",
+      "blog/components/blog_posts.html"
+    ],
+    "blocks": [
+      "content"
+    ]
+  },
+  {
+    "name": "nebesko_polje",
+    "file": "blog\\templates\\blog\\designs\\nebesko_polje.html",
+    "extends": "blog/layouts/blog_design_base.html",
+    "layout_guess": "standard",
+    "box_position_guess": "zajednički layout: lijevi sidebar + sadržaj + desni sidebar",
+    "uses_shared_posts_component": true,
+    "uses_shared_header_component": true,
+    "has_own_post_loop": false,
+    "has_inline_style": true,
+    "risk": "srednji",
+    "length": 15548,
+    "includes": [
+      "blog/components/blog_header.html",
+      "blog/components/blog_design_styles.html",
+      "blog/components/blog_posts.html"
+    ],
+    "blocks": [
+      "blog_header",
+      "content"
+    ]
+  },
+  {
+    "name": "neonski_grad",
+    "file": "blog\\templates\\blog\\designs\\neonski_grad.html",
+    "extends": "blog/layouts/blog_design_base.html",
+    "layout_guess": "standard",
+    "box_position_guess": "zajednički layout: lijevi sidebar + sadržaj + desni sidebar",
+    "uses_shared_posts_component": true,
+    "uses_shared_header_component": true,
+    "has_own_post_loop": false,
+    "has_inline_style": true,
+    "risk": "srednji",
+    "length": 12337,
+    "includes": [
+      "blog/components/blog_design_styles.html",
+      "blog/components/blog_posts.html"
+    ],
+    "blocks": [
+      "content"
+    ]
+  },
+  {
+    "name": "planine_u_magli",
+    "file": "blog\\templates\\blog\\designs\\planine_u_magli.html",
+    "extends": "blog/layouts/blog_design_base.html",
+    "layout_guess": "standard",
+    "box_position_guess": "zajednički layout: lijevi sidebar + sadržaj + desni sidebar",
+    "uses_shared_posts_component": true,
+    "uses_shared_header_component": true,
+    "has_own_post_loop": false,
+    "has_inline_style": true,
+    "risk": "srednji",
+    "length": 9327,
+    "includes": [
+      "blog/components/blog_design_styles.html",
+      "blog/components/blog_posts.html"
+    ],
+    "blocks": [
+      "content"
+    ]
+  },
+  {
+    "name": "podvodna_tisina",
+    "file": "blog\\templates\\blog\\designs\\podvodna_tisina.html",
+    "extends": "blog/layouts/blog_design_base.html",
+    "layout_guess": "standard",
+    "box_position_guess": "zajednički layout: lijevi sidebar + sadržaj + desni sidebar",
+    "uses_shared_posts_component": true,
+    "uses_shared_header_component": true,
+    "has_own_post_loop": false,
+    "has_inline_style": true,
+    "risk": "srednji",
+    "length": 9420,
+    "includes": [
+      "blog/components/blog_design_styles.html",
+      "blog/components/blog_posts.html"
+    ],
+    "blocks": [
+      "content"
+    ]
+  },
+  {
+    "name": "polarna_svjetlost",
+    "file": "blog\\templates\\blog\\designs\\polarna_svjetlost.html",
+    "extends": "blog/layouts/blog_design_base.html",
+    "layout_guess": "standard",
+    "box_position_guess": "zajednički layout: lijevi sidebar + sadržaj + desni sidebar",
+    "uses_shared_posts_component": true,
+    "uses_shared_header_component": true,
+    "has_own_post_loop": false,
+    "has_inline_style": true,
+    "risk": "srednji",
+    "length": 10612,
+    "includes": [
+      "blog/components/blog_design_styles.html",
+      "blog/components/blog_posts.html"
+    ],
+    "blocks": [
+      "content"
+    ]
+  },
+  {
+    "name": "polje_lavande",
+    "file": "blog\\templates\\blog\\designs\\polje_lavande.html",
+    "extends": "blog/layouts/blog_design_base.html",
+    "layout_guess": "standard",
+    "box_position_guess": "zajednički layout: lijevi sidebar + sadržaj + desni sidebar",
+    "uses_shared_posts_component": true,
+    "uses_shared_header_component": true,
+    "has_own_post_loop": false,
+    "has_inline_style": true,
+    "risk": "srednji",
+    "length": 12856,
+    "includes": [
+      "blog/components/blog_design_styles.html",
+      "blog/components/blog_posts.html"
+    ],
+    "blocks": [
+      "content"
+    ]
+  },
+  {
+    "name": "ponocna_elegancija",
+    "file": "blog\\templates\\blog\\designs\\ponocna_elegancija.html",
+    "extends": "blog/base.html",
+    "layout_guess": "single_right_sidebar",
+    "box_position_guess": "lijevi i desni boxevi spojeni u jedan poseban sidebar",
+    "uses_shared_posts_component": false,
+    "uses_shared_header_component": false,
+    "has_own_post_loop": true,
+    "has_inline_style": true,
+    "risk": "visok",
+    "length": 19100,
+    "includes": [
+      "blog/components/post_meta.html",
+      "blog/components/post_body.html",
+      "blog/components/post_actions.html",
+      "blog/components/post_comments.html",
+      "blog/components/blog_profile_actions_sidebar.html",
+      "blog/components/live_analytics_widget.html",
+      "blog/components/live_analytics_widget.html"
+    ],
+    "blocks": [
+      "header",
+      "blog_header",
+      "left_sidebar",
+      "right_sidebar",
+      "content"
+    ]
+  },
+  {
+    "name": "ruzicasti_vrt",
+    "file": "blog\\templates\\blog\\designs\\ruzicasti_vrt.html",
+    "extends": "blog/base.html",
+    "layout_guess": "single_right_sidebar",
+    "box_position_guess": "lijevi i desni boxevi spojeni u jedan poseban sidebar",
+    "uses_shared_posts_component": false,
+    "uses_shared_header_component": false,
+    "has_own_post_loop": true,
+    "has_inline_style": true,
+    "risk": "visok",
+    "length": 19225,
+    "includes": [
+      "blog/components/post_meta.html",
+      "blog/components/post_body.html",
+      "blog/components/post_actions.html",
+      "blog/components/post_comments.html",
+      "blog/components/blog_profile_actions_sidebar.html",
+      "blog/components/live_analytics_widget.html",
+      "blog/components/live_analytics_widget.html"
+    ],
+    "blocks": [
+      "header",
+      "blog_header",
+      "left_sidebar",
+      "right_sidebar",
+      "content"
+    ]
+  },
+  {
+    "name": "simple",
+    "file": "blog\\templates\\blog\\designs\\simple.html",
+    "extends": "blog/layouts/blog_design_base.html",
+    "layout_guess": "simple",
+    "box_position_guess": "jednostavni raspored, ovisi o simple varijanti",
+    "uses_shared_posts_component": false,
+    "uses_shared_header_component": true,
+    "has_own_post_loop": false,
+    "has_inline_style": false,
+    "risk": "nizak",
+    "length": 51,
+    "includes": [],
+    "blocks": []
+  },
+  {
+    "name": "simple_image",
+    "file": "blog\\templates\\blog\\designs\\simple_image.html",
+    "extends": "blog/layouts/blog_design_base.html",
+    "layout_guess": "simple",
+    "box_position_guess": "jednostavni raspored, ovisi o simple varijanti",
+    "uses_shared_posts_component": false,
+    "uses_shared_header_component": true,
+    "has_own_post_loop": false,
+    "has_inline_style": false,
+    "risk": "nizak",
+    "length": 51,
+    "includes": [],
+    "blocks": []
+  },
+  {
+    "name": "simple_pattern",
+    "file": "blog\\templates\\blog\\designs\\simple_pattern.html",
+    "extends": "blog/layouts/blog_design_base.html",
+    "layout_guess": "simple",
+    "box_position_guess": "jednostavni raspored, ovisi o simple varijanti",
+    "uses_shared_posts_component": false,
+    "uses_shared_header_component": true,
+    "has_own_post_loop": false,
+    "has_inline_style": false,
+    "risk": "nizak",
+    "length": 51,
+    "includes": [],
+    "blocks": []
+  },
+  {
+    "name": "simple_retro",
+    "file": "blog\\templates\\blog\\designs\\simple_retro.html",
+    "extends": "blog/layouts/blog_design_base.html",
+    "layout_guess": "simple",
+    "box_position_guess": "jednostavni raspored, ovisi o simple varijanti",
+    "uses_shared_posts_component": false,
+    "uses_shared_header_component": true,
+    "has_own_post_loop": false,
+    "has_inline_style": false,
+    "risk": "nizak",
+    "length": 51,
+    "includes": [],
+    "blocks": []
+  },
+  {
+    "name": "sjene_ulice",
+    "file": "blog\\templates\\blog\\designs\\sjene_ulice.html",
+    "extends": "blog/layouts/blog_design_base.html",
+    "layout_guess": "standard",
+    "box_position_guess": "zajednički layout: lijevi sidebar + sadržaj + desni sidebar",
+    "uses_shared_posts_component": true,
+    "uses_shared_header_component": true,
+    "has_own_post_loop": false,
+    "has_inline_style": true,
+    "risk": "srednji",
+    "length": 8374,
+    "includes": [
+      "blog/components/blog_design_styles.html",
+      "blog/components/blog_posts.html"
+    ],
+    "blocks": [
+      "content"
+    ]
+  },
+  {
+    "name": "stara_aleja",
+    "file": "blog\\templates\\blog\\designs\\stara_aleja.html",
+    "extends": "blog/base.html",
+    "layout_guess": "single_right_sidebar",
+    "box_position_guess": "lijevi i desni boxevi spojeni u jedan poseban sidebar",
+    "uses_shared_posts_component": false,
+    "uses_shared_header_component": false,
+    "has_own_post_loop": true,
+    "has_inline_style": true,
+    "risk": "visok",
+    "length": 20287,
+    "includes": [
+      "blog/components/post_meta.html",
+      "blog/components/post_body.html",
+      "blog/components/post_actions.html",
+      "blog/components/post_comments.html",
+      "blog/components/blog_profile_actions_sidebar.html",
+      "blog/components/live_analytics_widget.html",
+      "blog/components/live_analytics_widget.html"
+    ],
+    "blocks": [
+      "header",
+      "blog_header",
+      "left_sidebar",
+      "right_sidebar",
+      "content"
+    ]
+  },
+  {
+    "name": "staza_prema_vrhovima",
+    "file": "blog\\templates\\blog\\designs\\staza_prema_vrhovima.html",
+    "extends": "blog/base.html",
+    "layout_guess": "single_right_sidebar",
+    "box_position_guess": "lijevi i desni boxevi spojeni u jedan poseban sidebar",
+    "uses_shared_posts_component": false,
+    "uses_shared_header_component": false,
+    "has_own_post_loop": true,
+    "has_inline_style": true,
+    "risk": "visok",
+    "length": 18697,
+    "includes": [
+      "blog/components/post_meta.html",
+      "blog/components/post_body.html",
+      "blog/components/post_actions.html",
+      "blog/components/post_comments.html",
+      "blog/components/blog_profile_actions_sidebar.html",
+      "blog/components/live_analytics_widget.html",
+      "blog/components/live_analytics_widget.html"
+    ],
+    "blocks": [
+      "header",
+      "blog_header",
+      "left_sidebar",
+      "right_sidebar",
+      "content"
+    ]
+  },
+  {
+    "name": "studio",
+    "file": "blog\\templates\\blog\\designs\\studio.html",
+    "extends": "blog/base.html",
+    "layout_guess": "studio",
+    "box_position_guess": "lijevi i desni boxevi spojeni u jedan poseban sidebar",
+    "uses_shared_posts_component": false,
+    "uses_shared_header_component": false,
+    "has_own_post_loop": true,
+    "has_inline_style": true,
+    "risk": "visok",
+    "length": 24662,
+    "includes": [
+      "blog/components/live_analytics_widget.html",
+      "blog/components/live_analytics_widget.html",
+      "blog/components/live_analytics_widget.html",
+      "blog/components/post_meta.html",
+      "blog/components/post_body.html",
+      "blog/components/post_actions.html",
+      "blog/components/post_comments.html"
+    ],
+    "blocks": [
+      "blog_header",
+      "left_sidebar",
+      "right_sidebar",
+      "content"
+    ]
+  },
+  {
+    "name": "sumska_svjetlost",
+    "file": "blog\\templates\\blog\\designs\\sumska_svjetlost.html",
+    "extends": "blog/layouts/blog_design_base.html",
+    "layout_guess": "standard",
+    "box_position_guess": "zajednički layout: lijevi sidebar + sadržaj + desni sidebar",
+    "uses_shared_posts_component": true,
+    "uses_shared_header_component": true,
+    "has_own_post_loop": false,
+    "has_inline_style": true,
+    "risk": "srednji",
+    "length": 10709,
+    "includes": [
+      "blog/components/blog_design_styles.html",
+      "blog/components/blog_posts.html"
+    ],
+    "blocks": [
+      "content"
+    ]
+  },
+  {
+    "name": "svemirski_horizont",
+    "file": "blog\\templates\\blog\\designs\\svemirski_horizont.html",
+    "extends": "blog/layouts/blog_design_base.html",
+    "layout_guess": "standard",
+    "box_position_guess": "zajednički layout: lijevi sidebar + sadržaj + desni sidebar",
+    "uses_shared_posts_component": true,
+    "uses_shared_header_component": true,
+    "has_own_post_loop": false,
+    "has_inline_style": true,
+    "risk": "srednji",
+    "length": 10561,
+    "includes": [
+      "blog/components/blog_design_styles.html",
+      "blog/components/blog_posts.html"
+    ],
+    "blocks": [
+      "content"
+    ]
+  },
+  {
+    "name": "vecer_uz_jezero",
+    "file": "blog\\templates\\blog\\designs\\vecer_uz_jezero.html",
+    "extends": "blog/base.html",
+    "layout_guess": "single_right_sidebar",
+    "box_position_guess": "lijevi i desni boxevi spojeni u jedan poseban sidebar",
+    "uses_shared_posts_component": false,
+    "uses_shared_header_component": false,
+    "has_own_post_loop": true,
+    "has_inline_style": true,
+    "risk": "visok",
+    "length": 19211,
+    "includes": [
+      "blog/components/post_meta.html",
+      "blog/components/post_body.html",
+      "blog/components/post_actions.html",
+      "blog/components/post_comments.html",
+      "blog/components/blog_profile_actions_sidebar.html",
+      "blog/components/live_analytics_widget.html",
+      "blog/components/live_analytics_widget.html"
+    ],
+    "blocks": [
+      "header",
+      "blog_header",
+      "left_sidebar",
+      "right_sidebar",
+      "content"
+    ]
+  },
+  {
+    "name": "vecer_zaljubljenih",
+    "file": "blog\\templates\\blog\\designs\\vecer_zaljubljenih.html",
+    "extends": "blog/base.html",
+    "layout_guess": "single_right_sidebar",
+    "box_position_guess": "lijevi i desni boxevi spojeni u jedan poseban sidebar",
+    "uses_shared_posts_component": false,
+    "uses_shared_header_component": false,
+    "has_own_post_loop": true,
+    "has_inline_style": true,
+    "risk": "visok",
+    "length": 18147,
+    "includes": [
+      "blog/components/post_meta.html",
+      "blog/components/post_body.html",
+      "blog/components/post_actions.html",
+      "blog/components/post_comments.html",
+      "blog/components/blog_profile_actions_sidebar.html"
+    ],
+    "blocks": [
+      "header",
+      "blog_header"
+    ]
+  },
+  {
+    "name": "vodopad_u_magli",
+    "file": "blog\\templates\\blog\\designs\\vodopad_u_magli.html",
+    "extends": "blog/layouts/blog_design_base.html",
+    "layout_guess": "standard",
+    "box_position_guess": "zajednički layout: lijevi sidebar + sadržaj + desni sidebar",
+    "uses_shared_posts_component": true,
+    "uses_shared_header_component": true,
+    "has_own_post_loop": false,
+    "has_inline_style": true,
+    "risk": "srednji",
+    "length": 8294,
+    "includes": [
+      "blog/components/blog_design_styles.html",
+      "blog/components/blog_posts.html"
+    ],
+    "blocks": [
+      "content"
+    ]
+  },
+  {
+    "name": "zlatni_horizont",
+    "file": "blog\\templates\\blog\\designs\\zlatni_horizont.html",
+    "extends": "blog/layouts/blog_design_base.html",
+    "layout_guess": "standard",
+    "box_position_guess": "zajednički layout: lijevi sidebar + sadržaj + desni sidebar",
+    "uses_shared_posts_component": true,
+    "uses_shared_header_component": true,
+    "has_own_post_loop": false,
+    "has_inline_style": true,
+    "risk": "srednji",
+    "length": 10551,
+    "includes": [
+      "blog/components/blog_design_styles.html",
+      "blog/components/blog_posts.html"
+    ],
+    "blocks": [
+      "content"
+    ]
+  },
+  {
+    "name": "zlatno_polje",
+    "file": "blog\\templates\\blog\\designs\\zlatno_polje.html",
+    "extends": "blog/layouts/blog_design_base.html",
+    "layout_guess": "standard",
+    "box_position_guess": "zajednički layout: lijevi sidebar + sadržaj + desni sidebar",
+    "uses_shared_posts_component": true,
+    "uses_shared_header_component": true,
+    "has_own_post_loop": false,
+    "has_inline_style": true,
+    "risk": "srednji",
+    "length": 11428,
+    "includes": [
+      "blog/components/blog_design_styles.html",
+      "blog/components/blog_posts.html"
+    ],
+    "blocks": [
+      "content"
+    ]
+  }
+]
