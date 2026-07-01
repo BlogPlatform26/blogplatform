@@ -1,0 +1,1292 @@
+{
+  "generated_at": "2026-07-01 22:33:54",
+  "project_root": "C:\\Users\\mario\\blogplatform",
+  "include_hits": [
+    {
+      "file": "design_refactor_phase10_inspect_customization_layer.py",
+      "hits": [
+        {
+          "line": 17,
+          "snippet": "0015: \n0016: TARGETS = [\n0017:     \"blog/templates/blog/components/blog_design_styles.html\",\n0018:     \"blog/templates/blog/base.html\",\n0019:     \"blog/static/blog/css/blog_settings.css\","
+        },
+        {
+          "line": 106,
+          "snippet": "0104: project_files = all_project_files()\n0105: \n0106: # Include/use map for blog_design_styles.html\n0107: include_hits = []\n0108: for p in project_files:"
+        },
+        {
+          "line": 110,
+          "snippet": "0108: for p in project_files:\n0109:     text = read_text(p)\n0110:     if \"blog_design_styles\" in text or \"components/blog_design_styles.html\" in text:\n0111:         include_hits.append({\"file\": rel(p), \"hits\": find_lines(text, r\"blog_design_styles|components/blog_design_styles\\.html\", context=2, max_blocks=5)})\n0112: "
+        },
+        {
+          "line": 111,
+          "snippet": "0109:     text = read_text(p)\n0110:     if \"blog_design_styles\" in text or \"components/blog_design_styles.html\" in text:\n0111:         include_hits.append({\"file\": rel(p), \"hits\": find_lines(text, r\"blog_design_styles|components/blog_design_styles\\.html\", context=2, max_blocks=5)})\n0112: \n0113: # Target details"
+        },
+        {
+          "line": 142,
+          "snippet": "0140: \n0141: # Field mapping in central file\n0142: central_path = ROOT / \"blog/templates/blog/components/blog_design_styles.html\"\n0143: central_text = read_text(central_path)\n0144: field_map = []"
+        }
+      ]
+    },
+    {
+      "file": "blog/templates/blog/author_detail.html",
+      "hits": [
+        {
+          "line": 9,
+          "snippet": "0007: \n0008: {% block content %}\n0009:     {% include \"blog/components/blog_design_styles.html\" %}\n0010: \n0011:     <div class=\"card shadow-sm border-0 mb-4 author-page-card\">"
+        }
+      ]
+    },
+    {
+      "file": "blog/templates/blog/designs/asfaltni_plamen.html",
+      "hits": [
+        {
+          "line": 5,
+          "snippet": "0003: \n0004: {% block content %}\n0005:     {% include \"blog/components/blog_design_styles.html\" %}\n0006:     <style>\n0007: body {"
+        }
+      ]
+    },
+    {
+      "file": "blog/templates/blog/designs/carobna_ljubicasta.html",
+      "hits": [
+        {
+          "line": 5,
+          "snippet": "0003: \n0004: {% block content %}\n0005:     {% include \"blog/components/blog_design_styles.html\" %}\n0006:     <style>\n0007: body {"
+        }
+      ]
+    },
+    {
+      "file": "blog/templates/blog/designs/dimni_akordi.html",
+      "hits": [
+        {
+          "line": 5,
+          "snippet": "0003: \n0004: {% block content %}\n0005:     {% include \"blog/components/blog_design_styles.html\" %}\n0006:     <style>\n0007: body {"
+        }
+      ]
+    },
+    {
+      "file": "blog/templates/blog/designs/iznad_oblaka.html",
+      "hits": [
+        {
+          "line": 5,
+          "snippet": "0003: \n0004: {% block content %}\n0005:     {% include \"blog/components/blog_design_styles.html\" %}\n0006:     <style>\n0007: body {"
+        }
+      ]
+    },
+    {
+      "file": "blog/templates/blog/designs/kraljevska_pozornica.html",
+      "hits": [
+        {
+          "line": 5,
+          "snippet": "0003: \n0004: {% block content %}\n0005:     {% include \"blog/components/blog_design_styles.html\" %}\n0006:     <style>\n0007: body {"
+        }
+      ]
+    },
+    {
+      "file": "blog/templates/blog/designs/mjesecev_ples.html",
+      "hits": [
+        {
+          "line": 5,
+          "snippet": "0003: \n0004: {% block content %}\n0005:     {% include \"blog/components/blog_design_styles.html\" %}\n0006:     <style>\n0007: body {"
+        }
+      ]
+    },
+    {
+      "file": "blog/templates/blog/designs/morski_prijelaz.html",
+      "hits": [
+        {
+          "line": 5,
+          "snippet": "0003: \n0004: {% block content %}\n0005:     {% include \"blog/components/blog_design_styles.html\" %}\n0006:     <style>\n0007:     body {"
+        }
+      ]
+    },
+    {
+      "file": "blog/templates/blog/designs/nebeski_mir.html",
+      "hits": [
+        {
+          "line": 5,
+          "snippet": "0003: \n0004: {% block content %}\n0005:     {% include \"blog/components/blog_design_styles.html\" %}\n0006:     <style>\n0007: /* Nebeski mir */"
+        }
+      ]
+    },
+    {
+      "file": "blog/templates/blog/designs/nebesko_polje.html",
+      "hits": [
+        {
+          "line": 13,
+          "snippet": "0011: \n0012: {% block content %}\n0013:     {% include \"blog/components/blog_design_styles.html\" %}\n0014:     <style>\n0015: html,"
+        }
+      ]
+    },
+    {
+      "file": "blog/templates/blog/designs/neonski_grad.html",
+      "hits": [
+        {
+          "line": 5,
+          "snippet": "0003: \n0004: {% block content %}\n0005:     {% include \"blog/components/blog_design_styles.html\" %}\n0006:     <style>\n0007: body {"
+        }
+      ]
+    },
+    {
+      "file": "blog/templates/blog/designs/planine_u_magli.html",
+      "hits": [
+        {
+          "line": 5,
+          "snippet": "0003: \n0004: {% block content %}\n0005:     {% include \"blog/components/blog_design_styles.html\" %}\n0006:     <style>\n0007: body {"
+        }
+      ]
+    },
+    {
+      "file": "blog/templates/blog/designs/podvodna_tisina.html",
+      "hits": [
+        {
+          "line": 5,
+          "snippet": "0003: \n0004: {% block content %}\n0005:     {% include \"blog/components/blog_design_styles.html\" %}\n0006:     <style>\n0007:     body {"
+        }
+      ]
+    },
+    {
+      "file": "blog/templates/blog/designs/polarna_svjetlost.html",
+      "hits": [
+        {
+          "line": 5,
+          "snippet": "0003: \n0004: {% block content %}\n0005:     {% include \"blog/components/blog_design_styles.html\" %}\n0006:     <style>\n0007: body {"
+        }
+      ]
+    },
+    {
+      "file": "blog/templates/blog/designs/polje_lavande.html",
+      "hits": [
+        {
+          "line": 5,
+          "snippet": "0003: \n0004: {% block content %}\n0005:     {% include \"blog/components/blog_design_styles.html\" %}\n0006:     <style>\n0007: body {"
+        }
+      ]
+    },
+    {
+      "file": "blog/templates/blog/designs/sjene_ulice.html",
+      "hits": [
+        {
+          "line": 5,
+          "snippet": "0003: \n0004: {% block content %}\n0005:     {% include \"blog/components/blog_design_styles.html\" %}\n0006:     <style>\n0007: body {"
+        }
+      ]
+    },
+    {
+      "file": "blog/templates/blog/designs/sumska_svjetlost.html",
+      "hits": [
+        {
+          "line": 5,
+          "snippet": "0003: \n0004: {% block content %}\n0005:     {% include \"blog/components/blog_design_styles.html\" %}\n0006:     <style>\n0007: body {"
+        }
+      ]
+    },
+    {
+      "file": "blog/templates/blog/designs/svemirski_horizont.html",
+      "hits": [
+        {
+          "line": 5,
+          "snippet": "0003: \n0004: {% block content %}\n0005:     {% include \"blog/components/blog_design_styles.html\" %}\n0006:     <style>\n0007: body {"
+        }
+      ]
+    },
+    {
+      "file": "blog/templates/blog/designs/vodopad_u_magli.html",
+      "hits": [
+        {
+          "line": 5,
+          "snippet": "0003: \n0004: {% block content %}\n0005:     {% include \"blog/components/blog_design_styles.html\" %}\n0006:     <style>\n0007: body {"
+        }
+      ]
+    },
+    {
+      "file": "blog/templates/blog/designs/zlatni_horizont.html",
+      "hits": [
+        {
+          "line": 5,
+          "snippet": "0003: \n0004: {% block content %}\n0005:     {% include \"blog/components/blog_design_styles.html\" %}\n0006:     <style>\n0007: body {"
+        }
+      ]
+    },
+    {
+      "file": "blog/templates/blog/designs/zlatno_polje.html",
+      "hits": [
+        {
+          "line": 5,
+          "snippet": "0003: \n0004: {% block content %}\n0005:     {% include \"blog/components/blog_design_styles.html\" %}\n0006:     <style>\n0007: body {"
+        }
+      ]
+    },
+    {
+      "file": "blog/templates/blog/layouts/blog_design_base.html",
+      "hits": [
+        {
+          "line": 18,
+          "snippet": "0016: \n0017: {% block content %}\n0018:     {% include \"blog/components/blog_design_styles.html\" %}\n0019:     {% include \"blog/components/blog_posts.html\" %}\n0020: {% endblock %}"
+        }
+      ]
+    }
+  ],
+  "target_details": [
+    {
+      "file": "blog/templates/blog/components/blog_design_styles.html",
+      "exists": true,
+      "lines": 2634,
+      "custom_field_counts": {
+        "content_background_color": 3,
+        "content_border_color": 6,
+        "box_background_color": 1,
+        "box_border_color": 1,
+        "outer_background_mode": 9,
+        "outer_background_color_1": 9,
+        "outer_background_color_2": 1,
+        "outer_background_gradient_direction": 1,
+        "outer_background_asset": 7,
+        "outer_background_pattern": 12,
+        "header_background_mode": 2,
+        "header_background_color_1": 5,
+        "header_background_color_2": 2,
+        "header_background_gradient_direction": 2,
+        "right_box_columns": 1
+      },
+      "profile_field_counts": {
+        "simple_background_image": 5,
+        "avatar": 5
+      },
+      "css_var_counts": {
+        "blog-title-color": 12,
+        "blog-title-font": 2,
+        "blog-title-size": 2,
+        "post-title-color": 10,
+        "post-title-font": 2,
+        "post-title-size": 2,
+        "body-text-color": 20,
+        "body-font": 4,
+        "box-title-color": 10,
+        "box-title-font": 2,
+        "box-title-size": 2,
+        "post-date-color": 16,
+        "date-primary": 41,
+        "date-secondary": 25,
+        "date-scale-factor": 55
+      },
+      "important_count": 287,
+      "inline_style_count": 0,
+      "snippets": {
+        "active_design_customization": [
+          {
+            "line": 179,
+            "snippet": "0177: {% if blog.profile.template == 'default_right' or blog.profile.template == 'dark_right' or blog.profile.template == 'classic_right' %}\n0178: \n0179: {% if blog_preferences.active_design_customization.right_box_columns == '2' %}\n0180: <style>\n0181: @media (min-width: 768px) {"
+          },
+          {
+            "line": 444,
+            "snippet": "0442:     font-family: var(--body-font, Arial, Helvetica, sans-serif);\n0443:     color: var(--body-text-color, #57534e);\n0444:     {% if blog_preferences.active_design_customization.outer_background_mode == 'color' %}\n0445:     background: {{ blog_preferences.active_design_customization.outer_background_color_1|default:'#efe4c9' }};\n0446:     {% elif blog_preferences.active_design_customization.outer_background_mode == 'gradient' %}"
+          },
+          {
+            "line": 445,
+            "snippet": "0443:     color: var(--body-text-color, #57534e);\n0444:     {% if blog_preferences.active_design_customization.outer_background_mode == 'color' %}\n0445:     background: {{ blog_preferences.active_design_customization.outer_background_color_1|default:'#efe4c9' }};\n0446:     {% elif blog_preferences.active_design_customization.outer_background_mode == 'gradient' %}\n0447:     background: linear-gradient({{ blog_preferences.active_design_customization.outer_background_gradient_direction|default:'to bottom' }}, {{ blog_preferences.active_design_customization.outer_background_color_1|default:'#efe4c9' }}, {{ blog_preferences.active_design_customization.outer_background_color_2|default:'#e1d0ac' }});"
+          },
+          {
+            "line": 446,
+            "snippet": "0444:     {% if blog_preferences.active_design_customization.outer_background_mode == 'color' %}\n0445:     background: {{ blog_preferences.active_design_customization.outer_background_color_1|default:'#efe4c9' }};\n0446:     {% elif blog_preferences.active_design_customization.outer_background_mode == 'gradient' %}\n0447:     background: linear-gradient({{ blog_preferences.active_design_customization.outer_background_gradient_direction|default:'to bottom' }}, {{ blog_preferences.active_design_customization.outer_background_color_1|default:'#efe4c9' }}, {{ blog_preferences.active_design_customization.outer_background_color_2|default:'#e1d0ac' }});\n0448:     {% elif blog_preferences.active_design_customization.outer_background_mode == 'pattern' %}"
+          }
+        ],
+        "blog_title": [
+          {
+            "line": 10,
+            "snippet": "0008: .blog-page-title,\n0009: .blog-page-title a {\n0010:     font-family: var(--blog-title-font, Georgia, \"Times New Roman\", serif);\n0011:     color: var(--blog-title-color, #3f3128) !important;\n0012:     font-size: var(--blog-title-size, 32px);"
+          },
+          {
+            "line": 11,
+            "snippet": "0009: .blog-page-title a {\n0010:     font-family: var(--blog-title-font, Georgia, \"Times New Roman\", serif);\n0011:     color: var(--blog-title-color, #3f3128) !important;\n0012:     font-size: var(--blog-title-size, 32px);\n0013:     line-height: 1.08;"
+          },
+          {
+            "line": 12,
+            "snippet": "0010:     font-family: var(--blog-title-font, Georgia, \"Times New Roman\", serif);\n0011:     color: var(--blog-title-color, #3f3128) !important;\n0012:     font-size: var(--blog-title-size, 32px);\n0013:     line-height: 1.08;\n0014: }"
+          },
+          {
+            "line": 21,
+            "snippet": "0019:     font-size: clamp(0.95rem, 0.9rem + 0.22vw, 1.12rem);\n0020:     line-height: 1.45;\n0021:     color: var(--blog-title-color, #3f3128) !important;\n0022:     opacity: 0.82;\n0023: }"
+          }
+        ],
+        "post_title": [
+          {
+            "line": 76,
+            "snippet": "0074: \n0075: .blog-post-entry h4,\n0076: .blog-post-title {\n0077:     font-family: var(--post-title-font, Georgia, \"Times New Roman\", serif) !important;\n0078:     color: var(--post-title-color, #111827) !important;"
+          },
+          {
+            "line": 77,
+            "snippet": "0075: .blog-post-entry h4,\n0076: .blog-post-title {\n0077:     font-family: var(--post-title-font, Georgia, \"Times New Roman\", serif) !important;\n0078:     color: var(--post-title-color, #111827) !important;\n0079:     font-size: var(--post-title-size, 24px) !important;"
+          },
+          {
+            "line": 78,
+            "snippet": "0076: .blog-post-title {\n0077:     font-family: var(--post-title-font, Georgia, \"Times New Roman\", serif) !important;\n0078:     color: var(--post-title-color, #111827) !important;\n0079:     font-size: var(--post-title-size, 24px) !important;\n0080:     line-height: 1.18;"
+          },
+          {
+            "line": 79,
+            "snippet": "0077:     font-family: var(--post-title-font, Georgia, \"Times New Roman\", serif) !important;\n0078:     color: var(--post-title-color, #111827) !important;\n0079:     font-size: var(--post-title-size, 24px) !important;\n0080:     line-height: 1.18;\n0081: }"
+          }
+        ],
+        "box": [
+          {
+            "line": 85,
+            "snippet": "0083: .calendar-title,\n0084: .archive-title,\n0085: .sidebar-box-title,\n0086: .blog-box-title {\n0087:     font-family: var(--box-title-font, Georgia, \"Times New Roman\", serif) !important;"
+          },
+          {
+            "line": 86,
+            "snippet": "0084: .archive-title,\n0085: .sidebar-box-title,\n0086: .blog-box-title {\n0087:     font-family: var(--box-title-font, Georgia, \"Times New Roman\", serif) !important;\n0088:     color: var(--box-title-color, #3f3128) !important;"
+          },
+          {
+            "line": 87,
+            "snippet": "0085: .sidebar-box-title,\n0086: .blog-box-title {\n0087:     font-family: var(--box-title-font, Georgia, \"Times New Roman\", serif) !important;\n0088:     color: var(--box-title-color, #3f3128) !important;\n0089:     font-size: var(--box-title-size, 13px) !important;"
+          },
+          {
+            "line": 88,
+            "snippet": "0086: .blog-box-title {\n0087:     font-family: var(--box-title-font, Georgia, \"Times New Roman\", serif) !important;\n0088:     color: var(--box-title-color, #3f3128) !important;\n0089:     font-size: var(--box-title-size, 13px) !important;\n0090:     line-height: 1.18;"
+          }
+        ],
+        "banner": [
+          {
+            "line": 191,
+            "snippet": "0189:     .blog-main-layout-row,\n0190:     .blog-header-wrap > .row,\n0191:     .blog-banner-strip > .row {\n0192:         --bs-gutter-x: 18px;\n0193:         padding-left: 8px;"
+          },
+          {
+            "line": 301,
+            "snippet": "0299:     .blog-main-layout-row,\n0300:     .blog-header-wrap > .row,\n0301:     .blog-banner-strip > .row {\n0302:         padding-left: 12px;\n0303:         padding-right: 12px;"
+          },
+          {
+            "line": 331,
+            "snippet": "0329:     .blog-main-layout-row,\n0330:     .blog-header-wrap > .row,\n0331:     .blog-banner-strip > .row {\n0332:         --bs-gutter-x: 18px;\n0333:         padding-left: 8px;"
+          },
+          {
+            "line": 417,
+            "snippet": "0415:     .blog-main-layout-row,\n0416:     .blog-header-wrap > .row,\n0417:     .blog-banner-strip > .row {\n0418:         padding-left: 12px;\n0419:         padding-right: 12px;"
+          }
+        ],
+        "css_vars": [
+          {
+            "line": 4,
+            "snippet": "0002: <style>\n0003: body {\n0004:     font-family: var(--body-font, Arial, Helvetica, sans-serif);\n0005:     color: var(--body-text-color, #1f2937);\n0006: }"
+          },
+          {
+            "line": 5,
+            "snippet": "0003: body {\n0004:     font-family: var(--body-font, Arial, Helvetica, sans-serif);\n0005:     color: var(--body-text-color, #1f2937);\n0006: }\n0007: "
+          },
+          {
+            "line": 10,
+            "snippet": "0008: .blog-page-title,\n0009: .blog-page-title a {\n0010:     font-family: var(--blog-title-font, Georgia, \"Times New Roman\", serif);\n0011:     color: var(--blog-title-color, #3f3128) !important;\n0012:     font-size: var(--blog-title-size, 32px);"
+          },
+          {
+            "line": 11,
+            "snippet": "0009: .blog-page-title a {\n0010:     font-family: var(--blog-title-font, Georgia, \"Times New Roman\", serif);\n0011:     color: var(--blog-title-color, #3f3128) !important;\n0012:     font-size: var(--blog-title-size, 32px);\n0013:     line-height: 1.08;"
+          }
+        ]
+      }
+    },
+    {
+      "file": "blog/templates/blog/base.html",
+      "exists": true,
+      "lines": 3534,
+      "custom_field_counts": {
+        "blog_title_color": 3,
+        "blog_title_font_stack": 1,
+        "blog_title_font": 3,
+        "blog_title_size": 3,
+        "post_title_color": 3,
+        "post_title_font_stack": 1,
+        "post_title_font": 3,
+        "post_title_size": 3,
+        "body_text_color": 2,
+        "body_font_stack": 1,
+        "body_font": 1,
+        "box_title_color": 3,
+        "box_title_font_stack": 1,
+        "box_title_font": 3,
+        "box_title_size": 3,
+        "post_date_style": 1,
+        "post_date_effect": 1,
+        "post_date_color": 10,
+        "post_date_color_1": 3,
+        "post_date_color_2": 1,
+        "post_date_size": 1
+      },
+      "profile_field_counts": {
+        "blog_name": 3,
+        "avatar": 16
+      },
+      "css_var_counts": {
+        "blog-title-color": 13,
+        "blog-title-font": 7,
+        "blog-title-size": 7,
+        "post-title-color": 9,
+        "post-title-font": 7,
+        "post-title-size": 7,
+        "body-text-color": 2,
+        "body-font": 1,
+        "box-title-color": 9,
+        "box-title-font": 7,
+        "box-title-size": 7,
+        "post-date-color": 13
+      },
+      "important_count": 81,
+      "inline_style_count": 10,
+      "snippets": {
+        "active_design_customization": [
+          {
+            "line": 1145,
+            "snippet": "1143: \n1144: <body class=\"{% if request.resolver_match.url_name != 'login' and request.resolver_match.url_name != 'register' and request.resolver_match.url_name != 'activation_sent' and request.resolver_match.url_name != 'author_onboarding' and request.resolver_match.url_name != 'password_reset' and request.resolver_match.url_name != 'password_reset_done' and request.resolver_match.url_name != 'password_reset_confirm' and request.resolver_match.url_name != 'password_reset_complete' %}blog-cursor-theme blog-cursor-{{ blog_preferences.cursor_style|default:'default' }} blog-cursor-effect-{{ blog_preferences.cursor_effect|default:'none' }}{% if blog_preferences.cursor_stylesheet_url %} blog-cursor-external-style{% endif %}{% endif %}\" data-blog-cursor-effect=\"{{ blog_preferences.cursor_effect|default:'none' }}\" style=\"\n1145:     --blog-title-font: {{ blog_preferences.active_design_customization.blog_title_font_stack|default:'Georgia, Times New Roman, serif'|safe }};\n1146:     --blog-title-color: {{ blog_preferences.active_design_customization.blog_title_color|default:'#3f3128' }};\n1147:     --blog-title-size: {{ blog_preferences.active_design_customization.blog_title_size|default:'32' }}px;"
+          },
+          {
+            "line": 1146,
+            "snippet": "1144: <body class=\"{% if request.resolver_match.url_name != 'login' and request.resolver_match.url_name != 'register' and request.resolver_match.url_name != 'activation_sent' and request.resolver_match.url_name != 'author_onboarding' and request.resolver_match.url_name != 'password_reset' and request.resolver_match.url_name != 'password_reset_done' and request.resolver_match.url_name != 'password_reset_confirm' and request.resolver_match.url_name != 'password_reset_complete' %}blog-cursor-theme blog-cursor-{{ blog_preferences.cursor_style|default:'default' }} blog-cursor-effect-{{ blog_preferences.cursor_effect|default:'none' }}{% if blog_preferences.cursor_stylesheet_url %} blog-cursor-external-style{% endif %}{% endif %}\" data-blog-cursor-effect=\"{{ blog_preferences.cursor_effect|default:'none' }}\" style=\"\n1145:     --blog-title-font: {{ blog_preferences.active_design_customization.blog_title_font_stack|default:'Georgia, Times New Roman, serif'|safe }};\n1146:     --blog-title-color: {{ blog_preferences.active_design_customization.blog_title_color|default:'#3f3128' }};\n1147:     --blog-title-size: {{ blog_preferences.active_design_customization.blog_title_size|default:'32' }}px;\n1148:     --post-title-font: {{ blog_preferences.active_design_customization.post_title_font_stack|default:'Georgia, Times New Roman, serif'|safe }};"
+          },
+          {
+            "line": 1147,
+            "snippet": "1145:     --blog-title-font: {{ blog_preferences.active_design_customization.blog_title_font_stack|default:'Georgia, Times New Roman, serif'|safe }};\n1146:     --blog-title-color: {{ blog_preferences.active_design_customization.blog_title_color|default:'#3f3128' }};\n1147:     --blog-title-size: {{ blog_preferences.active_design_customization.blog_title_size|default:'32' }}px;\n1148:     --post-title-font: {{ blog_preferences.active_design_customization.post_title_font_stack|default:'Georgia, Times New Roman, serif'|safe }};\n1149:     --post-title-color: {{ blog_preferences.active_design_customization.post_title_color|default:'#111827' }};"
+          },
+          {
+            "line": 1148,
+            "snippet": "1146:     --blog-title-color: {{ blog_preferences.active_design_customization.blog_title_color|default:'#3f3128' }};\n1147:     --blog-title-size: {{ blog_preferences.active_design_customization.blog_title_size|default:'32' }}px;\n1148:     --post-title-font: {{ blog_preferences.active_design_customization.post_title_font_stack|default:'Georgia, Times New Roman, serif'|safe }};\n1149:     --post-title-color: {{ blog_preferences.active_design_customization.post_title_color|default:'#111827' }};\n1150:     --post-title-size: {{ blog_preferences.active_design_customization.post_title_size|default:'24' }}px;"
+          }
+        ],
+        "blog_title": [
+          {
+            "line": 1145,
+            "snippet": "1143: \n1144: <body class=\"{% if request.resolver_match.url_name != 'login' and request.resolver_match.url_name != 'register' and request.resolver_match.url_name != 'activation_sent' and request.resolver_match.url_name != 'author_onboarding' and request.resolver_match.url_name != 'password_reset' and request.resolver_match.url_name != 'password_reset_done' and request.resolver_match.url_name != 'password_reset_confirm' and request.resolver_match.url_name != 'password_reset_complete' %}blog-cursor-theme blog-cursor-{{ blog_preferences.cursor_style|default:'default' }} blog-cursor-effect-{{ blog_preferences.cursor_effect|default:'none' }}{% if blog_preferences.cursor_stylesheet_url %} blog-cursor-external-style{% endif %}{% endif %}\" data-blog-cursor-effect=\"{{ blog_preferences.cursor_effect|default:'none' }}\" style=\"\n1145:     --blog-title-font: {{ blog_preferences.active_design_customization.blog_title_font_stack|default:'Georgia, Times New Roman, serif'|safe }};\n1146:     --blog-title-color: {{ blog_preferences.active_design_customization.blog_title_color|default:'#3f3128' }};\n1147:     --blog-title-size: {{ blog_preferences.active_design_customization.blog_title_size|default:'32' }}px;"
+          },
+          {
+            "line": 1146,
+            "snippet": "1144: <body class=\"{% if request.resolver_match.url_name != 'login' and request.resolver_match.url_name != 'register' and request.resolver_match.url_name != 'activation_sent' and request.resolver_match.url_name != 'author_onboarding' and request.resolver_match.url_name != 'password_reset' and request.resolver_match.url_name != 'password_reset_done' and request.resolver_match.url_name != 'password_reset_confirm' and request.resolver_match.url_name != 'password_reset_complete' %}blog-cursor-theme blog-cursor-{{ blog_preferences.cursor_style|default:'default' }} blog-cursor-effect-{{ blog_preferences.cursor_effect|default:'none' }}{% if blog_preferences.cursor_stylesheet_url %} blog-cursor-external-style{% endif %}{% endif %}\" data-blog-cursor-effect=\"{{ blog_preferences.cursor_effect|default:'none' }}\" style=\"\n1145:     --blog-title-font: {{ blog_preferences.active_design_customization.blog_title_font_stack|default:'Georgia, Times New Roman, serif'|safe }};\n1146:     --blog-title-color: {{ blog_preferences.active_design_customization.blog_title_color|default:'#3f3128' }};\n1147:     --blog-title-size: {{ blog_preferences.active_design_customization.blog_title_size|default:'32' }}px;\n1148:     --post-title-font: {{ blog_preferences.active_design_customization.post_title_font_stack|default:'Georgia, Times New Roman, serif'|safe }};"
+          },
+          {
+            "line": 1147,
+            "snippet": "1145:     --blog-title-font: {{ blog_preferences.active_design_customization.blog_title_font_stack|default:'Georgia, Times New Roman, serif'|safe }};\n1146:     --blog-title-color: {{ blog_preferences.active_design_customization.blog_title_color|default:'#3f3128' }};\n1147:     --blog-title-size: {{ blog_preferences.active_design_customization.blog_title_size|default:'32' }}px;\n1148:     --post-title-font: {{ blog_preferences.active_design_customization.post_title_font_stack|default:'Georgia, Times New Roman, serif'|safe }};\n1149:     --post-title-color: {{ blog_preferences.active_design_customization.post_title_color|default:'#111827' }};"
+          },
+          {
+            "line": 1584,
+            "snippet": "1582:                         <div class=\"d-flex justify-content-between align-items-center mb-2\">\n1583:                             <a href=\"{% url 'user_blog' item.user.username %}\" class=\"text-decoration-none\">\n1584:                                 {{ item.user.profile.blog_name }}\n1585:                             </a>\n1586:                 "
+          }
+        ],
+        "post_title": [
+          {
+            "line": 1148,
+            "snippet": "1146:     --blog-title-color: {{ blog_preferences.active_design_customization.blog_title_color|default:'#3f3128' }};\n1147:     --blog-title-size: {{ blog_preferences.active_design_customization.blog_title_size|default:'32' }}px;\n1148:     --post-title-font: {{ blog_preferences.active_design_customization.post_title_font_stack|default:'Georgia, Times New Roman, serif'|safe }};\n1149:     --post-title-color: {{ blog_preferences.active_design_customization.post_title_color|default:'#111827' }};\n1150:     --post-title-size: {{ blog_preferences.active_design_customization.post_title_size|default:'24' }}px;"
+          },
+          {
+            "line": 1149,
+            "snippet": "1147:     --blog-title-size: {{ blog_preferences.active_design_customization.blog_title_size|default:'32' }}px;\n1148:     --post-title-font: {{ blog_preferences.active_design_customization.post_title_font_stack|default:'Georgia, Times New Roman, serif'|safe }};\n1149:     --post-title-color: {{ blog_preferences.active_design_customization.post_title_color|default:'#111827' }};\n1150:     --post-title-size: {{ blog_preferences.active_design_customization.post_title_size|default:'24' }}px;\n1151:     --box-title-font: {{ blog_preferences.active_design_customization.box_title_font_stack|default:'Georgia, Times New Roman, serif'|safe }};"
+          },
+          {
+            "line": 1150,
+            "snippet": "1148:     --post-title-font: {{ blog_preferences.active_design_customization.post_title_font_stack|default:'Georgia, Times New Roman, serif'|safe }};\n1149:     --post-title-color: {{ blog_preferences.active_design_customization.post_title_color|default:'#111827' }};\n1150:     --post-title-size: {{ blog_preferences.active_design_customization.post_title_size|default:'24' }}px;\n1151:     --box-title-font: {{ blog_preferences.active_design_customization.box_title_font_stack|default:'Georgia, Times New Roman, serif'|safe }};\n1152:     --box-title-color: {{ blog_preferences.active_design_customization.box_title_color|default:'#3f3128' }};"
+          },
+          {
+            "line": 1641,
+            "snippet": "1639:                                 <div class=\"small text-muted\">\n1640:                                     <a href=\"{% url 'post_detail' c.post.id %}\" class=\"text-decoration-none\">\n1641:                                         {{ c.post.title|truncatechars:35 }}\n1642:                                     </a>\n1643:                                 </div>"
+          }
+        ],
+        "box": [
+          {
+            "line": 1151,
+            "snippet": "1149:     --post-title-color: {{ blog_preferences.active_design_customization.post_title_color|default:'#111827' }};\n1150:     --post-title-size: {{ blog_preferences.active_design_customization.post_title_size|default:'24' }}px;\n1151:     --box-title-font: {{ blog_preferences.active_design_customization.box_title_font_stack|default:'Georgia, Times New Roman, serif'|safe }};\n1152:     --box-title-color: {{ blog_preferences.active_design_customization.box_title_color|default:'#3f3128' }};\n1153:     --box-title-size: {{ blog_preferences.active_design_customization.box_title_size|default:'13' }}px;"
+          },
+          {
+            "line": 1152,
+            "snippet": "1150:     --post-title-size: {{ blog_preferences.active_design_customization.post_title_size|default:'24' }}px;\n1151:     --box-title-font: {{ blog_preferences.active_design_customization.box_title_font_stack|default:'Georgia, Times New Roman, serif'|safe }};\n1152:     --box-title-color: {{ blog_preferences.active_design_customization.box_title_color|default:'#3f3128' }};\n1153:     --box-title-size: {{ blog_preferences.active_design_customization.box_title_size|default:'13' }}px;\n1154:     --post-date-color: {{ blog_preferences.active_design_customization.post_date_color_1|default:blog_preferences.active_design_customization.post_date_color|default:'#d97706' }};"
+          },
+          {
+            "line": 1153,
+            "snippet": "1151:     --box-title-font: {{ blog_preferences.active_design_customization.box_title_font_stack|default:'Georgia, Times New Roman, serif'|safe }};\n1152:     --box-title-color: {{ blog_preferences.active_design_customization.box_title_color|default:'#3f3128' }};\n1153:     --box-title-size: {{ blog_preferences.active_design_customization.box_title_size|default:'13' }}px;\n1154:     --post-date-color: {{ blog_preferences.active_design_customization.post_date_color_1|default:blog_preferences.active_design_customization.post_date_color|default:'#d97706' }};\n1155:     --post-date-color-1: {{ blog_preferences.active_design_customization.post_date_color_1|default:blog_preferences.active_design_customization.post_date_color|default:'#d97706' }};"
+          },
+          {
+            "line": 3314,
+            "snippet": "3312:     --blog-title-color: {{ c.blog_title_color|default:'#3f3128' }};\n3313:     --post-title-color: {{ c.post_title_color|default:'#111827' }};\n3314:     --box-title-color: {{ c.box_title_color|default:'#3f3128' }};\n3315:     --post-date-color: {{ c.post_date_color|default:'#7a2cff' }};\n3316:     --body-text-color: {{ c.body_text_color|default:'#1f2937' }};"
+          }
+        ],
+        "banner": [],
+        "css_vars": [
+          {
+            "line": 131,
+            "snippet": "0129:     }\n0130:     .live-analytics-stats{\n0131:         --analytics-stat-gap: 6px;\n0132:         --analytics-stat-card-padding-y: 5px;\n0133:         --analytics-stat-card-padding-x: 4px;"
+          },
+          {
+            "line": 132,
+            "snippet": "0130:     .live-analytics-stats{\n0131:         --analytics-stat-gap: 6px;\n0132:         --analytics-stat-card-padding-y: 5px;\n0133:         --analytics-stat-card-padding-x: 4px;\n0134:         --analytics-stat-value-size: 0.88rem;"
+          },
+          {
+            "line": 133,
+            "snippet": "0131:         --analytics-stat-gap: 6px;\n0132:         --analytics-stat-card-padding-y: 5px;\n0133:         --analytics-stat-card-padding-x: 4px;\n0134:         --analytics-stat-value-size: 0.88rem;\n0135:         --analytics-stat-label-size: 9px;"
+          },
+          {
+            "line": 134,
+            "snippet": "0132:         --analytics-stat-card-padding-y: 5px;\n0133:         --analytics-stat-card-padding-x: 4px;\n0134:         --analytics-stat-value-size: 0.88rem;\n0135:         --analytics-stat-label-size: 9px;\n0136:         --analytics-stat-radius: 11px;"
+          }
+        ]
+      }
+    },
+    {
+      "file": "blog/static/blog/css/blog_settings.css",
+      "exists": true,
+      "lines": 3258,
+      "custom_field_counts": {},
+      "profile_field_counts": {
+        "avatar": 31
+      },
+      "css_var_counts": {},
+      "important_count": 35,
+      "inline_style_count": 22,
+      "snippets": {
+        "active_design_customization": [],
+        "blog_title": [
+          {
+            "line": 559,
+            "snippet": "0557: }\n0558: \n0559: .design-live-preview-blog-title {\n0560:     font-size: 3.1rem;\n0561:     line-height: 1.04;"
+          },
+          {
+            "line": 744,
+            "snippet": "0742:     }\n0743: \n0744:     .design-live-preview-blog-title {\n0745:         font-size: 2.1rem;\n0746:     }"
+          },
+          {
+            "line": 1762,
+            "snippet": "1760: }\n1761: \n1762: .ambience-blog-title {\n1763:     font-size: 1.45rem;\n1764:     line-height: 1.05;"
+          }
+        ],
+        "post_title": [
+          {
+            "line": 646,
+            "snippet": "0644: }\n0645: \n0646: .design-live-preview-post-title {\n0647:     font-size: 2rem;\n0648:     line-height: 1.16;"
+          },
+          {
+            "line": 1827,
+            "snippet": "1825: }\n1826: \n1827: .ambience-blog-post-title {\n1828:     font-size: 1.12rem;\n1829:     line-height: 1.15;"
+          }
+        ],
+        "box": [
+          {
+            "line": 592,
+            "snippet": "0590: }\n0591: \n0592: .design-live-preview-box-title {\n0593:     font-size: 0.98rem;\n0594:     line-height: 1.2;"
+          },
+          {
+            "line": 1804,
+            "snippet": "1802: }\n1803: \n1804: .ambience-blog-box-title {\n1805:     font-size: 0.98rem;\n1806:     font-weight: 700;"
+          }
+        ],
+        "banner": [],
+        "css_vars": [
+          {
+            "line": 484,
+            "snippet": "0482:     position: relative;\n0483:     isolation: isolate;\n0484:     --design-live-side-image: none;\n0485:     border-radius: 18px;\n0486:     padding: 16px;"
+          },
+          {
+            "line": 504,
+            "snippet": "0502:     transition: opacity 0.18s ease;\n0503:     background-color: transparent;\n0504:     background-image: var(--design-live-side-image);\n0505:     background-repeat: no-repeat;\n0506:     background-position: center top;"
+          },
+          {
+            "line": 2160,
+            "snippet": "2158: }\n2159: \n2160: .ambience-effect-demo--none::before {\n2161:     content: '';\n2162:     position: absolute;"
+          },
+          {
+            "line": 2169,
+            "snippet": "2167: }\n2168: \n2169: .ambience-effect-demo--glow::before {\n2170:     content: '';\n2171:     position: absolute;"
+          }
+        ]
+      }
+    },
+    {
+      "file": "blog/templates/blog/layouts/blog_design_base.html",
+      "exists": true,
+      "lines": 20,
+      "custom_field_counts": {},
+      "profile_field_counts": {},
+      "css_var_counts": {},
+      "important_count": 0,
+      "inline_style_count": 0,
+      "snippets": {
+        "active_design_customization": [],
+        "blog_title": [],
+        "post_title": [],
+        "box": [],
+        "banner": [],
+        "css_vars": []
+      }
+    },
+    {
+      "file": "blog/templates/blog/components/blog_posts.html",
+      "exists": true,
+      "lines": 28,
+      "custom_field_counts": {},
+      "profile_field_counts": {},
+      "css_var_counts": {},
+      "important_count": 0,
+      "inline_style_count": 0,
+      "snippets": {
+        "active_design_customization": [],
+        "blog_title": [],
+        "post_title": [],
+        "box": [],
+        "banner": [],
+        "css_vars": []
+      }
+    },
+    {
+      "file": "blog/templates/blog/components/post_card.html",
+      "exists": true,
+      "lines": 72,
+      "custom_field_counts": {
+        "post_date_style": 2,
+        "post_date_effect": 2
+      },
+      "profile_field_counts": {},
+      "css_var_counts": {},
+      "important_count": 0,
+      "inline_style_count": 3,
+      "snippets": {
+        "active_design_customization": [
+          {
+            "line": 17,
+            "snippet": "0015: \n0016: \n0017:         <div class=\"text-center ms-3 blog-date-shell blog-date-style-{{ blog_preferences.active_design_customization.post_date_style|default:'classic_vertical' }} blog-date-effect-{{ blog_preferences.active_design_customization.post_date_effect|default:'solid' }}\" style=\"line-height:1;\" data-date-style=\"{{ blog_preferences.active_design_customization.post_date_style|default:'classic_vertical' }}\" data-date-effect=\"{{ blog_preferences.active_design_customization.post_date_effect|default:'solid' }}\">\n0018: \n0019:             <div class=\"blog-date-main\">"
+          }
+        ],
+        "blog_title": [],
+        "post_title": [
+          {
+            "line": 9,
+            "snippet": "0007:         <div class=\"d-flex flex-column\" style=\"gap:10px; min-width:0; flex:1;\">\n0008: \n0009:             <h4 class=\"mb-0\">{{ post.title }}</h4>\n0010: \n0011:             {% include \"blog/components/post_meta.html\" %}"
+          }
+        ],
+        "box": [],
+        "banner": [],
+        "css_vars": []
+      }
+    },
+    {
+      "file": "blog/templates/blog/components/blog_box.html",
+      "exists": true,
+      "lines": 10,
+      "custom_field_counts": {},
+      "profile_field_counts": {},
+      "css_var_counts": {},
+      "important_count": 0,
+      "inline_style_count": 0,
+      "snippets": {
+        "active_design_customization": [],
+        "blog_title": [],
+        "post_title": [],
+        "box": [
+          {
+            "line": 8,
+            "snippet": "0006: {% endcomment %}\n0007: <div class=\"sidebar-box {{ box_align|default:'sidebar-left-align' }}{% if blog.profile.template == 'simple_pattern' or blog.profile.template == 'simple_image' or blog.profile.template == 'simple_retro' %} sidebar-box--simple{% endif %}\">\n0008:     <div class=\"sidebar-box-title\">{{ box.title }}</div>\n0009:     <div class=\"sidebar-box-content\">{{ box.content|safe }}</div>\n0010: </div>"
+          }
+        ],
+        "banner": [],
+        "css_vars": []
+      }
+    },
+    {
+      "file": "blog/templates/blog/components/blog_left_sidebar.html",
+      "exists": true,
+      "lines": 155,
+      "custom_field_counts": {
+        "right_box_columns": 1
+      },
+      "profile_field_counts": {},
+      "css_var_counts": {},
+      "important_count": 0,
+      "inline_style_count": 12,
+      "snippets": {
+        "active_design_customization": [
+          {
+            "line": 2,
+            "snippet": "0001: {% load custom_tags %}\n0002: {% with plus_columns=blog_preferences.active_design_customization.right_box_columns|default:'2' %}\n0003: {% if blog.profile.template == 'default_right' or blog.profile.template == 'dark_right' or blog.profile.template == 'classic_right' %}\n0004:     {% if plus_columns == '2' %}"
+          }
+        ],
+        "blog_title": [],
+        "post_title": [],
+        "box": [
+          {
+            "line": 70,
+            "snippet": "0068: \n0069:         {% for box in left_boxes %}\n0070:             {% include \"blog/components/blog_box.html\" with box=box box_align=\"sidebar-left-align\" %}\n0071:         {% endfor %}\n0072: "
+          },
+          {
+            "line": 145,
+            "snippet": "0143:     {% for box in left_boxes %}\n0144:         <div class=\"sidebar-box sidebar-left-align{% if blog.profile.template == 'simple_pattern' or blog.profile.template == 'simple_image' or blog.profile.template == 'simple_retro' %} sidebar-box--simple{% endif %}\">\n0145:             <div class=\"sidebar-box-title\">{{ box.title }}</div>\n0146:             <div class=\"sidebar-box-content\">{{ box.content|safe }}</div>\n0147:         </div>"
+          }
+        ],
+        "banner": [],
+        "css_vars": []
+      }
+    },
+    {
+      "file": "blog/templates/blog/components/blog_right_sidebar.html",
+      "exists": true,
+      "lines": 175,
+      "custom_field_counts": {
+        "right_box_columns": 1
+      },
+      "profile_field_counts": {},
+      "css_var_counts": {},
+      "important_count": 0,
+      "inline_style_count": 12,
+      "snippets": {
+        "active_design_customization": [
+          {
+            "line": 2,
+            "snippet": "0001: {% load custom_tags %}\n0002: {% with plus_columns=blog_preferences.active_design_customization.right_box_columns|default:'2' %}\n0003: {% if blog.profile.template == 'default_right' or blog.profile.template == 'dark_right' or blog.profile.template == 'classic_right' %}\n0004: <div class=\"page-top-align blog-sidebar-stack--wide blog-sidebar-stack--right\">"
+          }
+        ],
+        "blog_title": [],
+        "post_title": [],
+        "box": [
+          {
+            "line": 72,
+            "snippet": "0070: \n0071:         {% for box in left_boxes %}\n0072:             {% include \"blog/components/blog_box.html\" with box=box box_align=\"sidebar-left-align\" %}\n0073:         {% endfor %}\n0074: "
+          },
+          {
+            "line": 85,
+            "snippet": "0083: \n0084:     {% for box in right_boxes %}\n0085:         {% include \"blog/components/blog_box.html\" with box=box box_align=\"sidebar-right-align\" %}\n0086:     {% endfor %}\n0087: "
+          },
+          {
+            "line": 162,
+            "snippet": "0160:     {% if blog.profile.template == 'simple_retro' %}\n0161:         {% for box in left_boxes %}\n0162:             {% include \"blog/components/blog_box.html\" with box=box box_align=\"sidebar-right-align\" %}\n0163:         {% endfor %}\n0164:     {% endif %}"
+          },
+          {
+            "line": 167,
+            "snippet": "0165: \n0166:     {% for box in right_boxes %}\n0167:         {% include \"blog/components/blog_box.html\" with box=box box_align=\"sidebar-right-align\" %}\n0168:     {% endfor %}\n0169: "
+          }
+        ],
+        "banner": [],
+        "css_vars": []
+      }
+    }
+  ],
+  "field_map": [
+    {
+      "field": "blog_title_color",
+      "central_occurrences": 0,
+      "project_occurrences": 58
+    },
+    {
+      "field": "blog_title_font_stack",
+      "central_occurrences": 0,
+      "project_occurrences": 6
+    },
+    {
+      "field": "blog_title_font",
+      "central_occurrences": 0,
+      "project_occurrences": 61
+    },
+    {
+      "field": "blog_title_size",
+      "central_occurrences": 0,
+      "project_occurrences": 31
+    },
+    {
+      "field": "post_title_color",
+      "central_occurrences": 0,
+      "project_occurrences": 58
+    },
+    {
+      "field": "post_title_font_stack",
+      "central_occurrences": 0,
+      "project_occurrences": 6
+    },
+    {
+      "field": "post_title_font",
+      "central_occurrences": 0,
+      "project_occurrences": 61
+    },
+    {
+      "field": "post_title_size",
+      "central_occurrences": 0,
+      "project_occurrences": 31
+    },
+    {
+      "field": "body_text_color",
+      "central_occurrences": 0,
+      "project_occurrences": 46
+    },
+    {
+      "field": "body_font_stack",
+      "central_occurrences": 0,
+      "project_occurrences": 6
+    },
+    {
+      "field": "body_font",
+      "central_occurrences": 0,
+      "project_occurrences": 48
+    },
+    {
+      "field": "content_background_color",
+      "central_occurrences": 3,
+      "project_occurrences": 45
+    },
+    {
+      "field": "content_border_color",
+      "central_occurrences": 6,
+      "project_occurrences": 44
+    },
+    {
+      "field": "box_background_color",
+      "central_occurrences": 1,
+      "project_occurrences": 42
+    },
+    {
+      "field": "box_border_color",
+      "central_occurrences": 1,
+      "project_occurrences": 38
+    },
+    {
+      "field": "box_title_color",
+      "central_occurrences": 0,
+      "project_occurrences": 58
+    },
+    {
+      "field": "box_title_font_stack",
+      "central_occurrences": 0,
+      "project_occurrences": 6
+    },
+    {
+      "field": "box_title_font",
+      "central_occurrences": 0,
+      "project_occurrences": 61
+    },
+    {
+      "field": "box_title_size",
+      "central_occurrences": 0,
+      "project_occurrences": 31
+    },
+    {
+      "field": "post_date_style",
+      "central_occurrences": 0,
+      "project_occurrences": 34
+    },
+    {
+      "field": "post_date_effect",
+      "central_occurrences": 0,
+      "project_occurrences": 35
+    },
+    {
+      "field": "post_date_color",
+      "central_occurrences": 0,
+      "project_occurrences": 106
+    },
+    {
+      "field": "post_date_color_1",
+      "central_occurrences": 0,
+      "project_occurrences": 26
+    },
+    {
+      "field": "post_date_color_2",
+      "central_occurrences": 0,
+      "project_occurrences": 18
+    },
+    {
+      "field": "post_date_size",
+      "central_occurrences": 0,
+      "project_occurrences": 26
+    },
+    {
+      "field": "outer_background_mode",
+      "central_occurrences": 9,
+      "project_occurrences": 60
+    },
+    {
+      "field": "outer_background_color_1",
+      "central_occurrences": 9,
+      "project_occurrences": 50
+    },
+    {
+      "field": "outer_background_color_2",
+      "central_occurrences": 1,
+      "project_occurrences": 40
+    },
+    {
+      "field": "outer_background_gradient_direction",
+      "central_occurrences": 1,
+      "project_occurrences": 40
+    },
+    {
+      "field": "outer_background_asset",
+      "central_occurrences": 7,
+      "project_occurrences": 14
+    },
+    {
+      "field": "outer_background_image",
+      "central_occurrences": 0,
+      "project_occurrences": 41
+    },
+    {
+      "field": "outer_background_pattern",
+      "central_occurrences": 12,
+      "project_occurrences": 50
+    },
+    {
+      "field": "header_background_mode",
+      "central_occurrences": 2,
+      "project_occurrences": 42
+    },
+    {
+      "field": "header_background_color_1",
+      "central_occurrences": 5,
+      "project_occurrences": 49
+    },
+    {
+      "field": "header_background_color_2",
+      "central_occurrences": 2,
+      "project_occurrences": 39
+    },
+    {
+      "field": "header_background_gradient_direction",
+      "central_occurrences": 2,
+      "project_occurrences": 38
+    },
+    {
+      "field": "right_box_columns",
+      "central_occurrences": 1,
+      "project_occurrences": 53
+    }
+  ],
+  "var_map": [
+    {
+      "var": "blog-title-color",
+      "central_defs": 0,
+      "central_uses": 6,
+      "project_occurrences": 41
+    },
+    {
+      "var": "blog-title-font",
+      "central_defs": 0,
+      "central_uses": 1,
+      "project_occurrences": 13
+    },
+    {
+      "var": "blog-title-size",
+      "central_defs": 0,
+      "central_uses": 1,
+      "project_occurrences": 13
+    },
+    {
+      "var": "post-title-color",
+      "central_defs": 0,
+      "central_uses": 5,
+      "project_occurrences": 55
+    },
+    {
+      "var": "post-title-font",
+      "central_defs": 0,
+      "central_uses": 1,
+      "project_occurrences": 12
+    },
+    {
+      "var": "post-title-size",
+      "central_defs": 0,
+      "central_uses": 1,
+      "project_occurrences": 13
+    },
+    {
+      "var": "body-text-color",
+      "central_defs": 0,
+      "central_uses": 10,
+      "project_occurrences": 30
+    },
+    {
+      "var": "body-font",
+      "central_defs": 0,
+      "central_uses": 2,
+      "project_occurrences": 9
+    },
+    {
+      "var": "content-background-color",
+      "central_defs": 0,
+      "central_uses": 0,
+      "project_occurrences": 1
+    },
+    {
+      "var": "content-border-color",
+      "central_defs": 0,
+      "central_uses": 0,
+      "project_occurrences": 1
+    },
+    {
+      "var": "box-background-color",
+      "central_defs": 0,
+      "central_uses": 0,
+      "project_occurrences": 1
+    },
+    {
+      "var": "box-border-color",
+      "central_defs": 0,
+      "central_uses": 0,
+      "project_occurrences": 1
+    },
+    {
+      "var": "box-title-color",
+      "central_defs": 0,
+      "central_uses": 5,
+      "project_occurrences": 41
+    },
+    {
+      "var": "box-title-font",
+      "central_defs": 0,
+      "central_uses": 1,
+      "project_occurrences": 13
+    },
+    {
+      "var": "box-title-size",
+      "central_defs": 0,
+      "central_uses": 1,
+      "project_occurrences": 13
+    },
+    {
+      "var": "post-date-color",
+      "central_defs": 0,
+      "central_uses": 8,
+      "project_occurrences": 28
+    },
+    {
+      "var": "date-primary",
+      "central_defs": 1,
+      "central_uses": 20,
+      "project_occurrences": 22
+    },
+    {
+      "var": "date-secondary",
+      "central_defs": 1,
+      "central_uses": 12,
+      "project_occurrences": 16
+    },
+    {
+      "var": "date-scale-factor",
+      "central_defs": 1,
+      "central_uses": 27,
+      "project_occurrences": 29
+    },
+    {
+      "var": "outer-background-color-1",
+      "central_defs": 0,
+      "central_uses": 0,
+      "project_occurrences": 1
+    },
+    {
+      "var": "outer-background-color-2",
+      "central_defs": 0,
+      "central_uses": 0,
+      "project_occurrences": 1
+    },
+    {
+      "var": "outer-background-image",
+      "central_defs": 0,
+      "central_uses": 0,
+      "project_occurrences": 1
+    }
+  ],
+  "css_def_lines_in_blog_design_styles": [
+    {
+      "line": 41,
+      "text": ".calendar-title--nav::after,"
+    },
+    {
+      "line": 192,
+      "text": "--bs-gutter-x: 18px;"
+    },
+    {
+      "line": 332,
+      "text": "--bs-gutter-x: 18px;"
+    },
+    {
+      "line": 580,
+      "text": "--bs-gutter-x: 18px;"
+    },
+    {
+      "line": 991,
+      "text": "--bs-gutter-x: 0;"
+    },
+    {
+      "line": 1292,
+      "text": "--analytics-stat-card-bg: rgba(0,0,0,0.22);"
+    },
+    {
+      "line": 1293,
+      "text": "--analytics-stat-card-border: rgba(203,220,255,0.16);"
+    },
+    {
+      "line": 1294,
+      "text": "--analytics-stat-card-color: #e8f1ff;"
+    },
+    {
+      "line": 1295,
+      "text": "--analytics-stat-value-color: #ffffff;"
+    },
+    {
+      "line": 1296,
+      "text": "--analytics-stat-label-color: rgba(232,241,255,0.72);"
+    },
+    {
+      "line": 1297,
+      "text": "--analytics-stat-card-shadow: none;"
+    },
+    {
+      "line": 1298,
+      "text": "--analytics-page-row-bg: rgba(0,0,0,0.18);"
+    },
+    {
+      "line": 1299,
+      "text": "--analytics-page-row-border: rgba(203,220,255,0.14);"
+    },
+    {
+      "line": 1300,
+      "text": "--analytics-page-row-color: #e8f1ff;"
+    },
+    {
+      "line": 1301,
+      "text": "--analytics-map-card-bg: rgba(0,0,0,0.18);"
+    },
+    {
+      "line": 1302,
+      "text": "--analytics-map-card-border: rgba(203,220,255,0.16);"
+    },
+    {
+      "line": 1303,
+      "text": "--analytics-map-card-shadow: none;"
+    },
+    {
+      "line": 1350,
+      "text": "--bs-gutter-x: 22px;"
+    },
+    {
+      "line": 1652,
+      "text": "--analytics-stat-card-bg: rgba(255,255,255,0.28);"
+    },
+    {
+      "line": 1653,
+      "text": "--analytics-stat-card-border: rgba(137,151,138,0.22);"
+    },
+    {
+      "line": 1654,
+      "text": "--analytics-stat-card-color: #4f5d51;"
+    },
+    {
+      "line": 1655,
+      "text": "--analytics-stat-value-color: #3f4f43;"
+    },
+    {
+      "line": 1656,
+      "text": "--analytics-stat-label-color: rgba(79,93,81,0.68);"
+    },
+    {
+      "line": 1657,
+      "text": "--analytics-stat-card-shadow: none;"
+    },
+    {
+      "line": 1658,
+      "text": "--analytics-page-row-bg: rgba(255,255,255,0.26);"
+    },
+    {
+      "line": 1659,
+      "text": "--analytics-page-row-border: rgba(137,151,138,0.18);"
+    },
+    {
+      "line": 1660,
+      "text": "--analytics-page-row-color: #4f5d51;"
+    },
+    {
+      "line": 1661,
+      "text": "--analytics-map-card-bg: rgba(255,255,255,0.24);"
+    },
+    {
+      "line": 1662,
+      "text": "--analytics-map-card-border: rgba(137,151,138,0.2);"
+    },
+    {
+      "line": 1663,
+      "text": "--analytics-map-card-shadow: none;"
+    },
+    {
+      "line": 1710,
+      "text": "--bs-gutter-x: 22px;"
+    },
+    {
+      "line": 2016,
+      "text": "body { background-color:#111; color:#fff; --analytics-stat-card-bg: rgba(255,255,255,0.035); --analytics-stat-card-border: rgba(255,255,255,0.06); --analytics-stat-card-color: #f5f7fb; --analytics-stat-value-color: #ffffff; --analytics-stat-label-color: rgba(255,255,255,0.68); --analytics-stat-card-shadow: inset 0 1px 0 rgba(255,255,255,0.025); --analytics-page-row-bg: rgba(255,255,255,0.035); --analytics-page-row-border: rgba(255,255,255,0.06); --analytics-page-row-color: rgba(255,255,255,0.9); --analytics-map-card-bg: linear-gradient(180deg, rgba(20,20,24,0.98) 0%, rgba(26,26,32,0.98) 100%); --analytics-map-card-border: rgba(255,255,255,0.08); --analytics-map-card-shadow: 0 10px 22px rgba(0,0,0,0.26); }"
+    },
+    {
+      "line": 2078,
+      "text": "body { background:#f6f6f4; color:#1f1f1f; --analytics-stat-card-bg: #fbf8f2; --analytics-stat-card-border: rgba(122,44,255,0.12); --analytics-stat-card-color: #34291f; --analytics-stat-value-color: #5b3a22; --analytics-stat-label-color: #7b6b5c; --analytics-stat-card-shadow: 0 5px 14px rgba(122,44,255,0.05); --analytics-page-row-bg: #fbf8f2; --analytics-page-row-border: rgba(122,44,255,0.12); --analytics-page-row-color: #34291f; --analytics-map-card-bg: linear-gradient(180deg, rgba(251,248,242,0.98) 0%, rgba(245,239,231,0.98) 100%); --analytics-map-card-border: rgba(122,44,255,0.12); --analytics-map-card-shadow: 0 10px 22px rgba(122,44,255,0.07); }"
+    },
+    {
+      "line": 2140,
+      "text": "body { background:#ffffff; color:#1f2937; --analytics-stat-card-bg: #fffaf4; --analytics-stat-card-border: rgba(122,44,255,0.10); --analytics-stat-card-color: #3f3128; --analytics-stat-value-color: #6b4b2f; --analytics-stat-label-color: #7a6a5c; --analytics-stat-card-shadow: 0 5px 14px rgba(122,44,255,0.04); --analytics-page-row-bg: #fffaf4; --analytics-page-row-border: rgba(122,44,255,0.10); --analytics-page-row-color: #3f3128; --analytics-map-card-bg: linear-gradient(180deg, rgba(255,250,244,0.99) 0%, rgba(250,243,234,0.99) 100%); --analytics-map-card-border: rgba(122,44,255,0.10); --analytics-map-card-shadow: 0 10px 22px rgba(122,44,255,0.05); }"
+    },
+    {
+      "line": 2263,
+      "text": "--date-primary: var(--post-date-color-1, var(--post-date-color, #d97706));"
+    },
+    {
+      "line": 2264,
+      "text": "--date-secondary: var(--post-date-color-2, var(--post-date-color, #ffd200));"
+    },
+    {
+      "line": 2265,
+      "text": "--date-scale-factor: calc(var(--post-date-scale, 100) / 100);"
+    },
+    {
+      "line": 2326,
+      "text": "--date-day-color: var(--date-primary);"
+    },
+    {
+      "line": 2327,
+      "text": "--date-text-color: var(--date-primary);"
+    },
+    {
+      "line": 2328,
+      "text": "--date-muted-color: var(--date-primary);"
+    },
+    {
+      "line": 2329,
+      "text": "--date-accent-color: var(--date-primary);"
+    },
+    {
+      "line": 2330,
+      "text": "--date-bg-soft: color-mix(in srgb, var(--date-primary) 10%, transparent);"
+    },
+    {
+      "line": 2334,
+      "text": "--date-day-color: var(--date-primary);"
+    },
+    {
+      "line": 2335,
+      "text": "--date-text-color: var(--date-secondary);"
+    },
+    {
+      "line": 2336,
+      "text": "--date-muted-color: var(--date-secondary);"
+    },
+    {
+      "line": 2337,
+      "text": "--date-accent-color: var(--date-secondary);"
+    },
+    {
+      "line": 2338,
+      "text": "--date-bg-soft: color-mix(in srgb, var(--date-secondary) 12%, transparent);"
+    },
+    {
+      "line": 2380,
+      "text": "--date-day-color: var(--date-primary);"
+    },
+    {
+      "line": 2381,
+      "text": "--date-text-color: var(--date-secondary);"
+    },
+    {
+      "line": 2382,
+      "text": "--date-muted-color: var(--date-secondary);"
+    },
+    {
+      "line": 2383,
+      "text": "--date-accent-color: var(--date-secondary);"
+    },
+    {
+      "line": 2384,
+      "text": "--date-bg-soft: linear-gradient(135deg, color-mix(in srgb, var(--date-primary) 12%, transparent), color-mix(in srgb, var(--date-secondary) 12%, transparent));"
+    }
+  ]
+}
