@@ -1,0 +1,1548 @@
+{
+  "created_at": "2026-07-01 12:43:15",
+  "total_designs": 42,
+  "risk_summary": {
+    "nizak": 20,
+    "provjeriti": 11,
+    "visok": 11
+  },
+  "components": {
+    "blog_posts.html": {
+      "file": "blog\\templates\\blog\\components\\blog_posts.html",
+      "exists": true,
+      "loops": [
+        "post in page_obj"
+      ],
+      "includes": [
+        "blog/components/post_meta.html",
+        "blog/components/post_body.html",
+        "blog/components/post_actions.html",
+        "blog/components/post_comments.html",
+        "blog/components/blog_interaction_scripts.html"
+      ],
+      "marker_counts": {
+        "blog-post": 5,
+        "post-entry": 1
+      }
+    },
+    "post_body.html": {
+      "file": "blog\\templates\\blog\\components\\post_body.html",
+      "exists": true,
+      "loops": [
+        "opt in post.quiz_options.all",
+        "opt in post.quiz_options.all",
+        "r in post.poll_results",
+        "opt in post.poll_options.all",
+        "img in post.images.all"
+      ],
+      "includes": [],
+      "marker_counts": {
+        "poll": 7,
+        "quiz": 7
+      }
+    },
+    "post_meta.html": {
+      "file": "blog\\templates\\blog\\components\\post_meta.html",
+      "exists": true,
+      "loops": [
+        "tag in post.tags.all"
+      ],
+      "includes": [],
+      "marker_counts": {
+        "post-meta": 4
+      }
+    },
+    "post_actions.html": {
+      "file": "blog\\templates\\blog\\components\\post_actions.html",
+      "exists": true,
+      "loops": [],
+      "includes": [],
+      "marker_counts": {
+        "post-actions": 1,
+        "Komentari": 2,
+        "Sviđa mi se": 2,
+        "Otvori post": 1
+      }
+    },
+    "post_comments.html": {
+      "file": "blog\\templates\\blog\\components\\post_comments.html",
+      "exists": true,
+      "loops": [
+        "comment in comments",
+        "comment in post.comments.all"
+      ],
+      "includes": [],
+      "marker_counts": {
+        "Komentari": 1
+      }
+    },
+    "blog_interaction_scripts.html": {
+      "file": "blog\\templates\\blog\\components\\blog_interaction_scripts.html",
+      "exists": true,
+      "loops": [],
+      "includes": [],
+      "marker_counts": {
+        "poll": 1
+      }
+    }
+  },
+  "designs": [
+    {
+      "name": "asfaltni_plamen",
+      "file": "blog\\templates\\blog\\designs\\asfaltni_plamen.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "uses_shared_blog_posts": true,
+      "uses_shared_interaction_scripts": false,
+      "has_post_loop": false,
+      "loops": [],
+      "includes": [
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_posts.html"
+      ],
+      "blocks": [
+        "content"
+      ],
+      "marker_counts": {
+        "blog-post": 16,
+        "post-entry": 15,
+        "post-title": 2,
+        "post-meta": 5
+      },
+      "risk": "nizak"
+    },
+    {
+      "name": "carobna_ljubicasta",
+      "file": "blog\\templates\\blog\\designs\\carobna_ljubicasta.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "uses_shared_blog_posts": true,
+      "uses_shared_interaction_scripts": false,
+      "has_post_loop": false,
+      "loops": [],
+      "includes": [
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_posts.html"
+      ],
+      "blocks": [
+        "content"
+      ],
+      "marker_counts": {
+        "blog-post": 31,
+        "post-entry": 24,
+        "post-title": 2,
+        "post-meta": 6,
+        "post-actions": 3
+      },
+      "risk": "nizak"
+    },
+    {
+      "name": "classic",
+      "file": "blog\\templates\\blog\\designs\\classic.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "uses_shared_blog_posts": false,
+      "uses_shared_interaction_scripts": false,
+      "has_post_loop": false,
+      "loops": [],
+      "includes": [],
+      "blocks": [],
+      "marker_counts": {},
+      "risk": "provjeriti"
+    },
+    {
+      "name": "classic_right",
+      "file": "blog\\templates\\blog\\designs\\classic_right.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "uses_shared_blog_posts": false,
+      "uses_shared_interaction_scripts": false,
+      "has_post_loop": false,
+      "loops": [],
+      "includes": [],
+      "blocks": [],
+      "marker_counts": {},
+      "risk": "provjeriti"
+    },
+    {
+      "name": "dark",
+      "file": "blog\\templates\\blog\\designs\\dark.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "uses_shared_blog_posts": false,
+      "uses_shared_interaction_scripts": false,
+      "has_post_loop": false,
+      "loops": [],
+      "includes": [],
+      "blocks": [],
+      "marker_counts": {},
+      "risk": "provjeriti"
+    },
+    {
+      "name": "dark_right",
+      "file": "blog\\templates\\blog\\designs\\dark_right.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "uses_shared_blog_posts": false,
+      "uses_shared_interaction_scripts": false,
+      "has_post_loop": false,
+      "loops": [],
+      "includes": [],
+      "blocks": [],
+      "marker_counts": {},
+      "risk": "provjeriti"
+    },
+    {
+      "name": "default",
+      "file": "blog\\templates\\blog\\designs\\default.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "uses_shared_blog_posts": false,
+      "uses_shared_interaction_scripts": false,
+      "has_post_loop": false,
+      "loops": [],
+      "includes": [],
+      "blocks": [],
+      "marker_counts": {},
+      "risk": "provjeriti"
+    },
+    {
+      "name": "default_right",
+      "file": "blog\\templates\\blog\\designs\\default_right.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "uses_shared_blog_posts": false,
+      "uses_shared_interaction_scripts": false,
+      "has_post_loop": false,
+      "loops": [],
+      "includes": [],
+      "blocks": [],
+      "marker_counts": {},
+      "risk": "provjeriti"
+    },
+    {
+      "name": "dimni_akordi",
+      "file": "blog\\templates\\blog\\designs\\dimni_akordi.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "uses_shared_blog_posts": true,
+      "uses_shared_interaction_scripts": false,
+      "has_post_loop": false,
+      "loops": [],
+      "includes": [
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_posts.html"
+      ],
+      "blocks": [
+        "content"
+      ],
+      "marker_counts": {
+        "blog-post": 9,
+        "post-entry": 8,
+        "post-title": 2,
+        "post-meta": 5
+      },
+      "risk": "nizak"
+    },
+    {
+      "name": "iznad_oblaka",
+      "file": "blog\\templates\\blog\\designs\\iznad_oblaka.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "uses_shared_blog_posts": true,
+      "uses_shared_interaction_scripts": false,
+      "has_post_loop": false,
+      "loops": [],
+      "includes": [
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_posts.html"
+      ],
+      "blocks": [
+        "content"
+      ],
+      "marker_counts": {
+        "blog-post": 23,
+        "post-entry": 20,
+        "post-title": 2,
+        "post-meta": 6,
+        "post-actions": 3
+      },
+      "risk": "nizak"
+    },
+    {
+      "name": "jedro_u_suton",
+      "file": "blog\\templates\\blog\\designs\\jedro_u_suton.html",
+      "extends": "blog/base.html",
+      "uses_shared_blog_posts": false,
+      "uses_shared_interaction_scripts": true,
+      "has_post_loop": true,
+      "loops": [
+        {
+          "loop_var": "post",
+          "loop_src": "page_obj",
+          "looks_like_posts": true,
+          "position": 13067,
+          "snippet": "{% endif %}\n            {% if active_tag %}\n                <span class=\"jus-filter-chip\">#{{ active_tag }}</span>\n            {% endif %}\n            <a class=\"jus-filter-clear\" href=\"{{ archive_base_url }}\">Makni filter</a>\n        </div>\n        {% endif %}\n\n        <div class=\"jus-layout\">\n            <main class=\"jus-main\">\n                {% for post in page_obj %}\n                    <article class=\"jus-post\">\n                        <div class=\"jus-post-date\">{{ post.publication_datetime|date:\"d.m.Y\" }}</div>\n                        <div class=\"jus-post-divider\"></div>\n                        <div class=\"d-flex flex-column\" style=\"gap: 10px; min-width: 0;\">\n                            <h4 class=\"mb-0\">{{ post.title }}</h4>\n                            {% include \"blog/components/post_meta.html\" %}\n                        </div>\n\n                        <div class=\"mt-4\">\n                            {% include \"blog/components/post_body.html\" %}\n                        </div>\n\n                        {% include \"blog/components/post_actions.html\" %}\n                        {% include \"blog/components/post_comments.html\" %}\n                    </article>\n                {% empty %}\n                    <article class=\"jus-post\">\n                        <p class=\"mb-0\">Nema postova.</p>\n                    </article>\n                {% endfor %}\n\n                {% if page_obj.has_other_pages %}\n                <div class=\"d-flex flex-wrap justify-content-between align-items-center gap-2 mt-3\">\n                    {% if page_obj.has_previous %}\n                        <a href=\"?page={{ page_obj.previous_page_number }}{{ pagination_query }}\" class=\"btn btn-sm btn-outline-secondary\">Prethodna</a>"
+        },
+        {
+          "loop_var": "week",
+          "loop_src": "month_calendar",
+          "looks_like_posts": false,
+          "position": 16107,
+          "snippet": ""
+        },
+        {
+          "loop_var": "day",
+          "loop_src": "week",
+          "looks_like_posts": false,
+          "position": 16168,
+          "snippet": ""
+        },
+        {
+          "loop_var": "a",
+          "loop_src": "archives",
+          "looks_like_posts": false,
+          "position": 17992,
+          "snippet": ""
+        },
+        {
+          "loop_var": "box",
+          "loop_src": "left_boxes",
+          "looks_like_posts": false,
+          "position": 18769,
+          "snippet": ""
+        },
+        {
+          "loop_var": "box",
+          "loop_src": "right_boxes",
+          "looks_like_posts": false,
+          "position": 19063,
+          "snippet": ""
+        }
+      ],
+      "includes": [
+        "blog/components/post_meta.html",
+        "blog/components/post_body.html",
+        "blog/components/post_actions.html",
+        "blog/components/post_comments.html",
+        "blog/components/blog_profile_actions_sidebar.html",
+        "blog/components/live_analytics_widget.html",
+        "blog/components/live_analytics_widget.html",
+        "blog/components/blog_interaction_scripts.html"
+      ],
+      "blocks": [
+        "header",
+        "blog_header",
+        "left_sidebar",
+        "right_sidebar",
+        "content"
+      ],
+      "marker_counts": {
+        "blog-post": 2,
+        "post-title": 4,
+        "post-date": 2,
+        "post-meta": 4,
+        "post-actions": 2
+      },
+      "risk": "visok"
+    },
+    {
+      "name": "kraljevska_pozornica",
+      "file": "blog\\templates\\blog\\designs\\kraljevska_pozornica.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "uses_shared_blog_posts": true,
+      "uses_shared_interaction_scripts": false,
+      "has_post_loop": false,
+      "loops": [],
+      "includes": [
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_posts.html"
+      ],
+      "blocks": [
+        "content"
+      ],
+      "marker_counts": {
+        "blog-post": 29,
+        "post-entry": 22,
+        "post-title": 2,
+        "post-meta": 6
+      },
+      "risk": "nizak"
+    },
+    {
+      "name": "litica_noci",
+      "file": "blog\\templates\\blog\\designs\\litica_noci.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "uses_shared_blog_posts": false,
+      "uses_shared_interaction_scripts": false,
+      "has_post_loop": false,
+      "loops": [],
+      "includes": [],
+      "blocks": [],
+      "marker_counts": {},
+      "risk": "provjeriti"
+    },
+    {
+      "name": "magazin",
+      "file": "blog\\templates\\blog\\designs\\magazin.html",
+      "extends": "blog/base.html",
+      "uses_shared_blog_posts": false,
+      "uses_shared_interaction_scripts": true,
+      "has_post_loop": true,
+      "loops": [
+        {
+          "loop_var": "week",
+          "loop_src": "month_calendar",
+          "looks_like_posts": false,
+          "position": 5200,
+          "snippet": ""
+        },
+        {
+          "loop_var": "day",
+          "loop_src": "week",
+          "looks_like_posts": false,
+          "position": 5253,
+          "snippet": ""
+        },
+        {
+          "loop_var": "a",
+          "loop_src": "archives",
+          "looks_like_posts": false,
+          "position": 6927,
+          "snippet": ""
+        },
+        {
+          "loop_var": "box",
+          "loop_src": "left_boxes",
+          "looks_like_posts": false,
+          "position": 7581,
+          "snippet": ""
+        },
+        {
+          "loop_var": "box",
+          "loop_src": "right_boxes",
+          "looks_like_posts": false,
+          "position": 8169,
+          "snippet": ""
+        },
+        {
+          "loop_var": "post",
+          "loop_src": "page_obj",
+          "looks_like_posts": true,
+          "position": 21771,
+          "snippet": ">\n            {% endif %}\n        </div>\n        <div class=\"magazin-hero-overlay\">\n            <h1 class=\"magazin-blog-title\">{{ blog.profile.blog_name }}</h1>\n\n    {% if blog.profile.blog_tagline %}<p class=\"blog-tagline-shared\">{{ blog.profile.blog_tagline }}</p>{% endif %}\n        </div>\n    </div>\n\n    <div class=\"magazin-posts-wrap\">\n        {% for post in page_obj %}\n            <article class=\"magazin-post-entry\">\n                <div class=\"d-flex justify-content-between align-items-start gap-3\">\n                    <div class=\"d-flex flex-column\" style=\"gap:10px; min-width:0; flex:1;\">\n                        <h4 class=\"mb-0\">{{ post.title }}</h4>\n                        {% include \"blog/components/post_meta.html\" %}\n                    </div>\n\n                    <div class=\"text-center ms-3 blog-date-shell blog-date-style-{{ blog_preferences.active_design_customization.post_date_style|default:'classic_vertical' }} blog-date-effect-{{ blog_preferences.active_design_customization.post_date_effect|default:'solid' }}\" style=\"line-height:1;\" data-date-style=\"{{ blog_preferences.active_design_customization.post_date_style|default:'classic_vertical' }}\" data-date-effect=\"{{ blog_preferences.active_design_customization.post_date_effect|default:'solid' }}\">\n                        <div class=\"blog-date-main\">\n                            <div class=\"blog-date-day-wrap\">\n                                <div class=\"blog-date-day\">{{ post.publication_datetime|date:\"d\" }}</div>\n                            </div>\n                            <div class=\"blog-date-text\">\n                                <div class=\"blog-date-month\">{{ post.publication_datetime|month_hr|upper }}</div>\n                                <div class="
+        }
+      ],
+      "includes": [
+        "blog/components/live_analytics_widget.html",
+        "blog/components/live_analytics_widget.html",
+        "blog/components/live_analytics_widget.html",
+        "blog/components/post_meta.html",
+        "blog/components/post_body.html",
+        "blog/components/post_actions.html",
+        "blog/components/post_comments.html",
+        "blog/components/blog_interaction_scripts.html"
+      ],
+      "blocks": [
+        "blog_header",
+        "left_sidebar",
+        "right_sidebar",
+        "content"
+      ],
+      "marker_counts": {
+        "blog-post": 1,
+        "post-entry": 10,
+        "post-title": 3,
+        "post-meta": 1
+      },
+      "risk": "visok"
+    },
+    {
+      "name": "misticno_jezero",
+      "file": "blog\\templates\\blog\\designs\\misticno_jezero.html",
+      "extends": "blog/base.html",
+      "uses_shared_blog_posts": false,
+      "uses_shared_interaction_scripts": true,
+      "has_post_loop": true,
+      "loops": [
+        {
+          "loop_var": "post",
+          "loop_src": "page_obj",
+          "looks_like_posts": true,
+          "position": 12534,
+          "snippet": "er-chip\">{{ active_category }}</span>\n                {% endif %}\n                {% if active_tag %}\n                    <span class=\"mj-filter-chip\">#{{ active_tag }}</span>\n                {% endif %}\n                <a class=\"mj-filter-clear\" href=\"{{ archive_base_url }}\">Makni filter</a>\n            </div>\n            {% endif %}\n\n            {% for post in page_obj %}\n                <article class=\"mj-post\">\n                    <div class=\"mj-post-date\">{{ post.publication_datetime|date:\"d.m.Y\" }}</div>\n                    <div class=\"mj-post-divider\"></div>\n                    <div class=\"d-flex flex-column\" style=\"gap: 10px; min-width: 0;\">\n                        <h4 class=\"mb-0\">{{ post.title }}</h4>\n                        {% include \"blog/components/post_meta.html\" %}\n                    </div>\n\n                    <div class=\"mt-4\">\n                        {% include \"blog/components/post_body.html\" %}\n                    </div>\n\n                    {% include \"blog/components/post_actions.html\" %}\n                    {% include \"blog/components/post_comments.html\" %}\n                </article>\n            {% empty %}\n                <div class=\"mj-post\">\n                    <p class=\"mb-0\">Nema postova.</p>\n                </div>\n            {% endfor %}\n\n            {% if page_obj.has_other_pages %}\n            <div class=\"d-flex flex-wrap justify-content-between align-items-center gap-2 mt-3\">\n                {% if page_obj.has_previous %}\n                    <a href=\"?page={{ page_obj.previous_page_number }}{{ pagination_query }}\" class=\"btn btn-sm btn-outline-secondary\">Prethodna</a>\n                {% else %}\n                    <span></span>\n                {% endif %}\n\n                <span class=\"s"
+        },
+        {
+          "loop_var": "week",
+          "loop_src": "month_calendar",
+          "looks_like_posts": false,
+          "position": 15361,
+          "snippet": ""
+        },
+        {
+          "loop_var": "day",
+          "loop_src": "week",
+          "looks_like_posts": false,
+          "position": 15418,
+          "snippet": ""
+        },
+        {
+          "loop_var": "a",
+          "loop_src": "archives",
+          "looks_like_posts": false,
+          "position": 17124,
+          "snippet": ""
+        },
+        {
+          "loop_var": "box",
+          "loop_src": "left_boxes",
+          "looks_like_posts": false,
+          "position": 17836,
+          "snippet": ""
+        },
+        {
+          "loop_var": "box",
+          "loop_src": "right_boxes",
+          "looks_like_posts": false,
+          "position": 18097,
+          "snippet": ""
+        }
+      ],
+      "includes": [
+        "blog/components/post_meta.html",
+        "blog/components/post_body.html",
+        "blog/components/post_actions.html",
+        "blog/components/post_comments.html",
+        "blog/components/blog_profile_actions_sidebar.html",
+        "blog/components/live_analytics_widget.html",
+        "blog/components/live_analytics_widget.html",
+        "blog/components/blog_interaction_scripts.html"
+      ],
+      "blocks": [
+        "header",
+        "blog_header",
+        "left_sidebar",
+        "right_sidebar",
+        "content"
+      ],
+      "marker_counts": {
+        "blog-post": 1,
+        "post-title": 3,
+        "post-date": 2,
+        "post-meta": 4,
+        "post-actions": 2,
+        "poll": 1
+      },
+      "risk": "visok"
+    },
+    {
+      "name": "mjesecev_ples",
+      "file": "blog\\templates\\blog\\designs\\mjesecev_ples.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "uses_shared_blog_posts": true,
+      "uses_shared_interaction_scripts": false,
+      "has_post_loop": false,
+      "loops": [],
+      "includes": [
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_posts.html"
+      ],
+      "blocks": [
+        "content"
+      ],
+      "marker_counts": {
+        "blog-post": 16,
+        "post-entry": 15,
+        "post-title": 2,
+        "post-meta": 5
+      },
+      "risk": "nizak"
+    },
+    {
+      "name": "morski_prijelaz",
+      "file": "blog\\templates\\blog\\designs\\morski_prijelaz.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "uses_shared_blog_posts": true,
+      "uses_shared_interaction_scripts": false,
+      "has_post_loop": false,
+      "loops": [],
+      "includes": [
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_posts.html"
+      ],
+      "blocks": [
+        "content"
+      ],
+      "marker_counts": {
+        "blog-post": 7,
+        "post-entry": 6,
+        "post-title": 2,
+        "post-meta": 2
+      },
+      "risk": "nizak"
+    },
+    {
+      "name": "nebeska_klasika",
+      "file": "blog\\templates\\blog\\designs\\nebeska_klasika.html",
+      "extends": "blog/base.html",
+      "uses_shared_blog_posts": false,
+      "uses_shared_interaction_scripts": true,
+      "has_post_loop": true,
+      "loops": [
+        {
+          "loop_var": "post",
+          "loop_src": "page_obj",
+          "looks_like_posts": true,
+          "position": 11552,
+          "snippet": "er-chip\">{{ active_category }}</span>\n                {% endif %}\n                {% if active_tag %}\n                    <span class=\"nk-filter-chip\">#{{ active_tag }}</span>\n                {% endif %}\n                <a class=\"nk-filter-clear\" href=\"{{ archive_base_url }}\">Makni filter</a>\n            </div>\n            {% endif %}\n\n            {% for post in page_obj %}\n                <article class=\"nk-post\">\n                    <div class=\"nk-post-date\">{{ post.publication_datetime|date:\"d.m.Y\" }}</div>\n                    <div class=\"nk-post-divider\"></div>\n                    <div class=\"d-flex flex-column\" style=\"gap: 10px; min-width: 0;\">\n                        <h4 class=\"mb-0\">{{ post.title }}</h4>\n                        {% include \"blog/components/post_meta.html\" %}\n                    </div>\n\n                    <div class=\"mt-4\">\n                        {% include \"blog/components/post_body.html\" %}\n                    </div>\n\n                    {% include \"blog/components/post_actions.html\" %}\n                    {% include \"blog/components/post_comments.html\" %}\n                </article>\n            {% empty %}\n                <div class=\"nk-post\">\n                    <p class=\"mb-0\">Nema postova.</p>\n                </div>\n            {% endfor %}\n\n            {% if page_obj.has_other_pages %}\n            <div class=\"d-flex flex-wrap justify-content-between align-items-center gap-2 mt-3\">\n                {% if page_obj.has_previous %}\n                    <a href=\"?page={{ page_obj.previous_page_number }}{{ pagination_query }}\" class=\"btn btn-sm btn-outline-secondary\">Prethodna</a>\n                {% else %}\n                    <span></span>\n                {% endif %}\n\n                <span class=\"s"
+        },
+        {
+          "loop_var": "week",
+          "loop_src": "month_calendar",
+          "looks_like_posts": false,
+          "position": 14394,
+          "snippet": ""
+        },
+        {
+          "loop_var": "day",
+          "loop_src": "week",
+          "looks_like_posts": false,
+          "position": 14451,
+          "snippet": ""
+        },
+        {
+          "loop_var": "a",
+          "loop_src": "archives",
+          "looks_like_posts": false,
+          "position": 16173,
+          "snippet": ""
+        },
+        {
+          "loop_var": "box",
+          "loop_src": "left_boxes",
+          "looks_like_posts": false,
+          "position": 16885,
+          "snippet": ""
+        },
+        {
+          "loop_var": "box",
+          "loop_src": "right_boxes",
+          "looks_like_posts": false,
+          "position": 17146,
+          "snippet": ""
+        }
+      ],
+      "includes": [
+        "blog/components/post_meta.html",
+        "blog/components/post_body.html",
+        "blog/components/post_actions.html",
+        "blog/components/post_comments.html",
+        "blog/components/blog_profile_actions_sidebar.html",
+        "blog/components/live_analytics_widget.html",
+        "blog/components/live_analytics_widget.html",
+        "blog/components/blog_interaction_scripts.html"
+      ],
+      "blocks": [
+        "header",
+        "blog_header",
+        "left_sidebar",
+        "right_sidebar",
+        "content"
+      ],
+      "marker_counts": {
+        "blog-post": 1,
+        "post-title": 3,
+        "post-date": 2,
+        "post-meta": 4,
+        "post-actions": 2
+      },
+      "risk": "visok"
+    },
+    {
+      "name": "nebeski_mir",
+      "file": "blog\\templates\\blog\\designs\\nebeski_mir.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "uses_shared_blog_posts": true,
+      "uses_shared_interaction_scripts": false,
+      "has_post_loop": false,
+      "loops": [],
+      "includes": [
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_posts.html"
+      ],
+      "blocks": [
+        "content"
+      ],
+      "marker_counts": {
+        "blog-post": 6,
+        "post-entry": 5,
+        "post-title": 2,
+        "post-date": 1,
+        "post-meta": 2
+      },
+      "risk": "nizak"
+    },
+    {
+      "name": "nebesko_polje",
+      "file": "blog\\templates\\blog\\designs\\nebesko_polje.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "uses_shared_blog_posts": true,
+      "uses_shared_interaction_scripts": false,
+      "has_post_loop": false,
+      "loops": [],
+      "includes": [
+        "blog/components/blog_header.html",
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_posts.html"
+      ],
+      "blocks": [
+        "blog_header",
+        "content"
+      ],
+      "marker_counts": {
+        "blog-post": 8,
+        "post-entry": 7,
+        "post-title": 2,
+        "post-date": 1,
+        "post-meta": 4,
+        "post-actions": 4
+      },
+      "risk": "nizak"
+    },
+    {
+      "name": "neonski_grad",
+      "file": "blog\\templates\\blog\\designs\\neonski_grad.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "uses_shared_blog_posts": true,
+      "uses_shared_interaction_scripts": false,
+      "has_post_loop": false,
+      "loops": [],
+      "includes": [
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_posts.html"
+      ],
+      "blocks": [
+        "content"
+      ],
+      "marker_counts": {
+        "blog-post": 24,
+        "post-entry": 21,
+        "post-title": 2,
+        "post-meta": 6,
+        "post-actions": 3
+      },
+      "risk": "nizak"
+    },
+    {
+      "name": "planine_u_magli",
+      "file": "blog\\templates\\blog\\designs\\planine_u_magli.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "uses_shared_blog_posts": true,
+      "uses_shared_interaction_scripts": false,
+      "has_post_loop": false,
+      "loops": [],
+      "includes": [
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_posts.html"
+      ],
+      "blocks": [
+        "content"
+      ],
+      "marker_counts": {
+        "blog-post": 6,
+        "post-entry": 5,
+        "post-title": 2,
+        "post-date": 1,
+        "post-meta": 2
+      },
+      "risk": "nizak"
+    },
+    {
+      "name": "podvodna_tisina",
+      "file": "blog\\templates\\blog\\designs\\podvodna_tisina.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "uses_shared_blog_posts": true,
+      "uses_shared_interaction_scripts": false,
+      "has_post_loop": false,
+      "loops": [],
+      "includes": [
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_posts.html"
+      ],
+      "blocks": [
+        "content"
+      ],
+      "marker_counts": {
+        "blog-post": 7,
+        "post-entry": 6,
+        "post-title": 2,
+        "post-meta": 2
+      },
+      "risk": "nizak"
+    },
+    {
+      "name": "polarna_svjetlost",
+      "file": "blog\\templates\\blog\\designs\\polarna_svjetlost.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "uses_shared_blog_posts": true,
+      "uses_shared_interaction_scripts": false,
+      "has_post_loop": false,
+      "loops": [],
+      "includes": [
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_posts.html"
+      ],
+      "blocks": [
+        "content"
+      ],
+      "marker_counts": {
+        "blog-post": 23,
+        "post-entry": 20,
+        "post-title": 2,
+        "post-meta": 6,
+        "post-actions": 3
+      },
+      "risk": "nizak"
+    },
+    {
+      "name": "polje_lavande",
+      "file": "blog\\templates\\blog\\designs\\polje_lavande.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "uses_shared_blog_posts": true,
+      "uses_shared_interaction_scripts": false,
+      "has_post_loop": false,
+      "loops": [],
+      "includes": [
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_posts.html"
+      ],
+      "blocks": [
+        "content"
+      ],
+      "marker_counts": {
+        "blog-post": 29,
+        "post-entry": 22,
+        "post-title": 2,
+        "post-meta": 6,
+        "post-actions": 3
+      },
+      "risk": "nizak"
+    },
+    {
+      "name": "ponocna_elegancija",
+      "file": "blog\\templates\\blog\\designs\\ponocna_elegancija.html",
+      "extends": "blog/base.html",
+      "uses_shared_blog_posts": false,
+      "uses_shared_interaction_scripts": true,
+      "has_post_loop": true,
+      "loops": [
+        {
+          "loop_var": "post",
+          "loop_src": "page_obj",
+          "looks_like_posts": true,
+          "position": 12113,
+          "snippet": "er-chip\">{{ active_category }}</span>\n                {% endif %}\n                {% if active_tag %}\n                    <span class=\"pe-filter-chip\">#{{ active_tag }}</span>\n                {% endif %}\n                <a class=\"pe-filter-clear\" href=\"{{ archive_base_url }}\">Makni filter</a>\n            </div>\n            {% endif %}\n\n            {% for post in page_obj %}\n                <article class=\"pe-post\">\n                    <div class=\"pe-post-date\">{{ post.publication_datetime|date:\"d.m.Y\" }}</div>\n                    <div class=\"pe-post-divider\"></div>\n                    <div class=\"d-flex flex-column\" style=\"gap: 10px; min-width: 0;\">\n                        <h4 class=\"mb-0\">{{ post.title }}</h4>\n                        {% include \"blog/components/post_meta.html\" %}\n                    </div>\n\n                    <div class=\"mt-4\">\n                        {% include \"blog/components/post_body.html\" %}\n                    </div>\n\n                    {% include \"blog/components/post_actions.html\" %}\n                    {% include \"blog/components/post_comments.html\" %}\n                </article>\n            {% empty %}\n                <div class=\"pe-post\">\n                    <p class=\"mb-0\">Nema postova.</p>\n                </div>\n            {% endfor %}\n\n            {% if page_obj.has_other_pages %}\n            <div class=\"d-flex flex-wrap justify-content-between align-items-center gap-2 mt-3\">\n                {% if page_obj.has_previous %}\n                    <a href=\"?page={{ page_obj.previous_page_number }}{{ pagination_query }}\" class=\"btn btn-sm btn-outline-secondary\">Prethodna</a>\n                {% else %}\n                    <span></span>\n                {% endif %}\n\n                <span class=\"s"
+        },
+        {
+          "loop_var": "week",
+          "loop_src": "month_calendar",
+          "looks_like_posts": false,
+          "position": 14940,
+          "snippet": ""
+        },
+        {
+          "loop_var": "day",
+          "loop_src": "week",
+          "looks_like_posts": false,
+          "position": 14997,
+          "snippet": ""
+        },
+        {
+          "loop_var": "a",
+          "loop_src": "archives",
+          "looks_like_posts": false,
+          "position": 16703,
+          "snippet": ""
+        },
+        {
+          "loop_var": "box",
+          "loop_src": "left_boxes",
+          "looks_like_posts": false,
+          "position": 17415,
+          "snippet": ""
+        },
+        {
+          "loop_var": "box",
+          "loop_src": "right_boxes",
+          "looks_like_posts": false,
+          "position": 17676,
+          "snippet": ""
+        }
+      ],
+      "includes": [
+        "blog/components/post_meta.html",
+        "blog/components/post_body.html",
+        "blog/components/post_actions.html",
+        "blog/components/post_comments.html",
+        "blog/components/blog_profile_actions_sidebar.html",
+        "blog/components/live_analytics_widget.html",
+        "blog/components/live_analytics_widget.html",
+        "blog/components/blog_interaction_scripts.html"
+      ],
+      "blocks": [
+        "header",
+        "blog_header",
+        "left_sidebar",
+        "right_sidebar",
+        "content"
+      ],
+      "marker_counts": {
+        "blog-post": 1,
+        "post-title": 3,
+        "post-date": 2,
+        "post-meta": 4,
+        "post-actions": 2
+      },
+      "risk": "visok"
+    },
+    {
+      "name": "ruzicasti_vrt",
+      "file": "blog\\templates\\blog\\designs\\ruzicasti_vrt.html",
+      "extends": "blog/base.html",
+      "uses_shared_blog_posts": false,
+      "uses_shared_interaction_scripts": true,
+      "has_post_loop": true,
+      "loops": [
+        {
+          "loop_var": "post",
+          "loop_src": "page_obj",
+          "looks_like_posts": true,
+          "position": 12238,
+          "snippet": "er-chip\">{{ active_category }}</span>\n                {% endif %}\n                {% if active_tag %}\n                    <span class=\"rv-filter-chip\">#{{ active_tag }}</span>\n                {% endif %}\n                <a class=\"rv-filter-clear\" href=\"{{ archive_base_url }}\">Makni filter</a>\n            </div>\n            {% endif %}\n\n            {% for post in page_obj %}\n                <article class=\"rv-post\">\n                    <div class=\"rv-post-date\">{{ post.publication_datetime|date:\"d.m.Y\" }}</div>\n                    <div class=\"rv-post-divider\"></div>\n                    <div class=\"d-flex flex-column\" style=\"gap: 10px; min-width: 0;\">\n                        <h4 class=\"mb-0\">{{ post.title }}</h4>\n                        {% include \"blog/components/post_meta.html\" %}\n                    </div>\n\n                    <div class=\"mt-4\">\n                        {% include \"blog/components/post_body.html\" %}\n                    </div>\n\n                    {% include \"blog/components/post_actions.html\" %}\n                    {% include \"blog/components/post_comments.html\" %}\n                </article>\n            {% empty %}\n                <div class=\"rv-post\">\n                    <p class=\"mb-0\">Nema postova.</p>\n                </div>\n            {% endfor %}\n\n            {% if page_obj.has_other_pages %}\n            <div class=\"d-flex flex-wrap justify-content-between align-items-center gap-2 mt-3\">\n                {% if page_obj.has_previous %}\n                    <a href=\"?page={{ page_obj.previous_page_number }}{{ pagination_query }}\" class=\"btn btn-sm btn-outline-secondary\">Prethodna</a>\n                {% else %}\n                    <span></span>\n                {% endif %}\n\n                <span class=\"s"
+        },
+        {
+          "loop_var": "week",
+          "loop_src": "month_calendar",
+          "looks_like_posts": false,
+          "position": 15065,
+          "snippet": ""
+        },
+        {
+          "loop_var": "day",
+          "loop_src": "week",
+          "looks_like_posts": false,
+          "position": 15122,
+          "snippet": ""
+        },
+        {
+          "loop_var": "a",
+          "loop_src": "archives",
+          "looks_like_posts": false,
+          "position": 16828,
+          "snippet": ""
+        },
+        {
+          "loop_var": "box",
+          "loop_src": "left_boxes",
+          "looks_like_posts": false,
+          "position": 17540,
+          "snippet": ""
+        },
+        {
+          "loop_var": "box",
+          "loop_src": "right_boxes",
+          "looks_like_posts": false,
+          "position": 17801,
+          "snippet": ""
+        }
+      ],
+      "includes": [
+        "blog/components/post_meta.html",
+        "blog/components/post_body.html",
+        "blog/components/post_actions.html",
+        "blog/components/post_comments.html",
+        "blog/components/blog_profile_actions_sidebar.html",
+        "blog/components/live_analytics_widget.html",
+        "blog/components/live_analytics_widget.html",
+        "blog/components/blog_interaction_scripts.html"
+      ],
+      "blocks": [
+        "header",
+        "blog_header",
+        "left_sidebar",
+        "right_sidebar",
+        "content"
+      ],
+      "marker_counts": {
+        "blog-post": 1,
+        "post-title": 3,
+        "post-date": 2,
+        "post-meta": 4,
+        "post-actions": 2
+      },
+      "risk": "visok"
+    },
+    {
+      "name": "simple",
+      "file": "blog\\templates\\blog\\designs\\simple.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "uses_shared_blog_posts": false,
+      "uses_shared_interaction_scripts": false,
+      "has_post_loop": false,
+      "loops": [],
+      "includes": [],
+      "blocks": [],
+      "marker_counts": {},
+      "risk": "provjeriti"
+    },
+    {
+      "name": "simple_image",
+      "file": "blog\\templates\\blog\\designs\\simple_image.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "uses_shared_blog_posts": false,
+      "uses_shared_interaction_scripts": false,
+      "has_post_loop": false,
+      "loops": [],
+      "includes": [],
+      "blocks": [],
+      "marker_counts": {},
+      "risk": "provjeriti"
+    },
+    {
+      "name": "simple_pattern",
+      "file": "blog\\templates\\blog\\designs\\simple_pattern.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "uses_shared_blog_posts": false,
+      "uses_shared_interaction_scripts": false,
+      "has_post_loop": false,
+      "loops": [],
+      "includes": [],
+      "blocks": [],
+      "marker_counts": {},
+      "risk": "provjeriti"
+    },
+    {
+      "name": "simple_retro",
+      "file": "blog\\templates\\blog\\designs\\simple_retro.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "uses_shared_blog_posts": false,
+      "uses_shared_interaction_scripts": false,
+      "has_post_loop": false,
+      "loops": [],
+      "includes": [],
+      "blocks": [],
+      "marker_counts": {},
+      "risk": "provjeriti"
+    },
+    {
+      "name": "sjene_ulice",
+      "file": "blog\\templates\\blog\\designs\\sjene_ulice.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "uses_shared_blog_posts": true,
+      "uses_shared_interaction_scripts": false,
+      "has_post_loop": false,
+      "loops": [],
+      "includes": [
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_posts.html"
+      ],
+      "blocks": [
+        "content"
+      ],
+      "marker_counts": {
+        "blog-post": 9,
+        "post-entry": 8,
+        "post-title": 2,
+        "post-meta": 5
+      },
+      "risk": "nizak"
+    },
+    {
+      "name": "stara_aleja",
+      "file": "blog\\templates\\blog\\designs\\stara_aleja.html",
+      "extends": "blog/base.html",
+      "uses_shared_blog_posts": false,
+      "uses_shared_interaction_scripts": true,
+      "has_post_loop": true,
+      "loops": [
+        {
+          "loop_var": "post",
+          "loop_src": "page_obj",
+          "looks_like_posts": true,
+          "position": 12796,
+          "snippet": "{% endif %}\n            {% if active_tag %}\n                <span class=\"sa-filter-chip\">#{{ active_tag }}</span>\n            {% endif %}\n            <a class=\"sa-filter-clear\" href=\"{{ archive_base_url }}\">Makni filter</a>\n        </div>\n        {% endif %}\n\n        <div class=\"sa-layout\">\n            <main class=\"sa-main\">\n                {% for post in page_obj %}\n                    <article class=\"sa-post\">\n                        <div class=\"sa-post-date\">{{ post.publication_datetime|date:\"d.m.Y\" }}</div>\n                        <div class=\"sa-post-divider\"></div>\n                        <div class=\"d-flex flex-column\" style=\"gap: 10px; min-width: 0;\">\n                            <h4 class=\"mb-0\">{{ post.title }}</h4>\n                            {% include \"blog/components/post_meta.html\" %}\n                        </div>\n\n                        <div class=\"mt-4\">\n                            {% include \"blog/components/post_body.html\" %}\n                        </div>\n\n                        {% include \"blog/components/post_actions.html\" %}\n                        {% include \"blog/components/post_comments.html\" %}\n                    </article>\n                {% empty %}\n                    <article class=\"sa-post\">\n                        <p class=\"mb-0\">Nema postova.</p>\n                    </article>\n                {% endfor %}\n\n                {% if page_obj.has_other_pages %}\n                <div class=\"d-flex flex-wrap justify-content-between align-items-center gap-2 mt-3\">\n                    {% if page_obj.has_previous %}\n                        <a href=\"?page={{ page_obj.previous_page_number }}{{ pagination_query }}\" class=\"btn btn-sm btn-outline-secondary\">Prethodna</a>\n                    {% e"
+        },
+        {
+          "loop_var": "week",
+          "loop_src": "month_calendar",
+          "looks_like_posts": false,
+          "position": 15838,
+          "snippet": ""
+        },
+        {
+          "loop_var": "day",
+          "loop_src": "week",
+          "looks_like_posts": false,
+          "position": 15899,
+          "snippet": ""
+        },
+        {
+          "loop_var": "a",
+          "loop_src": "archives",
+          "looks_like_posts": false,
+          "position": 17727,
+          "snippet": ""
+        },
+        {
+          "loop_var": "box",
+          "loop_src": "left_boxes",
+          "looks_like_posts": false,
+          "position": 18501,
+          "snippet": ""
+        },
+        {
+          "loop_var": "box",
+          "loop_src": "right_boxes",
+          "looks_like_posts": false,
+          "position": 18792,
+          "snippet": ""
+        }
+      ],
+      "includes": [
+        "blog/components/post_meta.html",
+        "blog/components/post_body.html",
+        "blog/components/post_actions.html",
+        "blog/components/post_comments.html",
+        "blog/components/blog_profile_actions_sidebar.html",
+        "blog/components/live_analytics_widget.html",
+        "blog/components/live_analytics_widget.html",
+        "blog/components/blog_interaction_scripts.html"
+      ],
+      "blocks": [
+        "header",
+        "blog_header",
+        "left_sidebar",
+        "right_sidebar",
+        "content"
+      ],
+      "marker_counts": {
+        "blog-post": 2,
+        "post-title": 4,
+        "post-date": 2,
+        "post-meta": 4,
+        "post-actions": 2
+      },
+      "risk": "visok"
+    },
+    {
+      "name": "staza_prema_vrhovima",
+      "file": "blog\\templates\\blog\\designs\\staza_prema_vrhovima.html",
+      "extends": "blog/base.html",
+      "uses_shared_blog_posts": false,
+      "uses_shared_interaction_scripts": true,
+      "has_post_loop": true,
+      "loops": [
+        {
+          "loop_var": "post",
+          "loop_src": "page_obj",
+          "looks_like_posts": true,
+          "position": 11675,
+          "snippet": "-chip\">{{ active_category }}</span>\n                {% endif %}\n                {% if active_tag %}\n                    <span class=\"spv-filter-chip\">#{{ active_tag }}</span>\n                {% endif %}\n                <a class=\"spv-filter-clear\" href=\"{{ archive_base_url }}\">Makni filter</a>\n            </div>\n            {% endif %}\n\n            {% for post in page_obj %}\n                <article class=\"spv-post\">\n                    <div class=\"spv-post-date\">{{ post.publication_datetime|date:\"d.m.Y\" }}</div>\n                    <div class=\"spv-post-divider\"></div>\n                    <div class=\"d-flex flex-column\" style=\"gap: 10px; min-width: 0;\">\n                        <h4 class=\"mb-0\">{{ post.title }}</h4>\n                        {% include \"blog/components/post_meta.html\" %}\n                    </div>\n\n                    <div class=\"mt-4\">\n                        {% include \"blog/components/post_body.html\" %}\n                    </div>\n\n                    {% include \"blog/components/post_actions.html\" %}\n                    {% include \"blog/components/post_comments.html\" %}\n                </article>\n            {% empty %}\n                <div class=\"spv-post\">\n                    <p class=\"mb-0\">Nema postova.</p>\n                </div>\n            {% endfor %}\n\n            {% if page_obj.has_other_pages %}\n            <div class=\"d-flex flex-wrap justify-content-between align-items-center gap-2 mt-3\">\n                {% if page_obj.has_previous %}\n                    <a href=\"?page={{ page_obj.previous_page_number }}{{ pagination_query }}\" class=\"btn btn-sm btn-outline-secondary\">Prethodna</a>\n                {% else %}\n                    <span></span>\n                {% endif %}\n\n                <span clas"
+        },
+        {
+          "loop_var": "week",
+          "loop_src": "month_calendar",
+          "looks_like_posts": false,
+          "position": 14515,
+          "snippet": ""
+        },
+        {
+          "loop_var": "day",
+          "loop_src": "week",
+          "looks_like_posts": false,
+          "position": 14572,
+          "snippet": ""
+        },
+        {
+          "loop_var": "a",
+          "loop_src": "archives",
+          "looks_like_posts": false,
+          "position": 16290,
+          "snippet": ""
+        },
+        {
+          "loop_var": "box",
+          "loop_src": "left_boxes",
+          "looks_like_posts": false,
+          "position": 17005,
+          "snippet": ""
+        },
+        {
+          "loop_var": "box",
+          "loop_src": "right_boxes",
+          "looks_like_posts": false,
+          "position": 17269,
+          "snippet": ""
+        }
+      ],
+      "includes": [
+        "blog/components/post_meta.html",
+        "blog/components/post_body.html",
+        "blog/components/post_actions.html",
+        "blog/components/post_comments.html",
+        "blog/components/blog_profile_actions_sidebar.html",
+        "blog/components/live_analytics_widget.html",
+        "blog/components/live_analytics_widget.html",
+        "blog/components/blog_interaction_scripts.html"
+      ],
+      "blocks": [
+        "header",
+        "blog_header",
+        "left_sidebar",
+        "right_sidebar",
+        "content"
+      ],
+      "marker_counts": {
+        "blog-post": 1,
+        "post-title": 3,
+        "post-date": 2,
+        "post-meta": 4,
+        "post-actions": 2
+      },
+      "risk": "visok"
+    },
+    {
+      "name": "studio",
+      "file": "blog\\templates\\blog\\designs\\studio.html",
+      "extends": "blog/base.html",
+      "uses_shared_blog_posts": false,
+      "uses_shared_interaction_scripts": true,
+      "has_post_loop": true,
+      "loops": [
+        {
+          "loop_var": "week",
+          "loop_src": "month_calendar",
+          "looks_like_posts": false,
+          "position": 5388,
+          "snippet": ""
+        },
+        {
+          "loop_var": "day",
+          "loop_src": "week",
+          "looks_like_posts": false,
+          "position": 5441,
+          "snippet": ""
+        },
+        {
+          "loop_var": "a",
+          "loop_src": "archives",
+          "looks_like_posts": false,
+          "position": 7079,
+          "snippet": ""
+        },
+        {
+          "loop_var": "box",
+          "loop_src": "left_boxes",
+          "looks_like_posts": false,
+          "position": 7724,
+          "snippet": ""
+        },
+        {
+          "loop_var": "box",
+          "loop_src": "right_boxes",
+          "looks_like_posts": false,
+          "position": 8271,
+          "snippet": ""
+        },
+        {
+          "loop_var": "post",
+          "loop_src": "page_obj",
+          "looks_like_posts": true,
+          "position": 20666,
+          "snippet": "\" alt=\"Naslovna slika bloga\">\n            {% elif blog_preferences.active_design_customization.outer_background_asset %}\n                <img src=\"{% static blog_preferences.active_design_customization.outer_background_asset %}\" alt=\"Naslovna slika bloga\">\n            {% endif %}\n        </div>\n    </div>\n\n    <div class=\"soho-posts-wrap\">\n        {% for post in page_obj %}\n            <article class=\"soho-post-entry\">\n                <div class=\"d-flex justify-content-between align-items-start gap-3\">\n                    <div class=\"d-flex flex-column\" style=\"gap:10px; min-width:0; flex:1;\">\n                        <h4 class=\"mb-0\">{{ post.title }}</h4>\n                        {% include \"blog/components/post_meta.html\" %}\n                    </div>\n\n                    <div class=\"text-center ms-3 blog-date-shell blog-date-style-{{ blog_preferences.active_design_customization.post_date_style|default:'classic_vertical' }} blog-date-effect-{{ blog_preferences.active_design_customization.post_date_effect|default:'solid' }}\" style=\"line-height:1;\" data-date-style=\"{{ blog_preferences.active_design_customization.post_date_style|default:'classic_vertical' }}\" data-date-effect=\"{{ blog_preferences.active_design_customization.post_date_effect|default:'solid' }}\">\n                        <div class=\"blog-date-main\">\n                            <div class=\"blog-date-day-wrap\">\n                                <div class=\"blog-date-day\">{{ post.publication_datetime|date:\"d\" }}</div>\n                            </div>\n                            <div class=\"blog-date-text\">\n                                <div class=\"blog-date-month\">{{ post.publication_datetime|month_hr|upper }}</div>\n                                <div class=\"bl"
+        }
+      ],
+      "includes": [
+        "blog/components/live_analytics_widget.html",
+        "blog/components/live_analytics_widget.html",
+        "blog/components/live_analytics_widget.html",
+        "blog/components/post_meta.html",
+        "blog/components/post_body.html",
+        "blog/components/post_actions.html",
+        "blog/components/post_comments.html",
+        "blog/components/blog_interaction_scripts.html"
+      ],
+      "blocks": [
+        "blog_header",
+        "left_sidebar",
+        "right_sidebar",
+        "content"
+      ],
+      "marker_counts": {
+        "blog-post": 1,
+        "post-entry": 9,
+        "post-title": 3,
+        "post-meta": 1
+      },
+      "risk": "visok"
+    },
+    {
+      "name": "sumska_svjetlost",
+      "file": "blog\\templates\\blog\\designs\\sumska_svjetlost.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "uses_shared_blog_posts": true,
+      "uses_shared_interaction_scripts": false,
+      "has_post_loop": false,
+      "loops": [],
+      "includes": [
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_posts.html"
+      ],
+      "blocks": [
+        "content"
+      ],
+      "marker_counts": {
+        "blog-post": 23,
+        "post-entry": 20,
+        "post-title": 2,
+        "post-meta": 6,
+        "post-actions": 3
+      },
+      "risk": "nizak"
+    },
+    {
+      "name": "svemirski_horizont",
+      "file": "blog\\templates\\blog\\designs\\svemirski_horizont.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "uses_shared_blog_posts": true,
+      "uses_shared_interaction_scripts": false,
+      "has_post_loop": false,
+      "loops": [],
+      "includes": [
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_posts.html"
+      ],
+      "blocks": [
+        "content"
+      ],
+      "marker_counts": {
+        "blog-post": 23,
+        "post-entry": 20,
+        "post-title": 2,
+        "post-meta": 6,
+        "post-actions": 3
+      },
+      "risk": "nizak"
+    },
+    {
+      "name": "vecer_uz_jezero",
+      "file": "blog\\templates\\blog\\designs\\vecer_uz_jezero.html",
+      "extends": "blog/base.html",
+      "uses_shared_blog_posts": false,
+      "uses_shared_interaction_scripts": true,
+      "has_post_loop": true,
+      "loops": [
+        {
+          "loop_var": "post",
+          "loop_src": "page_obj",
+          "looks_like_posts": true,
+          "position": 12224,
+          "snippet": "er-chip\">{{ active_category }}</span>\n                {% endif %}\n                {% if active_tag %}\n                    <span class=\"vj-filter-chip\">#{{ active_tag }}</span>\n                {% endif %}\n                <a class=\"vj-filter-clear\" href=\"{{ archive_base_url }}\">Makni filter</a>\n            </div>\n            {% endif %}\n\n            {% for post in page_obj %}\n                <article class=\"vj-post\">\n                    <div class=\"vj-post-date\">{{ post.publication_datetime|date:\"d.m.Y\" }}</div>\n                    <div class=\"vj-post-divider\"></div>\n                    <div class=\"d-flex flex-column\" style=\"gap: 10px; min-width: 0;\">\n                        <h4 class=\"mb-0\">{{ post.title }}</h4>\n                        {% include \"blog/components/post_meta.html\" %}\n                    </div>\n\n                    <div class=\"mt-4\">\n                        {% include \"blog/components/post_body.html\" %}\n                    </div>\n\n                    {% include \"blog/components/post_actions.html\" %}\n                    {% include \"blog/components/post_comments.html\" %}\n                </article>\n            {% empty %}\n                <div class=\"vj-post\">\n                    <p class=\"mb-0\">Nema postova.</p>\n                </div>\n            {% endfor %}\n\n            {% if page_obj.has_other_pages %}\n            <div class=\"d-flex flex-wrap justify-content-between align-items-center gap-2 mt-3\">\n                {% if page_obj.has_previous %}\n                    <a href=\"?page={{ page_obj.previous_page_number }}{{ pagination_query }}\" class=\"btn btn-sm btn-outline-secondary\">Prethodna</a>\n                {% else %}\n                    <span></span>\n                {% endif %}\n\n                <span class=\"s"
+        },
+        {
+          "loop_var": "week",
+          "loop_src": "month_calendar",
+          "looks_like_posts": false,
+          "position": 15051,
+          "snippet": ""
+        },
+        {
+          "loop_var": "day",
+          "loop_src": "week",
+          "looks_like_posts": false,
+          "position": 15108,
+          "snippet": ""
+        },
+        {
+          "loop_var": "a",
+          "loop_src": "archives",
+          "looks_like_posts": false,
+          "position": 16814,
+          "snippet": ""
+        },
+        {
+          "loop_var": "box",
+          "loop_src": "left_boxes",
+          "looks_like_posts": false,
+          "position": 17526,
+          "snippet": ""
+        },
+        {
+          "loop_var": "box",
+          "loop_src": "right_boxes",
+          "looks_like_posts": false,
+          "position": 17787,
+          "snippet": ""
+        }
+      ],
+      "includes": [
+        "blog/components/post_meta.html",
+        "blog/components/post_body.html",
+        "blog/components/post_actions.html",
+        "blog/components/post_comments.html",
+        "blog/components/blog_profile_actions_sidebar.html",
+        "blog/components/live_analytics_widget.html",
+        "blog/components/live_analytics_widget.html",
+        "blog/components/blog_interaction_scripts.html"
+      ],
+      "blocks": [
+        "header",
+        "blog_header",
+        "left_sidebar",
+        "right_sidebar",
+        "content"
+      ],
+      "marker_counts": {
+        "blog-post": 1,
+        "post-title": 3,
+        "post-date": 2,
+        "post-meta": 4,
+        "post-actions": 2
+      },
+      "risk": "visok"
+    },
+    {
+      "name": "vecer_zaljubljenih",
+      "file": "blog\\templates\\blog\\designs\\vecer_zaljubljenih.html",
+      "extends": "blog/base.html",
+      "uses_shared_blog_posts": false,
+      "uses_shared_interaction_scripts": false,
+      "has_post_loop": true,
+      "loops": [
+        {
+          "loop_var": "post",
+          "loop_src": "page_obj",
+          "looks_like_posts": true,
+          "position": 12519,
+          "snippet": "er-chip\">{{ active_category }}</span>\n                {% endif %}\n                {% if active_tag %}\n                    <span class=\"vz-filter-chip\">#{{ active_tag }}</span>\n                {% endif %}\n                <a class=\"vz-filter-clear\" href=\"{{ archive_base_url }}\">Makni filter</a>\n            </div>\n            {% endif %}\n\n            {% for post in page_obj %}\n                <article class=\"vz-post\">\n                    <div class=\"vz-post-date\">{{ post.publication_datetime|date:\"d.m.Y\" }}</div>\n                    <div class=\"vz-post-divider\"></div>\n                    <div class=\"d-flex flex-column\" style=\"gap: 10px; min-width: 0;\">\n                        <h4 class=\"mb-0\">{{ post.title }}</h4>\n                        {% include \"blog/components/post_meta.html\" %}\n                    </div>\n\n                    <div class=\"mt-4\">\n                        {% include \"blog/components/post_body.html\" %}\n                    </div>\n\n                    {% include \"blog/components/post_actions.html\" %}\n                    {% include \"blog/components/post_comments.html\" %}\n                </article>\n            {% empty %}\n                <div class=\"vz-post\">\n                    <p class=\"mb-0\">Nema postova.</p>\n                </div>\n            {% endfor %}\n\n            {% if page_obj.has_other_pages %}\n            <div class=\"d-flex flex-wrap justify-content-between align-items-center gap-2 mt-3\">\n                {% if page_obj.has_previous %}\n                    <a href=\"?page={{ page_obj.previous_page_number }}{{ pagination_query }}\" class=\"btn btn-sm btn-outline-secondary\">Prethodna</a>\n                {% else %}\n                    <span></span>\n                {% endif %}\n\n                <span class=\"s"
+        },
+        {
+          "loop_var": "week",
+          "loop_src": "month_calendar",
+          "looks_like_posts": false,
+          "position": 15346,
+          "snippet": ""
+        },
+        {
+          "loop_var": "day",
+          "loop_src": "week",
+          "looks_like_posts": false,
+          "position": 15403,
+          "snippet": ""
+        },
+        {
+          "loop_var": "a",
+          "loop_src": "archives",
+          "looks_like_posts": false,
+          "position": 17109,
+          "snippet": ""
+        },
+        {
+          "loop_var": "box",
+          "loop_src": "left_boxes",
+          "looks_like_posts": false,
+          "position": 17555,
+          "snippet": ""
+        },
+        {
+          "loop_var": "box",
+          "loop_src": "right_boxes",
+          "looks_like_posts": false,
+          "position": 17832,
+          "snippet": ""
+        }
+      ],
+      "includes": [
+        "blog/components/post_meta.html",
+        "blog/components/post_body.html",
+        "blog/components/post_actions.html",
+        "blog/components/post_comments.html",
+        "blog/components/blog_profile_actions_sidebar.html"
+      ],
+      "blocks": [
+        "header",
+        "blog_header"
+      ],
+      "marker_counts": {
+        "blog-post": 1,
+        "post-title": 3,
+        "post-date": 2,
+        "post-meta": 4,
+        "post-actions": 2
+      },
+      "risk": "visok"
+    },
+    {
+      "name": "vodopad_u_magli",
+      "file": "blog\\templates\\blog\\designs\\vodopad_u_magli.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "uses_shared_blog_posts": true,
+      "uses_shared_interaction_scripts": false,
+      "has_post_loop": false,
+      "loops": [],
+      "includes": [
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_posts.html"
+      ],
+      "blocks": [
+        "content"
+      ],
+      "marker_counts": {
+        "blog-post": 6,
+        "post-entry": 5,
+        "post-title": 2,
+        "post-date": 1,
+        "post-meta": 2
+      },
+      "risk": "nizak"
+    },
+    {
+      "name": "zlatni_horizont",
+      "file": "blog\\templates\\blog\\designs\\zlatni_horizont.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "uses_shared_blog_posts": true,
+      "uses_shared_interaction_scripts": false,
+      "has_post_loop": false,
+      "loops": [],
+      "includes": [
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_posts.html"
+      ],
+      "blocks": [
+        "content"
+      ],
+      "marker_counts": {
+        "blog-post": 23,
+        "post-entry": 20,
+        "post-title": 2,
+        "post-meta": 6,
+        "post-actions": 3
+      },
+      "risk": "nizak"
+    },
+    {
+      "name": "zlatno_polje",
+      "file": "blog\\templates\\blog\\designs\\zlatno_polje.html",
+      "extends": "blog/layouts/blog_design_base.html",
+      "uses_shared_blog_posts": true,
+      "uses_shared_interaction_scripts": false,
+      "has_post_loop": false,
+      "loops": [],
+      "includes": [
+        "blog/components/blog_design_styles.html",
+        "blog/components/blog_posts.html"
+      ],
+      "blocks": [
+        "content"
+      ],
+      "marker_counts": {
+        "blog-post": 23,
+        "post-entry": 20,
+        "post-title": 2,
+        "post-meta": 6,
+        "post-actions": 3
+      },
+      "risk": "nizak"
+    }
+  ]
+}
