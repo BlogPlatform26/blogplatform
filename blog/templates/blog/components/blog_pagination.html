@@ -1,0 +1,11 @@
+{% if page_obj.has_other_pages %}
+    <div class="d-flex flex-wrap justify-content-center align-items-center gap-2 mt-4 mb-4">
+        {% if page_obj.has_previous %}
+            <a href="?page={{ page_obj.previous_page_number }}{{ pagination_query }}" class="btn btn-sm btn-outline-secondary">Prethodna</a>
+        {% endif %}
+        <span class="align-self-center small">Stranica {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}</span>
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}{{ pagination_query }}" class="btn btn-sm btn-outline-secondary">Sljedeća</a>
+        {% endif %}
+    </div>
+{% endif %}
