@@ -1,0 +1,2969 @@
+{
+  "created_at": "2026-07-03 11:02:07",
+  "total_design_templates": 42,
+  "designs_with_navbar_hits": 31,
+  "designs_with_dangerous_hits": 31,
+  "group_counts": {
+    "zajednicki_layout": 24,
+    "right_sidebar": 3,
+    "posebni": 9,
+    "posebni_hero": 2,
+    "simple": 4
+  },
+  "group_risky_counts": {
+    "zajednicki_layout": 20,
+    "posebni": 9,
+    "posebni_hero": 2
+  },
+  "designs": [
+    {
+      "path": "blog\\templates\\blog\\designs\\asfaltni_plamen.html",
+      "design": "asfaltni_plamen",
+      "group": "zajednicki_layout",
+      "navbar_hits": 2,
+      "dangerous_hits": 2,
+      "matches": [
+        {
+          "line": 53,
+          "line_text": "nav.navbar,",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background"
+          ],
+          "snippet": {
+            "start_line": 50,
+            "end_line": 56,
+            "text": "0050:     background-size: 100% 100%, 100% auto;\n0051: }\n0052: \n0053: nav.navbar,\n0054: nav.navbar .dropdown-menu {\n0055:     z-index: 4000 !important;\n0056: }"
+          }
+        },
+        {
+          "line": 54,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [
+            "background"
+          ],
+          "snippet": {
+            "start_line": 51,
+            "end_line": 57,
+            "text": "0051: }\n0052: \n0053: nav.navbar,\n0054: nav.navbar .dropdown-menu {\n0055:     z-index: 4000 !important;\n0056: }\n0057: "
+          }
+        }
+      ],
+      "dangerous_matches": [
+        {
+          "line": 53,
+          "line_text": "nav.navbar,",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background"
+          ],
+          "snippet": {
+            "start_line": 50,
+            "end_line": 56,
+            "text": "0050:     background-size: 100% 100%, 100% auto;\n0051: }\n0052: \n0053: nav.navbar,\n0054: nav.navbar .dropdown-menu {\n0055:     z-index: 4000 !important;\n0056: }"
+          }
+        },
+        {
+          "line": 54,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [
+            "background"
+          ],
+          "snippet": {
+            "start_line": 51,
+            "end_line": 57,
+            "text": "0051: }\n0052: \n0053: nav.navbar,\n0054: nav.navbar .dropdown-menu {\n0055:     z-index: 4000 !important;\n0056: }\n0057: "
+          }
+        }
+      ],
+      "visibility": "vjerojatno_ponuden"
+    },
+    {
+      "path": "blog\\templates\\blog\\designs\\carobna_ljubicasta.html",
+      "design": "carobna_ljubicasta",
+      "group": "zajednicki_layout",
+      "navbar_hits": 2,
+      "dangerous_hits": 2,
+      "matches": [
+        {
+          "line": 84,
+          "line_text": "nav.navbar {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background"
+          ],
+          "snippet": {
+            "start_line": 81,
+            "end_line": 87,
+            "text": "0081:     filter: blur(0.15px);\n0082: }\n0083: \n0084: nav.navbar {\n0085:     position: relative;\n0086:     z-index: 4000 !important;\n0087: }"
+          }
+        },
+        {
+          "line": 89,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [],
+          "snippet": {
+            "start_line": 86,
+            "end_line": 92,
+            "text": "0086:     z-index: 4000 !important;\n0087: }\n0088: \n0089: nav.navbar .dropdown-menu {\n0090:     z-index: 4100 !important;\n0091: }\n0092: "
+          }
+        }
+      ],
+      "dangerous_matches": [
+        {
+          "line": 84,
+          "line_text": "nav.navbar {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background"
+          ],
+          "snippet": {
+            "start_line": 81,
+            "end_line": 87,
+            "text": "0081:     filter: blur(0.15px);\n0082: }\n0083: \n0084: nav.navbar {\n0085:     position: relative;\n0086:     z-index: 4000 !important;\n0087: }"
+          }
+        },
+        {
+          "line": 89,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [],
+          "snippet": {
+            "start_line": 86,
+            "end_line": 92,
+            "text": "0086:     z-index: 4000 !important;\n0087: }\n0088: \n0089: nav.navbar .dropdown-menu {\n0090:     z-index: 4100 !important;\n0091: }\n0092: "
+          }
+        }
+      ],
+      "visibility": "vjerojatno_ponuden"
+    },
+    {
+      "path": "blog\\templates\\blog\\designs\\classic.html",
+      "design": "classic",
+      "group": "zajednicki_layout",
+      "navbar_hits": 0,
+      "dangerous_hits": 0,
+      "matches": [],
+      "dangerous_matches": [],
+      "visibility": "vjerojatno_ponuden"
+    },
+    {
+      "path": "blog\\templates\\blog\\designs\\classic_right.html",
+      "design": "classic_right",
+      "group": "right_sidebar",
+      "navbar_hits": 0,
+      "dangerous_hits": 0,
+      "matches": [],
+      "dangerous_matches": [],
+      "visibility": "vjerojatno_ponuden"
+    },
+    {
+      "path": "blog\\templates\\blog\\designs\\dark.html",
+      "design": "dark",
+      "group": "zajednicki_layout",
+      "navbar_hits": 0,
+      "dangerous_hits": 0,
+      "matches": [],
+      "dangerous_matches": [],
+      "visibility": "vjerojatno_ponuden"
+    },
+    {
+      "path": "blog\\templates\\blog\\designs\\dark_right.html",
+      "design": "dark_right",
+      "group": "right_sidebar",
+      "navbar_hits": 0,
+      "dangerous_hits": 0,
+      "matches": [],
+      "dangerous_matches": [],
+      "visibility": "vjerojatno_ponuden"
+    },
+    {
+      "path": "blog\\templates\\blog\\designs\\default.html",
+      "design": "default",
+      "group": "zajednicki_layout",
+      "navbar_hits": 0,
+      "dangerous_hits": 0,
+      "matches": [],
+      "dangerous_matches": [],
+      "visibility": "vjerojatno_ponuden"
+    },
+    {
+      "path": "blog\\templates\\blog\\designs\\default_right.html",
+      "design": "default_right",
+      "group": "right_sidebar",
+      "navbar_hits": 0,
+      "dangerous_hits": 0,
+      "matches": [],
+      "dangerous_matches": [],
+      "visibility": "vjerojatno_ponuden"
+    },
+    {
+      "path": "blog\\templates\\blog\\designs\\dimni_akordi.html",
+      "design": "dimni_akordi",
+      "group": "zajednicki_layout",
+      "navbar_hits": 2,
+      "dangerous_hits": 2,
+      "matches": [
+        {
+          "line": 53,
+          "line_text": "nav.navbar,",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background"
+          ],
+          "snippet": {
+            "start_line": 50,
+            "end_line": 56,
+            "text": "0050:     background-size: 100% 100%, 100% auto;\n0051: }\n0052: \n0053: nav.navbar,\n0054: nav.navbar .dropdown-menu {\n0055:     z-index: 4000 !important;\n0056: }"
+          }
+        },
+        {
+          "line": 54,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [
+            "background"
+          ],
+          "snippet": {
+            "start_line": 51,
+            "end_line": 57,
+            "text": "0051: }\n0052: \n0053: nav.navbar,\n0054: nav.navbar .dropdown-menu {\n0055:     z-index: 4000 !important;\n0056: }\n0057: "
+          }
+        }
+      ],
+      "dangerous_matches": [
+        {
+          "line": 53,
+          "line_text": "nav.navbar,",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background"
+          ],
+          "snippet": {
+            "start_line": 50,
+            "end_line": 56,
+            "text": "0050:     background-size: 100% 100%, 100% auto;\n0051: }\n0052: \n0053: nav.navbar,\n0054: nav.navbar .dropdown-menu {\n0055:     z-index: 4000 !important;\n0056: }"
+          }
+        },
+        {
+          "line": 54,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [
+            "background"
+          ],
+          "snippet": {
+            "start_line": 51,
+            "end_line": 57,
+            "text": "0051: }\n0052: \n0053: nav.navbar,\n0054: nav.navbar .dropdown-menu {\n0055:     z-index: 4000 !important;\n0056: }\n0057: "
+          }
+        }
+      ],
+      "visibility": "vjerojatno_ponuden"
+    },
+    {
+      "path": "blog\\templates\\blog\\designs\\iznad_oblaka.html",
+      "design": "iznad_oblaka",
+      "group": "zajednicki_layout",
+      "navbar_hits": 2,
+      "dangerous_hits": 2,
+      "matches": [
+        {
+          "line": 43,
+          "line_text": "nav.navbar {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background"
+          ],
+          "snippet": {
+            "start_line": 40,
+            "end_line": 46,
+            "text": "0040:     background-size: 100% 100%, 100% auto;\n0041: }\n0042: \n0043: nav.navbar {\n0044:     position: relative;\n0045:     z-index: 4000 !important;\n0046: }"
+          }
+        },
+        {
+          "line": 48,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [],
+          "snippet": {
+            "start_line": 45,
+            "end_line": 51,
+            "text": "0045:     z-index: 4000 !important;\n0046: }\n0047: \n0048: nav.navbar .dropdown-menu {\n0049:     z-index: 4100 !important;\n0050: }\n0051: "
+          }
+        }
+      ],
+      "dangerous_matches": [
+        {
+          "line": 43,
+          "line_text": "nav.navbar {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background"
+          ],
+          "snippet": {
+            "start_line": 40,
+            "end_line": 46,
+            "text": "0040:     background-size: 100% 100%, 100% auto;\n0041: }\n0042: \n0043: nav.navbar {\n0044:     position: relative;\n0045:     z-index: 4000 !important;\n0046: }"
+          }
+        },
+        {
+          "line": 48,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [],
+          "snippet": {
+            "start_line": 45,
+            "end_line": 51,
+            "text": "0045:     z-index: 4000 !important;\n0046: }\n0047: \n0048: nav.navbar .dropdown-menu {\n0049:     z-index: 4100 !important;\n0050: }\n0051: "
+          }
+        }
+      ],
+      "visibility": "vjerojatno_ponuden"
+    },
+    {
+      "path": "blog\\templates\\blog\\designs\\jedro_u_suton.html",
+      "design": "jedro_u_suton",
+      "group": "posebni",
+      "navbar_hits": 2,
+      "dangerous_hits": 2,
+      "matches": [
+        {
+          "line": 31,
+          "line_text": "nav.navbar {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background",
+            "border"
+          ],
+          "snippet": {
+            "start_line": 28,
+            "end_line": 34,
+            "text": "0028:     display: none;\n0029: }\n0030: \n0031: nav.navbar {\n0032:     position: relative;\n0033:     z-index: 4000 !important;\n0034:     background: rgba(38, 23, 17, 0.78) !important;"
+          }
+        },
+        {
+          "line": 39,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [
+            "border",
+            "width"
+          ],
+          "snippet": {
+            "start_line": 36,
+            "end_line": 42,
+            "text": "0036:     border-bottom: 1px solid rgba(255, 228, 203, 0.10);\n0037: }\n0038: \n0039: nav.navbar .dropdown-menu {\n0040:     z-index: 4100 !important;\n0041: }\n0042: "
+          }
+        }
+      ],
+      "dangerous_matches": [
+        {
+          "line": 31,
+          "line_text": "nav.navbar {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background",
+            "border"
+          ],
+          "snippet": {
+            "start_line": 28,
+            "end_line": 34,
+            "text": "0028:     display: none;\n0029: }\n0030: \n0031: nav.navbar {\n0032:     position: relative;\n0033:     z-index: 4000 !important;\n0034:     background: rgba(38, 23, 17, 0.78) !important;"
+          }
+        },
+        {
+          "line": 39,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [
+            "border",
+            "width"
+          ],
+          "snippet": {
+            "start_line": 36,
+            "end_line": 42,
+            "text": "0036:     border-bottom: 1px solid rgba(255, 228, 203, 0.10);\n0037: }\n0038: \n0039: nav.navbar .dropdown-menu {\n0040:     z-index: 4100 !important;\n0041: }\n0042: "
+          }
+        }
+      ],
+      "visibility": "vjerojatno_ponuden"
+    },
+    {
+      "path": "blog\\templates\\blog\\designs\\kraljevska_pozornica.html",
+      "design": "kraljevska_pozornica",
+      "group": "zajednicki_layout",
+      "navbar_hits": 2,
+      "dangerous_hits": 2,
+      "matches": [
+        {
+          "line": 79,
+          "line_text": "nav.navbar {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background"
+          ],
+          "snippet": {
+            "start_line": 76,
+            "end_line": 82,
+            "text": "0076:     background-repeat: no-repeat;\n0077: }\n0078: \n0079: nav.navbar {\n0080:     position: relative;\n0081:     z-index: 4000 !important;\n0082: }"
+          }
+        },
+        {
+          "line": 84,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [],
+          "snippet": {
+            "start_line": 81,
+            "end_line": 87,
+            "text": "0081:     z-index: 4000 !important;\n0082: }\n0083: \n0084: nav.navbar .dropdown-menu {\n0085:     z-index: 4100 !important;\n0086: }\n0087: "
+          }
+        }
+      ],
+      "dangerous_matches": [
+        {
+          "line": 79,
+          "line_text": "nav.navbar {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background"
+          ],
+          "snippet": {
+            "start_line": 76,
+            "end_line": 82,
+            "text": "0076:     background-repeat: no-repeat;\n0077: }\n0078: \n0079: nav.navbar {\n0080:     position: relative;\n0081:     z-index: 4000 !important;\n0082: }"
+          }
+        },
+        {
+          "line": 84,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [],
+          "snippet": {
+            "start_line": 81,
+            "end_line": 87,
+            "text": "0081:     z-index: 4000 !important;\n0082: }\n0083: \n0084: nav.navbar .dropdown-menu {\n0085:     z-index: 4100 !important;\n0086: }\n0087: "
+          }
+        }
+      ],
+      "visibility": "vjerojatno_ponuden"
+    },
+    {
+      "path": "blog\\templates\\blog\\designs\\litica_noci.html",
+      "design": "litica_noci",
+      "group": "zajednicki_layout",
+      "navbar_hits": 0,
+      "dangerous_hits": 0,
+      "matches": [],
+      "dangerous_matches": [],
+      "visibility": "vjerojatno_ponuden"
+    },
+    {
+      "path": "blog\\templates\\blog\\designs\\magazin.html",
+      "design": "magazin",
+      "group": "posebni_hero",
+      "navbar_hits": 2,
+      "dangerous_hits": 2,
+      "matches": [
+        {
+          "line": 352,
+          "line_text": "nav.navbar {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "width"
+          ],
+          "snippet": {
+            "start_line": 349,
+            "end_line": 355,
+            "text": "0349:     z-index: 9999;\n0350: }\n0351: \n0352: nav.navbar {\n0353:     position: relative;\n0354:     z-index: 5000 !important;\n0355: }"
+          }
+        },
+        {
+          "line": 357,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [
+            "margin"
+          ],
+          "snippet": {
+            "start_line": 354,
+            "end_line": 360,
+            "text": "0354:     z-index: 5000 !important;\n0355: }\n0356: \n0357: nav.navbar .dropdown-menu {\n0358:     z-index: 5100 !important;\n0359: }\n0360: "
+          }
+        }
+      ],
+      "dangerous_matches": [
+        {
+          "line": 352,
+          "line_text": "nav.navbar {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "width"
+          ],
+          "snippet": {
+            "start_line": 349,
+            "end_line": 355,
+            "text": "0349:     z-index: 9999;\n0350: }\n0351: \n0352: nav.navbar {\n0353:     position: relative;\n0354:     z-index: 5000 !important;\n0355: }"
+          }
+        },
+        {
+          "line": 357,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [
+            "margin"
+          ],
+          "snippet": {
+            "start_line": 354,
+            "end_line": 360,
+            "text": "0354:     z-index: 5000 !important;\n0355: }\n0356: \n0357: nav.navbar .dropdown-menu {\n0358:     z-index: 5100 !important;\n0359: }\n0360: "
+          }
+        }
+      ],
+      "visibility": "vjerojatno_ponuden"
+    },
+    {
+      "path": "blog\\templates\\blog\\designs\\misticno_jezero.html",
+      "design": "misticno_jezero",
+      "group": "posebni",
+      "navbar_hits": 2,
+      "dangerous_hits": 2,
+      "matches": [
+        {
+          "line": 31,
+          "line_text": "nav.navbar {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background",
+            "border"
+          ],
+          "snippet": {
+            "start_line": 28,
+            "end_line": 34,
+            "text": "0028:     display: none;\n0029: }\n0030: \n0031: nav.navbar {\n0032:     position: relative;\n0033:     z-index: 4000 !important;\n0034:     background: rgba(26, 10, 36, 0.76) !important;"
+          }
+        },
+        {
+          "line": 39,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [
+            "border",
+            "width"
+          ],
+          "snippet": {
+            "start_line": 36,
+            "end_line": 42,
+            "text": "0036:     backdrop-filter: blur(8px);\n0037: }\n0038: \n0039: nav.navbar .dropdown-menu {\n0040:     z-index: 4100 !important;\n0041: }\n0042: "
+          }
+        }
+      ],
+      "dangerous_matches": [
+        {
+          "line": 31,
+          "line_text": "nav.navbar {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background",
+            "border"
+          ],
+          "snippet": {
+            "start_line": 28,
+            "end_line": 34,
+            "text": "0028:     display: none;\n0029: }\n0030: \n0031: nav.navbar {\n0032:     position: relative;\n0033:     z-index: 4000 !important;\n0034:     background: rgba(26, 10, 36, 0.76) !important;"
+          }
+        },
+        {
+          "line": 39,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [
+            "border",
+            "width"
+          ],
+          "snippet": {
+            "start_line": 36,
+            "end_line": 42,
+            "text": "0036:     backdrop-filter: blur(8px);\n0037: }\n0038: \n0039: nav.navbar .dropdown-menu {\n0040:     z-index: 4100 !important;\n0041: }\n0042: "
+          }
+        }
+      ],
+      "visibility": "vjerojatno_ponuden"
+    },
+    {
+      "path": "blog\\templates\\blog\\designs\\mjesecev_ples.html",
+      "design": "mjesecev_ples",
+      "group": "zajednicki_layout",
+      "navbar_hits": 2,
+      "dangerous_hits": 2,
+      "matches": [
+        {
+          "line": 53,
+          "line_text": "nav.navbar,",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background"
+          ],
+          "snippet": {
+            "start_line": 50,
+            "end_line": 56,
+            "text": "0050:     background-size: 100% 100%, 100% auto;\n0051: }\n0052: \n0053: nav.navbar,\n0054: nav.navbar .dropdown-menu {\n0055:     z-index: 4000 !important;\n0056: }"
+          }
+        },
+        {
+          "line": 54,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [
+            "background"
+          ],
+          "snippet": {
+            "start_line": 51,
+            "end_line": 57,
+            "text": "0051: }\n0052: \n0053: nav.navbar,\n0054: nav.navbar .dropdown-menu {\n0055:     z-index: 4000 !important;\n0056: }\n0057: "
+          }
+        }
+      ],
+      "dangerous_matches": [
+        {
+          "line": 53,
+          "line_text": "nav.navbar,",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background"
+          ],
+          "snippet": {
+            "start_line": 50,
+            "end_line": 56,
+            "text": "0050:     background-size: 100% 100%, 100% auto;\n0051: }\n0052: \n0053: nav.navbar,\n0054: nav.navbar .dropdown-menu {\n0055:     z-index: 4000 !important;\n0056: }"
+          }
+        },
+        {
+          "line": 54,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [
+            "background"
+          ],
+          "snippet": {
+            "start_line": 51,
+            "end_line": 57,
+            "text": "0051: }\n0052: \n0053: nav.navbar,\n0054: nav.navbar .dropdown-menu {\n0055:     z-index: 4000 !important;\n0056: }\n0057: "
+          }
+        }
+      ],
+      "visibility": "vjerojatno_ponuden"
+    },
+    {
+      "path": "blog\\templates\\blog\\designs\\morski_prijelaz.html",
+      "design": "morski_prijelaz",
+      "group": "zajednicki_layout",
+      "navbar_hits": 2,
+      "dangerous_hits": 2,
+      "matches": [
+        {
+          "line": 41,
+          "line_text": "nav.navbar {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background"
+          ],
+          "snippet": {
+            "start_line": 38,
+            "end_line": 44,
+            "text": "0038:         background-size: cover, cover;\n0039:     }\n0040: \n0041:     nav.navbar {\n0042:         position: relative;\n0043:         z-index: 4000 !important;\n0044:     }"
+          }
+        },
+        {
+          "line": 46,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [],
+          "snippet": {
+            "start_line": 43,
+            "end_line": 49,
+            "text": "0043:         z-index: 4000 !important;\n0044:     }\n0045: \n0046:     nav.navbar .dropdown-menu {\n0047:         z-index: 4100 !important;\n0048:     }\n0049: "
+          }
+        }
+      ],
+      "dangerous_matches": [
+        {
+          "line": 41,
+          "line_text": "nav.navbar {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background"
+          ],
+          "snippet": {
+            "start_line": 38,
+            "end_line": 44,
+            "text": "0038:         background-size: cover, cover;\n0039:     }\n0040: \n0041:     nav.navbar {\n0042:         position: relative;\n0043:         z-index: 4000 !important;\n0044:     }"
+          }
+        },
+        {
+          "line": 46,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [],
+          "snippet": {
+            "start_line": 43,
+            "end_line": 49,
+            "text": "0043:         z-index: 4000 !important;\n0044:     }\n0045: \n0046:     nav.navbar .dropdown-menu {\n0047:         z-index: 4100 !important;\n0048:     }\n0049: "
+          }
+        }
+      ],
+      "visibility": "vjerojatno_ponuden"
+    },
+    {
+      "path": "blog\\templates\\blog\\designs\\nebeska_klasika.html",
+      "design": "nebeska_klasika",
+      "group": "posebni",
+      "navbar_hits": 2,
+      "dangerous_hits": 2,
+      "matches": [
+        {
+          "line": 29,
+          "line_text": "nav.navbar {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background",
+            "border"
+          ],
+          "snippet": {
+            "start_line": 26,
+            "end_line": 32,
+            "text": "0026:     display: none;\n0027: }\n0028: \n0029: nav.navbar {\n0030:     position: relative;\n0031:     z-index: 4000 !important;\n0032:     background: rgba(42, 45, 51, 0.84) !important;"
+          }
+        },
+        {
+          "line": 37,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [
+            "border",
+            "width"
+          ],
+          "snippet": {
+            "start_line": 34,
+            "end_line": 40,
+            "text": "0034:     border-bottom: 1px solid rgba(255,255,255,0.08);\n0035: }\n0036: \n0037: nav.navbar .dropdown-menu {\n0038:     z-index: 4100 !important;\n0039: }\n0040: "
+          }
+        }
+      ],
+      "dangerous_matches": [
+        {
+          "line": 29,
+          "line_text": "nav.navbar {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background",
+            "border"
+          ],
+          "snippet": {
+            "start_line": 26,
+            "end_line": 32,
+            "text": "0026:     display: none;\n0027: }\n0028: \n0029: nav.navbar {\n0030:     position: relative;\n0031:     z-index: 4000 !important;\n0032:     background: rgba(42, 45, 51, 0.84) !important;"
+          }
+        },
+        {
+          "line": 37,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [
+            "border",
+            "width"
+          ],
+          "snippet": {
+            "start_line": 34,
+            "end_line": 40,
+            "text": "0034:     border-bottom: 1px solid rgba(255,255,255,0.08);\n0035: }\n0036: \n0037: nav.navbar .dropdown-menu {\n0038:     z-index: 4100 !important;\n0039: }\n0040: "
+          }
+        }
+      ],
+      "visibility": "vjerojatno_ponuden"
+    },
+    {
+      "path": "blog\\templates\\blog\\designs\\nebeski_mir.html",
+      "design": "nebeski_mir",
+      "group": "zajednicki_layout",
+      "navbar_hits": 2,
+      "dangerous_hits": 2,
+      "matches": [
+        {
+          "line": 44,
+          "line_text": "nav.navbar {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background"
+          ],
+          "snippet": {
+            "start_line": 41,
+            "end_line": 47,
+            "text": "0041:     background-size: 100% 100%, cover;\n0042: }\n0043: \n0044: nav.navbar {\n0045:     position: relative;\n0046:     z-index: 4000 !important;\n0047:     background: rgba(0, 0, 0, 0.88) !important;"
+          }
+        },
+        {
+          "line": 51,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [
+            "background"
+          ],
+          "snippet": {
+            "start_line": 48,
+            "end_line": 54,
+            "text": "0048:     backdrop-filter: blur(8px);\n0049: }\n0050: \n0051: nav.navbar .dropdown-menu {\n0052:     z-index: 4100 !important;\n0053: }\n0054: "
+          }
+        }
+      ],
+      "dangerous_matches": [
+        {
+          "line": 44,
+          "line_text": "nav.navbar {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background"
+          ],
+          "snippet": {
+            "start_line": 41,
+            "end_line": 47,
+            "text": "0041:     background-size: 100% 100%, cover;\n0042: }\n0043: \n0044: nav.navbar {\n0045:     position: relative;\n0046:     z-index: 4000 !important;\n0047:     background: rgba(0, 0, 0, 0.88) !important;"
+          }
+        },
+        {
+          "line": 51,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [
+            "background"
+          ],
+          "snippet": {
+            "start_line": 48,
+            "end_line": 54,
+            "text": "0048:     backdrop-filter: blur(8px);\n0049: }\n0050: \n0051: nav.navbar .dropdown-menu {\n0052:     z-index: 4100 !important;\n0053: }\n0054: "
+          }
+        }
+      ],
+      "visibility": "vjerojatno_ponuden"
+    },
+    {
+      "path": "blog\\templates\\blog\\designs\\nebesko_polje.html",
+      "design": "nebesko_polje",
+      "group": "zajednicki_layout",
+      "navbar_hits": 2,
+      "dangerous_hits": 2,
+      "matches": [
+        {
+          "line": 60,
+          "line_text": "nav.navbar {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background"
+          ],
+          "snippet": {
+            "start_line": 57,
+            "end_line": 63,
+            "text": "0057:     background-size: cover;\n0058: }\n0059: \n0060: nav.navbar {\n0061:     position: relative;\n0062:     z-index: 5000 !important;\n0063: }"
+          }
+        },
+        {
+          "line": 65,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [],
+          "snippet": {
+            "start_line": 62,
+            "end_line": 68,
+            "text": "0062:     z-index: 5000 !important;\n0063: }\n0064: \n0065: nav.navbar .dropdown-menu {\n0066:     z-index: 5100 !important;\n0067: }\n0068: "
+          }
+        }
+      ],
+      "dangerous_matches": [
+        {
+          "line": 60,
+          "line_text": "nav.navbar {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background"
+          ],
+          "snippet": {
+            "start_line": 57,
+            "end_line": 63,
+            "text": "0057:     background-size: cover;\n0058: }\n0059: \n0060: nav.navbar {\n0061:     position: relative;\n0062:     z-index: 5000 !important;\n0063: }"
+          }
+        },
+        {
+          "line": 65,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [],
+          "snippet": {
+            "start_line": 62,
+            "end_line": 68,
+            "text": "0062:     z-index: 5000 !important;\n0063: }\n0064: \n0065: nav.navbar .dropdown-menu {\n0066:     z-index: 5100 !important;\n0067: }\n0068: "
+          }
+        }
+      ],
+      "visibility": "vjerojatno_ponuden"
+    },
+    {
+      "path": "blog\\templates\\blog\\designs\\neonski_grad.html",
+      "design": "neonski_grad",
+      "group": "zajednicki_layout",
+      "navbar_hits": 2,
+      "dangerous_hits": 2,
+      "matches": [
+        {
+          "line": 44,
+          "line_text": "nav.navbar {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background"
+          ],
+          "snippet": {
+            "start_line": 41,
+            "end_line": 47,
+            "text": "0041:     background-size: 100% 100%, 100% 100%, 100% auto;\n0042: }\n0043: \n0044: nav.navbar {\n0045:     position: relative;\n0046:     z-index: 4000 !important;\n0047: }"
+          }
+        },
+        {
+          "line": 49,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [],
+          "snippet": {
+            "start_line": 46,
+            "end_line": 52,
+            "text": "0046:     z-index: 4000 !important;\n0047: }\n0048: \n0049: nav.navbar .dropdown-menu {\n0050:     z-index: 4100 !important;\n0051: }\n0052: "
+          }
+        }
+      ],
+      "dangerous_matches": [
+        {
+          "line": 44,
+          "line_text": "nav.navbar {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background"
+          ],
+          "snippet": {
+            "start_line": 41,
+            "end_line": 47,
+            "text": "0041:     background-size: 100% 100%, 100% 100%, 100% auto;\n0042: }\n0043: \n0044: nav.navbar {\n0045:     position: relative;\n0046:     z-index: 4000 !important;\n0047: }"
+          }
+        },
+        {
+          "line": 49,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [],
+          "snippet": {
+            "start_line": 46,
+            "end_line": 52,
+            "text": "0046:     z-index: 4000 !important;\n0047: }\n0048: \n0049: nav.navbar .dropdown-menu {\n0050:     z-index: 4100 !important;\n0051: }\n0052: "
+          }
+        }
+      ],
+      "visibility": "vjerojatno_ponuden"
+    },
+    {
+      "path": "blog\\templates\\blog\\designs\\planine_u_magli.html",
+      "design": "planine_u_magli",
+      "group": "zajednicki_layout",
+      "navbar_hits": 2,
+      "dangerous_hits": 2,
+      "matches": [
+        {
+          "line": 43,
+          "line_text": "nav.navbar {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background"
+          ],
+          "snippet": {
+            "start_line": 40,
+            "end_line": 46,
+            "text": "0040:     background-size: 100% 100%, cover;\n0041: }\n0042: \n0043: nav.navbar {\n0044:     position: relative;\n0045:     z-index: 4000 !important;\n0046:     background: rgba(23, 28, 36, 0.88) !important;"
+          }
+        },
+        {
+          "line": 50,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [
+            "background"
+          ],
+          "snippet": {
+            "start_line": 47,
+            "end_line": 53,
+            "text": "0047:     backdrop-filter: blur(8px);\n0048: }\n0049: \n0050: nav.navbar .dropdown-menu {\n0051:     z-index: 4100 !important;\n0052: }\n0053: "
+          }
+        }
+      ],
+      "dangerous_matches": [
+        {
+          "line": 43,
+          "line_text": "nav.navbar {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background"
+          ],
+          "snippet": {
+            "start_line": 40,
+            "end_line": 46,
+            "text": "0040:     background-size: 100% 100%, cover;\n0041: }\n0042: \n0043: nav.navbar {\n0044:     position: relative;\n0045:     z-index: 4000 !important;\n0046:     background: rgba(23, 28, 36, 0.88) !important;"
+          }
+        },
+        {
+          "line": 50,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [
+            "background"
+          ],
+          "snippet": {
+            "start_line": 47,
+            "end_line": 53,
+            "text": "0047:     backdrop-filter: blur(8px);\n0048: }\n0049: \n0050: nav.navbar .dropdown-menu {\n0051:     z-index: 4100 !important;\n0052: }\n0053: "
+          }
+        }
+      ],
+      "visibility": "vjerojatno_ponuden"
+    },
+    {
+      "path": "blog\\templates\\blog\\designs\\podvodna_tisina.html",
+      "design": "podvodna_tisina",
+      "group": "zajednicki_layout",
+      "navbar_hits": 2,
+      "dangerous_hits": 2,
+      "matches": [
+        {
+          "line": 43,
+          "line_text": "nav.navbar {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background"
+          ],
+          "snippet": {
+            "start_line": 40,
+            "end_line": 46,
+            "text": "0040:         background-size: 100% 100%, 100% auto;\n0041:     }\n0042: \n0043:     nav.navbar {\n0044:         position: relative;\n0045:         z-index: 4000 !important;\n0046:     }"
+          }
+        },
+        {
+          "line": 48,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [],
+          "snippet": {
+            "start_line": 45,
+            "end_line": 51,
+            "text": "0045:         z-index: 4000 !important;\n0046:     }\n0047: \n0048:     nav.navbar .dropdown-menu {\n0049:         z-index: 4100 !important;\n0050:     }\n0051: "
+          }
+        }
+      ],
+      "dangerous_matches": [
+        {
+          "line": 43,
+          "line_text": "nav.navbar {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background"
+          ],
+          "snippet": {
+            "start_line": 40,
+            "end_line": 46,
+            "text": "0040:         background-size: 100% 100%, 100% auto;\n0041:     }\n0042: \n0043:     nav.navbar {\n0044:         position: relative;\n0045:         z-index: 4000 !important;\n0046:     }"
+          }
+        },
+        {
+          "line": 48,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [],
+          "snippet": {
+            "start_line": 45,
+            "end_line": 51,
+            "text": "0045:         z-index: 4000 !important;\n0046:     }\n0047: \n0048:     nav.navbar .dropdown-menu {\n0049:         z-index: 4100 !important;\n0050:     }\n0051: "
+          }
+        }
+      ],
+      "visibility": "vjerojatno_ponuden"
+    },
+    {
+      "path": "blog\\templates\\blog\\designs\\polarna_svjetlost.html",
+      "design": "polarna_svjetlost",
+      "group": "zajednicki_layout",
+      "navbar_hits": 2,
+      "dangerous_hits": 2,
+      "matches": [
+        {
+          "line": 43,
+          "line_text": "nav.navbar {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background"
+          ],
+          "snippet": {
+            "start_line": 40,
+            "end_line": 46,
+            "text": "0040:     background-size: 100% 100%, 100% auto;\n0041: }\n0042: \n0043: nav.navbar {\n0044:     position: relative;\n0045:     z-index: 4000 !important;\n0046: }"
+          }
+        },
+        {
+          "line": 48,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [],
+          "snippet": {
+            "start_line": 45,
+            "end_line": 51,
+            "text": "0045:     z-index: 4000 !important;\n0046: }\n0047: \n0048: nav.navbar .dropdown-menu {\n0049:     z-index: 4100 !important;\n0050: }\n0051: "
+          }
+        }
+      ],
+      "dangerous_matches": [
+        {
+          "line": 43,
+          "line_text": "nav.navbar {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background"
+          ],
+          "snippet": {
+            "start_line": 40,
+            "end_line": 46,
+            "text": "0040:     background-size: 100% 100%, 100% auto;\n0041: }\n0042: \n0043: nav.navbar {\n0044:     position: relative;\n0045:     z-index: 4000 !important;\n0046: }"
+          }
+        },
+        {
+          "line": 48,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [],
+          "snippet": {
+            "start_line": 45,
+            "end_line": 51,
+            "text": "0045:     z-index: 4000 !important;\n0046: }\n0047: \n0048: nav.navbar .dropdown-menu {\n0049:     z-index: 4100 !important;\n0050: }\n0051: "
+          }
+        }
+      ],
+      "visibility": "vjerojatno_ponuden"
+    },
+    {
+      "path": "blog\\templates\\blog\\designs\\polje_lavande.html",
+      "design": "polje_lavande",
+      "group": "zajednicki_layout",
+      "navbar_hits": 2,
+      "dangerous_hits": 2,
+      "matches": [
+        {
+          "line": 43,
+          "line_text": "nav.navbar {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background"
+          ],
+          "snippet": {
+            "start_line": 40,
+            "end_line": 46,
+            "text": "0040:     background-size: 100% 100%, 100% auto;\n0041: }\n0042: \n0043: nav.navbar {\n0044:     position: relative;\n0045:     z-index: 4000 !important;\n0046: }"
+          }
+        },
+        {
+          "line": 48,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [],
+          "snippet": {
+            "start_line": 45,
+            "end_line": 51,
+            "text": "0045:     z-index: 4000 !important;\n0046: }\n0047: \n0048: nav.navbar .dropdown-menu {\n0049:     z-index: 4100 !important;\n0050: }\n0051: "
+          }
+        }
+      ],
+      "dangerous_matches": [
+        {
+          "line": 43,
+          "line_text": "nav.navbar {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background"
+          ],
+          "snippet": {
+            "start_line": 40,
+            "end_line": 46,
+            "text": "0040:     background-size: 100% 100%, 100% auto;\n0041: }\n0042: \n0043: nav.navbar {\n0044:     position: relative;\n0045:     z-index: 4000 !important;\n0046: }"
+          }
+        },
+        {
+          "line": 48,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [],
+          "snippet": {
+            "start_line": 45,
+            "end_line": 51,
+            "text": "0045:     z-index: 4000 !important;\n0046: }\n0047: \n0048: nav.navbar .dropdown-menu {\n0049:     z-index: 4100 !important;\n0050: }\n0051: "
+          }
+        }
+      ],
+      "visibility": "vjerojatno_ponuden"
+    },
+    {
+      "path": "blog\\templates\\blog\\designs\\ponocna_elegancija.html",
+      "design": "ponocna_elegancija",
+      "group": "posebni",
+      "navbar_hits": 2,
+      "dangerous_hits": 2,
+      "matches": [
+        {
+          "line": 31,
+          "line_text": "nav.navbar {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background",
+            "border"
+          ],
+          "snippet": {
+            "start_line": 28,
+            "end_line": 34,
+            "text": "0028:     display: none;\n0029: }\n0030: \n0031: nav.navbar {\n0032:     position: relative;\n0033:     z-index: 4000 !important;\n0034:     background: rgba(9, 14, 25, 0.84) !important;"
+          }
+        },
+        {
+          "line": 39,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [
+            "border",
+            "width"
+          ],
+          "snippet": {
+            "start_line": 36,
+            "end_line": 42,
+            "text": "0036:     border-bottom: 1px solid rgba(255,255,255,0.08);\n0037: }\n0038: \n0039: nav.navbar .dropdown-menu {\n0040:     z-index: 4100 !important;\n0041: }\n0042: "
+          }
+        }
+      ],
+      "dangerous_matches": [
+        {
+          "line": 31,
+          "line_text": "nav.navbar {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background",
+            "border"
+          ],
+          "snippet": {
+            "start_line": 28,
+            "end_line": 34,
+            "text": "0028:     display: none;\n0029: }\n0030: \n0031: nav.navbar {\n0032:     position: relative;\n0033:     z-index: 4000 !important;\n0034:     background: rgba(9, 14, 25, 0.84) !important;"
+          }
+        },
+        {
+          "line": 39,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [
+            "border",
+            "width"
+          ],
+          "snippet": {
+            "start_line": 36,
+            "end_line": 42,
+            "text": "0036:     border-bottom: 1px solid rgba(255,255,255,0.08);\n0037: }\n0038: \n0039: nav.navbar .dropdown-menu {\n0040:     z-index: 4100 !important;\n0041: }\n0042: "
+          }
+        }
+      ],
+      "visibility": "vjerojatno_ponuden"
+    },
+    {
+      "path": "blog\\templates\\blog\\designs\\ruzicasti_vrt.html",
+      "design": "ruzicasti_vrt",
+      "group": "posebni",
+      "navbar_hits": 2,
+      "dangerous_hits": 2,
+      "matches": [
+        {
+          "line": 31,
+          "line_text": "nav.navbar {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background",
+            "border"
+          ],
+          "snippet": {
+            "start_line": 28,
+            "end_line": 34,
+            "text": "0028:     display: none;\n0029: }\n0030: \n0031: nav.navbar {\n0032:     position: relative;\n0033:     z-index: 4000 !important;\n0034:     background: rgba(64, 42, 49, 0.24) !important;"
+          }
+        },
+        {
+          "line": 39,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [
+            "border",
+            "width"
+          ],
+          "snippet": {
+            "start_line": 36,
+            "end_line": 42,
+            "text": "0036:     border-bottom: 1px solid rgba(255,255,255,0.14);\n0037: }\n0038: \n0039: nav.navbar .dropdown-menu {\n0040:     z-index: 4100 !important;\n0041: }\n0042: "
+          }
+        }
+      ],
+      "dangerous_matches": [
+        {
+          "line": 31,
+          "line_text": "nav.navbar {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background",
+            "border"
+          ],
+          "snippet": {
+            "start_line": 28,
+            "end_line": 34,
+            "text": "0028:     display: none;\n0029: }\n0030: \n0031: nav.navbar {\n0032:     position: relative;\n0033:     z-index: 4000 !important;\n0034:     background: rgba(64, 42, 49, 0.24) !important;"
+          }
+        },
+        {
+          "line": 39,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [
+            "border",
+            "width"
+          ],
+          "snippet": {
+            "start_line": 36,
+            "end_line": 42,
+            "text": "0036:     border-bottom: 1px solid rgba(255,255,255,0.14);\n0037: }\n0038: \n0039: nav.navbar .dropdown-menu {\n0040:     z-index: 4100 !important;\n0041: }\n0042: "
+          }
+        }
+      ],
+      "visibility": "vjerojatno_ponuden"
+    },
+    {
+      "path": "blog\\templates\\blog\\designs\\simple.html",
+      "design": "simple",
+      "group": "simple",
+      "navbar_hits": 0,
+      "dangerous_hits": 0,
+      "matches": [],
+      "dangerous_matches": [],
+      "visibility": "vjerojatno_ponuden"
+    },
+    {
+      "path": "blog\\templates\\blog\\designs\\simple_image.html",
+      "design": "simple_image",
+      "group": "simple",
+      "navbar_hits": 0,
+      "dangerous_hits": 0,
+      "matches": [],
+      "dangerous_matches": [],
+      "visibility": "vjerojatno_ponuden"
+    },
+    {
+      "path": "blog\\templates\\blog\\designs\\simple_pattern.html",
+      "design": "simple_pattern",
+      "group": "simple",
+      "navbar_hits": 0,
+      "dangerous_hits": 0,
+      "matches": [],
+      "dangerous_matches": [],
+      "visibility": "vjerojatno_ponuden"
+    },
+    {
+      "path": "blog\\templates\\blog\\designs\\simple_retro.html",
+      "design": "simple_retro",
+      "group": "simple",
+      "navbar_hits": 0,
+      "dangerous_hits": 0,
+      "matches": [],
+      "dangerous_matches": [],
+      "visibility": "vjerojatno_ponuden"
+    },
+    {
+      "path": "blog\\templates\\blog\\designs\\sjene_ulice.html",
+      "design": "sjene_ulice",
+      "group": "zajednicki_layout",
+      "navbar_hits": 2,
+      "dangerous_hits": 2,
+      "matches": [
+        {
+          "line": 53,
+          "line_text": "nav.navbar,",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background"
+          ],
+          "snippet": {
+            "start_line": 50,
+            "end_line": 56,
+            "text": "0050:     background-size: 100% 100%, 100% auto;\n0051: }\n0052: \n0053: nav.navbar,\n0054: nav.navbar .dropdown-menu {\n0055:     z-index: 4000 !important;\n0056: }"
+          }
+        },
+        {
+          "line": 54,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [
+            "background"
+          ],
+          "snippet": {
+            "start_line": 51,
+            "end_line": 57,
+            "text": "0051: }\n0052: \n0053: nav.navbar,\n0054: nav.navbar .dropdown-menu {\n0055:     z-index: 4000 !important;\n0056: }\n0057: "
+          }
+        }
+      ],
+      "dangerous_matches": [
+        {
+          "line": 53,
+          "line_text": "nav.navbar,",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background"
+          ],
+          "snippet": {
+            "start_line": 50,
+            "end_line": 56,
+            "text": "0050:     background-size: 100% 100%, 100% auto;\n0051: }\n0052: \n0053: nav.navbar,\n0054: nav.navbar .dropdown-menu {\n0055:     z-index: 4000 !important;\n0056: }"
+          }
+        },
+        {
+          "line": 54,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [
+            "background"
+          ],
+          "snippet": {
+            "start_line": 51,
+            "end_line": 57,
+            "text": "0051: }\n0052: \n0053: nav.navbar,\n0054: nav.navbar .dropdown-menu {\n0055:     z-index: 4000 !important;\n0056: }\n0057: "
+          }
+        }
+      ],
+      "visibility": "vjerojatno_ponuden"
+    },
+    {
+      "path": "blog\\templates\\blog\\designs\\stara_aleja.html",
+      "design": "stara_aleja",
+      "group": "posebni",
+      "navbar_hits": 2,
+      "dangerous_hits": 2,
+      "matches": [
+        {
+          "line": 31,
+          "line_text": "nav.navbar {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background",
+            "border"
+          ],
+          "snippet": {
+            "start_line": 28,
+            "end_line": 34,
+            "text": "0028:     display: none;\n0029: }\n0030: \n0031: nav.navbar {\n0032:     position: relative;\n0033:     z-index: 4000 !important;\n0034:     background: rgba(44, 30, 20, 0.82) !important;"
+          }
+        },
+        {
+          "line": 39,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [
+            "border",
+            "width"
+          ],
+          "snippet": {
+            "start_line": 36,
+            "end_line": 42,
+            "text": "0036:     border-bottom: 1px solid rgba(255,255,255,0.08);\n0037: }\n0038: \n0039: nav.navbar .dropdown-menu {\n0040:     z-index: 4100 !important;\n0041: }\n0042: "
+          }
+        }
+      ],
+      "dangerous_matches": [
+        {
+          "line": 31,
+          "line_text": "nav.navbar {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background",
+            "border"
+          ],
+          "snippet": {
+            "start_line": 28,
+            "end_line": 34,
+            "text": "0028:     display: none;\n0029: }\n0030: \n0031: nav.navbar {\n0032:     position: relative;\n0033:     z-index: 4000 !important;\n0034:     background: rgba(44, 30, 20, 0.82) !important;"
+          }
+        },
+        {
+          "line": 39,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [
+            "border",
+            "width"
+          ],
+          "snippet": {
+            "start_line": 36,
+            "end_line": 42,
+            "text": "0036:     border-bottom: 1px solid rgba(255,255,255,0.08);\n0037: }\n0038: \n0039: nav.navbar .dropdown-menu {\n0040:     z-index: 4100 !important;\n0041: }\n0042: "
+          }
+        }
+      ],
+      "visibility": "vjerojatno_ponuden"
+    },
+    {
+      "path": "blog\\templates\\blog\\designs\\staza_prema_vrhovima.html",
+      "design": "staza_prema_vrhovima",
+      "group": "posebni",
+      "navbar_hits": 2,
+      "dangerous_hits": 2,
+      "matches": [
+        {
+          "line": 31,
+          "line_text": "nav.navbar {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background",
+            "border"
+          ],
+          "snippet": {
+            "start_line": 28,
+            "end_line": 34,
+            "text": "0028:     display: none;\n0029: }\n0030: \n0031: nav.navbar {\n0032:     position: relative;\n0033:     z-index: 4000 !important;\n0034:     background: rgba(28, 20, 13, 0.82) !important;"
+          }
+        },
+        {
+          "line": 39,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [
+            "border",
+            "width"
+          ],
+          "snippet": {
+            "start_line": 36,
+            "end_line": 42,
+            "text": "0036:     backdrop-filter: blur(6px);\n0037: }\n0038: \n0039: nav.navbar .dropdown-menu {\n0040:     z-index: 4100 !important;\n0041: }\n0042: "
+          }
+        }
+      ],
+      "dangerous_matches": [
+        {
+          "line": 31,
+          "line_text": "nav.navbar {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background",
+            "border"
+          ],
+          "snippet": {
+            "start_line": 28,
+            "end_line": 34,
+            "text": "0028:     display: none;\n0029: }\n0030: \n0031: nav.navbar {\n0032:     position: relative;\n0033:     z-index: 4000 !important;\n0034:     background: rgba(28, 20, 13, 0.82) !important;"
+          }
+        },
+        {
+          "line": 39,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [
+            "border",
+            "width"
+          ],
+          "snippet": {
+            "start_line": 36,
+            "end_line": 42,
+            "text": "0036:     backdrop-filter: blur(6px);\n0037: }\n0038: \n0039: nav.navbar .dropdown-menu {\n0040:     z-index: 4100 !important;\n0041: }\n0042: "
+          }
+        }
+      ],
+      "visibility": "vjerojatno_ponuden"
+    },
+    {
+      "path": "blog\\templates\\blog\\designs\\studio.html",
+      "design": "studio",
+      "group": "posebni_hero",
+      "navbar_hits": 2,
+      "dangerous_hits": 2,
+      "matches": [
+        {
+          "line": 346,
+          "line_text": "nav.navbar {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "width"
+          ],
+          "snippet": {
+            "start_line": 343,
+            "end_line": 349,
+            "text": "0343:     z-index: 9999;\n0344: }\n0345: \n0346: nav.navbar {\n0347:     position: relative;\n0348:     z-index: 5000 !important;\n0349: }"
+          }
+        },
+        {
+          "line": 351,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [
+            "margin"
+          ],
+          "snippet": {
+            "start_line": 348,
+            "end_line": 354,
+            "text": "0348:     z-index: 5000 !important;\n0349: }\n0350: \n0351: nav.navbar .dropdown-menu {\n0352:     z-index: 5100 !important;\n0353: }\n0354: "
+          }
+        }
+      ],
+      "dangerous_matches": [
+        {
+          "line": 346,
+          "line_text": "nav.navbar {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "width"
+          ],
+          "snippet": {
+            "start_line": 343,
+            "end_line": 349,
+            "text": "0343:     z-index: 9999;\n0344: }\n0345: \n0346: nav.navbar {\n0347:     position: relative;\n0348:     z-index: 5000 !important;\n0349: }"
+          }
+        },
+        {
+          "line": 351,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [
+            "margin"
+          ],
+          "snippet": {
+            "start_line": 348,
+            "end_line": 354,
+            "text": "0348:     z-index: 5000 !important;\n0349: }\n0350: \n0351: nav.navbar .dropdown-menu {\n0352:     z-index: 5100 !important;\n0353: }\n0354: "
+          }
+        }
+      ],
+      "visibility": "samo_template_ili_nejasno"
+    },
+    {
+      "path": "blog\\templates\\blog\\designs\\sumska_svjetlost.html",
+      "design": "sumska_svjetlost",
+      "group": "zajednicki_layout",
+      "navbar_hits": 2,
+      "dangerous_hits": 2,
+      "matches": [
+        {
+          "line": 43,
+          "line_text": "nav.navbar {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background"
+          ],
+          "snippet": {
+            "start_line": 40,
+            "end_line": 46,
+            "text": "0040:     background-size: 100% 100%, 100% auto;\n0041: }\n0042: \n0043: nav.navbar {\n0044:     position: relative;\n0045:     z-index: 4000 !important;\n0046: }"
+          }
+        },
+        {
+          "line": 48,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [],
+          "snippet": {
+            "start_line": 45,
+            "end_line": 51,
+            "text": "0045:     z-index: 4000 !important;\n0046: }\n0047: \n0048: nav.navbar .dropdown-menu {\n0049:     z-index: 4100 !important;\n0050: }\n0051: "
+          }
+        }
+      ],
+      "dangerous_matches": [
+        {
+          "line": 43,
+          "line_text": "nav.navbar {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background"
+          ],
+          "snippet": {
+            "start_line": 40,
+            "end_line": 46,
+            "text": "0040:     background-size: 100% 100%, 100% auto;\n0041: }\n0042: \n0043: nav.navbar {\n0044:     position: relative;\n0045:     z-index: 4000 !important;\n0046: }"
+          }
+        },
+        {
+          "line": 48,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [],
+          "snippet": {
+            "start_line": 45,
+            "end_line": 51,
+            "text": "0045:     z-index: 4000 !important;\n0046: }\n0047: \n0048: nav.navbar .dropdown-menu {\n0049:     z-index: 4100 !important;\n0050: }\n0051: "
+          }
+        }
+      ],
+      "visibility": "vjerojatno_ponuden"
+    },
+    {
+      "path": "blog\\templates\\blog\\designs\\svemirski_horizont.html",
+      "design": "svemirski_horizont",
+      "group": "zajednicki_layout",
+      "navbar_hits": 2,
+      "dangerous_hits": 2,
+      "matches": [
+        {
+          "line": 43,
+          "line_text": "nav.navbar {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background"
+          ],
+          "snippet": {
+            "start_line": 40,
+            "end_line": 46,
+            "text": "0040:     background-size: 100% 100%, 100% auto;\n0041: }\n0042: \n0043: nav.navbar {\n0044:     position: relative;\n0045:     z-index: 4000 !important;\n0046: }"
+          }
+        },
+        {
+          "line": 48,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [],
+          "snippet": {
+            "start_line": 45,
+            "end_line": 51,
+            "text": "0045:     z-index: 4000 !important;\n0046: }\n0047: \n0048: nav.navbar .dropdown-menu {\n0049:     z-index: 4100 !important;\n0050: }\n0051: "
+          }
+        }
+      ],
+      "dangerous_matches": [
+        {
+          "line": 43,
+          "line_text": "nav.navbar {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background"
+          ],
+          "snippet": {
+            "start_line": 40,
+            "end_line": 46,
+            "text": "0040:     background-size: 100% 100%, 100% auto;\n0041: }\n0042: \n0043: nav.navbar {\n0044:     position: relative;\n0045:     z-index: 4000 !important;\n0046: }"
+          }
+        },
+        {
+          "line": 48,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [],
+          "snippet": {
+            "start_line": 45,
+            "end_line": 51,
+            "text": "0045:     z-index: 4000 !important;\n0046: }\n0047: \n0048: nav.navbar .dropdown-menu {\n0049:     z-index: 4100 !important;\n0050: }\n0051: "
+          }
+        }
+      ],
+      "visibility": "vjerojatno_ponuden"
+    },
+    {
+      "path": "blog\\templates\\blog\\designs\\vecer_uz_jezero.html",
+      "design": "vecer_uz_jezero",
+      "group": "posebni",
+      "navbar_hits": 2,
+      "dangerous_hits": 2,
+      "matches": [
+        {
+          "line": 31,
+          "line_text": "nav.navbar {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background",
+            "border"
+          ],
+          "snippet": {
+            "start_line": 28,
+            "end_line": 34,
+            "text": "0028:     display: none;\n0029: }\n0030: \n0031: nav.navbar {\n0032:     position: relative;\n0033:     z-index: 4000 !important;\n0034:     background: rgba(30, 13, 12, 0.82) !important;"
+          }
+        },
+        {
+          "line": 38,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [
+            "background",
+            "border",
+            "width"
+          ],
+          "snippet": {
+            "start_line": 35,
+            "end_line": 41,
+            "text": "0035:     border-bottom: 1px solid rgba(255, 228, 204, 0.10);\n0036: }\n0037: \n0038: nav.navbar .dropdown-menu {\n0039:     z-index: 4100 !important;\n0040: }\n0041: "
+          }
+        }
+      ],
+      "dangerous_matches": [
+        {
+          "line": 31,
+          "line_text": "nav.navbar {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background",
+            "border"
+          ],
+          "snippet": {
+            "start_line": 28,
+            "end_line": 34,
+            "text": "0028:     display: none;\n0029: }\n0030: \n0031: nav.navbar {\n0032:     position: relative;\n0033:     z-index: 4000 !important;\n0034:     background: rgba(30, 13, 12, 0.82) !important;"
+          }
+        },
+        {
+          "line": 38,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [
+            "background",
+            "border",
+            "width"
+          ],
+          "snippet": {
+            "start_line": 35,
+            "end_line": 41,
+            "text": "0035:     border-bottom: 1px solid rgba(255, 228, 204, 0.10);\n0036: }\n0037: \n0038: nav.navbar .dropdown-menu {\n0039:     z-index: 4100 !important;\n0040: }\n0041: "
+          }
+        }
+      ],
+      "visibility": "samo_template_ili_nejasno"
+    },
+    {
+      "path": "blog\\templates\\blog\\designs\\vecer_zaljubljenih.html",
+      "design": "vecer_zaljubljenih",
+      "group": "posebni",
+      "navbar_hits": 2,
+      "dangerous_hits": 2,
+      "matches": [
+        {
+          "line": 42,
+          "line_text": "nav.navbar {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background",
+            "border"
+          ],
+          "snippet": {
+            "start_line": 39,
+            "end_line": 45,
+            "text": "0039:     display: none;\n0040: }\n0041: \n0042: nav.navbar {\n0043:     position: relative;\n0044:     z-index: 4000 !important;\n0045:     background: rgba(32, 7, 6, 0.42) !important;"
+          }
+        },
+        {
+          "line": 50,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [
+            "border",
+            "width"
+          ],
+          "snippet": {
+            "start_line": 47,
+            "end_line": 53,
+            "text": "0047:     border-bottom: 1px solid rgba(255, 226, 206, 0.10);\n0048: }\n0049: \n0050: nav.navbar .dropdown-menu {\n0051:     z-index: 4100 !important;\n0052: }\n0053: "
+          }
+        }
+      ],
+      "dangerous_matches": [
+        {
+          "line": 42,
+          "line_text": "nav.navbar {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background",
+            "border"
+          ],
+          "snippet": {
+            "start_line": 39,
+            "end_line": 45,
+            "text": "0039:     display: none;\n0040: }\n0041: \n0042: nav.navbar {\n0043:     position: relative;\n0044:     z-index: 4000 !important;\n0045:     background: rgba(32, 7, 6, 0.42) !important;"
+          }
+        },
+        {
+          "line": 50,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [
+            "border",
+            "width"
+          ],
+          "snippet": {
+            "start_line": 47,
+            "end_line": 53,
+            "text": "0047:     border-bottom: 1px solid rgba(255, 226, 206, 0.10);\n0048: }\n0049: \n0050: nav.navbar .dropdown-menu {\n0051:     z-index: 4100 !important;\n0052: }\n0053: "
+          }
+        }
+      ],
+      "visibility": "samo_template_ili_nejasno"
+    },
+    {
+      "path": "blog\\templates\\blog\\designs\\vodopad_u_magli.html",
+      "design": "vodopad_u_magli",
+      "group": "zajednicki_layout",
+      "navbar_hits": 2,
+      "dangerous_hits": 2,
+      "matches": [
+        {
+          "line": 43,
+          "line_text": "nav.navbar {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background"
+          ],
+          "snippet": {
+            "start_line": 40,
+            "end_line": 46,
+            "text": "0040:     background-size: 100% 100%, 100% auto;\n0041: }\n0042: \n0043: nav.navbar {\n0044:     position: relative;\n0045:     z-index: 4000 !important;\n0046: }"
+          }
+        },
+        {
+          "line": 48,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [],
+          "snippet": {
+            "start_line": 45,
+            "end_line": 51,
+            "text": "0045:     z-index: 4000 !important;\n0046: }\n0047: \n0048: nav.navbar .dropdown-menu {\n0049:     z-index: 4100 !important;\n0050: }\n0051: "
+          }
+        }
+      ],
+      "dangerous_matches": [
+        {
+          "line": 43,
+          "line_text": "nav.navbar {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background"
+          ],
+          "snippet": {
+            "start_line": 40,
+            "end_line": 46,
+            "text": "0040:     background-size: 100% 100%, 100% auto;\n0041: }\n0042: \n0043: nav.navbar {\n0044:     position: relative;\n0045:     z-index: 4000 !important;\n0046: }"
+          }
+        },
+        {
+          "line": 48,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [],
+          "snippet": {
+            "start_line": 45,
+            "end_line": 51,
+            "text": "0045:     z-index: 4000 !important;\n0046: }\n0047: \n0048: nav.navbar .dropdown-menu {\n0049:     z-index: 4100 !important;\n0050: }\n0051: "
+          }
+        }
+      ],
+      "visibility": "vjerojatno_ponuden"
+    },
+    {
+      "path": "blog\\templates\\blog\\designs\\zlatni_horizont.html",
+      "design": "zlatni_horizont",
+      "group": "zajednicki_layout",
+      "navbar_hits": 2,
+      "dangerous_hits": 2,
+      "matches": [
+        {
+          "line": 43,
+          "line_text": "nav.navbar {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background"
+          ],
+          "snippet": {
+            "start_line": 40,
+            "end_line": 46,
+            "text": "0040:     background-size: 100% 100%, 100% auto;\n0041: }\n0042: \n0043: nav.navbar {\n0044:     position: relative;\n0045:     z-index: 4000 !important;\n0046: }"
+          }
+        },
+        {
+          "line": 48,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [],
+          "snippet": {
+            "start_line": 45,
+            "end_line": 51,
+            "text": "0045:     z-index: 4000 !important;\n0046: }\n0047: \n0048: nav.navbar .dropdown-menu {\n0049:     z-index: 4100 !important;\n0050: }\n0051: "
+          }
+        }
+      ],
+      "dangerous_matches": [
+        {
+          "line": 43,
+          "line_text": "nav.navbar {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background"
+          ],
+          "snippet": {
+            "start_line": 40,
+            "end_line": 46,
+            "text": "0040:     background-size: 100% 100%, 100% auto;\n0041: }\n0042: \n0043: nav.navbar {\n0044:     position: relative;\n0045:     z-index: 4000 !important;\n0046: }"
+          }
+        },
+        {
+          "line": 48,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [],
+          "snippet": {
+            "start_line": 45,
+            "end_line": 51,
+            "text": "0045:     z-index: 4000 !important;\n0046: }\n0047: \n0048: nav.navbar .dropdown-menu {\n0049:     z-index: 4100 !important;\n0050: }\n0051: "
+          }
+        }
+      ],
+      "visibility": "vjerojatno_ponuden"
+    },
+    {
+      "path": "blog\\templates\\blog\\designs\\zlatno_polje.html",
+      "design": "zlatno_polje",
+      "group": "zajednicki_layout",
+      "navbar_hits": 2,
+      "dangerous_hits": 2,
+      "matches": [
+        {
+          "line": 46,
+          "line_text": "nav.navbar {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background"
+          ],
+          "snippet": {
+            "start_line": 43,
+            "end_line": 49,
+            "text": "0043:     background-size: 100% 100%, 100% auto;\n0044: }\n0045: \n0046: nav.navbar {\n0047:     position: relative;\n0048:     z-index: 4000 !important;\n0049: }"
+          }
+        },
+        {
+          "line": 51,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [],
+          "snippet": {
+            "start_line": 48,
+            "end_line": 54,
+            "text": "0048:     z-index: 4000 !important;\n0049: }\n0050: \n0051: nav.navbar .dropdown-menu {\n0052:     z-index: 4100 !important;\n0053: }\n0054: "
+          }
+        }
+      ],
+      "dangerous_matches": [
+        {
+          "line": 46,
+          "line_text": "nav.navbar {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background"
+          ],
+          "snippet": {
+            "start_line": 43,
+            "end_line": 49,
+            "text": "0043:     background-size: 100% 100%, 100% auto;\n0044: }\n0045: \n0046: nav.navbar {\n0047:     position: relative;\n0048:     z-index: 4000 !important;\n0049: }"
+          }
+        },
+        {
+          "line": 51,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [],
+          "snippet": {
+            "start_line": 48,
+            "end_line": 54,
+            "text": "0048:     z-index: 4000 !important;\n0049: }\n0050: \n0051: nav.navbar .dropdown-menu {\n0052:     z-index: 4100 !important;\n0053: }\n0054: "
+          }
+        }
+      ],
+      "visibility": "vjerojatno_ponuden"
+    }
+  ],
+  "global_files": [
+    {
+      "path": "blog\\templates\\blog\\base.html",
+      "design": null,
+      "group": "global",
+      "navbar_hits": 11,
+      "dangerous_hits": 4,
+      "matches": [
+        {
+          "line": 67,
+          "line_text": ".notif-badge{ font-size: 11px; padding: 3px 6px; }",
+          "patterns": [
+            "\\.notif-badge\\b"
+          ],
+          "css_properties_nearby": [
+            "background",
+            "border",
+            "font",
+            "height",
+            "padding"
+          ],
+          "snippet": {
+            "start_line": 64,
+            "end_line": 70,
+            "text": "0064:         object-fit: cover;\n0065:     }\n0066:     .nav-user-text{ line-height: 1; }\n0067:     .notif-badge{ font-size: 11px; padding: 3px 6px; }\n0068:     .notif-actions-bar{\n0069:         position: sticky;\n0070:         top: 0;"
+          }
+        },
+        {
+          "line": 242,
+          "line_text": "nav.navbar{",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background"
+          ],
+          "snippet": {
+            "start_line": 239,
+            "end_line": 245,
+            "text": "0239:         display:block;\n0240:         background:transparent !important;\n0241:     }\n0242:     nav.navbar{\n0243:         position:relative;\n0244:         z-index:5000 !important;\n0245:     }"
+          }
+        },
+        {
+          "line": 246,
+          "line_text": "nav.navbar .dropdown-menu{",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [
+            "font"
+          ],
+          "snippet": {
+            "start_line": 243,
+            "end_line": 249,
+            "text": "0243:         position:relative;\n0244:         z-index:5000 !important;\n0245:     }\n0246:     nav.navbar .dropdown-menu{\n0247:         z-index:5100 !important;\n0248:     }\n0249: "
+          }
+        },
+        {
+          "line": 1249,
+          "line_text": "<button id=\"searchToggleBtn\"",
+          "patterns": [
+            "searchToggleBtn"
+          ],
+          "css_properties_nearby": [
+            "height"
+          ],
+          "snippet": {
+            "start_line": 1246,
+            "end_line": 1252,
+            "text": "1246:         </a>\n1247: \n1248:         <!-- ✅ Ikona za pretragu -->\n1249:         <button id=\"searchToggleBtn\"\n1250:                 class=\"btn btn-outline-light btn-sm ms-2\"\n1251:                 type=\"button\"\n1252:                 data-bs-toggle=\"collapse\""
+          }
+        },
+        {
+          "line": 1253,
+          "line_text": "data-bs-target=\"#navbarSearchInline\"",
+          "patterns": [
+            "#navbar",
+            "navbarSearch"
+          ],
+          "css_properties_nearby": [],
+          "snippet": {
+            "start_line": 1250,
+            "end_line": 1256,
+            "text": "1250:                 class=\"btn btn-outline-light btn-sm ms-2\"\n1251:                 type=\"button\"\n1252:                 data-bs-toggle=\"collapse\"\n1253:                 data-bs-target=\"#navbarSearchInline\"\n1254:                 aria-expanded=\"false\"\n1255:                 aria-controls=\"navbarSearchInline\"\n1256:                 title=\"Pretraga\">"
+          }
+        },
+        {
+          "line": 1255,
+          "line_text": "aria-controls=\"navbarSearchInline\"",
+          "patterns": [
+            "navbarSearch"
+          ],
+          "css_properties_nearby": [],
+          "snippet": {
+            "start_line": 1252,
+            "end_line": 1258,
+            "text": "1252:                 data-bs-toggle=\"collapse\"\n1253:                 data-bs-target=\"#navbarSearchInline\"\n1254:                 aria-expanded=\"false\"\n1255:                 aria-controls=\"navbarSearchInline\"\n1256:                 title=\"Pretraga\">\n1257:             <i class=\"bi bi-search\"></i>\n1258:         </button>"
+          }
+        },
+        {
+          "line": 1261,
+          "line_text": "<div class=\"collapse ms-2\" id=\"navbarSearchInline\">",
+          "patterns": [
+            "navbarSearch"
+          ],
+          "css_properties_nearby": [
+            "width"
+          ],
+          "snippet": {
+            "start_line": 1258,
+            "end_line": 1264,
+            "text": "1258:         </button>\n1259: \n1260:         <!-- ✅ Pretraga unutar navbara (inline) -->\n1261:         <div class=\"collapse ms-2\" id=\"navbarSearchInline\">\n1262:             <form class=\"d-flex align-items-center\"\n1263:                   method=\"GET\"\n1264:                   action=\"{% url 'search' %}\">"
+          }
+        },
+        {
+          "line": 1266,
+          "line_text": "<input id=\"navbarSearchInput\"",
+          "patterns": [
+            "navbarSearch"
+          ],
+          "css_properties_nearby": [
+            "width"
+          ],
+          "snippet": {
+            "start_line": 1263,
+            "end_line": 1269,
+            "text": "1263:                   method=\"GET\"\n1264:                   action=\"{% url 'search' %}\">\n1265:                 <div class=\"input-group input-group-sm\" style=\"width: 320px;\">\n1266:                     <input id=\"navbarSearchInput\"\n1267:                            class=\"form-control\"\n1268:                            type=\"search\"\n1269:                            name=\"q\""
+          }
+        },
+        {
+          "line": 1674,
+          "line_text": "const searchCollapseEl = document.getElementById(\"navbarSearchInline\");",
+          "patterns": [
+            "navbarSearch"
+          ],
+          "css_properties_nearby": [],
+          "snippet": {
+            "start_line": 1671,
+            "end_line": 1677,
+            "text": "1671: \n1672: <script>\n1673: document.addEventListener(\"DOMContentLoaded\", function () {\n1674:     const searchCollapseEl = document.getElementById(\"navbarSearchInline\");\n1675:     const input = document.getElementById(\"navbarSearchInput\");\n1676:     const toggleBtn = document.getElementById(\"searchToggleBtn\");\n1677: "
+          }
+        },
+        {
+          "line": 1675,
+          "line_text": "const input = document.getElementById(\"navbarSearchInput\");",
+          "patterns": [
+            "navbarSearch"
+          ],
+          "css_properties_nearby": [],
+          "snippet": {
+            "start_line": 1672,
+            "end_line": 1678,
+            "text": "1672: <script>\n1673: document.addEventListener(\"DOMContentLoaded\", function () {\n1674:     const searchCollapseEl = document.getElementById(\"navbarSearchInline\");\n1675:     const input = document.getElementById(\"navbarSearchInput\");\n1676:     const toggleBtn = document.getElementById(\"searchToggleBtn\");\n1677: \n1678:     if (!searchCollapseEl || !input || !toggleBtn) return;"
+          }
+        },
+        {
+          "line": 1676,
+          "line_text": "const toggleBtn = document.getElementById(\"searchToggleBtn\");",
+          "patterns": [
+            "searchToggleBtn"
+          ],
+          "css_properties_nearby": [],
+          "snippet": {
+            "start_line": 1673,
+            "end_line": 1679,
+            "text": "1673: document.addEventListener(\"DOMContentLoaded\", function () {\n1674:     const searchCollapseEl = document.getElementById(\"navbarSearchInline\");\n1675:     const input = document.getElementById(\"navbarSearchInput\");\n1676:     const toggleBtn = document.getElementById(\"searchToggleBtn\");\n1677: \n1678:     if (!searchCollapseEl || !input || !toggleBtn) return;\n1679: "
+          }
+        }
+      ],
+      "dangerous_matches": [
+        {
+          "line": 67,
+          "line_text": ".notif-badge{ font-size: 11px; padding: 3px 6px; }",
+          "patterns": [
+            "\\.notif-badge\\b"
+          ],
+          "css_properties_nearby": [
+            "background",
+            "border",
+            "font",
+            "height",
+            "padding"
+          ],
+          "snippet": {
+            "start_line": 64,
+            "end_line": 70,
+            "text": "0064:         object-fit: cover;\n0065:     }\n0066:     .nav-user-text{ line-height: 1; }\n0067:     .notif-badge{ font-size: 11px; padding: 3px 6px; }\n0068:     .notif-actions-bar{\n0069:         position: sticky;\n0070:         top: 0;"
+          }
+        },
+        {
+          "line": 242,
+          "line_text": "nav.navbar{",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background"
+          ],
+          "snippet": {
+            "start_line": 239,
+            "end_line": 245,
+            "text": "0239:         display:block;\n0240:         background:transparent !important;\n0241:     }\n0242:     nav.navbar{\n0243:         position:relative;\n0244:         z-index:5000 !important;\n0245:     }"
+          }
+        },
+        {
+          "line": 246,
+          "line_text": "nav.navbar .dropdown-menu{",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [
+            "font"
+          ],
+          "snippet": {
+            "start_line": 243,
+            "end_line": 249,
+            "text": "0243:         position:relative;\n0244:         z-index:5000 !important;\n0245:     }\n0246:     nav.navbar .dropdown-menu{\n0247:         z-index:5100 !important;\n0248:     }\n0249: "
+          }
+        },
+        {
+          "line": 1253,
+          "line_text": "data-bs-target=\"#navbarSearchInline\"",
+          "patterns": [
+            "#navbar",
+            "navbarSearch"
+          ],
+          "css_properties_nearby": [],
+          "snippet": {
+            "start_line": 1250,
+            "end_line": 1256,
+            "text": "1250:                 class=\"btn btn-outline-light btn-sm ms-2\"\n1251:                 type=\"button\"\n1252:                 data-bs-toggle=\"collapse\"\n1253:                 data-bs-target=\"#navbarSearchInline\"\n1254:                 aria-expanded=\"false\"\n1255:                 aria-controls=\"navbarSearchInline\"\n1256:                 title=\"Pretraga\">"
+          }
+        }
+      ]
+    },
+    {
+      "path": "blog\\templates\\blog\\components\\blog_design_styles.html",
+      "design": null,
+      "group": "global",
+      "navbar_hits": 6,
+      "dangerous_hits": 6,
+      "matches": [
+        {
+          "line": 553,
+          "line_text": "nav.navbar {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background"
+          ],
+          "snippet": {
+            "start_line": 550,
+            "end_line": 556,
+            "text": "0550:     background-size: cover;\n0551: }\n0552: \n0553: nav.navbar {\n0554:     position: relative;\n0555:     z-index: 3000;\n0556: }"
+          }
+        },
+        {
+          "line": 558,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [],
+          "snippet": {
+            "start_line": 555,
+            "end_line": 561,
+            "text": "0555:     z-index: 3000;\n0556: }\n0557: \n0558: nav.navbar .dropdown-menu {\n0559:     z-index: 3100;\n0560: }\n0561: "
+          }
+        },
+        {
+          "line": 1323,
+          "line_text": "nav.navbar {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background"
+          ],
+          "snippet": {
+            "start_line": 1320,
+            "end_line": 1326,
+            "text": "1320:     background-size: 100% 100%, 100% auto;\n1321: }\n1322: \n1323: nav.navbar {\n1324:     position: relative;\n1325:     z-index: 4000 !important;\n1326: }"
+          }
+        },
+        {
+          "line": 1328,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [],
+          "snippet": {
+            "start_line": 1325,
+            "end_line": 1331,
+            "text": "1325:     z-index: 4000 !important;\n1326: }\n1327: \n1328: nav.navbar .dropdown-menu {\n1329:     z-index: 4100 !important;\n1330: }\n1331: "
+          }
+        },
+        {
+          "line": 1683,
+          "line_text": "nav.navbar {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background"
+          ],
+          "snippet": {
+            "start_line": 1680,
+            "end_line": 1686,
+            "text": "1680:     background-size: 100% 100%, 100% auto;\n1681: }\n1682: \n1683: nav.navbar {\n1684:     position: relative;\n1685:     z-index: 4000 !important;\n1686: }"
+          }
+        },
+        {
+          "line": 1688,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [],
+          "snippet": {
+            "start_line": 1685,
+            "end_line": 1691,
+            "text": "1685:     z-index: 4000 !important;\n1686: }\n1687: \n1688: nav.navbar .dropdown-menu {\n1689:     z-index: 4100 !important;\n1690: }\n1691: "
+          }
+        }
+      ],
+      "dangerous_matches": [
+        {
+          "line": 553,
+          "line_text": "nav.navbar {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background"
+          ],
+          "snippet": {
+            "start_line": 550,
+            "end_line": 556,
+            "text": "0550:     background-size: cover;\n0551: }\n0552: \n0553: nav.navbar {\n0554:     position: relative;\n0555:     z-index: 3000;\n0556: }"
+          }
+        },
+        {
+          "line": 558,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [],
+          "snippet": {
+            "start_line": 555,
+            "end_line": 561,
+            "text": "0555:     z-index: 3000;\n0556: }\n0557: \n0558: nav.navbar .dropdown-menu {\n0559:     z-index: 3100;\n0560: }\n0561: "
+          }
+        },
+        {
+          "line": 1323,
+          "line_text": "nav.navbar {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background"
+          ],
+          "snippet": {
+            "start_line": 1320,
+            "end_line": 1326,
+            "text": "1320:     background-size: 100% 100%, 100% auto;\n1321: }\n1322: \n1323: nav.navbar {\n1324:     position: relative;\n1325:     z-index: 4000 !important;\n1326: }"
+          }
+        },
+        {
+          "line": 1328,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [],
+          "snippet": {
+            "start_line": 1325,
+            "end_line": 1331,
+            "text": "1325:     z-index: 4000 !important;\n1326: }\n1327: \n1328: nav.navbar .dropdown-menu {\n1329:     z-index: 4100 !important;\n1330: }\n1331: "
+          }
+        },
+        {
+          "line": 1683,
+          "line_text": "nav.navbar {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b"
+          ],
+          "css_properties_nearby": [
+            "background"
+          ],
+          "snippet": {
+            "start_line": 1680,
+            "end_line": 1686,
+            "text": "1680:     background-size: 100% 100%, 100% auto;\n1681: }\n1682: \n1683: nav.navbar {\n1684:     position: relative;\n1685:     z-index: 4000 !important;\n1686: }"
+          }
+        },
+        {
+          "line": 1688,
+          "line_text": "nav.navbar .dropdown-menu {",
+          "patterns": [
+            "\\bnav\\.navbar\\b",
+            "\\.navbar\\b",
+            "\\.dropdown-menu\\b"
+          ],
+          "css_properties_nearby": [],
+          "snippet": {
+            "start_line": 1685,
+            "end_line": 1691,
+            "text": "1685:     z-index: 4000 !important;\n1686: }\n1687: \n1688: nav.navbar .dropdown-menu {\n1689:     z-index: 4100 !important;\n1690: }\n1691: "
+          }
+        }
+      ]
+    }
+  ]
+}
