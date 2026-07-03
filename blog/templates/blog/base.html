@@ -1236,7 +1236,7 @@
 </div>
 {% endif %}
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav id="globalNavbar" class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid position-relative">
 
         <a class="navbar-brand" href="{% url 'home' %}">
@@ -1270,7 +1270,7 @@
                            placeholder="Pretraži..."
                            value="{{ request.GET.q|default:'' }}">
 
-                    <button class="btn btn-outline-light" type="submit" title="Pretraži">
+                    <button id="navbarSearchSubmitBtn" class="btn btn-outline-light navbar-search-submit" type="submit" title="Pretraži">
                         <i class="bi bi-search"></i>
                     </button>
                 </div>
@@ -3529,6 +3529,202 @@ body {
 </style>
 {% endif %}
 <!-- BLOGPLATFORM_HOME_TITLE_GRADIENT_FIX_END -->
+
+
+<style id="blogplatform-global-navbar-exact-lock">
+/*
+Global navbar lock
+Cilj: gornji navbar, tražilica, obavijesti i dropdownovi moraju izgledati isto
+na naslovnoj stranici i na svim blog dizajnima. Blog dizajni ne smiju pregaziti
+ove elemente preko generičkih selektora kao .form-control, .btn ili input.
+*/
+#globalNavbar.navbar,
+body #globalNavbar.navbar,
+nav#globalNavbar.navbar.navbar-expand-lg.navbar-dark.bg-dark {
+    position: relative !important;
+    z-index: 5000 !important;
+    background: #212529 !important;
+    background-color: #212529 !important;
+    background-image: none !important;
+    border: 0 !important;
+    border-bottom: 0 !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+    text-shadow: none !important;
+}
+
+#globalNavbar .container-fluid {
+    background: transparent !important;
+    background-image: none !important;
+    box-shadow: none !important;
+    border: 0 !important;
+}
+
+#globalNavbar .navbar-brand,
+#globalNavbar .navbar-brand:hover,
+#globalNavbar .navbar-brand:focus {
+    color: #ffffff !important;
+    background: transparent !important;
+    text-decoration: none !important;
+    text-shadow: none !important;
+    font-family: inherit !important;
+}
+
+#globalNavbar .navbar-brand img {
+    height: 44px !important;
+    width: auto !important;
+    max-height: 44px !important;
+    object-fit: contain !important;
+    filter: none !important;
+    opacity: 1 !important;
+}
+
+#globalNavbar #navbarSearchInline,
+#globalNavbar #navbarSearchInline form,
+#globalNavbar #navbarSearchInline .input-group {
+    background: transparent !important;
+    background-image: none !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    font-family: inherit !important;
+}
+
+#globalNavbar #navbarSearchInput.form-control,
+body #globalNavbar input#navbarSearchInput.form-control,
+html body #globalNavbar #navbarSearchInput {
+    display: block !important;
+    width: 100% !important;
+    min-height: calc(1.5em + .5rem + 2px) !important;
+    padding: .25rem .5rem !important;
+    font-family: inherit !important;
+    font-size: .875rem !important;
+    font-weight: 400 !important;
+    line-height: 1.5 !important;
+    color: #212529 !important;
+    -webkit-text-fill-color: #212529 !important;
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    background-image: none !important;
+    border: 1px solid #ced4da !important;
+    border-right: 0 !important;
+    border-radius: .2rem 0 0 .2rem !important;
+    box-shadow: none !important;
+    outline: 0 !important;
+    text-shadow: none !important;
+    opacity: 1 !important;
+}
+
+#globalNavbar #navbarSearchInput.form-control:focus,
+body #globalNavbar input#navbarSearchInput.form-control:focus,
+html body #globalNavbar #navbarSearchInput:focus {
+    color: #212529 !important;
+    -webkit-text-fill-color: #212529 !important;
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    background-image: none !important;
+    border-color: #86b7fe !important;
+    border-right: 0 !important;
+    outline: 0 !important;
+    box-shadow: 0 0 0 .25rem rgba(13, 110, 253, .25) !important;
+    text-shadow: none !important;
+}
+
+#globalNavbar #navbarSearchInput::placeholder,
+body #globalNavbar input#navbarSearchInput::placeholder,
+html body #globalNavbar #navbarSearchInput::placeholder {
+    color: #6c757d !important;
+    -webkit-text-fill-color: #6c757d !important;
+    opacity: 1 !important;
+    text-shadow: none !important;
+}
+
+#globalNavbar #searchToggleBtn.btn,
+#globalNavbar #navbarSearchSubmitBtn.btn,
+body #globalNavbar button#searchToggleBtn.btn,
+body #globalNavbar button#navbarSearchSubmitBtn.btn {
+    font-family: inherit !important;
+    font-size: .875rem !important;
+    font-weight: 400 !important;
+    line-height: 1.5 !important;
+    color: #f8f9fa !important;
+    -webkit-text-fill-color: #f8f9fa !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    border-color: #f8f9fa !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    opacity: 1 !important;
+}
+
+#globalNavbar #searchToggleBtn.btn {
+    padding: .25rem .5rem !important;
+    border-radius: .2rem !important;
+}
+
+#globalNavbar #navbarSearchSubmitBtn.btn {
+    padding: .25rem .5rem !important;
+    border-radius: 0 .2rem .2rem 0 !important;
+}
+
+#globalNavbar #searchToggleBtn.btn:hover,
+#globalNavbar #searchToggleBtn.btn:focus,
+#globalNavbar #navbarSearchSubmitBtn.btn:hover,
+#globalNavbar #navbarSearchSubmitBtn.btn:focus,
+body #globalNavbar button#searchToggleBtn.btn:hover,
+body #globalNavbar button#navbarSearchSubmitBtn.btn:hover {
+    color: #212529 !important;
+    -webkit-text-fill-color: #212529 !important;
+    background: #f8f9fa !important;
+    background-color: #f8f9fa !important;
+    background-image: none !important;
+    border-color: #f8f9fa !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+}
+
+#globalNavbar .dropdown-menu {
+    z-index: 5100 !important;
+    color: #212529 !important;
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    background-image: none !important;
+    border: 1px solid rgba(0, 0, 0, .15) !important;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+    font-family: inherit !important;
+    text-shadow: none !important;
+}
+
+#globalNavbar .dropdown-item {
+    color: #212529 !important;
+    -webkit-text-fill-color: #212529 !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    font-family: inherit !important;
+    text-shadow: none !important;
+}
+
+#globalNavbar .dropdown-item:hover,
+#globalNavbar .dropdown-item:focus {
+    color: #1e2125 !important;
+    -webkit-text-fill-color: #1e2125 !important;
+    background: #e9ecef !important;
+    background-color: #e9ecef !important;
+}
+
+#globalNavbar .notif-badge,
+body #globalNavbar .notif-badge {
+    font-family: inherit !important;
+    font-size: 11px !important;
+    line-height: 1 !important;
+    padding: 3px 6px !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+}
+</style>
 
 </body>
 </html>
