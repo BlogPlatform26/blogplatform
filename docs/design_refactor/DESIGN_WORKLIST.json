@@ -1,0 +1,110 @@
+{
+  "created": "2026-07-03 10:29:06",
+  "goal": "Odvojiti dizajne koje radimo sada, kasnije i koje za sada ne diramo.",
+  "rules": [
+    "Ne mijenjati izgled ako cilj faze nije vizualni bugfix.",
+    "Ne dodavati CSS na dno kao krpanje ako postoji konkretno pravilo koje treba zamijeniti.",
+    "Prvo raditi dizajne koji koriste zajednički layout i stvarno su ponuđeni korisnicima.",
+    "Posebne dizajne raditi jedan po jedan.",
+    "Nejasne/template-only dizajne ne dirati dok se ručno ne potvrdi da su ponuđeni korisnicima.",
+    "Navbar je globalni dio platforme i blog dizajni ga ne bi smjeli mijenjati."
+  ],
+  "work_now": {
+    "name": "Radimo sada",
+    "description": "Dizajni koji koriste zajedničku strukturu ili su relativno sigurniji za refaktor korisničkih postavki.",
+    "groups": {
+      "osnovni_i_right_sidebar": [
+        "default",
+        "default_right",
+        "dark",
+        "dark_right",
+        "classic",
+        "classic_right"
+      ],
+      "simple": [
+        "simple",
+        "simple_image",
+        "simple_pattern",
+        "simple_retro"
+      ],
+      "tematski_zajednicki_layout": [
+        "podvodna_tisina",
+        "vodopad_u_magli",
+        "planine_u_magli",
+        "nebeski_mir",
+        "iznad_oblaka",
+        "sumska_svjetlost",
+        "polarna_svjetlost",
+        "zlatno_polje",
+        "neonski_grad",
+        "polje_lavande",
+        "carobna_ljubicasta",
+        "kraljevska_pozornica",
+        "litica_noci",
+        "svemirski_horizont",
+        "zlatni_horizont",
+        "morski_prijelaz"
+      ],
+      "gradijentni_zajednicki_layout": [
+        "dimni_akordi",
+        "sjene_ulice",
+        "mjesecev_ples",
+        "asfaltni_plamen"
+      ]
+    }
+  },
+  "work_later_carefully": {
+    "name": "Radimo kasnije oprezno",
+    "description": "Posebni dizajni koji su vjerojatno ponuđeni korisnicima, ali imaju vlastitu strukturu, vlastite sidebare ili vlastiti hero/banner dio.",
+    "groups": {
+      "posebni_single_sidebar": [
+        "jedro_u_suton",
+        "misticno_jezero",
+        "nebeska_klasika",
+        "ponocna_elegancija",
+        "ruzicasti_vrt",
+        "stara_aleja",
+        "staza_prema_vrhovima"
+      ],
+      "posebni_hero": [
+        "magazin"
+      ]
+    }
+  },
+  "manual_check": {
+    "name": "Provjeriti ručno prije rada",
+    "description": "Dizajni koje audit nalazi u kodu, ali korisnik treba potvrditi da su stvarno ponuđeni u postavkama prije ikakvog rada.",
+    "items": [
+      "nebesko_polje"
+    ]
+  },
+  "do_not_touch_now": {
+    "name": "Za sada ne diramo",
+    "description": "Dizajni bez jasnog option/choice hita ili dizajni koje korisnik ne prepoznaje u izboru. Ne raditi ih dok se ne potvrdi da trebaju ostati.",
+    "items": [
+      "studio",
+      "vecer_uz_jezero",
+      "vecer_zaljubljenih"
+    ]
+  },
+  "next_phases": [
+    {
+      "phase": "Faza 14",
+      "title": "audit navbar CSS-a u dizajnima",
+      "goal": "Pronaći blog dizajne koji direktno mijenjaju globalni navbar, pretragu, obavijesti ili badge font.",
+      "type": "audit only"
+    },
+    {
+      "phase": "Faza 15",
+      "title": "neutralizirati navbar iz dizajna",
+      "goal": "Ukloniti ili ograničiti pravila koja mijenjaju globalni navbar, bez promjene izgleda blog sadržaja.",
+      "type": "small code change after audit"
+    },
+    {
+      "phase": "Faza 16",
+      "title": "customization layer za zajedničke dizajne",
+      "goal": "Srediti da korisničke postavke stabilno rade na sigurnijim dizajnima iz liste Radimo sada.",
+      "type": "controlled refactor"
+    }
+  ]
+}
