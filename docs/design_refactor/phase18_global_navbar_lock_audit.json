@@ -1,0 +1,269 @@
+{
+  "generated_at": "2026-07-03 19:57:28",
+  "base_file": "C:\\Users\\mario\\blogplatform\\blog\\templates\\blog\\base.html",
+  "line_count": 3534,
+  "total_hits": 48,
+  "css_hits": [
+    {
+      "line": 67,
+      "pattern": "notif-badge",
+      "text": "    .notif-badge{ font-size: 11px; padding: 3px 6px; }"
+    },
+    {
+      "line": 74,
+      "pattern": "\\.btn",
+      "text": "    .notif-actions-bar .btn-link:disabled{"
+    },
+    {
+      "line": 242,
+      "pattern": "nav\\.navbar",
+      "text": "    nav.navbar{"
+    },
+    {
+      "line": 246,
+      "pattern": "nav\\.navbar",
+      "text": "    nav.navbar .dropdown-menu{"
+    },
+    {
+      "line": 304,
+      "pattern": "input\\[type=.?search",
+      "text": "    .blog-cursor-theme:not(.blog-cursor-external-style) input[type=\"search\"],"
+    },
+    {
+      "line": 316,
+      "pattern": "\\.btn",
+      "text": "    .blog-cursor-sparkle .btn,"
+    },
+    {
+      "line": 333,
+      "pattern": "\\.btn",
+      "text": "    .blog-cursor-heart .btn,"
+    },
+    {
+      "line": 350,
+      "pattern": "\\.btn",
+      "text": "    .blog-cursor-moon .btn,"
+    },
+    {
+      "line": 367,
+      "pattern": "\\.btn",
+      "text": "    .blog-cursor-diamond .btn,"
+    },
+    {
+      "line": 384,
+      "pattern": "\\.btn",
+      "text": "    .blog-cursor-neon .btn,"
+    },
+    {
+      "line": 402,
+      "pattern": "\\.btn",
+      "text": "    .blog-cursor-rose .btn,"
+    },
+    {
+      "line": 419,
+      "pattern": "\\.btn",
+      "text": "    .blog-cursor-butterfly .btn,"
+    },
+    {
+      "line": 436,
+      "pattern": "\\.btn",
+      "text": "    .blog-cursor-leaf .btn,"
+    },
+    {
+      "line": 453,
+      "pattern": "\\.btn",
+      "text": "    .blog-cursor-sun .btn,"
+    },
+    {
+      "line": 471,
+      "pattern": "\\.btn",
+      "text": "    .blog-cursor-flame .btn,"
+    },
+    {
+      "line": 489,
+      "pattern": "\\.btn",
+      "text": "    .blog-cursor-crown .btn,"
+    },
+    {
+      "line": 507,
+      "pattern": "\\.btn",
+      "text": "    .blog-cursor-crystal .btn,"
+    },
+    {
+      "line": 525,
+      "pattern": "\\.btn",
+      "text": "    .blog-cursor-paw .btn,"
+    },
+    {
+      "line": 543,
+      "pattern": "\\.btn",
+      "text": "    .blog-cursor-droplet .btn,"
+    },
+    {
+      "line": 560,
+      "pattern": "\\.btn",
+      "text": "    .blog-cursor-sword .btn,"
+    },
+    {
+      "line": 577,
+      "pattern": "\\.btn",
+      "text": "    .blog-cursor-skeleton_hand .btn,"
+    },
+    {
+      "line": 899,
+      "pattern": "\\.btn",
+      "text": "    .blog-cursor-theme:not(.blog-cursor-external-style) .btn,"
+    },
+    {
+      "line": 1018,
+      "pattern": "\\.form-control",
+      "text": "    .password-toggle-group .form-control{"
+    }
+  ],
+  "important_snippets": [
+    {
+      "term": "navbarSearchInput",
+      "line": 1266,
+      "snippet": [
+        "1258:         </button>",
+        "1259: ",
+        "1260:         <!-- ✅ Pretraga unutar navbara (inline) -->",
+        "1261:         <div class=\"collapse ms-2\" id=\"navbarSearchInline\">",
+        "1262:             <form class=\"d-flex align-items-center\"",
+        "1263:                   method=\"GET\"",
+        "1264:                   action=\"{% url 'search' %}\">",
+        "1265:                 <div class=\"input-group input-group-sm\" style=\"width: 320px;\">",
+        "1266:                     <input id=\"navbarSearchInput\"",
+        "1267:                            class=\"form-control\"",
+        "1268:                            type=\"search\"",
+        "1269:                            name=\"q\"",
+        "1270:                            placeholder=\"Pretraži...\"",
+        "1271:                            value=\"{{ request.GET.q|default:'' }}\">",
+        "1272: ",
+        "1273:                     <button class=\"btn btn-outline-light\" type=\"submit\" title=\"Pretraži\">",
+        "1274:                         <i class=\"bi bi-search\"></i>"
+      ]
+    },
+    {
+      "term": "navbarSearchInline",
+      "line": 1253,
+      "snippet": [
+        "1245:                  style=\"height:44px;\">",
+        "1246:         </a>",
+        "1247: ",
+        "1248:         <!-- ✅ Ikona za pretragu -->",
+        "1249:         <button id=\"searchToggleBtn\"",
+        "1250:                 class=\"btn btn-outline-light btn-sm ms-2\"",
+        "1251:                 type=\"button\"",
+        "1252:                 data-bs-toggle=\"collapse\"",
+        "1253:                 data-bs-target=\"#navbarSearchInline\"",
+        "1254:                 aria-expanded=\"false\"",
+        "1255:                 aria-controls=\"navbarSearchInline\"",
+        "1256:                 title=\"Pretraga\">",
+        "1257:             <i class=\"bi bi-search\"></i>",
+        "1258:         </button>",
+        "1259: ",
+        "1260:         <!-- ✅ Pretraga unutar navbara (inline) -->",
+        "1261:         <div class=\"collapse ms-2\" id=\"navbarSearchInline\">"
+      ]
+    },
+    {
+      "term": "searchToggleBtn",
+      "line": 1249,
+      "snippet": [
+        "1241: ",
+        "1242:         <a class=\"navbar-brand\" href=\"{% url 'home' %}\">",
+        "1243:             <img src=\"{% static 'images/logo.svg' %}\"",
+        "1244:                  alt=\"Logo\"",
+        "1245:                  style=\"height:44px;\">",
+        "1246:         </a>",
+        "1247: ",
+        "1248:         <!-- ✅ Ikona za pretragu -->",
+        "1249:         <button id=\"searchToggleBtn\"",
+        "1250:                 class=\"btn btn-outline-light btn-sm ms-2\"",
+        "1251:                 type=\"button\"",
+        "1252:                 data-bs-toggle=\"collapse\"",
+        "1253:                 data-bs-target=\"#navbarSearchInline\"",
+        "1254:                 aria-expanded=\"false\"",
+        "1255:                 aria-controls=\"navbarSearchInline\"",
+        "1256:                 title=\"Pretraga\">",
+        "1257:             <i class=\"bi bi-search\"></i>"
+      ]
+    },
+    {
+      "term": "notif-badge",
+      "line": 67,
+      "snippet": [
+        "0059:     }",
+        "0060:     .nav-avatar{",
+        "0061:         width: 28px;",
+        "0062:         height: 28px;",
+        "0063:         border-radius: 50%;",
+        "0064:         object-fit: cover;",
+        "0065:     }",
+        "0066:     .nav-user-text{ line-height: 1; }",
+        "0067:     .notif-badge{ font-size: 11px; padding: 3px 6px; }",
+        "0068:     .notif-actions-bar{",
+        "0069:         position: sticky;",
+        "0070:         top: 0;",
+        "0071:         z-index: 5;",
+        "0072:         background: #fff;",
+        "0073:     }",
+        "0074:     .notif-actions-bar .btn-link:disabled{",
+        "0075:         color: rgba(0,0,0,0.35) !important;"
+      ]
+    },
+    {
+      "term": "navbar-brand",
+      "line": 1242,
+      "snippet": [
+        "1234:         </button>",
+        "1235:     </form>",
+        "1236: </div>",
+        "1237: {% endif %}",
+        "1238: ",
+        "1239: <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">",
+        "1240:     <div class=\"container-fluid position-relative\">",
+        "1241: ",
+        "1242:         <a class=\"navbar-brand\" href=\"{% url 'home' %}\">",
+        "1243:             <img src=\"{% static 'images/logo.svg' %}\"",
+        "1244:                  alt=\"Logo\"",
+        "1245:                  style=\"height:44px;\">",
+        "1246:         </a>",
+        "1247: ",
+        "1248:         <!-- ✅ Ikona za pretragu -->",
+        "1249:         <button id=\"searchToggleBtn\"",
+        "1250:                 class=\"btn btn-outline-light btn-sm ms-2\""
+      ]
+    },
+    {
+      "term": "<nav",
+      "line": 1239,
+      "snippet": [
+        "1231:         <button type=\"submit\"",
+        "1232:                 style=\"background:none; border:0; padding:0; color:#d9480f; font-weight:600; text-decoration:underline; cursor:pointer;\">",
+        "1233:             ponovno pošaljite mail.",
+        "1234:         </button>",
+        "1235:     </form>",
+        "1236: </div>",
+        "1237: {% endif %}",
+        "1238: ",
+        "1239: <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">",
+        "1240:     <div class=\"container-fluid position-relative\">",
+        "1241: ",
+        "1242:         <a class=\"navbar-brand\" href=\"{% url 'home' %}\">",
+        "1243:             <img src=\"{% static 'images/logo.svg' %}\"",
+        "1244:                  alt=\"Logo\"",
+        "1245:                  style=\"height:44px;\">",
+        "1246:         </a>",
+        "1247: "
+      ]
+    }
+  ],
+  "recommendation": [
+    "Ne dirati dizajne masovno.",
+    "Zaključati globalni navbar u base.html ili globalnom CSS-u kroz selektore vezane za navbar ID/klase.",
+    "Ne koristiti općenite .form-control/.btn selektore bez parent selektora globalnog navbara.",
+    "Dizajne kasnije popravljati tako da svoje inpute ograniče na blog sadržaj, ali prvo zaštititi navbar."
+  ]
+}
