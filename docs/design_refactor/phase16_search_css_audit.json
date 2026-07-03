@@ -1,0 +1,5587 @@
+{
+  "summary": {
+    "created": "2026-07-03 11:48:42",
+    "design_count": 42,
+    "designs_with_search_hits": 31,
+    "designs_with_risky_hits": 31,
+    "total_hits": 331,
+    "total_risky_hits": 331
+  },
+  "results": [
+    {
+      "design": "asfaltni_plamen",
+      "path": "blog\\templates\\blog\\designs\\asfaltni_plamen.html",
+      "group": "zajednicki_layout",
+      "matches": [
+        {
+          "line": 53,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar,",
+          "context": [
+            "0050:     background-size: 100% 100%, 100% auto;",
+            "0051: }",
+            "0052: ",
+            "0053: nav.navbar,",
+            "0054: nav.navbar .dropdown-menu {",
+            "0055:     z-index: 4000 !important;",
+            "0056: }"
+          ]
+        },
+        {
+          "line": 54,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar .dropdown-menu {",
+          "context": [
+            "0051: }",
+            "0052: ",
+            "0053: nav.navbar,",
+            "0054: nav.navbar .dropdown-menu {",
+            "0055:     z-index: 4000 !important;",
+            "0056: }",
+            "0057: "
+          ]
+        },
+        {
+          "line": 249,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".btn-outline-light {",
+          "context": [
+            "0246:     color: #ffe1bd;",
+            "0247: }",
+            "0248: ",
+            "0249: .btn-outline-light {",
+            "0250:     border-color: rgba(239, 199, 146, 0.38) !important;",
+            "0251:     color: #ffe1bd !important;",
+            "0252: }"
+          ]
+        },
+        {
+          "line": 254,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".btn-outline-light:hover {",
+          "context": [
+            "0251:     color: #ffe1bd !important;",
+            "0252: }",
+            "0253: ",
+            "0254: .btn-outline-light:hover {",
+            "0255:     background: rgba(239, 199, 146, 0.12) !important;",
+            "0256:     color: #fff6ec !important;",
+            "0257: }"
+          ]
+        },
+        {
+          "line": 342,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "textarea.form-control,",
+          "context": [
+            "0339:     padding: 10px 44px 10px 12px;",
+            "0340: }",
+            "0341: ",
+            "0342: textarea.form-control,",
+            "0343: input.form-control,",
+            "0344: select.form-select {",
+            "0345:     background: rgba(33, 23, 18, 0.64) !important;"
+          ]
+        },
+        {
+          "line": 343,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "input.form-control,",
+          "context": [
+            "0340: }",
+            "0341: ",
+            "0342: textarea.form-control,",
+            "0343: input.form-control,",
+            "0344: select.form-select {",
+            "0345:     background: rgba(33, 23, 18, 0.64) !important;",
+            "0346:     color: #f6e8da !important;"
+          ]
+        },
+        {
+          "line": 343,
+          "key": "input_selector",
+          "reason": "genericki input selector",
+          "risky": true,
+          "text": "input.form-control,",
+          "context": [
+            "0340: }",
+            "0341: ",
+            "0342: textarea.form-control,",
+            "0343: input.form-control,",
+            "0344: select.form-select {",
+            "0345:     background: rgba(33, 23, 18, 0.64) !important;",
+            "0346:     color: #f6e8da !important;"
+          ]
+        },
+        {
+          "line": 350,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "textarea.form-control::placeholder,",
+          "context": [
+            "0347:     border-color: rgba(221, 160, 101, 0.18) !important;",
+            "0348: }",
+            "0349: ",
+            "0350: textarea.form-control::placeholder,",
+            "0351: input.form-control::placeholder {",
+            "0352:     color: rgba(246, 232, 218, 0.56) !important;",
+            "0353: }"
+          ]
+        },
+        {
+          "line": 351,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "input.form-control::placeholder {",
+          "context": [
+            "0348: }",
+            "0349: ",
+            "0350: textarea.form-control::placeholder,",
+            "0351: input.form-control::placeholder {",
+            "0352:     color: rgba(246, 232, 218, 0.56) !important;",
+            "0353: }",
+            "0354: "
+          ]
+        },
+        {
+          "line": 351,
+          "key": "input_selector",
+          "reason": "genericki input selector",
+          "risky": true,
+          "text": "input.form-control::placeholder {",
+          "context": [
+            "0348: }",
+            "0349: ",
+            "0350: textarea.form-control::placeholder,",
+            "0351: input.form-control::placeholder {",
+            "0352:     color: rgba(246, 232, 218, 0.56) !important;",
+            "0353: }",
+            "0354: "
+          ]
+        }
+      ],
+      "risky_count": 10,
+      "match_count": 10
+    },
+    {
+      "design": "carobna_ljubicasta",
+      "path": "blog\\templates\\blog\\designs\\carobna_ljubicasta.html",
+      "group": "zajednicki_layout",
+      "matches": [
+        {
+          "line": 84,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar {",
+          "context": [
+            "0081:     filter: blur(0.15px);",
+            "0082: }",
+            "0083: ",
+            "0084: nav.navbar {",
+            "0085:     position: relative;",
+            "0086:     z-index: 4000 !important;",
+            "0087: }"
+          ]
+        },
+        {
+          "line": 89,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar .dropdown-menu {",
+          "context": [
+            "0086:     z-index: 4000 !important;",
+            "0087: }",
+            "0088: ",
+            "0089: nav.navbar .dropdown-menu {",
+            "0090:     z-index: 4100 !important;",
+            "0091: }",
+            "0092: "
+          ]
+        },
+        {
+          "line": 617,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "textarea.form-control,",
+          "context": [
+            "0614:     color: #f4eaff;",
+            "0615: }",
+            "0616: ",
+            "0617: textarea.form-control,",
+            "0618: input.form-control,",
+            "0619: select.form-select {",
+            "0620:     background: rgba(255, 255, 255, 0.10) !important;"
+          ]
+        },
+        {
+          "line": 618,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "input.form-control,",
+          "context": [
+            "0615: }",
+            "0616: ",
+            "0617: textarea.form-control,",
+            "0618: input.form-control,",
+            "0619: select.form-select {",
+            "0620:     background: rgba(255, 255, 255, 0.10) !important;",
+            "0621:     color: #fff3ff !important;"
+          ]
+        },
+        {
+          "line": 618,
+          "key": "input_selector",
+          "reason": "genericki input selector",
+          "risky": true,
+          "text": "input.form-control,",
+          "context": [
+            "0615: }",
+            "0616: ",
+            "0617: textarea.form-control,",
+            "0618: input.form-control,",
+            "0619: select.form-select {",
+            "0620:     background: rgba(255, 255, 255, 0.10) !important;",
+            "0621:     color: #fff3ff !important;"
+          ]
+        },
+        {
+          "line": 626,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "textarea.form-control::placeholder,",
+          "context": [
+            "0623:     box-shadow: none !important;",
+            "0624: }",
+            "0625: ",
+            "0626: textarea.form-control::placeholder,",
+            "0627: input.form-control::placeholder {",
+            "0628:     color: rgba(243, 232, 255, 0.52) !important;",
+            "0629: }"
+          ]
+        },
+        {
+          "line": 627,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "input.form-control::placeholder {",
+          "context": [
+            "0624: }",
+            "0625: ",
+            "0626: textarea.form-control::placeholder,",
+            "0627: input.form-control::placeholder {",
+            "0628:     color: rgba(243, 232, 255, 0.52) !important;",
+            "0629: }",
+            "0630: "
+          ]
+        },
+        {
+          "line": 627,
+          "key": "input_selector",
+          "reason": "genericki input selector",
+          "risky": true,
+          "text": "input.form-control::placeholder {",
+          "context": [
+            "0624: }",
+            "0625: ",
+            "0626: textarea.form-control::placeholder,",
+            "0627: input.form-control::placeholder {",
+            "0628:     color: rgba(243, 232, 255, 0.52) !important;",
+            "0629: }",
+            "0630: "
+          ]
+        },
+        {
+          "line": 631,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "textarea.form-control:focus,",
+          "context": [
+            "0628:     color: rgba(243, 232, 255, 0.52) !important;",
+            "0629: }",
+            "0630: ",
+            "0631: textarea.form-control:focus,",
+            "0632: input.form-control:focus,",
+            "0633: select.form-select:focus {",
+            "0634:     border-color: rgba(243, 176, 255, 0.58) !important;"
+          ]
+        },
+        {
+          "line": 632,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "input.form-control:focus,",
+          "context": [
+            "0629: }",
+            "0630: ",
+            "0631: textarea.form-control:focus,",
+            "0632: input.form-control:focus,",
+            "0633: select.form-select:focus {",
+            "0634:     border-color: rgba(243, 176, 255, 0.58) !important;",
+            "0635:     box-shadow: none !important;"
+          ]
+        },
+        {
+          "line": 632,
+          "key": "input_selector",
+          "reason": "genericki input selector",
+          "risky": true,
+          "text": "input.form-control:focus,",
+          "context": [
+            "0629: }",
+            "0630: ",
+            "0631: textarea.form-control:focus,",
+            "0632: input.form-control:focus,",
+            "0633: select.form-select:focus {",
+            "0634:     border-color: rgba(243, 176, 255, 0.58) !important;",
+            "0635:     box-shadow: none !important;"
+          ]
+        },
+        {
+          "line": 639,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".btn-outline-light {",
+          "context": [
+            "0636: }",
+            "0637: ",
+            "0638: .blog-action-outline,",
+            "0639: .btn-outline-light {",
+            "0640:     border-color: rgba(243, 176, 255, 0.32) !important;",
+            "0641:     color: #fff3ff !important;",
+            "0642:     background: rgba(255, 255, 255, 0.10) !important;"
+          ]
+        },
+        {
+          "line": 647,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".btn-outline-light:hover {",
+          "context": [
+            "0644: }",
+            "0645: ",
+            "0646: .blog-action-outline:hover,",
+            "0647: .btn-outline-light:hover {",
+            "0648:     border-color: rgba(243, 176, 255, 0.58) !important;",
+            "0649:     color: #ffffff !important;",
+            "0650:     background: rgba(255, 255, 255, 0.18) !important;"
+          ]
+        }
+      ],
+      "risky_count": 13,
+      "match_count": 13
+    },
+    {
+      "design": "dimni_akordi",
+      "path": "blog\\templates\\blog\\designs\\dimni_akordi.html",
+      "group": "zajednicki_layout",
+      "matches": [
+        {
+          "line": 53,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar,",
+          "context": [
+            "0050:     background-size: 100% 100%, 100% auto;",
+            "0051: }",
+            "0052: ",
+            "0053: nav.navbar,",
+            "0054: nav.navbar .dropdown-menu {",
+            "0055:     z-index: 4000 !important;",
+            "0056: }"
+          ]
+        },
+        {
+          "line": 54,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar .dropdown-menu {",
+          "context": [
+            "0051: }",
+            "0052: ",
+            "0053: nav.navbar,",
+            "0054: nav.navbar .dropdown-menu {",
+            "0055:     z-index: 4000 !important;",
+            "0056: }",
+            "0057: "
+          ]
+        },
+        {
+          "line": 239,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".btn-outline-light {",
+          "context": [
+            "0236:     color: #ffe0be;",
+            "0237: }",
+            "0238: ",
+            "0239: .btn-outline-light {",
+            "0240:     border-color: rgba(239, 192, 143, 0.38) !important;",
+            "0241:     color: #ffe0be !important;",
+            "0242: }"
+          ]
+        },
+        {
+          "line": 244,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".btn-outline-light:hover {",
+          "context": [
+            "0241:     color: #ffe0be !important;",
+            "0242: }",
+            "0243: ",
+            "0244: .btn-outline-light:hover {",
+            "0245:     background: rgba(239, 192, 143, 0.12) !important;",
+            "0246:     color: #fff4e9 !important;",
+            "0247: }"
+          ]
+        },
+        {
+          "line": 332,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "textarea.form-control,",
+          "context": [
+            "0329:     padding: 10px 44px 10px 12px;",
+            "0330: }",
+            "0331: ",
+            "0332: textarea.form-control,",
+            "0333: input.form-control,",
+            "0334: select.form-select {",
+            "0335:     background: rgba(40, 23, 17, 0.62) !important;"
+          ]
+        },
+        {
+          "line": 333,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "input.form-control,",
+          "context": [
+            "0330: }",
+            "0331: ",
+            "0332: textarea.form-control,",
+            "0333: input.form-control,",
+            "0334: select.form-select {",
+            "0335:     background: rgba(40, 23, 17, 0.62) !important;",
+            "0336:     color: #f5e4d6 !important;"
+          ]
+        },
+        {
+          "line": 333,
+          "key": "input_selector",
+          "reason": "genericki input selector",
+          "risky": true,
+          "text": "input.form-control,",
+          "context": [
+            "0330: }",
+            "0331: ",
+            "0332: textarea.form-control,",
+            "0333: input.form-control,",
+            "0334: select.form-select {",
+            "0335:     background: rgba(40, 23, 17, 0.62) !important;",
+            "0336:     color: #f5e4d6 !important;"
+          ]
+        },
+        {
+          "line": 340,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "textarea.form-control::placeholder,",
+          "context": [
+            "0337:     border-color: rgba(208, 151, 108, 0.18) !important;",
+            "0338: }",
+            "0339: ",
+            "0340: textarea.form-control::placeholder,",
+            "0341: input.form-control::placeholder {",
+            "0342:     color: rgba(245, 228, 214, 0.56) !important;",
+            "0343: }"
+          ]
+        },
+        {
+          "line": 341,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "input.form-control::placeholder {",
+          "context": [
+            "0338: }",
+            "0339: ",
+            "0340: textarea.form-control::placeholder,",
+            "0341: input.form-control::placeholder {",
+            "0342:     color: rgba(245, 228, 214, 0.56) !important;",
+            "0343: }",
+            "0344: "
+          ]
+        },
+        {
+          "line": 341,
+          "key": "input_selector",
+          "reason": "genericki input selector",
+          "risky": true,
+          "text": "input.form-control::placeholder {",
+          "context": [
+            "0338: }",
+            "0339: ",
+            "0340: textarea.form-control::placeholder,",
+            "0341: input.form-control::placeholder {",
+            "0342:     color: rgba(245, 228, 214, 0.56) !important;",
+            "0343: }",
+            "0344: "
+          ]
+        }
+      ],
+      "risky_count": 10,
+      "match_count": 10
+    },
+    {
+      "design": "iznad_oblaka",
+      "path": "blog\\templates\\blog\\designs\\iznad_oblaka.html",
+      "group": "zajednicki_layout",
+      "matches": [
+        {
+          "line": 43,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar {",
+          "context": [
+            "0040:     background-size: 100% 100%, 100% auto;",
+            "0041: }",
+            "0042: ",
+            "0043: nav.navbar {",
+            "0044:     position: relative;",
+            "0045:     z-index: 4000 !important;",
+            "0046: }"
+          ]
+        },
+        {
+          "line": 48,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar .dropdown-menu {",
+          "context": [
+            "0045:     z-index: 4000 !important;",
+            "0046: }",
+            "0047: ",
+            "0048: nav.navbar .dropdown-menu {",
+            "0049:     z-index: 4100 !important;",
+            "0050: }",
+            "0051: "
+          ]
+        },
+        {
+          "line": 408,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "textarea.form-control,",
+          "context": [
+            "0405:     color: #5f6670;",
+            "0406: }",
+            "0407: ",
+            "0408: textarea.form-control,",
+            "0409: input.form-control,",
+            "0410: select.form-select {",
+            "0411:     background: rgba(255, 255, 255, 0.46) !important;"
+          ]
+        },
+        {
+          "line": 409,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "input.form-control,",
+          "context": [
+            "0406: }",
+            "0407: ",
+            "0408: textarea.form-control,",
+            "0409: input.form-control,",
+            "0410: select.form-select {",
+            "0411:     background: rgba(255, 255, 255, 0.46) !important;",
+            "0412:     color: #4f5863 !important;"
+          ]
+        },
+        {
+          "line": 409,
+          "key": "input_selector",
+          "reason": "genericki input selector",
+          "risky": true,
+          "text": "input.form-control,",
+          "context": [
+            "0406: }",
+            "0407: ",
+            "0408: textarea.form-control,",
+            "0409: input.form-control,",
+            "0410: select.form-select {",
+            "0411:     background: rgba(255, 255, 255, 0.46) !important;",
+            "0412:     color: #4f5863 !important;"
+          ]
+        },
+        {
+          "line": 417,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "textarea.form-control::placeholder,",
+          "context": [
+            "0414:     box-shadow: none !important;",
+            "0415: }",
+            "0416: ",
+            "0417: textarea.form-control::placeholder,",
+            "0418: input.form-control::placeholder {",
+            "0419:     color: rgba(95, 102, 112, 0.48) !important;",
+            "0420: }"
+          ]
+        },
+        {
+          "line": 418,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "input.form-control::placeholder {",
+          "context": [
+            "0415: }",
+            "0416: ",
+            "0417: textarea.form-control::placeholder,",
+            "0418: input.form-control::placeholder {",
+            "0419:     color: rgba(95, 102, 112, 0.48) !important;",
+            "0420: }",
+            "0421: "
+          ]
+        },
+        {
+          "line": 418,
+          "key": "input_selector",
+          "reason": "genericki input selector",
+          "risky": true,
+          "text": "input.form-control::placeholder {",
+          "context": [
+            "0415: }",
+            "0416: ",
+            "0417: textarea.form-control::placeholder,",
+            "0418: input.form-control::placeholder {",
+            "0419:     color: rgba(95, 102, 112, 0.48) !important;",
+            "0420: }",
+            "0421: "
+          ]
+        },
+        {
+          "line": 422,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "textarea.form-control:focus,",
+          "context": [
+            "0419:     color: rgba(95, 102, 112, 0.48) !important;",
+            "0420: }",
+            "0421: ",
+            "0422: textarea.form-control:focus,",
+            "0423: input.form-control:focus,",
+            "0424: select.form-select:focus {",
+            "0425:     border-color: rgba(221, 186, 202, 0.56) !important;"
+          ]
+        },
+        {
+          "line": 423,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "input.form-control:focus,",
+          "context": [
+            "0420: }",
+            "0421: ",
+            "0422: textarea.form-control:focus,",
+            "0423: input.form-control:focus,",
+            "0424: select.form-select:focus {",
+            "0425:     border-color: rgba(221, 186, 202, 0.56) !important;",
+            "0426:     box-shadow: none !important;"
+          ]
+        },
+        {
+          "line": 423,
+          "key": "input_selector",
+          "reason": "genericki input selector",
+          "risky": true,
+          "text": "input.form-control:focus,",
+          "context": [
+            "0420: }",
+            "0421: ",
+            "0422: textarea.form-control:focus,",
+            "0423: input.form-control:focus,",
+            "0424: select.form-select:focus {",
+            "0425:     border-color: rgba(221, 186, 202, 0.56) !important;",
+            "0426:     box-shadow: none !important;"
+          ]
+        },
+        {
+          "line": 430,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".btn-outline-light {",
+          "context": [
+            "0427: }",
+            "0428: ",
+            "0429: .blog-action-outline,",
+            "0430: .btn-outline-light {",
+            "0431:     border-color: rgba(221, 186, 202, 0.44) !important;",
+            "0432:     color: #5f6670 !important;",
+            "0433:     background: rgba(255, 255, 255, 0.36) !important;"
+          ]
+        },
+        {
+          "line": 438,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".btn-outline-light:hover {",
+          "context": [
+            "0435: }",
+            "0436: ",
+            "0437: .blog-action-outline:hover,",
+            "0438: .btn-outline-light:hover {",
+            "0439:     border-color: rgba(221, 186, 202, 0.72) !important;",
+            "0440:     color: #4c5560 !important;",
+            "0441:     background: rgba(241, 213, 226, 0.18) !important;"
+          ]
+        }
+      ],
+      "risky_count": 13,
+      "match_count": 13
+    },
+    {
+      "design": "jedro_u_suton",
+      "path": "blog\\templates\\blog\\designs\\jedro_u_suton.html",
+      "group": "posebni",
+      "matches": [
+        {
+          "line": 31,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar {",
+          "context": [
+            "0028:     display: none;",
+            "0029: }",
+            "0030: ",
+            "0031: nav.navbar {",
+            "0032:     position: relative;",
+            "0033:     z-index: 4000 !important;",
+            "0034:     background: rgba(38, 23, 17, 0.78) !important;"
+          ]
+        },
+        {
+          "line": 39,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar .dropdown-menu {",
+          "context": [
+            "0036:     border-bottom: 1px solid rgba(255, 228, 203, 0.10);",
+            "0037: }",
+            "0038: ",
+            "0039: nav.navbar .dropdown-menu {",
+            "0040:     z-index: 4100 !important;",
+            "0041: }",
+            "0042: "
+          ]
+        },
+        {
+          "line": 256,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".jus-profile-wrap .btn-primary {",
+          "context": [
+            "0253:     box-shadow: 0 8px 18px rgba(18, 11, 8, 0.22);",
+            "0254: }",
+            "0255: ",
+            "0256: .jus-profile-wrap .btn-primary {",
+            "0257:     background: rgba(255, 210, 168, 0.18);",
+            "0258:     border-color: rgba(255, 210, 168, 0.52);",
+            "0259:     color: #fff8ef;"
+          ]
+        },
+        {
+          "line": 262,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".jus-profile-wrap .btn-primary:hover {",
+          "context": [
+            "0259:     color: #fff8ef;",
+            "0260: }",
+            "0261: ",
+            "0262: .jus-profile-wrap .btn-primary:hover {",
+            "0263:     background: rgba(255, 210, 168, 0.24);",
+            "0264:     border-color: rgba(255, 210, 168, 0.66);",
+            "0265:     color: #fffdf9;"
+          ]
+        },
+        {
+          "line": 268,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".jus-profile-wrap .btn-outline-primary {",
+          "context": [
+            "0265:     color: #fffdf9;",
+            "0266: }",
+            "0267: ",
+            "0268: .jus-profile-wrap .btn-outline-primary {",
+            "0269:     color: #ffd2a8;",
+            "0270:     border-color: rgba(255, 210, 168, 0.48);",
+            "0271: }"
+          ]
+        },
+        {
+          "line": 273,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".jus-profile-wrap .btn-outline-primary:hover {",
+          "context": [
+            "0270:     border-color: rgba(255, 210, 168, 0.48);",
+            "0271: }",
+            "0272: ",
+            "0273: .jus-profile-wrap .btn-outline-primary:hover {",
+            "0274:     background: rgba(255, 210, 168, 0.16);",
+            "0275:     color: #fff8ef;",
+            "0276: }"
+          ]
+        },
+        {
+          "line": 397,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".btn-outline-light,",
+          "context": [
+            "0394: }",
+            "0395: ",
+            "0396: .blog-action-outline,",
+            "0397: .btn-outline-light,",
+            "0398: .jus-theme .btn-outline-secondary {",
+            "0399:     border-color: rgba(255, 210, 168, 0.48) !important;",
+            "0400:     color: #ffd2a8 !important;"
+          ]
+        },
+        {
+          "line": 398,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".jus-theme .btn-outline-secondary {",
+          "context": [
+            "0395: ",
+            "0396: .blog-action-outline,",
+            "0397: .btn-outline-light,",
+            "0398: .jus-theme .btn-outline-secondary {",
+            "0399:     border-color: rgba(255, 210, 168, 0.48) !important;",
+            "0400:     color: #ffd2a8 !important;",
+            "0401:     background: transparent !important;"
+          ]
+        },
+        {
+          "line": 405,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".btn-outline-light:hover,",
+          "context": [
+            "0402: }",
+            "0403: ",
+            "0404: .blog-action-outline:hover,",
+            "0405: .btn-outline-light:hover,",
+            "0406: .jus-theme .btn-outline-secondary:hover {",
+            "0407:     background: rgba(255, 210, 168, 0.14) !important;",
+            "0408:     color: #fff8ef !important;"
+          ]
+        },
+        {
+          "line": 406,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".jus-theme .btn-outline-secondary:hover {",
+          "context": [
+            "0403: ",
+            "0404: .blog-action-outline:hover,",
+            "0405: .btn-outline-light:hover,",
+            "0406: .jus-theme .btn-outline-secondary:hover {",
+            "0407:     background: rgba(255, 210, 168, 0.14) !important;",
+            "0408:     color: #fff8ef !important;",
+            "0409:     box-shadow: 0 0 8px rgba(255, 210, 168, 0.14);"
+          ]
+        },
+        {
+          "line": 420,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": ".comment-row .form-control {",
+          "context": [
+            "0417: }",
+            "0418: ",
+            "0419: .comment-row textarea,",
+            "0420: .comment-row .form-control {",
+            "0421:     flex: 1;",
+            "0422:     background: rgba(255, 245, 235, 0.06) !important;",
+            "0423:     color: #fff7ef !important;"
+          ]
+        },
+        {
+          "line": 431,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": ".comment-row .form-control:focus {",
+          "context": [
+            "0428: }",
+            "0429: ",
+            "0430: .comment-row textarea:focus,",
+            "0431: .comment-row .form-control:focus {",
+            "0432:     border-color: rgba(255, 210, 168, 0.34) !important;",
+            "0433:     box-shadow: 0 0 0 0.2rem rgba(255, 210, 168, 0.08) !important;",
+            "0434: }"
+          ]
+        },
+        {
+          "line": 571,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".comment-row .btn {",
+          "context": [
+            "0568:         align-items: stretch;",
+            "0569:     }",
+            "0570: ",
+            "0571:     .comment-row .btn {",
+            "0572:         width: 100%;",
+            "0573:     }",
+            "0574: }"
+          ]
+        }
+      ],
+      "risky_count": 13,
+      "match_count": 13
+    },
+    {
+      "design": "kraljevska_pozornica",
+      "path": "blog\\templates\\blog\\designs\\kraljevska_pozornica.html",
+      "group": "zajednicki_layout",
+      "matches": [
+        {
+          "line": 79,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar {",
+          "context": [
+            "0076:     background-repeat: no-repeat;",
+            "0077: }",
+            "0078: ",
+            "0079: nav.navbar {",
+            "0080:     position: relative;",
+            "0081:     z-index: 4000 !important;",
+            "0082: }"
+          ]
+        },
+        {
+          "line": 84,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar .dropdown-menu {",
+          "context": [
+            "0081:     z-index: 4000 !important;",
+            "0082: }",
+            "0083: ",
+            "0084: nav.navbar .dropdown-menu {",
+            "0085:     z-index: 4100 !important;",
+            "0086: }",
+            "0087: "
+          ]
+        },
+        {
+          "line": 568,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".blog-profile-panel .btn-outline-primary {",
+          "context": [
+            "0565:     box-shadow: 0 14px 28px rgba(255, 195, 124, 0.22);",
+            "0566: }",
+            "0567: ",
+            "0568: .blog-profile-panel .btn-outline-primary {",
+            "0569:     border-color: rgba(255, 201, 142, 0.30);",
+            "0570:     color: #ffe6cd;",
+            "0571:     background: rgba(255, 255, 255, 0.03);"
+          ]
+        },
+        {
+          "line": 574,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".blog-profile-panel .btn-outline-primary:hover,",
+          "context": [
+            "0571:     background: rgba(255, 255, 255, 0.03);",
+            "0572: }",
+            "0573: ",
+            "0574: .blog-profile-panel .btn-outline-primary:hover,",
+            "0575: .blog-profile-panel .btn-outline-primary:focus {",
+            "0576:     background: rgba(255, 201, 142, 0.12);",
+            "0577:     color: #ffffff;"
+          ]
+        },
+        {
+          "line": 575,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".blog-profile-panel .btn-outline-primary:focus {",
+          "context": [
+            "0572: }",
+            "0573: ",
+            "0574: .blog-profile-panel .btn-outline-primary:hover,",
+            "0575: .blog-profile-panel .btn-outline-primary:focus {",
+            "0576:     background: rgba(255, 201, 142, 0.12);",
+            "0577:     color: #ffffff;",
+            "0578:     border-color: rgba(255, 201, 142, 0.42);"
+          ]
+        }
+      ],
+      "risky_count": 5,
+      "match_count": 5
+    },
+    {
+      "design": "magazin",
+      "path": "blog\\templates\\blog\\designs\\magazin.html",
+      "group": "posebni_hero",
+      "matches": [
+        {
+          "line": 24,
+          "key": "button_selector",
+          "reason": "genericki button selector",
+          "risky": true,
+          "text": "<button type=\"submit\" class=\"btn {% if is_following %}btn-outline-primary{% else %}btn-primary{% endif %} btn-sm\">",
+          "context": [
+            "0021:                     {% if not is_restricted %}",
+            "0022:                         <form method=\"post\" action=\"{% url 'follow_toggle' blog.username %}\" class=\"m-0\">",
+            "0023:                             {% csrf_token %}",
+            "0024:                             <button type=\"submit\" class=\"btn {% if is_following %}btn-outline-primary{% else %}btn-primary{% endif %} btn-sm\">",
+            "0025:                                 {% if is_following %}Pratiš{% else %}Prati{% endif %}",
+            "0026:                             </button>",
+            "0027:                         </form>"
+          ]
+        },
+        {
+          "line": 45,
+          "key": "button_selector",
+          "reason": "genericki button selector",
+          "risky": true,
+          "text": "<button type=\"submit\" class=\"dropdown-item\">Prestani pratiti</button>",
+          "context": [
+            "0042:                                 <li>",
+            "0043:                                     <form method=\"post\" action=\"{% url 'unfollow_user' blog.username %}\" class=\"m-0\">",
+            "0044:                                         {% csrf_token %}",
+            "0045:                                         <button type=\"submit\" class=\"dropdown-item\">Prestani pratiti</button>",
+            "0046:                                     </form>",
+            "0047:                                 </li>",
+            "0048:                             {% else %}"
+          ]
+        },
+        {
+          "line": 52,
+          "key": "button_selector",
+          "reason": "genericki button selector",
+          "risky": true,
+          "text": "<button type=\"submit\" class=\"dropdown-item\" {% if is_restricted %}disabled{% endif %}>Prati korisnika</button>",
+          "context": [
+            "0049:                                 <li>",
+            "0050:                                     <form method=\"post\" action=\"{% url 'follow_toggle' blog.username %}\" class=\"m-0\">",
+            "0051:                                         {% csrf_token %}",
+            "0052:                                         <button type=\"submit\" class=\"dropdown-item\" {% if is_restricted %}disabled{% endif %}>Prati korisnika</button>",
+            "0053:                                     </form>",
+            "0054:                                 </li>",
+            "0055:                             {% endif %}"
+          ]
+        },
+        {
+          "line": 60,
+          "key": "button_selector",
+          "reason": "genericki button selector",
+          "risky": true,
+          "text": "<button type=\"submit\" class=\"dropdown-item\">Ograniči korisnika</button>",
+          "context": [
+            "0057:                             <li>",
+            "0058:                                 <form method=\"post\" action=\"{% url 'restrict_user' blog.username %}\" class=\"m-0\">",
+            "0059:                                     {% csrf_token %}",
+            "0060:                                     <button type=\"submit\" class=\"dropdown-item\">Ograniči korisnika</button>",
+            "0061:                                 </form>",
+            "0062:                             </li>",
+            "0063: "
+          ]
+        },
+        {
+          "line": 69,
+          "key": "button_selector",
+          "reason": "genericki button selector",
+          "risky": true,
+          "text": "<button type=\"submit\" class=\"dropdown-item text-danger\">Blokiraj korisnika</button>",
+          "context": [
+            "0066:                             <li>",
+            "0067:                                 <form method=\"post\" action=\"{% url 'block_user' blog.username %}\" class=\"m-0\">",
+            "0068:                                     {% csrf_token %}",
+            "0069:                                     <button type=\"submit\" class=\"dropdown-item text-danger\">Blokiraj korisnika</button>",
+            "0070:                                 </form>",
+            "0071:                             </li>",
+            "0072:                         </ul>"
+          ]
+        },
+        {
+          "line": 352,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar {",
+          "context": [
+            "0349:     z-index: 9999;",
+            "0350: }",
+            "0351: ",
+            "0352: nav.navbar {",
+            "0353:     position: relative;",
+            "0354:     z-index: 5000 !important;",
+            "0355: }"
+          ]
+        },
+        {
+          "line": 357,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar .dropdown-menu {",
+          "context": [
+            "0354:     z-index: 5000 !important;",
+            "0355: }",
+            "0356: ",
+            "0357: nav.navbar .dropdown-menu {",
+            "0358:     z-index: 5100 !important;",
+            "0359: }",
+            "0360: "
+          ]
+        },
+        {
+          "line": 613,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "textarea.form-control {",
+          "context": [
+            "0610:     border: 1px solid var(--magazin-content-border);",
+            "0611: }",
+            "0612: ",
+            "0613: textarea.form-control {",
+            "0614:     background: #fff !important;",
+            "0615:     color: var(--magazin-text) !important;",
+            "0616:     border: 1px solid var(--magazin-content-border) !important;"
+          ]
+        },
+        {
+          "line": 619,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "textarea.form-control:focus {",
+          "context": [
+            "0616:     border: 1px solid var(--magazin-content-border) !important;",
+            "0617: }",
+            "0618: ",
+            "0619: textarea.form-control:focus {",
+            "0620:     box-shadow: 0 0 0 0.12rem rgba(155, 123, 90, 0.18) !important;",
+            "0621:     border-color: #b68f68 !important;",
+            "0622: }"
+          ]
+        }
+      ],
+      "risky_count": 9,
+      "match_count": 9
+    },
+    {
+      "design": "misticno_jezero",
+      "path": "blog\\templates\\blog\\designs\\misticno_jezero.html",
+      "group": "posebni",
+      "matches": [
+        {
+          "line": 31,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar {",
+          "context": [
+            "0028:     display: none;",
+            "0029: }",
+            "0030: ",
+            "0031: nav.navbar {",
+            "0032:     position: relative;",
+            "0033:     z-index: 4000 !important;",
+            "0034:     background: rgba(26, 10, 36, 0.76) !important;"
+          ]
+        },
+        {
+          "line": 39,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar .dropdown-menu {",
+          "context": [
+            "0036:     backdrop-filter: blur(8px);",
+            "0037: }",
+            "0038: ",
+            "0039: nav.navbar .dropdown-menu {",
+            "0040:     z-index: 4100 !important;",
+            "0041: }",
+            "0042: "
+          ]
+        },
+        {
+          "line": 222,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".mj-profile-wrap .btn-primary {",
+          "context": [
+            "0219:     box-shadow: 0 8px 18px rgba(15, 5, 24, 0.28);",
+            "0220: }",
+            "0221: ",
+            "0222: .mj-profile-wrap .btn-primary {",
+            "0223:     background: #f7c88f;",
+            "0224:     border-color: #f7c88f;",
+            "0225:     color: #311a1a;"
+          ]
+        },
+        {
+          "line": 228,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".mj-profile-wrap .btn-primary:hover {",
+          "context": [
+            "0225:     color: #311a1a;",
+            "0226: }",
+            "0227: ",
+            "0228: .mj-profile-wrap .btn-primary:hover {",
+            "0229:     background: #ffddb0;",
+            "0230:     border-color: #ffddb0;",
+            "0231:     color: #261414;"
+          ]
+        },
+        {
+          "line": 234,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".mj-profile-wrap .btn-outline-primary {",
+          "context": [
+            "0231:     color: #261414;",
+            "0232: }",
+            "0233: ",
+            "0234: .mj-profile-wrap .btn-outline-primary {",
+            "0235:     color: #ffe7be;",
+            "0236:     border-color: #ffe7be;",
+            "0237: }"
+          ]
+        },
+        {
+          "line": 239,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".mj-profile-wrap .btn-outline-primary:hover {",
+          "context": [
+            "0236:     border-color: #ffe7be;",
+            "0237: }",
+            "0238: ",
+            "0239: .mj-profile-wrap .btn-outline-primary:hover {",
+            "0240:     background: #ffe7be;",
+            "0241:     color: #311a1a;",
+            "0242: }"
+          ]
+        },
+        {
+          "line": 401,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".btn-outline-light {",
+          "context": [
+            "0398: }",
+            "0399: ",
+            "0400: .blog-action-outline,",
+            "0401: .btn-outline-light {",
+            "0402:     border-color: #ffe7be !important;",
+            "0403:     color: #ffe7be !important;",
+            "0404:     background: transparent !important;"
+          ]
+        },
+        {
+          "line": 408,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".btn-outline-light:hover {",
+          "context": [
+            "0405: }",
+            "0406: ",
+            "0407: .blog-action-outline:hover,",
+            "0408: .btn-outline-light:hover {",
+            "0409:     background: rgba(255, 231, 190, 0.16) !important;",
+            "0410:     color: #fffaf4 !important;",
+            "0411:     box-shadow: 0 0 10px rgba(255,231,190,0.14);"
+          ]
+        },
+        {
+          "line": 430,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": ".comment-row .form-control {",
+          "context": [
+            "0427: }",
+            "0428: ",
+            "0429: .comment-row textarea,",
+            "0430: .comment-row .form-control {",
+            "0431:     flex: 1;",
+            "0432:     background: rgba(255,255,255,0.08) !important;",
+            "0433:     color: #f5e9ff !important;"
+          ]
+        },
+        {
+          "line": 441,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": ".comment-row .form-control:focus {",
+          "context": [
+            "0438: }",
+            "0439: ",
+            "0440: .comment-row textarea:focus,",
+            "0441: .comment-row .form-control:focus {",
+            "0442:     border-color: rgba(255,231,190,0.34) !important;",
+            "0443:     box-shadow: 0 0 0 0.2rem rgba(255,231,190,0.08) !important;",
+            "0444: }"
+          ]
+        },
+        {
+          "line": 447,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": ".comment-row .form-control::placeholder {",
+          "context": [
+            "0444: }",
+            "0445: ",
+            "0446: .comment-row textarea::placeholder,",
+            "0447: .comment-row .form-control::placeholder {",
+            "0448:     color: #ead8f6 !important;",
+            "0449: }",
+            "0450: "
+          ]
+        },
+        {
+          "line": 579,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".comment-row .btn {",
+          "context": [
+            "0576:         align-items: stretch;",
+            "0577:     }",
+            "0578: ",
+            "0579:     .comment-row .btn {",
+            "0580:         width: 100%;",
+            "0581:     }",
+            "0582: }"
+          ]
+        }
+      ],
+      "risky_count": 12,
+      "match_count": 12
+    },
+    {
+      "design": "mjesecev_ples",
+      "path": "blog\\templates\\blog\\designs\\mjesecev_ples.html",
+      "group": "zajednicki_layout",
+      "matches": [
+        {
+          "line": 53,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar,",
+          "context": [
+            "0050:     background-size: 100% 100%, 100% auto;",
+            "0051: }",
+            "0052: ",
+            "0053: nav.navbar,",
+            "0054: nav.navbar .dropdown-menu {",
+            "0055:     z-index: 4000 !important;",
+            "0056: }"
+          ]
+        },
+        {
+          "line": 54,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar .dropdown-menu {",
+          "context": [
+            "0051: }",
+            "0052: ",
+            "0053: nav.navbar,",
+            "0054: nav.navbar .dropdown-menu {",
+            "0055:     z-index: 4000 !important;",
+            "0056: }",
+            "0057: "
+          ]
+        },
+        {
+          "line": 249,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".btn-outline-light {",
+          "context": [
+            "0246:     color: #ffe4bf;",
+            "0247: }",
+            "0248: ",
+            "0249: .btn-outline-light {",
+            "0250:     border-color: rgba(239, 201, 151, 0.38) !important;",
+            "0251:     color: #ffe4bf !important;",
+            "0252: }"
+          ]
+        },
+        {
+          "line": 254,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".btn-outline-light:hover {",
+          "context": [
+            "0251:     color: #ffe4bf !important;",
+            "0252: }",
+            "0253: ",
+            "0254: .btn-outline-light:hover {",
+            "0255:     background: rgba(239, 201, 151, 0.12) !important;",
+            "0256:     color: #fff6ec !important;",
+            "0257: }"
+          ]
+        },
+        {
+          "line": 350,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "textarea.form-control,",
+          "context": [
+            "0347:     color: #efe5d8 !important;",
+            "0348: }",
+            "0349: ",
+            "0350: textarea.form-control,",
+            "0351: input.form-control,",
+            "0352: select.form-select {",
+            "0353:     background: rgba(34, 26, 21, 0.62) !important;"
+          ]
+        },
+        {
+          "line": 351,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "input.form-control,",
+          "context": [
+            "0348: }",
+            "0349: ",
+            "0350: textarea.form-control,",
+            "0351: input.form-control,",
+            "0352: select.form-select {",
+            "0353:     background: rgba(34, 26, 21, 0.62) !important;",
+            "0354:     color: #f5e9db !important;"
+          ]
+        },
+        {
+          "line": 351,
+          "key": "input_selector",
+          "reason": "genericki input selector",
+          "risky": true,
+          "text": "input.form-control,",
+          "context": [
+            "0348: }",
+            "0349: ",
+            "0350: textarea.form-control,",
+            "0351: input.form-control,",
+            "0352: select.form-select {",
+            "0353:     background: rgba(34, 26, 21, 0.62) !important;",
+            "0354:     color: #f5e9db !important;"
+          ]
+        },
+        {
+          "line": 358,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "textarea.form-control::placeholder,",
+          "context": [
+            "0355:     border-color: rgba(207, 177, 132, 0.18) !important;",
+            "0356: }",
+            "0357: ",
+            "0358: textarea.form-control::placeholder,",
+            "0359: input.form-control::placeholder {",
+            "0360:     color: rgba(245, 233, 219, 0.56) !important;",
+            "0361: }"
+          ]
+        },
+        {
+          "line": 359,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "input.form-control::placeholder {",
+          "context": [
+            "0356: }",
+            "0357: ",
+            "0358: textarea.form-control::placeholder,",
+            "0359: input.form-control::placeholder {",
+            "0360:     color: rgba(245, 233, 219, 0.56) !important;",
+            "0361: }",
+            "0362: "
+          ]
+        },
+        {
+          "line": 359,
+          "key": "input_selector",
+          "reason": "genericki input selector",
+          "risky": true,
+          "text": "input.form-control::placeholder {",
+          "context": [
+            "0356: }",
+            "0357: ",
+            "0358: textarea.form-control::placeholder,",
+            "0359: input.form-control::placeholder {",
+            "0360:     color: rgba(245, 233, 219, 0.56) !important;",
+            "0361: }",
+            "0362: "
+          ]
+        }
+      ],
+      "risky_count": 10,
+      "match_count": 10
+    },
+    {
+      "design": "morski_prijelaz",
+      "path": "blog\\templates\\blog\\designs\\morski_prijelaz.html",
+      "group": "zajednicki_layout",
+      "matches": [
+        {
+          "line": 41,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar {",
+          "context": [
+            "0038:         background-size: cover, cover;",
+            "0039:     }",
+            "0040: ",
+            "0041:     nav.navbar {",
+            "0042:         position: relative;",
+            "0043:         z-index: 4000 !important;",
+            "0044:     }"
+          ]
+        },
+        {
+          "line": 46,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar .dropdown-menu {",
+          "context": [
+            "0043:         z-index: 4000 !important;",
+            "0044:     }",
+            "0045: ",
+            "0046:     nav.navbar .dropdown-menu {",
+            "0047:         z-index: 4100 !important;",
+            "0048:     }",
+            "0049: "
+          ]
+        },
+        {
+          "line": 329,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "textarea.form-control {",
+          "context": [
+            "0326:         padding: 10px 44px 10px 12px;",
+            "0327:     }",
+            "0328: ",
+            "0329:     textarea.form-control {",
+            "0330:         background: transparent !important;",
+            "0331:         color: #ffffff !important;",
+            "0332:         border: 1px solid rgba(197, 220, 255, 0.24) !important;"
+          ]
+        },
+        {
+          "line": 336,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "textarea.form-control:focus {",
+          "context": [
+            "0333:         border-radius: 12px;",
+            "0334:     }",
+            "0335: ",
+            "0336:     textarea.form-control:focus {",
+            "0337:         background: transparent !important;",
+            "0338:         color: #ffffff !important;",
+            "0339:         border-color: rgba(207, 225, 255, 0.44) !important;"
+          ]
+        },
+        {
+          "line": 348,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".btn-outline-light {",
+          "context": [
+            "0345:     }",
+            "0346: ",
+            "0347:     .blog-action-outline,",
+            "0348:     .btn-outline-light {",
+            "0349:         border-color: rgba(207, 225, 255, 0.34) !important;",
+            "0350:         color: #e7f0ff !important;",
+            "0351:     }"
+          ]
+        },
+        {
+          "line": 354,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".btn-outline-light:hover {",
+          "context": [
+            "0351:     }",
+            "0352: ",
+            "0353:     .blog-action-outline:hover,",
+            "0354:     .btn-outline-light:hover {",
+            "0355:         background-color: rgba(207, 225, 255, 0.12) !important;",
+            "0356:         color: #ffffff !important;",
+            "0357:     }"
+          ]
+        },
+        {
+          "line": 382,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "textarea.form-control {",
+          "context": [
+            "0379:     .archive-link,",
+            "0380:     .calendar-day,",
+            "0381:     .comment-body,",
+            "0382:     textarea.form-control {",
+            "0383:         border-color: rgba(197, 220, 255, 0.18) !important;",
+            "0384:     }",
+            "0385: "
+          ]
+        }
+      ],
+      "risky_count": 7,
+      "match_count": 7
+    },
+    {
+      "design": "nebeska_klasika",
+      "path": "blog\\templates\\blog\\designs\\nebeska_klasika.html",
+      "group": "posebni",
+      "matches": [
+        {
+          "line": 29,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar {",
+          "context": [
+            "0026:     display: none;",
+            "0027: }",
+            "0028: ",
+            "0029: nav.navbar {",
+            "0030:     position: relative;",
+            "0031:     z-index: 4000 !important;",
+            "0032:     background: rgba(42, 45, 51, 0.84) !important;"
+          ]
+        },
+        {
+          "line": 37,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar .dropdown-menu {",
+          "context": [
+            "0034:     border-bottom: 1px solid rgba(255,255,255,0.08);",
+            "0035: }",
+            "0036: ",
+            "0037: nav.navbar .dropdown-menu {",
+            "0038:     z-index: 4100 !important;",
+            "0039: }",
+            "0040: "
+          ]
+        },
+        {
+          "line": 211,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".nk-profile-wrap .btn-primary {",
+          "context": [
+            "0208:     box-shadow: 0 6px 16px rgba(108, 95, 80, 0.16);",
+            "0209: }",
+            "0210: ",
+            "0211: .nk-profile-wrap .btn-primary {",
+            "0212:     background: #6d7e9f;",
+            "0213:     border-color: #6d7e9f;",
+            "0214: }"
+          ]
+        },
+        {
+          "line": 216,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".nk-profile-wrap .btn-outline-primary {",
+          "context": [
+            "0213:     border-color: #6d7e9f;",
+            "0214: }",
+            "0215: ",
+            "0216: .nk-profile-wrap .btn-outline-primary {",
+            "0217:     color: #6d7e9f;",
+            "0218:     border-color: #6d7e9f;",
+            "0219: }"
+          ]
+        },
+        {
+          "line": 371,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".btn-outline-light {",
+          "context": [
+            "0368: }",
+            "0369: ",
+            "0370: .blog-action-outline,",
+            "0371: .btn-outline-light {",
+            "0372:     border-color: #6d7e9f !important;",
+            "0373:     color: #6d7e9f !important;",
+            "0374:     background: transparent !important;"
+          ]
+        },
+        {
+          "line": 378,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".btn-outline-light:hover {",
+          "context": [
+            "0375: }",
+            "0376: ",
+            "0377: .blog-action-outline:hover,",
+            "0378: .btn-outline-light:hover {",
+            "0379:     background: #6d7e9f !important;",
+            "0380:     color: #fff !important;",
+            "0381:     box-shadow: 0 0 8px rgba(109,126,159,0.25);"
+          ]
+        },
+        {
+          "line": 392,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": ".comment-row .form-control {",
+          "context": [
+            "0389: }",
+            "0390: ",
+            "0391: .comment-row textarea,",
+            "0392: .comment-row .form-control {",
+            "0393:     flex: 1;",
+            "0394:     background: rgba(255,255,255,0.70) !important;",
+            "0395:     color: #554a44 !important;"
+          ]
+        },
+        {
+          "line": 403,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": ".comment-row .form-control:focus {",
+          "context": [
+            "0400: }",
+            "0401: ",
+            "0402: .comment-row textarea:focus,",
+            "0403: .comment-row .form-control:focus {",
+            "0404:     border-color: rgba(109,126,159,0.62) !important;",
+            "0405:     box-shadow: 0 0 0 0.2rem rgba(109,126,159,0.12) !important;",
+            "0406: }"
+          ]
+        },
+        {
+          "line": 540,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".comment-row .btn {",
+          "context": [
+            "0537:         align-items: stretch;",
+            "0538:     }",
+            "0539: ",
+            "0540:     .comment-row .btn {",
+            "0541:         width: 100%;",
+            "0542:     }",
+            "0543: }"
+          ]
+        }
+      ],
+      "risky_count": 9,
+      "match_count": 9
+    },
+    {
+      "design": "nebeski_mir",
+      "path": "blog\\templates\\blog\\designs\\nebeski_mir.html",
+      "group": "zajednicki_layout",
+      "matches": [
+        {
+          "line": 44,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar {",
+          "context": [
+            "0041:     background-size: 100% 100%, cover;",
+            "0042: }",
+            "0043: ",
+            "0044: nav.navbar {",
+            "0045:     position: relative;",
+            "0046:     z-index: 4000 !important;",
+            "0047:     background: rgba(0, 0, 0, 0.88) !important;"
+          ]
+        },
+        {
+          "line": 51,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar .dropdown-menu {",
+          "context": [
+            "0048:     backdrop-filter: blur(8px);",
+            "0049: }",
+            "0050: ",
+            "0051: nav.navbar .dropdown-menu {",
+            "0052:     z-index: 4100 !important;",
+            "0053: }",
+            "0054: "
+          ]
+        },
+        {
+          "line": 295,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "textarea.form-control {",
+          "context": [
+            "0292:     padding: 10px 44px 10px 12px;",
+            "0293: }",
+            "0294: ",
+            "0295: textarea.form-control {",
+            "0296:     background: rgba(255, 255, 255, 0.72) !important;",
+            "0297:     color: #334155 !important;",
+            "0298:     border: 1px solid rgba(71, 85, 105, 0.18) !important;"
+          ]
+        },
+        {
+          "line": 302,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "textarea.form-control:focus {",
+          "context": [
+            "0299:     border-radius: 12px;",
+            "0300: }",
+            "0301: ",
+            "0302: textarea.form-control:focus {",
+            "0303:     background: rgba(255, 255, 255, 0.92) !important;",
+            "0304:     color: #334155 !important;",
+            "0305:     border-color: rgba(71, 85, 105, 0.28) !important;"
+          ]
+        },
+        {
+          "line": 314,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".btn-outline-light {",
+          "context": [
+            "0311: }",
+            "0312: ",
+            "0313: .blog-action-outline,",
+            "0314: .btn-outline-light {",
+            "0315:     border-color: rgba(79, 124, 168, 0.35) !important;",
+            "0316:     color: #315f8d !important;",
+            "0317:     background: rgba(255, 255, 255, 0.50) !important;"
+          ]
+        },
+        {
+          "line": 321,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".btn-outline-light:hover {",
+          "context": [
+            "0318: }",
+            "0319: ",
+            "0320: .blog-action-outline:hover,",
+            "0321: .btn-outline-light:hover {",
+            "0322:     background-color: rgba(79, 124, 168, 0.12) !important;",
+            "0323:     color: #254766 !important;",
+            "0324: }"
+          ]
+        }
+      ],
+      "risky_count": 6,
+      "match_count": 6
+    },
+    {
+      "design": "nebesko_polje",
+      "path": "blog\\templates\\blog\\designs\\nebesko_polje.html",
+      "group": "zajednicki_layout",
+      "matches": [
+        {
+          "line": 60,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar {",
+          "context": [
+            "0057:     background-size: cover;",
+            "0058: }",
+            "0059: ",
+            "0060: nav.navbar {",
+            "0061:     position: relative;",
+            "0062:     z-index: 5000 !important;",
+            "0063: }"
+          ]
+        },
+        {
+          "line": 65,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar .dropdown-menu {",
+          "context": [
+            "0062:     z-index: 5000 !important;",
+            "0063: }",
+            "0064: ",
+            "0065: nav.navbar .dropdown-menu {",
+            "0066:     z-index: 5100 !important;",
+            "0067: }",
+            "0068: "
+          ]
+        },
+        {
+          "line": 467,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "textarea.form-control,",
+          "context": [
+            "0464:     flex: 1;",
+            "0465: }",
+            "0466: ",
+            "0467: textarea.form-control,",
+            "0468: .comment-row textarea,",
+            "0469: input.form-control,",
+            "0470: select.form-select {"
+          ]
+        },
+        {
+          "line": 469,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "input.form-control,",
+          "context": [
+            "0466: ",
+            "0467: textarea.form-control,",
+            "0468: .comment-row textarea,",
+            "0469: input.form-control,",
+            "0470: select.form-select {",
+            "0471:     background-color: rgba(255, 255, 255, 0.58) !important;",
+            "0472:     color: #53606d !important;"
+          ]
+        },
+        {
+          "line": 469,
+          "key": "input_selector",
+          "reason": "genericki input selector",
+          "risky": true,
+          "text": "input.form-control,",
+          "context": [
+            "0466: ",
+            "0467: textarea.form-control,",
+            "0468: .comment-row textarea,",
+            "0469: input.form-control,",
+            "0470: select.form-select {",
+            "0471:     background-color: rgba(255, 255, 255, 0.58) !important;",
+            "0472:     color: #53606d !important;"
+          ]
+        },
+        {
+          "line": 478,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "textarea.form-control:focus,",
+          "context": [
+            "0475:     box-shadow: none !important;",
+            "0476: }",
+            "0477: ",
+            "0478: textarea.form-control:focus,",
+            "0479: .comment-row textarea:focus,",
+            "0480: input.form-control:focus,",
+            "0481: select.form-select:focus {"
+          ]
+        },
+        {
+          "line": 480,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "input.form-control:focus,",
+          "context": [
+            "0477: ",
+            "0478: textarea.form-control:focus,",
+            "0479: .comment-row textarea:focus,",
+            "0480: input.form-control:focus,",
+            "0481: select.form-select:focus {",
+            "0482:     background-color: rgba(255, 255, 255, 0.76) !important;",
+            "0483:     color: #4c5763 !important;"
+          ]
+        },
+        {
+          "line": 480,
+          "key": "input_selector",
+          "reason": "genericki input selector",
+          "risky": true,
+          "text": "input.form-control:focus,",
+          "context": [
+            "0477: ",
+            "0478: textarea.form-control:focus,",
+            "0479: .comment-row textarea:focus,",
+            "0480: input.form-control:focus,",
+            "0481: select.form-select:focus {",
+            "0482:     background-color: rgba(255, 255, 255, 0.76) !important;",
+            "0483:     color: #4c5763 !important;"
+          ]
+        },
+        {
+          "line": 489,
+          "key": "input_selector",
+          "reason": "genericki input selector",
+          "risky": true,
+          "text": "input::placeholder {",
+          "context": [
+            "0486: }",
+            "0487: ",
+            "0488: textarea::placeholder,",
+            "0489: input::placeholder {",
+            "0490:     color: rgba(89, 100, 114, 0.54) !important;",
+            "0491: }",
+            "0492: "
+          ]
+        }
+      ],
+      "risky_count": 9,
+      "match_count": 9
+    },
+    {
+      "design": "neonski_grad",
+      "path": "blog\\templates\\blog\\designs\\neonski_grad.html",
+      "group": "zajednicki_layout",
+      "matches": [
+        {
+          "line": 44,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar {",
+          "context": [
+            "0041:     background-size: 100% 100%, 100% 100%, 100% auto;",
+            "0042: }",
+            "0043: ",
+            "0044: nav.navbar {",
+            "0045:     position: relative;",
+            "0046:     z-index: 4000 !important;",
+            "0047: }"
+          ]
+        },
+        {
+          "line": 49,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar .dropdown-menu {",
+          "context": [
+            "0046:     z-index: 4000 !important;",
+            "0047: }",
+            "0048: ",
+            "0049: nav.navbar .dropdown-menu {",
+            "0050:     z-index: 4100 !important;",
+            "0051: }",
+            "0052: "
+          ]
+        },
+        {
+          "line": 412,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "textarea.form-control,",
+          "context": [
+            "0409:     color: #f0e4ff;",
+            "0410: }",
+            "0411: ",
+            "0412: textarea.form-control,",
+            "0413: input.form-control,",
+            "0414: select.form-select {",
+            "0415:     background: rgba(255, 255, 255, 0.03) !important;"
+          ]
+        },
+        {
+          "line": 413,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "input.form-control,",
+          "context": [
+            "0410: }",
+            "0411: ",
+            "0412: textarea.form-control,",
+            "0413: input.form-control,",
+            "0414: select.form-select {",
+            "0415:     background: rgba(255, 255, 255, 0.03) !important;",
+            "0416:     color: #f5edff !important;"
+          ]
+        },
+        {
+          "line": 413,
+          "key": "input_selector",
+          "reason": "genericki input selector",
+          "risky": true,
+          "text": "input.form-control,",
+          "context": [
+            "0410: }",
+            "0411: ",
+            "0412: textarea.form-control,",
+            "0413: input.form-control,",
+            "0414: select.form-select {",
+            "0415:     background: rgba(255, 255, 255, 0.03) !important;",
+            "0416:     color: #f5edff !important;"
+          ]
+        },
+        {
+          "line": 421,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "textarea.form-control::placeholder,",
+          "context": [
+            "0418:     box-shadow: none !important;",
+            "0419: }",
+            "0420: ",
+            "0421: textarea.form-control::placeholder,",
+            "0422: input.form-control::placeholder {",
+            "0423:     color: rgba(240, 228, 255, 0.42) !important;",
+            "0424: }"
+          ]
+        },
+        {
+          "line": 422,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "input.form-control::placeholder {",
+          "context": [
+            "0419: }",
+            "0420: ",
+            "0421: textarea.form-control::placeholder,",
+            "0422: input.form-control::placeholder {",
+            "0423:     color: rgba(240, 228, 255, 0.42) !important;",
+            "0424: }",
+            "0425: "
+          ]
+        },
+        {
+          "line": 422,
+          "key": "input_selector",
+          "reason": "genericki input selector",
+          "risky": true,
+          "text": "input.form-control::placeholder {",
+          "context": [
+            "0419: }",
+            "0420: ",
+            "0421: textarea.form-control::placeholder,",
+            "0422: input.form-control::placeholder {",
+            "0423:     color: rgba(240, 228, 255, 0.42) !important;",
+            "0424: }",
+            "0425: "
+          ]
+        },
+        {
+          "line": 426,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "textarea.form-control:focus,",
+          "context": [
+            "0423:     color: rgba(240, 228, 255, 0.42) !important;",
+            "0424: }",
+            "0425: ",
+            "0426: textarea.form-control:focus,",
+            "0427: input.form-control:focus,",
+            "0428: select.form-select:focus {",
+            "0429:     border-color: rgba(224, 110, 255, 0.36) !important;"
+          ]
+        },
+        {
+          "line": 427,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "input.form-control:focus,",
+          "context": [
+            "0424: }",
+            "0425: ",
+            "0426: textarea.form-control:focus,",
+            "0427: input.form-control:focus,",
+            "0428: select.form-select:focus {",
+            "0429:     border-color: rgba(224, 110, 255, 0.36) !important;",
+            "0430:     box-shadow: 0 0 0 0.18rem rgba(224, 110, 255, 0.10) !important;"
+          ]
+        },
+        {
+          "line": 427,
+          "key": "input_selector",
+          "reason": "genericki input selector",
+          "risky": true,
+          "text": "input.form-control:focus,",
+          "context": [
+            "0424: }",
+            "0425: ",
+            "0426: textarea.form-control:focus,",
+            "0427: input.form-control:focus,",
+            "0428: select.form-select:focus {",
+            "0429:     border-color: rgba(224, 110, 255, 0.36) !important;",
+            "0430:     box-shadow: 0 0 0 0.18rem rgba(224, 110, 255, 0.10) !important;"
+          ]
+        },
+        {
+          "line": 434,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".btn-outline-light {",
+          "context": [
+            "0431: }",
+            "0432: ",
+            "0433: .blog-action-outline,",
+            "0434: .btn-outline-light {",
+            "0435:     border-color: rgba(224, 110, 255, 0.34) !important;",
+            "0436:     color: #f7f0ff !important;",
+            "0437:     background: rgba(255, 255, 255, 0.03) !important;"
+          ]
+        },
+        {
+          "line": 442,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".btn-outline-light:hover {",
+          "context": [
+            "0439: }",
+            "0440: ",
+            "0441: .blog-action-outline:hover,",
+            "0442: .btn-outline-light:hover {",
+            "0443:     border-color: rgba(126, 232, 255, 0.52) !important;",
+            "0444:     color: #ffffff !important;",
+            "0445:     background: rgba(126, 232, 255, 0.10) !important;"
+          ]
+        },
+        {
+          "line": 472,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".blog-profile-panel__follow-btn.btn-primary {",
+          "context": [
+            "0469:     box-shadow: 0 10px 24px rgba(7, 5, 20, 0.24), 0 0 14px rgba(126, 232, 255, 0.10);",
+            "0470: }",
+            "0471: ",
+            "0472: .blog-profile-panel__follow-btn.btn-primary {",
+            "0473:     background: linear-gradient(135deg, rgba(255, 88, 212, 0.92), rgba(94, 218, 255, 0.92)) !important;",
+            "0474:     border: 0 !important;",
+            "0475:     color: #ffffff !important;"
+          ]
+        },
+        {
+          "line": 479,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".blog-profile-panel__follow-btn.btn-outline-primary {",
+          "context": [
+            "0476:     box-shadow: 0 10px 24px rgba(111, 90, 255, 0.18);",
+            "0477: }",
+            "0478: ",
+            "0479: .blog-profile-panel__follow-btn.btn-outline-primary {",
+            "0480:     border-color: rgba(224, 110, 255, 0.34) !important;",
+            "0481:     color: #f7f0ff !important;",
+            "0482:     background: rgba(255, 255, 255, 0.03) !important;"
+          ]
+        },
+        {
+          "line": 485,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".blog-profile-panel__follow-btn.btn-outline-primary:hover {",
+          "context": [
+            "0482:     background: rgba(255, 255, 255, 0.03) !important;",
+            "0483: }",
+            "0484: ",
+            "0485: .blog-profile-panel__follow-btn.btn-outline-primary:hover {",
+            "0486:     border-color: rgba(126, 232, 255, 0.52) !important;",
+            "0487:     background: rgba(126, 232, 255, 0.10) !important;",
+            "0488: }"
+          ]
+        }
+      ],
+      "risky_count": 16,
+      "match_count": 16
+    },
+    {
+      "design": "planine_u_magli",
+      "path": "blog\\templates\\blog\\designs\\planine_u_magli.html",
+      "group": "zajednicki_layout",
+      "matches": [
+        {
+          "line": 43,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar {",
+          "context": [
+            "0040:     background-size: 100% 100%, cover;",
+            "0041: }",
+            "0042: ",
+            "0043: nav.navbar {",
+            "0044:     position: relative;",
+            "0045:     z-index: 4000 !important;",
+            "0046:     background: rgba(23, 28, 36, 0.88) !important;"
+          ]
+        },
+        {
+          "line": 50,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar .dropdown-menu {",
+          "context": [
+            "0047:     backdrop-filter: blur(8px);",
+            "0048: }",
+            "0049: ",
+            "0050: nav.navbar .dropdown-menu {",
+            "0051:     z-index: 4100 !important;",
+            "0052: }",
+            "0053: "
+          ]
+        },
+        {
+          "line": 303,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "textarea.form-control {",
+          "context": [
+            "0300:     background: rgba(255,255,255,0.36) !important;",
+            "0301: }",
+            "0302: ",
+            "0303: textarea.form-control {",
+            "0304:     background: rgba(255,255,255,0.54) !important;",
+            "0305:     color: #5f6975 !important;",
+            "0306:     border: 1px solid rgba(160,175,196,0.24) !important;"
+          ]
+        },
+        {
+          "line": 310,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "textarea.form-control:focus {",
+          "context": [
+            "0307:     border-radius: 14px;",
+            "0308: }",
+            "0309: ",
+            "0310: textarea.form-control:focus {",
+            "0311:     background: rgba(255,255,255,0.72) !important;",
+            "0312:     color: #5f6975 !important;",
+            "0313:     border-color: rgba(142,163,187,0.42) !important;"
+          ]
+        },
+        {
+          "line": 322,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".btn-outline-light {",
+          "context": [
+            "0319: }",
+            "0320: ",
+            "0321: .blog-action-outline,",
+            "0322: .btn-outline-light {",
+            "0323:     border-color: rgba(142,163,187,0.34) !important;",
+            "0324:     color: #617181 !important;",
+            "0325:     background: rgba(255,255,255,0.20) !important;"
+          ]
+        },
+        {
+          "line": 329,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".btn-outline-light:hover {",
+          "context": [
+            "0326: }",
+            "0327: ",
+            "0328: .blog-action-outline:hover,",
+            "0329: .btn-outline-light:hover {",
+            "0330:     background-color: rgba(230,237,245,0.62) !important;",
+            "0331:     color: #4b5967 !important;",
+            "0332: }"
+          ]
+        }
+      ],
+      "risky_count": 6,
+      "match_count": 6
+    },
+    {
+      "design": "podvodna_tisina",
+      "path": "blog\\templates\\blog\\designs\\podvodna_tisina.html",
+      "group": "zajednicki_layout",
+      "matches": [
+        {
+          "line": 43,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar {",
+          "context": [
+            "0040:         background-size: 100% 100%, 100% auto;",
+            "0041:     }",
+            "0042: ",
+            "0043:     nav.navbar {",
+            "0044:         position: relative;",
+            "0045:         z-index: 4000 !important;",
+            "0046:     }"
+          ]
+        },
+        {
+          "line": 48,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar .dropdown-menu {",
+          "context": [
+            "0045:         z-index: 4000 !important;",
+            "0046:     }",
+            "0047: ",
+            "0048:     nav.navbar .dropdown-menu {",
+            "0049:         z-index: 4100 !important;",
+            "0050:     }",
+            "0051: "
+          ]
+        },
+        {
+          "line": 280,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "textarea.form-control {",
+          "context": [
+            "0277:         padding: 10px 44px 10px 12px;",
+            "0278:     }",
+            "0279: ",
+            "0280:     textarea.form-control {",
+            "0281:         background: transparent !important;",
+            "0282:         color: #ffffff !important;",
+            "0283:         border: 1px solid rgba(197, 220, 255, 0.24) !important;"
+          ]
+        },
+        {
+          "line": 287,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "textarea.form-control:focus {",
+          "context": [
+            "0284:         border-radius: 12px;",
+            "0285:     }",
+            "0286: ",
+            "0287:     textarea.form-control:focus {",
+            "0288:         background: transparent !important;",
+            "0289:         color: #ffffff !important;",
+            "0290:         border-color: rgba(207, 225, 255, 0.44) !important;"
+          ]
+        },
+        {
+          "line": 299,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".btn-outline-light {",
+          "context": [
+            "0296:     }",
+            "0297: ",
+            "0298:     .blog-action-outline,",
+            "0299:     .btn-outline-light {",
+            "0300:         border-color: rgba(207, 225, 255, 0.34) !important;",
+            "0301:         color: #e7f0ff !important;",
+            "0302:     }"
+          ]
+        },
+        {
+          "line": 305,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".btn-outline-light:hover {",
+          "context": [
+            "0302:     }",
+            "0303: ",
+            "0304:     .blog-action-outline:hover,",
+            "0305:     .btn-outline-light:hover {",
+            "0306:         background-color: rgba(207, 225, 255, 0.12) !important;",
+            "0307:         color: #ffffff !important;",
+            "0308:     }"
+          ]
+        },
+        {
+          "line": 333,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "textarea.form-control {",
+          "context": [
+            "0330:     .archive-link,",
+            "0331:     .calendar-day,",
+            "0332:     .comment-body,",
+            "0333:     textarea.form-control {",
+            "0334:         border-color: rgba(197, 220, 255, 0.18) !important;",
+            "0335:     }",
+            "0336: "
+          ]
+        }
+      ],
+      "risky_count": 7,
+      "match_count": 7
+    },
+    {
+      "design": "polarna_svjetlost",
+      "path": "blog\\templates\\blog\\designs\\polarna_svjetlost.html",
+      "group": "zajednicki_layout",
+      "matches": [
+        {
+          "line": 43,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar {",
+          "context": [
+            "0040:     background-size: 100% 100%, 100% auto;",
+            "0041: }",
+            "0042: ",
+            "0043: nav.navbar {",
+            "0044:     position: relative;",
+            "0045:     z-index: 4000 !important;",
+            "0046: }"
+          ]
+        },
+        {
+          "line": 48,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar .dropdown-menu {",
+          "context": [
+            "0045:     z-index: 4000 !important;",
+            "0046: }",
+            "0047: ",
+            "0048: nav.navbar .dropdown-menu {",
+            "0049:     z-index: 4100 !important;",
+            "0050: }",
+            "0051: "
+          ]
+        },
+        {
+          "line": 406,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "textarea.form-control,",
+          "context": [
+            "0403:     color: #e0f3ff;",
+            "0404: }",
+            "0405: ",
+            "0406: textarea.form-control,",
+            "0407: input.form-control,",
+            "0408: select.form-select {",
+            "0409:     background: transparent !important;"
+          ]
+        },
+        {
+          "line": 407,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "input.form-control,",
+          "context": [
+            "0404: }",
+            "0405: ",
+            "0406: textarea.form-control,",
+            "0407: input.form-control,",
+            "0408: select.form-select {",
+            "0409:     background: transparent !important;",
+            "0410:     color: #eefbff !important;"
+          ]
+        },
+        {
+          "line": 407,
+          "key": "input_selector",
+          "reason": "genericki input selector",
+          "risky": true,
+          "text": "input.form-control,",
+          "context": [
+            "0404: }",
+            "0405: ",
+            "0406: textarea.form-control,",
+            "0407: input.form-control,",
+            "0408: select.form-select {",
+            "0409:     background: transparent !important;",
+            "0410:     color: #eefbff !important;"
+          ]
+        },
+        {
+          "line": 415,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "textarea.form-control::placeholder,",
+          "context": [
+            "0412:     box-shadow: none !important;",
+            "0413: }",
+            "0414: ",
+            "0415: textarea.form-control::placeholder,",
+            "0416: input.form-control::placeholder {",
+            "0417:     color: rgba(222, 241, 255, 0.48) !important;",
+            "0418: }"
+          ]
+        },
+        {
+          "line": 416,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "input.form-control::placeholder {",
+          "context": [
+            "0413: }",
+            "0414: ",
+            "0415: textarea.form-control::placeholder,",
+            "0416: input.form-control::placeholder {",
+            "0417:     color: rgba(222, 241, 255, 0.48) !important;",
+            "0418: }",
+            "0419: "
+          ]
+        },
+        {
+          "line": 416,
+          "key": "input_selector",
+          "reason": "genericki input selector",
+          "risky": true,
+          "text": "input.form-control::placeholder {",
+          "context": [
+            "0413: }",
+            "0414: ",
+            "0415: textarea.form-control::placeholder,",
+            "0416: input.form-control::placeholder {",
+            "0417:     color: rgba(222, 241, 255, 0.48) !important;",
+            "0418: }",
+            "0419: "
+          ]
+        },
+        {
+          "line": 420,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "textarea.form-control:focus,",
+          "context": [
+            "0417:     color: rgba(222, 241, 255, 0.48) !important;",
+            "0418: }",
+            "0419: ",
+            "0420: textarea.form-control:focus,",
+            "0421: input.form-control:focus,",
+            "0422: select.form-select:focus {",
+            "0423:     border-color: rgba(196, 244, 255, 0.46) !important;"
+          ]
+        },
+        {
+          "line": 421,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "input.form-control:focus,",
+          "context": [
+            "0418: }",
+            "0419: ",
+            "0420: textarea.form-control:focus,",
+            "0421: input.form-control:focus,",
+            "0422: select.form-select:focus {",
+            "0423:     border-color: rgba(196, 244, 255, 0.46) !important;",
+            "0424:     box-shadow: none !important;"
+          ]
+        },
+        {
+          "line": 421,
+          "key": "input_selector",
+          "reason": "genericki input selector",
+          "risky": true,
+          "text": "input.form-control:focus,",
+          "context": [
+            "0418: }",
+            "0419: ",
+            "0420: textarea.form-control:focus,",
+            "0421: input.form-control:focus,",
+            "0422: select.form-select:focus {",
+            "0423:     border-color: rgba(196, 244, 255, 0.46) !important;",
+            "0424:     box-shadow: none !important;"
+          ]
+        },
+        {
+          "line": 428,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".btn-outline-light {",
+          "context": [
+            "0425: }",
+            "0426: ",
+            "0427: .blog-action-outline,",
+            "0428: .btn-outline-light {",
+            "0429:     border-color: rgba(196, 244, 255, 0.36) !important;",
+            "0430:     color: #eefbff !important;",
+            "0431:     background: transparent !important;"
+          ]
+        },
+        {
+          "line": 436,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".btn-outline-light:hover {",
+          "context": [
+            "0433: }",
+            "0434: ",
+            "0435: .blog-action-outline:hover,",
+            "0436: .btn-outline-light:hover {",
+            "0437:     border-color: rgba(196, 244, 255, 0.58) !important;",
+            "0438:     color: #ffffff !important;",
+            "0439:     background: rgba(196, 244, 255, 0.10) !important;"
+          ]
+        }
+      ],
+      "risky_count": 13,
+      "match_count": 13
+    },
+    {
+      "design": "polje_lavande",
+      "path": "blog\\templates\\blog\\designs\\polje_lavande.html",
+      "group": "zajednicki_layout",
+      "matches": [
+        {
+          "line": 43,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar {",
+          "context": [
+            "0040:     background-size: 100% 100%, 100% auto;",
+            "0041: }",
+            "0042: ",
+            "0043: nav.navbar {",
+            "0044:     position: relative;",
+            "0045:     z-index: 4000 !important;",
+            "0046: }"
+          ]
+        },
+        {
+          "line": 48,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar .dropdown-menu {",
+          "context": [
+            "0045:     z-index: 4000 !important;",
+            "0046: }",
+            "0047: ",
+            "0048: nav.navbar .dropdown-menu {",
+            "0049:     z-index: 4100 !important;",
+            "0050: }",
+            "0051: "
+          ]
+        },
+        {
+          "line": 508,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "textarea.form-control,",
+          "context": [
+            "0505:     color: #5a3271;",
+            "0506: }",
+            "0507: ",
+            "0508: textarea.form-control,",
+            "0509: input.form-control,",
+            "0510: select.form-select {",
+            "0511:     background: rgba(255, 255, 255, 0.24) !important;"
+          ]
+        },
+        {
+          "line": 509,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "input.form-control,",
+          "context": [
+            "0506: }",
+            "0507: ",
+            "0508: textarea.form-control,",
+            "0509: input.form-control,",
+            "0510: select.form-select {",
+            "0511:     background: rgba(255, 255, 255, 0.24) !important;",
+            "0512:     color: #4f2768 !important;"
+          ]
+        },
+        {
+          "line": 509,
+          "key": "input_selector",
+          "reason": "genericki input selector",
+          "risky": true,
+          "text": "input.form-control,",
+          "context": [
+            "0506: }",
+            "0507: ",
+            "0508: textarea.form-control,",
+            "0509: input.form-control,",
+            "0510: select.form-select {",
+            "0511:     background: rgba(255, 255, 255, 0.24) !important;",
+            "0512:     color: #4f2768 !important;"
+          ]
+        },
+        {
+          "line": 517,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "textarea.form-control::placeholder,",
+          "context": [
+            "0514:     box-shadow: none !important;",
+            "0515: }",
+            "0516: ",
+            "0517: textarea.form-control::placeholder,",
+            "0518: input.form-control::placeholder {",
+            "0519:     color: rgba(90, 50, 113, 0.48) !important;",
+            "0520: }"
+          ]
+        },
+        {
+          "line": 518,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "input.form-control::placeholder {",
+          "context": [
+            "0515: }",
+            "0516: ",
+            "0517: textarea.form-control::placeholder,",
+            "0518: input.form-control::placeholder {",
+            "0519:     color: rgba(90, 50, 113, 0.48) !important;",
+            "0520: }",
+            "0521: "
+          ]
+        },
+        {
+          "line": 518,
+          "key": "input_selector",
+          "reason": "genericki input selector",
+          "risky": true,
+          "text": "input.form-control::placeholder {",
+          "context": [
+            "0515: }",
+            "0516: ",
+            "0517: textarea.form-control::placeholder,",
+            "0518: input.form-control::placeholder {",
+            "0519:     color: rgba(90, 50, 113, 0.48) !important;",
+            "0520: }",
+            "0521: "
+          ]
+        },
+        {
+          "line": 522,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "textarea.form-control:focus,",
+          "context": [
+            "0519:     color: rgba(90, 50, 113, 0.48) !important;",
+            "0520: }",
+            "0521: ",
+            "0522: textarea.form-control:focus,",
+            "0523: input.form-control:focus,",
+            "0524: select.form-select:focus {",
+            "0525:     border-color: rgba(158, 111, 214, 0.56) !important;"
+          ]
+        },
+        {
+          "line": 523,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "input.form-control:focus,",
+          "context": [
+            "0520: }",
+            "0521: ",
+            "0522: textarea.form-control:focus,",
+            "0523: input.form-control:focus,",
+            "0524: select.form-select:focus {",
+            "0525:     border-color: rgba(158, 111, 214, 0.56) !important;",
+            "0526:     box-shadow: none !important;"
+          ]
+        },
+        {
+          "line": 523,
+          "key": "input_selector",
+          "reason": "genericki input selector",
+          "risky": true,
+          "text": "input.form-control:focus,",
+          "context": [
+            "0520: }",
+            "0521: ",
+            "0522: textarea.form-control:focus,",
+            "0523: input.form-control:focus,",
+            "0524: select.form-select:focus {",
+            "0525:     border-color: rgba(158, 111, 214, 0.56) !important;",
+            "0526:     box-shadow: none !important;"
+          ]
+        },
+        {
+          "line": 530,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".btn-outline-light {",
+          "context": [
+            "0527: }",
+            "0528: ",
+            "0529: .blog-action-outline,",
+            "0530: .btn-outline-light {",
+            "0531:     border-color: rgba(158, 111, 214, 0.42) !important;",
+            "0532:     color: #5a3271 !important;",
+            "0533:     background: rgba(255, 255, 255, 0.18) !important;"
+          ]
+        },
+        {
+          "line": 538,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".btn-outline-light:hover {",
+          "context": [
+            "0535: }",
+            "0536: ",
+            "0537: .blog-action-outline:hover,",
+            "0538: .btn-outline-light:hover {",
+            "0539:     border-color: rgba(158, 111, 214, 0.66) !important;",
+            "0540:     color: #4a235f !important;",
+            "0541:     background: rgba(255, 255, 255, 0.28) !important;"
+          ]
+        }
+      ],
+      "risky_count": 13,
+      "match_count": 13
+    },
+    {
+      "design": "ponocna_elegancija",
+      "path": "blog\\templates\\blog\\designs\\ponocna_elegancija.html",
+      "group": "posebni",
+      "matches": [
+        {
+          "line": 31,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar {",
+          "context": [
+            "0028:     display: none;",
+            "0029: }",
+            "0030: ",
+            "0031: nav.navbar {",
+            "0032:     position: relative;",
+            "0033:     z-index: 4000 !important;",
+            "0034:     background: rgba(9, 14, 25, 0.84) !important;"
+          ]
+        },
+        {
+          "line": 39,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar .dropdown-menu {",
+          "context": [
+            "0036:     border-bottom: 1px solid rgba(255,255,255,0.08);",
+            "0037: }",
+            "0038: ",
+            "0039: nav.navbar .dropdown-menu {",
+            "0040:     z-index: 4100 !important;",
+            "0041: }",
+            "0042: "
+          ]
+        },
+        {
+          "line": 220,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".pe-profile-wrap .btn-primary {",
+          "context": [
+            "0217:     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.28);",
+            "0218: }",
+            "0219: ",
+            "0220: .pe-profile-wrap .btn-primary {",
+            "0221:     background: #d7c28d;",
+            "0222:     border-color: #d7c28d;",
+            "0223:     color: #111722;"
+          ]
+        },
+        {
+          "line": 226,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".pe-profile-wrap .btn-primary:hover {",
+          "context": [
+            "0223:     color: #111722;",
+            "0224: }",
+            "0225: ",
+            "0226: .pe-profile-wrap .btn-primary:hover {",
+            "0227:     background: #e6d19d;",
+            "0228:     border-color: #e6d19d;",
+            "0229:     color: #0d1118;"
+          ]
+        },
+        {
+          "line": 232,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".pe-profile-wrap .btn-outline-primary {",
+          "context": [
+            "0229:     color: #0d1118;",
+            "0230: }",
+            "0231: ",
+            "0232: .pe-profile-wrap .btn-outline-primary {",
+            "0233:     color: #d7c28d;",
+            "0234:     border-color: #d7c28d;",
+            "0235: }"
+          ]
+        },
+        {
+          "line": 237,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".pe-profile-wrap .btn-outline-primary:hover {",
+          "context": [
+            "0234:     border-color: #d7c28d;",
+            "0235: }",
+            "0236: ",
+            "0237: .pe-profile-wrap .btn-outline-primary:hover {",
+            "0238:     background: #d7c28d;",
+            "0239:     color: #111722;",
+            "0240: }"
+          ]
+        },
+        {
+          "line": 398,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".btn-outline-light {",
+          "context": [
+            "0395: }",
+            "0396: ",
+            "0397: .blog-action-outline,",
+            "0398: .btn-outline-light {",
+            "0399:     border-color: #d7c28d !important;",
+            "0400:     color: #d7c28d !important;",
+            "0401:     background: transparent !important;"
+          ]
+        },
+        {
+          "line": 405,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".btn-outline-light:hover {",
+          "context": [
+            "0402: }",
+            "0403: ",
+            "0404: .blog-action-outline:hover,",
+            "0405: .btn-outline-light:hover {",
+            "0406:     background: #d7c28d !important;",
+            "0407:     color: #111722 !important;",
+            "0408:     box-shadow: 0 0 10px rgba(215,194,141,0.16);"
+          ]
+        },
+        {
+          "line": 419,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": ".comment-row .form-control {",
+          "context": [
+            "0416: }",
+            "0417: ",
+            "0418: .comment-row textarea,",
+            "0419: .comment-row .form-control {",
+            "0420:     flex: 1;",
+            "0421:     background: rgba(255,255,255,0.07) !important;",
+            "0422:     color: #dce1ee !important;"
+          ]
+        },
+        {
+          "line": 430,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": ".comment-row .form-control:focus {",
+          "context": [
+            "0427: }",
+            "0428: ",
+            "0429: .comment-row textarea:focus,",
+            "0430: .comment-row .form-control:focus {",
+            "0431:     border-color: rgba(215,194,141,0.46) !important;",
+            "0432:     box-shadow: 0 0 0 0.2rem rgba(215,194,141,0.10) !important;",
+            "0433: }"
+          ]
+        },
+        {
+          "line": 436,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": ".comment-row .form-control::placeholder {",
+          "context": [
+            "0433: }",
+            "0434: ",
+            "0435: .comment-row textarea::placeholder,",
+            "0436: .comment-row .form-control::placeholder {",
+            "0437:     color: #aeb8ce !important;",
+            "0438: }",
+            "0439: "
+          ]
+        },
+        {
+          "line": 567,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".comment-row .btn {",
+          "context": [
+            "0564:         align-items: stretch;",
+            "0565:     }",
+            "0566: ",
+            "0567:     .comment-row .btn {",
+            "0568:         width: 100%;",
+            "0569:     }",
+            "0570: }"
+          ]
+        }
+      ],
+      "risky_count": 12,
+      "match_count": 12
+    },
+    {
+      "design": "ruzicasti_vrt",
+      "path": "blog\\templates\\blog\\designs\\ruzicasti_vrt.html",
+      "group": "posebni",
+      "matches": [
+        {
+          "line": 31,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar {",
+          "context": [
+            "0028:     display: none;",
+            "0029: }",
+            "0030: ",
+            "0031: nav.navbar {",
+            "0032:     position: relative;",
+            "0033:     z-index: 4000 !important;",
+            "0034:     background: rgba(64, 42, 49, 0.24) !important;"
+          ]
+        },
+        {
+          "line": 39,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar .dropdown-menu {",
+          "context": [
+            "0036:     border-bottom: 1px solid rgba(255,255,255,0.14);",
+            "0037: }",
+            "0038: ",
+            "0039: nav.navbar .dropdown-menu {",
+            "0040:     z-index: 4100 !important;",
+            "0041: }",
+            "0042: "
+          ]
+        },
+        {
+          "line": 221,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".rv-profile-wrap .btn-primary {",
+          "context": [
+            "0218:     box-shadow: 0 8px 18px rgba(126, 93, 96, 0.14);",
+            "0219: }",
+            "0220: ",
+            "0221: .rv-profile-wrap .btn-primary {",
+            "0222:     background: #be738c;",
+            "0223:     border-color: #be738c;",
+            "0224:     color: #fff8fa;"
+          ]
+        },
+        {
+          "line": 227,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".rv-profile-wrap .btn-primary:hover {",
+          "context": [
+            "0224:     color: #fff8fa;",
+            "0225: }",
+            "0226: ",
+            "0227: .rv-profile-wrap .btn-primary:hover {",
+            "0228:     background: #aa617b;",
+            "0229:     border-color: #aa617b;",
+            "0230: }"
+          ]
+        },
+        {
+          "line": 232,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".rv-profile-wrap .btn-outline-primary {",
+          "context": [
+            "0229:     border-color: #aa617b;",
+            "0230: }",
+            "0231: ",
+            "0232: .rv-profile-wrap .btn-outline-primary {",
+            "0233:     color: #be738c;",
+            "0234:     border-color: #be738c;",
+            "0235: }"
+          ]
+        },
+        {
+          "line": 237,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".rv-profile-wrap .btn-outline-primary:hover {",
+          "context": [
+            "0234:     border-color: #be738c;",
+            "0235: }",
+            "0236: ",
+            "0237: .rv-profile-wrap .btn-outline-primary:hover {",
+            "0238:     background: #be738c;",
+            "0239:     color: #fff8fa;",
+            "0240: }"
+          ]
+        },
+        {
+          "line": 399,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".btn-outline-light {",
+          "context": [
+            "0396: }",
+            "0397: ",
+            "0398: .blog-action-outline,",
+            "0399: .btn-outline-light {",
+            "0400:     border-color: #be738c !important;",
+            "0401:     color: #be738c !important;",
+            "0402:     background: transparent !important;"
+          ]
+        },
+        {
+          "line": 406,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".btn-outline-light:hover {",
+          "context": [
+            "0403: }",
+            "0404: ",
+            "0405: .blog-action-outline:hover,",
+            "0406: .btn-outline-light:hover {",
+            "0407:     background: #be738c !important;",
+            "0408:     color: #fff8fa !important;",
+            "0409:     box-shadow: 0 0 10px rgba(190,115,140,0.14);"
+          ]
+        },
+        {
+          "line": 420,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": ".comment-row .form-control {",
+          "context": [
+            "0417: }",
+            "0418: ",
+            "0419: .comment-row textarea,",
+            "0420: .comment-row .form-control {",
+            "0421:     flex: 1;",
+            "0422:     background: rgba(255,255,255,0.22) !important;",
+            "0423:     color: #66575a !important;"
+          ]
+        },
+        {
+          "line": 431,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": ".comment-row .form-control:focus {",
+          "context": [
+            "0428: }",
+            "0429: ",
+            "0430: .comment-row textarea:focus,",
+            "0431: .comment-row .form-control:focus {",
+            "0432:     border-color: rgba(190,115,140,0.44) !important;",
+            "0433:     box-shadow: 0 0 0 0.2rem rgba(190,115,140,0.08) !important;",
+            "0434: }"
+          ]
+        },
+        {
+          "line": 437,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": ".comment-row .form-control::placeholder {",
+          "context": [
+            "0434: }",
+            "0435: ",
+            "0436: .comment-row textarea::placeholder,",
+            "0437: .comment-row .form-control::placeholder {",
+            "0438:     color: #9f8587 !important;",
+            "0439: }",
+            "0440: "
+          ]
+        },
+        {
+          "line": 569,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".comment-row .btn {",
+          "context": [
+            "0566:         align-items: stretch;",
+            "0567:     }",
+            "0568: ",
+            "0569:     .comment-row .btn {",
+            "0570:         width: 100%;",
+            "0571:     }",
+            "0572: }"
+          ]
+        }
+      ],
+      "risky_count": 12,
+      "match_count": 12
+    },
+    {
+      "design": "sjene_ulice",
+      "path": "blog\\templates\\blog\\designs\\sjene_ulice.html",
+      "group": "zajednicki_layout",
+      "matches": [
+        {
+          "line": 53,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar,",
+          "context": [
+            "0050:     background-size: 100% 100%, 100% auto;",
+            "0051: }",
+            "0052: ",
+            "0053: nav.navbar,",
+            "0054: nav.navbar .dropdown-menu {",
+            "0055:     z-index: 4000 !important;",
+            "0056: }"
+          ]
+        },
+        {
+          "line": 54,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar .dropdown-menu {",
+          "context": [
+            "0051: }",
+            "0052: ",
+            "0053: nav.navbar,",
+            "0054: nav.navbar .dropdown-menu {",
+            "0055:     z-index: 4000 !important;",
+            "0056: }",
+            "0057: "
+          ]
+        },
+        {
+          "line": 239,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".btn-outline-light {",
+          "context": [
+            "0236:     color: #f2d1ad;",
+            "0237: }",
+            "0238: ",
+            "0239: .btn-outline-light {",
+            "0240:     border-color: rgba(216, 176, 132, 0.30) !important;",
+            "0241:     color: #f2d1ad !important;",
+            "0242: }"
+          ]
+        },
+        {
+          "line": 244,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".btn-outline-light:hover {",
+          "context": [
+            "0241:     color: #f2d1ad !important;",
+            "0242: }",
+            "0243: ",
+            "0244: .btn-outline-light:hover {",
+            "0245:     background: rgba(216, 176, 132, 0.10) !important;",
+            "0246:     color: #fff5ec !important;",
+            "0247: }"
+          ]
+        },
+        {
+          "line": 328,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "textarea.form-control,",
+          "context": [
+            "0325:     padding: 10px 44px 10px 12px;",
+            "0326: }",
+            "0327: ",
+            "0328: textarea.form-control,",
+            "0329: input.form-control,",
+            "0330: select.form-select {",
+            "0331:     background: rgba(33, 27, 24, 0.66) !important;"
+          ]
+        },
+        {
+          "line": 329,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "input.form-control,",
+          "context": [
+            "0326: }",
+            "0327: ",
+            "0328: textarea.form-control,",
+            "0329: input.form-control,",
+            "0330: select.form-select {",
+            "0331:     background: rgba(33, 27, 24, 0.66) !important;",
+            "0332:     color: #f4e8de !important;"
+          ]
+        },
+        {
+          "line": 329,
+          "key": "input_selector",
+          "reason": "genericki input selector",
+          "risky": true,
+          "text": "input.form-control,",
+          "context": [
+            "0326: }",
+            "0327: ",
+            "0328: textarea.form-control,",
+            "0329: input.form-control,",
+            "0330: select.form-select {",
+            "0331:     background: rgba(33, 27, 24, 0.66) !important;",
+            "0332:     color: #f4e8de !important;"
+          ]
+        },
+        {
+          "line": 336,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "textarea.form-control::placeholder,",
+          "context": [
+            "0333:     border-color: rgba(201, 155, 111, 0.14) !important;",
+            "0334: }",
+            "0335: ",
+            "0336: textarea.form-control::placeholder,",
+            "0337: input.form-control::placeholder {",
+            "0338:     color: rgba(244, 232, 222, 0.56) !important;",
+            "0339: }"
+          ]
+        },
+        {
+          "line": 337,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "input.form-control::placeholder {",
+          "context": [
+            "0334: }",
+            "0335: ",
+            "0336: textarea.form-control::placeholder,",
+            "0337: input.form-control::placeholder {",
+            "0338:     color: rgba(244, 232, 222, 0.56) !important;",
+            "0339: }",
+            "0340: "
+          ]
+        },
+        {
+          "line": 337,
+          "key": "input_selector",
+          "reason": "genericki input selector",
+          "risky": true,
+          "text": "input.form-control::placeholder {",
+          "context": [
+            "0334: }",
+            "0335: ",
+            "0336: textarea.form-control::placeholder,",
+            "0337: input.form-control::placeholder {",
+            "0338:     color: rgba(244, 232, 222, 0.56) !important;",
+            "0339: }",
+            "0340: "
+          ]
+        }
+      ],
+      "risky_count": 10,
+      "match_count": 10
+    },
+    {
+      "design": "stara_aleja",
+      "path": "blog\\templates\\blog\\designs\\stara_aleja.html",
+      "group": "posebni",
+      "matches": [
+        {
+          "line": 31,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar {",
+          "context": [
+            "0028:     display: none;",
+            "0029: }",
+            "0030: ",
+            "0031: nav.navbar {",
+            "0032:     position: relative;",
+            "0033:     z-index: 4000 !important;",
+            "0034:     background: rgba(44, 30, 20, 0.82) !important;"
+          ]
+        },
+        {
+          "line": 39,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar .dropdown-menu {",
+          "context": [
+            "0036:     border-bottom: 1px solid rgba(255,255,255,0.08);",
+            "0037: }",
+            "0038: ",
+            "0039: nav.navbar .dropdown-menu {",
+            "0040:     z-index: 4100 !important;",
+            "0041: }",
+            "0042: "
+          ]
+        },
+        {
+          "line": 261,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".sa-profile-wrap .btn-primary {",
+          "context": [
+            "0258:     box-shadow: 0 8px 18px rgba(43, 28, 16, 0.20);",
+            "0259: }",
+            "0260: ",
+            "0261: .sa-profile-wrap .btn-primary {",
+            "0262:     background: rgba(255, 211, 154, 0.12);",
+            "0263:     border-color: rgba(255, 211, 154, 0.48);",
+            "0264:     color: #fff1de;"
+          ]
+        },
+        {
+          "line": 267,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".sa-profile-wrap .btn-primary:hover {",
+          "context": [
+            "0264:     color: #fff1de;",
+            "0265: }",
+            "0266: ",
+            "0267: .sa-profile-wrap .btn-primary:hover {",
+            "0268:     background: rgba(255, 211, 154, 0.18);",
+            "0269:     border-color: rgba(255, 211, 154, 0.58);",
+            "0270:     color: #fff7ec;"
+          ]
+        },
+        {
+          "line": 273,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".sa-profile-wrap .btn-outline-primary {",
+          "context": [
+            "0270:     color: #fff7ec;",
+            "0271: }",
+            "0272: ",
+            "0273: .sa-profile-wrap .btn-outline-primary {",
+            "0274:     color: #ffd39a;",
+            "0275:     border-color: rgba(255, 211, 154, 0.48);",
+            "0276: }"
+          ]
+        },
+        {
+          "line": 278,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".sa-profile-wrap .btn-outline-primary:hover {",
+          "context": [
+            "0275:     border-color: rgba(255, 211, 154, 0.48);",
+            "0276: }",
+            "0277: ",
+            "0278: .sa-profile-wrap .btn-outline-primary:hover {",
+            "0279:     background: rgba(255, 211, 154, 0.16);",
+            "0280:     color: #fff6ea;",
+            "0281: }"
+          ]
+        },
+        {
+          "line": 402,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".btn-outline-light,",
+          "context": [
+            "0399: }",
+            "0400: ",
+            "0401: .blog-action-outline,",
+            "0402: .btn-outline-light,",
+            "0403: .sa-theme .btn-outline-secondary {",
+            "0404:     border-color: rgba(255, 211, 154, 0.50) !important;",
+            "0405:     color: #ffd39a !important;"
+          ]
+        },
+        {
+          "line": 403,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".sa-theme .btn-outline-secondary {",
+          "context": [
+            "0400: ",
+            "0401: .blog-action-outline,",
+            "0402: .btn-outline-light,",
+            "0403: .sa-theme .btn-outline-secondary {",
+            "0404:     border-color: rgba(255, 211, 154, 0.50) !important;",
+            "0405:     color: #ffd39a !important;",
+            "0406:     background: transparent !important;"
+          ]
+        },
+        {
+          "line": 410,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".btn-outline-light:hover,",
+          "context": [
+            "0407: }",
+            "0408: ",
+            "0409: .blog-action-outline:hover,",
+            "0410: .btn-outline-light:hover,",
+            "0411: .sa-theme .btn-outline-secondary:hover {",
+            "0412:     background: rgba(255, 211, 154, 0.18) !important;",
+            "0413:     color: #fff6ea !important;"
+          ]
+        },
+        {
+          "line": 411,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".sa-theme .btn-outline-secondary:hover {",
+          "context": [
+            "0408: ",
+            "0409: .blog-action-outline:hover,",
+            "0410: .btn-outline-light:hover,",
+            "0411: .sa-theme .btn-outline-secondary:hover {",
+            "0412:     background: rgba(255, 211, 154, 0.18) !important;",
+            "0413:     color: #fff6ea !important;",
+            "0414:     box-shadow: 0 0 8px rgba(255, 211, 154, 0.18);"
+          ]
+        },
+        {
+          "line": 425,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": ".comment-row .form-control {",
+          "context": [
+            "0422: }",
+            "0423: ",
+            "0424: .comment-row textarea,",
+            "0425: .comment-row .form-control {",
+            "0426:     flex: 1;",
+            "0427:     background: rgba(255, 244, 229, 0.10) !important;",
+            "0428:     color: #fff2e2 !important;"
+          ]
+        },
+        {
+          "line": 436,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": ".comment-row .form-control:focus {",
+          "context": [
+            "0433: }",
+            "0434: ",
+            "0435: .comment-row textarea:focus,",
+            "0436: .comment-row .form-control:focus {",
+            "0437:     border-color: rgba(255, 211, 154, 0.42) !important;",
+            "0438:     box-shadow: 0 0 0 0.2rem rgba(255, 211, 154, 0.10) !important;",
+            "0439: }"
+          ]
+        },
+        {
+          "line": 576,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".comment-row .btn {",
+          "context": [
+            "0573:         align-items: stretch;",
+            "0574:     }",
+            "0575: ",
+            "0576:     .comment-row .btn {",
+            "0577:         width: 100%;",
+            "0578:     }",
+            "0579: }"
+          ]
+        }
+      ],
+      "risky_count": 13,
+      "match_count": 13
+    },
+    {
+      "design": "staza_prema_vrhovima",
+      "path": "blog\\templates\\blog\\designs\\staza_prema_vrhovima.html",
+      "group": "posebni",
+      "matches": [
+        {
+          "line": 31,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar {",
+          "context": [
+            "0028:     display: none;",
+            "0029: }",
+            "0030: ",
+            "0031: nav.navbar {",
+            "0032:     position: relative;",
+            "0033:     z-index: 4000 !important;",
+            "0034:     background: rgba(28, 20, 13, 0.82) !important;"
+          ]
+        },
+        {
+          "line": 39,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar .dropdown-menu {",
+          "context": [
+            "0036:     backdrop-filter: blur(6px);",
+            "0037: }",
+            "0038: ",
+            "0039: nav.navbar .dropdown-menu {",
+            "0040:     z-index: 4100 !important;",
+            "0041: }",
+            "0042: "
+          ]
+        },
+        {
+          "line": 220,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".spv-profile-wrap .btn-primary {",
+          "context": [
+            "0217:     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.24);",
+            "0218: }",
+            "0219: ",
+            "0220: .spv-profile-wrap .btn-primary {",
+            "0221:     background: #d9b06f;",
+            "0222:     border-color: #d9b06f;",
+            "0223:     color: #2f2419;"
+          ]
+        },
+        {
+          "line": 226,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".spv-profile-wrap .btn-primary:hover {",
+          "context": [
+            "0223:     color: #2f2419;",
+            "0224: }",
+            "0225: ",
+            "0226: .spv-profile-wrap .btn-primary:hover {",
+            "0227:     background: #f0c786;",
+            "0228:     border-color: #f0c786;",
+            "0229:     color: #24160d;"
+          ]
+        },
+        {
+          "line": 232,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".spv-profile-wrap .btn-outline-primary {",
+          "context": [
+            "0229:     color: #24160d;",
+            "0230: }",
+            "0231: ",
+            "0232: .spv-profile-wrap .btn-outline-primary {",
+            "0233:     color: #ffd89c;",
+            "0234:     border-color: #ffd89c;",
+            "0235: }"
+          ]
+        },
+        {
+          "line": 237,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".spv-profile-wrap .btn-outline-primary:hover {",
+          "context": [
+            "0234:     border-color: #ffd89c;",
+            "0235: }",
+            "0236: ",
+            "0237: .spv-profile-wrap .btn-outline-primary:hover {",
+            "0238:     background: #ffd89c;",
+            "0239:     color: #2f2419;",
+            "0240: }"
+          ]
+        },
+        {
+          "line": 363,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".btn-outline-light {",
+          "context": [
+            "0360: }",
+            "0361: ",
+            "0362: .blog-action-outline,",
+            "0363: .btn-outline-light {",
+            "0364:     border-color: #ffd89c !important;",
+            "0365:     color: #ffd89c !important;",
+            "0366:     background: transparent !important;"
+          ]
+        },
+        {
+          "line": 370,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".btn-outline-light:hover {",
+          "context": [
+            "0367: }",
+            "0368: ",
+            "0369: .blog-action-outline:hover,",
+            "0370: .btn-outline-light:hover {",
+            "0371:     background: rgba(255, 216, 156, 0.16) !important;",
+            "0372:     color: #fff7ea !important;",
+            "0373:     box-shadow: 0 0 10px rgba(255,216,156,0.12);"
+          ]
+        },
+        {
+          "line": 384,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": ".comment-row .form-control {",
+          "context": [
+            "0381: }",
+            "0382: ",
+            "0383: .comment-row textarea,",
+            "0384: .comment-row .form-control {",
+            "0385:     flex: 1;",
+            "0386:     background: rgba(255,255,255,0.05) !important;",
+            "0387:     color: #f2e3ce !important;"
+          ]
+        },
+        {
+          "line": 395,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": ".comment-row .form-control:focus {",
+          "context": [
+            "0392: }",
+            "0393: ",
+            "0394: .comment-row textarea:focus,",
+            "0395: .comment-row .form-control:focus {",
+            "0396:     border-color: rgba(255,216,156,0.34) !important;",
+            "0397:     box-shadow: 0 0 0 0.2rem rgba(255,216,156,0.08) !important;",
+            "0398: }"
+          ]
+        },
+        {
+          "line": 401,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": ".comment-row .form-control::placeholder {",
+          "context": [
+            "0398: }",
+            "0399: ",
+            "0400: .comment-row textarea::placeholder,",
+            "0401: .comment-row .form-control::placeholder {",
+            "0402:     color: #e8d2ab !important;",
+            "0403: }",
+            "0404: "
+          ]
+        },
+        {
+          "line": 528,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".comment-row .btn {",
+          "context": [
+            "0525:         align-items: stretch;",
+            "0526:     }",
+            "0527: ",
+            "0528:     .comment-row .btn {",
+            "0529:         width: 100%;",
+            "0530:     }",
+            "0531: }"
+          ]
+        }
+      ],
+      "risky_count": 12,
+      "match_count": 12
+    },
+    {
+      "design": "studio",
+      "path": "blog\\templates\\blog\\designs\\studio.html",
+      "group": "posebni_hero",
+      "matches": [
+        {
+          "line": 29,
+          "key": "button_selector",
+          "reason": "genericki button selector",
+          "risky": true,
+          "text": "<button type=\"submit\" class=\"btn {% if is_following %}btn-outline-primary{% else %}btn-primary{% endif %} btn-sm\">",
+          "context": [
+            "0026:                     {% if not is_restricted %}",
+            "0027:                         <form method=\"post\" action=\"{% url 'follow_toggle' blog.username %}\" class=\"m-0\">",
+            "0028:                             {% csrf_token %}",
+            "0029:                             <button type=\"submit\" class=\"btn {% if is_following %}btn-outline-primary{% else %}btn-primary{% endif %} btn-sm\">",
+            "0030:                                 {% if is_following %}Pratiš{% else %}Prati{% endif %}",
+            "0031:                             </button>",
+            "0032:                         </form>"
+          ]
+        },
+        {
+          "line": 50,
+          "key": "button_selector",
+          "reason": "genericki button selector",
+          "risky": true,
+          "text": "<button type=\"submit\" class=\"dropdown-item\">Prestani pratiti</button>",
+          "context": [
+            "0047:                                 <li>",
+            "0048:                                     <form method=\"post\" action=\"{% url 'unfollow_user' blog.username %}\" class=\"m-0\">",
+            "0049:                                         {% csrf_token %}",
+            "0050:                                         <button type=\"submit\" class=\"dropdown-item\">Prestani pratiti</button>",
+            "0051:                                     </form>",
+            "0052:                                 </li>",
+            "0053:                             {% else %}"
+          ]
+        },
+        {
+          "line": 57,
+          "key": "button_selector",
+          "reason": "genericki button selector",
+          "risky": true,
+          "text": "<button type=\"submit\" class=\"dropdown-item\" {% if is_restricted %}disabled{% endif %}>Prati korisnika</button>",
+          "context": [
+            "0054:                                 <li>",
+            "0055:                                     <form method=\"post\" action=\"{% url 'follow_toggle' blog.username %}\" class=\"m-0\">",
+            "0056:                                         {% csrf_token %}",
+            "0057:                                         <button type=\"submit\" class=\"dropdown-item\" {% if is_restricted %}disabled{% endif %}>Prati korisnika</button>",
+            "0058:                                     </form>",
+            "0059:                                 </li>",
+            "0060:                             {% endif %}"
+          ]
+        },
+        {
+          "line": 65,
+          "key": "button_selector",
+          "reason": "genericki button selector",
+          "risky": true,
+          "text": "<button type=\"submit\" class=\"dropdown-item\">Ograniči korisnika</button>",
+          "context": [
+            "0062:                             <li>",
+            "0063:                                 <form method=\"post\" action=\"{% url 'restrict_user' blog.username %}\" class=\"m-0\">",
+            "0064:                                     {% csrf_token %}",
+            "0065:                                     <button type=\"submit\" class=\"dropdown-item\">Ograniči korisnika</button>",
+            "0066:                                 </form>",
+            "0067:                             </li>",
+            "0068: "
+          ]
+        },
+        {
+          "line": 74,
+          "key": "button_selector",
+          "reason": "genericki button selector",
+          "risky": true,
+          "text": "<button type=\"submit\" class=\"dropdown-item text-danger\">Blokiraj korisnika</button>",
+          "context": [
+            "0071:                             <li>",
+            "0072:                                 <form method=\"post\" action=\"{% url 'block_user' blog.username %}\" class=\"m-0\">",
+            "0073:                                     {% csrf_token %}",
+            "0074:                                     <button type=\"submit\" class=\"dropdown-item text-danger\">Blokiraj korisnika</button>",
+            "0075:                                 </form>",
+            "0076:                             </li>",
+            "0077:                         </ul>"
+          ]
+        },
+        {
+          "line": 346,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar {",
+          "context": [
+            "0343:     z-index: 9999;",
+            "0344: }",
+            "0345: ",
+            "0346: nav.navbar {",
+            "0347:     position: relative;",
+            "0348:     z-index: 5000 !important;",
+            "0349: }"
+          ]
+        },
+        {
+          "line": 351,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar .dropdown-menu {",
+          "context": [
+            "0348:     z-index: 5000 !important;",
+            "0349: }",
+            "0350: ",
+            "0351: nav.navbar .dropdown-menu {",
+            "0352:     z-index: 5100 !important;",
+            "0353: }",
+            "0354: "
+          ]
+        },
+        {
+          "line": 594,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "textarea.form-control {",
+          "context": [
+            "0591:     border: 1px solid var(--soho-content-border);",
+            "0592: }",
+            "0593: ",
+            "0594: textarea.form-control {",
+            "0595:     background: #fff !important;",
+            "0596:     color: var(--soho-text) !important;",
+            "0597:     border: 1px solid var(--soho-content-border) !important;"
+          ]
+        },
+        {
+          "line": 600,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "textarea.form-control:focus {",
+          "context": [
+            "0597:     border: 1px solid var(--soho-content-border) !important;",
+            "0598: }",
+            "0599: ",
+            "0600: textarea.form-control:focus {",
+            "0601:     box-shadow: 0 0 0 0.12rem rgba(182, 122, 45, 0.18) !important;",
+            "0602:     border-color: #c79554 !important;",
+            "0603: }"
+          ]
+        }
+      ],
+      "risky_count": 9,
+      "match_count": 9
+    },
+    {
+      "design": "sumska_svjetlost",
+      "path": "blog\\templates\\blog\\designs\\sumska_svjetlost.html",
+      "group": "zajednicki_layout",
+      "matches": [
+        {
+          "line": 43,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar {",
+          "context": [
+            "0040:     background-size: 100% 100%, 100% auto;",
+            "0041: }",
+            "0042: ",
+            "0043: nav.navbar {",
+            "0044:     position: relative;",
+            "0045:     z-index: 4000 !important;",
+            "0046: }"
+          ]
+        },
+        {
+          "line": 48,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar .dropdown-menu {",
+          "context": [
+            "0045:     z-index: 4000 !important;",
+            "0046: }",
+            "0047: ",
+            "0048: nav.navbar .dropdown-menu {",
+            "0049:     z-index: 4100 !important;",
+            "0050: }",
+            "0051: "
+          ]
+        },
+        {
+          "line": 417,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "textarea.form-control,",
+          "context": [
+            "0414:     color: #5d6957;",
+            "0415: }",
+            "0416: ",
+            "0417: textarea.form-control,",
+            "0418: input.form-control,",
+            "0419: select.form-select {",
+            "0420:     background: rgba(248, 252, 243, 0.62) !important;"
+          ]
+        },
+        {
+          "line": 418,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "input.form-control,",
+          "context": [
+            "0415: }",
+            "0416: ",
+            "0417: textarea.form-control,",
+            "0418: input.form-control,",
+            "0419: select.form-select {",
+            "0420:     background: rgba(248, 252, 243, 0.62) !important;",
+            "0421:     color: #53614d !important;"
+          ]
+        },
+        {
+          "line": 418,
+          "key": "input_selector",
+          "reason": "genericki input selector",
+          "risky": true,
+          "text": "input.form-control,",
+          "context": [
+            "0415: }",
+            "0416: ",
+            "0417: textarea.form-control,",
+            "0418: input.form-control,",
+            "0419: select.form-select {",
+            "0420:     background: rgba(248, 252, 243, 0.62) !important;",
+            "0421:     color: #53614d !important;"
+          ]
+        },
+        {
+          "line": 426,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "textarea.form-control::placeholder,",
+          "context": [
+            "0423:     box-shadow: none !important;",
+            "0424: }",
+            "0425: ",
+            "0426: textarea.form-control::placeholder,",
+            "0427: input.form-control::placeholder {",
+            "0428:     color: rgba(93, 105, 87, 0.48) !important;",
+            "0429: }"
+          ]
+        },
+        {
+          "line": 427,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "input.form-control::placeholder {",
+          "context": [
+            "0424: }",
+            "0425: ",
+            "0426: textarea.form-control::placeholder,",
+            "0427: input.form-control::placeholder {",
+            "0428:     color: rgba(93, 105, 87, 0.48) !important;",
+            "0429: }",
+            "0430: "
+          ]
+        },
+        {
+          "line": 427,
+          "key": "input_selector",
+          "reason": "genericki input selector",
+          "risky": true,
+          "text": "input.form-control::placeholder {",
+          "context": [
+            "0424: }",
+            "0425: ",
+            "0426: textarea.form-control::placeholder,",
+            "0427: input.form-control::placeholder {",
+            "0428:     color: rgba(93, 105, 87, 0.48) !important;",
+            "0429: }",
+            "0430: "
+          ]
+        },
+        {
+          "line": 431,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "textarea.form-control:focus,",
+          "context": [
+            "0428:     color: rgba(93, 105, 87, 0.48) !important;",
+            "0429: }",
+            "0430: ",
+            "0431: textarea.form-control:focus,",
+            "0432: input.form-control:focus,",
+            "0433: select.form-select:focus {",
+            "0434:     border-color: rgba(137, 171, 112, 0.56) !important;"
+          ]
+        },
+        {
+          "line": 432,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "input.form-control:focus,",
+          "context": [
+            "0429: }",
+            "0430: ",
+            "0431: textarea.form-control:focus,",
+            "0432: input.form-control:focus,",
+            "0433: select.form-select:focus {",
+            "0434:     border-color: rgba(137, 171, 112, 0.56) !important;",
+            "0435:     box-shadow: none !important;"
+          ]
+        },
+        {
+          "line": 432,
+          "key": "input_selector",
+          "reason": "genericki input selector",
+          "risky": true,
+          "text": "input.form-control:focus,",
+          "context": [
+            "0429: }",
+            "0430: ",
+            "0431: textarea.form-control:focus,",
+            "0432: input.form-control:focus,",
+            "0433: select.form-select:focus {",
+            "0434:     border-color: rgba(137, 171, 112, 0.56) !important;",
+            "0435:     box-shadow: none !important;"
+          ]
+        },
+        {
+          "line": 439,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".btn-outline-light {",
+          "context": [
+            "0436: }",
+            "0437: ",
+            "0438: .blog-action-outline,",
+            "0439: .btn-outline-light {",
+            "0440:     border-color: rgba(137, 171, 112, 0.42) !important;",
+            "0441:     color: #5d6957 !important;",
+            "0442:     background: rgba(248, 252, 243, 0.42) !important;"
+          ]
+        },
+        {
+          "line": 447,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".btn-outline-light:hover {",
+          "context": [
+            "0444: }",
+            "0445: ",
+            "0446: .blog-action-outline:hover,",
+            "0447: .btn-outline-light:hover {",
+            "0448:     border-color: rgba(137, 171, 112, 0.70) !important;",
+            "0449:     color: #4e5a47 !important;",
+            "0450:     background: rgba(213, 231, 196, 0.24) !important;"
+          ]
+        }
+      ],
+      "risky_count": 13,
+      "match_count": 13
+    },
+    {
+      "design": "svemirski_horizont",
+      "path": "blog\\templates\\blog\\designs\\svemirski_horizont.html",
+      "group": "zajednicki_layout",
+      "matches": [
+        {
+          "line": 43,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar {",
+          "context": [
+            "0040:     background-size: 100% 100%, 100% auto;",
+            "0041: }",
+            "0042: ",
+            "0043: nav.navbar {",
+            "0044:     position: relative;",
+            "0045:     z-index: 4000 !important;",
+            "0046: }"
+          ]
+        },
+        {
+          "line": 48,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar .dropdown-menu {",
+          "context": [
+            "0045:     z-index: 4000 !important;",
+            "0046: }",
+            "0047: ",
+            "0048: nav.navbar .dropdown-menu {",
+            "0049:     z-index: 4100 !important;",
+            "0050: }",
+            "0051: "
+          ]
+        },
+        {
+          "line": 406,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "textarea.form-control,",
+          "context": [
+            "0403:     color: #dbe7ff;",
+            "0404: }",
+            "0405: ",
+            "0406: textarea.form-control,",
+            "0407: input.form-control,",
+            "0408: select.form-select {",
+            "0409:     background: transparent !important;"
+          ]
+        },
+        {
+          "line": 407,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "input.form-control,",
+          "context": [
+            "0404: }",
+            "0405: ",
+            "0406: textarea.form-control,",
+            "0407: input.form-control,",
+            "0408: select.form-select {",
+            "0409:     background: transparent !important;",
+            "0410:     color: #eaf2ff !important;"
+          ]
+        },
+        {
+          "line": 407,
+          "key": "input_selector",
+          "reason": "genericki input selector",
+          "risky": true,
+          "text": "input.form-control,",
+          "context": [
+            "0404: }",
+            "0405: ",
+            "0406: textarea.form-control,",
+            "0407: input.form-control,",
+            "0408: select.form-select {",
+            "0409:     background: transparent !important;",
+            "0410:     color: #eaf2ff !important;"
+          ]
+        },
+        {
+          "line": 415,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "textarea.form-control::placeholder,",
+          "context": [
+            "0412:     box-shadow: none !important;",
+            "0413: }",
+            "0414: ",
+            "0415: textarea.form-control::placeholder,",
+            "0416: input.form-control::placeholder {",
+            "0417:     color: rgba(216, 228, 255, 0.48) !important;",
+            "0418: }"
+          ]
+        },
+        {
+          "line": 416,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "input.form-control::placeholder {",
+          "context": [
+            "0413: }",
+            "0414: ",
+            "0415: textarea.form-control::placeholder,",
+            "0416: input.form-control::placeholder {",
+            "0417:     color: rgba(216, 228, 255, 0.48) !important;",
+            "0418: }",
+            "0419: "
+          ]
+        },
+        {
+          "line": 416,
+          "key": "input_selector",
+          "reason": "genericki input selector",
+          "risky": true,
+          "text": "input.form-control::placeholder {",
+          "context": [
+            "0413: }",
+            "0414: ",
+            "0415: textarea.form-control::placeholder,",
+            "0416: input.form-control::placeholder {",
+            "0417:     color: rgba(216, 228, 255, 0.48) !important;",
+            "0418: }",
+            "0419: "
+          ]
+        },
+        {
+          "line": 420,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "textarea.form-control:focus,",
+          "context": [
+            "0417:     color: rgba(216, 228, 255, 0.48) !important;",
+            "0418: }",
+            "0419: ",
+            "0420: textarea.form-control:focus,",
+            "0421: input.form-control:focus,",
+            "0422: select.form-select:focus {",
+            "0423:     border-color: rgba(180, 210, 255, 0.42) !important;"
+          ]
+        },
+        {
+          "line": 421,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "input.form-control:focus,",
+          "context": [
+            "0418: }",
+            "0419: ",
+            "0420: textarea.form-control:focus,",
+            "0421: input.form-control:focus,",
+            "0422: select.form-select:focus {",
+            "0423:     border-color: rgba(180, 210, 255, 0.42) !important;",
+            "0424:     box-shadow: none !important;"
+          ]
+        },
+        {
+          "line": 421,
+          "key": "input_selector",
+          "reason": "genericki input selector",
+          "risky": true,
+          "text": "input.form-control:focus,",
+          "context": [
+            "0418: }",
+            "0419: ",
+            "0420: textarea.form-control:focus,",
+            "0421: input.form-control:focus,",
+            "0422: select.form-select:focus {",
+            "0423:     border-color: rgba(180, 210, 255, 0.42) !important;",
+            "0424:     box-shadow: none !important;"
+          ]
+        },
+        {
+          "line": 428,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".btn-outline-light {",
+          "context": [
+            "0425: }",
+            "0426: ",
+            "0427: .blog-action-outline,",
+            "0428: .btn-outline-light {",
+            "0429:     border-color: rgba(180, 210, 255, 0.36) !important;",
+            "0430:     color: #eef5ff !important;",
+            "0431:     background: transparent !important;"
+          ]
+        },
+        {
+          "line": 436,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".btn-outline-light:hover {",
+          "context": [
+            "0433: }",
+            "0434: ",
+            "0435: .blog-action-outline:hover,",
+            "0436: .btn-outline-light:hover {",
+            "0437:     border-color: rgba(180, 210, 255, 0.56) !important;",
+            "0438:     color: #ffffff !important;",
+            "0439:     background: rgba(180, 210, 255, 0.10) !important;"
+          ]
+        }
+      ],
+      "risky_count": 13,
+      "match_count": 13
+    },
+    {
+      "design": "vecer_uz_jezero",
+      "path": "blog\\templates\\blog\\designs\\vecer_uz_jezero.html",
+      "group": "posebni",
+      "matches": [
+        {
+          "line": 31,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar {",
+          "context": [
+            "0028:     display: none;",
+            "0029: }",
+            "0030: ",
+            "0031: nav.navbar {",
+            "0032:     position: relative;",
+            "0033:     z-index: 4000 !important;",
+            "0034:     background: rgba(30, 13, 12, 0.82) !important;"
+          ]
+        },
+        {
+          "line": 38,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar .dropdown-menu {",
+          "context": [
+            "0035:     border-bottom: 1px solid rgba(255, 228, 204, 0.10);",
+            "0036: }",
+            "0037: ",
+            "0038: nav.navbar .dropdown-menu {",
+            "0039:     z-index: 4100 !important;",
+            "0040: }",
+            "0041: "
+          ]
+        },
+        {
+          "line": 220,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".vj-profile-wrap .btn-primary {",
+          "context": [
+            "0217:     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.24);",
+            "0218: }",
+            "0219: ",
+            "0220: .vj-profile-wrap .btn-primary {",
+            "0221:     background: #f3c3a0;",
+            "0222:     border-color: #f3c3a0;",
+            "0223:     color: #341c18;"
+          ]
+        },
+        {
+          "line": 226,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".vj-profile-wrap .btn-primary:hover {",
+          "context": [
+            "0223:     color: #341c18;",
+            "0224: }",
+            "0225: ",
+            "0226: .vj-profile-wrap .btn-primary:hover {",
+            "0227:     background: #ffd1af;",
+            "0228:     border-color: #ffd1af;",
+            "0229:     color: #291411;"
+          ]
+        },
+        {
+          "line": 232,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".vj-profile-wrap .btn-outline-primary {",
+          "context": [
+            "0229:     color: #291411;",
+            "0230: }",
+            "0231: ",
+            "0232: .vj-profile-wrap .btn-outline-primary {",
+            "0233:     color: #ffd6bd;",
+            "0234:     border-color: #ffd6bd;",
+            "0235: }"
+          ]
+        },
+        {
+          "line": 237,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".vj-profile-wrap .btn-outline-primary:hover {",
+          "context": [
+            "0234:     border-color: #ffd6bd;",
+            "0235: }",
+            "0236: ",
+            "0237: .vj-profile-wrap .btn-outline-primary:hover {",
+            "0238:     background: #ffd6bd;",
+            "0239:     color: #341c18;",
+            "0240: }"
+          ]
+        },
+        {
+          "line": 399,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".btn-outline-light {",
+          "context": [
+            "0396: }",
+            "0397: ",
+            "0398: .blog-action-outline,",
+            "0399: .btn-outline-light {",
+            "0400:     border-color: #ffd6bd !important;",
+            "0401:     color: #ffd6bd !important;",
+            "0402:     background: transparent !important;"
+          ]
+        },
+        {
+          "line": 406,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".btn-outline-light:hover {",
+          "context": [
+            "0403: }",
+            "0404: ",
+            "0405: .blog-action-outline:hover,",
+            "0406: .btn-outline-light:hover {",
+            "0407:     background: rgba(255, 214, 189, 0.16) !important;",
+            "0408:     color: #fff7f1 !important;",
+            "0409:     box-shadow: 0 0 10px rgba(255,214,189,0.12);"
+          ]
+        },
+        {
+          "line": 420,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": ".comment-row .form-control {",
+          "context": [
+            "0417: }",
+            "0418: ",
+            "0419: .comment-row textarea,",
+            "0420: .comment-row .form-control {",
+            "0421:     flex: 1;",
+            "0422:     background: rgba(255,255,255,0.08) !important;",
+            "0423:     color: #f8e6dc !important;"
+          ]
+        },
+        {
+          "line": 431,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": ".comment-row .form-control:focus {",
+          "context": [
+            "0428: }",
+            "0429: ",
+            "0430: .comment-row textarea:focus,",
+            "0431: .comment-row .form-control:focus {",
+            "0432:     border-color: rgba(255,214,189,0.34) !important;",
+            "0433:     box-shadow: 0 0 0 0.2rem rgba(255,214,189,0.08) !important;",
+            "0434: }"
+          ]
+        },
+        {
+          "line": 437,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": ".comment-row .form-control::placeholder {",
+          "context": [
+            "0434: }",
+            "0435: ",
+            "0436: .comment-row textarea::placeholder,",
+            "0437: .comment-row .form-control::placeholder {",
+            "0438:     color: #f1cbbb !important;",
+            "0439: }",
+            "0440: "
+          ]
+        },
+        {
+          "line": 569,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".comment-row .btn {",
+          "context": [
+            "0566:         align-items: stretch;",
+            "0567:     }",
+            "0568: ",
+            "0569:     .comment-row .btn {",
+            "0570:         width: 100%;",
+            "0571:     }",
+            "0572: }"
+          ]
+        }
+      ],
+      "risky_count": 12,
+      "match_count": 12
+    },
+    {
+      "design": "vecer_zaljubljenih",
+      "path": "blog\\templates\\blog\\designs\\vecer_zaljubljenih.html",
+      "group": "posebni",
+      "matches": [
+        {
+          "line": 42,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar {",
+          "context": [
+            "0039:     display: none;",
+            "0040: }",
+            "0041: ",
+            "0042: nav.navbar {",
+            "0043:     position: relative;",
+            "0044:     z-index: 4000 !important;",
+            "0045:     background: rgba(32, 7, 6, 0.42) !important;"
+          ]
+        },
+        {
+          "line": 50,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar .dropdown-menu {",
+          "context": [
+            "0047:     border-bottom: 1px solid rgba(255, 226, 206, 0.10);",
+            "0048: }",
+            "0049: ",
+            "0050: nav.navbar .dropdown-menu {",
+            "0051:     z-index: 4100 !important;",
+            "0052: }",
+            "0053: "
+          ]
+        },
+        {
+          "line": 234,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".vz-profile-wrap .btn-primary {",
+          "context": [
+            "0231:     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.24);",
+            "0232: }",
+            "0233: ",
+            "0234: .vz-profile-wrap .btn-primary {",
+            "0235:     background: #ffb68d;",
+            "0236:     border-color: #ffb68d;",
+            "0237:     color: #31110d;"
+          ]
+        },
+        {
+          "line": 240,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".vz-profile-wrap .btn-primary:hover {",
+          "context": [
+            "0237:     color: #31110d;",
+            "0238: }",
+            "0239: ",
+            "0240: .vz-profile-wrap .btn-primary:hover {",
+            "0241:     background: #ffc59e;",
+            "0242:     border-color: #ffc59e;",
+            "0243:     color: #26100d;"
+          ]
+        },
+        {
+          "line": 246,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".vz-profile-wrap .btn-outline-primary {",
+          "context": [
+            "0243:     color: #26100d;",
+            "0244: }",
+            "0245: ",
+            "0246: .vz-profile-wrap .btn-outline-primary {",
+            "0247:     color: #ffbf96;",
+            "0248:     border-color: #ffbf96;",
+            "0249: }"
+          ]
+        },
+        {
+          "line": 251,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".vz-profile-wrap .btn-outline-primary:hover {",
+          "context": [
+            "0248:     border-color: #ffbf96;",
+            "0249: }",
+            "0250: ",
+            "0251: .vz-profile-wrap .btn-outline-primary:hover {",
+            "0252:     background: #ffbf96;",
+            "0253:     color: #31110d;",
+            "0254: }"
+          ]
+        },
+        {
+          "line": 413,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".btn-outline-light {",
+          "context": [
+            "0410: }",
+            "0411: ",
+            "0412: .blog-action-outline,",
+            "0413: .btn-outline-light {",
+            "0414:     border-color: #ffbf96 !important;",
+            "0415:     color: #ffbf96 !important;",
+            "0416:     background: transparent !important;"
+          ]
+        },
+        {
+          "line": 420,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".btn-outline-light:hover {",
+          "context": [
+            "0417: }",
+            "0418: ",
+            "0419: .blog-action-outline:hover,",
+            "0420: .btn-outline-light:hover {",
+            "0421:     background: #ffbf96 !important;",
+            "0422:     color: #31110d !important;",
+            "0423:     box-shadow: 0 0 10px rgba(255,191,150,0.12);"
+          ]
+        },
+        {
+          "line": 434,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": ".comment-row .form-control {",
+          "context": [
+            "0431: }",
+            "0432: ",
+            "0433: .comment-row textarea,",
+            "0434: .comment-row .form-control {",
+            "0435:     flex: 1;",
+            "0436:     background: rgba(255,255,255,0.06) !important;",
+            "0437:     color: #f6ddd2 !important;"
+          ]
+        },
+        {
+          "line": 445,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": ".comment-row .form-control:focus {",
+          "context": [
+            "0442: }",
+            "0443: ",
+            "0444: .comment-row textarea:focus,",
+            "0445: .comment-row .form-control:focus {",
+            "0446:     border-color: rgba(255, 191, 150, 0.34) !important;",
+            "0447:     box-shadow: 0 0 0 0.2rem rgba(255, 191, 150, 0.06) !important;",
+            "0448: }"
+          ]
+        },
+        {
+          "line": 451,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": ".comment-row .form-control::placeholder {",
+          "context": [
+            "0448: }",
+            "0449: ",
+            "0450: .comment-row textarea::placeholder,",
+            "0451: .comment-row .form-control::placeholder {",
+            "0452:     color: #e0af99 !important;",
+            "0453: }",
+            "0454: "
+          ]
+        },
+        {
+          "line": 583,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".comment-row .btn {",
+          "context": [
+            "0580:         align-items: stretch;",
+            "0581:     }",
+            "0582: ",
+            "0583:     .comment-row .btn {",
+            "0584:         width: 100%;",
+            "0585:     }",
+            "0586: }"
+          ]
+        }
+      ],
+      "risky_count": 12,
+      "match_count": 12
+    },
+    {
+      "design": "vodopad_u_magli",
+      "path": "blog\\templates\\blog\\designs\\vodopad_u_magli.html",
+      "group": "zajednicki_layout",
+      "matches": [
+        {
+          "line": 43,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar {",
+          "context": [
+            "0040:     background-size: 100% 100%, 100% auto;",
+            "0041: }",
+            "0042: ",
+            "0043: nav.navbar {",
+            "0044:     position: relative;",
+            "0045:     z-index: 4000 !important;",
+            "0046: }"
+          ]
+        },
+        {
+          "line": 48,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar .dropdown-menu {",
+          "context": [
+            "0045:     z-index: 4000 !important;",
+            "0046: }",
+            "0047: ",
+            "0048: nav.navbar .dropdown-menu {",
+            "0049:     z-index: 4100 !important;",
+            "0050: }",
+            "0051: "
+          ]
+        },
+        {
+          "line": 290,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "textarea.form-control {",
+          "context": [
+            "0287:     padding: 10px 44px 10px 12px;",
+            "0288: }",
+            "0289: ",
+            "0290: textarea.form-control {",
+            "0291:     background: rgba(255,255,255,0.30) !important;",
+            "0292:     color: #465042 !important;",
+            "0293:     border: 1px solid rgba(124,137,124,0.28) !important;"
+          ]
+        },
+        {
+          "line": 297,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "textarea.form-control:focus {",
+          "context": [
+            "0294:     border-radius: 12px;",
+            "0295: }",
+            "0296: ",
+            "0297: textarea.form-control:focus {",
+            "0298:     background: rgba(255,255,255,0.36) !important;",
+            "0299:     color: #465042 !important;",
+            "0300:     border-color: rgba(113,130,112,0.45) !important;"
+          ]
+        },
+        {
+          "line": 309,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".btn-outline-light {",
+          "context": [
+            "0306: }",
+            "0307: ",
+            "0308: .blog-action-outline,",
+            "0309: .btn-outline-light {",
+            "0310:     border-color: rgba(113,130,112,0.36) !important;",
+            "0311:     color: #4f5d4a !important;",
+            "0312:     background: rgba(255,255,255,0.16) !important;"
+          ]
+        },
+        {
+          "line": 316,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".btn-outline-light:hover {",
+          "context": [
+            "0313: }",
+            "0314: ",
+            "0315: .blog-action-outline:hover,",
+            "0316: .btn-outline-light:hover {",
+            "0317:     background-color: rgba(221,230,214,0.38) !important;",
+            "0318:     color: #364034 !important;",
+            "0319: }"
+          ]
+        }
+      ],
+      "risky_count": 6,
+      "match_count": 6
+    },
+    {
+      "design": "zlatni_horizont",
+      "path": "blog\\templates\\blog\\designs\\zlatni_horizont.html",
+      "group": "zajednicki_layout",
+      "matches": [
+        {
+          "line": 43,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar {",
+          "context": [
+            "0040:     background-size: 100% 100%, 100% auto;",
+            "0041: }",
+            "0042: ",
+            "0043: nav.navbar {",
+            "0044:     position: relative;",
+            "0045:     z-index: 4000 !important;",
+            "0046: }"
+          ]
+        },
+        {
+          "line": 48,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar .dropdown-menu {",
+          "context": [
+            "0045:     z-index: 4000 !important;",
+            "0046: }",
+            "0047: ",
+            "0048: nav.navbar .dropdown-menu {",
+            "0049:     z-index: 4100 !important;",
+            "0050: }",
+            "0051: "
+          ]
+        },
+        {
+          "line": 406,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "textarea.form-control,",
+          "context": [
+            "0403:     color: #f6e1cd;",
+            "0404: }",
+            "0405: ",
+            "0406: textarea.form-control,",
+            "0407: input.form-control,",
+            "0408: select.form-select {",
+            "0409:     background: transparent !important;"
+          ]
+        },
+        {
+          "line": 407,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "input.form-control,",
+          "context": [
+            "0404: }",
+            "0405: ",
+            "0406: textarea.form-control,",
+            "0407: input.form-control,",
+            "0408: select.form-select {",
+            "0409:     background: transparent !important;",
+            "0410:     color: #fff0df !important;"
+          ]
+        },
+        {
+          "line": 407,
+          "key": "input_selector",
+          "reason": "genericki input selector",
+          "risky": true,
+          "text": "input.form-control,",
+          "context": [
+            "0404: }",
+            "0405: ",
+            "0406: textarea.form-control,",
+            "0407: input.form-control,",
+            "0408: select.form-select {",
+            "0409:     background: transparent !important;",
+            "0410:     color: #fff0df !important;"
+          ]
+        },
+        {
+          "line": 415,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "textarea.form-control::placeholder,",
+          "context": [
+            "0412:     box-shadow: none !important;",
+            "0413: }",
+            "0414: ",
+            "0415: textarea.form-control::placeholder,",
+            "0416: input.form-control::placeholder {",
+            "0417:     color: rgba(240, 214, 189, 0.48) !important;",
+            "0418: }"
+          ]
+        },
+        {
+          "line": 416,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "input.form-control::placeholder {",
+          "context": [
+            "0413: }",
+            "0414: ",
+            "0415: textarea.form-control::placeholder,",
+            "0416: input.form-control::placeholder {",
+            "0417:     color: rgba(240, 214, 189, 0.48) !important;",
+            "0418: }",
+            "0419: "
+          ]
+        },
+        {
+          "line": 416,
+          "key": "input_selector",
+          "reason": "genericki input selector",
+          "risky": true,
+          "text": "input.form-control::placeholder {",
+          "context": [
+            "0413: }",
+            "0414: ",
+            "0415: textarea.form-control::placeholder,",
+            "0416: input.form-control::placeholder {",
+            "0417:     color: rgba(240, 214, 189, 0.48) !important;",
+            "0418: }",
+            "0419: "
+          ]
+        },
+        {
+          "line": 420,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "textarea.form-control:focus,",
+          "context": [
+            "0417:     color: rgba(240, 214, 189, 0.48) !important;",
+            "0418: }",
+            "0419: ",
+            "0420: textarea.form-control:focus,",
+            "0421: input.form-control:focus,",
+            "0422: select.form-select:focus {",
+            "0423:     border-color: rgba(255, 176, 96, 0.42) !important;"
+          ]
+        },
+        {
+          "line": 421,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "input.form-control:focus,",
+          "context": [
+            "0418: }",
+            "0419: ",
+            "0420: textarea.form-control:focus,",
+            "0421: input.form-control:focus,",
+            "0422: select.form-select:focus {",
+            "0423:     border-color: rgba(255, 176, 96, 0.42) !important;",
+            "0424:     box-shadow: none !important;"
+          ]
+        },
+        {
+          "line": 421,
+          "key": "input_selector",
+          "reason": "genericki input selector",
+          "risky": true,
+          "text": "input.form-control:focus,",
+          "context": [
+            "0418: }",
+            "0419: ",
+            "0420: textarea.form-control:focus,",
+            "0421: input.form-control:focus,",
+            "0422: select.form-select:focus {",
+            "0423:     border-color: rgba(255, 176, 96, 0.42) !important;",
+            "0424:     box-shadow: none !important;"
+          ]
+        },
+        {
+          "line": 428,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".btn-outline-light {",
+          "context": [
+            "0425: }",
+            "0426: ",
+            "0427: .blog-action-outline,",
+            "0428: .btn-outline-light {",
+            "0429:     border-color: rgba(255, 176, 96, 0.36) !important;",
+            "0430:     color: #fff1e3 !important;",
+            "0431:     background: transparent !important;"
+          ]
+        },
+        {
+          "line": 436,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".btn-outline-light:hover {",
+          "context": [
+            "0433: }",
+            "0434: ",
+            "0435: .blog-action-outline:hover,",
+            "0436: .btn-outline-light:hover {",
+            "0437:     border-color: rgba(255, 176, 96, 0.56) !important;",
+            "0438:     color: #fff7ef !important;",
+            "0439:     background: rgba(255, 176, 96, 0.10) !important;"
+          ]
+        }
+      ],
+      "risky_count": 13,
+      "match_count": 13
+    },
+    {
+      "design": "zlatno_polje",
+      "path": "blog\\templates\\blog\\designs\\zlatno_polje.html",
+      "group": "zajednicki_layout",
+      "matches": [
+        {
+          "line": 46,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar {",
+          "context": [
+            "0043:     background-size: 100% 100%, 100% auto;",
+            "0044: }",
+            "0045: ",
+            "0046: nav.navbar {",
+            "0047:     position: relative;",
+            "0048:     z-index: 4000 !important;",
+            "0049: }"
+          ]
+        },
+        {
+          "line": 51,
+          "key": "navbar",
+          "reason": "dira navbar",
+          "risky": true,
+          "text": "nav.navbar .dropdown-menu {",
+          "context": [
+            "0048:     z-index: 4000 !important;",
+            "0049: }",
+            "0050: ",
+            "0051: nav.navbar .dropdown-menu {",
+            "0052:     z-index: 4100 !important;",
+            "0053: }",
+            "0054: "
+          ]
+        },
+        {
+          "line": 426,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "textarea.form-control,",
+          "context": [
+            "0423:     color: #5f3d10;",
+            "0424: }",
+            "0425: ",
+            "0426: textarea.form-control,",
+            "0427: input.form-control,",
+            "0428: select.form-select {",
+            "0429:     background: transparent !important;"
+          ]
+        },
+        {
+          "line": 427,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "input.form-control,",
+          "context": [
+            "0424: }",
+            "0425: ",
+            "0426: textarea.form-control,",
+            "0427: input.form-control,",
+            "0428: select.form-select {",
+            "0429:     background: transparent !important;",
+            "0430:     color: #4b2d05 !important;"
+          ]
+        },
+        {
+          "line": 427,
+          "key": "input_selector",
+          "reason": "genericki input selector",
+          "risky": true,
+          "text": "input.form-control,",
+          "context": [
+            "0424: }",
+            "0425: ",
+            "0426: textarea.form-control,",
+            "0427: input.form-control,",
+            "0428: select.form-select {",
+            "0429:     background: transparent !important;",
+            "0430:     color: #4b2d05 !important;"
+          ]
+        },
+        {
+          "line": 435,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "textarea.form-control::placeholder,",
+          "context": [
+            "0432:     box-shadow: none !important;",
+            "0433: }",
+            "0434: ",
+            "0435: textarea.form-control::placeholder,",
+            "0436: input.form-control::placeholder {",
+            "0437:     color: rgba(109, 71, 16, 0.46) !important;",
+            "0438: }"
+          ]
+        },
+        {
+          "line": 436,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "input.form-control::placeholder {",
+          "context": [
+            "0433: }",
+            "0434: ",
+            "0435: textarea.form-control::placeholder,",
+            "0436: input.form-control::placeholder {",
+            "0437:     color: rgba(109, 71, 16, 0.46) !important;",
+            "0438: }",
+            "0439: "
+          ]
+        },
+        {
+          "line": 436,
+          "key": "input_selector",
+          "reason": "genericki input selector",
+          "risky": true,
+          "text": "input.form-control::placeholder {",
+          "context": [
+            "0433: }",
+            "0434: ",
+            "0435: textarea.form-control::placeholder,",
+            "0436: input.form-control::placeholder {",
+            "0437:     color: rgba(109, 71, 16, 0.46) !important;",
+            "0438: }",
+            "0439: "
+          ]
+        },
+        {
+          "line": 440,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "textarea.form-control:focus,",
+          "context": [
+            "0437:     color: rgba(109, 71, 16, 0.46) !important;",
+            "0438: }",
+            "0439: ",
+            "0440: textarea.form-control:focus,",
+            "0441: input.form-control:focus,",
+            "0442: select.form-select:focus {",
+            "0443:     border-color: rgba(146, 92, 17, 0.42) !important;"
+          ]
+        },
+        {
+          "line": 441,
+          "key": "form_control",
+          "reason": "moze dirati Bootstrap input, ukljucujuci trazilicu",
+          "risky": true,
+          "text": "input.form-control:focus,",
+          "context": [
+            "0438: }",
+            "0439: ",
+            "0440: textarea.form-control:focus,",
+            "0441: input.form-control:focus,",
+            "0442: select.form-select:focus {",
+            "0443:     border-color: rgba(146, 92, 17, 0.42) !important;",
+            "0444:     box-shadow: none !important;"
+          ]
+        },
+        {
+          "line": 441,
+          "key": "input_selector",
+          "reason": "genericki input selector",
+          "risky": true,
+          "text": "input.form-control:focus,",
+          "context": [
+            "0438: }",
+            "0439: ",
+            "0440: textarea.form-control:focus,",
+            "0441: input.form-control:focus,",
+            "0442: select.form-select:focus {",
+            "0443:     border-color: rgba(146, 92, 17, 0.42) !important;",
+            "0444:     box-shadow: none !important;"
+          ]
+        },
+        {
+          "line": 448,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".btn-outline-light {",
+          "context": [
+            "0445: }",
+            "0446: ",
+            "0447: .blog-action-outline,",
+            "0448: .btn-outline-light {",
+            "0449:     border-color: rgba(146, 92, 17, 0.34) !important;",
+            "0450:     color: #4b2d05 !important;",
+            "0451:     background: transparent !important;"
+          ]
+        },
+        {
+          "line": 456,
+          "key": "btn_selector",
+          "reason": "moze dirati gumbe u navbaru",
+          "risky": true,
+          "text": ".btn-outline-light:hover {",
+          "context": [
+            "0453: }",
+            "0454: ",
+            "0455: .blog-action-outline:hover,",
+            "0456: .btn-outline-light:hover {",
+            "0457:     border-color: rgba(146, 92, 17, 0.54) !important;",
+            "0458:     color: #3d2404 !important;",
+            "0459:     background: rgba(255, 248, 224, 0.18) !important;"
+          ]
+        }
+      ],
+      "risky_count": 13,
+      "match_count": 13
+    }
+  ]
+}
