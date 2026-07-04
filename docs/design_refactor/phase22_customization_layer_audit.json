@@ -1,0 +1,1638 @@
+{
+  "created_at": "2026-07-04 19:46:51",
+  "root": "C:\\Users\\mario\\blogplatform",
+  "files": {
+    "blog_design_styles": "C:\\Users\\mario\\blogplatform\\blog\\templates\\blog\\components\\blog_design_styles.html",
+    "post_card": "C:\\Users\\mario\\blogplatform\\blog\\templates\\blog\\components\\post_card.html",
+    "blog_box": "C:\\Users\\mario\\blogplatform\\blog\\templates\\blog\\components\\blog_box.html",
+    "blog_posts": "C:\\Users\\mario\\blogplatform\\blog\\templates\\blog\\components\\blog_posts.html",
+    "base": "C:\\Users\\mario\\blogplatform\\blog\\templates\\blog\\base.html"
+  },
+  "missing_files": [],
+  "component_classes": {
+    "post_card": {
+      "mb-4": 1,
+      "blog-post-entry": 1,
+      "blog-post-card": 1,
+      "d-flex": 2,
+      "justify-content-between": 1,
+      "align-items-start": 1,
+      "gap-3": 1,
+      "flex-column": 1,
+      "mb-0": 1,
+      "blog-post-title": 1,
+      "text-center": 1,
+      "ms-3": 1,
+      "blog-date-shell": 1,
+      "blog-date-main": 1,
+      "blog-date-day-wrap": 1,
+      "blog-date-day": 1,
+      "blog-date-text": 1,
+      "blog-date-month": 1,
+      "blog-date-year": 1,
+      "blog-date-inline": 1,
+      "blog-date-inline-day": 1,
+      "blog-date-inline-sep": 2,
+      "blog-date-inline-month": 1,
+      "blog-date-inline-year": 1,
+      "mt-4": 1
+    },
+    "blog_box": {
+      "sidebar-box": 1,
+      "if": 1,
+      "or": 2,
+      "endif": 1,
+      "blog-box": 1,
+      "sidebar-box-title": 1,
+      "blog-box-title": 1,
+      "sidebar-box-content": 1,
+      "blog-box-content": 1
+    }
+  },
+  "all_component_classes": [
+    "align-items-start",
+    "blog-box",
+    "blog-box-content",
+    "blog-box-title",
+    "blog-date-day",
+    "blog-date-day-wrap",
+    "blog-date-inline",
+    "blog-date-inline-day",
+    "blog-date-inline-month",
+    "blog-date-inline-sep",
+    "blog-date-inline-year",
+    "blog-date-main",
+    "blog-date-month",
+    "blog-date-shell",
+    "blog-date-text",
+    "blog-date-year",
+    "blog-post-card",
+    "blog-post-entry",
+    "blog-post-title",
+    "d-flex",
+    "endif",
+    "flex-column",
+    "gap-3",
+    "if",
+    "justify-content-between",
+    "mb-0",
+    "mb-4",
+    "ms-3",
+    "mt-4",
+    "or",
+    "sidebar-box",
+    "sidebar-box-content",
+    "sidebar-box-title",
+    "text-center"
+  ],
+  "hook_like_classes": [
+    "blog-box",
+    "blog-box-content",
+    "blog-box-title",
+    "blog-post-card",
+    "blog-post-entry",
+    "blog-post-title",
+    "sidebar-box-content",
+    "sidebar-box-title"
+  ],
+  "styled_hook_classes": [
+    "blog-box-title",
+    "blog-post-entry",
+    "blog-post-title",
+    "sidebar-box-content",
+    "sidebar-box-title"
+  ],
+  "unstyled_hook_classes": [
+    "blog-box",
+    "blog-box-content",
+    "blog-post-card"
+  ],
+  "blog_design_styles_class_selectors": [
+    "active_design_customization",
+    "align-items-center",
+    "analytics-map-canvas--map",
+    "analytics-map-card",
+    "archive-box",
+    "archive-empty",
+    "archive-link",
+    "archive-list",
+    "archive-title",
+    "blog-action-outline",
+    "blog-banner",
+    "blog-banner-slot",
+    "blog-banner-slot-center",
+    "blog-banner-slot-left",
+    "blog-banner-slot-right",
+    "blog-banner-strip",
+    "blog-box-title",
+    "blog-date-day",
+    "blog-date-day-wrap",
+    "blog-date-effect-duo",
+    "blog-date-effect-gradient",
+    "blog-date-effect-solid",
+    "blog-date-inline",
+    "blog-date-inline-day",
+    "blog-date-inline-month",
+    "blog-date-inline-sep",
+    "blog-date-inline-year",
+    "blog-date-main",
+    "blog-date-month",
+    "blog-date-shell",
+    "blog-date-style-boxed_number",
+    "blog-date-style-card",
+    "blog-date-style-classic_vertical",
+    "blog-date-style-corner_tag",
+    "blog-date-style-minimal_inline",
+    "blog-date-style-newspaper",
+    "blog-date-style-ribbon",
+    "blog-date-style-slim_vertical",
+    "blog-date-style-soft",
+    "blog-date-style-split",
+    "blog-date-text",
+    "blog-date-year",
+    "blog-header-main",
+    "blog-header-main--simple",
+    "blog-header-main--simple-retro",
+    "blog-header-wrap",
+    "blog-layout-top",
+    "blog-main-content-column",
+    "blog-main-content-column--simple-retro",
+    "blog-main-layout-row",
+    "blog-main-layout-row--simple-retro",
+    "blog-main-left-column",
+    "blog-main-left-column--simple-retro",
+    "blog-main-right-column",
+    "blog-main-right-column--simple-retro",
+    "blog-page-subtitle",
+    "blog-page-title",
+    "blog-post-entry",
+    "blog-post-title",
+    "blog-posts-shell--simple",
+    "blog-posts-shell--simple-retro",
+    "blog-posts-shell--wide",
+    "blog-profile-panel",
+    "blog-profile-panel__blog-name",
+    "blog-profile-panel__name",
+    "blog-profile-panel__note",
+    "blog-profile-panel__stats",
+    "blog-sidebar-stack--wide",
+    "blog-user-dropdown-toggle",
+    "box_background_color",
+    "box_border_color",
+    "btn",
+    "btn-outline-light",
+    "calendar-box",
+    "calendar-day",
+    "calendar-day-has-post",
+    "calendar-day-today",
+    "calendar-empty",
+    "calendar-grid",
+    "calendar-month-nav",
+    "calendar-month-nav-link",
+    "calendar-title",
+    "calendar-title--nav",
+    "calendar-weekdays",
+    "col-md-3",
+    "col-md-6",
+    "comment-action-btn",
+    "comment-action-danger",
+    "comment-actions",
+    "comment-author",
+    "comment-avatar",
+    "comment-body",
+    "comment-header",
+    "comment-item",
+    "comment-row",
+    "comment-text",
+    "comment-time",
+    "container-fluid",
+    "content_background_color",
+    "content_border_color",
+    "d-flex",
+    "dropdown-menu",
+    "flex-wrap",
+    "form-control",
+    "fw-semibold",
+    "gap-2",
+    "header_background_color_1",
+    "header_background_color_2",
+    "header_background_gradient_direction",
+    "header_background_mode",
+    "justify-content-center",
+    "live-analytics-layout-grid",
+    "live-analytics-page-row",
+    "live-analytics-section--map",
+    "live-analytics-stat-card",
+    "live-analytics-stat-label",
+    "live-analytics-stat-value",
+    "live-analytics-widget",
+    "mb-4",
+    "mt-3",
+    "mt-4",
+    "navbar",
+    "outer_background_asset",
+    "outer_background_color_1",
+    "outer_background_color_2",
+    "outer_background_gradient_direction",
+    "outer_background_mode",
+    "outer_background_pattern",
+    "page-top-align",
+    "png",
+    "post-actions",
+    "post-author-line",
+    "post-author-link",
+    "post-meta",
+    "post-meta-category",
+    "post-meta-sep",
+    "post-meta-tag",
+    "post-views",
+    "premium-blog-title-effect",
+    "premium-title-crown",
+    "profile",
+    "right_box_columns",
+    "row",
+    "sidebar-box",
+    "sidebar-box--simple",
+    "sidebar-box-content",
+    "sidebar-box-title",
+    "sidebar-left-align",
+    "sidebar-right-align",
+    "simple_background_image",
+    "small",
+    "svg",
+    "template",
+    "url"
+  ],
+  "style_vars": [
+    "--blog-title-color",
+    "--blog-title-font",
+    "--blog-title-size",
+    "--body-font",
+    "--body-text-color",
+    "--box-title-color",
+    "--box-title-font",
+    "--box-title-size",
+    "--date-accent-color",
+    "--date-bg-soft",
+    "--date-day-color",
+    "--date-muted-color",
+    "--date-primary",
+    "--date-scale-factor",
+    "--date-secondary",
+    "--date-text-color",
+    "--post-date-color",
+    "--post-date-color-1",
+    "--post-date-color-2",
+    "--post-date-scale",
+    "--post-title-color",
+    "--post-title-font",
+    "--post-title-size"
+  ],
+  "blog_vars_used": [
+    "--blog-title-color",
+    "--blog-title-font",
+    "--blog-title-size"
+  ],
+  "blog_vars_defined_in_base": [
+    "--blog-title-color",
+    "--blog-title-font",
+    "--blog-title-size"
+  ],
+  "blog_vars_used_without_base_definition": [],
+  "rules_using_blog_vars": [
+    {
+      "selector": ".blog-page-title, .blog-page-title a",
+      "classes": [
+        "blog-page-title"
+      ],
+      "vars_used": [
+        "--blog-title-color",
+        "--blog-title-font",
+        "--blog-title-size"
+      ]
+    },
+    {
+      "selector": ".blog-page-subtitle",
+      "classes": [
+        "blog-page-subtitle"
+      ],
+      "vars_used": [
+        "--blog-title-color"
+      ]
+    },
+    {
+      "selector": ".blog-page-title a, .blog-page-title",
+      "classes": [
+        "blog-page-title"
+      ],
+      "vars_used": [
+        "--blog-title-color"
+      ]
+    },
+    {
+      "selector": ".blog-header-main--simple-retro .blog-page-title, .blog-header-main--simple-retro .blog-page-title a",
+      "classes": [
+        "blog-header-main--simple-retro",
+        "blog-page-title"
+      ],
+      "vars_used": [
+        "--blog-title-color"
+      ]
+    },
+    {
+      "selector": ".blog-page-title, .blog-page-title a",
+      "classes": [
+        "blog-page-title"
+      ],
+      "vars_used": [
+        "--blog-title-color"
+      ]
+    },
+    {
+      "selector": ".blog-page-title, .blog-page-title a",
+      "classes": [
+        "blog-page-title"
+      ],
+      "vars_used": [
+        "--blog-title-color"
+      ]
+    }
+  ],
+  "rules_targeting_hooks": [
+    {
+      "selector": ".blog-post-entry h4, .blog-post-title",
+      "classes": [
+        "blog-post-entry",
+        "blog-post-title"
+      ],
+      "vars_used": [
+        "--post-title-color",
+        "--post-title-font",
+        "--post-title-size"
+      ]
+    },
+    {
+      "selector": ".calendar-title, .archive-title, .sidebar-box-title, .blog-box-title",
+      "classes": [
+        "archive-title",
+        "blog-box-title",
+        "calendar-title",
+        "sidebar-box-title"
+      ],
+      "vars_used": [
+        "--box-title-color",
+        "--box-title-font",
+        "--box-title-size"
+      ]
+    },
+    {
+      "selector": ".blog-posts-shell--wide .blog-post-entry, .blog-posts-shell--wide > .page-top-align > p, .blog-posts-shell--wide .d-flex.flex-wrap.justify-content-center.align-items-center.gap-2.mt-4.mb-4",
+      "classes": [
+        "align-items-center",
+        "blog-post-entry",
+        "blog-posts-shell--wide",
+        "d-flex",
+        "flex-wrap",
+        "gap-2",
+        "justify-content-center",
+        "mb-4",
+        "mt-4",
+        "page-top-align"
+      ],
+      "vars_used": []
+    },
+    {
+      "selector": ".blog-posts-shell--wide .blog-post-entry, .blog-posts-shell--wide > .page-top-align > p, .blog-posts-shell--wide .d-flex.flex-wrap.justify-content-center.align-items-center.gap-2.mt-4.mb-4",
+      "classes": [
+        "align-items-center",
+        "blog-post-entry",
+        "blog-posts-shell--wide",
+        "d-flex",
+        "flex-wrap",
+        "gap-2",
+        "justify-content-center",
+        "mb-4",
+        "mt-4",
+        "page-top-align"
+      ],
+      "vars_used": []
+    },
+    {
+      "selector": ".blog-posts-shell--wide .blog-post-entry, .blog-posts-shell--wide > .page-top-align > p, .blog-posts-shell--wide .d-flex.flex-wrap.justify-content-center.align-items-center.gap-2.mt-4.mb-4",
+      "classes": [
+        "align-items-center",
+        "blog-post-entry",
+        "blog-posts-shell--wide",
+        "d-flex",
+        "flex-wrap",
+        "gap-2",
+        "justify-content-center",
+        "mb-4",
+        "mt-4",
+        "page-top-align"
+      ],
+      "vars_used": []
+    },
+    {
+      "selector": ".blog-posts-shell--wide .blog-post-entry, .blog-posts-shell--wide > .page-top-align > p, .blog-posts-shell--wide .d-flex.flex-wrap.justify-content-center.align-items-center.gap-2.mt-4.mb-4",
+      "classes": [
+        "align-items-center",
+        "blog-post-entry",
+        "blog-posts-shell--wide",
+        "d-flex",
+        "flex-wrap",
+        "gap-2",
+        "justify-content-center",
+        "mb-4",
+        "mt-4",
+        "page-top-align"
+      ],
+      "vars_used": []
+    },
+    {
+      "selector": ".blog-post-entry hr",
+      "classes": [
+        "blog-post-entry"
+      ],
+      "vars_used": []
+    },
+    {
+      "selector": ".calendar-title, .archive-title, .sidebar-box-title",
+      "classes": [
+        "archive-title",
+        "calendar-title",
+        "sidebar-box-title"
+      ],
+      "vars_used": []
+    },
+    {
+      "selector": ".archive-title, .sidebar-box-title",
+      "classes": [
+        "archive-title",
+        "sidebar-box-title"
+      ],
+      "vars_used": []
+    },
+    {
+      "selector": ".calendar-title::after, .archive-title::after, .sidebar-box-title::after",
+      "classes": [
+        "archive-title",
+        "calendar-title",
+        "sidebar-box-title"
+      ],
+      "vars_used": []
+    },
+    {
+      "selector": ".blog-post-entry h4, .blog-post-title, .blog-post-entry h4 a",
+      "classes": [
+        "blog-post-entry",
+        "blog-post-title"
+      ],
+      "vars_used": [
+        "--post-title-color"
+      ]
+    },
+    {
+      "selector": ".calendar-title, .archive-title, .sidebar-box-title, .blog-box-title",
+      "classes": [
+        "archive-title",
+        "blog-box-title",
+        "calendar-title",
+        "sidebar-box-title"
+      ],
+      "vars_used": [
+        "--box-title-color"
+      ]
+    },
+    {
+      "selector": ".post-meta, .post-author-line, .comment-text, .archive-empty, .sidebar-box-content, .comment-time",
+      "classes": [
+        "archive-empty",
+        "comment-text",
+        "comment-time",
+        "post-author-line",
+        "post-meta",
+        "sidebar-box-content"
+      ],
+      "vars_used": [
+        "--body-text-color"
+      ]
+    },
+    {
+      "selector": ".sidebar-box-content",
+      "classes": [
+        "sidebar-box-content"
+      ],
+      "vars_used": []
+    },
+    {
+      "selector": ".sidebar-box-content > :last-child, .sidebar-box-content p:last-child",
+      "classes": [
+        "sidebar-box-content"
+      ],
+      "vars_used": []
+    },
+    {
+      "selector": ".sidebar-box-content p",
+      "classes": [
+        "sidebar-box-content"
+      ],
+      "vars_used": []
+    },
+    {
+      "selector": ".sidebar-box-content img",
+      "classes": [
+        "sidebar-box-content"
+      ],
+      "vars_used": []
+    },
+    {
+      "selector": ".live-analytics-widget .sidebar-box-content",
+      "classes": [
+        "live-analytics-widget",
+        "sidebar-box-content"
+      ],
+      "vars_used": []
+    },
+    {
+      "selector": ".blog-posts-shell--simple-retro .blog-post-entry",
+      "classes": [
+        "blog-post-entry",
+        "blog-posts-shell--simple-retro"
+      ],
+      "vars_used": []
+    },
+    {
+      "selector": ".blog-posts-shell--simple-retro .blog-post-entry:last-child",
+      "classes": [
+        "blog-post-entry",
+        "blog-posts-shell--simple-retro"
+      ],
+      "vars_used": []
+    },
+    {
+      "selector": ".blog-posts-shell--simple-retro .blog-post-entry hr",
+      "classes": [
+        "blog-post-entry",
+        "blog-posts-shell--simple-retro"
+      ],
+      "vars_used": []
+    },
+    {
+      "selector": ".blog-posts-shell--simple-retro .blog-post-title, .blog-posts-shell--simple-retro .blog-post-entry h4, .blog-posts-shell--simple-retro .blog-post-entry h4 a",
+      "classes": [
+        "blog-post-entry",
+        "blog-post-title",
+        "blog-posts-shell--simple-retro"
+      ],
+      "vars_used": [
+        "--post-title-color"
+      ]
+    },
+    {
+      "selector": ".blog-main-right-column--simple-retro .archive-title, .blog-main-right-column--simple-retro .sidebar-box-title, .blog-main-right-column--simple-retro .calendar-title",
+      "classes": [
+        "archive-title",
+        "blog-main-right-column--simple-retro",
+        "calendar-title",
+        "sidebar-box-title"
+      ],
+      "vars_used": [
+        "--box-title-color"
+      ]
+    },
+    {
+      "selector": ".blog-main-right-column--simple-retro .sidebar-box-content, .blog-main-right-column--simple-retro .archive-list, .blog-main-right-column--simple-retro .live-analytics-widget .sidebar-box-content",
+      "classes": [
+        "archive-list",
+        "blog-main-right-column--simple-retro",
+        "live-analytics-widget",
+        "sidebar-box-content"
+      ],
+      "vars_used": []
+    },
+    {
+      "selector": ".blog-post-entry h4, .blog-post-title, .blog-post-entry h4 a",
+      "classes": [
+        "blog-post-entry",
+        "blog-post-title"
+      ],
+      "vars_used": [
+        "--post-title-color"
+      ]
+    },
+    {
+      "selector": ".calendar-title, .archive-title, .sidebar-box-title, .blog-box-title",
+      "classes": [
+        "archive-title",
+        "blog-box-title",
+        "calendar-title",
+        "sidebar-box-title"
+      ],
+      "vars_used": [
+        "--box-title-color"
+      ]
+    },
+    {
+      "selector": ".calendar-box, .archive-box, .sidebar-box, .live-analytics-widget, .live-analytics-widget .sidebar-box, .blog-post-entry, .comment-body",
+      "classes": [
+        "archive-box",
+        "blog-post-entry",
+        "calendar-box",
+        "comment-body",
+        "live-analytics-widget",
+        "sidebar-box"
+      ],
+      "vars_used": []
+    },
+    {
+      "selector": ".archive-title, .sidebar-box-title",
+      "classes": [
+        "archive-title",
+        "sidebar-box-title"
+      ],
+      "vars_used": []
+    },
+    {
+      "selector": ".archive-empty, .sidebar-box-content, .post-meta, .post-author-line, .comment-text, .comment-time",
+      "classes": [
+        "archive-empty",
+        "comment-text",
+        "comment-time",
+        "post-author-line",
+        "post-meta",
+        "sidebar-box-content"
+      ],
+      "vars_used": [
+        "--body-text-color"
+      ]
+    },
+    {
+      "selector": ".sidebar-box-content, .live-analytics-widget .sidebar-box-content",
+      "classes": [
+        "live-analytics-widget",
+        "sidebar-box-content"
+      ],
+      "vars_used": []
+    },
+    {
+      "selector": ".blog-post-entry",
+      "classes": [
+        "blog-post-entry"
+      ],
+      "vars_used": []
+    },
+    {
+      "selector": ".blog-post-entry hr",
+      "classes": [
+        "blog-post-entry"
+      ],
+      "vars_used": []
+    },
+    {
+      "selector": ".post-author-link, .comment-author a, .post-views, .blog-user-dropdown-toggle, .archive-link, .sidebar-box-content a",
+      "classes": [
+        "archive-link",
+        "blog-user-dropdown-toggle",
+        "comment-author",
+        "post-author-link",
+        "post-views",
+        "sidebar-box-content"
+      ],
+      "vars_used": []
+    },
+    {
+      "selector": ".post-author-link:hover, .comment-author a:hover, .post-views:hover, .blog-user-dropdown-toggle:hover, .archive-link:hover, .sidebar-box-content a:hover",
+      "classes": [
+        "archive-link",
+        "blog-user-dropdown-toggle",
+        "comment-author",
+        "post-author-link",
+        "post-views",
+        "sidebar-box-content"
+      ],
+      "vars_used": []
+    },
+    {
+      "selector": ".blog-post-entry h4, .blog-post-title, .blog-post-entry h4 a",
+      "classes": [
+        "blog-post-entry",
+        "blog-post-title"
+      ],
+      "vars_used": [
+        "--post-title-color"
+      ]
+    },
+    {
+      "selector": ".calendar-title, .archive-title, .sidebar-box-title, .blog-box-title",
+      "classes": [
+        "archive-title",
+        "blog-box-title",
+        "calendar-title",
+        "sidebar-box-title"
+      ],
+      "vars_used": [
+        "--box-title-color"
+      ]
+    },
+    {
+      "selector": ".calendar-box, .archive-box, .sidebar-box, .live-analytics-widget, .live-analytics-widget .sidebar-box, .blog-post-entry, .comment-body",
+      "classes": [
+        "archive-box",
+        "blog-post-entry",
+        "calendar-box",
+        "comment-body",
+        "live-analytics-widget",
+        "sidebar-box"
+      ],
+      "vars_used": []
+    },
+    {
+      "selector": ".archive-title, .sidebar-box-title",
+      "classes": [
+        "archive-title",
+        "sidebar-box-title"
+      ],
+      "vars_used": []
+    },
+    {
+      "selector": ".archive-empty, .sidebar-box-content, .post-meta, .post-author-line, .comment-text, .comment-time",
+      "classes": [
+        "archive-empty",
+        "comment-text",
+        "comment-time",
+        "post-author-line",
+        "post-meta",
+        "sidebar-box-content"
+      ],
+      "vars_used": [
+        "--body-text-color"
+      ]
+    },
+    {
+      "selector": ".sidebar-box-content, .live-analytics-widget .sidebar-box-content",
+      "classes": [
+        "live-analytics-widget",
+        "sidebar-box-content"
+      ],
+      "vars_used": []
+    },
+    {
+      "selector": ".blog-post-entry",
+      "classes": [
+        "blog-post-entry"
+      ],
+      "vars_used": []
+    },
+    {
+      "selector": ".blog-post-entry hr",
+      "classes": [
+        "blog-post-entry"
+      ],
+      "vars_used": []
+    },
+    {
+      "selector": ".post-author-link, .comment-author a, .post-views, .blog-user-dropdown-toggle, .archive-link, .sidebar-box-content a",
+      "classes": [
+        "archive-link",
+        "blog-user-dropdown-toggle",
+        "comment-author",
+        "post-author-link",
+        "post-views",
+        "sidebar-box-content"
+      ],
+      "vars_used": []
+    },
+    {
+      "selector": ".post-author-link:hover, .comment-author a:hover, .post-views:hover, .blog-user-dropdown-toggle:hover, .archive-link:hover, .sidebar-box-content a:hover",
+      "classes": [
+        "archive-link",
+        "blog-user-dropdown-toggle",
+        "comment-author",
+        "post-author-link",
+        "post-views",
+        "sidebar-box-content"
+      ],
+      "vars_used": []
+    },
+    {
+      "selector": ".calendar-title,.archive-title,.sidebar-box-title",
+      "classes": [
+        "archive-title",
+        "calendar-title",
+        "sidebar-box-title"
+      ],
+      "vars_used": []
+    },
+    {
+      "selector": ".archive-title,.sidebar-box-title",
+      "classes": [
+        "archive-title",
+        "sidebar-box-title"
+      ],
+      "vars_used": []
+    },
+    {
+      "selector": ".archive-empty,.sidebar-box-content",
+      "classes": [
+        "archive-empty",
+        "sidebar-box-content"
+      ],
+      "vars_used": []
+    },
+    {
+      "selector": ".calendar-title,.archive-title,.sidebar-box-title",
+      "classes": [
+        "archive-title",
+        "calendar-title",
+        "sidebar-box-title"
+      ],
+      "vars_used": []
+    },
+    {
+      "selector": ".archive-title,.sidebar-box-title",
+      "classes": [
+        "archive-title",
+        "sidebar-box-title"
+      ],
+      "vars_used": []
+    },
+    {
+      "selector": ".archive-empty,.sidebar-box-content",
+      "classes": [
+        "archive-empty",
+        "sidebar-box-content"
+      ],
+      "vars_used": []
+    },
+    {
+      "selector": ".calendar-title,.archive-title,.sidebar-box-title",
+      "classes": [
+        "archive-title",
+        "calendar-title",
+        "sidebar-box-title"
+      ],
+      "vars_used": []
+    },
+    {
+      "selector": ".archive-title,.sidebar-box-title",
+      "classes": [
+        "archive-title",
+        "sidebar-box-title"
+      ],
+      "vars_used": []
+    },
+    {
+      "selector": ".archive-title::after,.sidebar-box-title::after,.calendar-title::after",
+      "classes": [
+        "archive-title",
+        "calendar-title",
+        "sidebar-box-title"
+      ],
+      "vars_used": []
+    },
+    {
+      "selector": ".archive-empty,.sidebar-box-content",
+      "classes": [
+        "archive-empty",
+        "sidebar-box-content"
+      ],
+      "vars_used": []
+    }
+  ],
+  "hook_hits": {
+    "blog-box": [],
+    "blog-box-content": [],
+    "blog-box-title": [
+      {
+        "line": 86,
+        "context": [
+          "0084: .archive-title,",
+          "0085: .sidebar-box-title,",
+          "0086: .blog-box-title {",
+          "0087:     font-family: var(--box-title-font, Georgia, \"Times New Roman\", serif) !important;",
+          "0088:     color: var(--box-title-color, #3f3128) !important;"
+        ]
+      },
+      {
+        "line": 726,
+        "context": [
+          "0724: .archive-title,",
+          "0725: .sidebar-box-title,",
+          "0726: .blog-box-title {",
+          "0727:     color: var(--box-title-color, #4c5961) !important;",
+          "0728: }"
+        ]
+      },
+      {
+        "line": 1369,
+        "context": [
+          "1367: .archive-title,",
+          "1368: .sidebar-box-title,",
+          "1369: .blog-box-title {",
+          "1370:     color: var(--box-title-color, #d6e6ff) !important;",
+          "1371: }"
+        ]
+      },
+      {
+        "line": 1729,
+        "context": [
+          "1727: .archive-title,",
+          "1728: .sidebar-box-title,",
+          "1729: .blog-box-title {",
+          "1730:     color: var(--box-title-color, #607060) !important;",
+          "1731: }"
+        ]
+      }
+    ],
+    "blog-post-card": [],
+    "blog-post-entry": [
+      {
+        "line": 75,
+        "context": [
+          "0073: }",
+          "0074: ",
+          "0075: .blog-post-entry h4,",
+          "0076: .blog-post-title {",
+          "0077:     font-family: var(--post-title-font, Georgia, \"Times New Roman\", serif) !important;"
+        ]
+      },
+      {
+        "line": 230,
+        "context": [
+          "0228: }",
+          "0229: ",
+          "0230: .blog-posts-shell--wide .blog-post-entry,",
+          "0231: .blog-posts-shell--wide > .page-top-align > p,",
+          "0232: .blog-posts-shell--wide .d-flex.flex-wrap.justify-content-center.align-items-center.gap-2.mt-4.mb-4 {"
+        ]
+      },
+      {
+        "line": 312,
+        "context": [
+          "0310:     }",
+          "0311: ",
+          "0312:     .blog-posts-shell--wide .blog-post-entry,",
+          "0313:     .blog-posts-shell--wide > .page-top-align > p,",
+          "0314:     .blog-posts-shell--wide .d-flex.flex-wrap.justify-content-center.align-items-center.gap-2.mt-4.mb-4 {"
+        ]
+      },
+      {
+        "line": 362,
+        "context": [
+          "0360: }",
+          "0361: ",
+          "0362: .blog-posts-shell--wide .blog-post-entry,",
+          "0363: .blog-posts-shell--wide > .page-top-align > p,",
+          "0364: .blog-posts-shell--wide .d-flex.flex-wrap.justify-content-center.align-items-center.gap-2.mt-4.mb-4 {"
+        ]
+      },
+      {
+        "line": 428,
+        "context": [
+          "0426:     }",
+          "0427: ",
+          "0428:     .blog-posts-shell--wide .blog-post-entry,",
+          "0429:     .blog-posts-shell--wide > .page-top-align > p,",
+          "0430:     .blog-posts-shell--wide .d-flex.flex-wrap.justify-content-center.align-items-center.gap-2.mt-4.mb-4 {"
+        ]
+      },
+      {
+        "line": 639,
+        "context": [
+          "0637: }",
+          "0638: ",
+          "0639: .blog-post-entry {",
+          "0640:     background: {{ blog_preferences.active_design_customization.content_background_color|default:'#fffefb' }};",
+          "0641:     border: 1px solid {{ blog_preferences.active_design_customization.content_border_color|default:'#d9c8ad' }};"
+        ]
+      },
+      {
+        "line": 647,
+        "context": [
+          "0645: }",
+          "0646: ",
+          "0647: .blog-post-entry hr {",
+          "0648:     border-color: #e6ddd1;",
+          "0649: }"
+        ]
+      },
+      {
+        "line": 717,
+        "context": [
+          "0715: }",
+          "0716: ",
+          "0717: .blog-post-entry h4,",
+          "0718: .blog-post-title,",
+          "0719: .blog-post-entry h4 a {"
+        ]
+      },
+      {
+        "line": 719,
+        "context": [
+          "0717: .blog-post-entry h4,",
+          "0718: .blog-post-title,",
+          "0719: .blog-post-entry h4 a {",
+          "0720:     color: var(--post-title-color, #3f7f93) !important;",
+          "0721: }"
+        ]
+      },
+      {
+        "line": 1076,
+        "context": [
+          "1074: }",
+          "1075: ",
+          "1076: .blog-posts-shell--simple-retro .blog-post-entry {",
+          "1077:     background: transparent;",
+          "1078:     border: 0;"
+        ]
+      },
+      {
+        "line": 1086,
+        "context": [
+          "1084: }",
+          "1085: ",
+          "1086: .blog-posts-shell--simple-retro .blog-post-entry:last-child {",
+          "1087:     border-bottom: 0;",
+          "1088:     margin-bottom: 0 !important;"
+        ]
+      },
+      {
+        "line": 1092,
+        "context": [
+          "1090: }",
+          "1091: ",
+          "1092: .blog-posts-shell--simple-retro .blog-post-entry hr {",
+          "1093:     display: none;",
+          "1094: }"
+        ]
+      },
+      {
+        "line": 1097,
+        "context": [
+          "1095: ",
+          "1096: .blog-posts-shell--simple-retro .blog-post-title,",
+          "1097: .blog-posts-shell--simple-retro .blog-post-entry h4,",
+          "1098: .blog-posts-shell--simple-retro .blog-post-entry h4 a {",
+          "1099:     color: var(--post-title-color, #4ca1ae) !important;"
+        ]
+      },
+      {
+        "line": 1098,
+        "context": [
+          "1096: .blog-posts-shell--simple-retro .blog-post-title,",
+          "1097: .blog-posts-shell--simple-retro .blog-post-entry h4,",
+          "1098: .blog-posts-shell--simple-retro .blog-post-entry h4 a {",
+          "1099:     color: var(--post-title-color, #4ca1ae) !important;",
+          "1100: }"
+        ]
+      },
+      {
+        "line": 1360,
+        "context": [
+          "1358: }",
+          "1359: ",
+          "1360: .blog-post-entry h4,",
+          "1361: .blog-post-title,",
+          "1362: .blog-post-entry h4 a {"
+        ]
+      },
+      {
+        "line": 1362,
+        "context": [
+          "1360: .blog-post-entry h4,",
+          "1361: .blog-post-title,",
+          "1362: .blog-post-entry h4 a {",
+          "1363:     color: var(--post-title-color, #f3f8ff) !important;",
+          "1364: }"
+        ]
+      },
+      {
+        "line": 1398,
+        "context": [
+          "1396: .live-analytics-widget,",
+          "1397: .live-analytics-widget .sidebar-box,",
+          "1398: .blog-post-entry,",
+          "1399: .comment-body {",
+          "1400:     background: transparent !important;"
+        ]
+      },
+      {
+        "line": 1548,
+        "context": [
+          "1546: }",
+          "1547: ",
+          "1548: .blog-post-entry {",
+          "1549:     padding: 24px 26px;",
+          "1550: }"
+        ]
+      },
+      {
+        "line": 1552,
+        "context": [
+          "1550: }",
+          "1551: ",
+          "1552: .blog-post-entry hr {",
+          "1553:     border-color: rgba(203,220,255,0.16);",
+          "1554: }"
+        ]
+      },
+      {
+        "line": 1720,
+        "context": [
+          "1718: }",
+          "1719: ",
+          "1720: .blog-post-entry h4,",
+          "1721: .blog-post-title,",
+          "1722: .blog-post-entry h4 a {"
+        ]
+      },
+      {
+        "line": 1722,
+        "context": [
+          "1720: .blog-post-entry h4,",
+          "1721: .blog-post-title,",
+          "1722: .blog-post-entry h4 a {",
+          "1723:     color: var(--post-title-color, #475649) !important;",
+          "1724: }"
+        ]
+      },
+      {
+        "line": 1757,
+        "context": [
+          "1755: .live-analytics-widget,",
+          "1756: .live-analytics-widget .sidebar-box,",
+          "1757: .blog-post-entry,",
+          "1758: .comment-body {",
+          "1759:     background: transparent !important;"
+        ]
+      },
+      {
+        "line": 1909,
+        "context": [
+          "1907: }",
+          "1908: ",
+          "1909: .blog-post-entry {",
+          "1910:     padding: 24px 26px;",
+          "1911: }"
+        ]
+      },
+      {
+        "line": 1913,
+        "context": [
+          "1911: }",
+          "1912: ",
+          "1913: .blog-post-entry hr {",
+          "1914:     border-color: rgba(137,151,138,0.16);",
+          "1915: }"
+        ]
+      }
+    ],
+    "blog-post-title": [
+      {
+        "line": 76,
+        "context": [
+          "0074: ",
+          "0075: .blog-post-entry h4,",
+          "0076: .blog-post-title {",
+          "0077:     font-family: var(--post-title-font, Georgia, \"Times New Roman\", serif) !important;",
+          "0078:     color: var(--post-title-color, #111827) !important;"
+        ]
+      },
+      {
+        "line": 718,
+        "context": [
+          "0716: ",
+          "0717: .blog-post-entry h4,",
+          "0718: .blog-post-title,",
+          "0719: .blog-post-entry h4 a {",
+          "0720:     color: var(--post-title-color, #3f7f93) !important;"
+        ]
+      },
+      {
+        "line": 1096,
+        "context": [
+          "1094: }",
+          "1095: ",
+          "1096: .blog-posts-shell--simple-retro .blog-post-title,",
+          "1097: .blog-posts-shell--simple-retro .blog-post-entry h4,",
+          "1098: .blog-posts-shell--simple-retro .blog-post-entry h4 a {"
+        ]
+      },
+      {
+        "line": 1361,
+        "context": [
+          "1359: ",
+          "1360: .blog-post-entry h4,",
+          "1361: .blog-post-title,",
+          "1362: .blog-post-entry h4 a {",
+          "1363:     color: var(--post-title-color, #f3f8ff) !important;"
+        ]
+      },
+      {
+        "line": 1721,
+        "context": [
+          "1719: ",
+          "1720: .blog-post-entry h4,",
+          "1721: .blog-post-title,",
+          "1722: .blog-post-entry h4 a {",
+          "1723:     color: var(--post-title-color, #475649) !important;"
+        ]
+      }
+    ],
+    "sidebar-box-content": [
+      {
+        "line": 871,
+        "context": [
+          "0869: .comment-text,",
+          "0870: .archive-empty,",
+          "0871: .sidebar-box-content,",
+          "0872: .comment-time {",
+          "0873:     color: var(--body-text-color, #57534e);"
+        ]
+      },
+      {
+        "line": 881,
+        "context": [
+          "0879: ",
+          "0880: ",
+          "0881: .sidebar-box-content {",
+          "0882:     padding: 14px 16px 16px;",
+          "0883:     font-size: 13px;"
+        ]
+      },
+      {
+        "line": 887,
+        "context": [
+          "0885: }",
+          "0886: ",
+          "0887: .sidebar-box-content > :last-child,",
+          "0888: .sidebar-box-content p:last-child {",
+          "0889:     margin-bottom: 0;"
+        ]
+      },
+      {
+        "line": 888,
+        "context": [
+          "0886: ",
+          "0887: .sidebar-box-content > :last-child,",
+          "0888: .sidebar-box-content p:last-child {",
+          "0889:     margin-bottom: 0;",
+          "0890: }"
+        ]
+      },
+      {
+        "line": 892,
+        "context": [
+          "0890: }",
+          "0891: ",
+          "0892: .sidebar-box-content p {",
+          "0893:     margin-bottom: 0.75rem;",
+          "0894: }"
+        ]
+      },
+      {
+        "line": 896,
+        "context": [
+          "0894: }",
+          "0895: ",
+          "0896: .sidebar-box-content img {",
+          "0897:     max-width: 100%;",
+          "0898:     height: auto;"
+        ]
+      },
+      {
+        "line": 902,
+        "context": [
+          "0900: }",
+          "0901: ",
+          "0902: .live-analytics-widget .sidebar-box-content {",
+          "0903:     padding: 14px 16px 16px;",
+          "0904: }"
+        ]
+      },
+      {
+        "line": 1168,
+        "context": [
+          "1166: }",
+          "1167: ",
+          "1168: .blog-main-right-column--simple-retro .sidebar-box-content,",
+          "1169: .blog-main-right-column--simple-retro .archive-list,",
+          "1170: .blog-main-right-column--simple-retro .live-analytics-widget .sidebar-box-content {"
+        ]
+      },
+      {
+        "line": 1170,
+        "context": [
+          "1168: .blog-main-right-column--simple-retro .sidebar-box-content,",
+          "1169: .blog-main-right-column--simple-retro .archive-list,",
+          "1170: .blog-main-right-column--simple-retro .live-analytics-widget .sidebar-box-content {",
+          "1171:     padding: 0 !important;",
+          "1172:     font-size: 13px;"
+        ]
+      },
+      {
+        "line": 1533,
+        "context": [
+          "1531: ",
+          "1532: .archive-empty,",
+          "1533: .sidebar-box-content,",
+          "1534: .post-meta,",
+          "1535: .post-author-line,"
+        ]
+      },
+      {
+        "line": 1541,
+        "context": [
+          "1539: }",
+          "1540: ",
+          "1541: .sidebar-box-content,",
+          "1542: .live-analytics-widget .sidebar-box-content {",
+          "1543:     padding: 14px 16px 16px;"
+        ]
+      },
+      {
+        "line": 1542,
+        "context": [
+          "1540: ",
+          "1541: .sidebar-box-content,",
+          "1542: .live-analytics-widget .sidebar-box-content {",
+          "1543:     padding: 14px 16px 16px;",
+          "1544:     font-size: 13px;"
+        ]
+      },
+      {
+        "line": 1607,
+        "context": [
+          "1605: .blog-user-dropdown-toggle,",
+          "1606: .archive-link,",
+          "1607: .sidebar-box-content a {",
+          "1608:     color: #d6e6ff !important;",
+          "1609: }"
+        ]
+      },
+      {
+        "line": 1616,
+        "context": [
+          "1614: .blog-user-dropdown-toggle:hover,",
+          "1615: .archive-link:hover,",
+          "1616: .sidebar-box-content a:hover {",
+          "1617:     color: #ffffff !important;",
+          "1618: }"
+        ]
+      },
+      {
+        "line": 1894,
+        "context": [
+          "1892: ",
+          "1893: .archive-empty,",
+          "1894: .sidebar-box-content,",
+          "1895: .post-meta,",
+          "1896: .post-author-line,"
+        ]
+      },
+      {
+        "line": 1902,
+        "context": [
+          "1900: }",
+          "1901: ",
+          "1902: .sidebar-box-content,",
+          "1903: .live-analytics-widget .sidebar-box-content {",
+          "1904:     padding: 14px 16px 16px;"
+        ]
+      },
+      {
+        "line": 1903,
+        "context": [
+          "1901: ",
+          "1902: .sidebar-box-content,",
+          "1903: .live-analytics-widget .sidebar-box-content {",
+          "1904:     padding: 14px 16px 16px;",
+          "1905:     font-size: 13px;"
+        ]
+      },
+      {
+        "line": 1976,
+        "context": [
+          "1974: .blog-user-dropdown-toggle,",
+          "1975: .archive-link,",
+          "1976: .sidebar-box-content a {",
+          "1977:     color: #607060 !important;",
+          "1978: }"
+        ]
+      },
+      {
+        "line": 1985,
+        "context": [
+          "1983: .blog-user-dropdown-toggle:hover,",
+          "1984: .archive-link:hover,",
+          "1985: .sidebar-box-content a:hover {",
+          "1986:     color: #445248 !important;",
+          "1987: }"
+        ]
+      },
+      {
+        "line": 2037,
+        "context": [
+          "2035: .archive-link{ color:#ccc; text-decoration:none; font-size:13px; line-height:1.2; padding:6px 8px; border-radius:8px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.06); }",
+          "2036: .archive-link:hover{ color:#fff; border-color:rgba(77,163,255,0.25); box-shadow:0 0 10px rgba(77,163,255,0.10); }",
+          "2037: .archive-empty,.sidebar-box-content{ color:#ccc; font-size:12px; }",
+          "2038: .sidebar-left-align{ margin-left:auto; margin-right:0; }",
+          "2039: .sidebar-right-align{ margin-right:auto; margin-left:0; }"
+        ]
+      },
+      {
+        "line": 2099,
+        "context": [
+          "2097: .archive-link{ color:#444; text-decoration:none; font-size:13px; line-height:1.2; padding:6px 8px; border-radius:8px; background:#ece8df; border:1px solid #d7d0c5; }",
+          "2098: .archive-link:hover{ color:#111; border-color:rgba(122,44,255,0.35); box-shadow:0 0 10px rgba(122,44,255,0.10); }",
+          "2099: .archive-empty,.sidebar-box-content{ color:#444; font-size:12px; }",
+          "2100: .sidebar-left-align{ margin-left:auto; margin-right:0; }",
+          "2101: .sidebar-right-align{ margin-right:auto; margin-left:0; }"
+        ]
+      },
+      {
+        "line": 2162,
+        "context": [
+          "2160: .archive-link{ color:#5f5248; text-decoration:none; font-size:13px; line-height:1.2; padding:6px 8px; border-radius:8px; background:#fbf6ef; border:1px solid #eadccd; }",
+          "2161: .archive-link:hover{ color:#111827; border-color:#d7c5b0; }",
+          "2162: .archive-empty,.sidebar-box-content{ color:#5f5248; font-size:12px; }",
+          "2163: .sidebar-left-align{ margin-left:auto; margin-right:0; }",
+          "2164: .sidebar-right-align{ margin-right:auto; margin-left:0; }"
+        ]
+      }
+    ],
+    "sidebar-box-title": [
+      {
+        "line": 85,
+        "context": [
+          "0083: .calendar-title,",
+          "0084: .archive-title,",
+          "0085: .sidebar-box-title,",
+          "0086: .blog-box-title {",
+          "0087:     font-family: var(--box-title-font, Georgia, \"Times New Roman\", serif) !important;"
+        ]
+      },
+      {
+        "line": 684,
+        "context": [
+          "0682: .calendar-title,",
+          "0683: .archive-title,",
+          "0684: .sidebar-box-title {",
+          "0685:     text-transform: uppercase;",
+          "0686:     letter-spacing: 0.11em;"
+        ]
+      },
+      {
+        "line": 699,
+        "context": [
+          "0697: ",
+          "0698: .archive-title,",
+          "0699: .sidebar-box-title {",
+          "0700:     padding: 14px 16px 12px;",
+          "0701:     margin: 0;"
+        ]
+      },
+      {
+        "line": 708,
+        "context": [
+          "0706: .calendar-title::after,",
+          "0707: .archive-title::after,",
+          "0708: .sidebar-box-title::after {",
+          "0709:     display: none;",
+          "0710: }"
+        ]
+      },
+      {
+        "line": 725,
+        "context": [
+          "0723: .calendar-title,",
+          "0724: .archive-title,",
+          "0725: .sidebar-box-title,",
+          "0726: .blog-box-title {",
+          "0727:     color: var(--box-title-color, #4c5961) !important;"
+        ]
+      },
+      {
+        "line": 1156,
+        "context": [
+          "1154: ",
+          "1155: .blog-main-right-column--simple-retro .archive-title,",
+          "1156: .blog-main-right-column--simple-retro .sidebar-box-title,",
+          "1157: .blog-main-right-column--simple-retro .calendar-title {",
+          "1158:     background: transparent !important;"
+        ]
+      },
+      {
+        "line": 1368,
+        "context": [
+          "1366: .calendar-title,",
+          "1367: .archive-title,",
+          "1368: .sidebar-box-title,",
+          "1369: .blog-box-title {",
+          "1370:     color: var(--box-title-color, #d6e6ff) !important;"
+        ]
+      },
+      {
+        "line": 1445,
+        "context": [
+          "1443: ",
+          "1444: .archive-title,",
+          "1445: .sidebar-box-title {",
+          "1446:     padding: 14px 16px 12px;",
+          "1447:     margin: 0;"
+        ]
+      },
+      {
+        "line": 1728,
+        "context": [
+          "1726: .calendar-title,",
+          "1727: .archive-title,",
+          "1728: .sidebar-box-title,",
+          "1729: .blog-box-title {",
+          "1730:     color: var(--box-title-color, #607060) !important;"
+        ]
+      },
+      {
+        "line": 1804,
+        "context": [
+          "1802: ",
+          "1803: .archive-title,",
+          "1804: .sidebar-box-title {",
+          "1805:     padding: 14px 16px 12px;",
+          "1806:     margin: 0;"
+        ]
+      },
+      {
+        "line": 2025,
+        "context": [
+          "2023: .archive-box{ padding:12px; width:260px; margin-left:auto; }",
+          "2024: .sidebar-box{ padding:12px; width:260px; margin-top:20px; }",
+          "2025: .calendar-title,.archive-title,.sidebar-box-title{ color:#fff; font-weight:700; }",
+          "2026: .calendar-title{ text-align:center; font-size:14px; margin-bottom:10px; letter-spacing:1px; }",
+          "2027: .archive-title,.sidebar-box-title{ font-size:13px; border-bottom:1px solid #333; padding-bottom:6px; margin-bottom:10px; }"
+        ]
+      },
+      {
+        "line": 2027,
+        "context": [
+          "2025: .calendar-title,.archive-title,.sidebar-box-title{ color:#fff; font-weight:700; }",
+          "2026: .calendar-title{ text-align:center; font-size:14px; margin-bottom:10px; letter-spacing:1px; }",
+          "2027: .archive-title,.sidebar-box-title{ font-size:13px; border-bottom:1px solid #333; padding-bottom:6px; margin-bottom:10px; }",
+          "2028: .calendar-weekdays{ display:grid; grid-template-columns:repeat(7,1fr); text-align:center; font-size:11px; color:#777; margin-bottom:8px; }",
+          "2029: .calendar-grid{ display:grid; grid-template-columns:repeat(7,1fr); gap:6px; text-align:center; font-size:12px; }"
+        ]
+      },
+      {
+        "line": 2087,
+        "context": [
+          "2085: .archive-box{ padding:12px; width:260px; margin-left:auto; }",
+          "2086: .sidebar-box{ padding:12px; width:260px; margin-top:20px; }",
+          "2087: .calendar-title,.archive-title,.sidebar-box-title{ color:#111; font-weight:700; }",
+          "2088: .calendar-title{ text-align:center; font-size:14px; margin-bottom:10px; letter-spacing:1px; }",
+          "2089: .archive-title,.sidebar-box-title{ font-size:13px; border-bottom:1px solid #d7d0c5; padding-bottom:6px; margin-bottom:10px; }"
+        ]
+      },
+      {
+        "line": 2089,
+        "context": [
+          "2087: .calendar-title,.archive-title,.sidebar-box-title{ color:#111; font-weight:700; }",
+          "2088: .calendar-title{ text-align:center; font-size:14px; margin-bottom:10px; letter-spacing:1px; }",
+          "2089: .archive-title,.sidebar-box-title{ font-size:13px; border-bottom:1px solid #d7d0c5; padding-bottom:6px; margin-bottom:10px; }",
+          "2090: .calendar-weekdays{ display:grid; grid-template-columns:repeat(7,1fr); text-align:center; font-size:11px; color:#777; margin-bottom:8px; }",
+          "2091: .calendar-grid{ display:grid; grid-template-columns:repeat(7,1fr); gap:6px; text-align:center; font-size:12px; }"
+        ]
+      },
+      {
+        "line": 2149,
+        "context": [
+          "2147: .archive-box{ padding:12px; width:260px; margin-left:auto; }",
+          "2148: .sidebar-box{ padding:12px; width:260px; margin-top:20px; }",
+          "2149: .calendar-title,.archive-title,.sidebar-box-title{ color:#3f3128; font-weight:700; }",
+          "2150: .calendar-title{ text-align:center; font-size:14px; margin-bottom:10px; letter-spacing:1px; }",
+          "2151: .archive-title,.sidebar-box-title{ font-size:13px; padding-bottom:8px; margin-bottom:10px; position:relative; border-bottom:none; }"
+        ]
+      },
+      {
+        "line": 2151,
+        "context": [
+          "2149: .calendar-title,.archive-title,.sidebar-box-title{ color:#3f3128; font-weight:700; }",
+          "2150: .calendar-title{ text-align:center; font-size:14px; margin-bottom:10px; letter-spacing:1px; }",
+          "2151: .archive-title,.sidebar-box-title{ font-size:13px; padding-bottom:8px; margin-bottom:10px; position:relative; border-bottom:none; }",
+          "2152: .archive-title::after,.sidebar-box-title::after,.calendar-title::after{ content:\"\"; display:block; height:2px; width:85%; margin:8px auto 0 auto; background:linear-gradient(90deg,#7a2cff,#ffd200,transparent); border-radius:2px; }",
+          "2153: .calendar-weekdays{ display:grid; grid-template-columns:repeat(7,1fr); text-align:center; font-size:11px; color:#7a6a5c; margin-bottom:8px; }"
+        ]
+      },
+      {
+        "line": 2152,
+        "context": [
+          "2150: .calendar-title{ text-align:center; font-size:14px; margin-bottom:10px; letter-spacing:1px; }",
+          "2151: .archive-title,.sidebar-box-title{ font-size:13px; padding-bottom:8px; margin-bottom:10px; position:relative; border-bottom:none; }",
+          "2152: .archive-title::after,.sidebar-box-title::after,.calendar-title::after{ content:\"\"; display:block; height:2px; width:85%; margin:8px auto 0 auto; background:linear-gradient(90deg,#7a2cff,#ffd200,transparent); border-radius:2px; }",
+          "2153: .calendar-weekdays{ display:grid; grid-template-columns:repeat(7,1fr); text-align:center; font-size:11px; color:#7a6a5c; margin-bottom:8px; }",
+          "2154: .calendar-grid{ display:grid; grid-template-columns:repeat(7,1fr); gap:6px; text-align:center; font-size:12px; }"
+        ]
+      }
+    ]
+  }
+}
