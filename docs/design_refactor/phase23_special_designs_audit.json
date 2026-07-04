@@ -1,0 +1,3363 @@
+{
+  "created_at": "2026-07-04 19:52:49",
+  "root": "C:\\Users\\mario\\blogplatform",
+  "summary": {
+    "total_designs": 42,
+    "groups": {
+      "common_layout_with_custom_bits": 31,
+      "special_full_custom": 11
+    },
+    "risks": {
+      "srednji": 31,
+      "visok": 11
+    },
+    "special_or_partial_count": 11
+  },
+  "designs": [
+    {
+      "name": "asfaltni_plamen",
+      "file": "blog\\templates\\blog\\designs\\asfaltni_plamen.html",
+      "line_count": 372,
+      "uses_common_layout": true,
+      "shared_components": {
+        "blog_posts": true,
+        "post_card": false,
+        "blog_box": false,
+        "left_sidebar": false,
+        "right_sidebar": false,
+        "pagination": false,
+        "interaction_scripts": false
+      },
+      "patterns": {
+        "direct_post_loop": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_title": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_content": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_comments": {
+          "count": 4,
+          "lines": [
+            116,
+            210,
+            239,
+            338
+          ]
+        },
+        "direct_actions": {
+          "count": 0,
+          "lines": []
+        },
+        "sidebar_markup": {
+          "count": 33,
+          "lines": [
+            112,
+            113,
+            114,
+            133,
+            134,
+            135,
+            141,
+            146,
+            147,
+            152,
+            166,
+            167
+          ]
+        },
+        "raw_forms_buttons": {
+          "count": 6,
+          "lines": [
+            249,
+            254,
+            342,
+            343,
+            350,
+            351
+          ]
+        }
+      },
+      "extends_line": 1,
+      "include_lines": [
+        5,
+        371
+      ],
+      "phase23_group": "common_layout_with_custom_bits",
+      "risk": "srednji",
+      "excerpt_line": 112,
+      "excerpt": "0109: }\n0110: \n0111: .blog-post-entry,\n0112: .calendar-box,\n0113: .archive-box,\n0114: .sidebar-box,\n0115: .live-analytics-widget,"
+    },
+    {
+      "name": "carobna_ljubicasta",
+      "file": "blog\\templates\\blog\\designs\\carobna_ljubicasta.html",
+      "line_count": 726,
+      "uses_common_layout": true,
+      "shared_components": {
+        "blog_posts": true,
+        "post_card": false,
+        "blog_box": false,
+        "left_sidebar": false,
+        "right_sidebar": false,
+        "pagination": false,
+        "interaction_scripts": false
+      },
+      "patterns": {
+        "direct_post_loop": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_title": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_content": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_comments": {
+          "count": 10,
+          "lines": [
+            161,
+            244,
+            265,
+            277,
+            592,
+            600,
+            606,
+            611,
+            612,
+            613
+          ]
+        },
+        "direct_actions": {
+          "count": 0,
+          "lines": []
+        },
+        "sidebar_markup": {
+          "count": 51,
+          "lines": [
+            143,
+            144,
+            145,
+            146,
+            155,
+            156,
+            157,
+            159,
+            241,
+            242,
+            243,
+            249
+          ]
+        },
+        "raw_forms_buttons": {
+          "count": 8,
+          "lines": [
+            617,
+            618,
+            626,
+            627,
+            631,
+            632,
+            639,
+            647
+          ]
+        }
+      },
+      "extends_line": 1,
+      "include_lines": [
+        5,
+        725
+      ],
+      "phase23_group": "common_layout_with_custom_bits",
+      "risk": "srednji",
+      "excerpt_line": 143,
+      "excerpt": "0140:     color: var(--post-title-color, #fff1ff) !important;\n0141: }\n0142: \n0143: .calendar-title,\n0144: .archive-title,\n0145: .sidebar-box-title,\n0146: .blog-box-title {"
+    },
+    {
+      "name": "classic",
+      "file": "blog\\templates\\blog\\designs\\classic.html",
+      "line_count": 1,
+      "uses_common_layout": true,
+      "shared_components": {
+        "blog_posts": false,
+        "post_card": false,
+        "blog_box": false,
+        "left_sidebar": false,
+        "right_sidebar": false,
+        "pagination": false,
+        "interaction_scripts": false
+      },
+      "patterns": {
+        "direct_post_loop": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_title": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_content": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_comments": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_actions": {
+          "count": 0,
+          "lines": []
+        },
+        "sidebar_markup": {
+          "count": 0,
+          "lines": []
+        },
+        "raw_forms_buttons": {
+          "count": 0,
+          "lines": []
+        }
+      },
+      "extends_line": 1,
+      "include_lines": [],
+      "phase23_group": "common_layout_with_custom_bits",
+      "risk": "srednji",
+      "excerpt_line": null,
+      "excerpt": ""
+    },
+    {
+      "name": "classic_right",
+      "file": "blog\\templates\\blog\\designs\\classic_right.html",
+      "line_count": 1,
+      "uses_common_layout": true,
+      "shared_components": {
+        "blog_posts": false,
+        "post_card": false,
+        "blog_box": false,
+        "left_sidebar": false,
+        "right_sidebar": false,
+        "pagination": false,
+        "interaction_scripts": false
+      },
+      "patterns": {
+        "direct_post_loop": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_title": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_content": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_comments": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_actions": {
+          "count": 0,
+          "lines": []
+        },
+        "sidebar_markup": {
+          "count": 0,
+          "lines": []
+        },
+        "raw_forms_buttons": {
+          "count": 0,
+          "lines": []
+        }
+      },
+      "extends_line": 1,
+      "include_lines": [],
+      "phase23_group": "common_layout_with_custom_bits",
+      "risk": "srednji",
+      "excerpt_line": null,
+      "excerpt": ""
+    },
+    {
+      "name": "dark",
+      "file": "blog\\templates\\blog\\designs\\dark.html",
+      "line_count": 1,
+      "uses_common_layout": true,
+      "shared_components": {
+        "blog_posts": false,
+        "post_card": false,
+        "blog_box": false,
+        "left_sidebar": false,
+        "right_sidebar": false,
+        "pagination": false,
+        "interaction_scripts": false
+      },
+      "patterns": {
+        "direct_post_loop": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_title": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_content": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_comments": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_actions": {
+          "count": 0,
+          "lines": []
+        },
+        "sidebar_markup": {
+          "count": 0,
+          "lines": []
+        },
+        "raw_forms_buttons": {
+          "count": 0,
+          "lines": []
+        }
+      },
+      "extends_line": 1,
+      "include_lines": [],
+      "phase23_group": "common_layout_with_custom_bits",
+      "risk": "srednji",
+      "excerpt_line": null,
+      "excerpt": ""
+    },
+    {
+      "name": "dark_right",
+      "file": "blog\\templates\\blog\\designs\\dark_right.html",
+      "line_count": 1,
+      "uses_common_layout": true,
+      "shared_components": {
+        "blog_posts": false,
+        "post_card": false,
+        "blog_box": false,
+        "left_sidebar": false,
+        "right_sidebar": false,
+        "pagination": false,
+        "interaction_scripts": false
+      },
+      "patterns": {
+        "direct_post_loop": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_title": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_content": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_comments": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_actions": {
+          "count": 0,
+          "lines": []
+        },
+        "sidebar_markup": {
+          "count": 0,
+          "lines": []
+        },
+        "raw_forms_buttons": {
+          "count": 0,
+          "lines": []
+        }
+      },
+      "extends_line": 1,
+      "include_lines": [],
+      "phase23_group": "common_layout_with_custom_bits",
+      "risk": "srednji",
+      "excerpt_line": null,
+      "excerpt": ""
+    },
+    {
+      "name": "default",
+      "file": "blog\\templates\\blog\\designs\\default.html",
+      "line_count": 1,
+      "uses_common_layout": true,
+      "shared_components": {
+        "blog_posts": false,
+        "post_card": false,
+        "blog_box": false,
+        "left_sidebar": false,
+        "right_sidebar": false,
+        "pagination": false,
+        "interaction_scripts": false
+      },
+      "patterns": {
+        "direct_post_loop": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_title": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_content": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_comments": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_actions": {
+          "count": 0,
+          "lines": []
+        },
+        "sidebar_markup": {
+          "count": 0,
+          "lines": []
+        },
+        "raw_forms_buttons": {
+          "count": 0,
+          "lines": []
+        }
+      },
+      "extends_line": 1,
+      "include_lines": [],
+      "phase23_group": "common_layout_with_custom_bits",
+      "risk": "srednji",
+      "excerpt_line": null,
+      "excerpt": ""
+    },
+    {
+      "name": "default_right",
+      "file": "blog\\templates\\blog\\designs\\default_right.html",
+      "line_count": 1,
+      "uses_common_layout": true,
+      "shared_components": {
+        "blog_posts": false,
+        "post_card": false,
+        "blog_box": false,
+        "left_sidebar": false,
+        "right_sidebar": false,
+        "pagination": false,
+        "interaction_scripts": false
+      },
+      "patterns": {
+        "direct_post_loop": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_title": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_content": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_comments": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_actions": {
+          "count": 0,
+          "lines": []
+        },
+        "sidebar_markup": {
+          "count": 0,
+          "lines": []
+        },
+        "raw_forms_buttons": {
+          "count": 0,
+          "lines": []
+        }
+      },
+      "extends_line": 1,
+      "include_lines": [],
+      "phase23_group": "common_layout_with_custom_bits",
+      "risk": "srednji",
+      "excerpt_line": null,
+      "excerpt": ""
+    },
+    {
+      "name": "dimni_akordi",
+      "file": "blog\\templates\\blog\\designs\\dimni_akordi.html",
+      "line_count": 362,
+      "uses_common_layout": true,
+      "shared_components": {
+        "blog_posts": true,
+        "post_card": false,
+        "blog_box": false,
+        "left_sidebar": false,
+        "right_sidebar": false,
+        "pagination": false,
+        "interaction_scripts": false
+      },
+      "patterns": {
+        "direct_post_loop": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_title": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_content": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_comments": {
+          "count": 4,
+          "lines": [
+            116,
+            210,
+            229,
+            328
+          ]
+        },
+        "direct_actions": {
+          "count": 0,
+          "lines": []
+        },
+        "sidebar_markup": {
+          "count": 33,
+          "lines": [
+            112,
+            113,
+            114,
+            133,
+            134,
+            135,
+            141,
+            146,
+            147,
+            152,
+            166,
+            167
+          ]
+        },
+        "raw_forms_buttons": {
+          "count": 6,
+          "lines": [
+            239,
+            244,
+            332,
+            333,
+            340,
+            341
+          ]
+        }
+      },
+      "extends_line": 1,
+      "include_lines": [
+        5,
+        361
+      ],
+      "phase23_group": "common_layout_with_custom_bits",
+      "risk": "srednji",
+      "excerpt_line": 112,
+      "excerpt": "0109: }\n0110: \n0111: .blog-post-entry,\n0112: .calendar-box,\n0113: .archive-box,\n0114: .sidebar-box,\n0115: .live-analytics-widget,"
+    },
+    {
+      "name": "iznad_oblaka",
+      "file": "blog\\templates\\blog\\designs\\iznad_oblaka.html",
+      "line_count": 497,
+      "uses_common_layout": true,
+      "shared_components": {
+        "blog_posts": true,
+        "post_card": false,
+        "blog_box": false,
+        "left_sidebar": false,
+        "right_sidebar": false,
+        "pagination": false,
+        "interaction_scripts": false
+      },
+      "patterns": {
+        "direct_post_loop": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_title": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_content": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_comments": {
+          "count": 7,
+          "lines": [
+            119,
+            380,
+            388,
+            394,
+            402,
+            403,
+            404
+          ]
+        },
+        "direct_actions": {
+          "count": 0,
+          "lines": []
+        },
+        "sidebar_markup": {
+          "count": 38,
+          "lines": [
+            102,
+            103,
+            104,
+            105,
+            113,
+            114,
+            115,
+            117,
+            128,
+            129,
+            130,
+            136
+          ]
+        },
+        "raw_forms_buttons": {
+          "count": 8,
+          "lines": [
+            408,
+            409,
+            417,
+            418,
+            422,
+            423,
+            430,
+            438
+          ]
+        }
+      },
+      "extends_line": 1,
+      "include_lines": [
+        5,
+        496
+      ],
+      "phase23_group": "common_layout_with_custom_bits",
+      "risk": "srednji",
+      "excerpt_line": 102,
+      "excerpt": "0099:     color: var(--post-title-color, #5a6470) !important;\n0100: }\n0101: \n0102: .calendar-title,\n0103: .archive-title,\n0104: .sidebar-box-title,\n0105: .blog-box-title {"
+    },
+    {
+      "name": "jedro_u_suton",
+      "file": "blog\\templates\\blog\\designs\\jedro_u_suton.html",
+      "line_count": 729,
+      "uses_common_layout": false,
+      "shared_components": {
+        "blog_posts": false,
+        "post_card": false,
+        "blog_box": false,
+        "left_sidebar": false,
+        "right_sidebar": false,
+        "pagination": false,
+        "interaction_scripts": true
+      },
+      "patterns": {
+        "direct_post_loop": {
+          "count": 2,
+          "lines": [
+            606
+          ]
+        },
+        "direct_post_title": {
+          "count": 1,
+          "lines": [
+            611
+          ]
+        },
+        "direct_post_content": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_comments": {
+          "count": 24,
+          "lines": [
+            187,
+            196,
+            412,
+            419,
+            420,
+            430,
+            431,
+            436,
+            440,
+            446,
+            454,
+            461
+          ]
+        },
+        "direct_actions": {
+          "count": 1,
+          "lines": [
+            580
+          ]
+        },
+        "sidebar_markup": {
+          "count": 49,
+          "lines": [
+            188,
+            189,
+            198,
+            199,
+            222,
+            224,
+            278,
+            287,
+            288,
+            295,
+            301,
+            302
+          ]
+        },
+        "raw_forms_buttons": {
+          "count": 12,
+          "lines": [
+            256,
+            262,
+            268,
+            273,
+            397,
+            398,
+            405,
+            406,
+            420,
+            431,
+            631,
+            639
+          ]
+        }
+      },
+      "extends_line": 1,
+      "include_lines": [
+        612,
+        616,
+        619,
+        620,
+        648,
+        697,
+        717,
+        724
+      ],
+      "phase23_group": "special_full_custom",
+      "risk": "visok",
+      "excerpt_line": 606,
+      "excerpt": "0603: \n0604:         <div class=\"jus-layout\">\n0605:             <main class=\"jus-main\">\n0606:                 {% for post in page_obj %}\n0607:                     <article class=\"jus-post\">\n0608:                         <div class=\"jus-post-date\">{{ post.publication_datetime|date:\"d.m.Y\" }}</div>\n0609:                         <div class=\"jus-post-divider\"></div>"
+    },
+    {
+      "name": "kraljevska_pozornica",
+      "file": "blog\\templates\\blog\\designs\\kraljevska_pozornica.html",
+      "line_count": 621,
+      "uses_common_layout": true,
+      "shared_components": {
+        "blog_posts": true,
+        "post_card": false,
+        "blog_box": false,
+        "left_sidebar": false,
+        "right_sidebar": false,
+        "pagination": false,
+        "interaction_scripts": false
+      },
+      "patterns": {
+        "direct_post_loop": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_title": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_content": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_comments": {
+          "count": 10,
+          "lines": [
+            156,
+            236,
+            248,
+            511,
+            515,
+            516,
+            517,
+            521,
+            527,
+            533
+          ]
+        },
+        "direct_actions": {
+          "count": 0,
+          "lines": []
+        },
+        "sidebar_markup": {
+          "count": 41,
+          "lines": [
+            138,
+            139,
+            140,
+            141,
+            150,
+            151,
+            152,
+            154,
+            222,
+            223,
+            224,
+            231
+          ]
+        },
+        "raw_forms_buttons": {
+          "count": 3,
+          "lines": [
+            568,
+            574,
+            575
+          ]
+        }
+      },
+      "extends_line": 1,
+      "include_lines": [
+        5,
+        620
+      ],
+      "phase23_group": "common_layout_with_custom_bits",
+      "risk": "srednji",
+      "excerpt_line": 138,
+      "excerpt": "0135:     color: var(--post-title-color, #fff3e8) !important;\n0136: }\n0137: \n0138: .calendar-title,\n0139: .archive-title,\n0140: .sidebar-box-title,\n0141: .blog-box-title {"
+    },
+    {
+      "name": "litica_noci",
+      "file": "blog\\templates\\blog\\designs\\litica_noci.html",
+      "line_count": 1,
+      "uses_common_layout": true,
+      "shared_components": {
+        "blog_posts": false,
+        "post_card": false,
+        "blog_box": false,
+        "left_sidebar": false,
+        "right_sidebar": false,
+        "pagination": false,
+        "interaction_scripts": false
+      },
+      "patterns": {
+        "direct_post_loop": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_title": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_content": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_comments": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_actions": {
+          "count": 0,
+          "lines": []
+        },
+        "sidebar_markup": {
+          "count": 0,
+          "lines": []
+        },
+        "raw_forms_buttons": {
+          "count": 0,
+          "lines": []
+        }
+      },
+      "extends_line": 1,
+      "include_lines": [],
+      "phase23_group": "common_layout_with_custom_bits",
+      "risk": "srednji",
+      "excerpt_line": null,
+      "excerpt": ""
+    },
+    {
+      "name": "magazin",
+      "file": "blog\\templates\\blog\\designs\\magazin.html",
+      "line_count": 729,
+      "uses_common_layout": false,
+      "shared_components": {
+        "blog_posts": false,
+        "post_card": false,
+        "blog_box": false,
+        "left_sidebar": false,
+        "right_sidebar": false,
+        "pagination": false,
+        "interaction_scripts": true
+      },
+      "patterns": {
+        "direct_post_loop": {
+          "count": 2,
+          "lines": [
+            675
+          ]
+        },
+        "direct_post_title": {
+          "count": 1,
+          "lines": [
+            679
+          ]
+        },
+        "direct_post_content": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_comments": {
+          "count": 6,
+          "lines": [
+            601,
+            602,
+            604,
+            608,
+            708
+          ]
+        },
+        "direct_actions": {
+          "count": 1,
+          "lines": [
+            670
+          ]
+        },
+        "sidebar_markup": {
+          "count": 52,
+          "lines": [
+            88,
+            90,
+            91,
+            92,
+            95,
+            96,
+            99,
+            104,
+            106,
+            109,
+            119,
+            121
+          ]
+        },
+        "raw_forms_buttons": {
+          "count": 16,
+          "lines": [
+            22,
+            24,
+            43,
+            45,
+            50,
+            52,
+            58,
+            60,
+            67,
+            69,
+            613,
+            619
+          ]
+        }
+      },
+      "extends_line": 1,
+      "include_lines": [
+        134,
+        147,
+        160,
+        680,
+        704,
+        707,
+        708,
+        728
+      ],
+      "phase23_group": "special_full_custom",
+      "risk": "visok",
+      "excerpt_line": 675,
+      "excerpt": "0672:     </div>\n0673: \n0674:     <div class=\"magazin-posts-wrap\">\n0675:         {% for post in page_obj %}\n0676:             <article class=\"magazin-post-entry\">\n0677:                 <div class=\"d-flex justify-content-between align-items-start gap-3\">\n0678:                     <div class=\"d-flex flex-column\" style=\"gap:10px; min-width:0; flex:1;\">"
+    },
+    {
+      "name": "misticno_jezero",
+      "file": "blog\\templates\\blog\\designs\\misticno_jezero.html",
+      "line_count": 735,
+      "uses_common_layout": false,
+      "shared_components": {
+        "blog_posts": false,
+        "post_card": false,
+        "blog_box": false,
+        "left_sidebar": false,
+        "right_sidebar": false,
+        "pagination": false,
+        "interaction_scripts": true
+      },
+      "patterns": {
+        "direct_post_loop": {
+          "count": 2,
+          "lines": [
+            613
+          ]
+        },
+        "direct_post_title": {
+          "count": 1,
+          "lines": [
+            618
+          ]
+        },
+        "direct_post_content": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_comments": {
+          "count": 25,
+          "lines": [
+            422,
+            429,
+            430,
+            440,
+            441,
+            446,
+            447,
+            451,
+            455,
+            461,
+            470,
+            477
+          ]
+        },
+        "direct_actions": {
+          "count": 2,
+          "lines": [
+            418,
+            588
+          ]
+        },
+        "sidebar_markup": {
+          "count": 46,
+          "lines": [
+            244,
+            246,
+            255,
+            264,
+            265,
+            272,
+            278,
+            279,
+            288,
+            295,
+            301,
+            306
+          ]
+        },
+        "raw_forms_buttons": {
+          "count": 11,
+          "lines": [
+            222,
+            228,
+            234,
+            239,
+            401,
+            408,
+            430,
+            441,
+            447,
+            638,
+            646
+          ]
+        }
+      },
+      "extends_line": 1,
+      "include_lines": [
+        619,
+        623,
+        626,
+        627,
+        655,
+        704,
+        724,
+        730
+      ],
+      "phase23_group": "special_full_custom",
+      "risk": "visok",
+      "excerpt_line": 613,
+      "excerpt": "0610:             </div>\n0611:             {% endif %}\n0612: \n0613:             {% for post in page_obj %}\n0614:                 <article class=\"mj-post\">\n0615:                     <div class=\"mj-post-date\">{{ post.publication_datetime|date:\"d.m.Y\" }}</div>\n0616:                     <div class=\"mj-post-divider\"></div>"
+    },
+    {
+      "name": "mjesecev_ples",
+      "file": "blog\\templates\\blog\\designs\\mjesecev_ples.html",
+      "line_count": 380,
+      "uses_common_layout": true,
+      "shared_components": {
+        "blog_posts": true,
+        "post_card": false,
+        "blog_box": false,
+        "left_sidebar": false,
+        "right_sidebar": false,
+        "pagination": false,
+        "interaction_scripts": false
+      },
+      "patterns": {
+        "direct_post_loop": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_title": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_content": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_comments": {
+          "count": 9,
+          "lines": [
+            116,
+            210,
+            239,
+            338,
+            342,
+            343,
+            344,
+            345,
+            346
+          ]
+        },
+        "direct_actions": {
+          "count": 0,
+          "lines": []
+        },
+        "sidebar_markup": {
+          "count": 33,
+          "lines": [
+            112,
+            113,
+            114,
+            133,
+            134,
+            135,
+            141,
+            146,
+            147,
+            152,
+            166,
+            167
+          ]
+        },
+        "raw_forms_buttons": {
+          "count": 6,
+          "lines": [
+            249,
+            254,
+            350,
+            351,
+            358,
+            359
+          ]
+        }
+      },
+      "extends_line": 1,
+      "include_lines": [
+        5,
+        379
+      ],
+      "phase23_group": "common_layout_with_custom_bits",
+      "risk": "srednji",
+      "excerpt_line": 112,
+      "excerpt": "0109: }\n0110: \n0111: .blog-post-entry,\n0112: .calendar-box,\n0113: .archive-box,\n0114: .sidebar-box,\n0115: .live-analytics-widget,"
+    },
+    {
+      "name": "morski_prijelaz",
+      "file": "blog\\templates\\blog\\designs\\morski_prijelaz.html",
+      "line_count": 472,
+      "uses_common_layout": true,
+      "shared_components": {
+        "blog_posts": true,
+        "post_card": false,
+        "blog_box": false,
+        "left_sidebar": false,
+        "right_sidebar": false,
+        "pagination": false,
+        "interaction_scripts": false
+      },
+      "patterns": {
+        "direct_post_loop": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_title": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_content": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_comments": {
+          "count": 5,
+          "lines": [
+            168,
+            305,
+            306,
+            325,
+            381
+          ]
+        },
+        "direct_actions": {
+          "count": 0,
+          "lines": []
+        },
+        "sidebar_markup": {
+          "count": 40,
+          "lines": [
+            135,
+            136,
+            137,
+            138,
+            162,
+            163,
+            164,
+            166,
+            176,
+            177,
+            178,
+            184
+          ]
+        },
+        "raw_forms_buttons": {
+          "count": 5,
+          "lines": [
+            329,
+            336,
+            348,
+            354,
+            382
+          ]
+        }
+      },
+      "extends_line": 1,
+      "include_lines": [
+        5,
+        471
+      ],
+      "phase23_group": "common_layout_with_custom_bits",
+      "risk": "srednji",
+      "excerpt_line": 135,
+      "excerpt": "0132:         color: var(--post-title-color, #eef5ff) !important;\n0133:     }\n0134: \n0135:     .calendar-title,\n0136:     .archive-title,\n0137:     .sidebar-box-title,\n0138:     .blog-box-title {"
+    },
+    {
+      "name": "nebeska_klasika",
+      "file": "blog\\templates\\blog\\designs\\nebeska_klasika.html",
+      "line_count": 696,
+      "uses_common_layout": false,
+      "shared_components": {
+        "blog_posts": false,
+        "post_card": false,
+        "blog_box": false,
+        "left_sidebar": false,
+        "right_sidebar": false,
+        "pagination": false,
+        "interaction_scripts": true
+      },
+      "patterns": {
+        "direct_post_loop": {
+          "count": 2,
+          "lines": [
+            574
+          ]
+        },
+        "direct_post_title": {
+          "count": 1,
+          "lines": [
+            579
+          ]
+        },
+        "direct_post_content": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_comments": {
+          "count": 23,
+          "lines": [
+            384,
+            391,
+            392,
+            402,
+            403,
+            408,
+            412,
+            418,
+            426,
+            433,
+            438,
+            443
+          ]
+        },
+        "direct_actions": {
+          "count": 1,
+          "lines": [
+            549
+          ]
+        },
+        "sidebar_markup": {
+          "count": 47,
+          "lines": [
+            221,
+            223,
+            232,
+            241,
+            242,
+            249,
+            255,
+            256,
+            265,
+            272,
+            278,
+            283
+          ]
+        },
+        "raw_forms_buttons": {
+          "count": 8,
+          "lines": [
+            211,
+            216,
+            371,
+            378,
+            392,
+            403,
+            599,
+            607
+          ]
+        }
+      },
+      "extends_line": 1,
+      "include_lines": [
+        580,
+        584,
+        587,
+        588,
+        616,
+        665,
+        685,
+        691
+      ],
+      "phase23_group": "special_full_custom",
+      "risk": "visok",
+      "excerpt_line": 574,
+      "excerpt": "0571:             </div>\n0572:             {% endif %}\n0573: \n0574:             {% for post in page_obj %}\n0575:                 <article class=\"nk-post\">\n0576:                     <div class=\"nk-post-date\">{{ post.publication_datetime|date:\"d.m.Y\" }}</div>\n0577:                     <div class=\"nk-post-divider\"></div>"
+    },
+    {
+      "name": "nebeski_mir",
+      "file": "blog\\templates\\blog\\designs\\nebeski_mir.html",
+      "line_count": 407,
+      "uses_common_layout": true,
+      "shared_components": {
+        "blog_posts": true,
+        "post_card": false,
+        "blog_box": false,
+        "left_sidebar": false,
+        "right_sidebar": false,
+        "pagination": false,
+        "interaction_scripts": false
+      },
+      "patterns": {
+        "direct_post_loop": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_title": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_content": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_comments": {
+          "count": 6,
+          "lines": [
+            122,
+            271,
+            272,
+            291,
+            365,
+            374
+          ]
+        },
+        "direct_actions": {
+          "count": 0,
+          "lines": []
+        },
+        "sidebar_markup": {
+          "count": 42,
+          "lines": [
+            89,
+            90,
+            91,
+            92,
+            116,
+            117,
+            118,
+            120,
+            130,
+            131,
+            132,
+            138
+          ]
+        },
+        "raw_forms_buttons": {
+          "count": 4,
+          "lines": [
+            295,
+            302,
+            314,
+            321
+          ]
+        }
+      },
+      "extends_line": 1,
+      "include_lines": [
+        5,
+        405
+      ],
+      "phase23_group": "common_layout_with_custom_bits",
+      "risk": "srednji",
+      "excerpt_line": 89,
+      "excerpt": "0086:     color: var(--post-title-color, #25354d) !important;\n0087: }\n0088: \n0089: .calendar-title,\n0090: .archive-title,\n0091: .sidebar-box-title,\n0092: .blog-box-title {"
+    },
+    {
+      "name": "nebesko_polje",
+      "file": "blog\\templates\\blog\\designs\\nebesko_polje.html",
+      "line_count": 671,
+      "uses_common_layout": true,
+      "shared_components": {
+        "blog_posts": true,
+        "post_card": false,
+        "blog_box": false,
+        "left_sidebar": false,
+        "right_sidebar": false,
+        "pagination": false,
+        "interaction_scripts": false
+      },
+      "patterns": {
+        "direct_post_loop": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_title": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_content": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_comments": {
+          "count": 23,
+          "lines": [
+            194,
+            212,
+            315,
+            316,
+            317,
+            325,
+            326,
+            327,
+            447,
+            456,
+            463,
+            468
+          ]
+        },
+        "direct_actions": {
+          "count": 0,
+          "lines": []
+        },
+        "sidebar_markup": {
+          "count": 43,
+          "lines": [
+            171,
+            172,
+            173,
+            174,
+            187,
+            188,
+            189,
+            191,
+            201,
+            202,
+            203,
+            205
+          ]
+        },
+        "raw_forms_buttons": {
+          "count": 4,
+          "lines": [
+            467,
+            469,
+            478,
+            480
+          ]
+        }
+      },
+      "extends_line": 1,
+      "include_lines": [
+        7,
+        13,
+        670
+      ],
+      "phase23_group": "common_layout_with_custom_bits",
+      "risk": "srednji",
+      "excerpt_line": 171,
+      "excerpt": "0168:     color: var(--post-title-color, #525d69) !important;\n0169: }\n0170: \n0171: .calendar-title,\n0172: .archive-title,\n0173: .sidebar-box-title,\n0174: .blog-box-title {"
+    },
+    {
+      "name": "neonski_grad",
+      "file": "blog\\templates\\blog\\designs\\neonski_grad.html",
+      "line_count": 540,
+      "uses_common_layout": true,
+      "shared_components": {
+        "blog_posts": true,
+        "post_card": false,
+        "blog_box": false,
+        "left_sidebar": false,
+        "right_sidebar": false,
+        "pagination": false,
+        "interaction_scripts": false
+      },
+      "patterns": {
+        "direct_post_loop": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_title": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_content": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_comments": {
+          "count": 7,
+          "lines": [
+            122,
+            388,
+            396,
+            402,
+            406,
+            407,
+            408
+          ]
+        },
+        "direct_actions": {
+          "count": 0,
+          "lines": []
+        },
+        "sidebar_markup": {
+          "count": 38,
+          "lines": [
+            104,
+            105,
+            106,
+            107,
+            116,
+            117,
+            118,
+            120,
+            132,
+            133,
+            134,
+            141
+          ]
+        },
+        "raw_forms_buttons": {
+          "count": 11,
+          "lines": [
+            412,
+            413,
+            421,
+            422,
+            426,
+            427,
+            434,
+            442,
+            472,
+            479,
+            485
+          ]
+        }
+      },
+      "extends_line": 1,
+      "include_lines": [
+        5,
+        539
+      ],
+      "phase23_group": "common_layout_with_custom_bits",
+      "risk": "srednji",
+      "excerpt_line": 104,
+      "excerpt": "0101:     color: var(--post-title-color, #fff8ff) !important;\n0102: }\n0103: \n0104: .calendar-title,\n0105: .archive-title,\n0106: .sidebar-box-title,\n0107: .blog-box-title {"
+    },
+    {
+      "name": "planine_u_magli",
+      "file": "blog\\templates\\blog\\designs\\planine_u_magli.html",
+      "line_count": 414,
+      "uses_common_layout": true,
+      "shared_components": {
+        "blog_posts": true,
+        "post_card": false,
+        "blog_box": false,
+        "left_sidebar": false,
+        "right_sidebar": false,
+        "pagination": false,
+        "interaction_scripts": false
+      },
+      "patterns": {
+        "direct_post_loop": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_title": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_content": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_comments": {
+          "count": 6,
+          "lines": [
+            120,
+            278,
+            279,
+            298,
+            373,
+            382
+          ]
+        },
+        "direct_actions": {
+          "count": 0,
+          "lines": []
+        },
+        "sidebar_markup": {
+          "count": 43,
+          "lines": [
+            88,
+            89,
+            90,
+            91,
+            114,
+            115,
+            116,
+            118,
+            128,
+            129,
+            130,
+            136
+          ]
+        },
+        "raw_forms_buttons": {
+          "count": 4,
+          "lines": [
+            303,
+            310,
+            322,
+            329
+          ]
+        }
+      },
+      "extends_line": 1,
+      "include_lines": [
+        5,
+        413
+      ],
+      "phase23_group": "common_layout_with_custom_bits",
+      "risk": "srednji",
+      "excerpt_line": 88,
+      "excerpt": "0085:     color: var(--post-title-color, #617181) !important;\n0086: }\n0087: \n0088: .calendar-title,\n0089: .archive-title,\n0090: .sidebar-box-title,\n0091: .blog-box-title {"
+    },
+    {
+      "name": "podvodna_tisina",
+      "file": "blog\\templates\\blog\\designs\\podvodna_tisina.html",
+      "line_count": 380,
+      "uses_common_layout": true,
+      "shared_components": {
+        "blog_posts": true,
+        "post_card": false,
+        "blog_box": false,
+        "left_sidebar": false,
+        "right_sidebar": false,
+        "pagination": false,
+        "interaction_scripts": false
+      },
+      "patterns": {
+        "direct_post_loop": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_title": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_content": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_comments": {
+          "count": 5,
+          "lines": [
+            119,
+            256,
+            257,
+            276,
+            332
+          ]
+        },
+        "direct_actions": {
+          "count": 0,
+          "lines": []
+        },
+        "sidebar_markup": {
+          "count": 40,
+          "lines": [
+            86,
+            87,
+            88,
+            89,
+            113,
+            114,
+            115,
+            117,
+            127,
+            128,
+            129,
+            135
+          ]
+        },
+        "raw_forms_buttons": {
+          "count": 5,
+          "lines": [
+            280,
+            287,
+            299,
+            305,
+            333
+          ]
+        }
+      },
+      "extends_line": 1,
+      "include_lines": [
+        5,
+        379
+      ],
+      "phase23_group": "common_layout_with_custom_bits",
+      "risk": "srednji",
+      "excerpt_line": 86,
+      "excerpt": "0083:         color: var(--post-title-color, #eef5ff) !important;\n0084:     }\n0085: \n0086:     .calendar-title,\n0087:     .archive-title,\n0088:     .sidebar-box-title,\n0089:     .blog-box-title {"
+    },
+    {
+      "name": "polarna_svjetlost",
+      "file": "blog\\templates\\blog\\designs\\polarna_svjetlost.html",
+      "line_count": 501,
+      "uses_common_layout": true,
+      "shared_components": {
+        "blog_posts": true,
+        "post_card": false,
+        "blog_box": false,
+        "left_sidebar": false,
+        "right_sidebar": false,
+        "pagination": false,
+        "interaction_scripts": false
+      },
+      "patterns": {
+        "direct_post_loop": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_title": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_content": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_comments": {
+          "count": 7,
+          "lines": [
+            119,
+            378,
+            386,
+            392,
+            400,
+            401,
+            402
+          ]
+        },
+        "direct_actions": {
+          "count": 0,
+          "lines": []
+        },
+        "sidebar_markup": {
+          "count": 38,
+          "lines": [
+            102,
+            103,
+            104,
+            105,
+            113,
+            114,
+            115,
+            117,
+            127,
+            128,
+            129,
+            135
+          ]
+        },
+        "raw_forms_buttons": {
+          "count": 8,
+          "lines": [
+            406,
+            407,
+            415,
+            416,
+            420,
+            421,
+            428,
+            436
+          ]
+        }
+      },
+      "extends_line": 1,
+      "include_lines": [
+        5,
+        500
+      ],
+      "phase23_group": "common_layout_with_custom_bits",
+      "risk": "srednji",
+      "excerpt_line": 102,
+      "excerpt": "0099:     color: var(--post-title-color, #f2fbff) !important;\n0100: }\n0101: \n0102: .calendar-title,\n0103: .archive-title,\n0104: .sidebar-box-title,\n0105: .blog-box-title {"
+    },
+    {
+      "name": "polje_lavande",
+      "file": "blog\\templates\\blog\\designs\\polje_lavande.html",
+      "line_count": 598,
+      "uses_common_layout": true,
+      "shared_components": {
+        "blog_posts": true,
+        "post_card": false,
+        "blog_box": false,
+        "left_sidebar": false,
+        "right_sidebar": false,
+        "pagination": false,
+        "interaction_scripts": false
+      },
+      "patterns": {
+        "direct_post_loop": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_title": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_content": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_comments": {
+          "count": 8,
+          "lines": [
+            119,
+            203,
+            483,
+            491,
+            497,
+            502,
+            503,
+            504
+          ]
+        },
+        "direct_actions": {
+          "count": 0,
+          "lines": []
+        },
+        "sidebar_markup": {
+          "count": 45,
+          "lines": [
+            102,
+            103,
+            104,
+            105,
+            113,
+            114,
+            115,
+            117,
+            200,
+            201,
+            202,
+            208
+          ]
+        },
+        "raw_forms_buttons": {
+          "count": 8,
+          "lines": [
+            508,
+            509,
+            517,
+            518,
+            522,
+            523,
+            530,
+            538
+          ]
+        }
+      },
+      "extends_line": 1,
+      "include_lines": [
+        5,
+        597
+      ],
+      "phase23_group": "common_layout_with_custom_bits",
+      "risk": "srednji",
+      "excerpt_line": 102,
+      "excerpt": "0099:     color: var(--post-title-color, #4a235f) !important;\n0100: }\n0101: \n0102: .calendar-title,\n0103: .archive-title,\n0104: .sidebar-box-title,\n0105: .blog-box-title {"
+    },
+    {
+      "name": "ponocna_elegancija",
+      "file": "blog\\templates\\blog\\designs\\ponocna_elegancija.html",
+      "line_count": 723,
+      "uses_common_layout": false,
+      "shared_components": {
+        "blog_posts": false,
+        "post_card": false,
+        "blog_box": false,
+        "left_sidebar": false,
+        "right_sidebar": false,
+        "pagination": false,
+        "interaction_scripts": true
+      },
+      "patterns": {
+        "direct_post_loop": {
+          "count": 2,
+          "lines": [
+            601
+          ]
+        },
+        "direct_post_title": {
+          "count": 1,
+          "lines": [
+            606
+          ]
+        },
+        "direct_post_content": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_comments": {
+          "count": 25,
+          "lines": [
+            411,
+            418,
+            419,
+            429,
+            430,
+            435,
+            436,
+            440,
+            444,
+            450,
+            458,
+            465
+          ]
+        },
+        "direct_actions": {
+          "count": 1,
+          "lines": [
+            576
+          ]
+        },
+        "sidebar_markup": {
+          "count": 46,
+          "lines": [
+            242,
+            244,
+            253,
+            262,
+            263,
+            270,
+            276,
+            277,
+            286,
+            293,
+            299,
+            304
+          ]
+        },
+        "raw_forms_buttons": {
+          "count": 11,
+          "lines": [
+            220,
+            226,
+            232,
+            237,
+            398,
+            405,
+            419,
+            430,
+            436,
+            626,
+            634
+          ]
+        }
+      },
+      "extends_line": 1,
+      "include_lines": [
+        607,
+        611,
+        614,
+        615,
+        643,
+        692,
+        712,
+        718
+      ],
+      "phase23_group": "special_full_custom",
+      "risk": "visok",
+      "excerpt_line": 601,
+      "excerpt": "0598:             </div>\n0599:             {% endif %}\n0600: \n0601:             {% for post in page_obj %}\n0602:                 <article class=\"pe-post\">\n0603:                     <div class=\"pe-post-date\">{{ post.publication_datetime|date:\"d.m.Y\" }}</div>\n0604:                     <div class=\"pe-post-divider\"></div>"
+    },
+    {
+      "name": "ruzicasti_vrt",
+      "file": "blog\\templates\\blog\\designs\\ruzicasti_vrt.html",
+      "line_count": 725,
+      "uses_common_layout": false,
+      "shared_components": {
+        "blog_posts": false,
+        "post_card": false,
+        "blog_box": false,
+        "left_sidebar": false,
+        "right_sidebar": false,
+        "pagination": false,
+        "interaction_scripts": true
+      },
+      "patterns": {
+        "direct_post_loop": {
+          "count": 2,
+          "lines": [
+            603
+          ]
+        },
+        "direct_post_title": {
+          "count": 1,
+          "lines": [
+            608
+          ]
+        },
+        "direct_post_content": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_comments": {
+          "count": 25,
+          "lines": [
+            412,
+            419,
+            420,
+            430,
+            431,
+            436,
+            437,
+            441,
+            445,
+            451,
+            460,
+            467
+          ]
+        },
+        "direct_actions": {
+          "count": 1,
+          "lines": [
+            578
+          ]
+        },
+        "sidebar_markup": {
+          "count": 46,
+          "lines": [
+            242,
+            244,
+            253,
+            262,
+            263,
+            270,
+            276,
+            277,
+            286,
+            293,
+            299,
+            304
+          ]
+        },
+        "raw_forms_buttons": {
+          "count": 11,
+          "lines": [
+            221,
+            227,
+            232,
+            237,
+            399,
+            406,
+            420,
+            431,
+            437,
+            628,
+            636
+          ]
+        }
+      },
+      "extends_line": 1,
+      "include_lines": [
+        609,
+        613,
+        616,
+        617,
+        645,
+        694,
+        714,
+        720
+      ],
+      "phase23_group": "special_full_custom",
+      "risk": "visok",
+      "excerpt_line": 603,
+      "excerpt": "0600:             </div>\n0601:             {% endif %}\n0602: \n0603:             {% for post in page_obj %}\n0604:                 <article class=\"rv-post\">\n0605:                     <div class=\"rv-post-date\">{{ post.publication_datetime|date:\"d.m.Y\" }}</div>\n0606:                     <div class=\"rv-post-divider\"></div>"
+    },
+    {
+      "name": "simple",
+      "file": "blog\\templates\\blog\\designs\\simple.html",
+      "line_count": 1,
+      "uses_common_layout": true,
+      "shared_components": {
+        "blog_posts": false,
+        "post_card": false,
+        "blog_box": false,
+        "left_sidebar": false,
+        "right_sidebar": false,
+        "pagination": false,
+        "interaction_scripts": false
+      },
+      "patterns": {
+        "direct_post_loop": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_title": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_content": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_comments": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_actions": {
+          "count": 0,
+          "lines": []
+        },
+        "sidebar_markup": {
+          "count": 0,
+          "lines": []
+        },
+        "raw_forms_buttons": {
+          "count": 0,
+          "lines": []
+        }
+      },
+      "extends_line": 1,
+      "include_lines": [],
+      "phase23_group": "common_layout_with_custom_bits",
+      "risk": "srednji",
+      "excerpt_line": null,
+      "excerpt": ""
+    },
+    {
+      "name": "simple_image",
+      "file": "blog\\templates\\blog\\designs\\simple_image.html",
+      "line_count": 1,
+      "uses_common_layout": true,
+      "shared_components": {
+        "blog_posts": false,
+        "post_card": false,
+        "blog_box": false,
+        "left_sidebar": false,
+        "right_sidebar": false,
+        "pagination": false,
+        "interaction_scripts": false
+      },
+      "patterns": {
+        "direct_post_loop": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_title": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_content": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_comments": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_actions": {
+          "count": 0,
+          "lines": []
+        },
+        "sidebar_markup": {
+          "count": 0,
+          "lines": []
+        },
+        "raw_forms_buttons": {
+          "count": 0,
+          "lines": []
+        }
+      },
+      "extends_line": 1,
+      "include_lines": [],
+      "phase23_group": "common_layout_with_custom_bits",
+      "risk": "srednji",
+      "excerpt_line": null,
+      "excerpt": ""
+    },
+    {
+      "name": "simple_pattern",
+      "file": "blog\\templates\\blog\\designs\\simple_pattern.html",
+      "line_count": 1,
+      "uses_common_layout": true,
+      "shared_components": {
+        "blog_posts": false,
+        "post_card": false,
+        "blog_box": false,
+        "left_sidebar": false,
+        "right_sidebar": false,
+        "pagination": false,
+        "interaction_scripts": false
+      },
+      "patterns": {
+        "direct_post_loop": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_title": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_content": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_comments": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_actions": {
+          "count": 0,
+          "lines": []
+        },
+        "sidebar_markup": {
+          "count": 0,
+          "lines": []
+        },
+        "raw_forms_buttons": {
+          "count": 0,
+          "lines": []
+        }
+      },
+      "extends_line": 1,
+      "include_lines": [],
+      "phase23_group": "common_layout_with_custom_bits",
+      "risk": "srednji",
+      "excerpt_line": null,
+      "excerpt": ""
+    },
+    {
+      "name": "simple_retro",
+      "file": "blog\\templates\\blog\\designs\\simple_retro.html",
+      "line_count": 1,
+      "uses_common_layout": true,
+      "shared_components": {
+        "blog_posts": false,
+        "post_card": false,
+        "blog_box": false,
+        "left_sidebar": false,
+        "right_sidebar": false,
+        "pagination": false,
+        "interaction_scripts": false
+      },
+      "patterns": {
+        "direct_post_loop": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_title": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_content": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_comments": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_actions": {
+          "count": 0,
+          "lines": []
+        },
+        "sidebar_markup": {
+          "count": 0,
+          "lines": []
+        },
+        "raw_forms_buttons": {
+          "count": 0,
+          "lines": []
+        }
+      },
+      "extends_line": 1,
+      "include_lines": [],
+      "phase23_group": "common_layout_with_custom_bits",
+      "risk": "srednji",
+      "excerpt_line": null,
+      "excerpt": ""
+    },
+    {
+      "name": "sjene_ulice",
+      "file": "blog\\templates\\blog\\designs\\sjene_ulice.html",
+      "line_count": 381,
+      "uses_common_layout": true,
+      "shared_components": {
+        "blog_posts": true,
+        "post_card": false,
+        "blog_box": false,
+        "left_sidebar": false,
+        "right_sidebar": false,
+        "pagination": false,
+        "interaction_scripts": false
+      },
+      "patterns": {
+        "direct_post_loop": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_title": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_content": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_comments": {
+          "count": 20,
+          "lines": [
+            116,
+            210,
+            229,
+            324,
+            357,
+            358,
+            359,
+            360,
+            361,
+            362,
+            367,
+            368
+          ]
+        },
+        "direct_actions": {
+          "count": 0,
+          "lines": []
+        },
+        "sidebar_markup": {
+          "count": 32,
+          "lines": [
+            112,
+            113,
+            114,
+            133,
+            134,
+            135,
+            141,
+            146,
+            147,
+            152,
+            166,
+            167
+          ]
+        },
+        "raw_forms_buttons": {
+          "count": 6,
+          "lines": [
+            239,
+            244,
+            328,
+            329,
+            336,
+            337
+          ]
+        }
+      },
+      "extends_line": 1,
+      "include_lines": [
+        5,
+        380
+      ],
+      "phase23_group": "common_layout_with_custom_bits",
+      "risk": "srednji",
+      "excerpt_line": 112,
+      "excerpt": "0109: }\n0110: \n0111: .blog-post-entry,\n0112: .calendar-box,\n0113: .archive-box,\n0114: .sidebar-box,\n0115: .live-analytics-widget,"
+    },
+    {
+      "name": "stara_aleja",
+      "file": "blog\\templates\\blog\\designs\\stara_aleja.html",
+      "line_count": 734,
+      "uses_common_layout": false,
+      "shared_components": {
+        "blog_posts": false,
+        "post_card": false,
+        "blog_box": false,
+        "left_sidebar": false,
+        "right_sidebar": false,
+        "pagination": false,
+        "interaction_scripts": true
+      },
+      "patterns": {
+        "direct_post_loop": {
+          "count": 2,
+          "lines": [
+            611
+          ]
+        },
+        "direct_post_title": {
+          "count": 1,
+          "lines": [
+            616
+          ]
+        },
+        "direct_post_content": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_comments": {
+          "count": 24,
+          "lines": [
+            196,
+            203,
+            417,
+            424,
+            425,
+            435,
+            436,
+            441,
+            445,
+            451,
+            459,
+            466
+          ]
+        },
+        "direct_actions": {
+          "count": 1,
+          "lines": [
+            585
+          ]
+        },
+        "sidebar_markup": {
+          "count": 50,
+          "lines": [
+            197,
+            198,
+            205,
+            206,
+            227,
+            229,
+            283,
+            292,
+            293,
+            300,
+            306,
+            307
+          ]
+        },
+        "raw_forms_buttons": {
+          "count": 12,
+          "lines": [
+            261,
+            267,
+            273,
+            278,
+            402,
+            403,
+            410,
+            411,
+            425,
+            436,
+            636,
+            644
+          ]
+        }
+      },
+      "extends_line": 1,
+      "include_lines": [
+        617,
+        621,
+        624,
+        625,
+        653,
+        702,
+        722,
+        729
+      ],
+      "phase23_group": "special_full_custom",
+      "risk": "visok",
+      "excerpt_line": 611,
+      "excerpt": "0608: \n0609:         <div class=\"sa-layout\">\n0610:             <main class=\"sa-main\">\n0611:                 {% for post in page_obj %}\n0612:                     <article class=\"sa-post\">\n0613:                         <div class=\"sa-post-date\">{{ post.publication_datetime|date:\"d.m.Y\" }}</div>\n0614:                         <div class=\"sa-post-divider\"></div>"
+    },
+    {
+      "name": "staza_prema_vrhovima",
+      "file": "blog\\templates\\blog\\designs\\staza_prema_vrhovima.html",
+      "line_count": 682,
+      "uses_common_layout": false,
+      "shared_components": {
+        "blog_posts": false,
+        "post_card": false,
+        "blog_box": false,
+        "left_sidebar": false,
+        "right_sidebar": false,
+        "pagination": false,
+        "interaction_scripts": true
+      },
+      "patterns": {
+        "direct_post_loop": {
+          "count": 2,
+          "lines": [
+            560
+          ]
+        },
+        "direct_post_title": {
+          "count": 1,
+          "lines": [
+            565
+          ]
+        },
+        "direct_post_content": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_comments": {
+          "count": 26,
+          "lines": [
+            160,
+            169,
+            376,
+            383,
+            384,
+            394,
+            395,
+            400,
+            401,
+            405,
+            409,
+            415
+          ]
+        },
+        "direct_actions": {
+          "count": 1,
+          "lines": [
+            537
+          ]
+        },
+        "sidebar_markup": {
+          "count": 48,
+          "lines": [
+            161,
+            162,
+            171,
+            172,
+            189,
+            191,
+            242,
+            251,
+            252,
+            259,
+            265,
+            266
+          ]
+        },
+        "raw_forms_buttons": {
+          "count": 11,
+          "lines": [
+            220,
+            226,
+            232,
+            237,
+            363,
+            370,
+            384,
+            395,
+            401,
+            585,
+            593
+          ]
+        }
+      },
+      "extends_line": 1,
+      "include_lines": [
+        566,
+        570,
+        573,
+        574,
+        602,
+        651,
+        671,
+        677
+      ],
+      "phase23_group": "special_full_custom",
+      "risk": "visok",
+      "excerpt_line": 560,
+      "excerpt": "0557:             </div>\n0558:             {% endif %}\n0559: \n0560:             {% for post in page_obj %}\n0561:                 <article class=\"spv-post\">\n0562:                     <div class=\"spv-post-date\">{{ post.publication_datetime|date:\"d.m.Y\" }}</div>\n0563:                     <div class=\"spv-post-divider\"></div>"
+    },
+    {
+      "name": "studio",
+      "file": "blog\\templates\\blog\\designs\\studio.html",
+      "line_count": 718,
+      "uses_common_layout": false,
+      "shared_components": {
+        "blog_posts": false,
+        "post_card": false,
+        "blog_box": false,
+        "left_sidebar": false,
+        "right_sidebar": false,
+        "pagination": false,
+        "interaction_scripts": true
+      },
+      "patterns": {
+        "direct_post_loop": {
+          "count": 2,
+          "lines": [
+            664
+          ]
+        },
+        "direct_post_title": {
+          "count": 1,
+          "lines": [
+            668
+          ]
+        },
+        "direct_post_content": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_comments": {
+          "count": 6,
+          "lines": [
+            582,
+            583,
+            585,
+            589,
+            697
+          ]
+        },
+        "direct_actions": {
+          "count": 1,
+          "lines": [
+            650
+          ]
+        },
+        "sidebar_markup": {
+          "count": 52,
+          "lines": [
+            91,
+            93,
+            94,
+            95,
+            98,
+            99,
+            102,
+            107,
+            109,
+            112,
+            122,
+            124
+          ]
+        },
+        "raw_forms_buttons": {
+          "count": 16,
+          "lines": [
+            27,
+            29,
+            48,
+            50,
+            55,
+            57,
+            63,
+            65,
+            72,
+            74,
+            594,
+            600
+          ]
+        }
+      },
+      "extends_line": 1,
+      "include_lines": [
+        137,
+        150,
+        163,
+        669,
+        693,
+        696,
+        697,
+        717
+      ],
+      "phase23_group": "special_full_custom",
+      "risk": "visok",
+      "excerpt_line": 664,
+      "excerpt": "0661:     </div>\n0662: \n0663:     <div class=\"soho-posts-wrap\">\n0664:         {% for post in page_obj %}\n0665:             <article class=\"soho-post-entry\">\n0666:                 <div class=\"d-flex justify-content-between align-items-start gap-3\">\n0667:                     <div class=\"d-flex flex-column\" style=\"gap:10px; min-width:0; flex:1;\">"
+    },
+    {
+      "name": "sumska_svjetlost",
+      "file": "blog\\templates\\blog\\designs\\sumska_svjetlost.html",
+      "line_count": 506,
+      "uses_common_layout": true,
+      "shared_components": {
+        "blog_posts": true,
+        "post_card": false,
+        "blog_box": false,
+        "left_sidebar": false,
+        "right_sidebar": false,
+        "pagination": false,
+        "interaction_scripts": false
+      },
+      "patterns": {
+        "direct_post_loop": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_title": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_content": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_comments": {
+          "count": 7,
+          "lines": [
+            127,
+            389,
+            397,
+            403,
+            411,
+            412,
+            413
+          ]
+        },
+        "direct_actions": {
+          "count": 0,
+          "lines": []
+        },
+        "sidebar_markup": {
+          "count": 38,
+          "lines": [
+            102,
+            103,
+            104,
+            105,
+            113,
+            122,
+            123,
+            125,
+            134,
+            135,
+            136,
+            142
+          ]
+        },
+        "raw_forms_buttons": {
+          "count": 8,
+          "lines": [
+            417,
+            418,
+            426,
+            427,
+            431,
+            432,
+            439,
+            447
+          ]
+        }
+      },
+      "extends_line": 1,
+      "include_lines": [
+        5,
+        505
+      ],
+      "phase23_group": "common_layout_with_custom_bits",
+      "risk": "srednji",
+      "excerpt_line": 102,
+      "excerpt": "0099:     color: var(--post-title-color, #53604b) !important;\n0100: }\n0101: \n0102: .calendar-title,\n0103: .archive-title,\n0104: .sidebar-box-title,\n0105: .blog-box-title {"
+    },
+    {
+      "name": "svemirski_horizont",
+      "file": "blog\\templates\\blog\\designs\\svemirski_horizont.html",
+      "line_count": 501,
+      "uses_common_layout": true,
+      "shared_components": {
+        "blog_posts": true,
+        "post_card": false,
+        "blog_box": false,
+        "left_sidebar": false,
+        "right_sidebar": false,
+        "pagination": false,
+        "interaction_scripts": false
+      },
+      "patterns": {
+        "direct_post_loop": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_title": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_content": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_comments": {
+          "count": 7,
+          "lines": [
+            119,
+            378,
+            386,
+            392,
+            400,
+            401,
+            402
+          ]
+        },
+        "direct_actions": {
+          "count": 0,
+          "lines": []
+        },
+        "sidebar_markup": {
+          "count": 38,
+          "lines": [
+            102,
+            103,
+            104,
+            105,
+            113,
+            114,
+            115,
+            117,
+            127,
+            128,
+            129,
+            135
+          ]
+        },
+        "raw_forms_buttons": {
+          "count": 8,
+          "lines": [
+            406,
+            407,
+            415,
+            416,
+            420,
+            421,
+            428,
+            436
+          ]
+        }
+      },
+      "extends_line": 1,
+      "include_lines": [
+        5,
+        500
+      ],
+      "phase23_group": "common_layout_with_custom_bits",
+      "risk": "srednji",
+      "excerpt_line": 102,
+      "excerpt": "0099:     color: var(--post-title-color, #f3f8ff) !important;\n0100: }\n0101: \n0102: .calendar-title,\n0103: .archive-title,\n0104: .sidebar-box-title,\n0105: .blog-box-title {"
+    },
+    {
+      "name": "vecer_uz_jezero",
+      "file": "blog\\templates\\blog\\designs\\vecer_uz_jezero.html",
+      "line_count": 725,
+      "uses_common_layout": false,
+      "shared_components": {
+        "blog_posts": false,
+        "post_card": false,
+        "blog_box": false,
+        "left_sidebar": false,
+        "right_sidebar": false,
+        "pagination": false,
+        "interaction_scripts": true
+      },
+      "patterns": {
+        "direct_post_loop": {
+          "count": 2,
+          "lines": [
+            603
+          ]
+        },
+        "direct_post_title": {
+          "count": 1,
+          "lines": [
+            608
+          ]
+        },
+        "direct_post_content": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_comments": {
+          "count": 25,
+          "lines": [
+            412,
+            419,
+            420,
+            430,
+            431,
+            436,
+            437,
+            441,
+            445,
+            451,
+            460,
+            467
+          ]
+        },
+        "direct_actions": {
+          "count": 1,
+          "lines": [
+            578
+          ]
+        },
+        "sidebar_markup": {
+          "count": 46,
+          "lines": [
+            242,
+            244,
+            253,
+            262,
+            263,
+            270,
+            276,
+            277,
+            286,
+            293,
+            299,
+            304
+          ]
+        },
+        "raw_forms_buttons": {
+          "count": 11,
+          "lines": [
+            220,
+            226,
+            232,
+            237,
+            399,
+            406,
+            420,
+            431,
+            437,
+            628,
+            636
+          ]
+        }
+      },
+      "extends_line": 1,
+      "include_lines": [
+        609,
+        613,
+        616,
+        617,
+        645,
+        694,
+        714,
+        720
+      ],
+      "phase23_group": "special_full_custom",
+      "risk": "visok",
+      "excerpt_line": 603,
+      "excerpt": "0600:             </div>\n0601:             {% endif %}\n0602: \n0603:             {% for post in page_obj %}\n0604:                 <article class=\"vj-post\">\n0605:                     <div class=\"vj-post-date\">{{ post.publication_datetime|date:\"d.m.Y\" }}</div>\n0606:                     <div class=\"vj-post-divider\"></div>"
+    },
+    {
+      "name": "vecer_zaljubljenih",
+      "file": "blog\\templates\\blog\\designs\\vecer_zaljubljenih.html",
+      "line_count": 724,
+      "uses_common_layout": false,
+      "shared_components": {
+        "blog_posts": false,
+        "post_card": false,
+        "blog_box": false,
+        "left_sidebar": false,
+        "right_sidebar": false,
+        "pagination": false,
+        "interaction_scripts": false
+      },
+      "patterns": {
+        "direct_post_loop": {
+          "count": 2,
+          "lines": [
+            617
+          ]
+        },
+        "direct_post_title": {
+          "count": 1,
+          "lines": [
+            622
+          ]
+        },
+        "direct_post_content": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_comments": {
+          "count": 25,
+          "lines": [
+            426,
+            433,
+            434,
+            444,
+            445,
+            450,
+            451,
+            455,
+            459,
+            465,
+            474,
+            481
+          ]
+        },
+        "direct_actions": {
+          "count": 1,
+          "lines": [
+            592
+          ]
+        },
+        "sidebar_markup": {
+          "count": 46,
+          "lines": [
+            256,
+            258,
+            267,
+            276,
+            277,
+            284,
+            290,
+            291,
+            300,
+            307,
+            313,
+            318
+          ]
+        },
+        "raw_forms_buttons": {
+          "count": 11,
+          "lines": [
+            234,
+            240,
+            246,
+            251,
+            413,
+            420,
+            434,
+            445,
+            451,
+            642,
+            650
+          ]
+        }
+      },
+      "extends_line": 1,
+      "include_lines": [
+        623,
+        627,
+        630,
+        631,
+        659
+      ],
+      "phase23_group": "special_full_custom",
+      "risk": "visok",
+      "excerpt_line": 617,
+      "excerpt": "0614:             </div>\n0615:             {% endif %}\n0616: \n0617:             {% for post in page_obj %}\n0618:                 <article class=\"vz-post\">\n0619:                     <div class=\"vz-post-date\">{{ post.publication_datetime|date:\"d.m.Y\" }}</div>\n0620:                     <div class=\"vz-post-divider\"></div>"
+    },
+    {
+      "name": "vodopad_u_magli",
+      "file": "blog\\templates\\blog\\designs\\vodopad_u_magli.html",
+      "line_count": 383,
+      "uses_common_layout": true,
+      "shared_components": {
+        "blog_posts": true,
+        "post_card": false,
+        "blog_box": false,
+        "left_sidebar": false,
+        "right_sidebar": false,
+        "pagination": false,
+        "interaction_scripts": false
+      },
+      "patterns": {
+        "direct_post_loop": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_title": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_content": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_comments": {
+          "count": 6,
+          "lines": [
+            118,
+            265,
+            266,
+            286,
+            342,
+            351
+          ]
+        },
+        "direct_actions": {
+          "count": 0,
+          "lines": []
+        },
+        "sidebar_markup": {
+          "count": 39,
+          "lines": [
+            86,
+            87,
+            88,
+            89,
+            112,
+            113,
+            114,
+            116,
+            126,
+            127,
+            128,
+            134
+          ]
+        },
+        "raw_forms_buttons": {
+          "count": 4,
+          "lines": [
+            290,
+            297,
+            309,
+            316
+          ]
+        }
+      },
+      "extends_line": 1,
+      "include_lines": [
+        5,
+        382
+      ],
+      "phase23_group": "common_layout_with_custom_bits",
+      "risk": "srednji",
+      "excerpt_line": 86,
+      "excerpt": "0083:     color: var(--post-title-color, #41503c) !important;\n0084: }\n0085: \n0086: .calendar-title,\n0087: .archive-title,\n0088: .sidebar-box-title,\n0089: .blog-box-title {"
+    },
+    {
+      "name": "zlatni_horizont",
+      "file": "blog\\templates\\blog\\designs\\zlatni_horizont.html",
+      "line_count": 501,
+      "uses_common_layout": true,
+      "shared_components": {
+        "blog_posts": true,
+        "post_card": false,
+        "blog_box": false,
+        "left_sidebar": false,
+        "right_sidebar": false,
+        "pagination": false,
+        "interaction_scripts": false
+      },
+      "patterns": {
+        "direct_post_loop": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_title": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_content": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_comments": {
+          "count": 7,
+          "lines": [
+            119,
+            378,
+            386,
+            392,
+            400,
+            401,
+            402
+          ]
+        },
+        "direct_actions": {
+          "count": 0,
+          "lines": []
+        },
+        "sidebar_markup": {
+          "count": 38,
+          "lines": [
+            102,
+            103,
+            104,
+            105,
+            113,
+            114,
+            115,
+            117,
+            127,
+            128,
+            129,
+            135
+          ]
+        },
+        "raw_forms_buttons": {
+          "count": 8,
+          "lines": [
+            406,
+            407,
+            415,
+            416,
+            420,
+            421,
+            428,
+            436
+          ]
+        }
+      },
+      "extends_line": 1,
+      "include_lines": [
+        5,
+        500
+      ],
+      "phase23_group": "common_layout_with_custom_bits",
+      "risk": "srednji",
+      "excerpt_line": 102,
+      "excerpt": "0099:     color: var(--post-title-color, #fff1e3) !important;\n0100: }\n0101: \n0102: .calendar-title,\n0103: .archive-title,\n0104: .sidebar-box-title,\n0105: .blog-box-title {"
+    },
+    {
+      "name": "zlatno_polje",
+      "file": "blog\\templates\\blog\\designs\\zlatno_polje.html",
+      "line_count": 536,
+      "uses_common_layout": true,
+      "shared_components": {
+        "blog_posts": true,
+        "post_card": false,
+        "blog_box": false,
+        "left_sidebar": false,
+        "right_sidebar": false,
+        "pagination": false,
+        "interaction_scripts": false
+      },
+      "patterns": {
+        "direct_post_loop": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_title": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_post_content": {
+          "count": 0,
+          "lines": []
+        },
+        "direct_comments": {
+          "count": 7,
+          "lines": [
+            137,
+            398,
+            406,
+            412,
+            420,
+            421,
+            422
+          ]
+        },
+        "direct_actions": {
+          "count": 0,
+          "lines": []
+        },
+        "sidebar_markup": {
+          "count": 38,
+          "lines": [
+            120,
+            121,
+            122,
+            123,
+            131,
+            132,
+            133,
+            135,
+            145,
+            146,
+            147,
+            153
+          ]
+        },
+        "raw_forms_buttons": {
+          "count": 8,
+          "lines": [
+            426,
+            427,
+            435,
+            436,
+            440,
+            441,
+            448,
+            456
+          ]
+        }
+      },
+      "extends_line": 1,
+      "include_lines": [
+        5,
+        535
+      ],
+      "phase23_group": "common_layout_with_custom_bits",
+      "risk": "srednji",
+      "excerpt_line": 120,
+      "excerpt": "0117:     color: var(--post-title-color, #4b2d05) !important;\n0118: }\n0119: \n0120: .calendar-title,\n0121: .archive-title,\n0122: .sidebar-box-title,\n0123: .blog-box-title {"
+    }
+  ]
+}
