@@ -1,0 +1,13 @@
+{
+  "changes": [
+    {
+      "file": "blog\\templates\\blog\\components\\post_card.html",
+      "change": "Dodane stabilne hook klase za post card/naslov posta."
+    },
+    {
+      "file": "blog\\templates\\blog\\components\\blog_box.html",
+      "change": "Dodane stabilne hook klase za blog box/naslov/sadržaj."
+    }
+  ],
+  "backup": "_backup_design_refactor_phase21_customization_hooks_20260704_090342"
+}

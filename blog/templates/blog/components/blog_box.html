@@ -4,7 +4,7 @@ Očekuje:
 - box
 - box_align: sidebar-left-align ili sidebar-right-align
 {% endcomment %}
-<div class="sidebar-box {{ box_align|default:'sidebar-left-align' }}{% if blog.profile.template == 'simple_pattern' or blog.profile.template == 'simple_image' or blog.profile.template == 'simple_retro' %} sidebar-box--simple{% endif %}">
-    <div class="sidebar-box-title">{{ box.title }}</div>
-    <div class="sidebar-box-content">{{ box.content|safe }}</div>
+<div class="sidebar-box {{ box_align|default:'sidebar-left-align' }}{% if blog.profile.template == 'simple_pattern' or blog.profile.template == 'simple_image' or blog.profile.template == 'simple_retro' %} sidebar-box--simple{% endif %} blog-box">
+    <div class="sidebar-box-title blog-box-title">{{ box.title }}</div>
+    <div class="sidebar-box-content blog-box-content">{{ box.content|safe }}</div>
 </div>
