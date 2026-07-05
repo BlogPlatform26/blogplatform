@@ -1,0 +1,1285 @@
+{
+  "created_at": "2026-07-05 11:59:48",
+  "file": "C:\\Users\\mario\\blogplatform\\blog\\templates\\blog\\designs\\magazin.html",
+  "line_count": 729,
+  "existing_components": {
+    "post_card": true,
+    "blog_posts": true,
+    "blog_box": true,
+    "blog_left_sidebar": true,
+    "blog_right_sidebar": true,
+    "post_actions": true,
+    "post_comments": true,
+    "blog_interaction_scripts": true
+  },
+  "include_names": [
+    {
+      "line": 134,
+      "template": "blog/components/live_analytics_widget.html"
+    },
+    {
+      "line": 147,
+      "template": "blog/components/live_analytics_widget.html"
+    },
+    {
+      "line": 160,
+      "template": "blog/components/live_analytics_widget.html"
+    },
+    {
+      "line": 680,
+      "template": "blog/components/post_meta.html"
+    },
+    {
+      "line": 704,
+      "template": "blog/components/post_body.html"
+    },
+    {
+      "line": 707,
+      "template": "blog/components/post_actions.html"
+    },
+    {
+      "line": 708,
+      "template": "blog/components/post_comments.html"
+    },
+    {
+      "line": 728,
+      "template": "blog/components/blog_interaction_scripts.html"
+    }
+  ],
+  "hit_counts": {
+    "page_obj_loop": 1,
+    "article_post_entry": 1,
+    "post_title": 4,
+    "post_content": 2,
+    "comments": 5,
+    "actions": 2,
+    "sidebar": 157,
+    "forms_buttons": 16,
+    "shared_includes": 8
+  },
+  "hits": {
+    "page_obj_loop": [
+      {
+        "line": 675,
+        "match": "{% for post in page_obj %}",
+        "start": 21771,
+        "end": 21797
+      }
+    ],
+    "article_post_entry": [
+      {
+        "line": 676,
+        "match": "<article class=\"magazin-post-entry\"",
+        "start": 21810,
+        "end": 21845
+      }
+    ],
+    "post_title": [
+      {
+        "line": 179,
+        "match": "magazin-post-title",
+        "start": 9758,
+        "end": 9776
+      },
+      {
+        "line": 580,
+        "match": "blog-post-title",
+        "start": 19303,
+        "end": 19318
+      },
+      {
+        "line": 581,
+        "match": "magazin-post-title",
+        "start": 19338,
+        "end": 19356
+      },
+      {
+        "line": 679,
+        "match": "post.title",
+        "start": 22068,
+        "end": 22078
+      }
+    ],
+    "post_content": [
+      {
+        "line": 141,
+        "match": "safe",
+        "start": 7825,
+        "end": 7829
+      },
+      {
+        "line": 154,
+        "match": "safe",
+        "start": 8414,
+        "end": 8418
+      }
+    ],
+    "comments": [
+      {
+        "line": 601,
+        "match": "comment",
+        "start": 19723,
+        "end": 19730
+      },
+      {
+        "line": 602,
+        "match": "comment",
+        "start": 19738,
+        "end": 19745
+      },
+      {
+        "line": 604,
+        "match": "comment",
+        "start": 19775,
+        "end": 19782
+      },
+      {
+        "line": 608,
+        "match": "comment",
+        "start": 19826,
+        "end": 19833
+      },
+      {
+        "line": 708,
+        "match": "post_comments",
+        "start": 24160,
+        "end": 24173
+      }
+    ],
+    "actions": [
+      {
+        "line": 670,
+        "match": "share",
+        "start": 21644,
+        "end": 21649
+      },
+      {
+        "line": 707,
+        "match": "post_actions",
+        "start": 24094,
+        "end": 24106
+      }
+    ],
+    "sidebar": [
+      {
+        "line": 6,
+        "match": "sidebar",
+        "start": 115,
+        "end": 122
+      },
+      {
+        "line": 7,
+        "match": "sidebar",
+        "start": 146,
+        "end": 153
+      },
+      {
+        "line": 8,
+        "match": "sidebar",
+        "start": 180,
+        "end": 187
+      },
+      {
+        "line": 88,
+        "match": "archive",
+        "start": 4432,
+        "end": 4439
+      },
+      {
+        "line": 88,
+        "match": "archive",
+        "start": 4480,
+        "end": 4487
+      },
+      {
+        "line": 88,
+        "match": "calendar",
+        "start": 4497,
+        "end": 4505
+      },
+      {
+        "line": 89,
+        "match": "sidebar",
+        "start": 4542,
+        "end": 4549
+      },
+      {
+        "line": 90,
+        "match": "Kalendar",
+        "start": 4607,
+        "end": 4615
+      },
+      {
+        "line": 91,
+        "match": "calendar",
+        "start": 4654,
+        "end": 4662
+      },
+      {
+        "line": 91,
+        "match": "calendar",
+        "start": 4669,
+        "end": 4677
+      },
+      {
+        "line": 91,
+        "match": "calendar",
+        "start": 4727,
+        "end": 4735
+      },
+      {
+        "line": 91,
+        "match": "calendar",
+        "start": 4892,
+        "end": 4900
+      },
+      {
+        "line": 92,
+        "match": "calendar",
+        "start": 4996,
+        "end": 5004
+      },
+      {
+        "line": 95,
+        "match": "calendar",
+        "start": 5168,
+        "end": 5176
+      },
+      {
+        "line": 96,
+        "match": "calendar",
+        "start": 5221,
+        "end": 5229
+      },
+      {
+        "line": 99,
+        "match": "calendar",
+        "start": 5365,
+        "end": 5373
+      },
+      {
+        "line": 104,
+        "match": "calendar",
+        "start": 5705,
+        "end": 5713
+      },
+      {
+        "line": 104,
+        "match": "calendar",
+        "start": 5726,
+        "end": 5734
+      },
+      {
+        "line": 104,
+        "match": "calendar",
+        "start": 5784,
+        "end": 5792
+      },
+      {
+        "line": 106,
+        "match": "archive",
+        "start": 5929,
+        "end": 5936
+      },
+      {
+        "line": 106,
+        "match": "calendar",
+        "start": 6033,
+        "end": 6041
+      },
+      {
+        "line": 106,
+        "match": "calendar",
+        "start": 6054,
+        "end": 6062
+      },
+      {
+        "line": 106,
+        "match": "calendar",
+        "start": 6112,
+        "end": 6120
+      },
+      {
+        "line": 109,
+        "match": "calendar",
+        "start": 6305,
+        "end": 6313
+      },
+      {
+        "line": 109,
+        "match": "calendar",
+        "start": 6353,
+        "end": 6361
+      },
+      {
+        "line": 119,
+        "match": "archive",
+        "start": 6680,
+        "end": 6687
+      },
+      {
+        "line": 119,
+        "match": "archive",
+        "start": 6728,
+        "end": 6735
+      },
+      {
+        "line": 120,
+        "match": "sidebar",
+        "start": 6786,
+        "end": 6793
+      },
+      {
+        "line": 121,
+        "match": "Arhiva",
+        "start": 6851,
+        "end": 6857
+      },
+      {
+        "line": 122,
+        "match": "archive",
+        "start": 6896,
+        "end": 6903
+      },
+      {
+        "line": 123,
+        "match": "archive",
+        "start": 6939,
+        "end": 6946
+      },
+      {
+        "line": 124,
+        "match": "archive",
+        "start": 6989,
+        "end": 6996
+      },
+      {
+        "line": 124,
+        "match": "archive",
+        "start": 7012,
+        "end": 7019
+      },
+      {
+        "line": 132,
+        "match": "analytics",
+        "start": 7324,
+        "end": 7333
+      },
+      {
+        "line": 133,
+        "match": "sidebar",
+        "start": 7395,
+        "end": 7402
+      },
+      {
+        "line": 134,
+        "match": "analytics",
+        "start": 7458,
+        "end": 7467
+      },
+      {
+        "line": 134,
+        "match": "analytics",
+        "start": 7486,
+        "end": 7495
+      },
+      {
+        "line": 134,
+        "match": "sidebar",
+        "start": 7510,
+        "end": 7517
+      },
+      {
+        "line": 138,
+        "match": "box",
+        "start": 7588,
+        "end": 7591
+      },
+      {
+        "line": 138,
+        "match": "box",
+        "start": 7600,
+        "end": 7603
+      },
+      {
+        "line": 139,
+        "match": "sidebar",
+        "start": 7641,
+        "end": 7648
+      },
+      {
+        "line": 139,
+        "match": "sidebar",
+        "start": 7665,
+        "end": 7672
+      },
+      {
+        "line": 139,
+        "match": "box",
+        "start": 7682,
+        "end": 7685
+      },
+      {
+        "line": 140,
+        "match": "box",
+        "start": 7738,
+        "end": 7741
+      },
+      {
+        "line": 141,
+        "match": "sidebar",
+        "start": 7789,
+        "end": 7796
+      },
+      {
+        "line": 141,
+        "match": "box",
+        "start": 7797,
+        "end": 7800
+      },
+      {
+        "line": 141,
+        "match": "box",
+        "start": 7813,
+        "end": 7816
+      },
+      {
+        "line": 145,
+        "match": "analytics",
+        "start": 7911,
+        "end": 7920
+      },
+      {
+        "line": 146,
+        "match": "sidebar",
+        "start": 7983,
+        "end": 7990
+      },
+      {
+        "line": 147,
+        "match": "analytics",
+        "start": 8046,
+        "end": 8055
+      },
+      {
+        "line": 147,
+        "match": "analytics",
+        "start": 8074,
+        "end": 8083
+      },
+      {
+        "line": 147,
+        "match": "sidebar",
+        "start": 8098,
+        "end": 8105
+      },
+      {
+        "line": 151,
+        "match": "box",
+        "start": 8176,
+        "end": 8179
+      },
+      {
+        "line": 151,
+        "match": "box",
+        "start": 8189,
+        "end": 8192
+      },
+      {
+        "line": 152,
+        "match": "sidebar",
+        "start": 8230,
+        "end": 8237
+      },
+      {
+        "line": 152,
+        "match": "sidebar",
+        "start": 8254,
+        "end": 8261
+      },
+      {
+        "line": 152,
+        "match": "box",
+        "start": 8271,
+        "end": 8274
+      },
+      {
+        "line": 153,
+        "match": "box",
+        "start": 8327,
+        "end": 8330
+      },
+      {
+        "line": 154,
+        "match": "sidebar",
+        "start": 8378,
+        "end": 8385
+      },
+      {
+        "line": 154,
+        "match": "box",
+        "start": 8386,
+        "end": 8389
+      },
+      {
+        "line": 154,
+        "match": "box",
+        "start": 8402,
+        "end": 8405
+      },
+      {
+        "line": 158,
+        "match": "analytics",
+        "start": 8500,
+        "end": 8509
+      },
+      {
+        "line": 158,
+        "match": "analytics",
+        "start": 8559,
+        "end": 8568
+      },
+      {
+        "line": 159,
+        "match": "sidebar",
+        "start": 8634,
+        "end": 8641
+      },
+      {
+        "line": 160,
+        "match": "analytics",
+        "start": 8697,
+        "end": 8706
+      },
+      {
+        "line": 160,
+        "match": "analytics",
+        "start": 8725,
+        "end": 8734
+      },
+      {
+        "line": 160,
+        "match": "sidebar",
+        "start": 8749,
+        "end": 8756
+      },
+      {
+        "line": 167,
+        "match": "sidebar",
+        "start": 8860,
+        "end": 8867
+      },
+      {
+        "line": 173,
+        "match": "sidebar",
+        "start": 9054,
+        "end": 9061
+      },
+      {
+        "line": 176,
+        "match": "box",
+        "start": 9478,
+        "end": 9481
+      },
+      {
+        "line": 177,
+        "match": "box",
+        "start": 9599,
+        "end": 9602
+      },
+      {
+        "line": 180,
+        "match": "box",
+        "start": 9879,
+        "end": 9882
+      },
+      {
+        "line": 180,
+        "match": "box",
+        "start": 9938,
+        "end": 9941
+      },
+      {
+        "line": 185,
+        "match": "box",
+        "start": 10485,
+        "end": 10488
+      },
+      {
+        "line": 185,
+        "match": "box",
+        "start": 10543,
+        "end": 10546
+      },
+      {
+        "line": 241,
+        "match": "sidebar",
+        "start": 11939,
+        "end": 11946
+      },
+      {
+        "line": 261,
+        "match": "sidebar",
+        "start": 12345,
+        "end": 12352
+      },
+      {
+        "line": 263,
+        "match": "sidebar",
+        "start": 12407,
+        "end": 12414
+      },
+      {
+        "line": 266,
+        "match": "sidebar",
+        "start": 12432,
+        "end": 12439
+      },
+      {
+        "line": 283,
+        "match": "box",
+        "start": 12749,
+        "end": 12752
+      },
+      {
+        "line": 295,
+        "match": "box",
+        "start": 12990,
+        "end": 12993
+      },
+      {
+        "line": 296,
+        "match": "box",
+        "start": 13033,
+        "end": 13036
+      },
+      {
+        "line": 315,
+        "match": "box",
+        "start": 13458,
+        "end": 13461
+      },
+      {
+        "line": 320,
+        "match": "box",
+        "start": 13567,
+        "end": 13570
+      },
+      {
+        "line": 339,
+        "match": "box",
+        "start": 13900,
+        "end": 13903
+      },
+      {
+        "line": 361,
+        "match": "sidebar",
+        "start": 14234,
+        "end": 14241
+      },
+      {
+        "line": 367,
+        "match": "sidebar",
+        "start": 14403,
+        "end": 14410
+      },
+      {
+        "line": 367,
+        "match": "box",
+        "start": 14420,
+        "end": 14423
+      },
+      {
+        "line": 374,
+        "match": "sidebar",
+        "start": 14623,
+        "end": 14630
+      },
+      {
+        "line": 374,
+        "match": "box",
+        "start": 14640,
+        "end": 14643
+      },
+      {
+        "line": 379,
+        "match": "calendar",
+        "start": 14730,
+        "end": 14738
+      },
+      {
+        "line": 380,
+        "match": "box",
+        "start": 14772,
+        "end": 14775
+      },
+      {
+        "line": 381,
+        "match": "box",
+        "start": 14815,
+        "end": 14818
+      },
+      {
+        "line": 392,
+        "match": "calendar",
+        "start": 14995,
+        "end": 15003
+      },
+      {
+        "line": 398,
+        "match": "calendar",
+        "start": 15095,
+        "end": 15103
+      },
+      {
+        "line": 399,
+        "match": "calendar",
+        "start": 15123,
+        "end": 15131
+      },
+      {
+        "line": 406,
+        "match": "calendar",
+        "start": 15262,
+        "end": 15270
+      },
+      {
+        "line": 412,
+        "match": "calendar",
+        "start": 15411,
+        "end": 15419
+      },
+      {
+        "line": 413,
+        "match": "calendar",
+        "start": 15436,
+        "end": 15444
+      },
+      {
+        "line": 417,
+        "match": "calendar",
+        "start": 15485,
+        "end": 15493
+      },
+      {
+        "line": 428,
+        "match": "calendar",
+        "start": 15733,
+        "end": 15741
+      },
+      {
+        "line": 432,
+        "match": "box",
+        "start": 15826,
+        "end": 15829
+      },
+      {
+        "line": 435,
+        "match": "calendar",
+        "start": 15879,
+        "end": 15887
+      },
+      {
+        "line": 441,
+        "match": "archive",
+        "start": 15989,
+        "end": 15996
+      },
+      {
+        "line": 447,
+        "match": "archive",
+        "start": 16077,
+        "end": 16084
+      },
+      {
+        "line": 452,
+        "match": "archive",
+        "start": 16163,
+        "end": 16170
+      },
+      {
+        "line": 461,
+        "match": "sidebar",
+        "start": 16333,
+        "end": 16340
+      },
+      {
+        "line": 461,
+        "match": "box",
+        "start": 16341,
+        "end": 16344
+      },
+      {
+        "line": 467,
+        "match": "sidebar",
+        "start": 16446,
+        "end": 16453
+      },
+      {
+        "line": 467,
+        "match": "box",
+        "start": 16454,
+        "end": 16457
+      },
+      {
+        "line": 468,
+        "match": "sidebar",
+        "start": 16490,
+        "end": 16497
+      },
+      {
+        "line": 468,
+        "match": "box",
+        "start": 16498,
+        "end": 16501
+      },
+      {
+        "line": 472,
+        "match": "sidebar",
+        "start": 16559,
+        "end": 16566
+      },
+      {
+        "line": 472,
+        "match": "box",
+        "start": 16567,
+        "end": 16570
+      },
+      {
+        "line": 477,
+        "match": "sidebar",
+        "start": 16636,
+        "end": 16643
+      },
+      {
+        "line": 477,
+        "match": "analytics",
+        "start": 16650,
+        "end": 16659
+      },
+      {
+        "line": 478,
+        "match": "sidebar",
+        "start": 16677,
+        "end": 16684
+      },
+      {
+        "line": 478,
+        "match": "analytics",
+        "start": 16691,
+        "end": 16700
+      },
+      {
+        "line": 478,
+        "match": "sidebar",
+        "start": 16709,
+        "end": 16716
+      },
+      {
+        "line": 478,
+        "match": "box",
+        "start": 16717,
+        "end": 16720
+      },
+      {
+        "line": 479,
+        "match": "sidebar",
+        "start": 16731,
+        "end": 16738
+      },
+      {
+        "line": 479,
+        "match": "analytics",
+        "start": 16745,
+        "end": 16754
+      },
+      {
+        "line": 479,
+        "match": "analytics",
+        "start": 16763,
+        "end": 16772
+      },
+      {
+        "line": 480,
+        "match": "sidebar",
+        "start": 16792,
+        "end": 16799
+      },
+      {
+        "line": 480,
+        "match": "analytics",
+        "start": 16806,
+        "end": 16815
+      },
+      {
+        "line": 480,
+        "match": "analytics",
+        "start": 16829,
+        "end": 16838
+      },
+      {
+        "line": 481,
+        "match": "sidebar",
+        "start": 16859,
+        "end": 16866
+      },
+      {
+        "line": 481,
+        "match": "analytics",
+        "start": 16873,
+        "end": 16882
+      },
+      {
+        "line": 481,
+        "match": "analytics",
+        "start": 16896,
+        "end": 16905
+      },
+      {
+        "line": 483,
+        "match": "box",
+        "start": 16961,
+        "end": 16964
+      },
+      {
+        "line": 486,
+        "match": "sidebar",
+        "start": 17002,
+        "end": 17009
+      },
+      {
+        "line": 486,
+        "match": "analytics",
+        "start": 17016,
+        "end": 17025
+      },
+      {
+        "line": 487,
+        "match": "sidebar",
+        "start": 17043,
+        "end": 17050
+      },
+      {
+        "line": 487,
+        "match": "analytics",
+        "start": 17057,
+        "end": 17066
+      },
+      {
+        "line": 487,
+        "match": "sidebar",
+        "start": 17075,
+        "end": 17082
+      },
+      {
+        "line": 487,
+        "match": "box",
+        "start": 17083,
+        "end": 17086
+      },
+      {
+        "line": 488,
+        "match": "sidebar",
+        "start": 17097,
+        "end": 17104
+      },
+      {
+        "line": 488,
+        "match": "analytics",
+        "start": 17111,
+        "end": 17120
+      },
+      {
+        "line": 488,
+        "match": "analytics",
+        "start": 17129,
+        "end": 17138
+      },
+      {
+        "line": 492,
+        "match": "sidebar",
+        "start": 17191,
+        "end": 17198
+      },
+      {
+        "line": 492,
+        "match": "analytics",
+        "start": 17205,
+        "end": 17214
+      },
+      {
+        "line": 496,
+        "match": "sidebar",
+        "start": 17262,
+        "end": 17269
+      },
+      {
+        "line": 496,
+        "match": "analytics",
+        "start": 17276,
+        "end": 17285
+      },
+      {
+        "line": 496,
+        "match": "sidebar",
+        "start": 17294,
+        "end": 17301
+      },
+      {
+        "line": 496,
+        "match": "box",
+        "start": 17302,
+        "end": 17305
+      },
+      {
+        "line": 497,
+        "match": "sidebar",
+        "start": 17322,
+        "end": 17329
+      },
+      {
+        "line": 497,
+        "match": "analytics",
+        "start": 17336,
+        "end": 17345
+      },
+      {
+        "line": 502,
+        "match": "box",
+        "start": 17528,
+        "end": 17531
+      },
+      {
+        "line": 508,
+        "match": "sidebar",
+        "start": 17656,
+        "end": 17663
+      },
+      {
+        "line": 508,
+        "match": "analytics",
+        "start": 17670,
+        "end": 17679
+      },
+      {
+        "line": 508,
+        "match": "sidebar",
+        "start": 17688,
+        "end": 17695
+      },
+      {
+        "line": 508,
+        "match": "box",
+        "start": 17696,
+        "end": 17699
+      },
+      {
+        "line": 573,
+        "match": "box",
+        "start": 19152,
+        "end": 19155
+      },
+      {
+        "line": 603,
+        "match": "sidebar",
+        "start": 19753,
+        "end": 19760
+      },
+      {
+        "line": 603,
+        "match": "box",
+        "start": 19761,
+        "end": 19764
+      },
+      {
+        "line": 620,
+        "match": "box",
+        "start": 20120,
+        "end": 20123
+      },
+      {
+        "line": 632,
+        "match": "sidebar",
+        "start": 20438,
+        "end": 20445
+      }
+    ],
+    "forms_buttons": [
+      {
+        "line": 22,
+        "match": "<form",
+        "start": 886,
+        "end": 891
+      },
+      {
+        "line": 24,
+        "match": "<button",
+        "start": 1041,
+        "end": 1048
+      },
+      {
+        "line": 43,
+        "match": "<form",
+        "start": 2025,
+        "end": 2030
+      },
+      {
+        "line": 45,
+        "match": "<button",
+        "start": 2204,
+        "end": 2211
+      },
+      {
+        "line": 45,
+        "match": "dropdown-item",
+        "start": 2233,
+        "end": 2246
+      },
+      {
+        "line": 50,
+        "match": "<form",
+        "start": 2468,
+        "end": 2473
+      },
+      {
+        "line": 52,
+        "match": "<button",
+        "start": 2647,
+        "end": 2654
+      },
+      {
+        "line": 52,
+        "match": "dropdown-item",
+        "start": 2676,
+        "end": 2689
+      },
+      {
+        "line": 58,
+        "match": "<form",
+        "start": 2946,
+        "end": 2951
+      },
+      {
+        "line": 60,
+        "match": "<button",
+        "start": 3117,
+        "end": 3124
+      },
+      {
+        "line": 60,
+        "match": "dropdown-item",
+        "start": 3146,
+        "end": 3159
+      },
+      {
+        "line": 67,
+        "match": "<form",
+        "start": 3397,
+        "end": 3402
+      },
+      {
+        "line": 69,
+        "match": "<button",
+        "start": 3565,
+        "end": 3572
+      },
+      {
+        "line": 69,
+        "match": "dropdown-item",
+        "start": 3594,
+        "end": 3607
+      },
+      {
+        "line": 613,
+        "match": "form-control",
+        "start": 19928,
+        "end": 19940
+      },
+      {
+        "line": 619,
+        "match": "form-control",
+        "start": 20095,
+        "end": 20107
+      }
+    ],
+    "shared_includes": [
+      {
+        "line": 134,
+        "match": "{% include \"blog/components/live_analytics_widget.html\"",
+        "start": 7425,
+        "end": 7480
+      },
+      {
+        "line": 147,
+        "match": "{% include \"blog/components/live_analytics_widget.html\"",
+        "start": 8013,
+        "end": 8068
+      },
+      {
+        "line": 160,
+        "match": "{% include \"blog/components/live_analytics_widget.html\"",
+        "start": 8664,
+        "end": 8719
+      },
+      {
+        "line": 680,
+        "match": "{% include \"blog/components/post_meta.html\"",
+        "start": 22111,
+        "end": 22154
+      },
+      {
+        "line": 704,
+        "match": "{% include \"blog/components/post_body.html\"",
+        "start": 23979,
+        "end": 24022
+      },
+      {
+        "line": 707,
+        "match": "{% include \"blog/components/post_actions.html\"",
+        "start": 24066,
+        "end": 24112
+      },
+      {
+        "line": 708,
+        "match": "{% include \"blog/components/post_comments.html\"",
+        "start": 24132,
+        "end": 24179
+      },
+      {
+        "line": 728,
+        "match": "{% include \"blog/components/blog_interaction_scripts.html\"",
+        "start": 25082,
+        "end": 25140
+      }
+    ]
+  },
+  "css_block_count": 1,
+  "css_selector_count": 88,
+  "css_token_counts": {
+    "nav.navbar": 2,
+    ".magazin-post-entry": 9,
+    ".magazin-post-title": 0,
+    ".magazin-posts-wrap": 2,
+    ".magazin-sidebar": 22,
+    ".sidebar-box": 5,
+    ".form-control": 2,
+    "textarea.form-control": 2,
+    "input.form-control": 0,
+    ".btn-outline-light": 0,
+    ".blog-action-outline": 0,
+    ".dropdown-menu": 1,
+    ".comment-row": 0
+  },
+  "risk_notes": [
+    "Magazin ima vlastiti `{% for post in page_obj %}` loop, znači postovi nisu kroz zajednički `blog_posts.html`.",
+    "Ne koristi direktno zajednički `blog_posts.html` include.",
+    "Ne koristi direktno zajednički `blog_box.html` include.",
+    "Već koristi zajednički `blog_interaction_scripts.html`, što je dobar znak za postupni refaktor."
+  ],
+  "candidate_plan": [
+    "Ne mijenjati `magazin` masovno.",
+    "Prvo izdvojiti samo prikaz jednog posta u posebnu zajedničku/parametriziranu komponentu ili provjeriti može li postojeći `post_card.html` primiti magazin klase.",
+    "Sidebar i boxeve dirati tek nakon postova, jer audit pokazuje puno sidebar/form hitova.",
+    "Ne čistiti CSS viškove sada; samo pripremiti siguran put refaktora."
+  ]
+}
