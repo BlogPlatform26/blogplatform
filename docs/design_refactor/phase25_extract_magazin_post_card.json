@@ -1,0 +1,18 @@
+{
+  "phase": 25,
+  "created_at": "2026-07-05T12:24:17",
+  "target": "C:\\Users\\mario\\blogplatform\\blog\\templates\\blog\\designs\\magazin.html",
+  "component": "C:\\Users\\mario\\blogplatform\\blog\\templates\\blog\\components\\special_designs\\magazin_post_card.html",
+  "backup_dir": "C:\\Users\\mario\\blogplatform\\_backup_design_refactor_phase25_magazin_post_card_20260705_122417",
+  "for_line_original": 675,
+  "empty_line_original": 711,
+  "extracted_line_count": 35,
+  "checks": {
+    "target_contains_include": true,
+    "component_contains_article": true,
+    "component_contains_post_body": true,
+    "component_contains_post_actions": true,
+    "component_contains_post_comments": true,
+    "target_still_has_loop": true
+  }
+}
