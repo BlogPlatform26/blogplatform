@@ -1,0 +1,655 @@
+{
+  "generated_at": "2026-07-06 21:13:17",
+  "comments_path": "C:\\Users\\mario\\blogplatform\\blog\\templates\\blog\\components\\post_comments.html",
+  "style_path": "C:\\Users\\mario\\blogplatform\\blog\\templates\\blog\\components\\blog_design_styles.html",
+  "line_count": 620,
+  "class_tokens": {
+    "bp-mention-username": 1,
+    "mt-5": 1,
+    "comment-item": 2,
+    "mb-3": 2,
+    "d-flex": 4,
+    "gap-2": 4,
+    "comment-avatar": 10,
+    "premium-avatar-wrap": 2,
+    "comment-body": 2,
+    "flex-grow-1": 2,
+    "comment-actions": 2,
+    "comment-action-btn": 4,
+    "bi": 4,
+    "bi-pencil": 2,
+    "d-inline": 2,
+    "comment-action-danger": 2,
+    "bi-trash": 2,
+    "comment-header": 2,
+    "comment-author": 4,
+    "comment-time": 2,
+    "comment-text": 2,
+    "bp-comment-text": 2,
+    "comment-edit-form": 2,
+    "mt-2": 6,
+    "d-none": 2,
+    "form-control": 2,
+    "btn": 5,
+    "btn-sm": 4,
+    "btn-primary": 2,
+    "btn-outline-secondary": 2,
+    "small": 5,
+    "text-muted": 4,
+    "text-decoration-none": 1,
+    "mt-3": 1,
+    "comment-row": 1,
+    "blog-action-outline": 1,
+    "form-check": 1,
+    "form-check-label": 1
+  },
+  "interesting_classes": {
+    "blog-action-outline": 1,
+    "bp-comment-text": 2,
+    "btn": 5,
+    "btn-outline-secondary": 2,
+    "btn-primary": 2,
+    "btn-sm": 4,
+    "comment-action-btn": 4,
+    "comment-action-danger": 2,
+    "comment-actions": 2,
+    "comment-author": 4,
+    "comment-avatar": 10,
+    "comment-body": 2,
+    "comment-edit-form": 2,
+    "comment-header": 2,
+    "comment-item": 2,
+    "comment-row": 1,
+    "comment-text": 2,
+    "comment-time": 2,
+    "form-check": 1,
+    "form-check-label": 1,
+    "form-control": 2,
+    "premium-avatar-wrap": 2
+  },
+  "hits": {
+    "for_comments_loop": [
+      298,
+      399
+    ],
+    "comment_body": [
+      4,
+      9,
+      243,
+      300,
+      302,
+      305,
+      309,
+      311,
+      321,
+      322,
+      330,
+      332,
+      336,
+      341,
+      359,
+      364,
+      368,
+      372,
+      374,
+      375,
+      377,
+      380,
+      402,
+      404,
+      408,
+      412,
+      413,
+      423,
+      425,
+      432,
+      434,
+      438,
+      444,
+      461,
+      467,
+      470,
+      474,
+      476,
+      477,
+      479,
+      482
+    ],
+    "comment_text": [
+      248,
+      260,
+      270,
+      372,
+      377,
+      474,
+      479,
+      579,
+      596,
+      610
+    ],
+    "textarea": [
+      70,
+      80,
+      81,
+      82,
+      99,
+      100,
+      109,
+      117,
+      121,
+      122,
+      125,
+      128,
+      129,
+      163,
+      164,
+      171,
+      175,
+      199,
+      201,
+      205,
+      209,
+      377,
+      479,
+      532,
+      585,
+      586,
+      587,
+      588,
+      608,
+      610,
+      611,
+      612,
+      620
+    ],
+    "submit_button": [
+      345,
+      379,
+      447,
+      481,
+      533
+    ],
+    "edit_delete": [
+      336,
+      337,
+      341,
+      347,
+      375,
+      380,
+      438,
+      440,
+      444,
+      449,
+      477,
+      482,
+      566,
+      570,
+      573,
+      574,
+      578,
+      580,
+      582,
+      584,
+      585,
+      595,
+      597,
+      599,
+      600,
+      612
+    ],
+    "button": [
+      336,
+      345,
+      379,
+      380,
+      438,
+      447,
+      481,
+      482,
+      533
+    ],
+    "form": [
+      341,
+      351,
+      375,
+      382,
+      444,
+      453,
+      477,
+      484,
+      526,
+      549
+    ],
+    "avatar": [
+      304,
+      307,
+      309,
+      311,
+      315,
+      321,
+      322,
+      326,
+      406,
+      410,
+      412,
+      413,
+      417,
+      423,
+      425,
+      429
+    ],
+    "url_tags": [
+      69,
+      341,
+      375,
+      444,
+      477,
+      503,
+      526,
+      553
+    ]
+  },
+  "style_hits_count": 100,
+  "style_hits_preview": [
+    {
+      "line": 94,
+      "text": ".comment-item {"
+    },
+    {
+      "line": 102,
+      "text": ".comment-avatar {"
+    },
+    {
+      "line": 113,
+      "text": ".comment-body {"
+    },
+    {
+      "line": 119,
+      "text": ".comment-header {"
+    },
+    {
+      "line": 127,
+      "text": ".comment-author,"
+    },
+    {
+      "line": 128,
+      "text": ".comment-author a {"
+    },
+    {
+      "line": 133,
+      "text": ".comment-text {"
+    },
+    {
+      "line": 140,
+      "text": ".comment-row {"
+    },
+    {
+      "line": 147,
+      "text": ".comment-row textarea {"
+    },
+    {
+      "line": 153,
+      "text": "    .comment-item {"
+    },
+    {
+      "line": 157,
+      "text": "    .comment-avatar {"
+    },
+    {
+      "line": 164,
+      "text": "    .comment-row {"
+    },
+    {
+      "line": 170,
+      "text": "    .comment-row .btn,"
+    },
+    {
+      "line": 171,
+      "text": "    .comment-row button {"
+    },
+    {
+      "line": 851,
+      "text": ".comment-body {"
+    },
+    {
+      "line": 856,
+      "text": "textarea.form-control {"
+    },
+    {
+      "line": 862,
+      "text": "textarea.form-control:focus {"
+    },
+    {
+      "line": 869,
+      "text": ".comment-text,"
+    },
+    {
+      "line": 872,
+      "text": ".comment-time {"
+    },
+    {
+      "line": 946,
+      "text": ".comment-author a,"
+    },
+    {
+      "line": 1229,
+      "text": ".blog-main-right-column--simple-retro .comment-action-btn,"
+    },
+    {
+      "line": 1231,
+      "text": ".blog-posts-shell--simple-retro .comment-action-btn,"
+    },
+    {
+      "line": 1234,
+      "text": ".blog-posts-shell--simple-retro .comment-author a,"
+    },
+    {
+      "line": 1399,
+      "text": ".comment-body {"
+    },
+    {
+      "line": 1536,
+      "text": ".comment-text,"
+    },
+    {
+      "line": 1537,
+      "text": ".comment-time {"
+    },
+    {
+      "line": 1556,
+      "text": ".comment-body {"
+    },
+    {
+      "line": 1560,
+      "text": "textarea.form-control {"
+    },
+    {
+      "line": 1567,
+      "text": "textarea.form-control:focus {"
+    },
+    {
+      "line": 1579,
+      "text": ".btn-outline-light {"
+    },
+    {
+      "line": 1585,
+      "text": ".btn-outline-light:hover {"
+    },
+    {
+      "line": 1603,
+      "text": ".comment-author a,"
+    },
+    {
+      "line": 1612,
+      "text": ".comment-author a:hover,"
+    },
+    {
+      "line": 1758,
+      "text": ".comment-body {"
+    },
+    {
+      "line": 1897,
+      "text": ".comment-text,"
+    },
+    {
+      "line": 1898,
+      "text": ".comment-time {"
+    },
+    {
+      "line": 1917,
+      "text": ".comment-body {"
+    },
+    {
+      "line": 1921,
+      "text": "textarea.form-control {"
+    },
+    {
+      "line": 1928,
+      "text": "textarea.form-control:focus {"
+    },
+    {
+      "line": 1940,
+      "text": ".btn-outline-light {"
+    },
+    {
+      "line": 1946,
+      "text": ".btn-outline-light:hover {"
+    },
+    {
+      "line": 1972,
+      "text": ".comment-author a,"
+    },
+    {
+      "line": 1981,
+      "text": ".comment-author a:hover,"
+    },
+    {
+      "line": 2041,
+      "text": ".comment-row{ display:flex; align-items:center; gap:10px; max-width:520px; }"
+    },
+    {
+      "line": 2042,
+      "text": ".comment-row textarea{ flex:1; }"
+    },
+    {
+      "line": 2043,
+      "text": ".blog-action-outline,.btn-outline-light{ border-color:#4da3ff !important; color:#4da3ff !important; }"
+    },
+    {
+      "line": 2044,
+      "text": ".blog-action-outline:hover,.btn-outline-light:hover{ background-color:#4da3ff !important; color:#000 !important; box-shadow:0 0 8px rgba(77,163,255,0.5); }"
+    },
+    {
+      "line": 2045,
+      "text": "textarea.form-control{ background-color:#1a1a1a !important; color:#fff !important; border:1px solid #444 !important; border-radius:10px; padding:10px; resize:none; height:50px; }"
+    },
+    {
+      "line": 2046,
+      "text": "textarea.form-control:focus{ background-color:#1a1a1a !important; color:#fff !important; border-color:#4da3ff !important; box-shadow:0 0 6px rgba(77,163,255,0.4) !important; outline:none; }"
+    },
+    {
+      "line": 2050,
+      "text": ".comment-item{ align-items:flex-start; }"
+    },
+    {
+      "line": 2051,
+      "text": ".comment-avatar{ border-radius:50%; object-fit:cover; margin-top:2px; }"
+    },
+    {
+      "line": 2052,
+      "text": ".comment-body{ position:relative; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:10px 44px 10px 12px; }"
+    },
+    {
+      "line": 2053,
+      "text": ".comment-header{ display:flex; gap:10px; align-items:baseline; margin-bottom:2px; }"
+    },
+    {
+      "line": 2054,
+      "text": ".comment-author a{ color:#4da3ff; text-decoration:none; }"
+    },
+    {
+      "line": 2055,
+      "text": ".comment-time{ font-size:12px; color:rgba(255,255,255,0.45); }"
+    },
+    {
+      "line": 2056,
+      "text": ".comment-text{ color:rgba(255,255,255,0.92); line-height:1.3; }"
+    },
+    {
+      "line": 2057,
+      "text": ".comment-actions{ position:absolute; top:8px; right:10px; display:flex; gap:8px; align-items:center; opacity:0; transition:opacity 120ms ease-in-out; }"
+    },
+    {
+      "line": 2058,
+      "text": ".comment-item:hover .comment-actions{ opacity:0.9; }"
+    },
+    {
+      "line": 2059,
+      "text": ".comment-action-btn{ width:28px; height:28px; display:flex; align-items:center; justify-content:center; background:transparent; border:1px solid rgba(255,255,255,0.10); border-radius:8px; cursor:pointer; color:rgba(255,255,255,0.60); padding:0; margin:0; line-height:1; }"
+    },
+    {
+      "line": 2060,
+      "text": ".comment-action-btn i{ font-size:14px; line-height:1; display:block; }"
+    },
+    {
+      "line": 2061,
+      "text": ".comment-action-btn:hover{ color:rgba(255,255,255,0.95); border-color:rgba(255,255,255,0.18); background:rgba(255,255,255,0.04); }"
+    },
+    {
+      "line": 2062,
+      "text": ".comment-action-danger:hover{ color:#ff6b6b; border-color:rgba(255,107,107,0.35); background:rgba(255,107,107,0.08); }"
+    },
+    {
+      "line": 2103,
+      "text": ".comment-row{ display:flex; align-items:center; gap:10px; max-width:520px; }"
+    },
+    {
+      "line": 2104,
+      "text": ".comment-row textarea{ flex:1; }"
+    },
+    {
+      "line": 2105,
+      "text": ".blog-action-outline,.btn-outline-light{ border-color:#7a2cff !important; color:#7a2cff !important; }"
+    },
+    {
+      "line": 2106,
+      "text": ".blog-action-outline:hover,.btn-outline-light:hover{ background-color:#7a2cff !important; color:#fff !important; box-shadow:0 0 8px rgba(122,44,255,0.35); }"
+    },
+    {
+      "line": 2107,
+      "text": "textarea.form-control{ background:#ece8df !important; color:#111 !important; border:1px solid #d7d0c5 !important; border-radius:10px; padding:10px; resize:none; height:50px; }"
+    },
+    {
+      "line": 2108,
+      "text": "textarea.form-control:focus{ background:#f6f4ef !important; color:#111 !important; border-color:#7a2cff !important; box-shadow:0 0 6px rgba(122,44,255,0.25) !important; outline:none; }"
+    },
+    {
+      "line": 2112,
+      "text": ".comment-item{ align-items:flex-start; }"
+    },
+    {
+      "line": 2113,
+      "text": ".comment-avatar{ border-radius:50%; object-fit:cover; margin-top:2px; }"
+    },
+    {
+      "line": 2114,
+      "text": ".comment-body{ position:relative; background:#f6f4ef; border:1px solid #d7d0c5; border-radius:12px; padding:10px 44px 10px 12px; }"
+    },
+    {
+      "line": 2115,
+      "text": ".comment-header{ display:flex; gap:10px; align-items:baseline; margin-bottom:2px; }"
+    },
+    {
+      "line": 2116,
+      "text": ".comment-author a{ color:#7a2cff; text-decoration:none; }"
+    },
+    {
+      "line": 2117,
+      "text": ".comment-time{ font-size:12px; color:#777; }"
+    },
+    {
+      "line": 2118,
+      "text": ".comment-text{ color:#1f1f1f; line-height:1.3; }"
+    },
+    {
+      "line": 2119,
+      "text": ".comment-actions{ position:absolute; top:8px; right:10px; display:flex; gap:8px; align-items:center; opacity:0; transition:opacity 120ms ease-in-out; }"
+    },
+    {
+      "line": 2120,
+      "text": ".comment-item:hover .comment-actions{ opacity:0.9; }"
+    },
+    {
+      "line": 2121,
+      "text": ".comment-action-btn{ width:28px; height:28px; display:flex; align-items:center; justify-content:center; background:transparent; border:1px solid rgba(0,0,0,0.12); border-radius:8px; cursor:pointer; color:rgba(0,0,0,0.60); padding:0; margin:0; line-height:1; }"
+    },
+    {
+      "line": 2122,
+      "text": ".comment-action-btn i{ font-size:14px; line-height:1; display:block; }"
+    },
+    {
+      "line": 2123,
+      "text": ".comment-action-btn:hover{ color:#111; border-color:rgba(0,0,0,0.20); background:rgba(0,0,0,0.04); }"
+    },
+    {
+      "line": 2124,
+      "text": ".comment-action-danger:hover{ color:#c53030; border-color:rgba(197,48,48,0.35); background:rgba(197,48,48,0.08); }"
+    },
+    {
+      "line": 2166,
+      "text": ".comment-row{ display:flex; align-items:center; gap:10px; max-width:520px; }"
+    },
+    {
+      "line": 2167,
+      "text": ".comment-row textarea{ flex:1; }"
+    },
+    {
+      "line": 2168,
+      "text": ".blog-action-outline,.btn-outline-light{ border-color:#7a2cff !important; color:#7a2cff !important; }"
+    },
+    {
+      "line": 2169,
+      "text": ".blog-action-outline:hover,.btn-outline-light:hover{ background-color:#7a2cff !important; color:#fff !important; box-shadow:0 0 8px rgba(122,44,255,0.25); }"
+    },
+    {
+      "line": 2170,
+      "text": "textarea.form-control{ background:#fff !important; color:#111827 !important; border:1px solid #d9cbb9 !important; border-radius:10px; padding:10px; resize:none; height:50px; }"
+    },
+    {
+      "line": 2171,
+      "text": "textarea.form-control:focus{ background:#fff !important; color:#111827 !important; border-color:#7a2cff !important; box-shadow:0 0 0 0.2rem rgba(122,44,255,0.12) !important; outline:none; }"
+    },
+    {
+      "line": 2174,
+      "text": ".comment-item{ align-items:flex-start; }"
+    },
+    {
+      "line": 2175,
+      "text": ".comment-avatar{ border-radius:50%; object-fit:cover; margin-top:2px; }"
+    },
+    {
+      "line": 2176,
+      "text": ".comment-body{ position:relative; background:#fff; border:1px solid #eadccd; border-radius:12px; padding:10px 44px 10px 12px; }"
+    },
+    {
+      "line": 2177,
+      "text": ".comment-header{ display:flex; gap:10px; align-items:baseline; margin-bottom:2px; }"
+    },
+    {
+      "line": 2178,
+      "text": ".comment-author a{ color:#7a2cff; text-decoration:none; }"
+    },
+    {
+      "line": 2179,
+      "text": ".comment-time{ font-size:12px; color:#8a7a6a; }"
+    },
+    {
+      "line": 2180,
+      "text": ".comment-text{ color:#111827; line-height:1.3; }"
+    },
+    {
+      "line": 2181,
+      "text": ".comment-actions{ position:absolute; top:8px; right:10px; display:flex; gap:8px; align-items:center; opacity:0; transition:opacity 120ms ease-in-out; }"
+    },
+    {
+      "line": 2182,
+      "text": ".comment-item:hover .comment-actions{ opacity:0.9; }"
+    },
+    {
+      "line": 2183,
+      "text": ".comment-action-btn{ width:28px; height:28px; display:flex; align-items:center; justify-content:center; background:transparent; border:1px solid #e3d7c8; border-radius:8px; cursor:pointer; color:#7a6a5c; padding:0; margin:0; line-height:1; }"
+    },
+    {
+      "line": 2184,
+      "text": ".comment-action-btn i{ font-size:14px; line-height:1; display:block; }"
+    },
+    {
+      "line": 2185,
+      "text": ".comment-action-btn:hover{ color:#111827; border-color:#cdbca8; background:#fbf6ef; }"
+    },
+    {
+      "line": 2186,
+      "text": ".comment-action-danger:hover{ color:#dc3545; border-color:rgba(220,53,69,0.35); background:rgba(220,53,69,0.08); }"
+    }
+  ]
+}
