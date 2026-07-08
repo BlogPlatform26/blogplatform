@@ -351,9 +351,17 @@ class CommentAdmin(admin.ModelAdmin):
 
     @admin.display(description="Autor komentara")
     def comment_author(self, obj):
+        username = obj.author.username if obj.author_id else "-"
+
         if obj.is_anonymous:
-            return "Anonimno"
-        return obj.author.username
+            if username == "__anon_comment_user__":
+                return "Anonimno javno / stari anonimni komentar"
+            return format_html(
+                "Anonimno javno<br><small>Stvarni korisnik: {}</small>",
+                username,
+            )
+
+        return username
 
     @admin.display(description="Autor posta")
     def post_author(self, obj):

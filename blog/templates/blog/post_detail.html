@@ -84,7 +84,7 @@
 
         {% for comment in comments %}
             <div class="mb-3 p-2 border rounded">
-                {% if comment.author.username == anonymous_comment_username %}
+                {% if comment.is_anonymous or comment.author.username == anonymous_comment_username %}
                     <strong>Anonimni korisnik</strong><br>
                 {% else %}
                     <strong>{{ comment.author.username }}</strong><br>
@@ -119,7 +119,7 @@
                 </form>
             {% else %}
                 <p class="small mt-3">
-                    <a href="{% url 'login' %}">Prijavi se</a> da bi komentirao.
+                    <a href="{% url 'login' %}">Za komentiranje je potrebna registracija.
                 </p>
             {% endif %}
         {% else %}

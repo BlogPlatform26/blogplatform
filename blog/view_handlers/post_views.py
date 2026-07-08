@@ -182,10 +182,15 @@ def post_detail(request, post_id, post_slug=None):
 
         if form.is_valid():
             wants_anonymous = form.cleaned_data.get('anonymous', False)
-            is_anonymous_comment = allow_anonymous_comments and (wants_anonymous or not request.user.is_authenticated)
-
-            if not request.user.is_authenticated and not is_anonymous_comment:
+            if not request.user.is_authenticated:
+                messages.error(request, 'Za komentiranje je potrebna registracija.')
                 return redirect('login')
+
+            if wants_anonymous and not allow_anonymous_comments:
+                messages.error(request, 'Anonimno komentiranje nije dopušteno za ovaj blog.')
+                return redirect(_bp_post_public_url(post))
+
+            is_anonymous_comment = bool(wants_anonymous and allow_anonymous_comments)
 
             comment_content = (form.cleaned_data.get('content') or '').strip()
             allowed, error_message = check_comment_allowed(request, post, comment_content)
@@ -205,17 +210,8 @@ def post_detail(request, post_id, post_slug=None):
             comment = form.save(commit=False)
             comment.post = post
 
-            if is_anonymous_comment:
-                anonymous_user, _ = User.objects.get_or_create(
-                    username=ANONYMOUS_COMMENT_USERNAME,
-                    defaults={'email': 'anon-comment@example.com'}
-                )
-                comment.author = anonymous_user
-                comment.is_anonymous = True
-            else:
-                comment.author = request.user
-                comment.is_anonymous = False
-
+            comment.author = request.user
+            comment.is_anonymous = is_anonymous_comment
             comment.save()
             remember_comment_sent(request, post, comment_content)
 
@@ -232,7 +228,7 @@ def post_detail(request, post_id, post_slug=None):
     else:
         form = CommentForm()
 
-    if not allow_anonymous_comments and 'anonymous' in form.fields:
+    if (not request.user.is_authenticated or not allow_anonymous_comments) and 'anonymous' in form.fields:
         form.fields['anonymous'].widget = form.fields['anonymous'].hidden_widget()
 
     post.user_liked = request.user.is_authenticated and post.likes.filter(user=request.user).exists()
