@@ -604,21 +604,7 @@ nav.navbar .dropdown-menu {
         <div class="jus-layout">
             <main class="jus-main">
                 {% for post in page_obj %}
-                    <article class="jus-post">
-                        <div class="jus-post-date">{{ post.publication_datetime|date:"d.m.Y" }}</div>
-                        <div class="jus-post-divider"></div>
-                        <div class="d-flex flex-column" style="gap: 10px; min-width: 0;">
-                            <h4 class="mb-0">{{ post.title }}</h4>
-                            {% include "blog/components/post_meta.html" %}
-                        </div>
-
-                        <div class="mt-4">
-                            {% include "blog/components/post_body.html" %}
-                        </div>
-
-                        {% include "blog/components/post_actions.html" %}
-                        {% include "blog/components/post_comments.html" %}
-                    </article>
+                                        {% include "blog/components/special_designs/jedro_u_suton_post_card.html" %}
                 {% empty %}
                     <article class="jus-post">
                         <p class="mb-0">Nema postova.</p>
