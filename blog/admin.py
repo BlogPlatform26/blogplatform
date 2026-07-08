@@ -1,5 +1,5 @@
 from blog.ambient_music_importer import import_ambient_music_from_path
-from django.urls import path
+from django.urls import path, reverse
 from django.template.response import TemplateResponse
 from django.shortcuts import redirect
 from django.contrib import messages
@@ -238,8 +238,132 @@ class ProfileAdmin(admin.ModelAdmin):
         )
 
 
-admin.site.register(Post)
-admin.site.register(Comment)
+
+
+class CommentInline(admin.TabularInline):
+    model = Comment
+    extra = 0
+    fields = ("created_at", "author", "is_anonymous", "content")
+    readonly_fields = ("created_at", "author", "is_anonymous", "content")
+    can_delete = True
+    show_change_link = True
+    ordering = ("-created_at",)
+
+    def has_add_permission(self, request, obj=None):
+        return False
+
+
+class PostAdmin(admin.ModelAdmin):
+    list_display = (
+        "title",
+        "author",
+        "category",
+        "status",
+        "post_type",
+        "allow_comments",
+        "comments_count",
+        "created_at",
+    )
+    list_filter = (
+        "status",
+        "post_type",
+        "allow_comments",
+        "category",
+        "created_at",
+        "publish_at",
+    )
+    search_fields = (
+        "title",
+        "content",
+        "author__username",
+        "author__email",
+        "author__profile__blog_name",
+        "category__name",
+    )
+    readonly_fields = ("created_at", "views", "comments_count")
+    date_hierarchy = "created_at"
+    ordering = ("-created_at",)
+    list_select_related = ("author", "category")
+    inlines = [CommentInline]
+
+    @admin.display(description="Komentari")
+    def comments_count(self, obj):
+        return obj.comments.count()
+
+
+class CommentAdmin(admin.ModelAdmin):
+    list_display = (
+        "short_content",
+        "post_admin_link",
+        "comment_author",
+        "post_author",
+        "is_anonymous",
+        "created_at",
+    )
+    list_filter = (
+        "is_anonymous",
+        "created_at",
+        "post__status",
+        "post__category",
+    )
+    search_fields = (
+        "content",
+        "author__username",
+        "author__email",
+        "author__first_name",
+        "author__last_name",
+        "post__title",
+        "post__author__username",
+        "post__author__email",
+        "post__author__first_name",
+        "post__author__last_name",
+        "post__author__profile__blog_name",
+    )
+    readonly_fields = ("created_at",)
+    date_hierarchy = "created_at"
+    ordering = ("-created_at",)
+    list_select_related = ("author", "post", "post__author", "post__category")
+    raw_id_fields = ("post", "author")
+
+    def get_search_results(self, request, queryset, search_term):
+        queryset, use_distinct = super().get_search_results(request, queryset, search_term)
+
+        normalized = (search_term or "").strip().lower()
+        if normalized in {"anonimno", "anoniman", "anonimni", "anonymous"}:
+            queryset = queryset | self.model.objects.filter(is_anonymous=True)
+            use_distinct = True
+
+        return queryset, use_distinct
+
+    @admin.display(description="Komentar")
+    def short_content(self, obj):
+        content = obj.content or ""
+        if len(content) > 90:
+            return content[:90] + "..."
+        return content
+
+    @admin.display(description="Post")
+    def post_admin_link(self, obj):
+        if not obj.post_id:
+            return "-"
+        url = reverse("admin:blog_post_change", args=[obj.post_id])
+        return format_html('<a href="{}">{}</a>', url, obj.post.title)
+
+    @admin.display(description="Autor komentara")
+    def comment_author(self, obj):
+        if obj.is_anonymous:
+            return "Anonimno"
+        return obj.author.username
+
+    @admin.display(description="Autor posta")
+    def post_author(self, obj):
+        if not obj.post_id or not obj.post.author_id:
+            return "-"
+        return obj.post.author.username
+
+
+admin.site.register(Post, PostAdmin)
+admin.site.register(Comment, CommentAdmin)
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(CategoryHomeImage, CategoryHomeImageAdmin)
 admin.site.register(Tag)
