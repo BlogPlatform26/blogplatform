@@ -110,10 +110,15 @@ def create_comment(request, pk):
     if request.method == 'POST':
         content = (request.POST.get('content') or '').strip()
         wants_anonymous = request.POST.get('anonymous') in {'on', '1', 'true'}
-        is_anonymous_comment = allow_anonymous_comments and (wants_anonymous or not request.user.is_authenticated)
-
-        if not request.user.is_authenticated and not is_anonymous_comment:
+        if not request.user.is_authenticated:
+            messages.error(request, 'Za komentiranje je potrebna registracija.')
             return redirect('login')
+
+        if wants_anonymous and not allow_anonymous_comments:
+            messages.error(request, 'Anonimno komentiranje nije dopušteno za ovaj blog.')
+            return redirect(_bp_post_public_url(post))
+
+        is_anonymous_comment = bool(wants_anonymous and allow_anonymous_comments)
 
         if content:
             allowed, error_message = check_comment_allowed(request, post, content)
@@ -129,16 +134,12 @@ def create_comment(request, pk):
                 messages.error(request, error_message)
                 return redirect(_bp_comment_public_url(comment))
 
-            if is_anonymous_comment:
-                anonymous_user, _ = User.objects.get_or_create(
-                    username=ANONYMOUS_COMMENT_USERNAME,
-                    defaults={'email': 'anon-comment@example.com'}
-                )
-                author = anonymous_user
-            else:
-                author = request.user
-
-            comment = Comment.objects.create(post=post, author=author, content=content, is_anonymous=is_anonymous_comment)
+            comment = Comment.objects.create(
+                post=post,
+                author=request.user,
+                content=content,
+                is_anonymous=is_anonymous_comment,
+            )
             remember_comment_sent(request, post, content)
             _create_mention_notifications(comment)
             if request.user.is_authenticated and not is_anonymous_comment and request.user != post.author:
