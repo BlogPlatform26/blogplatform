@@ -109,14 +109,14 @@ nav.navbar .dropdown-menu {
 .jus-post h4 a,
 .jus-post .blog-post-title {
     font-family: Georgia, "Times New Roman", serif;
-    color: var(--post-title-color, #fff7ef) !important;
+    color: #17100b !important;
     font-size: clamp(1.05rem, 1.45vw, 1.35rem);
     line-height: 1.15;
     text-decoration: none;
 }
 
 .jus-post h4 a:hover {
-    color: var(--post-title-color, #ffe5cb) !important;
+    color: #17100b !important;
 }
 
 .post-meta {
@@ -572,19 +572,195 @@ nav.navbar .dropdown-menu {
         width: 100%;
     }
 }
+
+/* BLOGPLATFORM_JEDRO_BLACK_TEXT_ONLY_START */
+.jus-theme,
+.jus-theme *,
+.jus-shell,
+.jus-shell *,
+.jus-post,
+.jus-post *,
+.jus-section,
+.jus-section *,
+.jus-box-content,
+.jus-box-content *,
+.jus-profile-wrap,
+.jus-profile-wrap *,
+.comment-body,
+.comment-body *,
+.comment-text,
+.comment-text *,
+.bp-comment-text {
+    color: #17100b !important;
+    -webkit-text-fill-color: #17100b !important;
+    text-shadow: none !important;
+}
+
+.jus-post h1,
+.jus-post h2,
+.jus-post h3,
+.jus-post h4,
+.jus-post h5,
+.jus-post h6,
+.jus-post h1 *,
+.jus-post h2 *,
+.jus-post h3 *,
+.jus-post h4 *,
+.jus-post h5 *,
+.jus-post h6 *,
+.jus-post h4 a,
+.jus-post .blog-post-title,
+.jus-side-title,
+.jus-calendar-title,
+.jus-box-title,
+.jus-archive-title {
+    color: #17100b !important;
+    -webkit-text-fill-color: #17100b !important;
+    text-shadow: none !important;
+}
+
+.jus-theme a,
+.jus-theme a *,
+.post-actions a,
+.post-actions a *,
+.bp-mention-link {
+    color: #0647b8 !important;
+    -webkit-text-fill-color: #0647b8 !important;
+}
+
+.jus-theme a:hover,
+.post-actions a:hover,
+.bp-mention-link:hover {
+    color: #042b73 !important;
+    -webkit-text-fill-color: #042b73 !important;
+}
+/* BLOGPLATFORM_JEDRO_BLACK_TEXT_ONLY_END */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* BLOGPLATFORM_JEDRO_BANNER_OUTSIDE_FLOW_START */
+.jus-theme-banner-outer {
+    display: block !important;
+    width: calc(100vw - 32px) !important;
+    max-width: none !important;
+    margin: 24px auto 44px !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    position: static !important;
+    clear: both !important;
+}
+
+.jus-theme-banner-outer .blog-banner-strip {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.jus-theme-banner-outer .blog-banner-row {
+    display: flex !important;
+    width: 100% !important;
+    max-width: none !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    align-items: flex-start !important;
+}
+
+.jus-theme-banner-outer .blog-banner {
+    display: block !important;
+    position: static !important;
+    overflow: visible !important;
+}
+
+.jus-theme-banner-outer .blog-banner-size-full_width .blog-banner {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+.jus-theme-banner-outer .blog-banner-img {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    position: static !important;
+    float: none !important;
+}
+
+.jus-theme-banner-outer .blog-banner-pos-left {
+    justify-content: flex-start !important;
+}
+
+.jus-theme-banner-outer .blog-banner-pos-center {
+    justify-content: center !important;
+}
+
+.jus-theme-banner-outer .blog-banner-pos-right {
+    justify-content: flex-end !important;
+}
+
+@media (max-width: 768px) {
+    .jus-theme-banner-outer {
+        width: calc(100vw - 24px) !important;
+        margin: 18px auto 32px !important;
+    }
+}
+/* BLOGPLATFORM_JEDRO_BANNER_OUTSIDE_FLOW_END */
+
+
+
+
+
+/* BLOGPLATFORM_JEDRO_BANNER_CONTENT_GAP_START */
+.jus-theme-banner-outer + .jus-theme {
+    margin-top: 190px !important;
+}
+
+@media (max-width: 768px) {
+    .jus-theme-banner-outer + .jus-theme {
+        margin-top: 120px !important;
+    }
+}
+/* BLOGPLATFORM_JEDRO_BANNER_CONTENT_GAP_END */
+
 </style>
 
 <div class="jus-theme">
     <h1 class="jus-title">{{ blog.profile.blog_name|default:blog.username }}</h1>
 
     {% if blog.profile.blog_tagline %}<p class="blog-tagline-shared">{{ blog.profile.blog_tagline }}</p>{% endif %}
+</div>
 
-    {% if blog.profile.blog_banner %}
-    <div class="sa-banner" style="margin-top: 6px; background: rgba(58, 34, 24, 0.12); border: 1px solid rgba(255, 232, 208, 0.10); padding: 8px; box-shadow: 0 12px 28px rgba(17, 10, 8, 0.12); backdrop-filter: blur(5px);">
-        <img src="{{ blog.profile.blog_banner.url }}" alt="Banner bloga" style="width: 100%; max-height: 220px; object-fit: cover; display: block;">
-    </div>
-    {% endif %}
 
+{% if blog.profile.blog_banner %}
+    {% with banner_position=blog.profile.blog_banner_position|default:'center' banner_size=blog.profile.blog_banner_size|default:'medium' %}
+        <div class="jus-theme-banner-outer">
+            <div class="blog-banner-strip">
+                <div class="blog-banner-row blog-banner-pos-{{ banner_position }} blog-banner-size-{{ banner_size }}">
+                    <div class="blog-banner">
+                        <img
+                            src="{{ blog.profile.blog_banner.url }}"
+                            alt="Blog banner"
+                            class="blog-banner-img blog-banner-display-{{ blog.profile.blog_banner_display|default:'cover' }} blog-banner-focus-{{ blog.profile.blog_banner_focus|default:'center' }}"
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endwith %}
+{% endif %}
+
+<div class="jus-theme">
     <div class="jus-shell">
         {% if active_category or active_tag %}
         <div class="jus-filter-bar">
@@ -713,3 +889,4 @@ nav.navbar .dropdown-menu {
 {% block left_sidebar %}{% endblock %}
 {% block right_sidebar %}{% endblock %}
 {% block content %}{% endblock %}
+

@@ -910,7 +910,7 @@ DEFAULT_DESIGN_CUSTOMIZATIONS = {
     'blog_title_font': 'georgia',
     'blog_title_color': '#fff7ee',
     'post_title_font': 'georgia',
-    'post_title_color': '#fff7ef',
+    'post_title_color': '#17100b',
     'box_title_font': 'georgia',
     'box_title_color': '#fff5ea',
     'post_date_color': '#f6d0ae',

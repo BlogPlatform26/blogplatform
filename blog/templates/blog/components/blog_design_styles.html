@@ -172,6 +172,60 @@ body {
         align-self: flex-start;
     }
 }
+
+/* BLOGPLATFORM_SHARED_BANNER_POSITION_SIZE_FIX_START */
+.blog-banner-strip {
+    width: 100%;
+}
+
+.blog-banner-row {
+    display: flex;
+    width: 100%;
+}
+
+.blog-banner-pos-left {
+    justify-content: flex-start;
+}
+
+.blog-banner-pos-center {
+    justify-content: center;
+}
+
+.blog-banner-pos-right {
+    justify-content: flex-end;
+}
+
+.blog-banner-row .blog-banner {
+    width: 100%;
+}
+
+.blog-banner-size-xsmall .blog-banner {
+    max-width: 280px;
+}
+
+.blog-banner-size-small .blog-banner {
+    max-width: 480px;
+}
+
+.blog-banner-size-medium .blog-banner {
+    max-width: 760px;
+}
+
+.blog-banner-size-large .blog-banner {
+    max-width: 980px;
+}
+
+.blog-banner-size-full_width .blog-banner {
+    max-width: 100%;
+}
+
+.blog-banner-img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+/* BLOGPLATFORM_SHARED_BANNER_POSITION_SIZE_FIX_END */
+
 </style>
 
 {% if blog.profile.template == 'default_right' or blog.profile.template == 'dark_right' or blog.profile.template == 'classic_right' %}
