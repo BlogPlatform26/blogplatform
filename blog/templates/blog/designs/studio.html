@@ -123,11 +123,7 @@
         <section class="soho-sidebar-section">
             <div class="soho-section-title">Arhiva</div>
             <div class="soho-archive-list">
-                {% for a in archives %}
-                    <a class="soho-archive-link" href="{{ archive_base_url }}?year={{ a.year }}&month={{ a.month }}">{{ a.label }} ({{ a.count }})</a>
-                {% empty %}
-                    <div class="soho-empty-copy">Nema postova.</div>
-                {% endfor %}
+                {% include "blog/components/blog_archive_entries.html" with archive_link_class="soho-archive-link" archive_empty_class="soho-empty-copy" %}
             </div>
         </section>
         {% endif %}

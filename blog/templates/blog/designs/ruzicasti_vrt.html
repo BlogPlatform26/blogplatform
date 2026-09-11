@@ -666,11 +666,7 @@ nav.navbar .dropdown-menu {
             <div class="rv-side-card">
                 <div class="rv-archive-title">Arhiva bloga</div>
                 <div class="rv-archive-list">
-                    {% for a in archives %}
-                        <a class="rv-archive-link" href="{{ archive_base_url }}?year={{ a.year }}&month={{ a.month }}">{{ a.label }} ({{ a.count }})</a>
-                    {% empty %}
-                        <div class="rv-empty-copy">Nema postova.</div>
-                    {% endfor %}
+                    {% include "blog/components/blog_archive_entries.html" with archive_link_class="rv-archive-link" archive_empty_class="rv-empty-copy" %}
                 </div>
             </div>
             {% endif %}

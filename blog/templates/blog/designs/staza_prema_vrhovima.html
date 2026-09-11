@@ -623,11 +623,7 @@ nav.navbar .dropdown-menu {
             <div class="spv-side-card">
                 <div class="spv-archive-title">Arhiva bloga</div>
                 <div class="spv-archive-list">
-                    {% for a in archives %}
-                        <a class="spv-archive-link" href="{{ archive_base_url }}?year={{ a.year }}&month={{ a.month }}">{{ a.label }} ({{ a.count }})</a>
-                    {% empty %}
-                        <div class="spv-empty-copy">Nema postova.</div>
-                    {% endfor %}
+                    {% include "blog/components/blog_archive_entries.html" with archive_link_class="spv-archive-link" archive_empty_class="spv-empty-copy" %}
                 </div>
             </div>
             {% endif %}

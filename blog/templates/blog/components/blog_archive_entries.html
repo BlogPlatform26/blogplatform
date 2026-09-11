@@ -1,0 +1,5 @@
+{% for a in archives %}
+    <a class="{{ archive_link_class }}" href="{{ archive_base_url }}?year={{ a.year }}&month={{ a.month }}">{{ a.label }} ({{ a.count }})</a>
+{% empty %}
+    <div class="{{ archive_empty_class }}">Nema postova.</div>
+{% endfor %}

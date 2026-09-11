@@ -674,11 +674,7 @@ nav.navbar .dropdown-menu {
                 <section class="sa-section" id="sa-archive">
                     <div class="sa-archive-title">Arhiva bloga</div>
                     <div class="sa-archive-list">
-                        {% for a in archives %}
-                            <a class="sa-archive-link" href="{{ archive_base_url }}?year={{ a.year }}&month={{ a.month }}">{{ a.label }} ({{ a.count }})</a>
-                        {% empty %}
-                            <div class="sa-empty-copy">Nema postova.</div>
-                        {% endfor %}
+                        {% include "blog/components/blog_archive_entries.html" with archive_link_class="sa-archive-link" archive_empty_class="sa-empty-copy" %}
                     </div>
                 </section>
                 {% endif %}

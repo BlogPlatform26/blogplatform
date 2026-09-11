@@ -664,11 +664,7 @@ nav.navbar .dropdown-menu {
             <div class="pe-side-card">
                 <div class="pe-archive-title">Arhiva bloga</div>
                 <div class="pe-archive-list">
-                    {% for a in archives %}
-                        <a class="pe-archive-link" href="{{ archive_base_url }}?year={{ a.year }}&month={{ a.month }}">{{ a.label }} ({{ a.count }})</a>
-                    {% empty %}
-                        <div class="pe-empty-copy">Nema postova.</div>
-                    {% endfor %}
+                    {% include "blog/components/blog_archive_entries.html" with archive_link_class="pe-archive-link" archive_empty_class="pe-empty-copy" %}
                 </div>
             </div>
             {% endif %}
