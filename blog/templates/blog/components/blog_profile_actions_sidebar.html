@@ -30,11 +30,7 @@
 
     {% include "blog/components/blog_profile_interaction_actions.html" with profile_actions_class="blog-profile-panel__actions" profile_dropdown_class="blog-user-dropdown blog-profile-panel__dropdown" profile_dropdown_toggle_class="blog-user-dropdown-toggle blog-profile-panel__dropdown-toggle" profile_dropdown_menu_class="blog-user-dropdown-menu" profile_follow_button_extra_class="blog-profile-panel__follow-btn" profile_icon_size_class="fs-4" %}
 
-    {% if request.user.is_authenticated and request.user != blog and is_restricted %}
-        <div class="blog-profile-panel__note">
-            Ovaj autor te je ograničio pa ne možeš pratiti, lajkati ni komentirati.
-        </div>
-    {% endif %}
+    {% include "blog/components/blog_profile_restricted_note.html" with restricted_note_class="blog-profile-panel__note" %}
 </div>
 
 <style>

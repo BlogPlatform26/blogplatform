@@ -27,9 +27,7 @@
             {% if has_author_content %}
             <a href="{{ author_page_url }}" class="soho-profile-author-link">Upoznaj autora</a>
             {% endif %}
-            {% if request.user.is_authenticated and request.user != blog and is_restricted %}
-            <div class="soho-profile-note">Ovaj autor te je ograničio pa ne možeš pratiti, lajkati ni komentirati.</div>
-            {% endif %}
+            {% include "blog/components/blog_profile_restricted_note.html" with restricted_note_class="soho-profile-note" %}
         </div>
 
         {% if blog_preferences.blog_archive_mode == "both" or blog_preferences.blog_archive_mode == "calendar" %}

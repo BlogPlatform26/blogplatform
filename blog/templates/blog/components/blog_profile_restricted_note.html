@@ -1,0 +1,3 @@
+{% if request.user.is_authenticated and request.user != blog and is_restricted %}
+    <div class="{{ restricted_note_class }}">Ovaj autor te je ograničio pa ne možeš pratiti, lajkati ni komentirati.</div>
+{% endif %}
