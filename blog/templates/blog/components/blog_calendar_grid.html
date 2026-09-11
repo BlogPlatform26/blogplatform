@@ -1,0 +1,20 @@
+{% load custom_tags %}
+{% for week in month_calendar %}
+    {% for day in week %}
+        {% if day == 0 %}
+            <div class="{{ calendar_empty_class }}"></div>
+        {% else %}
+            {% with pid=day_single_post_map|get_item:day %}
+                {% if day in days_with_posts %}
+                    {% if pid %}
+                        <a href="{% url 'post_detail' pid %}" class="{{ calendar_day_class }} {{ calendar_has_post_class }} {% if day == current_day %}{{ calendar_today_class }}{% endif %}">{{ day }}</a>
+                    {% else %}
+                        <a href="{{ archive_base_url }}?year={{ current_year }}&month={{ current_month_num }}&day={{ day }}" class="{{ calendar_day_class }} {{ calendar_has_post_class }} {% if day == current_day %}{{ calendar_today_class }}{% endif %}">{{ day }}</a>
+                    {% endif %}
+                {% else %}
+                    <div class="{{ calendar_day_class }} {% if day == current_day %}{{ calendar_today_class }}{% endif %}">{{ day }}</div>
+                {% endif %}
+            {% endwith %}
+        {% endif %}
+    {% endfor %}
+{% endfor %}

@@ -610,25 +610,7 @@ nav.navbar .dropdown-menu {
                     <div>P</div><div>U</div><div>S</div><div>Č</div><div>P</div><div>S</div><div>N</div>
                 </div>
                 <div class="nk-calendar-grid">
-                    {% for week in month_calendar %}
-                        {% for day in week %}
-                            {% if day == 0 %}
-                                <div class="nk-calendar-empty"></div>
-                            {% else %}
-                                {% with pid=day_single_post_map|get_item:day %}
-                                    {% if day in days_with_posts %}
-                                        {% if pid %}
-                                            <a href="{% url 'post_detail' pid %}" class="nk-calendar-day nk-calendar-day--has-post {% if day == current_day %}nk-calendar-day--today{% endif %}">{{ day }}</a>
-                                        {% else %}
-                                            <a href="{{ archive_base_url }}?year={{ current_year }}&month={{ current_month_num }}&day={{ day }}" class="nk-calendar-day nk-calendar-day--has-post {% if day == current_day %}nk-calendar-day--today{% endif %}">{{ day }}</a>
-                                        {% endif %}
-                                    {% else %}
-                                        <div class="nk-calendar-day {% if day == current_day %}nk-calendar-day--today{% endif %}">{{ day }}</div>
-                                    {% endif %}
-                                {% endwith %}
-                            {% endif %}
-                        {% endfor %}
-                    {% endfor %}
+                    {% include "blog/components/blog_calendar_grid.html" with calendar_empty_class="nk-calendar-empty" calendar_day_class="nk-calendar-day" calendar_has_post_class="nk-calendar-day--has-post" calendar_today_class="nk-calendar-day--today" %}
                 </div>
             </div>
             {% endif %}
