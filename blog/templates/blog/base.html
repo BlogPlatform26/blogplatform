@@ -3705,6 +3705,31 @@ body #globalNavbar .notif-badge {
     text-shadow: none !important;
     box-shadow: none !important;
 }
+
+@media (max-width: 575.98px) {
+    #globalNavbar .nav-right {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    #globalNavbar .nav-right > .dropdown {
+        flex: 1 1 auto;
+        min-width: 0;
+    }
+
+    #globalNavbar .nav-user {
+        width: 100%;
+        min-width: 0;
+    }
+
+    #globalNavbar .nav-user-text {
+        min-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
 </style>
 
 </body>
