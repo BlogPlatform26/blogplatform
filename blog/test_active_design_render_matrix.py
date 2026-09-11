@@ -1,0 +1,115 @@
+from django.contrib.auth.models import User
+from django.template.loader import get_template
+from django.test import TestCase
+from django.urls import reverse
+
+from blog.models import Comment, Post, Profile
+from blog.services import resolve_design_template_name, set_blog_preferences
+
+
+class ActiveDesignRenderMatrixTests(TestCase):
+    POST_TITLE = "Registry matrix post"
+    POST_BODY = "Registry matrix body"
+    COMMENT_BODY = "Registry matrix comment"
+    CUSTOM_POST_TITLE_COLOR = "#123abc"
+
+    SPECIAL_DESIGNS = frozenset({
+        "soho",
+        "magazin",
+        "nebeska_klasika",
+        "ponocna_elegancija",
+        "ruzicasti_vrt",
+        "stara_aleja",
+        "staza_prema_vrhovima",
+        "jedro_u_suton",
+        "misticno_jezero",
+    })
+
+    @classmethod
+    def setUpTestData(cls):
+        cls.author = User.objects.create_user(
+            username="design-matrix-author",
+            password="test-password",
+        )
+        cls.author.profile.blog_name = "Registry matrix blog"
+        cls.author.profile.save(update_fields=["blog_name"])
+
+        cls.post = Post.objects.create(
+            author=cls.author,
+            title=cls.POST_TITLE,
+            content=f"<p>{cls.POST_BODY}</p>",
+            status="published",
+        )
+        cls.commenter = User.objects.create_user(
+            username="design-matrix-commenter",
+            password="test-password",
+        )
+        Comment.objects.create(
+            post=cls.post,
+            author=cls.commenter,
+            content=cls.COMMENT_BODY,
+        )
+
+        registry_keys = cls.registry_keys()
+        set_blog_preferences(cls.author, {
+            "blog_archive_mode": "both",
+            "design_customizations": {
+                key: {"post_title_color": cls.CUSTOM_POST_TITLE_COLOR}
+                for key in registry_keys
+            },
+        })
+
+    @classmethod
+    def registry_keys(cls):
+        return tuple(key for key, _label in Profile.TEMPLATE_CHOICES)
+
+    def test_every_registered_design_renders_public_blog(self):
+        registry = set(self.registry_keys())
+        families = {
+            "special": self.SPECIAL_DESIGNS,
+            "standard_shared": registry - self.SPECIAL_DESIGNS,
+        }
+
+        self.assertFalse(families["special"] - registry)
+        self.assertFalse(families["special"] & families["standard_shared"])
+        self.assertEqual(set().union(*families.values()), registry)
+        self.assertEqual(len(registry), len(self.registry_keys()))
+
+        url = reverse("user_blog", args=[self.author.username])
+        for family, template_keys in families.items():
+            for template_key in sorted(template_keys):
+                with self.subTest(family=family, template=template_key):
+                    self.author.profile.template = template_key
+                    self.author.profile.save(update_fields=["template"])
+
+                    expected_template = resolve_design_template_name(template_key)
+                    self.assertIsNotNone(get_template(expected_template))
+
+                    response = self.client.get(url)
+
+                    self.assertEqual(response.status_code, 200)
+                    self.assertTemplateUsed(response, expected_template)
+                    self.assertContains(response, self.POST_TITLE, html=False)
+                    self.assertContains(response, self.POST_BODY, html=False)
+                    self.assertContains(
+                        response,
+                        f'id="comments-{self.post.pk}"',
+                        html=False,
+                    )
+                    self.assertContains(
+                        response,
+                        f"--post-title-color: {self.CUSTOM_POST_TITLE_COLOR};",
+                        html=False,
+                    )
+
+                    self.assertEqual(list(response.context["page_obj"]), [self.post])
+                    self.assertTrue(
+                        self.post.comments.filter(content=self.COMMENT_BODY).exists()
+                    )
+                    self.assertTrue(response.context["month_calendar"])
+                    self.assertTrue(response.context["archives"])
+                    self.assertEqual(
+                        response.context["blog_preferences"]
+                        ["active_design_customization"]["post_title_color"],
+                        self.CUSTOM_POST_TITLE_COLOR,
+                    )
