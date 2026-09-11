@@ -16,63 +16,7 @@
             <div class="magazin-profile-top-row">
                 <div class="magazin-profile-name">{{ blog.username }}</div>
 
-                {% if request.user.is_authenticated and request.user != blog %}
-                <div class="magazin-profile-actions">
-                    {% if not is_restricted %}
-                        <form method="post" action="{% url 'follow_toggle' blog.username %}" class="m-0">
-                            {% csrf_token %}
-                            <button type="submit" class="btn {% if is_following %}btn-outline-primary{% else %}btn-primary{% endif %} btn-sm">
-                                {% if is_following %}Pratiš{% else %}Prati{% endif %}
-                            </button>
-                        </form>
-                    {% endif %}
-
-                    <div class="dropdown magazin-profile-dropdown">
-                        <a class="magazin-profile-dropdown-toggle"
-                           href="#"
-                           role="button"
-                           data-bs-toggle="dropdown"
-                           aria-expanded="false"
-                           title="Više opcija">
-                            <i class="bi bi-three-dots fs-5"></i>
-                        </a>
-
-                        <ul class="dropdown-menu dropdown-menu-end magazin-profile-dropdown-menu">
-                            {% if is_following %}
-                                <li>
-                                    <form method="post" action="{% url 'unfollow_user' blog.username %}" class="m-0">
-                                        {% csrf_token %}
-                                        <button type="submit" class="dropdown-item">Prestani pratiti</button>
-                                    </form>
-                                </li>
-                            {% else %}
-                                <li>
-                                    <form method="post" action="{% url 'follow_toggle' blog.username %}" class="m-0">
-                                        {% csrf_token %}
-                                        <button type="submit" class="dropdown-item" {% if is_restricted %}disabled{% endif %}>Prati korisnika</button>
-                                    </form>
-                                </li>
-                            {% endif %}
-
-                            <li>
-                                <form method="post" action="{% url 'restrict_user' blog.username %}" class="m-0">
-                                    {% csrf_token %}
-                                    <button type="submit" class="dropdown-item">Ograniči korisnika</button>
-                                </form>
-                            </li>
-
-                            <li><hr class="dropdown-divider"></li>
-
-                            <li>
-                                <form method="post" action="{% url 'block_user' blog.username %}" class="m-0">
-                                    {% csrf_token %}
-                                    <button type="submit" class="dropdown-item text-danger">Blokiraj korisnika</button>
-                                </form>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                {% endif %}
+                {% include "blog/components/blog_profile_interaction_actions.html" with profile_actions_class="magazin-profile-actions" profile_dropdown_class="magazin-profile-dropdown" profile_dropdown_toggle_class="magazin-profile-dropdown-toggle" profile_dropdown_menu_class="magazin-profile-dropdown-menu" profile_follow_button_extra_class="" profile_icon_size_class="fs-5" %}
             </div>
 
             <div class="magazin-profile-meta">{{ followers_count }} pratitelja · {{ following_count }} prati</div>
