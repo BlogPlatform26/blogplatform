@@ -1,0 +1,18 @@
+{% load custom_tags %}
+{# Extracted from blog/designs/ponocna_elegancija.html. #}
+{# Uses existing template context: post, blog_preferences, request, user, etc. #}
+<article class="pe-post">
+                    <div class="pe-post-date">{{ post.publication_datetime|date:"d.m.Y" }}</div>
+                    <div class="pe-post-divider"></div>
+                    <div class="d-flex flex-column" style="gap: 10px; min-width: 0;">
+                        <h4 class="mb-0">{{ post.title }}</h4>
+                        {% include "blog/components/post_meta.html" %}
+                    </div>
+
+                    <div class="mt-4">
+                        {% include "blog/components/post_body.html" %}
+                    </div>
+
+                    {% include "blog/components/post_actions.html" %}
+                    {% include "blog/components/post_comments.html" %}
+                </article>
