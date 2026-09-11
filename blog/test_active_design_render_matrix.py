@@ -113,3 +113,26 @@ class ActiveDesignRenderMatrixTests(TestCase):
                         ["active_design_customization"]["post_title_color"],
                         self.CUSTOM_POST_TITLE_COLOR,
                     )
+
+    def test_terminal_body_theme_css_is_scoped_to_its_intended_family(self):
+        url = reverse("user_blog", args=[self.author.username])
+        css_expectations = {
+            "default": "body { background:#ffffff; color:#1f2937;",
+            "dark": "body { background-color:#111; color:#fff;",
+            "classic": "body { background:#f6f6f4; color:#1f1f1f;",
+            "litica_noci": "background: #000000;",
+        }
+        default_fallback = css_expectations["default"]
+
+        for template_key, expected_css in css_expectations.items():
+            with self.subTest(template=template_key):
+                self.author.profile.template = template_key
+                self.author.profile.save(update_fields=["template"])
+
+                response = self.client.get(url)
+                content = response.content.decode(response.charset)
+
+                self.assertEqual(response.status_code, 200)
+                self.assertContains(response, expected_css, html=False)
+                if template_key != "default":
+                    self.assertNotIn(default_fallback, content)

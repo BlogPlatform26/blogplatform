@@ -2189,7 +2189,7 @@ textarea::placeholder{ color:#777 !important; }
 .post-author-link{ color:#555; opacity:0.8; }
 .post-views{ color:#7a2cff; opacity:0.9; }
 </style>
-{% else %}
+{% elif blog.profile.template == 'default' or blog.profile.template == 'default_right' %}
 <style>
 body { background:#ffffff; color:#1f2937; --analytics-stat-card-bg: #fffaf4; --analytics-stat-card-border: rgba(122,44,255,0.10); --analytics-stat-card-color: #3f3128; --analytics-stat-value-color: #6b4b2f; --analytics-stat-label-color: #7a6a5c; --analytics-stat-card-shadow: 0 5px 14px rgba(122,44,255,0.04); --analytics-page-row-bg: #fffaf4; --analytics-page-row-border: rgba(122,44,255,0.10); --analytics-page-row-color: #3f3128; --analytics-map-card-bg: linear-gradient(180deg, rgba(255,250,244,0.99) 0%, rgba(250,243,234,0.99) 100%); --analytics-map-card-border: rgba(122,44,255,0.10); --analytics-map-card-shadow: 0 10px 22px rgba(122,44,255,0.05); }
 a { color:#7a2cff; text-decoration:none; }
