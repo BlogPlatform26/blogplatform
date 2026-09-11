@@ -483,6 +483,24 @@ class BlogDesignPreference(models.Model):
     def __str__(self):
         return self.template
 
+
+class UserBlogPreference(models.Model):
+    user = models.OneToOneField(
+        User,
+        on_delete=models.CASCADE,
+        related_name="blog_preferences",
+    )
+    data = models.JSONField(default=dict, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = "Korisničke postavke bloga"
+        verbose_name_plural = "Korisničke postavke blogova"
+
+    def __str__(self):
+        return f"Postavke bloga: {self.user}"
+
 class UserBox(models.Model):
     POSITION_CHOICES = (
         ("left", "Left"),
