@@ -46,10 +46,10 @@ nav.navbar .dropdown-menu {
 
 .nk-title {
     margin: 0 0 6px 0;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(1.7rem, 3vw, 2.35rem);
+    font-family: var(--blog-title-font, Georgia, "Times New Roman", serif);
+    font-size: var(--blog-title-size, clamp(1.7rem, 3vw, 2.35rem));
     line-height: 1.03;
-    color: #514d57;
+    color: var(--blog-title-color, #514d57);
     text-shadow: 0 2px 12px rgba(255,255,255,0.55);
 }
 
@@ -106,9 +106,9 @@ nav.navbar .dropdown-menu {
 .nk-post h4,
 .nk-post h4 a,
 .nk-post .blog-post-title {
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: var(--post-title-font, Georgia, "Times New Roman", serif);
     color: var(--post-title-color, #534842) !important;
-    font-size: clamp(1.8rem, 3vw, 2.2rem);
+    font-size: var(--post-title-size, clamp(1.8rem, 3vw, 2.2rem));
     text-decoration: none;
 }
 
@@ -182,9 +182,9 @@ nav.navbar .dropdown-menu {
 }
 
 .nk-side-title {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 1.35rem;
-    color: #584d46;
+    font-family: var(--box-title-font, Georgia, "Times New Roman", serif);
+    font-size: var(--box-title-size, 1.35rem);
+    color: var(--box-title-color, #584d46);
     margin-bottom: 10px;
 }
 
@@ -221,9 +221,9 @@ nav.navbar .dropdown-menu {
 .nk-calendar-title,
 .nk-box-title,
 .nk-archive-title {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 1.2rem;
-    color: #584d46;
+    font-family: var(--box-title-font, Georgia, "Times New Roman", serif);
+    font-size: var(--box-title-size, 1.2rem);
+    color: var(--box-title-color, #584d46);
     margin-bottom: 10px;
     padding-bottom: 8px;
     border-bottom: 1px solid rgba(190, 177, 161, 0.72);
@@ -544,7 +544,7 @@ nav.navbar .dropdown-menu {
 </style>
 
 <div class="nk-theme">
-    <h1 class="nk-title">{{ blog.profile.blog_name|default:blog.username }}</h1>
+    <h1 class="nk-title blog-page-title">{{ blog.profile.blog_name|default:blog.username }}</h1>
 
     {% if blog.profile.blog_tagline %}<p class="blog-tagline-shared">{{ blog.profile.blog_tagline }}</p>{% endif %}
 
@@ -598,13 +598,13 @@ nav.navbar .dropdown-menu {
 
         <aside class="nk-side-stack">
             <div class="nk-profile-wrap nk-side-card" id="nk-author">
-                <div class="nk-side-title">O autoru</div>
+                <div class="nk-side-title box-title">O autoru</div>
                 {% include "blog/components/blog_profile_actions_sidebar.html" %}
             </div>
 
             {% if blog_preferences.blog_archive_mode == "both" or blog_preferences.blog_archive_mode == "calendar" %}
             <div class="nk-side-card">
-                <div class="nk-calendar-title">Kalendar</div>
+                <div class="nk-calendar-title box-title">Kalendar</div>
                 <div class="nk-calendar-month calendar-month-nav"><a href="{{ prev_month_url }}" class="calendar-month-nav-link" aria-label="Prethodni mjesec">&#8249;</a><span>{{ current_month_hr|upper }}, {{ current_year }}</span><a href="{{ next_month_url }}" class="calendar-month-nav-link" aria-label="Sljedeći mjesec">&#8250;</a></div>
                 <div class="nk-calendar-weekdays">
                     <div>P</div><div>U</div><div>S</div><div>Č</div><div>P</div><div>S</div><div>N</div>
@@ -617,7 +617,7 @@ nav.navbar .dropdown-menu {
 
             {% if blog_preferences.blog_archive_mode == "both" or blog_preferences.blog_archive_mode == "list" %}
             <div class="nk-side-card" id="nk-archive">
-                <div class="nk-archive-title">Arhiva bloga</div>
+                <div class="nk-archive-title box-title">Arhiva bloga</div>
                 <div class="nk-archive-list">
                     {% include "blog/components/blog_archive_entries.html" with archive_link_class="nk-archive-link" archive_empty_class="nk-empty-copy" %}
                 </div>
@@ -632,14 +632,14 @@ nav.navbar .dropdown-menu {
 
             {% for box in left_boxes %}
             <div class="nk-side-card">
-                <div class="nk-box-title">{{ box.title }}</div>
+                <div class="nk-box-title box-title">{{ box.title }}</div>
                 <div class="nk-box-content">{{ box.content|safe }}</div>
             </div>
             {% endfor %}
 
             {% for box in right_boxes %}
             <div class="nk-side-card">
-                <div class="nk-box-title">{{ box.title }}</div>
+                <div class="nk-box-title box-title">{{ box.title }}</div>
                 <div class="nk-box-content">{{ box.content|safe }}</div>
             </div>
             {% endfor %}

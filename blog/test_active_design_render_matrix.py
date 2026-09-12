@@ -3,7 +3,7 @@ from django.template.loader import get_template
 from django.test import TestCase
 from django.urls import reverse
 
-from blog.models import Comment, Post, Profile
+from blog.models import Comment, Post, Profile, UserBox
 from blog.services import resolve_design_template_name, set_blog_preferences
 
 
@@ -199,3 +199,40 @@ class ActiveDesignRenderMatrixTests(TestCase):
         self.assertIn('class="magazin-section-title box-title">Kalendar', content)
         self.assertIn('class="magazin-calendar-title box-title calendar-month-nav"', content)
         self.assertIn('class="magazin-section-title box-title">Arhiva', content)
+
+    def test_nebeska_klasika_editor_targets_use_shared_contract(self):
+        self.author.profile.template = "nebeska_klasika"
+        self.author.profile.save(update_fields=["template"])
+        UserBox.objects.create(
+            user=self.author,
+            title="Nebeska test box",
+            content="Box content",
+            position="left",
+        )
+
+        response = self.client.get(
+            reverse("user_blog", args=[self.author.username])
+        )
+        content = response.content.decode(response.charset)
+
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, "blog/designs/nebeska_klasika.html")
+        self.assertIn('class="nk-title blog-page-title"', content)
+        self.assertIn('class="mb-0 blog-post-title"', content)
+        self.assertIn('class="nk-side-title box-title">O autoru', content)
+        self.assertIn('class="nk-calendar-title box-title">Kalendar', content)
+        self.assertIn('class="nk-archive-title box-title">Arhiva bloga', content)
+        self.assertIn(
+            'class="nk-box-title box-title">Nebeska test box',
+            content,
+        )
+        self.assertIn('class="nk-post-date blog-date-shell ', content)
+        self.assertIn('class="blog-date-main"', content)
+        self.assertIn('class="blog-date-inline"', content)
+        self.assertIn("font-family: var(--blog-title-font, Georgia", content)
+        self.assertIn("font-size: var(--blog-title-size, clamp(1.7rem", content)
+        self.assertIn("color: var(--blog-title-color, #514d57)", content)
+        self.assertIn("font-family: var(--post-title-font, Georgia", content)
+        self.assertIn("font-size: var(--post-title-size, clamp(1.8rem", content)
+        self.assertIn("font-family: var(--box-title-font, Georgia", content)
+        self.assertIn("color: var(--box-title-color, #584d46)", content)
