@@ -183,3 +183,19 @@ class ActiveDesignRenderMatrixTests(TestCase):
 }""",
             content,
         )
+
+    def test_magazin_editor_targets_use_shared_semantic_classes(self):
+        self.author.profile.template = "magazin"
+        self.author.profile.save(update_fields=["template"])
+
+        response = self.client.get(
+            reverse("user_blog", args=[self.author.username])
+        )
+        content = response.content.decode(response.charset)
+
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, "blog/designs/magazin.html")
+        self.assertIn('class="magazin-blog-title blog-page-title"', content)
+        self.assertIn('class="magazin-section-title box-title">Kalendar', content)
+        self.assertIn('class="magazin-calendar-title box-title calendar-month-nav"', content)
+        self.assertIn('class="magazin-section-title box-title">Arhiva', content)

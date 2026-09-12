@@ -29,8 +29,8 @@
 
         {% if blog_preferences.blog_archive_mode == "both" or blog_preferences.blog_archive_mode == "calendar" %}
         <section class="magazin-sidebar-section">
-            <div class="magazin-section-title">Kalendar</div>
-            <div class="magazin-calendar-title calendar-month-nav"><a href="{{ prev_month_url }}" class="calendar-month-nav-link" aria-label="Prethodni mjesec">&#8249;</a><span>{{ current_month_hr|upper }}, {{ current_year }}</span><a href="{{ next_month_url }}" class="calendar-month-nav-link" aria-label="Sljedeći mjesec">&#8250;</a></div>
+            <div class="magazin-section-title box-title">Kalendar</div>
+            <div class="magazin-calendar-title box-title calendar-month-nav"><a href="{{ prev_month_url }}" class="calendar-month-nav-link" aria-label="Prethodni mjesec">&#8249;</a><span>{{ current_month_hr|upper }}, {{ current_year }}</span><a href="{{ next_month_url }}" class="calendar-month-nav-link" aria-label="Sljedeći mjesec">&#8250;</a></div>
             <div class="magazin-calendar-weekdays">
                 <div>P</div><div>U</div><div>S</div><div>Č</div><div>P</div><div>S</div><div>N</div>
             </div>
@@ -42,7 +42,7 @@
 
         {% if blog_preferences.blog_archive_mode == "both" or blog_preferences.blog_archive_mode == "list" %}
         <section class="magazin-sidebar-section">
-            <div class="magazin-section-title">Arhiva</div>
+            <div class="magazin-section-title box-title">Arhiva</div>
             <div class="magazin-archive-list">
                 {% include "blog/components/blog_archive_entries.html" with archive_link_class="magazin-archive-link" archive_empty_class="magazin-empty-copy" %}
             </div>
@@ -57,7 +57,7 @@
 
         {% for box in left_boxes %}
         <section class="magazin-sidebar-section magazin-sidebar-section--box">
-            <div class="magazin-section-title">{{ box.title }}</div>
+            <div class="magazin-section-title box-title">{{ box.title }}</div>
             <div class="magazin-sidebar-box-content">{{ box.content|safe }}</div>
         </section>
         {% endfor %}
@@ -70,7 +70,7 @@
 
         {% for box in right_boxes %}
         <section class="magazin-sidebar-section magazin-sidebar-section--box">
-            <div class="magazin-section-title">{{ box.title }}</div>
+            <div class="magazin-section-title box-title">{{ box.title }}</div>
             <div class="magazin-sidebar-box-content">{{ box.content|safe }}</div>
         </section>
         {% endfor %}
@@ -585,7 +585,7 @@ textarea.form-control:focus {
             {% endif %}
         </div>
         <div class="magazin-hero-overlay">
-            <h1 class="magazin-blog-title">{{ blog.profile.blog_name }}</h1>
+            <h1 class="magazin-blog-title blog-page-title">{{ blog.profile.blog_name }}</h1>
 
     {% if blog.profile.blog_tagline %}<p class="blog-tagline-shared">{{ blog.profile.blog_tagline }}</p>{% endif %}
         </div>
