@@ -136,3 +136,25 @@ class ActiveDesignRenderMatrixTests(TestCase):
                 self.assertContains(response, expected_css, html=False)
                 if template_key != "default":
                     self.assertNotIn(default_fallback, content)
+
+    def test_soho_mobile_columns_override_fixed_desktop_widths(self):
+        self.author.profile.template = "soho"
+        self.author.profile.save(update_fields=["template"])
+
+        response = self.client.get(
+            reverse("user_blog", args=[self.author.username])
+        )
+        content = response.content.decode(response.charset)
+
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, "blog/designs/studio.html")
+        self.assertIn(
+            """@media (max-width: 991.98px) {
+    .blog-main-left-column,
+    .blog-main-content-column {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }""",
+            content,
+        )
