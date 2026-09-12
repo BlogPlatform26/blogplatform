@@ -158,3 +158,28 @@ class ActiveDesignRenderMatrixTests(TestCase):
     }""",
             content,
         )
+
+    def test_magazin_full_width_css_does_not_use_viewport_width(self):
+        self.author.profile.template = "magazin"
+        self.author.profile.save(update_fields=["template"])
+
+        response = self.client.get(
+            reverse("user_blog", args=[self.author.username])
+        )
+        content = response.content.decode(response.charset)
+
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, "blog/designs/magazin.html")
+        self.assertNotIn("width: 100vw !important;", content)
+        self.assertNotIn("calc(50% - 50vw)", content)
+        self.assertIn(
+            """.container-fluid.mt-3 {
+    margin-top: 0 !important;
+    padding: 0 !important;
+    max-width: none !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}""",
+            content,
+        )
