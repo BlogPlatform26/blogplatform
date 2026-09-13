@@ -120,6 +120,18 @@ global override; otherwise remove the misleading inactive contract.
 
 ## Final gates
 
+### Priority follow-up fixed during audit
+
+The user screenshot exposed a separate live-preview repaint defect for
+`boxed_number` + gradient at 170%. DOM inspection showed one primary shell,
+one main representation, one inline representation, and one day/month/year;
+the apparent copies were not DOM duplication. The live editor was applying
+`transform: scale(...)` and gradient clipping to both `.blog-date-shell` and
+every descendant, recursively multiplying scale and creating compositing
+ghosts. The obsolete direct-style block was removed; CSS variables, semantic
+classes, and the centralized date stylesheet now remain the sole renderer.
+This preserves gradient and the 70–170% range without timers or repaint hacks.
+
 - `python manage.py check`: 0 issues;
 - `python manage.py makemigrations --check --dry-run`: no changes;
 - complete existing Django suite: 27/27 passed;

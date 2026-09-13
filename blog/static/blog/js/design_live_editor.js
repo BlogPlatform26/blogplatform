@@ -459,55 +459,6 @@ resizeIframe();
     `;
 
     
-  // BLOGPLATFORM_DIRECT_DATE_STYLE_START
-  const dateScale = (parseInt(size, 10) || 100) / 100;
-
-  function applyDirectDateStyle(selector, styles) {
-    doc.querySelectorAll(selector).forEach(function (element) {
-      Object.keys(styles).forEach(function (property) {
-        element.style.setProperty(property, styles[property], 'important');
-      });
-    });
-  }
-
-  const shellStyles = {
-    'transform': 'scale(' + dateScale + ')',
-    'transform-origin': 'top left'
-  };
-
-  if (effect === 'gradient') {
-    shellStyles.background = 'linear-gradient(135deg, ' + color1 + ', ' + color2 + ')';
-    shellStyles['-webkit-background-clip'] = 'text';
-    shellStyles['background-clip'] = 'text';
-    shellStyles.color = 'transparent';
-    shellStyles['-webkit-text-fill-color'] = 'transparent';
-  } else {
-    shellStyles.background = 'none';
-    shellStyles.color = color1;
-    shellStyles['-webkit-text-fill-color'] = color1;
-  }
-
-  applyDirectDateStyle(
-    '.blog-date-shell, .blog-date-shell *',
-    shellStyles
-  );
-
-  applyDirectDateStyle(
-    '.blog-date-day, .blog-date-shell .blog-date-day',
-    {
-      'color': effect === 'gradient' ? 'transparent' : color1,
-      '-webkit-text-fill-color': effect === 'gradient' ? 'transparent' : color1
-    }
-  );
-
-  applyDirectDateStyle(
-    '.blog-date-month, .blog-date-year, .blog-date-shell .blog-date-month, .blog-date-shell .blog-date-year',
-    {
-      'color': effect === 'duo' ? color2 : effect === 'gradient' ? 'transparent' : color1,
-      '-webkit-text-fill-color': effect === 'duo' ? color2 : effect === 'gradient' ? 'transparent' : color1
-    }
-  );
-  // BLOGPLATFORM_DIRECT_DATE_STYLE_END
 
 updateDateEditorMode();
     resizeIframe();
