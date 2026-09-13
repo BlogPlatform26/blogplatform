@@ -110,6 +110,12 @@ class ActiveDesignRenderMatrixTests(TestCase):
                         count=1,
                         html=False,
                     )
+                    self.assertContains(
+                        response,
+                        'id="blogplatform-date-style-contract"',
+                        count=1,
+                        html=False,
+                    )
                     publication_datetime = timezone.localtime(
                         self.post.publication_datetime
                     )
@@ -123,7 +129,7 @@ class ActiveDesignRenderMatrixTests(TestCase):
                         flags=re.DOTALL,
                     )
                     self.assertIsNotNone(author_line)
-                    self.assertNotIn(
+                    self.assertIn(
                         duplicate_author_line_date,
                         author_line.group(1),
                     )
@@ -162,6 +168,51 @@ class ActiveDesignRenderMatrixTests(TestCase):
                 self.assertContains(response, expected_css, html=False)
                 if template_key != "default":
                     self.assertNotIn(default_fallback, content)
+
+    def test_shared_date_style_contract_preserves_all_style_families(self):
+        self.author.profile.template = "nebeska_klasika"
+        self.author.profile.save(update_fields=["template"])
+
+        response = self.client.get(
+            reverse("user_blog", args=[self.author.username])
+        )
+        content = response.content.decode(response.charset)
+
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(content.count('id="blogplatform-date-style-contract"'), 1)
+        self.assertIn(
+            "--date-scale-factor: calc(var(--post-date-scale, 100) / 100);",
+            content,
+        )
+        self.assertIn(".blog-date-shell.blog-date-effect-solid", content)
+        self.assertIn(".blog-date-shell.blog-date-effect-duo", content)
+        self.assertIn(".blog-date-shell.blog-date-effect-gradient", content)
+        for style in (
+            "classic_vertical",
+            "slim_vertical",
+            "card",
+            "minimal_inline",
+            "split",
+            "ribbon",
+            "boxed_number",
+            "corner_tag",
+            "soft",
+            "newspaper",
+        ):
+            with self.subTest(style=style):
+                self.assertIn(f".blog-date-style-{style}", content)
+        self.assertIn(
+            ".blog-date-shell.blog-date-style-minimal_inline .blog-date-main,",
+            content,
+        )
+        self.assertIn(
+            ".blog-date-shell.blog-date-style-minimal_inline .blog-date-inline,",
+            content,
+        )
+        self.assertIn(
+            ".blog-date-shell.blog-date-style-split .blog-date-main,",
+            content,
+        )
 
     def test_soho_mobile_columns_override_fixed_desktop_widths(self):
         self.author.profile.template = "soho"

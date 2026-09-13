@@ -1,0 +1,299 @@
+<style id="blogplatform-date-style-contract">
+.blog-date-shell{
+    --date-primary: var(--post-date-color-1, var(--post-date-color, #d97706));
+    --date-secondary: var(--post-date-color-2, var(--post-date-color, #ffd200));
+    --date-scale-factor: calc(var(--post-date-scale, 100) / 100);
+    min-width: max-content !important;
+    color: var(--date-primary) !important;
+}
+
+.blog-date-shell,
+.blog-date-shell *{
+    box-sizing:border-box;
+}
+
+.blog-date-shell .blog-date-main{
+    display:flex !important;
+    flex-direction:column;
+    align-items:center;
+    gap:3px;
+}
+
+.blog-date-shell .blog-date-day-wrap,
+.blog-date-shell .blog-date-text{
+    display:flex !important;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:2px;
+}
+
+.blog-date-shell .blog-date-inline{
+    display:none;
+    align-items:center;
+    gap:6px;
+    flex-wrap:wrap;
+    justify-content:flex-end;
+}
+
+.blog-date-shell .blog-date-day,
+.blog-date-shell .blog-date-inline-day{
+    font-size:calc(29px * var(--date-scale-factor)) !important;
+    font-weight:700 !important;
+    line-height:0.95 !important;
+    color:var(--date-day-color, var(--date-primary)) !important;
+}
+
+.blog-date-shell .blog-date-month,
+.blog-date-shell .blog-date-inline-month{
+    font-size:calc(11px * var(--date-scale-factor)) !important;
+    text-transform:uppercase !important;
+    letter-spacing:0.08em !important;
+    line-height:1 !important;
+    color:var(--date-text-color, var(--date-primary)) !important;
+}
+
+.blog-date-shell .blog-date-year,
+.blog-date-shell .blog-date-inline-year,
+.blog-date-shell .blog-date-inline-sep{
+    font-size:calc(10px * var(--date-scale-factor)) !important;
+    line-height:1 !important;
+    color:var(--date-muted-color, var(--date-text-color, var(--date-primary))) !important;
+    opacity:0.72;
+}
+
+.blog-date-shell.blog-date-effect-solid{
+    --date-day-color: var(--date-primary);
+    --date-text-color: var(--date-primary);
+    --date-muted-color: var(--date-primary);
+    --date-accent-color: var(--date-primary);
+    --date-bg-soft: color-mix(in srgb, var(--date-primary) 10%, transparent);
+}
+
+.blog-date-shell.blog-date-effect-duo{
+    --date-day-color: var(--date-primary);
+    --date-text-color: var(--date-secondary);
+    --date-muted-color: var(--date-secondary);
+    --date-accent-color: var(--date-secondary);
+    --date-bg-soft: color-mix(in srgb, var(--date-secondary) 12%, transparent);
+}
+
+.blog-date-shell.blog-date-effect-solid .blog-date-day,
+.blog-date-shell.blog-date-effect-solid .blog-date-month,
+.blog-date-shell.blog-date-effect-solid .blog-date-year,
+.blog-date-shell.blog-date-effect-solid .blog-date-inline-day,
+.blog-date-shell.blog-date-effect-solid .blog-date-inline-month,
+.blog-date-shell.blog-date-effect-solid .blog-date-inline-year,
+.blog-date-shell.blog-date-effect-solid .blog-date-inline-sep{
+    background:none !important;
+    background-image:none !important;
+    -webkit-background-clip:border-box !important;
+    background-clip:border-box !important;
+    -webkit-text-fill-color:currentColor !important;
+    color:var(--date-primary) !important;
+}
+
+.blog-date-shell.blog-date-effect-duo .blog-date-day,
+.blog-date-shell.blog-date-effect-duo .blog-date-inline-day{
+    background:none !important;
+    background-image:none !important;
+    -webkit-background-clip:border-box !important;
+    background-clip:border-box !important;
+    -webkit-text-fill-color:currentColor !important;
+    color:var(--date-primary) !important;
+}
+
+.blog-date-shell.blog-date-effect-duo .blog-date-month,
+.blog-date-shell.blog-date-effect-duo .blog-date-year,
+.blog-date-shell.blog-date-effect-duo .blog-date-inline-month,
+.blog-date-shell.blog-date-effect-duo .blog-date-inline-year,
+.blog-date-shell.blog-date-effect-duo .blog-date-inline-sep{
+    background:none !important;
+    background-image:none !important;
+    -webkit-background-clip:border-box !important;
+    background-clip:border-box !important;
+    -webkit-text-fill-color:currentColor !important;
+    color:var(--date-secondary) !important;
+}
+
+.blog-date-shell.blog-date-effect-gradient{
+    --date-day-color: var(--date-primary);
+    --date-text-color: var(--date-secondary);
+    --date-muted-color: var(--date-secondary);
+    --date-accent-color: var(--date-secondary);
+    --date-bg-soft: linear-gradient(135deg, color-mix(in srgb, var(--date-primary) 12%, transparent), color-mix(in srgb, var(--date-secondary) 12%, transparent));
+}
+
+.blog-date-shell.blog-date-effect-gradient .blog-date-day,
+.blog-date-shell.blog-date-effect-gradient .blog-date-month,
+.blog-date-shell.blog-date-effect-gradient .blog-date-inline-day,
+.blog-date-shell.blog-date-effect-gradient .blog-date-inline-month{
+    background:linear-gradient(135deg, var(--date-primary), var(--date-secondary)) !important;
+    background-image:linear-gradient(135deg, var(--date-primary), var(--date-secondary)) !important;
+    -webkit-background-clip:text !important;
+    background-clip:text !important;
+    -webkit-text-fill-color:transparent !important;
+    color:transparent !important;
+}
+
+.blog-date-shell.blog-date-effect-gradient .blog-date-year,
+.blog-date-shell.blog-date-effect-gradient .blog-date-inline-year,
+.blog-date-shell.blog-date-effect-gradient .blog-date-inline-sep{
+    background:none !important;
+    background-image:none !important;
+    -webkit-background-clip:border-box !important;
+    background-clip:border-box !important;
+    -webkit-text-fill-color:currentColor !important;
+    color:var(--date-secondary) !important;
+}
+
+.blog-date-shell.blog-date-style-classic_vertical .blog-date-main{
+    align-items:center !important;
+}
+
+.blog-date-shell.blog-date-style-slim_vertical .blog-date-main{
+    gap:1px !important;
+}
+.blog-date-shell.blog-date-style-slim_vertical .blog-date-day{
+    font-size:calc(25px * var(--date-scale-factor)) !important;
+    letter-spacing:0.05em !important;
+}
+.blog-date-shell.blog-date-style-slim_vertical .blog-date-month,
+.blog-date-shell.blog-date-style-slim_vertical .blog-date-year{
+    font-size:calc(9px * var(--date-scale-factor)) !important;
+    letter-spacing:0.18em !important;
+}
+
+.blog-date-shell.blog-date-style-card{
+    padding:calc(10px * var(--date-scale-factor)) calc(12px * var(--date-scale-factor)) !important;
+    border-radius:16px !important;
+    border:1px solid color-mix(in srgb, var(--date-accent-color, var(--date-primary)) 40%, transparent) !important;
+    background:var(--date-bg-soft) !important;
+    box-shadow:0 10px 22px rgba(15,23,42,0.08) !important;
+}
+.blog-date-shell.blog-date-style-card .blog-date-main{
+    gap:4px !important;
+}
+
+.blog-date-shell.blog-date-style-minimal_inline .blog-date-main,
+.blog-date-shell.blog-date-style-ribbon .blog-date-main,
+.blog-date-shell.blog-date-style-corner_tag .blog-date-main{
+    display:none !important;
+}
+.blog-date-shell.blog-date-style-minimal_inline .blog-date-inline,
+.blog-date-shell.blog-date-style-ribbon .blog-date-inline,
+.blog-date-shell.blog-date-style-corner_tag .blog-date-inline{
+    display:flex !important;
+}
+.blog-date-shell.blog-date-style-minimal_inline .blog-date-inline{
+    gap:7px !important;
+}
+.blog-date-shell.blog-date-style-minimal_inline .blog-date-inline-day,
+.blog-date-shell.blog-date-style-minimal_inline .blog-date-inline-month,
+.blog-date-shell.blog-date-style-minimal_inline .blog-date-inline-year{
+    font-size:calc(12px * var(--date-scale-factor)) !important;
+    font-weight:700 !important;
+}
+
+.blog-date-shell.blog-date-style-split .blog-date-main,
+.blog-date-shell.blog-date-style-boxed_number .blog-date-main,
+.blog-date-shell.blog-date-style-newspaper .blog-date-main{
+    flex-direction:row !important;
+    align-items:center !important;
+    gap:calc(8px * var(--date-scale-factor)) !important;
+}
+.blog-date-shell.blog-date-style-split .blog-date-text,
+.blog-date-shell.blog-date-style-boxed_number .blog-date-text,
+.blog-date-shell.blog-date-style-newspaper .blog-date-text{
+    align-items:flex-start !important;
+}
+.blog-date-shell.blog-date-style-split .blog-date-day{
+    font-size:calc(34px * var(--date-scale-factor)) !important;
+}
+.blog-date-shell.blog-date-style-split .blog-date-month,
+.blog-date-shell.blog-date-style-split .blog-date-year{
+    font-size:calc(10px * var(--date-scale-factor)) !important;
+}
+
+.blog-date-shell.blog-date-style-ribbon .blog-date-inline{
+    padding:calc(6px * var(--date-scale-factor)) calc(10px * var(--date-scale-factor)) !important;
+    border-radius:999px !important;
+    border:1px solid color-mix(in srgb, var(--date-accent-color, var(--date-primary)) 36%, transparent) !important;
+    background:var(--date-bg-soft) !important;
+}
+.blog-date-shell.blog-date-style-ribbon .blog-date-inline-day,
+.blog-date-shell.blog-date-style-ribbon .blog-date-inline-month,
+.blog-date-shell.blog-date-style-ribbon .blog-date-inline-year{
+    font-size:calc(10px * var(--date-scale-factor)) !important;
+    font-weight:700 !important;
+}
+
+.blog-date-shell.blog-date-style-boxed_number .blog-date-day-wrap{
+    min-width:calc(46px * var(--date-scale-factor)) !important;
+    min-height:calc(46px * var(--date-scale-factor)) !important;
+    padding:calc(7px * var(--date-scale-factor)) !important;
+    border-radius:14px !important;
+    border:1px solid color-mix(in srgb, var(--date-accent-color, var(--date-primary)) 38%, transparent) !important;
+    background:var(--date-bg-soft) !important;
+}
+.blog-date-shell.blog-date-style-boxed_number .blog-date-day{
+    font-size:calc(24px * var(--date-scale-factor)) !important;
+}
+.blog-date-shell.blog-date-style-boxed_number .blog-date-text{
+    gap:3px !important;
+}
+
+.blog-date-shell.blog-date-style-corner_tag .blog-date-inline{
+    padding:calc(7px * var(--date-scale-factor)) calc(10px * var(--date-scale-factor)) !important;
+    border-radius:12px !important;
+    border:1px solid color-mix(in srgb, var(--date-accent-color, var(--date-primary)) 36%, transparent) !important;
+    background:var(--date-bg-soft) !important;
+    transform:rotate(-4deg) !important;
+    transform-origin:center !important;
+}
+.blog-date-shell.blog-date-style-corner_tag .blog-date-inline-day,
+.blog-date-shell.blog-date-style-corner_tag .blog-date-inline-month,
+.blog-date-shell.blog-date-style-corner_tag .blog-date-inline-year{
+    font-size:calc(10px * var(--date-scale-factor)) !important;
+    font-weight:700 !important;
+}
+
+.blog-date-shell.blog-date-style-soft .blog-date-day{
+    font-family:"Brush Script MT", "Segoe Script", "Comic Sans MS", cursive !important;
+    font-size:calc(34px * var(--date-scale-factor)) !important;
+    font-weight:400 !important;
+    line-height:0.85 !important;
+}
+.blog-date-shell.blog-date-style-soft .blog-date-main{
+    padding:calc(6px * var(--date-scale-factor)) calc(10px * var(--date-scale-factor)) !important;
+    border-radius:16px !important;
+    background:var(--date-bg-soft) !important;
+}
+.blog-date-shell.blog-date-style-soft .blog-date-month,
+.blog-date-shell.blog-date-style-soft .blog-date-year{
+    letter-spacing:0.12em !important;
+}
+
+.blog-date-shell.blog-date-style-newspaper .blog-date-day{
+    font-family:Georgia, "Times New Roman", serif !important;
+    font-size:calc(40px * var(--date-scale-factor)) !important;
+    letter-spacing:-0.04em !important;
+}
+.blog-date-shell.blog-date-style-newspaper .blog-date-month{
+    font-size:calc(9px * var(--date-scale-factor)) !important;
+    letter-spacing:0.2em !important;
+    font-weight:700 !important;
+}
+.blog-date-shell.blog-date-style-newspaper .blog-date-year{
+    font-size:calc(11px * var(--date-scale-factor)) !important;
+    opacity:0.62 !important;
+}
+
+@media (max-width: 768px){
+    .blog-date-shell.blog-date-style-ribbon .blog-date-inline,
+    .blog-date-shell.blog-date-style-corner_tag .blog-date-inline,
+    .blog-date-shell.blog-date-style-minimal_inline .blog-date-inline{
+        justify-content:center !important;
+    }
+}
+</style>
