@@ -2,7 +2,7 @@
 {# Extracted from blog/designs/stara_aleja.html. #}
 {# Uses existing template context: post, blog_preferences, request, user, etc. #}
 <article class="sa-post">
-                        <div class="sa-post-date" data-post-primary-date>{{ post.publication_datetime|date:"d.m.Y" }}</div>
+                        {% include "blog/components/special_designs/bespoke_post_date.html" with date_wrapper_class="sa-post-date" %}
                         <div class="sa-post-divider"></div>
                         <div class="d-flex flex-column" style="gap: 10px; min-width: 0;">
                             <h4 class="mb-0">{{ post.title }}</h4>

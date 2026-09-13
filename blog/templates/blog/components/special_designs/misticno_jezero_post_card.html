@@ -2,7 +2,7 @@
 {# Extracted from blog/designs/misticno_jezero.html. #}
 {# Uses existing template context: post, blog_preferences, request, user, etc. #}
 <article class="mj-post">
-                    <div class="mj-post-date" data-post-primary-date>{{ post.publication_datetime|date:"d.m.Y" }}</div>
+                    {% include "blog/components/special_designs/bespoke_post_date.html" with date_wrapper_class="mj-post-date" %}
                     <div class="mj-post-divider"></div>
                     <div class="d-flex flex-column" style="gap: 10px; min-width: 0;">
                         <h4 class="mb-0">{{ post.title }}</h4>

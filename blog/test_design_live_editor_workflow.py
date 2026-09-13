@@ -187,6 +187,45 @@ class DesignLiveEditorWorkflowTests(TestCase):
             self.assertEqual(saved["default"][field_name], default_active[field_name])
         self.assertEqual(saved["magazin"]["post_title_color"], "#222222")
 
+    def test_bespoke_date_save_reset_and_template_isolation(self):
+        active_template = "ponocna_elegancija"
+        untouched_template = "ruzicasti_vrt"
+        untouched_date = {
+            "post_date_style": "soft",
+            "post_date_effect": "duo",
+            "post_date_color_1": "#112233",
+            "post_date_color_2": "#445566",
+            "post_date_size": "88",
+        }
+        set_blog_preferences(self.user, {
+            "design_customizations": {untouched_template: untouched_date},
+        })
+        self.activate_template(active_template)
+
+        response = self.client.post(
+            self.url,
+            {"save_title_settings": "1", **self.TITLE_PAYLOAD},
+        )
+        self.assertEqual(response.status_code, 302)
+        saved = self.stored_customizations()
+        for field_name in (
+            "post_date_style", "post_date_effect", "post_date_color_1",
+            "post_date_color_2", "post_date_size",
+        ):
+            self.assertEqual(saved[active_template][field_name], self.TITLE_PAYLOAD[field_name])
+            self.assertEqual(saved[untouched_template][field_name], untouched_date[field_name])
+
+        response = self.client.post(self.url, {"reset_titles_mode": "all"})
+        self.assertEqual(response.status_code, 302)
+        saved = self.stored_customizations()
+        defaults = normalize_design_customizations(None)[active_template]
+        for field_name in (
+            "post_date_style", "post_date_effect", "post_date_color_1",
+            "post_date_color_2", "post_date_size",
+        ):
+            self.assertEqual(saved[active_template][field_name], defaults[field_name])
+            self.assertEqual(saved[untouched_template][field_name], untouched_date[field_name])
+
     def test_background_editor_is_limited_to_simple_designs(self):
         self.activate_template("default")
 

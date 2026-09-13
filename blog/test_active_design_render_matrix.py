@@ -7,7 +7,12 @@ from django.urls import reverse
 from django.utils import timezone
 
 from blog.models import Comment, Post, Profile, UserBox
-from blog.services import resolve_design_template_name, set_blog_preferences
+from blog.services import (
+    POST_DATE_EFFECT_OPTIONS,
+    POST_DATE_STYLE_OPTIONS,
+    resolve_design_template_name,
+    set_blog_preferences,
+)
 
 
 class ActiveDesignRenderMatrixTests(TestCase):
@@ -27,6 +32,14 @@ class ActiveDesignRenderMatrixTests(TestCase):
         "jedro_u_suton",
         "misticno_jezero",
     })
+    BESPOKE_DATE_DESIGNS = {
+        "ponocna_elegancija": "pe-post-date",
+        "ruzicasti_vrt": "rv-post-date",
+        "stara_aleja": "sa-post-date",
+        "staza_prema_vrhovima": "spv-post-date",
+        "jedro_u_suton": "jus-post-date",
+        "misticno_jezero": "mj-post-date",
+    }
 
     @classmethod
     def setUpTestData(cls):
@@ -213,6 +226,50 @@ class ActiveDesignRenderMatrixTests(TestCase):
             ".blog-date-shell.blog-date-style-split .blog-date-main,",
             content,
         )
+
+    def test_bespoke_dates_reach_every_shared_style_effect_and_scale(self):
+        url = reverse("user_blog", args=[self.author.username])
+        styles = tuple(POST_DATE_STYLE_OPTIONS)
+        effects = tuple(POST_DATE_EFFECT_OPTIONS)
+        self.assertEqual(len(styles), 10)
+        self.assertEqual(len(effects), 3)
+
+        for template_index, (template_key, wrapper_class) in enumerate(
+            self.BESPOKE_DATE_DESIGNS.items()
+        ):
+            self.author.profile.template = template_key
+            self.author.profile.save(update_fields=["template"])
+            observed_effects = set()
+
+            for style_index, style in enumerate(styles):
+                effect = effects[style_index % len(effects)]
+                scale = str(70 + (template_index * 10) + (style_index * 5))
+                observed_effects.add(effect)
+                set_blog_preferences(self.author, {
+                    "design_customizations": {
+                        template_key: {
+                            "post_date_style": style,
+                            "post_date_effect": effect,
+                            "post_date_size": scale,
+                        },
+                    },
+                })
+
+                with self.subTest(template=template_key, style=style, effect=effect):
+                    response = self.client.get(url)
+                    content = response.content.decode(response.charset)
+                    self.assertEqual(response.status_code, 200)
+                    self.assertContains(response, "data-post-primary-date", count=1)
+                    self.assertIn(
+                        f'class="{wrapper_class} blog-date-shell '
+                        f'blog-date-style-{style} blog-date-effect-{effect}"',
+                        content,
+                    )
+                    self.assertIn('class="blog-date-main"', content)
+                    self.assertIn('class="blog-date-inline"', content)
+                    self.assertIn(f"--post-date-scale: {scale};", content)
+
+            self.assertEqual(observed_effects, set(effects))
 
     def test_soho_mobile_columns_override_fixed_desktop_widths(self):
         self.author.profile.template = "soho"
