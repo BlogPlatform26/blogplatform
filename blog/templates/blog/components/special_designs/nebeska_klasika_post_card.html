@@ -2,7 +2,7 @@
 {# Extracted from blog/designs/nebeska_klasika.html. #}
 {# Uses existing template context: post, blog_preferences, request, user, etc. #}
 <article class="nk-post">
-                    <div class="nk-post-date blog-date-shell blog-date-style-{{ blog_preferences.active_design_customization.post_date_style|default:'classic_vertical' }} blog-date-effect-{{ blog_preferences.active_design_customization.post_date_effect|default:'solid' }}" data-date-style="{{ blog_preferences.active_design_customization.post_date_style|default:'classic_vertical' }}" data-date-effect="{{ blog_preferences.active_design_customization.post_date_effect|default:'solid' }}">
+                    <div class="nk-post-date blog-date-shell blog-date-style-{{ blog_preferences.active_design_customization.post_date_style|default:'classic_vertical' }} blog-date-effect-{{ blog_preferences.active_design_customization.post_date_effect|default:'solid' }}" data-post-primary-date data-date-style="{{ blog_preferences.active_design_customization.post_date_style|default:'classic_vertical' }}" data-date-effect="{{ blog_preferences.active_design_customization.post_date_effect|default:'solid' }}">
                         <div class="blog-date-main">
                             <div class="blog-date-day-wrap">
                                 <div class="blog-date-day">{{ post.publication_datetime|date:"d" }}</div>

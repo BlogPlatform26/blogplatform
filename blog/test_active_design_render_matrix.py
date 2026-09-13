@@ -1,7 +1,10 @@
+import re
+
 from django.contrib.auth.models import User
 from django.template.loader import get_template
 from django.test import TestCase
 from django.urls import reverse
+from django.utils import timezone
 
 from blog.models import Comment, Post, Profile, UserBox
 from blog.services import resolve_design_template_name, set_blog_preferences
@@ -101,6 +104,29 @@ class ActiveDesignRenderMatrixTests(TestCase):
                         f"--post-title-color: {self.CUSTOM_POST_TITLE_COLOR};",
                         html=False,
                     )
+                    self.assertContains(
+                        response,
+                        "data-post-primary-date",
+                        count=1,
+                        html=False,
+                    )
+                    publication_datetime = timezone.localtime(
+                        self.post.publication_datetime
+                    )
+                    duplicate_author_line_date = publication_datetime.strftime(
+                        "%d.%m.%Y %H:%M"
+                    )
+                    content = response.content.decode(response.charset)
+                    author_line = re.search(
+                        r'<span class="post-author-line">(.*?)</div>',
+                        content,
+                        flags=re.DOTALL,
+                    )
+                    self.assertIsNotNone(author_line)
+                    self.assertNotIn(
+                        duplicate_author_line_date,
+                        author_line.group(1),
+                    )
 
                     self.assertEqual(list(response.context["page_obj"]), [self.post])
                     self.assertTrue(
@@ -172,6 +198,9 @@ class ActiveDesignRenderMatrixTests(TestCase):
         self.assertTemplateUsed(response, "blog/designs/magazin.html")
         self.assertNotIn("width: 100vw !important;", content)
         self.assertNotIn("calc(50% - 50vw)", content)
+        self.assertNotIn("calc(100vw - 290px)", content)
+        self.assertIn("max-width: calc(100% - 290px) !important;", content)
+        self.assertIn("width: calc(100% - 290px) !important;", content)
         self.assertIn(
             """.container-fluid.mt-3 {
     margin-top: 0 !important;

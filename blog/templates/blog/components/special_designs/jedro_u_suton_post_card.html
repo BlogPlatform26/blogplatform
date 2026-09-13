@@ -2,7 +2,7 @@
 {# Extracted from blog/designs/jedro_u_suton.html by design refactor phase 28. #}
 {# Uses existing template context: post, blog_preferences, request, user, etc. #}
 <article class="jus-post">
-                        <div class="jus-post-date">{{ post.publication_datetime|date:"d.m.Y" }}</div>
+                        <div class="jus-post-date" data-post-primary-date>{{ post.publication_datetime|date:"d.m.Y" }}</div>
                         <div class="jus-post-divider"></div>
                         <div class="d-flex flex-column" style="gap: 10px; min-width: 0;">
                             <h4 class="mb-0">{{ post.title }}</h4>
