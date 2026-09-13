@@ -236,6 +236,29 @@ class ActiveDesignRenderMatrixTests(TestCase):
             content,
         )
 
+    def test_simple_retro_archive_modes_are_exclusive_and_keep_blog_routes(self):
+        self.author.profile.template = "simple_retro"
+        self.author.profile.save(update_fields=["template"])
+        url = reverse("user_blog", args=[self.author.username])
+
+        for mode, expect_calendar, expect_archive in (
+            ("both", True, True),
+            ("calendar", True, False),
+            ("list", False, True),
+        ):
+            with self.subTest(mode=mode):
+                set_blog_preferences(self.author, {"blog_archive_mode": mode})
+                response = self.client.get(url)
+                content = response.content.decode(response.charset)
+                self.assertEqual(response.status_code, 200)
+                self.assertEqual('class="calendar-box calendar-box--simple"' in content, expect_calendar)
+                self.assertEqual('class="archive-box archive-box--simple"' in content, expect_archive)
+                if expect_calendar:
+                    self.assertIn('aria-label="Prethodni mjesec"', content)
+                    self.assertIn('aria-label="Sljedeći mjesec"', content)
+                if expect_archive:
+                    self.assertIn(f'href="{url}?year=', content)
+
     def test_magazin_full_width_css_does_not_use_viewport_width(self):
         self.author.profile.template = "magazin"
         self.author.profile.save(update_fields=["template"])

@@ -94,6 +94,7 @@
     {% include "blog/components/blog_profile_actions_sidebar.html" %}
 
     {% if blog.profile.template == 'simple_retro' %}
+        {% if blog_preferences.blog_archive_mode == "both" or blog_preferences.blog_archive_mode == "calendar" %}
         <div class="calendar-box calendar-box--simple">
             <div class="calendar-title calendar-title--nav">
                 <a href="{{ prev_month_url }}" class="calendar-month-nav-link" aria-label="Prethodni mjesec">&#8249;</a>
@@ -138,7 +139,9 @@
             {% endfor %}
             </div>
         </div>
+        {% endif %}
 
+        {% if blog_preferences.blog_archive_mode == "both" or blog_preferences.blog_archive_mode == "list" %}
         <div class="archive-box archive-box--simple">
             <div class="archive-title">Arhiva</div>
             <div class="archive-list">
@@ -151,6 +154,7 @@
                 {% endfor %}
             </div>
         </div>
+        {% endif %}
     {% endif %}
 
     {% if blog_preferences.analytics_widget_side == 'right_top' %}
