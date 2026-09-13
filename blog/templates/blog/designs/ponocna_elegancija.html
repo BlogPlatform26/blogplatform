@@ -48,6 +48,8 @@ nav.navbar .dropdown-menu {
 
 .pe-title {
     margin: 0 0 6px 0;
+    max-width: 100%;
+    overflow-wrap: anywhere;
     font-family: var(--blog-title-font, Georgia, "Times New Roman", serif);
     font-size: clamp(1.9rem, 3.2vw, 2.8rem);
     line-height: 1.05;
@@ -191,9 +193,10 @@ nav.navbar .dropdown-menu {
 }
 
 .pe-side-title {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 1.42rem;
-    color: #f3f5fb;
+    font-family: var(--box-title-font, Georgia, "Times New Roman", serif) !important;
+    font-size: var(--box-title-size, 1.42rem) !important;
+    color: var(--box-title-color, #f3f5fb) !important;
+    -webkit-text-fill-color: var(--box-title-color, #f3f5fb) !important;
     margin-bottom: 10px;
 }
 
@@ -242,9 +245,10 @@ nav.navbar .dropdown-menu {
 .pe-calendar-title,
 .pe-box-title,
 .pe-archive-title {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 1.22rem;
-    color: #f3f5fb;
+    font-family: var(--box-title-font, Georgia, "Times New Roman", serif) !important;
+    font-size: var(--box-title-size, 1.22rem) !important;
+    color: var(--box-title-color, #f3f5fb) !important;
+    -webkit-text-fill-color: var(--box-title-color, #f3f5fb) !important;
     margin-bottom: 10px;
     padding-bottom: 8px;
     border-bottom: 1px solid rgba(170, 184, 220, 0.20);
@@ -332,7 +336,7 @@ nav.navbar .dropdown-menu {
 }
 
 .pe-box-title {
-    font-size: 1.12rem;
+    font-size: var(--box-title-size, 1.12rem) !important;
     margin-bottom: 8px;
 }
 
@@ -571,7 +575,7 @@ nav.navbar .dropdown-menu {
 </style>
 
 <div class="pe-theme">
-    <h1 class="pe-title">{{ blog.profile.blog_name|default:blog.username }}</h1>
+    <h1 class="pe-title blog-page-title">{{ blog.profile.blog_name|default:blog.username }}</h1>
 
     {% if blog.profile.blog_tagline %}<p class="blog-tagline-shared">{{ blog.profile.blog_tagline }}</p>{% endif %}
 
@@ -625,13 +629,13 @@ nav.navbar .dropdown-menu {
 
         <aside class="pe-side-stack">
             <div class="pe-profile-wrap pe-side-card">
-                <div class="pe-side-title">O autoru</div>
+                <div class="pe-side-title box-title">O autoru</div>
                 {% include "blog/components/blog_profile_actions_sidebar.html" %}
             </div>
 
             {% if blog_preferences.blog_archive_mode == "both" or blog_preferences.blog_archive_mode == "calendar" %}
             <div class="pe-side-card">
-                <div class="pe-calendar-title">Kalendar</div>
+                <div class="pe-calendar-title box-title">Kalendar</div>
                 <div class="pe-calendar-month calendar-month-nav"><a href="{{ prev_month_url }}" class="calendar-month-nav-link" aria-label="Prethodni mjesec">&#8249;</a><span>{{ current_month_hr|upper }}, {{ current_year }}</span><a href="{{ next_month_url }}" class="calendar-month-nav-link" aria-label="Sljedeći mjesec">&#8250;</a></div>
                 <div class="pe-calendar-weekdays">
                     <div>P</div><div>U</div><div>S</div><div>Č</div><div>P</div><div>S</div><div>N</div>
@@ -644,7 +648,7 @@ nav.navbar .dropdown-menu {
 
             {% if blog_preferences.blog_archive_mode == "both" or blog_preferences.blog_archive_mode == "list" %}
             <div class="pe-side-card">
-                <div class="pe-archive-title">Arhiva bloga</div>
+                <div class="pe-archive-title box-title">Arhiva bloga</div>
                 <div class="pe-archive-list">
                     {% include "blog/components/blog_archive_entries.html" with archive_link_class="pe-archive-link" archive_empty_class="pe-empty-copy" %}
                 </div>
@@ -659,14 +663,14 @@ nav.navbar .dropdown-menu {
 
             {% for box in left_boxes %}
             <div class="pe-side-card">
-                <div class="pe-box-title">{{ box.title }}</div>
+                <div class="pe-box-title box-title">{{ box.title }}</div>
                 <div class="pe-box-content">{{ box.content|safe }}</div>
             </div>
             {% endfor %}
 
             {% for box in right_boxes %}
             <div class="pe-side-card">
-                <div class="pe-box-title">{{ box.title }}</div>
+                <div class="pe-box-title box-title">{{ box.title }}</div>
                 <div class="pe-box-content">{{ box.content|safe }}</div>
             </div>
             {% endfor %}

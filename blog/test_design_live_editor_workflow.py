@@ -187,7 +187,7 @@ class DesignLiveEditorWorkflowTests(TestCase):
             self.assertEqual(saved["default"][field_name], default_active[field_name])
         self.assertEqual(saved["magazin"]["post_title_color"], "#222222")
 
-    def test_bespoke_date_save_reset_and_template_isolation(self):
+    def test_bespoke_save_reset_template_and_user_isolation(self):
         active_template = "ponocna_elegancija"
         untouched_template = "ruzicasti_vrt"
         untouched_date = {
@@ -200,6 +200,21 @@ class DesignLiveEditorWorkflowTests(TestCase):
         set_blog_preferences(self.user, {
             "design_customizations": {untouched_template: untouched_date},
         })
+        second_user = User.objects.create_user(
+            username="bespoke-isolated-user",
+            password="test-password",
+        )
+        second_user_values = {
+            "blog_title_font": "palatino",
+            "blog_title_color": "#abcdef",
+            "blog_title_size": "52",
+            "box_title_font": "times",
+            "box_title_color": "#fedcba",
+            "box_title_size": "18",
+        }
+        set_blog_preferences(second_user, {
+            "design_customizations": {active_template: second_user_values},
+        })
         self.activate_template(active_template)
 
         response = self.client.post(
@@ -209,22 +224,36 @@ class DesignLiveEditorWorkflowTests(TestCase):
         self.assertEqual(response.status_code, 302)
         saved = self.stored_customizations()
         for field_name in (
+            "blog_title_font", "blog_title_color", "blog_title_size",
+            "box_title_font", "box_title_color", "box_title_size",
             "post_date_style", "post_date_effect", "post_date_color_1",
             "post_date_color_2", "post_date_size",
         ):
             self.assertEqual(saved[active_template][field_name], self.TITLE_PAYLOAD[field_name])
-            self.assertEqual(saved[untouched_template][field_name], untouched_date[field_name])
+        for field_name, expected in untouched_date.items():
+            self.assertEqual(saved[untouched_template][field_name], expected)
+        second_saved = self.stored_customizations(second_user)[active_template]
+        for field_name, expected in second_user_values.items():
+            self.assertEqual(second_saved[field_name], expected)
 
         response = self.client.post(self.url, {"reset_titles_mode": "all"})
         self.assertEqual(response.status_code, 302)
         saved = self.stored_customizations()
-        defaults = normalize_design_customizations(None)[active_template]
+        defaults = build_design_customization_payload(
+            normalize_design_customizations(None)[active_template]
+        )
         for field_name in (
+            "blog_title_font", "blog_title_color", "blog_title_size",
+            "box_title_font", "box_title_color", "box_title_size",
             "post_date_style", "post_date_effect", "post_date_color_1",
             "post_date_color_2", "post_date_size",
         ):
             self.assertEqual(saved[active_template][field_name], defaults[field_name])
-            self.assertEqual(saved[untouched_template][field_name], untouched_date[field_name])
+        for field_name, expected in untouched_date.items():
+            self.assertEqual(saved[untouched_template][field_name], expected)
+        second_saved = self.stored_customizations(second_user)[active_template]
+        for field_name, expected in second_user_values.items():
+            self.assertEqual(second_saved[field_name], expected)
 
     def test_background_editor_is_limited_to_simple_designs(self):
         self.activate_template("default")

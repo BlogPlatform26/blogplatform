@@ -48,10 +48,13 @@ nav.navbar .dropdown-menu {
 
 .rv-title {
     margin: 0 0 6px 0;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(1.95rem, 3.25vw, 2.9rem);
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    font-family: var(--blog-title-font, Georgia, "Times New Roman", serif) !important;
+    font-size: var(--blog-title-size, clamp(1.95rem, 3.25vw, 2.9rem)) !important;
     line-height: 1.05;
-    color: #6b5056;
+    color: var(--blog-title-color, #6b5056) !important;
+    -webkit-text-fill-color: var(--blog-title-color, #6b5056) !important;
     text-shadow: 0 6px 22px rgba(255, 255, 255, 0.42);
 }
 
@@ -192,9 +195,10 @@ nav.navbar .dropdown-menu {
 }
 
 .rv-side-title {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 1.42rem;
-    color: #6b5056;
+    font-family: var(--box-title-font, Georgia, "Times New Roman", serif) !important;
+    font-size: var(--box-title-size, 1.42rem) !important;
+    color: var(--box-title-color, #6b5056) !important;
+    -webkit-text-fill-color: var(--box-title-color, #6b5056) !important;
     margin-bottom: 10px;
 }
 
@@ -242,9 +246,10 @@ nav.navbar .dropdown-menu {
 .rv-calendar-title,
 .rv-box-title,
 .rv-archive-title {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 1.22rem;
-    color: #6b5056;
+    font-family: var(--box-title-font, Georgia, "Times New Roman", serif) !important;
+    font-size: var(--box-title-size, 1.22rem) !important;
+    color: var(--box-title-color, #6b5056) !important;
+    -webkit-text-fill-color: var(--box-title-color, #6b5056) !important;
     margin-bottom: 10px;
     padding-bottom: 8px;
     border-bottom: 1px solid rgba(202, 173, 176, 0.52);
@@ -332,7 +337,7 @@ nav.navbar .dropdown-menu {
 }
 
 .rv-box-title {
-    font-size: 1.12rem;
+    font-size: var(--box-title-size, 1.12rem) !important;
     margin-bottom: 8px;
 }
 
@@ -573,7 +578,7 @@ nav.navbar .dropdown-menu {
 </style>
 
 <div class="rv-theme">
-    <h1 class="rv-title">{{ blog.profile.blog_name|default:blog.username }}</h1>
+    <h1 class="rv-title blog-page-title">{{ blog.profile.blog_name|default:blog.username }}</h1>
 
     {% if blog.profile.blog_tagline %}<p class="blog-tagline-shared">{{ blog.profile.blog_tagline }}</p>{% endif %}
 
@@ -627,13 +632,13 @@ nav.navbar .dropdown-menu {
 
         <aside class="rv-side-stack">
             <div class="rv-profile-wrap rv-side-card">
-                <div class="rv-side-title">O autoru</div>
+                <div class="rv-side-title box-title">O autoru</div>
                 {% include "blog/components/blog_profile_actions_sidebar.html" %}
             </div>
 
             {% if blog_preferences.blog_archive_mode == "both" or blog_preferences.blog_archive_mode == "calendar" %}
             <div class="rv-side-card">
-                <div class="rv-calendar-title">Kalendar</div>
+                <div class="rv-calendar-title box-title">Kalendar</div>
                 <div class="rv-calendar-month calendar-month-nav"><a href="{{ prev_month_url }}" class="calendar-month-nav-link" aria-label="Prethodni mjesec">&#8249;</a><span>{{ current_month_hr|upper }}, {{ current_year }}</span><a href="{{ next_month_url }}" class="calendar-month-nav-link" aria-label="Sljedeći mjesec">&#8250;</a></div>
                 <div class="rv-calendar-weekdays">
                     <div>P</div><div>U</div><div>S</div><div>Č</div><div>P</div><div>S</div><div>N</div>
@@ -646,7 +651,7 @@ nav.navbar .dropdown-menu {
 
             {% if blog_preferences.blog_archive_mode == "both" or blog_preferences.blog_archive_mode == "list" %}
             <div class="rv-side-card">
-                <div class="rv-archive-title">Arhiva bloga</div>
+                <div class="rv-archive-title box-title">Arhiva bloga</div>
                 <div class="rv-archive-list">
                     {% include "blog/components/blog_archive_entries.html" with archive_link_class="rv-archive-link" archive_empty_class="rv-empty-copy" %}
                 </div>
@@ -661,14 +666,14 @@ nav.navbar .dropdown-menu {
 
             {% for box in left_boxes %}
             <div class="rv-side-card">
-                <div class="rv-box-title">{{ box.title }}</div>
+                <div class="rv-box-title box-title">{{ box.title }}</div>
                 <div class="rv-box-content">{{ box.content|safe }}</div>
             </div>
             {% endfor %}
 
             {% for box in right_boxes %}
             <div class="rv-side-card">
-                <div class="rv-box-title">{{ box.title }}</div>
+                <div class="rv-box-title box-title">{{ box.title }}</div>
                 <div class="rv-box-content">{{ box.content|safe }}</div>
             </div>
             {% endfor %}

@@ -48,10 +48,13 @@ nav.navbar .dropdown-menu {
 
 .mj-title {
     margin: 0 0 8px 0;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(1.95rem, 3.2vw, 2.95rem);
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    font-family: var(--blog-title-font, Georgia, "Times New Roman", serif) !important;
+    font-size: var(--blog-title-size, clamp(1.95rem, 3.2vw, 2.95rem)) !important;
     line-height: 1.05;
-    color: #fff4ff;
+    color: var(--blog-title-color, #fff4ff) !important;
+    -webkit-text-fill-color: var(--blog-title-color, #fff4ff) !important;
     text-shadow: 0 8px 28px rgba(49, 22, 68, 0.46), 0 0 26px rgba(255, 223, 172, 0.14);
 }
 
@@ -193,9 +196,10 @@ nav.navbar .dropdown-menu {
 }
 
 .mj-side-title {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 1.34rem;
-    color: #fff4ff;
+    font-family: var(--box-title-font, Georgia, "Times New Roman", serif) !important;
+    font-size: var(--box-title-size, 1.34rem) !important;
+    color: var(--box-title-color, #fff4ff) !important;
+    -webkit-text-fill-color: var(--box-title-color, #fff4ff) !important;
     margin-bottom: 10px;
 }
 
@@ -244,9 +248,10 @@ nav.navbar .dropdown-menu {
 .mj-calendar-title,
 .mj-box-title,
 .mj-archive-title {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 1.18rem;
-    color: #fff4ff;
+    font-family: var(--box-title-font, Georgia, "Times New Roman", serif) !important;
+    font-size: var(--box-title-size, 1.18rem) !important;
+    color: var(--box-title-color, #fff4ff) !important;
+    -webkit-text-fill-color: var(--box-title-color, #fff4ff) !important;
     margin-bottom: 10px;
     padding-bottom: 8px;
     border-bottom: 1px solid rgba(255, 232, 196, 0.18);
@@ -334,7 +339,7 @@ nav.navbar .dropdown-menu {
 }
 
 .mj-box-title {
-    font-size: 1.08rem;
+    font-size: var(--box-title-size, 1.08rem) !important;
     margin-bottom: 8px;
 }
 
@@ -583,7 +588,7 @@ nav.navbar .dropdown-menu {
 </style>
 
 <div class="mj-theme">
-    <h1 class="mj-title">{{ blog.profile.blog_name|default:blog.username }}</h1>
+    <h1 class="mj-title blog-page-title">{{ blog.profile.blog_name|default:blog.username }}</h1>
 
     {% if blog.profile.blog_tagline %}<p class="blog-tagline-shared">{{ blog.profile.blog_tagline }}</p>{% endif %}
 
@@ -637,13 +642,13 @@ nav.navbar .dropdown-menu {
 
         <aside class="mj-side-stack">
             <div class="mj-profile-wrap mj-side-card">
-                <div class="mj-side-title">O autoru</div>
+                <div class="mj-side-title box-title">O autoru</div>
                 {% include "blog/components/blog_profile_actions_sidebar.html" %}
             </div>
 
             {% if blog_preferences.blog_archive_mode == "both" or blog_preferences.blog_archive_mode == "calendar" %}
             <div class="mj-side-card">
-                <div class="mj-calendar-title">Kalendar</div>
+                <div class="mj-calendar-title box-title">Kalendar</div>
                 <div class="mj-calendar-month calendar-month-nav"><a href="{{ prev_month_url }}" class="calendar-month-nav-link" aria-label="Prethodni mjesec">&#8249;</a><span>{{ current_month_hr|upper }}, {{ current_year }}</span><a href="{{ next_month_url }}" class="calendar-month-nav-link" aria-label="Sljedeći mjesec">&#8250;</a></div>
                 <div class="mj-calendar-weekdays">
                     <div>P</div><div>U</div><div>S</div><div>Č</div><div>P</div><div>S</div><div>N</div>
@@ -656,7 +661,7 @@ nav.navbar .dropdown-menu {
 
             {% if blog_preferences.blog_archive_mode == "both" or blog_preferences.blog_archive_mode == "list" %}
             <div class="mj-side-card">
-                <div class="mj-archive-title">Arhiva bloga</div>
+                <div class="mj-archive-title box-title">Arhiva bloga</div>
                 <div class="mj-archive-list">
                     {% include "blog/components/blog_archive_entries.html" with archive_link_class="mj-archive-link" archive_empty_class="mj-empty-copy" %}
                 </div>
@@ -671,14 +676,14 @@ nav.navbar .dropdown-menu {
 
             {% for box in left_boxes %}
             <div class="mj-side-card">
-                <div class="mj-box-title">{{ box.title }}</div>
+                <div class="mj-box-title box-title">{{ box.title }}</div>
                 <div class="mj-box-content">{{ box.content|safe }}</div>
             </div>
             {% endfor %}
 
             {% for box in right_boxes %}
             <div class="mj-side-card">
-                <div class="mj-box-title">{{ box.title }}</div>
+                <div class="mj-box-title box-title">{{ box.title }}</div>
                 <div class="mj-box-content">{{ box.content|safe }}</div>
             </div>
             {% endfor %}

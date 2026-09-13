@@ -48,10 +48,13 @@ nav.navbar .dropdown-menu {
 
 .spv-title {
     margin: 0 0 8px 0;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(1.85rem, 3vw, 2.7rem);
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    font-family: var(--blog-title-font, Georgia, "Times New Roman", serif) !important;
+    font-size: var(--blog-title-size, clamp(1.85rem, 3vw, 2.7rem)) !important;
     line-height: 1.05;
-    color: #fff2dd;
+    color: var(--blog-title-color, #fff2dd) !important;
+    -webkit-text-fill-color: var(--blog-title-color, #fff2dd) !important;
     text-shadow: 0 6px 24px rgba(0, 0, 0, 0.36);
 }
 
@@ -189,9 +192,10 @@ nav.navbar .dropdown-menu {
 .spv-calendar-title,
 .spv-box-title,
 .spv-archive-title {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 1.18rem;
-    color: #fff0dc;
+    font-family: var(--box-title-font, Georgia, "Times New Roman", serif) !important;
+    font-size: var(--box-title-size, 1.18rem) !important;
+    color: var(--box-title-color, #fff0dc) !important;
+    -webkit-text-fill-color: var(--box-title-color, #fff0dc) !important;
     margin-bottom: 10px;
     padding-bottom: 8px;
     border-bottom: 1px solid rgba(255, 225, 185, 0.18);
@@ -532,7 +536,7 @@ nav.navbar .dropdown-menu {
 </style>
 
 <div class="spv-theme">
-    <h1 class="spv-title">{{ blog.profile.blog_name|default:blog.username }}</h1>
+    <h1 class="spv-title blog-page-title">{{ blog.profile.blog_name|default:blog.username }}</h1>
 
     {% if blog.profile.blog_tagline %}<p class="blog-tagline-shared">{{ blog.profile.blog_tagline }}</p>{% endif %}
 
@@ -584,13 +588,13 @@ nav.navbar .dropdown-menu {
 
         <aside class="spv-side-stack">
             <div class="spv-profile-wrap spv-side-card">
-                <div class="spv-side-title">O autoru</div>
+                <div class="spv-side-title box-title">O autoru</div>
                 {% include "blog/components/blog_profile_actions_sidebar.html" %}
             </div>
 
             {% if blog_preferences.blog_archive_mode == "both" or blog_preferences.blog_archive_mode == "calendar" %}
             <div class="spv-side-card">
-                <div class="spv-calendar-title">Kalendar</div>
+                <div class="spv-calendar-title box-title">Kalendar</div>
                 <div class="spv-calendar-month calendar-month-nav"><a href="{{ prev_month_url }}" class="calendar-month-nav-link" aria-label="Prethodni mjesec">&#8249;</a><span>{{ current_month_hr|upper }}, {{ current_year }}</span><a href="{{ next_month_url }}" class="calendar-month-nav-link" aria-label="Sljedeći mjesec">&#8250;</a></div>
                 <div class="spv-calendar-weekdays">
                     <div>P</div><div>U</div><div>S</div><div>Č</div><div>P</div><div>S</div><div>N</div>
@@ -603,7 +607,7 @@ nav.navbar .dropdown-menu {
 
             {% if blog_preferences.blog_archive_mode == "both" or blog_preferences.blog_archive_mode == "list" %}
             <div class="spv-side-card">
-                <div class="spv-archive-title">Arhiva bloga</div>
+                <div class="spv-archive-title box-title">Arhiva bloga</div>
                 <div class="spv-archive-list">
                     {% include "blog/components/blog_archive_entries.html" with archive_link_class="spv-archive-link" archive_empty_class="spv-empty-copy" %}
                 </div>
@@ -618,14 +622,14 @@ nav.navbar .dropdown-menu {
 
             {% for box in left_boxes %}
             <div class="spv-side-card">
-                <div class="spv-box-title">{{ box.title }}</div>
+                <div class="spv-box-title box-title">{{ box.title }}</div>
                 <div class="spv-box-content">{{ box.content|safe }}</div>
             </div>
             {% endfor %}
 
             {% for box in right_boxes %}
             <div class="spv-side-card">
-                <div class="spv-box-title">{{ box.title }}</div>
+                <div class="spv-box-title box-title">{{ box.title }}</div>
                 <div class="spv-box-content">{{ box.content|safe }}</div>
             </div>
             {% endfor %}

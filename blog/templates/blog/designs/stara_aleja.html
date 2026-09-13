@@ -49,11 +49,14 @@ nav.navbar .dropdown-menu {
 .sa-title {
     display: inline-block;
     margin: 0 0 16px 0;
+    max-width: 100%;
+    overflow-wrap: anywhere;
     padding: 8px 14px 10px;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(1.55rem, 2.45vw, 2.15rem);
+    font-family: var(--blog-title-font, Georgia, "Times New Roman", serif) !important;
+    font-size: var(--blog-title-size, clamp(1.55rem, 2.45vw, 2.15rem)) !important;
     line-height: 1.04;
-    color: #fff4e7;
+    color: var(--blog-title-color, #fff4e7) !important;
+    -webkit-text-fill-color: var(--blog-title-color, #fff4e7) !important;
     background: rgba(70, 46, 27, 0.22);
     border: 1px solid rgba(255, 229, 198, 0.12);
     text-shadow: 0 4px 18px rgba(0, 0, 0, 0.28);
@@ -227,9 +230,10 @@ nav.navbar .dropdown-menu {
 .sa-calendar-title,
 .sa-box-title,
 .sa-archive-title {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 1.26rem;
-    color: #fff0de;
+    font-family: var(--box-title-font, Georgia, "Times New Roman", serif) !important;
+    font-size: var(--box-title-size, 1.26rem) !important;
+    color: var(--box-title-color, #fff0de) !important;
+    -webkit-text-fill-color: var(--box-title-color, #fff0de) !important;
     margin-bottom: 10px;
     padding-bottom: 8px;
     border-bottom: 1px solid rgba(255, 229, 198, 0.16);
@@ -355,7 +359,7 @@ nav.navbar .dropdown-menu {
 }
 
 .sa-box-title {
-    font-size: 1.08rem;
+    font-size: var(--box-title-size, 1.08rem) !important;
     margin-bottom: 8px;
 }
 
@@ -580,7 +584,7 @@ nav.navbar .dropdown-menu {
 </style>
 
 <div class="sa-theme">
-    <h1 class="sa-title">{{ blog.profile.blog_name|default:blog.username }}</h1>
+    <h1 class="sa-title blog-page-title">{{ blog.profile.blog_name|default:blog.username }}</h1>
 
     {% if blog.profile.blog_tagline %}<p class="blog-tagline-shared">{{ blog.profile.blog_tagline }}</p>{% endif %}
 
@@ -635,13 +639,13 @@ nav.navbar .dropdown-menu {
 
             <aside class="sa-side-stack">
                 <section class="sa-section sa-profile-wrap" id="sa-author">
-                    <div class="sa-side-title">O autoru</div>
+                    <div class="sa-side-title box-title">O autoru</div>
                     {% include "blog/components/blog_profile_actions_sidebar.html" %}
                 </section>
 
                 {% if blog_preferences.blog_archive_mode == "both" or blog_preferences.blog_archive_mode == "calendar" %}
                 <section class="sa-section">
-                    <div class="sa-calendar-title">Kalendar</div>
+                    <div class="sa-calendar-title box-title">Kalendar</div>
                     <div class="sa-calendar-month calendar-month-nav"><a href="{{ prev_month_url }}" class="calendar-month-nav-link" aria-label="Prethodni mjesec">&#8249;</a><span>{{ current_month_hr|upper }}, {{ current_year }}</span><a href="{{ next_month_url }}" class="calendar-month-nav-link" aria-label="Sljedeći mjesec">&#8250;</a></div>
                     <div class="sa-calendar-weekdays">
                         <div>P</div><div>U</div><div>S</div><div>Č</div><div>P</div><div>S</div><div>N</div>
@@ -654,7 +658,7 @@ nav.navbar .dropdown-menu {
 
                 {% if blog_preferences.blog_archive_mode == "both" or blog_preferences.blog_archive_mode == "list" %}
                 <section class="sa-section" id="sa-archive">
-                    <div class="sa-archive-title">Arhiva bloga</div>
+                    <div class="sa-archive-title box-title">Arhiva bloga</div>
                     <div class="sa-archive-list">
                         {% include "blog/components/blog_archive_entries.html" with archive_link_class="sa-archive-link" archive_empty_class="sa-empty-copy" %}
                     </div>
@@ -669,14 +673,14 @@ nav.navbar .dropdown-menu {
 
                 {% for box in left_boxes %}
                 <section class="sa-section">
-                    <div class="sa-box-title">{{ box.title }}</div>
+                    <div class="sa-box-title box-title">{{ box.title }}</div>
                     <div class="sa-box-content">{{ box.content|safe }}</div>
                 </section>
                 {% endfor %}
 
                 {% for box in right_boxes %}
                 <section class="sa-section">
-                    <div class="sa-box-title">{{ box.title }}</div>
+                    <div class="sa-box-title box-title">{{ box.title }}</div>
                     <div class="sa-box-content">{{ box.content|safe }}</div>
                 </section>
                 {% endfor %}

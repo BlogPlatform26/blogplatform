@@ -49,6 +49,8 @@ nav.navbar .dropdown-menu {
 .jus-title {
     display: inline-block;
     margin: 0 0 18px;
+    max-width: 100%;
+    overflow-wrap: anywhere;
     padding: 8px 14px 10px;
     font-family: Georgia, "Times New Roman", serif;
     font-size: clamp(1.25rem, 1.9vw, 1.75rem);
@@ -222,9 +224,10 @@ nav.navbar .dropdown-menu {
 .jus-calendar-title,
 .jus-box-title,
 .jus-archive-title {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 1.02rem;
-    color: #fff5ea;
+    font-family: var(--box-title-font, Georgia, "Times New Roman", serif) !important;
+    font-size: var(--box-title-size, 1.02rem) !important;
+    color: var(--box-title-color, #fff5ea) !important;
+    -webkit-text-fill-color: var(--box-title-color, #fff5ea) !important;
     margin-bottom: 10px;
     padding-bottom: 8px;
     border-bottom: 1px solid rgba(255, 232, 208, 0.14);
@@ -350,7 +353,7 @@ nav.navbar .dropdown-menu {
 }
 
 .jus-box-title {
-    font-size: 0.95rem;
+    font-size: var(--box-title-size, 0.95rem) !important;
     margin-bottom: 8px;
 }
 
@@ -609,14 +612,17 @@ nav.navbar .dropdown-menu {
 .jus-post h5 *,
 .jus-post h6 *,
 .jus-post h4 a,
-.jus-post .blog-post-title,
-.jus-side-title,
-.jus-calendar-title,
-.jus-box-title,
-.jus-archive-title {
+.jus-post .blog-post-title {
     color: #17100b !important;
     -webkit-text-fill-color: #17100b !important;
     text-shadow: none !important;
+}
+
+.jus-theme .box-title {
+    font-family: var(--box-title-font, Georgia, "Times New Roman", serif) !important;
+    font-size: var(--box-title-size, 1.02rem) !important;
+    color: var(--box-title-color, #17100b) !important;
+    -webkit-text-fill-color: var(--box-title-color, #17100b) !important;
 }
 
 .jus-theme .jus-title {
@@ -742,7 +748,7 @@ nav.navbar .dropdown-menu {
 </style>
 
 <div class="jus-theme">
-    <h1 class="jus-title">{{ blog.profile.blog_name|default:blog.username }}</h1>
+    <h1 class="jus-title blog-page-title">{{ blog.profile.blog_name|default:blog.username }}</h1>
 
     {% if blog.profile.blog_tagline %}<p class="blog-tagline-shared">{{ blog.profile.blog_tagline }}</p>{% endif %}
 </div>
@@ -812,13 +818,13 @@ nav.navbar .dropdown-menu {
 
             <aside class="jus-side-stack">
                 <section class="jus-section jus-profile-wrap">
-                    <div class="jus-side-title">O autoru</div>
+                    <div class="jus-side-title box-title">O autoru</div>
                     {% include "blog/components/blog_profile_actions_sidebar.html" %}
                 </section>
 
                 {% if blog_preferences.blog_archive_mode == "both" or blog_preferences.blog_archive_mode == "calendar" %}
                 <section class="jus-section">
-                    <div class="jus-calendar-title">Kalendar</div>
+                    <div class="jus-calendar-title box-title">Kalendar</div>
                     <div class="jus-calendar-month calendar-month-nav"><a href="{{ prev_month_url }}" class="calendar-month-nav-link" aria-label="Prethodni mjesec">&#8249;</a><span>{{ current_month_hr|upper }}, {{ current_year }}</span><a href="{{ next_month_url }}" class="calendar-month-nav-link" aria-label="Sljedeći mjesec">&#8250;</a></div>
                     <div class="jus-calendar-weekdays">
                         <div>P</div><div>U</div><div>S</div><div>Č</div><div>P</div><div>S</div><div>N</div>
@@ -831,7 +837,7 @@ nav.navbar .dropdown-menu {
 
                 {% if blog_preferences.blog_archive_mode == "both" or blog_preferences.blog_archive_mode == "list" %}
                 <section class="jus-section">
-                    <div class="jus-archive-title">Arhiva bloga</div>
+                    <div class="jus-archive-title box-title">Arhiva bloga</div>
                     <div class="jus-archive-list">
                         {% include "blog/components/blog_archive_entries.html" with archive_link_class="jus-archive-link" archive_empty_class="jus-empty-copy" %}
                     </div>
@@ -846,14 +852,14 @@ nav.navbar .dropdown-menu {
 
                 {% for box in left_boxes %}
                 <section class="jus-section">
-                    <div class="jus-box-title">{{ box.title }}</div>
+                    <div class="jus-box-title box-title">{{ box.title }}</div>
                     <div class="jus-box-content">{{ box.content|safe }}</div>
                 </section>
                 {% endfor %}
 
                 {% for box in right_boxes %}
                 <section class="jus-section">
-                    <div class="jus-box-title">{{ box.title }}</div>
+                    <div class="jus-box-title box-title">{{ box.title }}</div>
                     <div class="jus-box-content">{{ box.content|safe }}</div>
                 </section>
                 {% endfor %}

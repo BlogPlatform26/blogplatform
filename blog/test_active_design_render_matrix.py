@@ -40,6 +40,14 @@ class ActiveDesignRenderMatrixTests(TestCase):
         "jedro_u_suton": "jus-post-date",
         "misticno_jezero": "mj-post-date",
     }
+    BESPOKE_TITLE_BOX_PREFIXES = {
+        "ponocna_elegancija": "pe",
+        "ruzicasti_vrt": "rv",
+        "stara_aleja": "sa",
+        "staza_prema_vrhovima": "spv",
+        "jedro_u_suton": "jus",
+        "misticno_jezero": "mj",
+    }
 
     @classmethod
     def setUpTestData(cls):
@@ -270,6 +278,70 @@ class ActiveDesignRenderMatrixTests(TestCase):
                     self.assertIn(f"--post-date-scale: {scale};", content)
 
             self.assertEqual(observed_effects, set(effects))
+
+    def test_bespoke_visible_title_and_box_targets_use_editor_variables(self):
+        UserBox.objects.create(
+            user=self.author,
+            title="Bespoke hook box",
+            content="Hook box body",
+            position="left",
+        )
+        url = reverse("user_blog", args=[self.author.username])
+
+        for template_key, prefix in self.BESPOKE_TITLE_BOX_PREFIXES.items():
+            with self.subTest(template=template_key):
+                self.author.profile.template = template_key
+                self.author.profile.save(update_fields=["template"])
+                set_blog_preferences(self.author, {
+                    "analytics_live_counter_enabled": True,
+                    "design_customizations": {
+                        template_key: {
+                            "blog_title_font": "tahoma",
+                            "blog_title_color": "#123456",
+                            "blog_title_size": "67",
+                            "box_title_font": "verdana",
+                            "box_title_color": "#654321",
+                            "box_title_size": "23",
+                        },
+                    },
+                })
+
+                response = self.client.get(url)
+                content = response.content.decode(response.charset)
+                self.assertEqual(response.status_code, 200)
+                self.assertIn(
+                    f'class="{prefix}-title blog-page-title"',
+                    content,
+                )
+                self.assertIn(
+                    f'class="{prefix}-side-title box-title">O autoru',
+                    content,
+                )
+                self.assertIn(
+                    f'class="{prefix}-calendar-title box-title">Kalendar',
+                    content,
+                )
+                self.assertIn(
+                    f'class="{prefix}-archive-title box-title">Arhiva bloga',
+                    content,
+                )
+                self.assertIn(
+                    f'class="{prefix}-box-title box-title">Bespoke hook box',
+                    content,
+                )
+                self.assertIn(
+                    'class="sidebar-box-title">Posjetitelji',
+                    content,
+                )
+                self.assertIn("--blog-title-color: #123456;", content)
+                self.assertIn("--blog-title-size: 67px;", content)
+                self.assertIn("--box-title-color: #654321;", content)
+                self.assertIn("--box-title-size: 23px;", content)
+                self.assertIn(
+                    "font-family: var(--box-title-font, Georgia",
+                    content,
+                )
+                self.assertNotIn("Hook box body blog-page-title", content)
 
     def test_soho_mobile_columns_override_fixed_desktop_widths(self):
         self.author.profile.template = "soho"
