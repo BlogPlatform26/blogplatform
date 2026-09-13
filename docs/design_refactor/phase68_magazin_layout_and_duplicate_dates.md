@@ -90,4 +90,3 @@ asset requests returned successful responses.
 - `python manage.py check`: 0 issues;
 - `python manage.py makemigrations --check --dry-run`: no changes;
 - complete available Django suite: 26/26 passed.
-
