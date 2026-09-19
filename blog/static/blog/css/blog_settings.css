@@ -2,6 +2,40 @@
     display: none;
 }
 
+@media (max-width: 575.98px) {
+    #avatarForm .avatar-upload-field {
+        min-width: 0 !important;
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .dashboard-settings-sidebar,
+    .dashboard-settings-content {
+        flex: 0 0 100%;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .dashboard-settings-sidebar {
+        min-height: 0 !important;
+    }
+
+    .dashboard-settings-sidebar > .list-group {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .dashboard-settings-sidebar .list-group-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        text-align: center;
+        white-space: nowrap;
+    }
+}
+
 /* Dizajn preview - veće slike i manji razmaci */
 .design-picker-grid {
     display: grid;
