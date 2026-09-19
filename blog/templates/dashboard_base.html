@@ -2,6 +2,7 @@
 <html>
 <head>
     {% load static %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}Dashboard{% endblock %}</title>
 
     <link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}?v=2">
@@ -137,6 +138,57 @@
         line-height: 1;
     }
 
+    @media (max-width: 991.98px) {
+        .navbar .container-fluid {
+            min-width: 0;
+        }
+        #searchToggleBtn,
+        #navbarSearchSubmitBtn,
+        .navbar .nav-right .nav-icon {
+            min-width: 44px;
+            min-height: 44px;
+        }
+        #navbarSearchInline {
+            order: 3;
+            width: 100%;
+            max-width: 100%;
+            min-width: 0;
+            margin-left: 0 !important;
+        }
+        #navbarSearchInline form,
+        #navbarSearchInline .input-group {
+            width: 100% !important;
+            max-width: 100%;
+            min-width: 0;
+        }
+        #navbarSearchInput {
+            flex: 1 1 auto;
+            width: 1%;
+            min-width: 0;
+            min-height: 44px;
+        }
+        .navbar .nav-right {
+            order: 2;
+            width: 100%;
+            min-width: 0;
+            margin-left: 0 !important;
+            justify-content: flex-end;
+            gap: 8px;
+        }
+        .navbar .nav-user {
+            min-width: 0;
+            min-height: 44px;
+            max-width: 100%;
+        }
+        .navbar .nav-user-text {
+            min-width: 0;
+            max-width: calc(100vw - 150px);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+
     </style>
 </head>
 <body>
@@ -221,7 +273,7 @@
                            placeholder="Pretraži..."
                            value="{{ request.GET.q|default:'' }}">
 
-                    <button class="btn btn-outline-light" type="submit" title="Pretraži">
+                    <button id="navbarSearchSubmitBtn" class="btn btn-outline-light" type="submit" title="Pretraži">
                         <i class="bi bi-search"></i>
                     </button>
                 </div>
