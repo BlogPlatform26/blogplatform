@@ -935,6 +935,100 @@ html body .comment-item .comment-action-danger:hover {
 html body .comment-item .comment-body {
     padding-right: 62px !important;
 }
+
+/* On touch and narrow screens, actions must not depend on hover or a first tap. */
+@media (hover: none), (max-width: 576px) {
+    html body .comment-item.bp-modern-comment-item .comment-body > .comment-actions,
+    html body .comment-item.bp-modern-comment-item .comment-actions.bp-modern-comment-actions {
+        position: static !important;
+        width: 100% !important;
+        margin: 0 0 8px !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+        transform: none !important;
+    }
+
+    html body .comment-item.bp-modern-comment-item .comment-body.bp-modern-comment-body {
+        padding-right: 14px !important;
+    }
+
+    html body .comment-item.bp-modern-comment-item .comment-action-btn {
+        width: 44px !important;
+        height: 44px !important;
+        min-width: 44px !important;
+        min-height: 44px !important;
+        background: #fff !important;
+        color: #242424 !important;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Tint from the design's foreground instead of forcing a light card on dark themes. */
+    html body .comment-item.bp-modern-comment-item .comment-body.bp-modern-comment-body {
+        background: color-mix(in srgb, currentColor 8%, transparent) !important;
+        border-color: color-mix(in srgb, currentColor 18%, transparent) !important;
+    }
+
+    html body .comment-item.bp-modern-comment-item .comment-text,
+    html body .comment-item.bp-modern-comment-item .comment-text * {
+        font-size: 16px !important;
+        line-height: 1.5 !important;
+    }
+
+    html body .comment-item.bp-modern-comment-item .comment-time {
+        font-size: 14px !important;
+        color: inherit !important;
+        opacity: 0.9 !important;
+    }
+
+    html body .comment-row textarea[name="content"],
+    html body .comment-edit-form textarea[name="content"] {
+        font-size: 16px !important;
+        line-height: 1.5 !important;
+    }
+}
 </style>
+{% if blog.profile.template == 'jedro_u_suton' %}
+<style>
+@media (max-width: 576px) {
+    html body .jus-theme .comment-item.bp-modern-comment-item .comment-body.bp-modern-comment-body {
+        background: #fff7e9 !important;
+        border-color: #b59a78 !important;
+    }
+}
+</style>
+{% elif blog.profile.template == 'stara_aleja' or blog.profile.template == 'nebeski_mir' or blog.profile.template == 'sumska_svjetlost' or blog.profile.template == 'polarna_svjetlost' or blog.profile.template == 'zlatno_polje' %}
+<style>
+{% if blog.profile.template == 'stara_aleja' %}
+:root { --bp-mobile-comment-surface: #251d18; --bp-mobile-comment-ink: #f7eee2; --bp-mobile-comment-link: #ffe0b4; }
+{% elif blog.profile.template == 'nebeski_mir' %}
+:root { --bp-mobile-comment-surface: #f9fbff; --bp-mobile-comment-ink: #39445b; --bp-mobile-comment-link: #243a65; }
+{% elif blog.profile.template == 'sumska_svjetlost' %}
+:root { --bp-mobile-comment-surface: #f6f8f1; --bp-mobile-comment-ink: #324333; --bp-mobile-comment-link: #2e5536; }
+{% elif blog.profile.template == 'polarna_svjetlost' %}
+:root { --bp-mobile-comment-surface: #101c2f; --bp-mobile-comment-ink: #e6f5ff; --bp-mobile-comment-link: #c6edff; }
+{% elif blog.profile.template == 'zlatno_polje' %}
+:root { --bp-mobile-comment-surface: #fff6df; --bp-mobile-comment-ink: #4d3212; --bp-mobile-comment-link: #5b380d; }
+{% endif %}
+@media (max-width: 576px) {
+    html body .comment-item.bp-modern-comment-item .comment-body.bp-modern-comment-body {
+        background: var(--bp-mobile-comment-surface) !important;
+        color: var(--bp-mobile-comment-ink) !important;
+        border-color: var(--bp-mobile-comment-ink) !important;
+    }
+    html body .comment-item.bp-modern-comment-item .comment-text,
+    html body .comment-item.bp-modern-comment-item .comment-text *,
+    html body .comment-item.bp-modern-comment-item .comment-time {
+        color: var(--bp-mobile-comment-ink) !important;
+        -webkit-text-fill-color: var(--bp-mobile-comment-ink) !important;
+    }
+    html body .comment-item.bp-modern-comment-item .comment-author a {
+        color: var(--bp-mobile-comment-link) !important;
+        -webkit-text-fill-color: var(--bp-mobile-comment-link) !important;
+    }
+}
+</style>
+{% endif %}
 <!-- PHASE 26D FORCE COMMENT ACTIONS HOVER END -->
 
