@@ -2,6 +2,7 @@
 <html>
 <head>
     {% load static %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     {% load custom_tags %}
     <link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}?v=2">
     <link rel="shortcut icon" href="{% static 'images/favicon.png' %}?v=2">
@@ -3708,6 +3709,40 @@ body #globalNavbar .notif-badge {
 }
 
 @media (max-width: 575.98px) {
+    #globalNavbar #searchToggleBtn.btn,
+    #globalNavbar #navbarSearchSubmitBtn.btn {
+        min-width: 44px !important;
+        min-height: 44px !important;
+    }
+
+    #globalNavbar #navbarSearchInline {
+        order: 3;
+        width: 100% !important;
+        max-width: 100%;
+        min-width: 0;
+        margin-left: 0 !important;
+    }
+
+    #globalNavbar #navbarSearchInline form,
+    #globalNavbar #navbarSearchInline .input-group {
+        width: 100% !important;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    html body #globalNavbar #navbarSearchInput.form-control {
+        flex: 1 1 auto;
+        width: 1% !important;
+        min-width: 0;
+        min-height: 44px !important;
+    }
+
+    #globalNavbar .nav-right > a {
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
+    }
+
     #globalNavbar .nav-right {
         width: 100%;
         min-width: 0;
