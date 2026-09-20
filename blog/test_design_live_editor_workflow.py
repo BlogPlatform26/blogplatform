@@ -73,6 +73,23 @@ class DesignLiveEditorWorkflowTests(TestCase):
                 self.assertIn(".live-editor-actions button{", html)
                 self.assertIn("min-height:44px;", html)
 
+    def test_mobile_field_targets_keep_desktop_rules_unchanged(self):
+        for template, section in (("magazin", "naslovi"), ("simple_pattern", "pozadine")):
+            with self.subTest(template=template, section=section):
+                self.activate_template(template)
+                response = self.client.get(self.url, {"section": section})
+                self.assertEqual(response.status_code, 200)
+                html = response.content.decode(response.charset)
+                mobile_rules = html.split("@media (max-width: 575.98px){", 1)[1].split("</style>", 1)[0]
+                for selector in (
+                    ".editor-card .form-select,",
+                    ".editor-card .editor-color-input{",
+                    ".editor-card .form-range{",
+                ):
+                    self.assertIn(selector, mobile_rules)
+                self.assertIn("height:44px !important;", mobile_rules)
+                self.assertIn("transform:none;", mobile_rules)
+
     def test_title_save_uses_post_redirect_get_and_persists_all_fields(self):
         self.activate_template("default")
 
