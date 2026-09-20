@@ -86,7 +86,7 @@
 })();
 </script>
 
-            <ul class="nav nav-tabs mb-4">
+            <ul class="nav nav-tabs mb-4 post-settings-subtabs">
 
                 <li class="nav-item">
                     <a href="?tab=postovi&post_filter=new"
@@ -867,6 +867,18 @@
         #cke_id_content,
         .django-ckeditor-widget {
             max-width: 100% !important;
+        }
+    }
+
+    @media (max-width: 575.98px) {
+        .post-settings-subtabs .nav-link {
+            display: flex;
+            align-items: center;
+            min-height: 44px;
+        }
+
+        .new-post-actions .btn {
+            min-height: 44px;
         }
     }
 </style>
