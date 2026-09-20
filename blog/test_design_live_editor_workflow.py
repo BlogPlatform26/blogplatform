@@ -1,6 +1,8 @@
 import base64
 import tempfile
+from pathlib import Path
 
+from django.conf import settings
 from django.contrib.auth.models import User
 from django.core.files.uploadedfile import SimpleUploadedFile
 from django.test import TestCase, override_settings
@@ -89,6 +91,25 @@ class DesignLiveEditorWorkflowTests(TestCase):
                     self.assertIn(selector, mobile_rules)
                 self.assertIn("height:44px !important;", mobile_rules)
                 self.assertIn("transform:none;", mobile_rules)
+
+    def test_mobile_preview_uses_fitted_frame_and_two_way_navigation(self):
+        self.activate_template("magazin")
+        response = self.client.get(self.url)
+        self.assertEqual(response.status_code, 200)
+        html = response.content.decode(response.charset)
+        self.assertIn('id="liveEditorControls"', html)
+        self.assertIn('id="liveEditorPreview"', html)
+        self.assertIn('href="#liveEditorPreview"', html)
+        self.assertIn('href="#liveEditorControls"', html)
+        self.assertIn('class="live-editor-mobile-jump', html)
+        self.assertIn("overflow-x:auto;", html)
+
+        script = (
+            Path(settings.BASE_DIR) / "blog" / "static" / "blog" / "js" / "design_live_editor.js"
+        ).read_text(encoding="utf-8")
+        self.assertIn("mobilePreview ? 320", script)
+        self.assertIn("frameWrap.clientWidth - 20", script)
+        self.assertIn("frameShell.style.width = Math.floor", script)
 
     def test_title_save_uses_post_redirect_get_and_persists_all_fields(self):
         self.activate_template("default")

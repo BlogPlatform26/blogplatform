@@ -37,14 +37,14 @@ document.addEventListener('DOMContentLoaded', function () {
     function updatePreviewScale() {
         if (!iframe || !frameWrap || !frameShell) return;
 
-        const availableWidth = Math.max(frameWrap.clientWidth - 4, 320);
+        const availableWidth = Math.max(frameWrap.clientWidth - 20, 1);
         const scale = Math.min(1, availableWidth / previewNaturalWidth);
 
         iframe.style.transformOrigin = 'top left';
         iframe.style.transform = `scale(${scale})`;
-        frameShell.style.width = Math.round(previewNaturalWidth * scale) + 'px';
+        frameShell.style.width = Math.floor(previewNaturalWidth * scale) + 'px';
         frameShell.style.height = Math.round(previewNaturalHeight * scale) + 'px';
-        frameWrap.style.overflowX = 'hidden';
+        frameWrap.style.overflowX = 'auto';
     }
 
     function resizeIframe() {
@@ -55,7 +55,8 @@ document.addEventListener('DOMContentLoaded', function () {
         const html = doc.documentElement;
         const scrolling = doc.scrollingElement || html || body;
 
-        const width = Math.max(
+        const mobilePreview = window.matchMedia('(max-width: 575.98px)').matches;
+        let width = mobilePreview ? 320 : Math.max(
             scrolling ? scrolling.scrollWidth : 0,
             body ? body.scrollWidth : 0,
             html ? html.scrollWidth : 0,
@@ -63,6 +64,12 @@ document.addEventListener('DOMContentLoaded', function () {
             html ? html.offsetWidth : 0,
             1180
         );
+
+        iframe.style.width = width + 'px';
+        if (!mobilePreview) {
+            width = Math.max(width, scrolling ? scrolling.scrollWidth : 0,
+                body ? body.scrollWidth : 0, html ? html.scrollWidth : 0);
+        }
 
         const height = Math.max(
             scrolling ? scrolling.scrollHeight : 0,
@@ -73,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function () {
             100
         );
 
-        previewNaturalWidth = Math.max(width, 1180);
+        previewNaturalWidth = width;
         previewNaturalHeight = height + 2;
 
         iframe.style.width = previewNaturalWidth + 'px';
