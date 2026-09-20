@@ -81,3 +81,47 @@
     margin-bottom: 0.35rem;
 }
 /* BlogPlatform direct line spacing end */
+
+/* Touch targets on the two standalone post forms only. */
+@media (max-width: 575.98px) {
+    #editPostForm .edit-post-options-inner {
+        grid-template-columns: minmax(0, 1fr) !important;
+    }
+
+    #editPostForm .edit-post-panel,
+    #editPostForm .edit-post-field {
+        min-width: 0;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    #editPostForm .edit-post-category-grid .form-check,
+    #editPostForm .edit-post-comment-row,
+    #createPostForm .form-check {
+        min-height: 44px !important;
+        align-items: center;
+    }
+
+    #createPostForm :is(.form-control, .form-select, input[type="file"], input[type="datetime-local"]),
+    #editPostForm :is(.form-control, .form-select, input[type="file"], input[type="datetime-local"]),
+    #createPostForm > button[type="submit"],
+    #editPostForm .edit-post-actions .btn,
+    #editPostForm .edit-post-image-add {
+        min-height: 44px !important;
+        height: auto !important;
+    }
+
+    #createPostForm .ck-toolbar .ck-button,
+    #editPostForm .ck-toolbar .ck-button {
+        min-width: 44px !important;
+        min-height: 44px !important;
+    }
+
+    #createPostForm .bp-direct-spacing-control,
+    #editPostForm .bp-direct-spacing-control,
+    #createPostForm .bp-direct-spacing-control select,
+    #editPostForm .bp-direct-spacing-control select {
+        min-height: 44px !important;
+        height: 44px !important;
+    }
+}
