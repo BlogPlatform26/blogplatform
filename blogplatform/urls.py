@@ -39,6 +39,10 @@ path("blog/settings/export-posts/", export_my_posts, name="export_my_posts"),
     # BLOGPLATFORM_LIKE_ROUTE_FIX_START
     path('post/<int:post_id>/like/', views.like_post, name='like_post'),
     # BLOGPLATFORM_LIKE_ROUTE_FIX_END
+    # Specific post actions must precede the catch-all post slug route.
+    path('post/<int:post_id>/edit/', edit_post, name='edit_post'),
+    path('post/<int:post_id>/delete/', delete_post, name='delete_post'),
+    path('post/<int:pk>/comment/', views.create_comment, name='create_comment'),
     path('post/<int:post_id>/<slug:post_slug>/', post_detail, name='post_detail_slug'),
 
     path('post/<int:post_id>/', post_detail, name='post_detail'),
@@ -55,9 +59,6 @@ path("blog/settings/export-posts/", export_my_posts, name="export_my_posts"),
 
     path("account/deactivate/", views.deactivate_account, name="deactivate_account"),
     path('new/', create_post, name='create_post'),
-    path('post/<int:post_id>/edit/', edit_post, name='edit_post'),
-    path('post/<int:post_id>/delete/', delete_post, name='delete_post'),
-    path('post/<int:pk>/comment/', views.create_comment, name='create_comment'),
     path('comment/<int:comment_id>/delete/', delete_comment, name='delete_comment'),
     path('comment/<int:comment_id>/edit/', edit_comment, name='edit_comment'),
     path('profile/', profile, name='profile'),
