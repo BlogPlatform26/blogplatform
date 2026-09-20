@@ -60,6 +60,19 @@ class DesignLiveEditorWorkflowTests(TestCase):
         self.assertTemplateUsed(response, "blog/design_live_editor.html")
         self.assertContains(response, 'id="designLiveTitlesForm"', html=False)
 
+    def test_mobile_action_targets_are_scoped_to_live_editor(self):
+        for template, section in (("magazin", "naslovi"), ("simple_pattern", "pozadine")):
+            with self.subTest(template=template, section=section):
+                self.activate_template(template)
+                response = self.client.get(self.url, {"section": section})
+                self.assertEqual(response.status_code, 200)
+                html = response.content.decode(response.charset)
+                self.assertIn("@media (max-width: 575.98px)", html)
+                self.assertIn(".editor-tab-btn,", html)
+                self.assertIn(".editor-card-head [data-reset-card],", html)
+                self.assertIn(".live-editor-actions button{", html)
+                self.assertIn("min-height:44px;", html)
+
     def test_title_save_uses_post_redirect_get_and_persists_all_fields(self):
         self.activate_template("default")
 
