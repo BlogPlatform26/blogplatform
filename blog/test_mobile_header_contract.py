@@ -41,3 +41,20 @@ class MobileHeaderContractTests(TestCase):
                 self.assertIn("#navbarSearchInline .input-group", content)
                 self.assertIn("width: 100% !important;", content)
                 self.assertIn("min-width: 44px !important;", content)
+
+    def test_direct_post_forms_keep_mobile_profile_menu_and_guest_login_links(self):
+        guest = self.client.get(reverse("home"))
+        self.assertContains(guest, 'href="/login/"')
+        self.assertContains(guest, 'href="/register/"')
+
+        self.client.force_login(self.author)
+        for url in (reverse("create_post"), reverse("edit_post", args=[self.post.pk])):
+            with self.subTest(url=url):
+                response = self.client.get(url)
+                self.assertEqual(response.status_code, 200)
+                html = response.content.decode(response.charset)
+                self.assertIn('class="nav-greeting-prefix">Pozdrav, </span>', html)
+                self.assertIn('class="nav-user dropdown-toggle"', html)
+                self.assertIn('class="dropdown-item" href="/profile/"', html)
+                self.assertIn("#globalNavbar .nav-greeting-prefix", html)
+                self.assertIn("gap: 6px;", html)

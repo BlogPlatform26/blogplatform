@@ -1312,7 +1312,7 @@
                     {% endif %}
 
                     <span class="nav-user-text">
-                        Pozdrav, <strong>{{ user|premium_name }}</strong>
+                        <span class="nav-greeting-prefix">Pozdrav, </span><strong>{{ user|premium_name }}</strong>
                     </span>
                 </a>
 
@@ -3747,6 +3747,7 @@ body #globalNavbar .notif-badge {
         width: 100%;
         min-width: 0;
         max-width: 100%;
+        gap: 6px;
     }
 
     #globalNavbar .nav-right > .dropdown {
@@ -3757,6 +3758,12 @@ body #globalNavbar .notif-badge {
     #globalNavbar .nav-user {
         width: 100%;
         min-width: 0;
+        padding-inline: 6px;
+        gap: 6px;
+    }
+
+    #globalNavbar .nav-greeting-prefix {
+        display: none;
     }
 
     #globalNavbar .nav-user-text {
