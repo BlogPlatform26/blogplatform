@@ -21,7 +21,7 @@ class SettingsSidebarMobileContractTests(TestCase):
         self.assertIn("dashboard-settings-sidebar", content)
         self.assertIn("dashboard-settings-content", content)
         self.assertIn("avatar-upload-field", content)
-        self.assertIn("blog/css/blog_settings.css?v=77", content)
+        self.assertIn("blog/css/blog_settings.css?v=80d", content)
 
         css_path = finders.find("blog/css/blog_settings.css")
         self.assertIsNotNone(css_path)

@@ -7,6 +7,20 @@
         min-width: 0 !important;
         width: 100%;
     }
+
+    .design-settings-scope > .nav-tabs .nav-link,
+    .design-settings-scope > form > button[type="submit"],
+    .design-settings-scope a.btn,
+    .design-settings-scope .ambience-card .btn,
+    .design-settings-scope .ambience-card .form-select,
+    .design-settings-scope .ambience-card input[type="text"] {
+        min-height: 44px !important;
+    }
+
+    .design-settings-scope > .nav-tabs .nav-link {
+        display: inline-flex;
+        align-items: center;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
