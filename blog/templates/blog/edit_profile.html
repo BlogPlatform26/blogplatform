@@ -2,6 +2,14 @@
 {% block title %}Postavke računa{% endblock %}
 
 {% block content %}
+<style>
+    @media (max-width: 600px) {
+        .bp-profile-edit-form .form-control,
+        .bp-profile-edit-form .bp-profile-save {
+            min-height: 44px;
+        }
+    }
+</style>
 <div class="container-fluid py-4">
     <div class="row justify-content-center">
         <div class="col-12 col-xl-8">
@@ -9,7 +17,7 @@
                 <div class="card-body p-4 p-lg-5 bg-white">
                     <h3 class="mb-4">Postavke profila</h3>
 
-                    <form method="POST">
+                    <form method="POST" class="bp-profile-edit-form">
                         {% csrf_token %}
 
                         {% if user_form.errors or profile_form.errors %}
@@ -51,7 +59,7 @@
                             {{ profile_form.blog_tagline.errors }}
                         </div>
 
-                        <button type="submit" class="btn btn-primary">
+                        <button type="submit" class="btn btn-primary bp-profile-save">
                             Spremi promjene
                         </button>
                     </form>

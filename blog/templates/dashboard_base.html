@@ -189,6 +189,14 @@
         }
     }
 
+    @media (max-width: 600px) {
+        .navbar .bp-profile-menu .dropdown-item {
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+        }
+    }
+
     </style>
 </head>
 <body>
@@ -307,7 +315,7 @@
                     </span>
                 </a>
 
-                <ul class="dropdown-menu dropdown-menu-end">
+                <ul class="dropdown-menu dropdown-menu-end bp-profile-menu">
                     <li><a class="dropdown-item" href="/profile/">Moj blog</a></li>
                     <li>
                         <a class="dropdown-item" href="{% url 'blog_settings' %}?tab=postovi&post_filter=new">
