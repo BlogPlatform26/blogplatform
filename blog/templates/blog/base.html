@@ -3773,6 +3773,36 @@ body #globalNavbar .notif-badge {
         white-space: nowrap;
     }
 }
+
+/* BLOGPLATFORM_MOBILE_CALENDAR_TARGETS_START */
+@media (max-width: 600px) {
+    html body .calendar-month-nav-link {
+        min-width: 44px !important;
+        min-height: 44px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        box-sizing: border-box !important;
+    }
+
+    html body a[class*="calendar-day"] {
+        min-width: 44px !important;
+        min-height: 44px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        justify-self: center !important;
+        box-sizing: border-box !important;
+    }
+
+    html body a[class*="archive-link"] {
+        min-height: 44px !important;
+        display: flex !important;
+        align-items: center !important;
+        box-sizing: border-box !important;
+    }
+}
+/* BLOGPLATFORM_MOBILE_CALENDAR_TARGETS_END */
 </style>
 
 </body>
