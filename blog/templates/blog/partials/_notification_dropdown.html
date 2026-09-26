@@ -267,6 +267,33 @@
         line-height: 1.2 !important;
         margin-top: 2px !important;
     }
+    @media (max-width: 600px) {
+        html body nav.navbar .bp-final-notification-dropdown {
+            position: static !important;
+        }
+
+        html body nav.navbar .dropdown-menu.bp-final-notification-menu {
+            left: 10px !important;
+            right: 10px !important;
+            top: 100% !important;
+            width: auto !important;
+            min-width: 0 !important;
+            max-width: none !important;
+            transform: none !important;
+        }
+
+        html body nav.navbar .bp-final-notification-actions a,
+        html body nav.navbar .bp-final-notification-actions button,
+        html body nav.navbar .bp-final-notification-item {
+            min-height: 44px !important;
+        }
+
+        html body nav.navbar .bp-final-notification-actions a,
+        html body nav.navbar .bp-final-notification-actions button {
+            display: inline-flex !important;
+            align-items: center !important;
+        }
+    }
     /* BLOGPLATFORM_NOTIFICATION_NARROW_FIX_END */
 
 </style>
