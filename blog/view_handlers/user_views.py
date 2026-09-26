@@ -19,6 +19,7 @@ from blog.services import (
     get_public_author_questions,
     has_public_author_content,
     is_user_restricted,
+    normalize_calendar_query,
     resolve_design_template_name,
 )
 from blog.constants import MONTHS_HR
@@ -58,22 +59,12 @@ def author_detail(request, username):
     from django.utils import timezone
     today = timezone.localdate()
 
-    year_param = request.GET.get('year')
-    month_param = request.GET.get('month')
-
-    try:
-        display_year = int(year_param) if year_param else today.year
-    except (TypeError, ValueError):
-        display_year = today.year
-
-    try:
-        display_month = int(month_param) if month_param else today.month
-    except (TypeError, ValueError):
-        display_month = today.month
-
-    if display_month < 1 or display_month > 12:
-        display_month = today.month
-        display_year = today.year
+    _filter_year, _filter_month, _filter_day, display_year, display_month = normalize_calendar_query(
+        request.GET.get('year'),
+        request.GET.get('month'),
+        request.GET.get('day'),
+        fallback_date=today,
+    )
 
     month_calendar, days_with_posts, day_single_post_map = build_calendar_for_user(
         blog_user,

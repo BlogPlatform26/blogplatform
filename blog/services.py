@@ -3323,6 +3323,51 @@ def get_profile_posts_queryset(profile_user, request_user, category_slug=None, y
     return posts
 
 
+def normalize_calendar_query(year_value, month_value, day_value=None, fallback_date=None):
+    """Return safe filter and display values for public calendar query params."""
+    fallback_date = fallback_date or timezone.localdate()
+
+    def parse_optional_int(raw_value):
+        if raw_value in (None, ''):
+            return None, False
+        try:
+            return int(raw_value), False
+        except (TypeError, ValueError):
+            return None, True
+
+    year, invalid_year = parse_optional_int(year_value)
+    month, invalid_month = parse_optional_int(month_value)
+    day, invalid_day = parse_optional_int(day_value)
+
+    if year is not None and not 1 <= year <= 9998:
+        invalid_year = True
+    if month is not None and not 1 <= month <= 12:
+        invalid_month = True
+
+    if invalid_year or invalid_month:
+        return None, None, None, fallback_date.year, fallback_date.month
+
+    filter_year = year
+    filter_month = month
+
+    if filter_month is not None and filter_year is None:
+        filter_year = fallback_date.year
+
+    if day is not None:
+        if filter_year is None or filter_month is None:
+            invalid_day = True
+        else:
+            max_day = calendar.monthrange(filter_year, filter_month)[1]
+            if not 1 <= day <= max_day:
+                invalid_day = True
+
+    filter_day = None if invalid_day else day
+    display_year = filter_year if filter_year is not None else fallback_date.year
+    display_month = filter_month if filter_month is not None else fallback_date.month
+
+    return filter_year, filter_month, filter_day, display_year, display_month
+
+
 def paginate_posts(posts, per_page, page_number):
     paginator = Paginator(posts, per_page)
     return paginator.get_page(page_number)
@@ -3336,27 +3381,12 @@ def prepare_blog_context(request, profile_user, template_name, category_slug=Non
 
     today = timezone.localdate()
 
-    year_param = request.GET.get('year')
-    month_param = request.GET.get('month')
-    day_param = request.GET.get('day')
-
-    try:
-        filter_year = int(year_param) if year_param else None
-    except (TypeError, ValueError):
-        filter_year = None
-
-    try:
-        filter_month = int(month_param) if month_param else None
-    except (TypeError, ValueError):
-        filter_month = None
-
-    try:
-        filter_day = int(day_param) if day_param else None
-    except (TypeError, ValueError):
-        filter_day = None
-
-    display_year = filter_year if filter_year is not None else today.year
-    display_month = filter_month if filter_month is not None else today.month
+    filter_year, filter_month, filter_day, display_year, display_month = normalize_calendar_query(
+        request.GET.get('year'),
+        request.GET.get('month'),
+        request.GET.get('day'),
+        fallback_date=today,
+    )
     current_day = today.day if display_year == today.year and display_month == today.month else None
 
     posts = get_profile_posts_queryset(
