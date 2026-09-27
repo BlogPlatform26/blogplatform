@@ -6,7 +6,7 @@ from blog.models import Post, Profile
 from blog.services import set_blog_preferences
 
 
-class CalendarMobileTargetsContractTests(TestCase):
+class CalendarResponsiveTargetsContractTests(TestCase):
     @classmethod
     def setUpTestData(cls):
         cls.author = User.objects.create_user(
@@ -21,7 +21,7 @@ class CalendarMobileTargetsContractTests(TestCase):
         )
         set_blog_preferences(cls.author, {"blog_archive_mode": "both"})
 
-    def test_every_registered_design_uses_shared_mobile_target_contract(self):
+    def test_every_registered_design_uses_shared_mobile_and_tablet_target_contract(self):
         url = reverse("user_blog", args=[self.author.username])
 
         for template_key, _label in Profile.TEMPLATE_CHOICES:
@@ -34,6 +34,7 @@ class CalendarMobileTargetsContractTests(TestCase):
 
                 self.assertEqual(response.status_code, 200)
                 self.assertIn("BLOGPLATFORM_MOBILE_CALENDAR_TARGETS_START", content)
+                self.assertIn("@media (max-width: 991.98px)", content)
                 self.assertIn("html body .calendar-month-nav-link", content)
                 self.assertIn('html body a[class*="calendar-day"]', content)
                 self.assertIn('html body a[class*="archive-link"]', content)
