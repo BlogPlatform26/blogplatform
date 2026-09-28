@@ -530,6 +530,61 @@ nav.navbar .dropdown-menu {
     background: rgba(255,141,141,0.10);
 }
 
+/* Phase 83j: photo-independent midnight contrast surfaces. */
+.pe-post .post-author-line,
+.pe-post .post-actions,
+.pe-theme .pe-archive-link,
+.pe-theme .pe-calendar-day--has-post,
+.pe-theme .calendar-month-nav-link {
+    background: #090f1c;
+    border: 1px solid #53617d;
+}
+
+.pe-post .post-author-line,
+.pe-post .post-actions {
+    border-radius: 10px;
+    padding: 6px 10px;
+}
+
+.pe-post .post-author-line,
+.pe-post .post-author-line *,
+.pe-post .post-actions,
+.pe-post .post-actions *,
+.pe-theme .pe-archive-link,
+.pe-theme .pe-archive-link *,
+.pe-theme .pe-calendar-day--has-post,
+.pe-theme .pe-calendar-day--has-post *,
+.pe-theme .calendar-month-nav-link,
+.pe-theme .calendar-month-nav-link * {
+    color: #f0dfb1 !important;
+}
+
+.pe-post .post-author-line a:hover,
+.pe-post .post-actions a:hover,
+.pe-theme .pe-archive-link:hover,
+.pe-theme .pe-calendar-day--has-post:hover,
+.pe-theme .calendar-month-nav-link:hover {
+    color: #fff8ea !important;
+    background: #121c30;
+}
+
+html body .pe-theme .comment-item.bp-modern-comment-item .comment-body.bp-modern-comment-body {
+    background: #090f1c !important;
+    border-color: #53617d !important;
+}
+
+html body .pe-theme .comment-body,
+html body .pe-theme .comment-body .comment-text,
+html body .pe-theme .comment-body .comment-time {
+    color: #dce1ee !important;
+}
+
+html body .pe-theme .comment-body .comment-author,
+html body .pe-theme .comment-body .comment-author a,
+html body .pe-theme .comment-body a {
+    color: #f0dfb1 !important;
+}
+
 @media (max-width: 991.98px) {
     .pe-layout {
         grid-template-columns: 1fr;
