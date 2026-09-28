@@ -2318,6 +2318,19 @@ textarea.form-control:focus{ background:#fff !important; color:#111827 !importan
 }
 </style>
 
+{% if blog.profile.template == 'simple_pattern' or blog.profile.template == 'simple_image' %}
+<style>
+/* Phase 84b: contain simple calendar padding inside the responsive column. */
+@media (max-width: 991.98px) {
+    .calendar-box.calendar-box--simple {
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 100%;
+    }
+}
+</style>
+{% endif %}
+
 <style>
 /* SIMPLE RETRO - uži kalendar */
 .blog-main-right-column--simple-retro .calendar-box{
