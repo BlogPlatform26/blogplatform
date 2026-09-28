@@ -543,6 +543,61 @@ nav.navbar .dropdown-menu {
     background: rgba(255,255,255,0.10);
 }
 
+/* Phase 83h: photo-independent lagoon contrast surfaces. */
+.mj-post .post-author-line,
+.mj-post .post-actions,
+.mj-theme .mj-archive-link,
+.mj-theme .mj-calendar-day--has-post,
+.mj-theme .calendar-month-nav-link {
+    background: #2a123e;
+    border: 1px solid #79568f;
+}
+
+.mj-post .post-author-line,
+.mj-post .post-actions {
+    border-radius: 10px;
+    padding: 6px 10px;
+}
+
+.mj-post .post-author-line,
+.mj-post .post-author-line *,
+.mj-post .post-actions,
+.mj-post .post-actions *,
+.mj-theme .mj-archive-link,
+.mj-theme .mj-archive-link *,
+.mj-theme .mj-calendar-day--has-post,
+.mj-theme .mj-calendar-day--has-post *,
+.mj-theme .calendar-month-nav-link,
+.mj-theme .calendar-month-nav-link * {
+    color: #ffe0a8 !important;
+}
+
+.mj-post .post-author-line a:hover,
+.mj-post .post-actions a:hover,
+.mj-theme .mj-archive-link:hover,
+.mj-theme .mj-calendar-day--has-post:hover,
+.mj-theme .calendar-month-nav-link:hover {
+    color: #fff5df !important;
+    background: #3a1b50;
+}
+
+html body .mj-theme .comment-item.bp-modern-comment-item .comment-body.bp-modern-comment-body {
+    background: #2a123e !important;
+    border-color: #79568f !important;
+}
+
+html body .mj-theme .comment-body,
+html body .mj-theme .comment-body .comment-text,
+html body .mj-theme .comment-body .comment-time {
+    color: #f7edff !important;
+}
+
+html body .mj-theme .comment-body .comment-author,
+html body .mj-theme .comment-body .comment-author a,
+html body .mj-theme .comment-body a {
+    color: #ffe0a8 !important;
+}
+
 @media (max-width: 991.98px) {
     .mj-layout {
         grid-template-columns: 1fr;
