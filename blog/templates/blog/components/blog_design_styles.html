@@ -898,13 +898,14 @@ hr {
     border-color: #d8b07f;
     background: #fff9f1;
     background-image: none;
+    color: #3d6d86;
     box-shadow: 0 0 0 1px rgba(216, 176, 127, 0.12) inset;
 }
 
 .calendar-day-today {
-    background: #c97d27;
+    background: #a15e18;
     background-image: none;
-    border-color: #c97d27;
+    border-color: #a15e18;
     color: #fff;
     font-weight: 800;
     position: relative;
@@ -1015,7 +1016,13 @@ textarea.form-control:focus {
 .comment-author a,
 .post-views,
 .blog-user-dropdown-toggle {
-    color: #5b8ea2 !important;
+    color: #3d6d86 !important;
+}
+
+/* Phase 84c: ordinary simple-family links meet the light-surface contrast contract. */
+.post-actions a,
+.post-actions span {
+    color: #3d6d86;
 }
 
 .blog-date-shell {
@@ -1285,13 +1292,13 @@ textarea.form-control:focus {
 
 .blog-main-right-column--simple-retro .calendar-day-has-post {
     border: 1px solid rgba(76, 161, 174, 0.26);
-    color: #4ca1ae;
+    color: #2f6870;
 }
 
 .blog-main-right-column--simple-retro .calendar-day-today {
-    background: #4ca1ae;
+    background: #2f6870;
     color: #ffffff;
-    border-color: #4ca1ae;
+    border-color: #2f6870;
 }
 
 
@@ -1302,7 +1309,12 @@ textarea.form-control:focus {
 .blog-posts-shell--simple-retro .post-author-link,
 .blog-posts-shell--simple-retro .comment-author a,
 .blog-posts-shell--simple-retro .post-views {
-    color: #6f939b !important;
+    color: #2f6870 !important;
+}
+
+.blog-posts-shell--simple-retro .post-actions a,
+.blog-posts-shell--simple-retro .post-actions span {
+    color: #2f6870;
 }
 
 @media (max-width: 767.98px) {
