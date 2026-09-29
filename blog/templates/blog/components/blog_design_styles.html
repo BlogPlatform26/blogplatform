@@ -2345,6 +2345,27 @@ textarea.form-control:focus{ background:#fff !important; color:#111827 !importan
 </style>
 {% endif %}
 
+{% if blog.profile.template == 'default' or blog.profile.template == 'dark' or blog.profile.template == 'classic' or blog.profile.template == 'default_right' or blog.profile.template == 'dark_right' or blog.profile.template == 'classic_right' or blog.profile.template == 'simple_pattern' or blog.profile.template == 'simple_image' or blog.profile.template == 'simple_retro' %}
+<style>
+/* Phase 84e: preserve 44px post-action targets through the tablet layout. */
+@media (min-width: 576px) and (max-width: 991.98px) {
+    html body .post-actions > form {
+        display: flex !important;
+        align-items: stretch !important;
+    }
+
+    html body .post-actions > form > button,
+    html body .post-actions > a {
+        min-height: 44px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        box-sizing: border-box !important;
+    }
+}
+</style>
+{% endif %}
+
 <style>
 /* SIMPLE RETRO - uži kalendar */
 .blog-main-right-column--simple-retro .calendar-box{
