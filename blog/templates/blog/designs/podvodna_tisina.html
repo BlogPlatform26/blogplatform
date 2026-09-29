@@ -375,6 +375,17 @@
         color: #b8d7ff;
         opacity: 0.95;
     }
+
+    /* Phase 84f2: local comment contrast contract. */
+    [id^="comments-"] > .small.text-muted {
+        color: #b8c9e5 !important;
+    }
+
+    @media (min-width: 768px) {
+        .comment-author a {
+            color: #d5e5ff !important;
+        }
+    }
     </style>
     {% include "blog/components/blog_posts.html" %}
 {% endblock %}

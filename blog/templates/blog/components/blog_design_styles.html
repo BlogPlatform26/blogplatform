@@ -1698,6 +1698,11 @@ textarea::placeholder {
     color: #ffffff !important;
 }
 
+/* Phase 84f2: keep muted guidance readable only inside the comment area. */
+[id^="comments-"] > .small.text-muted {
+    color: #b8c9e5 !important;
+}
+
 @media (max-width: 991.98px) {
     body::before {
         height: clamp(360px, 82vw, 640px);
