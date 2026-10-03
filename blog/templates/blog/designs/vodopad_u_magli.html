@@ -356,6 +356,39 @@ textarea::placeholder {
     color: #374135 !important;
 }
 
+/* Phase 84f3b: deterministic ink on the light cards and a photo-independent
+   desktop title surface. The waterfall remains visible outside the compact
+   header card. */
+.post-author-link,
+.post-author-link a,
+.post-actions button,
+.post-actions a,
+.post-actions span {
+    color: #43513e !important;
+}
+
+.post-author-link:hover,
+.post-author-link a:hover,
+.post-actions button:hover,
+.post-actions a:hover {
+    color: #2f3b2c !important;
+}
+
+.comment-text,
+.comment-text * {
+    color: #465042 !important;
+}
+
+@media (min-width: 992px) {
+    .blog-header-main {
+        background: #eef0e9 !important;
+        border: 1px solid rgba(83, 99, 77, 0.28) !important;
+        border-radius: 18px;
+        box-shadow: 0 12px 30px rgba(54, 64, 51, 0.12) !important;
+        padding: 18px 22px 16px;
+    }
+}
+
 @media (max-width: 991.98px) {
     body::before {
         height: clamp(360px, 82vw, 640px);
