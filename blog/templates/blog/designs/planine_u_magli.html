@@ -414,6 +414,25 @@ textarea::placeholder {
     color: #4a5663 !important;
 }
 
+/* Phase 84f4c: the desktop heading is independent of bright sky and dark
+   mountain pixels while the panorama remains exposed around the centre card. */
+@media (min-width: 992px) {
+    .blog-header-main {
+        background: #edf1f4 !important;
+        border: 1px solid rgba(112, 133, 157, 0.28) !important;
+        border-radius: 20px;
+        box-shadow: 0 14px 34px rgba(81, 96, 111, 0.14) !important;
+        padding: 18px 22px 16px;
+    }
+
+    html body .blog-header-main .blog-page-title,
+    html body .blog-header-main .blog-page-title a,
+    html body .blog-header-main .blog-page-subtitle {
+        color: #43566c !important;
+        text-shadow: none !important;
+    }
+}
+
 @media (max-width: 991.98px) {
     body::before {
         height: clamp(360px, 82vw, 660px);
