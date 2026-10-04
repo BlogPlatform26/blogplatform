@@ -93,6 +93,18 @@ footer {
     text-shadow: 0 6px 18px rgba(0, 0, 0, 0.55);
 }
 
+/* Phase 85c: compact, crop-independent protection behind each title line. */
+html body .blog-page-title a {
+    background: #081326 !important;
+    border-radius: 0.12em;
+    box-shadow:
+        0 0 0 0.16em rgba(8, 19, 38, 0.96),
+        0 6px 18px rgba(0, 0, 0, 0.24);
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    text-shadow: none !important;
+}
+
 .blog-post-entry h4,
 .blog-post-title,
 .blog-post-entry h4 a {
