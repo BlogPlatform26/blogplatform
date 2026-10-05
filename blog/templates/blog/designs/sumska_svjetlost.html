@@ -501,6 +501,48 @@ select.form-select:focus {
         font-size: 26px;
     }
 }
+
+/* Phase 88d: photo-independent reading ink over the forest field. */
+html body .blog-header-main .blog-page-title,
+html body .blog-header-main .blog-page-subtitle,
+html body .blog-post-entry .blog-post-title {
+    width: fit-content;
+    max-width: 100%;
+    box-sizing: border-box;
+    color: #f5fbef !important;
+    background: #354b32 !important;
+    border-radius: 0.30em;
+    box-shadow: inset 0 0 0 1px rgba(245, 251, 239, 0.14);
+}
+
+html body .blog-post-entry .blog-rich-content,
+html body .blog-post-entry .post-author-link,
+html body .blog-post-entry .post-actions a,
+html body .blog-post-entry .post-actions button,
+html body .blog-post-entry .post-actions .post-views,
+html body .blog-main-layout-row .comment-item .comment-body .comment-text,
+html body .blog-main-layout-row .comment-item .comment-body .comment-text .bp-comment-text,
+html body .blog-main-layout-row .comment-item .comment-body .comment-text .bp-comment-word,
+html body .blog-main-layout-row .comment-item .comment-body .comment-author a,
+html body .archive-link {
+    color: #354b32 !important;
+    background: #f5fbef !important;
+    border-radius: 0.32em;
+    box-shadow: inset 0 0 0 1px rgba(53, 75, 50, 0.14);
+}
+
+html body .blog-post-entry .post-author-link:hover,
+html body .blog-post-entry .post-actions a:hover,
+html body .blog-post-entry .post-actions button:hover,
+html body .blog-post-entry .post-actions a:focus-visible,
+html body .blog-post-entry .post-actions button:focus-visible,
+html body .blog-main-layout-row .comment-item .comment-body .comment-author a:hover,
+html body .blog-main-layout-row .comment-item .comment-body .comment-author a:focus-visible,
+html body .archive-link:hover,
+html body .archive-link:focus-visible {
+    color: #263a24 !important;
+    background: #f5fbef !important;
+}
     </style>
     {% include "blog/components/blog_posts.html" %}
 {% endblock %}
