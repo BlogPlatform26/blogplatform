@@ -514,6 +514,33 @@ html body .blog-post-entry .post-actions button:focus-visible {
     color: #081e2d !important;
     background: #f1fbff !important;
 }
+
+/* Phase 88c1: photo-independent reading surfaces for the public post shell. */
+html body .blog-header-main .blog-page-title,
+html body .blog-header-main .blog-page-subtitle,
+html body .blog-post-entry .blog-post-title {
+    width: fit-content;
+    max-width: 100%;
+    box-sizing: border-box;
+    color: #f1fbff !important;
+    background: #123047 !important;
+    border-radius: 0.30em;
+    box-shadow: inset 0 0 0 1px rgba(241, 251, 255, 0.14);
+}
+
+html body .blog-post-entry .blog-rich-content,
+html body .blog-post-entry .post-author-link {
+    color: #123047 !important;
+    background: #f1fbff !important;
+    border-radius: 0.32em;
+    box-shadow: inset 0 0 0 1px rgba(18, 48, 71, 0.14);
+}
+
+html body .blog-post-entry .post-author-link:hover,
+html body .blog-post-entry .post-author-link:focus-visible {
+    color: #081e2d !important;
+    background: #f1fbff !important;
+}
     </style>
     {% include "blog/components/blog_posts.html" %}
 {% endblock %}
