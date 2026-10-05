@@ -142,6 +142,13 @@ footer {
     backdrop-filter: blur(2px);
 }
 
+[id^="comments-"] > .small.text-muted {
+    display: inline-block;
+    padding: 4px 8px;
+    border: 1px solid rgba(146, 92, 17, 0.24);
+    border-radius: 8px;
+}
+
 .calendar-box,
 .archive-box,
 .sidebar-box,
@@ -487,6 +494,40 @@ select.form-select:focus {
 
 .blog-profile-panel__identity {
     justify-content: center;
+}
+
+/* Phase 89d: keep post text independent of the changing wheat photograph. */
+.blog-post-entry {
+    background: #fff8e4 !important;
+    color: #5f3d10 !important;
+}
+
+@media (min-width: 576.01px) {
+    html body [id^="comments-"] .comment-item.bp-modern-comment-item .comment-body.bp-modern-comment-body {
+        background: #fff8e4 !important;
+        color: #5f3d10 !important;
+    }
+}
+
+.post-meta,
+.post-meta-category,
+.post-meta-tag,
+.post-meta a,
+.post-author-line,
+.post-author-link,
+.post-actions a,
+.post-actions span,
+.post-views,
+html body [id^="comments-"] .comment-item .comment-text,
+html body [id^="comments-"] .comment-item .comment-time,
+html body [id^="comments-"] .comment-item .comment-author a {
+    color: #4b2d05 !important;
+}
+
+[id^="comments-"] > .small.text-muted,
+.archive-link {
+    background: #fff8e4 !important;
+    color: #4b2d05 !important;
 }
 
 @media (max-width: 991.98px) {
