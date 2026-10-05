@@ -496,6 +496,24 @@ select.form-select:focus {
         font-size: 26px;
     }
 }
+
+/* Phase 88b: photo-independent ink for the public post action controls. */
+html body .blog-post-entry .post-actions a,
+html body .blog-post-entry .post-actions button,
+html body .blog-post-entry .post-actions .post-views {
+    color: #123047 !important;
+    background: #f1fbff !important;
+    border-radius: 0.32em;
+    box-shadow: inset 0 0 0 1px rgba(18, 48, 71, 0.14);
+}
+
+html body .blog-post-entry .post-actions a:hover,
+html body .blog-post-entry .post-actions button:hover,
+html body .blog-post-entry .post-actions a:focus-visible,
+html body .blog-post-entry .post-actions button:focus-visible {
+    color: #081e2d !important;
+    background: #f1fbff !important;
+}
     </style>
     {% include "blog/components/blog_posts.html" %}
 {% endblock %}
