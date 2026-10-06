@@ -760,6 +760,53 @@ select.form-select:focus {
         letter-spacing: 0.14em;
     }
 }
+
+/* Phase 90d: stack the narrow tablet columns so calendar days remain touchable. */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    html body .blog-main-layout-row > .blog-main-left-column,
+    html body .blog-main-layout-row > .blog-main-content-column,
+    html body .blog-main-layout-row > .blog-main-right-column {
+        flex: 0 0 100%;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    html body .calendar-box {
+        min-width: 0;
+        width: min(100%, 376px) !important;
+        max-width: 376px !important;
+        padding: 12px;
+        margin-inline: auto !important;
+    }
+
+    html body .calendar-title--nav {
+        display: grid;
+        grid-template-columns: 44px minmax(0, 1fr) 44px;
+        gap: 2px;
+        align-items: center;
+    }
+
+    html body .calendar-title--nav > span {
+        min-width: 0;
+        overflow-wrap: anywhere;
+        font-size: 10px;
+        line-height: 1.2;
+    }
+
+    html body .calendar-weekdays,
+    html body .calendar-grid {
+        min-width: 0;
+        grid-template-columns: repeat(7, minmax(0, 1fr)) !important;
+        gap: 2px;
+    }
+
+    html body .calendar-grid a[class*="calendar-day"] {
+        min-width: 44px !important;
+        min-height: 44px !important;
+        width: 100%;
+        justify-self: stretch !important;
+    }
+}
     </style>
     {% include "blog/components/blog_posts.html" %}
 {% endblock %}
