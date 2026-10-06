@@ -355,6 +355,27 @@ input.form-control::placeholder {
     color: rgba(245, 228, 214, 0.56) !important;
 }
 
+/* Phase 92c: stable amber-on-smoke contrast over every photo crop. */
+html body .blog-post-entry .post-actions form > button.btn.btn-link {
+    color: #ffe0be !important;
+    background: #21130d !important;
+    border-radius: 6px;
+    padding-inline: 4px !important;
+}
+
+html body .blog-post-entry .post-actions form > button.btn.btn-link:hover,
+html body .blog-post-entry .post-actions form > button.btn.btn-link:focus-visible {
+    color: #fff4e9 !important;
+}
+
+html body [id^="comments-"] > .small.text-muted {
+    display: inline-block;
+    color: #ffe0be !important;
+    background: #21130d !important;
+    border-radius: 6px;
+    padding: 6px 8px;
+}
+
 @media (max-width: 991px) {
     body::before {
         height: min(74vw, 460px);
