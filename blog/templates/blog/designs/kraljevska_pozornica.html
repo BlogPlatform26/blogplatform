@@ -184,7 +184,33 @@ footer {
 }
 
 .blog-post-entry {
-    background: rgba(24, 8, 12, 0.38) !important;
+    background: #2b0d14 !important;
+    color: #f4ddd1 !important;
+}
+
+/* Phase 91d: keep the post and its comments readable at every photo crop. */
+.blog-post-entry h4,
+.blog-post-entry .blog-post-title,
+.blog-post-entry h4 a {
+    color: #fff3e8 !important;
+}
+
+html body .blog-post-entry .comment-item.bp-modern-comment-item .comment-body.bp-modern-comment-body {
+    background: #3a1c23 !important;
+    color: #f4ddd1 !important;
+    border-color: rgba(255, 201, 142, 0.24) !important;
+}
+
+html body .blog-post-entry .comment-item.bp-modern-comment-item .comment-text,
+html body .blog-post-entry .comment-item.bp-modern-comment-item .comment-text *,
+html body .blog-post-entry .comment-item.bp-modern-comment-item .comment-time {
+    color: #f4ddd1 !important;
+    -webkit-text-fill-color: #f4ddd1 !important;
+}
+
+html body .blog-post-entry .comment-item.bp-modern-comment-item .comment-author a {
+    color: #ffcf9f !important;
+    -webkit-text-fill-color: #ffcf9f !important;
 }
 
 .blog-main-left-column > .page-top-align,
