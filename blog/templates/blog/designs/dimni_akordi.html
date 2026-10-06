@@ -290,6 +290,19 @@ a:hover {
     background: rgba(31, 17, 12, 0.18) !important;
 }
 
+.calendar-weekdays,
+.calendar-grid {
+    display: grid !important;
+    grid-template-columns: repeat(7, minmax(0, 1fr)) !important;
+    text-align: center;
+}
+
+.calendar-weekdays {
+    gap: 7px;
+    margin-bottom: 8px;
+    font-size: 11px;
+}
+
 .calendar-grid {
     gap: 7px;
 }
@@ -355,6 +368,62 @@ input.form-control::placeholder {
 
     .page-top-align {
         margin-top: 210px;
+    }
+}
+
+/* Phase 92b: restore the seven-day calendar without crowding the tablet sidebar. */
+@media (max-width: 767.98px) {
+    .calendar-weekdays,
+    .calendar-grid {
+        gap: 2px;
+    }
+
+    .calendar-grid a[class*="calendar-day"] {
+        min-width: 0 !important;
+        width: 100%;
+        min-height: 44px !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    html body .blog-main-layout-row > .blog-main-left-column,
+    html body .blog-main-layout-row > .blog-main-content-column,
+    html body .blog-main-layout-row > .blog-main-right-column {
+        flex: 0 0 100%;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    html body .calendar-box {
+        min-width: 0;
+        width: min(100%, 376px) !important;
+        max-width: 376px !important;
+        padding: 12px;
+        margin-inline: auto !important;
+    }
+
+    html body .calendar-title--nav {
+        display: grid;
+        grid-template-columns: 44px minmax(0, 1fr) 44px;
+        gap: 2px;
+        align-items: center;
+    }
+
+    html body .calendar-title--nav > span {
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
+
+    html body .calendar-weekdays,
+    html body .calendar-grid {
+        gap: 2px;
+    }
+
+    html body .calendar-grid a[class*="calendar-day"] {
+        min-width: 44px !important;
+        min-height: 44px !important;
+        width: 100%;
+        justify-self: stretch !important;
     }
 }
     </style>
