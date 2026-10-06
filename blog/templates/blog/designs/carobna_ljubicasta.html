@@ -616,6 +616,24 @@ html body [id^="comments-"] > .small.text-muted {
     padding: 6px 8px;
 }
 
+/* Phase 90c: keep the photographed header and post ink readable on any crop. */
+html body .blog-header-main .blog-page-title,
+html body .blog-header-main .blog-page-subtitle {
+    width: fit-content;
+    max-width: 100%;
+    padding: 6px 10px;
+    border-radius: 12px;
+    background: rgba(33, 12, 56, 0.84) !important;
+}
+
+html body .blog-post-entry {
+    background: rgba(33, 12, 56, 0.84) !important;
+}
+
+html body [id^="comments-"] .comment-item.bp-modern-comment-item .comment-body.bp-modern-comment-body {
+    background: rgba(33, 12, 56, 0.90) !important;
+}
+
 .post-actions a:hover,
 .post-author-link:hover,
 .comment-author a:hover,
