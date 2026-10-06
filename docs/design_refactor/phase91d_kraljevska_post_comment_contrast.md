@@ -8,7 +8,7 @@ Phase91a je pokazala da prozirna kartica objave i prozirni komentar ne jamče č
 
 Migrirana sintetička SQLite baza s postom i komentarom posluživana je na portu 8767. Stvarni Chrome provjerio je blog i detalj na 320/390/768/1440 px (**8 stanja**). U svih osam computed podloge bile su neprozirne (`rgb(43, 13, 20)` i `rgb(58, 28, 35)`), pa svijetli/tamni foto-kadar ne mijenja omjer. Izmjereni omjeri: naslov objave **16,03:1**, tijelo **13,76:1**, autor i akcijski link **12,54:1**, tekst komentara **11,76:1**, autor komentara **10,71:1**. Vizualno su pregledani detalji na 390 i 1440 px; fotografija ostaje vidljiva iznad kartica. Na svakoj širini stvarni nemutirajući klik `Prethodni mjesec` otvorio je očekivani `?year=2026&month=9`; like i komentiranje nisu kliknuti.
 
-Ranije izmjereni document excess u ovoj sintetičkoj konfiguraciji ostaje +14 px na 320/390, +6 px na 768 i 0 na 1440; novi post/komentar ne izlaze iz vlastitog okvira. Profilni panel, 768 px lokalni calendar overflow, bočni kalendarski/arhivski kontrast i tablet/desktop touch mete ostaju zasebni nalazi. Ova faza ne tvrdi da je cijeli dizajn dovršen.
+Phase91e je ponovila browser mjerenje uz potpuno učitan Bootstrap CSS: raniji +14/+6 px document excess i izlazak profila bili su artefakti nepotpunog stila; stvarni document overflow je 0 px na sve četiri širine. Kontrast objave/komentara ponovno je izmjeren i ostao je jednak. Na 768 px lokalni calendar overflow bio je stvaran nalaz, obrađen zasebno u Phase91e. Bočni kalendarski/arhivski kontrast i tablet/desktop touch mete ostaju zasebni nalazi; ova faza ne tvrdi da je cijeli dizajn dovršen.
 
 ## Regresijski gate
 

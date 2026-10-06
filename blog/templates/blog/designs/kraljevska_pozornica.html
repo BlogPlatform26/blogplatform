@@ -123,7 +123,8 @@ footer {
 }
 
 .blog-page-title,
-.blog-page-title a {
+.blog-page-title a,
+.blog-header-main .blog-page-title a {
     color: #fff0d9 !important;
     text-decoration: none;
     text-shadow: 0 6px 24px rgba(16, 4, 6, 0.52);
@@ -678,6 +679,51 @@ html body .blog-post-entry .comment-item.bp-modern-comment-item .comment-author 
     .blog-date-shell {
         min-width: 74px;
         padding: 14px 10px 10px;
+    }
+}
+
+/* Phase 91e: give the seven-day calendar a full tablet column. */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    html body .blog-main-layout-row > .blog-main-left-column,
+    html body .blog-main-layout-row > .blog-main-content-column,
+    html body .blog-main-layout-row > .blog-main-right-column {
+        flex: 0 0 100%;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    html body .calendar-box {
+        min-width: 0;
+        width: min(100%, 376px) !important;
+        max-width: 376px !important;
+        padding: 12px;
+        margin-inline: auto !important;
+    }
+
+    html body .calendar-title--nav {
+        display: grid;
+        grid-template-columns: 44px minmax(0, 1fr) 44px;
+        gap: 2px;
+        align-items: center;
+    }
+
+    html body .calendar-title--nav > span {
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
+
+    html body .calendar-weekdays,
+    html body .calendar-grid {
+        min-width: 0;
+        grid-template-columns: repeat(7, minmax(0, 1fr)) !important;
+        gap: 2px;
+    }
+
+    html body .calendar-grid a[class*="calendar-day"] {
+        min-width: 44px !important;
+        min-height: 44px !important;
+        width: 100%;
+        justify-self: stretch !important;
     }
 }
     </style>
