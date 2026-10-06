@@ -124,9 +124,29 @@ footer {
 
 .blog-page-title,
 .blog-page-title a {
-    color: var(--blog-title-color, #fff1e1) !important;
+    color: #fff0d9 !important;
     text-decoration: none;
     text-shadow: 0 6px 24px rgba(16, 4, 6, 0.52);
+}
+
+/* Phase 91c: narrow, opaque title cards survive the brightest stage crop. */
+.blog-header-main .blog-page-title,
+.blog-header-main .blog-page-subtitle {
+    width: fit-content;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 8px 14px;
+    overflow-wrap: anywhere;
+    border: 1px solid rgba(255, 201, 142, 0.28);
+    border-radius: 14px;
+    background: #2b0d14 !important;
+    color: #fff0d9 !important;
+    opacity: 1;
+}
+
+.blog-header-main .blog-page-subtitle {
+    margin-top: 8px;
 }
 
 .blog-post-entry h4,
