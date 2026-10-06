@@ -595,6 +595,27 @@ footer {
     color: #f6c7ff !important;
 }
 
+/* Phase 90b: opaque, violet action surfaces remain legible over photo crops. */
+html body .blog-post-entry .post-actions form > button.btn.btn-link {
+    color: #f6c7ff !important;
+    background: #211038 !important;
+    border-radius: 6px;
+    padding-inline: 4px !important;
+}
+
+html body .blog-post-entry .post-actions form > button.btn.btn-link:hover,
+html body .blog-post-entry .post-actions form > button.btn.btn-link:focus-visible {
+    color: #ffffff !important;
+}
+
+html body [id^="comments-"] > .small.text-muted {
+    display: inline-block;
+    color: #f6c7ff !important;
+    background: #211038 !important;
+    border-radius: 6px;
+    padding: 6px 8px;
+}
+
 .post-actions a:hover,
 .post-author-link:hover,
 .comment-author a:hover,
