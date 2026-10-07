@@ -469,6 +469,53 @@ html body .blog-header-main .blog-page-title a {
     overflow-wrap: anywhere;
 }
 
+/* Phase 93f: let the post and comment use the available narrow viewport. */
+@media (max-width: 575.98px) {
+    html body .blog-main-content-column .blog-posts-shell {
+        width: 100%;
+        max-width: 100%;
+        padding-inline: 0;
+    }
+
+    html body .blog-post-entry {
+        padding: 16px;
+    }
+
+    html body .blog-post-entry > .d-flex:first-child {
+        flex-direction: column;
+        align-items: stretch !important;
+        gap: 8px !important;
+    }
+
+    html body .blog-post-entry .blog-post-title {
+        font-size: min(var(--post-title-size), clamp(1.5rem, 7vw, 2rem)) !important;
+        line-height: 1.2;
+        overflow-wrap: anywhere;
+    }
+
+    html body .blog-post-entry .blog-date-shell {
+        min-width: 0;
+        width: 100%;
+        margin-left: 0 !important;
+        text-align: left !important;
+    }
+
+    html body .blog-post-entry [id^="comments-"] h6 {
+        font-size: min(var(--post-title-size), 1.5rem) !important;
+        line-height: 1.2;
+        overflow-wrap: anywhere;
+    }
+
+    html body .blog-post-entry .comment-item.bp-modern-comment-item {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    html body .blog-post-entry .comment-body.bp-modern-comment-body {
+        width: 100%;
+    }
+}
+
 html body .blog-post-entry,
 html body .calendar-box,
 html body .archive-box,
