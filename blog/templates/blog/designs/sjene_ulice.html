@@ -457,6 +457,18 @@ html body .blog-header-main .blog-page-subtitle {
     color: #f5d4ac !important;
 }
 
+/* Phase 93e: keep an unbroken blog name inside the protected title surface. */
+html body .blog-header-main .blog-page-title {
+    box-sizing: border-box;
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+html body .blog-header-main .blog-page-title a {
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+
 html body .blog-post-entry,
 html body .calendar-box,
 html body .archive-box,
