@@ -104,6 +104,26 @@ footer {
     text-shadow: 0 7px 22px rgba(0, 0, 0, 0.48);
 }
 
+/* Phase 95c2: protect only the lettering, not the car panorama. */
+html body .blog-header-main .blog-page-title,
+html body .blog-header-main .blog-page-subtitle {
+    box-sizing: border-box;
+    width: fit-content;
+    max-width: 100%;
+    padding: 6px 10px;
+    border-radius: 10px;
+    background: #21140e !important;
+    color: #f4e7d8 !important;
+    opacity: 1;
+    overflow-wrap: anywhere;
+}
+
+html body .blog-header-main .blog-page-title a {
+    color: #f4e7d8 !important;
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+
 .page-top-align {
     margin-top: 248px;
 }
