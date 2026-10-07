@@ -402,6 +402,25 @@ a:hover {
     }
 }
 
+/* Phase 95c1: small controls stay legible over every smoke crop. */
+html body .blog-post-entry .post-actions form > button.btn.btn-link,
+html body .calendar-title--nav a.calendar-month-nav-link,
+html body .calendar-grid a.calendar-day-has-post,
+html body .calendar-grid a.calendar-day-today {
+    color: #ffe1bd !important;
+    background: #21140e !important;
+    border-radius: 6px;
+}
+
+html body [id^="comments-"] > .small.text-muted {
+    display: inline-block;
+    max-width: 100%;
+    color: #ffe1bd !important;
+    background: #21140e !important;
+    border-radius: 6px;
+    padding: 6px 8px;
+}
+
 .comment-body {
     padding: 10px 44px 10px 12px;
 }
