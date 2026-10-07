@@ -376,6 +376,39 @@ html body [id^="comments-"] > .small.text-muted {
     padding: 6px 8px;
 }
 
+/* Phase 92d: protect warm foreground colors on the brightest photo crops. */
+html body .blog-header-main .blog-page-title,
+html body .blog-header-main .blog-page-subtitle {
+    width: fit-content;
+    max-width: 100%;
+    padding: 6px 10px;
+    border-radius: 12px;
+    background: rgba(31, 17, 12, 0.84) !important;
+}
+
+html body .blog-post-entry,
+html body .calendar-box,
+html body .archive-box,
+html body .sidebar-box,
+html body .live-analytics-widget {
+    background: rgba(31, 17, 12, 0.84) !important;
+}
+
+html body .blog-post-entry .blog-date-shell .blog-date-year {
+    color: #f4dfcd !important;
+    -webkit-text-fill-color: currentColor !important;
+    opacity: 1;
+}
+
+html body [id^="comments-"] .comment-item.bp-modern-comment-item .comment-body.bp-modern-comment-body {
+    background: rgba(31, 17, 12, 0.90) !important;
+}
+
+html body .calendar-title--nav a.calendar-month-nav-link {
+    color: #ffe0be !important;
+    background: #2b190e !important;
+}
+
 @media (max-width: 991px) {
     body::before {
         height: min(74vw, 460px);
