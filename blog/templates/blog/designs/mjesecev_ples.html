@@ -114,7 +114,7 @@ footer {
 .sidebar-box,
 .live-analytics-widget,
 .comment-body {
-    background: rgba(24, 18, 15, 0.22) !important;
+    background: #241b18 !important;
     border: 1px solid rgba(207, 177, 132, 0.14) !important;
     border-radius: 18px;
     box-shadow: none !important;
@@ -297,7 +297,7 @@ a:hover {
 }
 
 .calendar-box {
-    background: rgba(24, 18, 15, 0.22) !important;
+    background: #241b18 !important;
 }
 
 /* Phase 94b: keep the moonlit calendar in seven columns at every breakpoint. */
@@ -334,7 +334,7 @@ a:hover {
 }
 
 .calendar-day-today {
-    background: rgba(174, 134, 82, 0.78) !important;
+    background: #5a3d29 !important;
     color: #fff7ee !important;
     border-color: rgba(255, 230, 194, 0.26) !important;
     font-weight: 700;
@@ -350,6 +350,56 @@ a:hover {
 .comment-body div,
 .comment-body span {
     color: #efe5d8 !important;
+}
+
+/* Phase 94c: keep moonlit foreground readable on every photo crop. */
+html body .blog-header-main .blog-page-title,
+html body .blog-header-main .blog-page-subtitle {
+    width: fit-content;
+    max-width: 100%;
+    padding: 6px 10px;
+    border-radius: 12px;
+    background: #241b18 !important;
+}
+
+html body .blog-post-entry,
+html body .calendar-box,
+html body .archive-box,
+html body .sidebar-box,
+html body .live-analytics-widget,
+html body .blog-profile-panel {
+    background: #241b18 !important;
+}
+
+html body .blog-profile-panel {
+    padding: 14px;
+    border-radius: 18px;
+}
+
+html body [id^="comments-"] .comment-item.bp-modern-comment-item .comment-body.bp-modern-comment-body {
+    background: #241b18 !important;
+}
+
+html body .post-actions form > button.btn.btn-link,
+html body .calendar-title--nav a.calendar-month-nav-link {
+    color: #efc997 !important;
+    background: #241b18 !important;
+    border-radius: 6px;
+}
+
+html body [id^="comments-"] > .small.text-muted {
+    display: inline-block;
+    max-width: 100%;
+    padding: 6px 8px;
+    border-radius: 6px;
+    color: #e9dece !important;
+    background: #241b18 !important;
+}
+
+html body .blog-post-entry .blog-date-shell.blog-date-effect-gradient .blog-date-year {
+    color: #e4d3c3 !important;
+    -webkit-text-fill-color: #e4d3c3 !important;
+    opacity: 1;
 }
 
 textarea.form-control,
