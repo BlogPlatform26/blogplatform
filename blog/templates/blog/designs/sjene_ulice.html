@@ -417,6 +417,31 @@ input.form-control::placeholder {
     }
 }
 
+/* Phase 93c: keep small actions and comments readable over either photo crop. */
+html body .post-actions form > button.btn.btn-link {
+    color: #f5d4ac !important;
+    background: #241813 !important;
+    border-radius: 6px;
+}
+
+html body [id^="comments-"] > .small.text-muted {
+    display: inline-block;
+    max-width: 100%;
+    color: #f5d4ac !important;
+    background: #241813 !important;
+    border-radius: 6px;
+    padding: 6px 8px;
+}
+
+html body [id^="comments-"] .comment-item.bp-modern-comment-item .comment-body.bp-modern-comment-body {
+    background: #241813 !important;
+}
+
+html body .calendar-title--nav a.calendar-month-nav-link {
+    color: #f5d4ac !important;
+    background: #241813 !important;
+}
+
 /* BLOGPLATFORM_SJENE_ULICE_COMMENT_TEXT_WHITE_START */
 .comment-body .comment-text,
 .comment-body .comment-text *,
