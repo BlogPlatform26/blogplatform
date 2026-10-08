@@ -30,7 +30,7 @@ class Phase95bAsfaltniCalendarGridTests(TestCase):
             self.assertIn("grid-template-columns: repeat(7, minmax(0, 1fr))", content)
             self.assertIn("(min-width: 768px) and (max-width: 991.98px)", content)
             self.assertIn("min-height: 44px !important", content)
-            self.assertIn("min-width: 0 !important", content)
+            self.assertIn("min-width: 44px !important", content)
 
     def test_asfaltni_rules_do_not_render_for_default_design(self):
         self.author.profile.template = "default"

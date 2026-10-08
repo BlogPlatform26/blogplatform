@@ -364,17 +364,25 @@ a:hover {
 }
 
 @media (max-width: 767.98px) {
-    .calendar-box {
-        max-width: none;
+    /* Phase 96d: seven full-size day targets without widening the document. */
+    html body .blog-main-layout-row .calendar-box {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: min(100vw, 376px) !important;
+        max-width: none !important;
+        margin-inline: 0 !important;
+        padding: 2px !important;
     }
 
     .calendar-weekdays,
     .calendar-grid {
-        gap: 2px;
+        column-gap: 1px;
+        row-gap: 2px;
     }
 
     .calendar-grid a[class*="calendar-day"] {
-        min-width: 0 !important;
+        min-width: 44px !important;
         width: 100%;
         min-height: 44px !important;
     }
