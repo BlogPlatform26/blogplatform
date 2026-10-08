@@ -726,6 +726,24 @@ html body .blog-post-entry .comment-item.bp-modern-comment-item .comment-author 
         justify-self: stretch !important;
     }
 }
+
+/* Phase 91f: stable stage wings behind sidebar text on bright photo crops. */
+html body .calendar-box,
+html body .archive-box,
+html body .sidebar-box,
+html body .live-analytics-widget,
+html body .blog-profile-panel {
+    background: rgba(24, 8, 12, 0.90) !important;
+}
+
+html body .calendar-weekdays {
+    color: rgba(244, 221, 209, 0.82) !important;
+}
+
+html body .sidebar-box .text-muted,
+html body .sidebar-box .text-muted * {
+    color: #f4ddd1 !important;
+}
     </style>
     {% include "blog/components/blog_posts.html" %}
 {% endblock %}
