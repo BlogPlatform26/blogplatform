@@ -30,7 +30,7 @@ class Phase92bDimniCalendarGridTests(TestCase):
             self.assertIn("grid-template-columns: repeat(7, minmax(0, 1fr))", content)
             self.assertIn("(min-width: 768px) and (max-width: 991.98px)", content)
             self.assertIn("min-height: 44px !important", content)
-            self.assertIn("min-width: 0 !important", content)
+            self.assertIn("min-width: 44px !important", content)
             self.assertIn("gap: 2px", content)
 
     def test_dimni_specific_rules_do_not_render_for_default(self):
