@@ -516,6 +516,40 @@ input.form-control::placeholder {
         margin-top: 210px;
     }
 }
+
+/* Phase 95c6: give the narrow post and its comments the mobile column width. */
+@media (max-width: 575.98px) {
+    html body .blog-main-layout-row > .blog-main-content-column,
+    html body .blog-main-content-column .blog-posts-shell {
+        padding-inline: 0;
+    }
+
+    html body .blog-post-entry {
+        padding: 18px 14px;
+    }
+
+    html body .blog-post-entry .blog-post-title,
+    html body .blog-post-entry .comment-author {
+        overflow-wrap: anywhere;
+    }
+
+    html body .blog-post-entry > .d-flex.justify-content-between.align-items-start {
+        flex-direction: column;
+        align-items: stretch !important;
+        gap: 8px !important;
+    }
+
+    html body .blog-post-entry .blog-date-shell {
+        margin-left: 0 !important;
+        align-self: flex-start;
+    }
+
+    html body .blog-post-entry .comment-item.bp-modern-comment-item {
+        flex-direction: column;
+        align-items: stretch !important;
+        gap: 8px !important;
+    }
+}
     </style>
     {% include "blog/components/blog_posts.html" %}
 {% endblock %}
