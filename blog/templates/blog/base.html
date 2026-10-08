@@ -3821,6 +3821,23 @@ body #globalNavbar .notif-badge {
     }
 }
 /* BLOGPLATFORM_MOBILE_POST_ACTION_TARGETS_END */
+
+/* Phase 98a: keep the same action hit areas on every tablet design. */
+@media (min-width: 576px) and (max-width: 991.98px) {
+    html body .post-actions > form {
+        display: flex !important;
+        align-items: stretch !important;
+    }
+
+    html body .post-actions > form > button,
+    html body .post-actions > a {
+        min-height: 44px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        box-sizing: border-box !important;
+    }
+}
 </style>
 
 </body>
