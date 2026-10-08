@@ -446,6 +446,30 @@ html body .blog-post-entry {
     background: rgba(24, 17, 13, 0.85) !important;
 }
 
+/* Phase 95c4: comments must not inherit the shared translucent white surface. */
+html body .blog-post-entry .comment-item.bp-modern-comment-item .comment-body.bp-modern-comment-body {
+    background: #21140e !important;
+    border-color: rgba(239, 199, 146, 0.3) !important;
+    color: #f0e4d7 !important;
+}
+
+html body .blog-post-entry .comment-item.bp-modern-comment-item .comment-text,
+html body .blog-post-entry .comment-item.bp-modern-comment-item .comment-text * {
+    color: #f0e4d7 !important;
+    -webkit-text-fill-color: #f0e4d7 !important;
+}
+
+html body .blog-post-entry .comment-item.bp-modern-comment-item .comment-author a {
+    color: #ffe1bd !important;
+    -webkit-text-fill-color: #ffe1bd !important;
+}
+
+html body .blog-post-entry .comment-item.bp-modern-comment-item .comment-time {
+    color: #e3c7a6 !important;
+    -webkit-text-fill-color: #e3c7a6 !important;
+    opacity: 1 !important;
+}
+
 .comment-body {
     padding: 10px 44px 10px 12px;
 }
