@@ -3822,6 +3822,19 @@ body #globalNavbar .notif-badge {
 }
 /* BLOGPLATFORM_MOBILE_POST_ACTION_TARGETS_END */
 
+/* Phase 98b: break only unspaced blog names before they widen the page. */
+html body .blog-page-title {
+    box-sizing: border-box;
+    min-width: 0;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+}
+
+html body .blog-page-title a.blog-link {
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+
 /* Phase 98a: keep the same action hit areas on every tablet design. */
 @media (min-width: 576px) and (max-width: 991.98px) {
     html body .post-actions > form {
