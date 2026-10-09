@@ -2287,6 +2287,13 @@ textarea.form-control:focus{ background:#fff !important; color:#111827 !importan
 </style>
 {% endif %}
 
+{% if blog.profile.template == 'default' or blog.profile.template == 'dark' or blog.profile.template == 'classic' or blog.profile.template == 'default_right' or blog.profile.template == 'dark_right' or blog.profile.template == 'classic_right' %}
+<style>
+/* Phase 99b: keep the author link's theme color without fading its text. */
+.post-author-link { opacity: 1; }
+</style>
+{% endif %}
+
 <style>
 .blog-banner-strip{
     margin: 8px 0 12px 0;
