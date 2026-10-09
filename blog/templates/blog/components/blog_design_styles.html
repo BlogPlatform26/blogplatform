@@ -2244,6 +2244,8 @@ hr { border-color:#e8dfd2; }
 .calendar-day-today{ background:#7a2cff; background-image:none; color:#fff; font-weight:800; position:relative; z-index:1; box-shadow:0 0 0 2px rgba(255,255,255,0.92), 0 0 0 5px rgba(122,44,255,0.18), 0 10px 22px rgba(122,44,255,0.18); transform:translateY(-1px) scale(1.05); }
 .calendar-day-has-post{ border:1px solid transparent; background-image:linear-gradient(#fbf6ef,#fbf6ef),linear-gradient(90deg,#7a2cff,#ffd200); background-origin:border-box; background-clip:padding-box,border-box; }
 .calendar-day-has-post:hover{ box-shadow:0 0 10px rgba(122,44,255,0.12); }
+/* Phase 99c: the pale post-day gradient must not cover today's white-on-purple day. */
+.calendar-day-has-post.calendar-day-today{ background:#7a2cff; background-image:none; border-color:#7a2cff; color:#fff; }
 .archive-list{ display:flex; flex-direction:column; gap:8px; }
 .archive-link{ color:#5f5248; text-decoration:none; font-size:13px; line-height:1.2; padding:6px 8px; border-radius:8px; background:#fbf6ef; border:1px solid #eadccd; }
 .archive-link:hover{ color:#111827; border-color:#d7c5b0; }
