@@ -3403,6 +3403,24 @@ body {
     {% endwith %}
 }
 
+{% if blog.profile.template == 'simple_pattern' or blog.profile.template == 'simple_image' %}
+{% if c.post_title_color == '#3f7f93' and c.content_background_color == '#fffefb' %}
+/* Phase 100d: keep the factory Simple blue title readable on its paper card. */
+:root,
+body,
+.blog-main-layout-row,
+.blog-posts-shell { --post-title-color: #2f6479; }
+{% endif %}
+{% elif blog.profile.template == 'simple_retro' %}
+{% if c.post_title_color == '#4a9aa6' and c.content_background_color == '#fbfaf6' %}
+/* Phase 100d: retain Retro teal on its pale shared paper panel. */
+:root,
+body,
+.blog-main-layout-row,
+.blog-posts-shell { --post-title-color: #2f6870; }
+{% endif %}
+{% endif %}
+
 /* Ovo je namjerno na kraju stranice da pregazi dizajne koji imaju !important. */
 .blog-page-title,
 .blog-page-title a,
