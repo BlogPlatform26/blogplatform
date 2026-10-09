@@ -3446,6 +3446,19 @@ html body .blog-header-main--simple .blog-page-subtitle {
 }
 {% endif %}
 
+{% if blog.profile.template == 'simple_retro' and c.blog_title_color == '#4a9aa6' and c.header_background_mode == 'gradient' and c.header_background_color_1 == '#d8dccf' and c.header_background_color_2 == '#c5cab7' %}
+/* Phase 99h: protect the default retro header on its pale textured gradient. */
+html body .blog-header-main--simple-retro .blog-page-title,
+html body .blog-header-main--simple-retro .blog-page-title a,
+html body .blog-header-main--simple-retro .blog-page-subtitle {
+    color: #244d55 !important;
+    -webkit-text-fill-color: #244d55 !important;
+}
+html body .blog-header-main--simple-retro .blog-page-subtitle {
+    opacity: 1;
+}
+{% endif %}
+
 .blog-post-entry h1,
 .blog-post-entry h2,
 .blog-post-entry h3,
