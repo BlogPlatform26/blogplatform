@@ -3459,6 +3459,19 @@ html body .blog-header-main--simple-retro .blog-page-subtitle {
 }
 {% endif %}
 
+{% if blog.profile.template == 'simple_pattern' and c.blog_title_color == '#ffffff' and c.header_background_mode == 'gradient' and c.header_background_color_1 == '#d98a37' and c.header_background_color_2 == '#b8641e' %}
+/* Phase 100b: protect the fresh default orange pattern header. */
+html body .blog-header-main--simple .blog-page-title,
+html body .blog-header-main--simple .blog-page-title a,
+html body .blog-header-main--simple .blog-page-subtitle {
+    color: #000000 !important;
+    -webkit-text-fill-color: #000000 !important;
+}
+html body .blog-header-main--simple .blog-page-subtitle {
+    opacity: 1;
+}
+{% endif %}
+
 .blog-post-entry h1,
 .blog-post-entry h2,
 .blog-post-entry h3,

@@ -2,6 +2,8 @@
 
 Ovo je **prva serija** završne matrice, ne potvrda svih 37 dizajna. U izoliranoj sintetičkoj bazi svaki od devet registriranih ključeva imao je autora, javnu objavu i komentar. Stvarni Chrome s primijenjenim Bootstrapom otvorio je blog i detalj na 320/390/768/1440 px: **72 stanja**. Za tekst su uzorkovani stvarni pikseli ispod prikazanih glifova (privremeno obojenih prozirno samo u QA pregledniku), uz computed boju i neprozirnost. To je uklonilo lažne padove koje bi dalo uzorkovanje praznog dijela širokog elementa. Svaki blog imao je sigurno otvaranje objave na 390 px, bez like/comment mutacije.
 
+Naknadna provjera izvora preferencija otkrila je važnu granicu podataka: sintetički `default` korisnik dobio je ID 1, koji ima legacy zapis u `blog/blog_preferences.json`. Njegov red mjeri **postojeću spremljenu paletu**, ne tvornički `default`; njega treba zasebno ponoviti bez legacy ID-a. Ostalih osam sintetičkih ID-jeva 2–9 nema takav zapis. Ta razlika ne mijenja potvrđene nalaze za `simple_pattern` (ID 7), ali sprječava pogrešno proglašavanje cijele serije konačnim tvorničkim prolazom.
+
 Tablica prikazuje najmanji izmjereni omjer kroz osam stanja svakog dizajna. `Komentar` je tekst / autor komentara; sve vrijednosti su prema stvarno prikazanoj podlozi, ali ne dokazuju svaku moguću korisnički učitanu fotografiju ili prilagođenu paletu.
 
 | Dizajn | Naslov / podnaslov bloga | Naslov posta | Autor posta | Like | Komentar tekst / autor | Kalendar dan / arhiva | Document / lokalni overflow |
