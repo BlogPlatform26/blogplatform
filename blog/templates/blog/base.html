@@ -3420,6 +3420,19 @@ body {
     -webkit-text-fill-color: var(--blog-title-color) !important;
 }
 
+{% if blog.profile.template == 'simple_image' and c.blog_title_color == '#ffffff' and c.header_background_mode == 'color' and c.header_background_color_1 == '#c8b16b' %}
+/* Phase 99e: preserve the default gold plaque with opaque, readable text. */
+html body .blog-header-main--simple .blog-page-title,
+html body .blog-header-main--simple .blog-page-title a,
+html body .blog-header-main--simple .blog-page-subtitle {
+    color: #3f3128 !important;
+    -webkit-text-fill-color: #3f3128 !important;
+}
+html body .blog-header-main--simple .blog-page-subtitle {
+    opacity: 1;
+}
+{% endif %}
+
 .blog-post-entry h1,
 .blog-post-entry h2,
 .blog-post-entry h3,
