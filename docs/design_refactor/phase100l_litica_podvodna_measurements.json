@@ -1,0 +1,3494 @@
+[
+  {
+    "key": "litica_noci",
+    "w": 320,
+    "route": "blog",
+    "comments": 2,
+    "doc": 0,
+    "els": {
+      "action": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(13, 110, 253)",
+        "contrast": 4.666,
+        "font": "14px",
+        "opacity": 1,
+        "photo": false,
+        "y": 1469.45
+      },
+      "activeDay": {
+        "bg": [
+          47.08,
+          50.6,
+          56.1
+        ],
+        "color": "rgb(255, 255, 255)",
+        "contrast": 12.765,
+        "font": "12px",
+        "opacity": 1,
+        "photo": false,
+        "y": 398.09
+      },
+      "archive": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(214, 230, 255)",
+        "contrast": 16.622,
+        "font": "13px",
+        "opacity": 1,
+        "photo": false,
+        "y": 653.3
+      },
+      "author": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(13, 110, 253)",
+        "contrast": 4.666,
+        "font": "14px",
+        "opacity": 1,
+        "photo": false,
+        "y": 1325.11
+      },
+      "body": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(215, 228, 255)",
+        "contrast": 16.431,
+        "font": "16px",
+        "opacity": 1,
+        "photo": false,
+        "y": 1069.45
+      },
+      "comment": {
+        "bg": [
+          17.2,
+          18.24,
+          20.4
+        ],
+        "color": "rgb(215, 228, 255)",
+        "contrast": 14.635,
+        "font": "16px",
+        "opacity": 1,
+        "photo": false,
+        "y": 1772.91
+      },
+      "commentAuthor": {
+        "bg": [
+          17.2,
+          18.24,
+          20.4
+        ],
+        "color": "rgb(214, 230, 255)",
+        "contrast": 14.806,
+        "font": "16px",
+        "opacity": 1,
+        "photo": false,
+        "y": 1673.57
+      },
+      "day": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(215, 228, 255)",
+        "contrast": null,
+        "font": "12px",
+        "opacity": 1,
+        "photo": true,
+        "y": 359.97
+      },
+      "hint": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(184, 201, 229)",
+        "contrast": 12.524,
+        "font": "14px",
+        "opacity": 1,
+        "photo": false,
+        "y": 2372.91
+      },
+      "like": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(13, 110, 253)",
+        "contrast": 4.666,
+        "font": "16px",
+        "opacity": 1,
+        "photo": false,
+        "y": 1409.45
+      },
+      "nav": {
+        "bg": [
+          66.3,
+          66.3,
+          66.3
+        ],
+        "color": "rgb(214, 230, 255)",
+        "contrast": null,
+        "font": "20px",
+        "opacity": 1,
+        "photo": true,
+        "y": 279.47
+      },
+      "postTitle": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(243, 248, 255)",
+        "contrast": 19.682,
+        "font": "24px",
+        "opacity": 1,
+        "photo": false,
+        "y": 780.64
+      },
+      "subtitle": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(243, 248, 255)",
+        "contrast": null,
+        "font": "15.2px",
+        "opacity": 0.82,
+        "photo": true,
+        "y": 176.74
+      },
+      "title": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(243, 248, 255)",
+        "contrast": null,
+        "font": "32px",
+        "opacity": 1,
+        "photo": true,
+        "y": 130.85
+      }
+    },
+    "local": [],
+    "photoBottom": 360,
+    "pseudo": "linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.06) 54%, rgba(0, 0, 0, 0.34) 70%, rgba(0, 0, 0, 0.78) 84%, rgb(0, 0, 0) 100%), url(\"http://127.0.0.1:8017/static/blog/images/design-backgrounds/litica_noci.png\")",
+    "targets": {
+      "action": [
+        98.81,
+        44
+      ],
+      "archive": [
+        201.33,
+        44
+      ],
+      "day": [
+        45.76,
+        45.76
+      ],
+      "like": [
+        124.03,
+        44
+      ],
+      "nav": [
+        44,
+        44
+      ]
+    }
+  },
+  {
+    "key": "litica_noci",
+    "w": 320,
+    "route": "detail",
+    "comments": 2,
+    "doc": 0,
+    "els": {
+      "action": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(13, 110, 253)",
+        "contrast": 4.666,
+        "font": "14px",
+        "opacity": 1,
+        "photo": false,
+        "y": 1469.45
+      },
+      "activeDay": {
+        "bg": [
+          47.08,
+          50.6,
+          56.1
+        ],
+        "color": "rgb(255, 255, 255)",
+        "contrast": 12.765,
+        "font": "12px",
+        "opacity": 1,
+        "photo": false,
+        "y": 398.09
+      },
+      "archive": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(214, 230, 255)",
+        "contrast": 16.622,
+        "font": "13px",
+        "opacity": 1,
+        "photo": false,
+        "y": 653.3
+      },
+      "author": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(13, 110, 253)",
+        "contrast": 4.666,
+        "font": "14px",
+        "opacity": 1,
+        "photo": false,
+        "y": 1325.11
+      },
+      "body": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(215, 228, 255)",
+        "contrast": 16.431,
+        "font": "16px",
+        "opacity": 1,
+        "photo": false,
+        "y": 1069.45
+      },
+      "comment": {
+        "bg": [
+          17.2,
+          18.24,
+          20.4
+        ],
+        "color": "rgb(215, 228, 255)",
+        "contrast": 14.635,
+        "font": "16px",
+        "opacity": 1,
+        "photo": false,
+        "y": 1712.91
+      },
+      "commentAuthor": {
+        "bg": [
+          17.2,
+          18.24,
+          20.4
+        ],
+        "color": "rgb(214, 230, 255)",
+        "contrast": 14.806,
+        "font": "16px",
+        "opacity": 1,
+        "photo": false,
+        "y": 1613.57
+      },
+      "day": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(215, 228, 255)",
+        "contrast": null,
+        "font": "12px",
+        "opacity": 1,
+        "photo": true,
+        "y": 359.97
+      },
+      "hint": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(184, 201, 229)",
+        "contrast": 12.524,
+        "font": "14px",
+        "opacity": 1,
+        "photo": false,
+        "y": 2312.91
+      },
+      "like": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(13, 110, 253)",
+        "contrast": 4.666,
+        "font": "16px",
+        "opacity": 1,
+        "photo": false,
+        "y": 1409.45
+      },
+      "nav": {
+        "bg": [
+          66.3,
+          66.3,
+          66.3
+        ],
+        "color": "rgb(214, 230, 255)",
+        "contrast": null,
+        "font": "20px",
+        "opacity": 1,
+        "photo": true,
+        "y": 279.47
+      },
+      "postTitle": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(243, 248, 255)",
+        "contrast": 19.682,
+        "font": "24px",
+        "opacity": 1,
+        "photo": false,
+        "y": 780.64
+      },
+      "subtitle": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(243, 248, 255)",
+        "contrast": null,
+        "font": "15.2px",
+        "opacity": 0.82,
+        "photo": true,
+        "y": 176.74
+      },
+      "title": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(243, 248, 255)",
+        "contrast": null,
+        "font": "32px",
+        "opacity": 1,
+        "photo": true,
+        "y": 130.85
+      }
+    },
+    "local": [],
+    "photoBottom": 360,
+    "pseudo": "linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.06) 54%, rgba(0, 0, 0, 0.34) 70%, rgba(0, 0, 0, 0.78) 84%, rgb(0, 0, 0) 100%), url(\"http://127.0.0.1:8017/static/blog/images/design-backgrounds/litica_noci.png\")",
+    "targets": {
+      "action": [
+        98.81,
+        44
+      ],
+      "archive": [
+        201.33,
+        44
+      ],
+      "day": [
+        45.76,
+        45.76
+      ],
+      "like": [
+        124.03,
+        44
+      ],
+      "nav": [
+        44,
+        44
+      ]
+    }
+  },
+  {
+    "key": "litica_noci",
+    "w": 390,
+    "route": "blog",
+    "comments": 2,
+    "doc": 0,
+    "els": {
+      "action": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(13, 110, 253)",
+        "contrast": 4.666,
+        "font": "14px",
+        "opacity": 1,
+        "photo": false,
+        "y": 1302.7
+      },
+      "activeDay": {
+        "bg": [
+          47.08,
+          50.6,
+          56.1
+        ],
+        "color": "rgb(255, 255, 255)",
+        "contrast": 12.765,
+        "font": "12px",
+        "opacity": 1,
+        "photo": false,
+        "y": 398.28
+      },
+      "archive": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(214, 230, 255)",
+        "contrast": 16.622,
+        "font": "13px",
+        "opacity": 1,
+        "photo": false,
+        "y": 653.49
+      },
+      "author": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(13, 110, 253)",
+        "contrast": 4.666,
+        "font": "14px",
+        "opacity": 1,
+        "photo": false,
+        "y": 1195.36
+      },
+      "body": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(215, 228, 255)",
+        "contrast": 16.431,
+        "font": "16px",
+        "opacity": 1,
+        "photo": false,
+        "y": 984.7
+      },
+      "comment": {
+        "bg": [
+          17.2,
+          18.24,
+          20.4
+        ],
+        "color": "rgb(215, 228, 255)",
+        "contrast": 14.635,
+        "font": "16px",
+        "opacity": 1,
+        "photo": false,
+        "y": 1501.16
+      },
+      "commentAuthor": {
+        "bg": [
+          17.2,
+          18.24,
+          20.4
+        ],
+        "color": "rgb(214, 230, 255)",
+        "contrast": 14.806,
+        "font": "16px",
+        "opacity": 1,
+        "photo": false,
+        "y": 1446.82
+      },
+      "day": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(215, 228, 255)",
+        "contrast": 16.431,
+        "font": "12px",
+        "opacity": 1,
+        "photo": false,
+        "y": 360.16
+      },
+      "hint": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(184, 201, 229)",
+        "contrast": 12.524,
+        "font": "14px",
+        "opacity": 1,
+        "photo": false,
+        "y": 1840.16
+      },
+      "like": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(13, 110, 253)",
+        "contrast": 4.666,
+        "font": "16px",
+        "opacity": 1,
+        "photo": false,
+        "y": 1242.7
+      },
+      "nav": {
+        "bg": [
+          66.3,
+          66.3,
+          66.3
+        ],
+        "color": "rgb(214, 230, 255)",
+        "contrast": null,
+        "font": "20px",
+        "opacity": 1,
+        "photo": true,
+        "y": 279.66
+      },
+      "postTitle": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(243, 248, 255)",
+        "contrast": 19.682,
+        "font": "24px",
+        "opacity": 1,
+        "photo": false,
+        "y": 780.82
+      },
+      "subtitle": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(243, 248, 255)",
+        "contrast": null,
+        "font": "15.258px",
+        "opacity": 0.82,
+        "photo": true,
+        "y": 176.74
+      },
+      "title": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(243, 248, 255)",
+        "contrast": null,
+        "font": "32px",
+        "opacity": 1,
+        "photo": true,
+        "y": 130.85
+      }
+    },
+    "local": [],
+    "photoBottom": 360,
+    "pseudo": "linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.06) 54%, rgba(0, 0, 0, 0.34) 70%, rgba(0, 0, 0, 0.78) 84%, rgb(0, 0, 0) 100%), url(\"http://127.0.0.1:8017/static/blog/images/design-backgrounds/litica_noci.png\")",
+    "targets": {
+      "action": [
+        98.81,
+        44
+      ],
+      "archive": [
+        271.33,
+        44
+      ],
+      "day": [
+        45.76,
+        45.76
+      ],
+      "like": [
+        124.03,
+        44
+      ],
+      "nav": [
+        44,
+        44
+      ]
+    }
+  },
+  {
+    "key": "litica_noci",
+    "w": 390,
+    "route": "detail",
+    "comments": 2,
+    "doc": 0,
+    "els": {
+      "action": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(13, 110, 253)",
+        "contrast": 4.666,
+        "font": "14px",
+        "opacity": 1,
+        "photo": false,
+        "y": 1302.7
+      },
+      "activeDay": {
+        "bg": [
+          47.08,
+          50.6,
+          56.1
+        ],
+        "color": "rgb(255, 255, 255)",
+        "contrast": 12.765,
+        "font": "12px",
+        "opacity": 1,
+        "photo": false,
+        "y": 398.28
+      },
+      "archive": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(214, 230, 255)",
+        "contrast": 16.622,
+        "font": "13px",
+        "opacity": 1,
+        "photo": false,
+        "y": 653.49
+      },
+      "author": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(13, 110, 253)",
+        "contrast": 4.666,
+        "font": "14px",
+        "opacity": 1,
+        "photo": false,
+        "y": 1195.36
+      },
+      "body": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(215, 228, 255)",
+        "contrast": 16.431,
+        "font": "16px",
+        "opacity": 1,
+        "photo": false,
+        "y": 984.7
+      },
+      "comment": {
+        "bg": [
+          17.2,
+          18.24,
+          20.4
+        ],
+        "color": "rgb(215, 228, 255)",
+        "contrast": 14.635,
+        "font": "16px",
+        "opacity": 1,
+        "photo": false,
+        "y": 1501.16
+      },
+      "commentAuthor": {
+        "bg": [
+          17.2,
+          18.24,
+          20.4
+        ],
+        "color": "rgb(214, 230, 255)",
+        "contrast": 14.806,
+        "font": "16px",
+        "opacity": 1,
+        "photo": false,
+        "y": 1446.82
+      },
+      "day": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(215, 228, 255)",
+        "contrast": 16.431,
+        "font": "12px",
+        "opacity": 1,
+        "photo": false,
+        "y": 360.16
+      },
+      "hint": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(184, 201, 229)",
+        "contrast": 12.524,
+        "font": "14px",
+        "opacity": 1,
+        "photo": false,
+        "y": 1840.16
+      },
+      "like": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(13, 110, 253)",
+        "contrast": 4.666,
+        "font": "16px",
+        "opacity": 1,
+        "photo": false,
+        "y": 1242.7
+      },
+      "nav": {
+        "bg": [
+          66.3,
+          66.3,
+          66.3
+        ],
+        "color": "rgb(214, 230, 255)",
+        "contrast": null,
+        "font": "20px",
+        "opacity": 1,
+        "photo": true,
+        "y": 279.66
+      },
+      "postTitle": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(243, 248, 255)",
+        "contrast": 19.682,
+        "font": "24px",
+        "opacity": 1,
+        "photo": false,
+        "y": 780.82
+      },
+      "subtitle": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(243, 248, 255)",
+        "contrast": null,
+        "font": "15.258px",
+        "opacity": 0.82,
+        "photo": true,
+        "y": 176.74
+      },
+      "title": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(243, 248, 255)",
+        "contrast": null,
+        "font": "32px",
+        "opacity": 1,
+        "photo": true,
+        "y": 130.85
+      }
+    },
+    "local": [],
+    "photoBottom": 360,
+    "pseudo": "linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.06) 54%, rgba(0, 0, 0, 0.34) 70%, rgba(0, 0, 0, 0.78) 84%, rgb(0, 0, 0) 100%), url(\"http://127.0.0.1:8017/static/blog/images/design-backgrounds/litica_noci.png\")",
+    "targets": {
+      "action": [
+        98.81,
+        44
+      ],
+      "archive": [
+        271.33,
+        44
+      ],
+      "day": [
+        45.76,
+        45.76
+      ],
+      "like": [
+        124.03,
+        44
+      ],
+      "nav": [
+        44,
+        44
+      ]
+    }
+  },
+  {
+    "key": "litica_noci",
+    "w": 768,
+    "route": "blog",
+    "comments": 2,
+    "doc": 0,
+    "els": {
+      "action": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(13, 110, 253)",
+        "contrast": 4.666,
+        "font": "14px",
+        "opacity": 1,
+        "photo": false,
+        "y": 715.64
+      },
+      "activeDay": {
+        "bg": [
+          47.08,
+          50.6,
+          56.1
+        ],
+        "color": "rgb(255, 255, 255)",
+        "contrast": null,
+        "font": "12px",
+        "opacity": 1,
+        "photo": true,
+        "y": 432.03
+      },
+      "archive": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(214, 230, 255)",
+        "contrast": 16.622,
+        "font": "13px",
+        "opacity": 1,
+        "photo": false,
+        "y": 687.24
+      },
+      "author": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(13, 110, 253)",
+        "contrast": null,
+        "font": "14px",
+        "opacity": 1,
+        "photo": true,
+        "y": 608.3
+      },
+      "body": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(215, 228, 255)",
+        "contrast": null,
+        "font": "16px",
+        "opacity": 1,
+        "photo": true,
+        "y": 421.64
+      },
+      "comment": {
+        "bg": [
+          86.7,
+          86.7,
+          86.7
+        ],
+        "color": "rgb(215, 228, 255)",
+        "contrast": 5.68,
+        "font": "12px",
+        "opacity": 1,
+        "photo": false,
+        "y": 961.24
+      },
+      "commentAuthor": {
+        "bg": [
+          86.7,
+          86.7,
+          86.7
+        ],
+        "color": "rgb(214, 230, 255)",
+        "contrast": 5.746,
+        "font": "16px",
+        "opacity": 1,
+        "photo": false,
+        "y": 859.76
+      },
+      "day": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(215, 228, 255)",
+        "contrast": null,
+        "font": "12px",
+        "opacity": 1,
+        "photo": true,
+        "y": 393.91
+      },
+      "hint": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(184, 201, 229)",
+        "contrast": 12.524,
+        "font": "14px",
+        "opacity": 1,
+        "photo": false,
+        "y": 1340.14
+      },
+      "like": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(13, 110, 253)",
+        "contrast": 4.666,
+        "font": "16px",
+        "opacity": 1,
+        "photo": false,
+        "y": 655.64
+      },
+      "nav": {
+        "bg": [
+          66.3,
+          66.3,
+          66.3
+        ],
+        "color": "rgb(214, 230, 255)",
+        "contrast": null,
+        "font": "20px",
+        "opacity": 1,
+        "photo": true,
+        "y": 238.07
+      },
+      "postTitle": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(243, 248, 255)",
+        "contrast": null,
+        "font": "24px",
+        "opacity": 1,
+        "photo": true,
+        "y": 246.07
+      },
+      "subtitle": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(243, 248, 255)",
+        "contrast": null,
+        "font": "16.0896px",
+        "opacity": 0.82,
+        "photo": true,
+        "y": 132.74
+      },
+      "title": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(243, 248, 255)",
+        "contrast": null,
+        "font": "32px",
+        "opacity": 1,
+        "photo": true,
+        "y": 86.85
+      }
+    },
+    "local": [
+      {
+        "cls": "calendar-box",
+        "excess": 35
+      },
+      {
+        "cls": "calendar-grid",
+        "excess": 51
+      }
+    ],
+    "photoBottom": 629.75,
+    "pseudo": "linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.06) 54%, rgba(0, 0, 0, 0.34) 70%, rgba(0, 0, 0, 0.78) 84%, rgb(0, 0, 0) 100%), url(\"http://127.0.0.1:8017/static/blog/images/design-backgrounds/litica_noci.png\")",
+    "targets": {
+      "action": [
+        98.81,
+        44
+      ],
+      "archive": [
+        116.85,
+        48.52
+      ],
+      "day": [
+        45.76,
+        45.76
+      ],
+      "like": [
+        124.03,
+        44
+      ],
+      "nav": [
+        44,
+        44
+      ]
+    }
+  },
+  {
+    "key": "litica_noci",
+    "w": 768,
+    "route": "detail",
+    "comments": 2,
+    "doc": 0,
+    "els": {
+      "action": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(13, 110, 253)",
+        "contrast": 4.666,
+        "font": "14px",
+        "opacity": 1,
+        "photo": false,
+        "y": 715.64
+      },
+      "activeDay": {
+        "bg": [
+          47.08,
+          50.6,
+          56.1
+        ],
+        "color": "rgb(255, 255, 255)",
+        "contrast": null,
+        "font": "12px",
+        "opacity": 1,
+        "photo": true,
+        "y": 432.03
+      },
+      "archive": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(214, 230, 255)",
+        "contrast": 16.622,
+        "font": "13px",
+        "opacity": 1,
+        "photo": false,
+        "y": 687.24
+      },
+      "author": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(13, 110, 253)",
+        "contrast": null,
+        "font": "14px",
+        "opacity": 1,
+        "photo": true,
+        "y": 608.3
+      },
+      "body": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(215, 228, 255)",
+        "contrast": null,
+        "font": "16px",
+        "opacity": 1,
+        "photo": true,
+        "y": 421.64
+      },
+      "comment": {
+        "bg": [
+          86.7,
+          86.7,
+          86.7
+        ],
+        "color": "rgb(215, 228, 255)",
+        "contrast": 5.68,
+        "font": "12px",
+        "opacity": 1,
+        "photo": false,
+        "y": 961.24
+      },
+      "commentAuthor": {
+        "bg": [
+          86.7,
+          86.7,
+          86.7
+        ],
+        "color": "rgb(214, 230, 255)",
+        "contrast": 5.746,
+        "font": "16px",
+        "opacity": 1,
+        "photo": false,
+        "y": 859.76
+      },
+      "day": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(215, 228, 255)",
+        "contrast": null,
+        "font": "12px",
+        "opacity": 1,
+        "photo": true,
+        "y": 393.91
+      },
+      "hint": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(184, 201, 229)",
+        "contrast": 12.524,
+        "font": "14px",
+        "opacity": 1,
+        "photo": false,
+        "y": 1340.14
+      },
+      "like": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(13, 110, 253)",
+        "contrast": 4.666,
+        "font": "16px",
+        "opacity": 1,
+        "photo": false,
+        "y": 655.64
+      },
+      "nav": {
+        "bg": [
+          66.3,
+          66.3,
+          66.3
+        ],
+        "color": "rgb(214, 230, 255)",
+        "contrast": null,
+        "font": "20px",
+        "opacity": 1,
+        "photo": true,
+        "y": 238.07
+      },
+      "postTitle": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(243, 248, 255)",
+        "contrast": null,
+        "font": "24px",
+        "opacity": 1,
+        "photo": true,
+        "y": 246.07
+      },
+      "subtitle": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(243, 248, 255)",
+        "contrast": null,
+        "font": "16.0896px",
+        "opacity": 0.82,
+        "photo": true,
+        "y": 132.74
+      },
+      "title": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(243, 248, 255)",
+        "contrast": null,
+        "font": "32px",
+        "opacity": 1,
+        "photo": true,
+        "y": 86.85
+      }
+    },
+    "local": [
+      {
+        "cls": "calendar-box",
+        "excess": 35
+      },
+      {
+        "cls": "calendar-grid",
+        "excess": 51
+      }
+    ],
+    "photoBottom": 629.75,
+    "pseudo": "linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.06) 54%, rgba(0, 0, 0, 0.34) 70%, rgba(0, 0, 0, 0.78) 84%, rgb(0, 0, 0) 100%), url(\"http://127.0.0.1:8017/static/blog/images/design-backgrounds/litica_noci.png\")",
+    "targets": {
+      "action": [
+        98.81,
+        44
+      ],
+      "archive": [
+        116.85,
+        48.52
+      ],
+      "day": [
+        45.76,
+        45.76
+      ],
+      "like": [
+        124.03,
+        44
+      ],
+      "nav": [
+        44,
+        44
+      ]
+    }
+  },
+  {
+    "key": "litica_noci",
+    "w": 1440,
+    "route": "blog",
+    "comments": 2,
+    "doc": 0,
+    "els": {
+      "action": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(13, 110, 253)",
+        "contrast": null,
+        "font": "14px",
+        "opacity": 1,
+        "photo": true,
+        "y": 690.68
+      },
+      "activeDay": {
+        "bg": [
+          47.08,
+          50.6,
+          56.1
+        ],
+        "color": "rgb(255, 255, 255)",
+        "contrast": null,
+        "font": "12px",
+        "opacity": 1,
+        "photo": true,
+        "y": 529.71
+      },
+      "archive": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(214, 230, 255)",
+        "contrast": null,
+        "font": "13px",
+        "opacity": 1,
+        "photo": true,
+        "y": 774.72
+      },
+      "author": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(13, 110, 253)",
+        "contrast": null,
+        "font": "14px",
+        "opacity": 1,
+        "photo": true,
+        "y": 662.18
+      },
+      "body": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(215, 228, 255)",
+        "contrast": null,
+        "font": "16px",
+        "opacity": 1,
+        "photo": true,
+        "y": 523.51
+      },
+      "comment": {
+        "bg": [
+          86.7,
+          86.7,
+          86.7
+        ],
+        "color": "rgb(215, 228, 255)",
+        "contrast": 5.68,
+        "font": "12px",
+        "opacity": 1,
+        "photo": false,
+        "y": 839.3
+      },
+      "commentAuthor": {
+        "bg": [
+          86.7,
+          86.7,
+          86.7
+        ],
+        "color": "rgb(214, 230, 255)",
+        "contrast": 5.746,
+        "font": "16px",
+        "opacity": 1,
+        "photo": false,
+        "y": 813.97
+      },
+      "day": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(215, 228, 255)",
+        "contrast": null,
+        "font": "12px",
+        "opacity": 1,
+        "photo": true,
+        "y": 491.39
+      },
+      "hint": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(184, 201, 229)",
+        "contrast": 12.524,
+        "font": "14px",
+        "opacity": 1,
+        "photo": false,
+        "y": 985.49
+      },
+      "like": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(13, 110, 253)",
+        "contrast": null,
+        "font": "16px",
+        "opacity": 1,
+        "photo": true,
+        "y": 688.51
+      },
+      "nav": {
+        "bg": [
+          66.3,
+          66.3,
+          66.3
+        ],
+        "color": "rgb(214, 230, 255)",
+        "contrast": null,
+        "font": "20px",
+        "opacity": 1,
+        "photo": true,
+        "y": 424.89
+      },
+      "postTitle": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(243, 248, 255)",
+        "contrast": null,
+        "font": "24px",
+        "opacity": 1,
+        "photo": true,
+        "y": 432.89
+      },
+      "subtitle": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(243, 248, 255)",
+        "contrast": null,
+        "font": "17.568px",
+        "opacity": 0.82,
+        "photo": true,
+        "y": 132.74
+      },
+      "title": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(243, 248, 255)",
+        "contrast": null,
+        "font": "32px",
+        "opacity": 1,
+        "photo": true,
+        "y": 86.85
+      }
+    },
+    "local": [],
+    "photoBottom": 806.396,
+    "pseudo": "linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.06) 54%, rgba(0, 0, 0, 0.34) 70%, rgba(0, 0, 0, 0.78) 84%, rgb(0, 0, 0) 100%), url(\"http://127.0.0.1:8017/static/blog/images/design-backgrounds/litica_noci.png\")",
+    "targets": {
+      "action": [
+        102.7,
+        21
+      ],
+      "archive": [
+        226.67,
+        32.93
+      ],
+      "day": [
+        28.33,
+        35.36
+      ],
+      "like": [
+        128.48,
+        25.33
+      ],
+      "nav": [
+        30,
+        30
+      ]
+    }
+  },
+  {
+    "key": "litica_noci",
+    "w": 1440,
+    "route": "detail",
+    "comments": 2,
+    "doc": 0,
+    "els": {
+      "action": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(13, 110, 253)",
+        "contrast": null,
+        "font": "14px",
+        "opacity": 1,
+        "photo": true,
+        "y": 690.68
+      },
+      "activeDay": {
+        "bg": [
+          47.08,
+          50.6,
+          56.1
+        ],
+        "color": "rgb(255, 255, 255)",
+        "contrast": null,
+        "font": "12px",
+        "opacity": 1,
+        "photo": true,
+        "y": 529.71
+      },
+      "archive": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(214, 230, 255)",
+        "contrast": null,
+        "font": "13px",
+        "opacity": 1,
+        "photo": true,
+        "y": 774.72
+      },
+      "author": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(13, 110, 253)",
+        "contrast": null,
+        "font": "14px",
+        "opacity": 1,
+        "photo": true,
+        "y": 662.18
+      },
+      "body": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(215, 228, 255)",
+        "contrast": null,
+        "font": "16px",
+        "opacity": 1,
+        "photo": true,
+        "y": 523.51
+      },
+      "comment": {
+        "bg": [
+          86.7,
+          86.7,
+          86.7
+        ],
+        "color": "rgb(215, 228, 255)",
+        "contrast": 5.68,
+        "font": "12px",
+        "opacity": 1,
+        "photo": false,
+        "y": 839.3
+      },
+      "commentAuthor": {
+        "bg": [
+          86.7,
+          86.7,
+          86.7
+        ],
+        "color": "rgb(214, 230, 255)",
+        "contrast": 5.746,
+        "font": "16px",
+        "opacity": 1,
+        "photo": false,
+        "y": 813.97
+      },
+      "day": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(215, 228, 255)",
+        "contrast": null,
+        "font": "12px",
+        "opacity": 1,
+        "photo": true,
+        "y": 491.39
+      },
+      "hint": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(184, 201, 229)",
+        "contrast": 12.524,
+        "font": "14px",
+        "opacity": 1,
+        "photo": false,
+        "y": 985.49
+      },
+      "like": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(13, 110, 253)",
+        "contrast": null,
+        "font": "16px",
+        "opacity": 1,
+        "photo": true,
+        "y": 688.51
+      },
+      "nav": {
+        "bg": [
+          66.3,
+          66.3,
+          66.3
+        ],
+        "color": "rgb(214, 230, 255)",
+        "contrast": null,
+        "font": "20px",
+        "opacity": 1,
+        "photo": true,
+        "y": 424.89
+      },
+      "postTitle": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(243, 248, 255)",
+        "contrast": null,
+        "font": "24px",
+        "opacity": 1,
+        "photo": true,
+        "y": 432.89
+      },
+      "subtitle": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(243, 248, 255)",
+        "contrast": null,
+        "font": "17.568px",
+        "opacity": 0.82,
+        "photo": true,
+        "y": 132.74
+      },
+      "title": {
+        "bg": [
+          0,
+          0,
+          0
+        ],
+        "color": "rgb(243, 248, 255)",
+        "contrast": null,
+        "font": "32px",
+        "opacity": 1,
+        "photo": true,
+        "y": 86.85
+      }
+    },
+    "local": [],
+    "photoBottom": 806.396,
+    "pseudo": "linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.06) 54%, rgba(0, 0, 0, 0.34) 70%, rgba(0, 0, 0, 0.78) 84%, rgb(0, 0, 0) 100%), url(\"http://127.0.0.1:8017/static/blog/images/design-backgrounds/litica_noci.png\")",
+    "targets": {
+      "action": [
+        102.7,
+        21
+      ],
+      "archive": [
+        226.67,
+        32.93
+      ],
+      "day": [
+        28.33,
+        35.36
+      ],
+      "like": [
+        128.48,
+        25.33
+      ],
+      "nav": [
+        30,
+        30
+      ]
+    }
+  },
+  {
+    "key": "podvodna_tisina",
+    "w": 320,
+    "route": "blog",
+    "comments": 2,
+    "doc": 0,
+    "els": {
+      "action": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(13, 110, 253)",
+        "contrast": 4.506,
+        "font": "14px",
+        "opacity": 1,
+        "photo": false,
+        "y": 1949.33
+      },
+      "activeDay": {
+        "bg": [
+          46.32,
+          54.18,
+          69.36
+        ],
+        "color": "rgb(255, 255, 255)",
+        "contrast": 12.1,
+        "font": "12px",
+        "opacity": 1,
+        "photo": false,
+        "y": 659.64
+      },
+      "archive": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(213, 229, 255)",
+        "contrast": 15.917,
+        "font": "13px",
+        "opacity": 1,
+        "photo": false,
+        "y": 925.19
+      },
+      "author": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(13, 110, 253)",
+        "contrast": 4.506,
+        "font": "14px",
+        "opacity": 1,
+        "photo": false,
+        "y": 1805
+      },
+      "body": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(213, 229, 255)",
+        "contrast": 15.917,
+        "font": "16px",
+        "opacity": 1,
+        "photo": false,
+        "y": 1549.33
+      },
+      "comment": {
+        "bg": [
+          17.96,
+          23.84,
+          36.04
+        ],
+        "color": "rgb(213, 229, 255)",
+        "contrast": 13.961,
+        "font": "16px",
+        "opacity": 1,
+        "photo": false,
+        "y": 2252.79
+      },
+      "commentAuthor": {
+        "bg": [
+          17.96,
+          23.84,
+          36.04
+        ],
+        "color": "rgb(13, 110, 253)",
+        "contrast": 3.952,
+        "font": "16px",
+        "opacity": 1,
+        "photo": false,
+        "y": 2153.46
+      },
+      "day": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(213, 229, 255)",
+        "contrast": 15.917,
+        "font": "12px",
+        "opacity": 1,
+        "photo": false,
+        "y": 621.52
+      },
+      "hint": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(184, 201, 229)",
+        "contrast": 12.096,
+        "font": "14px",
+        "opacity": 1,
+        "photo": false,
+        "y": 2876.79
+      },
+      "like": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(13, 110, 253)",
+        "contrast": 4.506,
+        "font": "16px",
+        "opacity": 1,
+        "photo": false,
+        "y": 1889.33
+      },
+      "nav": {
+        "bg": [
+          67.04,
+          70.74,
+          78.88
+        ],
+        "color": "rgb(207, 225, 255)",
+        "contrast": 7.064,
+        "font": "20px",
+        "opacity": 1,
+        "photo": false,
+        "y": 522.02
+      },
+      "postTitle": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(238, 245, 255)",
+        "contrast": 18.485,
+        "font": "24px",
+        "opacity": 1,
+        "photo": false,
+        "y": 1260.52
+      },
+      "subtitle": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(241, 246, 255)",
+        "contrast": null,
+        "font": "15.2px",
+        "opacity": 0.82,
+        "photo": true,
+        "y": 211.29
+      },
+      "title": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(241, 246, 255)",
+        "contrast": null,
+        "font": "32px",
+        "opacity": 1,
+        "photo": true,
+        "y": 130.85
+      }
+    },
+    "local": [],
+    "photoBottom": 520,
+    "pseudo": "linear-gradient(rgba(1, 6, 17, 0) 0%, rgba(1, 6, 17, 0.04) 48%, rgba(1, 6, 17, 0.18) 64%, rgba(1, 6, 17, 0.52) 80%, rgb(1, 6, 17) 100%), url(\"http://127.0.0.1:8017/static/blog/images/design-backgrounds/podvodna_tisina.png\")",
+    "targets": {
+      "action": [
+        98.81,
+        44
+      ],
+      "archive": [
+        200.67,
+        44
+      ],
+      "day": [
+        45.76,
+        45.76
+      ],
+      "like": [
+        124.03,
+        44
+      ],
+      "nav": [
+        44,
+        44
+      ]
+    }
+  },
+  {
+    "key": "podvodna_tisina",
+    "w": 320,
+    "route": "detail",
+    "comments": 2,
+    "doc": 0,
+    "els": {
+      "action": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(13, 110, 253)",
+        "contrast": 4.506,
+        "font": "14px",
+        "opacity": 1,
+        "photo": false,
+        "y": 1949.33
+      },
+      "activeDay": {
+        "bg": [
+          46.32,
+          54.18,
+          69.36
+        ],
+        "color": "rgb(255, 255, 255)",
+        "contrast": 12.1,
+        "font": "12px",
+        "opacity": 1,
+        "photo": false,
+        "y": 659.64
+      },
+      "archive": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(213, 229, 255)",
+        "contrast": 15.917,
+        "font": "13px",
+        "opacity": 1,
+        "photo": false,
+        "y": 925.19
+      },
+      "author": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(13, 110, 253)",
+        "contrast": 4.506,
+        "font": "14px",
+        "opacity": 1,
+        "photo": false,
+        "y": 1805
+      },
+      "body": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(213, 229, 255)",
+        "contrast": 15.917,
+        "font": "16px",
+        "opacity": 1,
+        "photo": false,
+        "y": 1549.33
+      },
+      "comment": {
+        "bg": [
+          17.96,
+          23.84,
+          36.04
+        ],
+        "color": "rgb(213, 229, 255)",
+        "contrast": 13.961,
+        "font": "16px",
+        "opacity": 1,
+        "photo": false,
+        "y": 2192.79
+      },
+      "commentAuthor": {
+        "bg": [
+          17.96,
+          23.84,
+          36.04
+        ],
+        "color": "rgb(13, 110, 253)",
+        "contrast": 3.952,
+        "font": "16px",
+        "opacity": 1,
+        "photo": false,
+        "y": 2093.46
+      },
+      "day": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(213, 229, 255)",
+        "contrast": 15.917,
+        "font": "12px",
+        "opacity": 1,
+        "photo": false,
+        "y": 621.52
+      },
+      "hint": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(184, 201, 229)",
+        "contrast": 12.096,
+        "font": "14px",
+        "opacity": 1,
+        "photo": false,
+        "y": 2816.79
+      },
+      "like": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(13, 110, 253)",
+        "contrast": 4.506,
+        "font": "16px",
+        "opacity": 1,
+        "photo": false,
+        "y": 1889.33
+      },
+      "nav": {
+        "bg": [
+          67.04,
+          70.74,
+          78.88
+        ],
+        "color": "rgb(207, 225, 255)",
+        "contrast": 7.064,
+        "font": "20px",
+        "opacity": 1,
+        "photo": false,
+        "y": 522.02
+      },
+      "postTitle": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(238, 245, 255)",
+        "contrast": 18.485,
+        "font": "24px",
+        "opacity": 1,
+        "photo": false,
+        "y": 1260.52
+      },
+      "subtitle": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(241, 246, 255)",
+        "contrast": null,
+        "font": "15.2px",
+        "opacity": 0.82,
+        "photo": true,
+        "y": 211.29
+      },
+      "title": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(241, 246, 255)",
+        "contrast": null,
+        "font": "32px",
+        "opacity": 1,
+        "photo": true,
+        "y": 130.85
+      }
+    },
+    "local": [],
+    "photoBottom": 520,
+    "pseudo": "linear-gradient(rgba(1, 6, 17, 0) 0%, rgba(1, 6, 17, 0.04) 48%, rgba(1, 6, 17, 0.18) 64%, rgba(1, 6, 17, 0.52) 80%, rgb(1, 6, 17) 100%), url(\"http://127.0.0.1:8017/static/blog/images/design-backgrounds/podvodna_tisina.png\")",
+    "targets": {
+      "action": [
+        98.81,
+        44
+      ],
+      "archive": [
+        200.67,
+        44
+      ],
+      "day": [
+        45.76,
+        45.76
+      ],
+      "like": [
+        124.03,
+        44
+      ],
+      "nav": [
+        44,
+        44
+      ]
+    }
+  },
+  {
+    "key": "podvodna_tisina",
+    "w": 390,
+    "route": "blog",
+    "comments": 2,
+    "doc": 0,
+    "els": {
+      "action": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(13, 110, 253)",
+        "contrast": 4.506,
+        "font": "14px",
+        "opacity": 1,
+        "photo": false,
+        "y": 1748.03
+      },
+      "activeDay": {
+        "bg": [
+          46.32,
+          54.18,
+          69.36
+        ],
+        "color": "rgb(255, 255, 255)",
+        "contrast": 12.1,
+        "font": "12px",
+        "opacity": 1,
+        "photo": false,
+        "y": 625.28
+      },
+      "archive": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(213, 229, 255)",
+        "contrast": 15.917,
+        "font": "13px",
+        "opacity": 1,
+        "photo": false,
+        "y": 890.82
+      },
+      "author": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(13, 110, 253)",
+        "contrast": 4.506,
+        "font": "14px",
+        "opacity": 1,
+        "photo": false,
+        "y": 1640.7
+      },
+      "body": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(213, 229, 255)",
+        "contrast": 15.917,
+        "font": "16px",
+        "opacity": 1,
+        "photo": false,
+        "y": 1430.03
+      },
+      "comment": {
+        "bg": [
+          17.96,
+          23.84,
+          36.04
+        ],
+        "color": "rgb(213, 229, 255)",
+        "contrast": 13.961,
+        "font": "16px",
+        "opacity": 1,
+        "photo": false,
+        "y": 1946.49
+      },
+      "commentAuthor": {
+        "bg": [
+          17.96,
+          23.84,
+          36.04
+        ],
+        "color": "rgb(13, 110, 253)",
+        "contrast": 3.952,
+        "font": "16px",
+        "opacity": 1,
+        "photo": false,
+        "y": 1892.16
+      },
+      "day": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(213, 229, 255)",
+        "contrast": 15.917,
+        "font": "12px",
+        "opacity": 1,
+        "photo": false,
+        "y": 587.16
+      },
+      "hint": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(184, 201, 229)",
+        "contrast": 12.096,
+        "font": "14px",
+        "opacity": 1,
+        "photo": false,
+        "y": 2309.49
+      },
+      "like": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(13, 110, 253)",
+        "contrast": 4.506,
+        "font": "16px",
+        "opacity": 1,
+        "photo": false,
+        "y": 1688.03
+      },
+      "nav": {
+        "bg": [
+          67.04,
+          70.74,
+          78.88
+        ],
+        "color": "rgb(207, 225, 255)",
+        "contrast": null,
+        "font": "20px",
+        "opacity": 1,
+        "photo": true,
+        "y": 487.66
+      },
+      "postTitle": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(238, 245, 255)",
+        "contrast": 18.485,
+        "font": "24px",
+        "opacity": 1,
+        "photo": false,
+        "y": 1226.16
+      },
+      "subtitle": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(241, 246, 255)",
+        "contrast": null,
+        "font": "15.258px",
+        "opacity": 0.82,
+        "photo": true,
+        "y": 176.74
+      },
+      "title": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(241, 246, 255)",
+        "contrast": null,
+        "font": "32px",
+        "opacity": 1,
+        "photo": true,
+        "y": 130.85
+      }
+    },
+    "local": [],
+    "photoBottom": 520,
+    "pseudo": "linear-gradient(rgba(1, 6, 17, 0) 0%, rgba(1, 6, 17, 0.04) 48%, rgba(1, 6, 17, 0.18) 64%, rgba(1, 6, 17, 0.52) 80%, rgb(1, 6, 17) 100%), url(\"http://127.0.0.1:8017/static/blog/images/design-backgrounds/podvodna_tisina.png\")",
+    "targets": {
+      "action": [
+        98.81,
+        44
+      ],
+      "archive": [
+        226.67,
+        44
+      ],
+      "day": [
+        45.76,
+        45.76
+      ],
+      "like": [
+        124.03,
+        44
+      ],
+      "nav": [
+        44,
+        44
+      ]
+    }
+  },
+  {
+    "key": "podvodna_tisina",
+    "w": 390,
+    "route": "detail",
+    "comments": 2,
+    "doc": 0,
+    "els": {
+      "action": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(13, 110, 253)",
+        "contrast": 4.506,
+        "font": "14px",
+        "opacity": 1,
+        "photo": false,
+        "y": 1748.03
+      },
+      "activeDay": {
+        "bg": [
+          46.32,
+          54.18,
+          69.36
+        ],
+        "color": "rgb(255, 255, 255)",
+        "contrast": 12.1,
+        "font": "12px",
+        "opacity": 1,
+        "photo": false,
+        "y": 625.28
+      },
+      "archive": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(213, 229, 255)",
+        "contrast": 15.917,
+        "font": "13px",
+        "opacity": 1,
+        "photo": false,
+        "y": 890.82
+      },
+      "author": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(13, 110, 253)",
+        "contrast": 4.506,
+        "font": "14px",
+        "opacity": 1,
+        "photo": false,
+        "y": 1640.7
+      },
+      "body": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(213, 229, 255)",
+        "contrast": 15.917,
+        "font": "16px",
+        "opacity": 1,
+        "photo": false,
+        "y": 1430.03
+      },
+      "comment": {
+        "bg": [
+          17.96,
+          23.84,
+          36.04
+        ],
+        "color": "rgb(213, 229, 255)",
+        "contrast": 13.961,
+        "font": "16px",
+        "opacity": 1,
+        "photo": false,
+        "y": 1946.49
+      },
+      "commentAuthor": {
+        "bg": [
+          17.96,
+          23.84,
+          36.04
+        ],
+        "color": "rgb(13, 110, 253)",
+        "contrast": 3.952,
+        "font": "16px",
+        "opacity": 1,
+        "photo": false,
+        "y": 1892.16
+      },
+      "day": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(213, 229, 255)",
+        "contrast": 15.917,
+        "font": "12px",
+        "opacity": 1,
+        "photo": false,
+        "y": 587.16
+      },
+      "hint": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(184, 201, 229)",
+        "contrast": 12.096,
+        "font": "14px",
+        "opacity": 1,
+        "photo": false,
+        "y": 2309.49
+      },
+      "like": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(13, 110, 253)",
+        "contrast": 4.506,
+        "font": "16px",
+        "opacity": 1,
+        "photo": false,
+        "y": 1688.03
+      },
+      "nav": {
+        "bg": [
+          67.04,
+          70.74,
+          78.88
+        ],
+        "color": "rgb(207, 225, 255)",
+        "contrast": null,
+        "font": "20px",
+        "opacity": 1,
+        "photo": true,
+        "y": 487.66
+      },
+      "postTitle": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(238, 245, 255)",
+        "contrast": 18.485,
+        "font": "24px",
+        "opacity": 1,
+        "photo": false,
+        "y": 1226.16
+      },
+      "subtitle": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(241, 246, 255)",
+        "contrast": null,
+        "font": "15.258px",
+        "opacity": 0.82,
+        "photo": true,
+        "y": 176.74
+      },
+      "title": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(241, 246, 255)",
+        "contrast": null,
+        "font": "32px",
+        "opacity": 1,
+        "photo": true,
+        "y": 130.85
+      }
+    },
+    "local": [],
+    "photoBottom": 520,
+    "pseudo": "linear-gradient(rgba(1, 6, 17, 0) 0%, rgba(1, 6, 17, 0.04) 48%, rgba(1, 6, 17, 0.18) 64%, rgba(1, 6, 17, 0.52) 80%, rgb(1, 6, 17) 100%), url(\"http://127.0.0.1:8017/static/blog/images/design-backgrounds/podvodna_tisina.png\")",
+    "targets": {
+      "action": [
+        98.81,
+        44
+      ],
+      "archive": [
+        226.67,
+        44
+      ],
+      "day": [
+        45.76,
+        45.76
+      ],
+      "like": [
+        124.03,
+        44
+      ],
+      "nav": [
+        44,
+        44
+      ]
+    }
+  },
+  {
+    "key": "podvodna_tisina",
+    "w": 768,
+    "route": "blog",
+    "comments": 2,
+    "doc": 0,
+    "els": {
+      "action": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(13, 110, 253)",
+        "contrast": 4.506,
+        "font": "14px",
+        "opacity": 1,
+        "photo": false,
+        "y": 923.64
+      },
+      "activeDay": {
+        "bg": [
+          46.32,
+          54.18,
+          69.36
+        ],
+        "color": "rgb(255, 255, 255)",
+        "contrast": 12.1,
+        "font": "12px",
+        "opacity": 1,
+        "photo": false,
+        "y": 659.03
+      },
+      "archive": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(213, 229, 255)",
+        "contrast": 15.917,
+        "font": "13px",
+        "opacity": 1,
+        "photo": false,
+        "y": 924.57
+      },
+      "author": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(13, 110, 253)",
+        "contrast": 4.506,
+        "font": "14px",
+        "opacity": 1,
+        "photo": false,
+        "y": 816.3
+      },
+      "body": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(213, 229, 255)",
+        "contrast": 15.917,
+        "font": "16px",
+        "opacity": 1,
+        "photo": false,
+        "y": 629.64
+      },
+      "comment": {
+        "bg": [
+          87.36,
+          90.66,
+          97.92
+        ],
+        "color": "rgb(213, 229, 255)",
+        "contrast": 5.369,
+        "font": "12px",
+        "opacity": 1,
+        "photo": false,
+        "y": 1169.24
+      },
+      "commentAuthor": {
+        "bg": [
+          87.36,
+          90.66,
+          97.92
+        ],
+        "color": "rgb(213, 229, 255)",
+        "contrast": 5.369,
+        "font": "16px",
+        "opacity": 1,
+        "photo": false,
+        "y": 1067.76
+      },
+      "day": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(213, 229, 255)",
+        "contrast": 15.917,
+        "font": "12px",
+        "opacity": 1,
+        "photo": false,
+        "y": 620.91
+      },
+      "hint": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(184, 201, 229)",
+        "contrast": 12.096,
+        "font": "14px",
+        "opacity": 1,
+        "photo": false,
+        "y": 1572.14
+      },
+      "like": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(13, 110, 253)",
+        "contrast": 4.506,
+        "font": "16px",
+        "opacity": 1,
+        "photo": false,
+        "y": 863.64
+      },
+      "nav": {
+        "bg": [
+          67.04,
+          70.74,
+          78.88
+        ],
+        "color": "rgb(207, 225, 255)",
+        "contrast": null,
+        "font": "20px",
+        "opacity": 1,
+        "photo": true,
+        "y": 446.07
+      },
+      "postTitle": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(238, 245, 255)",
+        "contrast": null,
+        "font": "24px",
+        "opacity": 1,
+        "photo": true,
+        "y": 454.07
+      },
+      "subtitle": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(241, 246, 255)",
+        "contrast": null,
+        "font": "16.0896px",
+        "opacity": 0.82,
+        "photo": true,
+        "y": 132.74
+      },
+      "title": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(241, 246, 255)",
+        "contrast": null,
+        "font": "32px",
+        "opacity": 1,
+        "photo": true,
+        "y": 86.85
+      }
+    },
+    "local": [
+      {
+        "cls": "calendar-box",
+        "excess": 35
+      },
+      {
+        "cls": "calendar-grid",
+        "excess": 51
+      }
+    ],
+    "photoBottom": 520,
+    "pseudo": "linear-gradient(rgba(1, 6, 17, 0) 0%, rgba(1, 6, 17, 0.04) 48%, rgba(1, 6, 17, 0.18) 64%, rgba(1, 6, 17, 0.52) 80%, rgb(1, 6, 17) 100%), url(\"http://127.0.0.1:8017/static/blog/images/design-backgrounds/podvodna_tisina.png\")",
+    "targets": {
+      "action": [
+        98.81,
+        44
+      ],
+      "archive": [
+        116.69,
+        48.52
+      ],
+      "day": [
+        45.76,
+        45.76
+      ],
+      "like": [
+        124.03,
+        44
+      ],
+      "nav": [
+        44,
+        44
+      ]
+    }
+  },
+  {
+    "key": "podvodna_tisina",
+    "w": 768,
+    "route": "detail",
+    "comments": 2,
+    "doc": 0,
+    "els": {
+      "action": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(13, 110, 253)",
+        "contrast": 4.506,
+        "font": "14px",
+        "opacity": 1,
+        "photo": false,
+        "y": 923.64
+      },
+      "activeDay": {
+        "bg": [
+          46.32,
+          54.18,
+          69.36
+        ],
+        "color": "rgb(255, 255, 255)",
+        "contrast": 12.1,
+        "font": "12px",
+        "opacity": 1,
+        "photo": false,
+        "y": 659.03
+      },
+      "archive": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(213, 229, 255)",
+        "contrast": 15.917,
+        "font": "13px",
+        "opacity": 1,
+        "photo": false,
+        "y": 924.57
+      },
+      "author": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(13, 110, 253)",
+        "contrast": 4.506,
+        "font": "14px",
+        "opacity": 1,
+        "photo": false,
+        "y": 816.3
+      },
+      "body": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(213, 229, 255)",
+        "contrast": 15.917,
+        "font": "16px",
+        "opacity": 1,
+        "photo": false,
+        "y": 629.64
+      },
+      "comment": {
+        "bg": [
+          87.36,
+          90.66,
+          97.92
+        ],
+        "color": "rgb(213, 229, 255)",
+        "contrast": 5.369,
+        "font": "12px",
+        "opacity": 1,
+        "photo": false,
+        "y": 1169.24
+      },
+      "commentAuthor": {
+        "bg": [
+          87.36,
+          90.66,
+          97.92
+        ],
+        "color": "rgb(213, 229, 255)",
+        "contrast": 5.369,
+        "font": "16px",
+        "opacity": 1,
+        "photo": false,
+        "y": 1067.76
+      },
+      "day": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(213, 229, 255)",
+        "contrast": 15.917,
+        "font": "12px",
+        "opacity": 1,
+        "photo": false,
+        "y": 620.91
+      },
+      "hint": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(184, 201, 229)",
+        "contrast": 12.096,
+        "font": "14px",
+        "opacity": 1,
+        "photo": false,
+        "y": 1572.14
+      },
+      "like": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(13, 110, 253)",
+        "contrast": 4.506,
+        "font": "16px",
+        "opacity": 1,
+        "photo": false,
+        "y": 863.64
+      },
+      "nav": {
+        "bg": [
+          67.04,
+          70.74,
+          78.88
+        ],
+        "color": "rgb(207, 225, 255)",
+        "contrast": null,
+        "font": "20px",
+        "opacity": 1,
+        "photo": true,
+        "y": 446.07
+      },
+      "postTitle": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(238, 245, 255)",
+        "contrast": null,
+        "font": "24px",
+        "opacity": 1,
+        "photo": true,
+        "y": 454.07
+      },
+      "subtitle": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(241, 246, 255)",
+        "contrast": null,
+        "font": "16.0896px",
+        "opacity": 0.82,
+        "photo": true,
+        "y": 132.74
+      },
+      "title": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(241, 246, 255)",
+        "contrast": null,
+        "font": "32px",
+        "opacity": 1,
+        "photo": true,
+        "y": 86.85
+      }
+    },
+    "local": [
+      {
+        "cls": "calendar-box",
+        "excess": 35
+      },
+      {
+        "cls": "calendar-grid",
+        "excess": 51
+      }
+    ],
+    "photoBottom": 520,
+    "pseudo": "linear-gradient(rgba(1, 6, 17, 0) 0%, rgba(1, 6, 17, 0.04) 48%, rgba(1, 6, 17, 0.18) 64%, rgba(1, 6, 17, 0.52) 80%, rgb(1, 6, 17) 100%), url(\"http://127.0.0.1:8017/static/blog/images/design-backgrounds/podvodna_tisina.png\")",
+    "targets": {
+      "action": [
+        98.81,
+        44
+      ],
+      "archive": [
+        116.69,
+        48.52
+      ],
+      "day": [
+        45.76,
+        45.76
+      ],
+      "like": [
+        124.03,
+        44
+      ],
+      "nav": [
+        44,
+        44
+      ]
+    }
+  },
+  {
+    "key": "podvodna_tisina",
+    "w": 1440,
+    "route": "blog",
+    "comments": 2,
+    "doc": 0,
+    "els": {
+      "action": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(13, 110, 253)",
+        "contrast": null,
+        "font": "14px",
+        "opacity": 1,
+        "photo": true,
+        "y": 690.68
+      },
+      "activeDay": {
+        "bg": [
+          46.32,
+          54.18,
+          69.36
+        ],
+        "color": "rgb(255, 255, 255)",
+        "contrast": null,
+        "font": "12px",
+        "opacity": 1,
+        "photo": true,
+        "y": 548.71
+      },
+      "archive": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(213, 229, 255)",
+        "contrast": null,
+        "font": "13px",
+        "opacity": 1,
+        "photo": true,
+        "y": 804.05
+      },
+      "author": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(13, 110, 253)",
+        "contrast": null,
+        "font": "14px",
+        "opacity": 1,
+        "photo": true,
+        "y": 662.18
+      },
+      "body": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(213, 229, 255)",
+        "contrast": null,
+        "font": "16px",
+        "opacity": 1,
+        "photo": true,
+        "y": 523.51
+      },
+      "comment": {
+        "bg": [
+          87.36,
+          90.66,
+          97.92
+        ],
+        "color": "rgb(213, 229, 255)",
+        "contrast": null,
+        "font": "12px",
+        "opacity": 1,
+        "photo": true,
+        "y": 839.3
+      },
+      "commentAuthor": {
+        "bg": [
+          87.36,
+          90.66,
+          97.92
+        ],
+        "color": "rgb(213, 229, 255)",
+        "contrast": null,
+        "font": "16px",
+        "opacity": 1,
+        "photo": true,
+        "y": 813.97
+      },
+      "day": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(213, 229, 255)",
+        "contrast": null,
+        "font": "12px",
+        "opacity": 1,
+        "photo": true,
+        "y": 510.39
+      },
+      "hint": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(184, 201, 229)",
+        "contrast": 12.096,
+        "font": "14px",
+        "opacity": 1,
+        "photo": false,
+        "y": 985.49
+      },
+      "like": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(13, 110, 253)",
+        "contrast": null,
+        "font": "16px",
+        "opacity": 1,
+        "photo": true,
+        "y": 688.51
+      },
+      "nav": {
+        "bg": [
+          67.04,
+          70.74,
+          78.88
+        ],
+        "color": "rgb(207, 225, 255)",
+        "contrast": null,
+        "font": "20px",
+        "opacity": 1,
+        "photo": true,
+        "y": 424.89
+      },
+      "postTitle": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(238, 245, 255)",
+        "contrast": null,
+        "font": "24px",
+        "opacity": 1,
+        "photo": true,
+        "y": 432.89
+      },
+      "subtitle": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(241, 246, 255)",
+        "contrast": null,
+        "font": "17.568px",
+        "opacity": 0.82,
+        "photo": true,
+        "y": 132.74
+      },
+      "title": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(241, 246, 255)",
+        "contrast": null,
+        "font": "32px",
+        "opacity": 1,
+        "photo": true,
+        "y": 86.85
+      }
+    },
+    "local": [],
+    "photoBottom": 864,
+    "pseudo": "linear-gradient(rgba(1, 6, 17, 0) 0%, rgba(1, 6, 17, 0.04) 48%, rgba(1, 6, 17, 0.18) 64%, rgba(1, 6, 17, 0.52) 80%, rgb(1, 6, 17) 100%), url(\"http://127.0.0.1:8017/static/blog/images/design-backgrounds/podvodna_tisina.png\")",
+    "targets": {
+      "action": [
+        102.7,
+        21
+      ],
+      "archive": [
+        226.67,
+        32.93
+      ],
+      "day": [
+        28.33,
+        35.36
+      ],
+      "like": [
+        128.48,
+        25.33
+      ],
+      "nav": [
+        30,
+        30
+      ]
+    }
+  },
+  {
+    "key": "podvodna_tisina",
+    "w": 1440,
+    "route": "detail",
+    "comments": 2,
+    "doc": 0,
+    "els": {
+      "action": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(13, 110, 253)",
+        "contrast": null,
+        "font": "14px",
+        "opacity": 1,
+        "photo": true,
+        "y": 690.68
+      },
+      "activeDay": {
+        "bg": [
+          46.32,
+          54.18,
+          69.36
+        ],
+        "color": "rgb(255, 255, 255)",
+        "contrast": null,
+        "font": "12px",
+        "opacity": 1,
+        "photo": true,
+        "y": 548.71
+      },
+      "archive": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(213, 229, 255)",
+        "contrast": null,
+        "font": "13px",
+        "opacity": 1,
+        "photo": true,
+        "y": 804.05
+      },
+      "author": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(13, 110, 253)",
+        "contrast": null,
+        "font": "14px",
+        "opacity": 1,
+        "photo": true,
+        "y": 662.18
+      },
+      "body": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(213, 229, 255)",
+        "contrast": null,
+        "font": "16px",
+        "opacity": 1,
+        "photo": true,
+        "y": 523.51
+      },
+      "comment": {
+        "bg": [
+          87.36,
+          90.66,
+          97.92
+        ],
+        "color": "rgb(213, 229, 255)",
+        "contrast": null,
+        "font": "12px",
+        "opacity": 1,
+        "photo": true,
+        "y": 839.3
+      },
+      "commentAuthor": {
+        "bg": [
+          87.36,
+          90.66,
+          97.92
+        ],
+        "color": "rgb(213, 229, 255)",
+        "contrast": null,
+        "font": "16px",
+        "opacity": 1,
+        "photo": true,
+        "y": 813.97
+      },
+      "day": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(213, 229, 255)",
+        "contrast": null,
+        "font": "12px",
+        "opacity": 1,
+        "photo": true,
+        "y": 510.39
+      },
+      "hint": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(184, 201, 229)",
+        "contrast": 12.096,
+        "font": "14px",
+        "opacity": 1,
+        "photo": false,
+        "y": 985.49
+      },
+      "like": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(13, 110, 253)",
+        "contrast": null,
+        "font": "16px",
+        "opacity": 1,
+        "photo": true,
+        "y": 688.51
+      },
+      "nav": {
+        "bg": [
+          67.04,
+          70.74,
+          78.88
+        ],
+        "color": "rgb(207, 225, 255)",
+        "contrast": null,
+        "font": "20px",
+        "opacity": 1,
+        "photo": true,
+        "y": 424.89
+      },
+      "postTitle": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(238, 245, 255)",
+        "contrast": null,
+        "font": "24px",
+        "opacity": 1,
+        "photo": true,
+        "y": 432.89
+      },
+      "subtitle": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(241, 246, 255)",
+        "contrast": null,
+        "font": "17.568px",
+        "opacity": 0.82,
+        "photo": true,
+        "y": 132.74
+      },
+      "title": {
+        "bg": [
+          1,
+          6,
+          17
+        ],
+        "color": "rgb(241, 246, 255)",
+        "contrast": null,
+        "font": "32px",
+        "opacity": 1,
+        "photo": true,
+        "y": 86.85
+      }
+    },
+    "local": [],
+    "photoBottom": 864,
+    "pseudo": "linear-gradient(rgba(1, 6, 17, 0) 0%, rgba(1, 6, 17, 0.04) 48%, rgba(1, 6, 17, 0.18) 64%, rgba(1, 6, 17, 0.52) 80%, rgb(1, 6, 17) 100%), url(\"http://127.0.0.1:8017/static/blog/images/design-backgrounds/podvodna_tisina.png\")",
+    "targets": {
+      "action": [
+        102.7,
+        21
+      ],
+      "archive": [
+        226.67,
+        32.93
+      ],
+      "day": [
+        28.33,
+        35.36
+      ],
+      "like": [
+        128.48,
+        25.33
+      ],
+      "nav": [
+        30,
+        30
+      ]
+    }
+  }
+]

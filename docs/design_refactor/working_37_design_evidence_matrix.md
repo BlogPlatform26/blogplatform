@@ -1,3 +1,5 @@
+[Phase100l](phase100l_litica_podvodna_current_matrix.md) dodaje16 aktualnih stanja Litica/Podvodna: mobilni autor komentara Podvodne3.95:1 (P1), oba tablet kalendara+51px grid overflow. Foto-zone ostaju eksplicitno neprovjerene. Preostala24 posebna dizajna trebaju novu seriju;13 obuhvacenih nije13 prolaznih.
+
 [Phase100k](phase100k_magazin_factory_title_surface.md) zatvara Magazin tvornicki foto-naslov:14.68:1 uz lokalnu neprozirnu podlogu. Dugi naslovi vise ne preklapaju objave; korisnicke boje sacuvane. Matrica svih37 i desktopne mete jos nisu dovrsene.
 
 [Phase100j](phase100j_magazin_photo_title_evidence.md) potvrdjuje Magazin fotografski naslov ispod3:1: osam stanja, najnizi uzorkovani omjeri1.44-1.74. Problem sada izmjeren, popravak jos otvoren. Aplikacijski kod nepromijenjen.
