@@ -3905,6 +3905,21 @@ html body .blog-page-title a.blog-link {
     overflow-wrap: anywhere;
 }
 
+/* Phase 100i: editorial titles use the full phone width before the date. */
+@media (max-width: 575.98px) {
+    .editorial-post-header {
+        flex-direction: column;
+    }
+    .editorial-post-header > :first-child {
+        width: 100%;
+        overflow-wrap: anywhere;
+    }
+    .editorial-post-header > .blog-date-shell {
+        margin-left: 0 !important;
+        max-width: 100%;
+    }
+}
+
 /* Phase 98a: keep the same action hit areas on every tablet design. */
 @media (min-width: 576px) and (max-width: 991.98px) {
     html body .post-actions > form {
