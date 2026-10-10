@@ -437,6 +437,7 @@ nav.navbar .dropdown-menu {
 
 .magazin-hero {
     position: relative;
+    display: grid;
     width: 100%;
     min-height: 250px;
     background: rgba(255,255,255,0.15);
@@ -444,6 +445,7 @@ nav.navbar .dropdown-menu {
 }
 
 .magazin-hero-media {
+    grid-area: 1 / 1;
     width: 100%;
     aspect-ratio: 16 / 5.3;
     min-height: 250px;
@@ -458,25 +460,37 @@ nav.navbar .dropdown-menu {
 }
 
 .magazin-hero-overlay {
-    position: absolute;
-    inset: 0;
+    position: relative;
+    grid-area: 1 / 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding: clamp(28px, 3vw, 44px) 28px 28px;
+    padding: clamp(28px, 3vw, 44px) 28px 146px;
     background: linear-gradient(to bottom, rgba(0,0,0,0.20), rgba(0,0,0,0.03) 45%, rgba(0,0,0,0));
     text-align: center;
 }
 
 .magazin-blog-title {
     margin: 0;
+    max-width: 100%;
+    overflow-wrap: anywhere;
     color: var(--magazin-title-color);
     font-family: var(--magazin-title-font);
     font-size: clamp(2rem, 2.3vw, 3rem);
     line-height: 1.1;
     text-shadow: 0 8px 22px rgba(0,0,0,0.20);
 }
+
+/* Phase 100k: keep the factory title readable over every photograph. */
+{% if not blog_preferences.active_design_customization.blog_title_color or blog_preferences.active_design_customization.blog_title_color == '#ffffff' %}
+.magazin-blog-title {
+    background: #2f271f;
+    border-radius: 4px;
+    box-shadow: 0 0 0 6px #2f271f;
+    text-shadow: none;
+}
+{% endif %}
 
 .magazin-posts-wrap {
     width: min(760px, calc(100% - 88px));
@@ -617,6 +631,10 @@ html body .magazin-main-shell .comment-body a {
     .magazin-hero-media {
         aspect-ratio: 16 / 7.5;
         min-height: 210px;
+    }
+
+    .magazin-hero-overlay {
+        padding-bottom: 84px;
     }
 
     .magazin-posts-wrap {
