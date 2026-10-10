@@ -1,5 +1,9 @@
 # Radna matrica dokaza za 37 registriranih dizajna
 
+## Novije provjere — 10. listopada 2026.
+
+Raniji P1 nalazi naslova Simple objava zatvoreni su u [Phase100d](phase100d_simple_post_title_contrast.md), a kontrast gumba za lajk u [Phase100e](phase100e_like_theme_contrast.md) (72 prikaza, 5.34–7.19:1). [Phase100f](phase100f_dark_comment_status_contrast.md) popravlja statusne poruke komentara dark/dark_right na 9.84:1. Povijesni odlomak niže koji navodi otvorene like/title P1 nalaze opisuje stanje prije tih faza. Ove uske provjere ne zamjenjuju završnu matricu: drugih 28 dizajna i potpuna tvornička Default provjera još su otvoreni, kao i preostale touch mete i lokalni overflow.
+
 Ovo je **indeks postojećih mjerenja**, ne završna potvrda da je svih 37 dizajna usklađeno. Popis dolazi iz `Profile.TEMPLATE_CHOICES` u `blog/models.py` i [Phase 75 inventara](phase75_mobile_inventory_and_test_matrix.md). Svaki red upućuje na relevantne pojedinačne ili obiteljske izvještaje; raniji audit i naknadni popravci moraju se čitati zajedno. Pri ovom osvježenju indeksa nije ponavljan browser audit niti je mijenjan aplikacijski kod ili korisnički sadržaj.
 
 | # | Registrirani ključ | Postojeći dokaz za blog/detail ili zadnji popravak |

@@ -2108,6 +2108,8 @@ body { background-color:#111; color:#fff; --analytics-stat-card-bg: rgba(255,255
 a { color:#4da3ff; text-decoration:none; }
 /* Phase 100e: the like button shares the theme's readable action-link color. */
 .post-actions .btn-link { color:#4da3ff; }
+/* Phase 100f: Bootstrap's muted helper color assumes a light background. */
+[id^="comments-"] > .small.text-muted { color:#bbb !important; }
 hr { border-color:#444; }
 .blog-page-title a, .blog-page-title { color:#fff; text-decoration:none; }
 .blog-page-title a:hover { color:#ccc; }
