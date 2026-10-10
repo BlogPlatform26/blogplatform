@@ -1,3 +1,5 @@
+[Phase100j](phase100j_magazin_photo_title_evidence.md) potvrdjuje Magazin fotografski naslov ispod3:1: osam stanja, najnizi uzorkovani omjeri1.44-1.74. Problem sada izmjeren, popravak jos otvoren. Aplikacijski kod nepromijenjen.
+
 [Phase100i](phase100i_editorial_phone_post_headers.md) zatvara uske mobilne naslove Studio/Magazin. Svih 16 aktualnih stanja bez dokumentnog i uzorkovanog lokalnog overflowa; geometrija na 768/1440 nepromijenjena. Fotografski kontrast i desktopne mete ostaju otvoreni.
 
 # Radna matrica dokaza za 37 registriranih dizajna
