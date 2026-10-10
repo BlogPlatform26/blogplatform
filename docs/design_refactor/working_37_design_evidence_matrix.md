@@ -2,6 +2,8 @@
 
 ## Novije provjere — 10. listopada 2026.
 
+[Phase100h](phase100h_studio_action_calendar_contrast.md) zatvara dva Studio P1 nalaza iz 100g: lajk sada 5.53:1, današnji datum 5.86:1. Mobilni naslovi i preostale stavke matrice ostaju otvoreni.
+
 [Phase100g — Studio i Magazin](phase100g_studio_magazin_current_matrix.md) dodaje 16 aktualnih blog/detail prikaza s komentarima i sistemskom fotografijom. Studio ima potvrđen P1 kontrast lajka i današnjeg dana, oba dizajna imaju uske mobilne naslove, a Magazinov naslov preko fotografije ostaje neizmjeren. Ostaje 26 posebnih dizajna bez nove serije; ova dva nisu proglašena potpuno završenima.
 
 Raniji P1 nalazi naslova Simple objava zatvoreni su u [Phase100d](phase100d_simple_post_title_contrast.md), a kontrast gumba za lajk u [Phase100e](phase100e_like_theme_contrast.md) (72 prikaza, 5.34–7.19:1). [Phase100f](phase100f_dark_comment_status_contrast.md) popravlja statusne poruke komentara dark/dark_right na 9.84:1. Povijesni odlomak niže koji navodi otvorene like/title P1 nalaze opisuje stanje prije tih faza. Ove uske provjere ne zamjenjuju završnu matricu: drugih 28 dizajna i potpuna tvornička Default provjera još su otvoreni, kao i preostale touch mete i lokalni overflow.
