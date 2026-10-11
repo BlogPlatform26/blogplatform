@@ -3920,6 +3920,15 @@ html body .blog-page-title a.blog-link {
     }
 }
 
+{% if blog.profile.template == 'vodopad_u_magli' or blog.profile.template == 'planine_u_magli' %}
+/* Phase 100t: keep comment dates legible over translucent and photo surfaces. */
+.comment-item.bp-modern-comment-item .comment-body .comment-time {
+    color: #43513e !important;
+    background-color: #eef0e9;
+    opacity: 1 !important;
+    border-radius: 2px;
+}
+{% endif %}
 {% if blog.profile.template == 'litica_noci' or blog.profile.template == 'podvodna_tisina' %}
 /* Phase 100q: isolate small timestamps from translucent/photo surfaces. */
 @media (min-width: 768px) {

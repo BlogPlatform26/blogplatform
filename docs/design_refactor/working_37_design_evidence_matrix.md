@@ -1,3 +1,5 @@
+[Phase100t](phase100t_vodopad_planine_comment_dates.md) zatvara timestamp P1 Vodopad/Planine: svih32 datuma u16 stanja ima7.35:1 na neprozirnoj lokalnoj podlozi;geometrija i postojeci local overflow identicni100s. Naslovi/komentari/kalendari i druge fotozone jos otvoreni.
+
 [Phase100s](phase100s_vodopad_planine_current_matrix.md) dodaje16 aktualnih stanja Vodopad/Planine s2komentara: timestamp P1 3.42-3.96, uski naslov/comment overflow i tablet kalendari jos otvoreni. Obuhvat15/37 nije15 prolaznih;ostalih22 posebna dizajna trebaju novu matricu. Aplikacija nepromijenjena.
 
 [Phase100r](phase100r_podvodna_photo_bound.md) dodaje analiticku foto-procjenu prvog Podvodna desktop komentara: autor>=4.85,tijelo>=5.10 u provjerenom1440 rasporedu. Izracun koristi stvarni asset i slojeve s marginom; nije izravni rendered-pixel dokaz niti cijela tema prolaz. Aplikacija nepromijenjena.
