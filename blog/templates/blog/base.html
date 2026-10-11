@@ -3921,6 +3921,42 @@ html body .blog-page-title a.blog-link {
 }
 
 {% if blog.profile.template == 'litica_noci' or blog.profile.template == 'podvodna_tisina' %}
+.calendar-scroll-hint {
+    display: none;
+}
+/* Phase 100o: contain the seven-day grid locally on narrow phones. */
+@media (max-width: 767.98px) {
+    .blog-main-left-column .calendar-box {
+        width: 100%;
+        max-width: none;
+        margin-left: 0;
+    }
+    .calendar-scroll-region {
+        max-width: 100%;
+        overflow-x: auto;
+        overscroll-behavior-x: contain;
+        padding: 2px;
+    }
+    .calendar-scroll-region .calendar-weekdays,
+    .calendar-scroll-region .calendar-grid {
+        min-width: 344px;
+        grid-template-columns: repeat(7, minmax(44px, 1fr));
+        gap: 6px;
+    }
+    .calendar-scroll-region .calendar-day-today {
+        transform: none;
+    }
+}
+@media (max-width: 479.98px) {
+    .calendar-scroll-hint {
+        display: block;
+        color: #d5e5ff;
+        background: #010611;
+        font-size: 0.8rem;
+        padding: 4px;
+        margin: 0 0 8px;
+    }
+}
 /* Phase 100n: a full tablet row fits seven 44px calendar targets. */
 @media (min-width: 768px) and (max-width: 991.98px) {
     .blog-main-layout-row > .blog-main-left-column,
