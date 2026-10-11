@@ -1,3 +1,5 @@
+[Phase100p](phase100p_comment_time_contrast_audit.md) potvrduje novi P1 datuma komentara: Litica4.18:1 i Podvodna3.99:1 na768/1440 izvan foto-zone zbog opacity0.78. Mobiteli prolaze11.46-11.95. Prvi Podvodna desktop komentar ostaje fotografski neprovjeren; screenshot koordinatni nesklad onemogucio je pouzdan pikselni dokaz. Aplikacija nepromijenjena; sirova16-state mjerenja spremljena.
+
 [Phase100o](phase100o_litica_podvodna_mobile_calendar.md) zatvara gusti mobilni kalendar Litica/Podvodna: lokalno vodoravno pomicanje cuva sedam dana i 44px mete, svih 32 blog/detail stanja bez dokumentnog overflowa. Tablet/desktop geometrija nepromijenjena. Fotografski kontrasti i preostala matrica ostaju otvoreni.
 
 [Phase100n](phase100n_litica_podvodna_tablet_calendar.md) zatvara tablet kalendar Litica/Podvodna768-991: puni tjedan7x44px bez overflowa; desktop nepromijenjen. Tada potvrdeni gusti mobilni overflow sada je zatvoren u Phase100o.

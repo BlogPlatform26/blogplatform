@@ -1,0 +1,418 @@
+[
+  {
+    "design": "podvodna_tisina",
+    "route": "blog",
+    "width": 320,
+    "comment": 1,
+    "photo": false,
+    "contrast": 11.4595,
+    "bg": [
+      17.9599976,
+      23.839995599999998,
+      36.040000000000006
+    ]
+  },
+  {
+    "design": "podvodna_tisina",
+    "route": "blog",
+    "width": 320,
+    "comment": 2,
+    "photo": false,
+    "contrast": 11.4595,
+    "bg": [
+      17.9599976,
+      23.839995599999998,
+      36.040000000000006
+    ]
+  },
+  {
+    "design": "podvodna_tisina",
+    "route": "detail",
+    "width": 320,
+    "comment": 1,
+    "photo": false,
+    "contrast": 11.4595,
+    "bg": [
+      17.9599976,
+      23.839995599999998,
+      36.040000000000006
+    ]
+  },
+  {
+    "design": "podvodna_tisina",
+    "route": "detail",
+    "width": 320,
+    "comment": 2,
+    "photo": false,
+    "contrast": 11.4595,
+    "bg": [
+      17.9599976,
+      23.839995599999998,
+      36.040000000000006
+    ]
+  },
+  {
+    "design": "podvodna_tisina",
+    "route": "blog",
+    "width": 390,
+    "comment": 1,
+    "photo": false,
+    "contrast": 11.4595,
+    "bg": [
+      17.9599976,
+      23.839995599999998,
+      36.040000000000006
+    ]
+  },
+  {
+    "design": "podvodna_tisina",
+    "route": "blog",
+    "width": 390,
+    "comment": 2,
+    "photo": false,
+    "contrast": 11.4595,
+    "bg": [
+      17.9599976,
+      23.839995599999998,
+      36.040000000000006
+    ]
+  },
+  {
+    "design": "podvodna_tisina",
+    "route": "detail",
+    "width": 390,
+    "comment": 1,
+    "photo": false,
+    "contrast": 11.4595,
+    "bg": [
+      17.9599976,
+      23.839995599999998,
+      36.040000000000006
+    ]
+  },
+  {
+    "design": "podvodna_tisina",
+    "route": "detail",
+    "width": 390,
+    "comment": 2,
+    "photo": false,
+    "contrast": 11.4595,
+    "bg": [
+      17.9599976,
+      23.839995599999998,
+      36.040000000000006
+    ]
+  },
+  {
+    "design": "podvodna_tisina",
+    "route": "blog",
+    "width": 768,
+    "comment": 1,
+    "photo": false,
+    "contrast": 3.9873,
+    "bg": [
+      87.36,
+      90.66,
+      97.92
+    ]
+  },
+  {
+    "design": "podvodna_tisina",
+    "route": "blog",
+    "width": 768,
+    "comment": 2,
+    "photo": false,
+    "contrast": 3.9873,
+    "bg": [
+      87.36,
+      90.66,
+      97.92
+    ]
+  },
+  {
+    "design": "podvodna_tisina",
+    "route": "detail",
+    "width": 768,
+    "comment": 1,
+    "photo": false,
+    "contrast": 3.9873,
+    "bg": [
+      87.36,
+      90.66,
+      97.92
+    ]
+  },
+  {
+    "design": "podvodna_tisina",
+    "route": "detail",
+    "width": 768,
+    "comment": 2,
+    "photo": false,
+    "contrast": 3.9873,
+    "bg": [
+      87.36,
+      90.66,
+      97.92
+    ]
+  },
+  {
+    "design": "podvodna_tisina",
+    "route": "blog",
+    "width": 1440,
+    "comment": 1,
+    "photo": true,
+    "contrast": null,
+    "bg": [
+      87.36,
+      90.66,
+      97.92
+    ]
+  },
+  {
+    "design": "podvodna_tisina",
+    "route": "blog",
+    "width": 1440,
+    "comment": 2,
+    "photo": false,
+    "contrast": 3.9873,
+    "bg": [
+      87.36,
+      90.66,
+      97.92
+    ]
+  },
+  {
+    "design": "podvodna_tisina",
+    "route": "detail",
+    "width": 1440,
+    "comment": 1,
+    "photo": true,
+    "contrast": null,
+    "bg": [
+      87.36,
+      90.66,
+      97.92
+    ]
+  },
+  {
+    "design": "podvodna_tisina",
+    "route": "detail",
+    "width": 1440,
+    "comment": 2,
+    "photo": false,
+    "contrast": 3.9873,
+    "bg": [
+      87.36,
+      90.66,
+      97.92
+    ]
+  },
+  {
+    "design": "litica_noci",
+    "route": "blog",
+    "width": 320,
+    "comment": 1,
+    "photo": false,
+    "contrast": 11.948,
+    "bg": [
+      17.1999948,
+      18.2400072,
+      20.400000000000002
+    ]
+  },
+  {
+    "design": "litica_noci",
+    "route": "blog",
+    "width": 320,
+    "comment": 2,
+    "photo": false,
+    "contrast": 11.948,
+    "bg": [
+      17.1999948,
+      18.2400072,
+      20.400000000000002
+    ]
+  },
+  {
+    "design": "litica_noci",
+    "route": "detail",
+    "width": 320,
+    "comment": 1,
+    "photo": false,
+    "contrast": 11.948,
+    "bg": [
+      17.1999948,
+      18.2400072,
+      20.400000000000002
+    ]
+  },
+  {
+    "design": "litica_noci",
+    "route": "detail",
+    "width": 320,
+    "comment": 2,
+    "photo": false,
+    "contrast": 11.948,
+    "bg": [
+      17.1999948,
+      18.2400072,
+      20.400000000000002
+    ]
+  },
+  {
+    "design": "litica_noci",
+    "route": "blog",
+    "width": 390,
+    "comment": 1,
+    "photo": false,
+    "contrast": 11.948,
+    "bg": [
+      17.1999948,
+      18.2400072,
+      20.400000000000002
+    ]
+  },
+  {
+    "design": "litica_noci",
+    "route": "blog",
+    "width": 390,
+    "comment": 2,
+    "photo": false,
+    "contrast": 11.948,
+    "bg": [
+      17.1999948,
+      18.2400072,
+      20.400000000000002
+    ]
+  },
+  {
+    "design": "litica_noci",
+    "route": "detail",
+    "width": 390,
+    "comment": 1,
+    "photo": false,
+    "contrast": 11.948,
+    "bg": [
+      17.1999948,
+      18.2400072,
+      20.400000000000002
+    ]
+  },
+  {
+    "design": "litica_noci",
+    "route": "detail",
+    "width": 390,
+    "comment": 2,
+    "photo": false,
+    "contrast": 11.948,
+    "bg": [
+      17.1999948,
+      18.2400072,
+      20.400000000000002
+    ]
+  },
+  {
+    "design": "litica_noci",
+    "route": "blog",
+    "width": 768,
+    "comment": 1,
+    "photo": false,
+    "contrast": 4.1824,
+    "bg": [
+      86.7,
+      86.7,
+      86.7
+    ]
+  },
+  {
+    "design": "litica_noci",
+    "route": "blog",
+    "width": 768,
+    "comment": 2,
+    "photo": false,
+    "contrast": 4.1824,
+    "bg": [
+      86.7,
+      86.7,
+      86.7
+    ]
+  },
+  {
+    "design": "litica_noci",
+    "route": "detail",
+    "width": 768,
+    "comment": 1,
+    "photo": false,
+    "contrast": 4.1824,
+    "bg": [
+      86.7,
+      86.7,
+      86.7
+    ]
+  },
+  {
+    "design": "litica_noci",
+    "route": "detail",
+    "width": 768,
+    "comment": 2,
+    "photo": false,
+    "contrast": 4.1824,
+    "bg": [
+      86.7,
+      86.7,
+      86.7
+    ]
+  },
+  {
+    "design": "litica_noci",
+    "route": "blog",
+    "width": 1440,
+    "comment": 1,
+    "photo": false,
+    "contrast": 4.1824,
+    "bg": [
+      86.7,
+      86.7,
+      86.7
+    ]
+  },
+  {
+    "design": "litica_noci",
+    "route": "blog",
+    "width": 1440,
+    "comment": 2,
+    "photo": false,
+    "contrast": 4.1824,
+    "bg": [
+      86.7,
+      86.7,
+      86.7
+    ]
+  },
+  {
+    "design": "litica_noci",
+    "route": "detail",
+    "width": 1440,
+    "comment": 1,
+    "photo": false,
+    "contrast": 4.1824,
+    "bg": [
+      86.7,
+      86.7,
+      86.7
+    ]
+  },
+  {
+    "design": "litica_noci",
+    "route": "detail",
+    "width": 1440,
+    "comment": 2,
+    "photo": false,
+    "contrast": 4.1824,
+    "bg": [
+      86.7,
+      86.7,
+      86.7
+    ]
+  }
+]
