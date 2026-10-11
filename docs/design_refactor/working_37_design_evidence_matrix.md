@@ -1,3 +1,5 @@
+[Phase100n](phase100n_litica_podvodna_tablet_calendar.md) zatvara tablet kalendar Litica/Podvodna768-991: puni tjedan7x44px bez overflowa; desktop nepromijenjen. Novi potvrdeni prioritet: gusti mobilni kalendar320/390 ima dokumentni overflow22-92px i jos trazi popravak.
+
 [Phase100m](phase100m_podvodna_mobile_comment_author.md) zatvara mobilni autor-link P1 Podvodne:13.96:1 umjesto3.95. Tablet/desktop boja nepromijenjena.100l kalendarski overflow i fotografski kontrast ostaju otvoreni.
 
 [Phase100l](phase100l_litica_podvodna_current_matrix.md) dodaje16 aktualnih stanja Litica/Podvodna: mobilni autor komentara Podvodne3.95:1 (P1), oba tablet kalendara+51px grid overflow. Foto-zone ostaju eksplicitno neprovjerene. Preostala24 posebna dizajna trebaju novu seriju;13 obuhvacenih nije13 prolaznih.
