@@ -3921,6 +3921,15 @@ html body .blog-page-title a.blog-link {
 }
 
 {% if blog.profile.template == 'litica_noci' or blog.profile.template == 'podvodna_tisina' %}
+/* Phase 100q: isolate small timestamps from translucent/photo surfaces. */
+@media (min-width: 768px) {
+    .comment-item.bp-modern-comment-item .comment-body .comment-time {
+        color: #d5e5ff !important;
+        background-color: #010611;
+        opacity: 1 !important;
+        border-radius: 2px;
+    }
+}
 .calendar-scroll-hint {
     display: none;
 }

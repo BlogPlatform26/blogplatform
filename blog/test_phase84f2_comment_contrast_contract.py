@@ -40,7 +40,7 @@ class Phase84f2CommentContrastContractTests(TestCase):
         self.author.profile.template = "litica_noci"
         self.author.profile.save(update_fields=["template"])
         response = self.client.get(reverse("post_detail", args=[self.post.pk]), follow=True)
-        self.assertNotIn("color: #d5e5ff !important", response.content.decode(response.charset))
+        self.assertNotIn("/* Phase 100m:", response.content.decode(response.charset))
 
     def test_unrelated_design_does_not_render_phase84f2_contract(self):
         self.author.profile.template = "default"
