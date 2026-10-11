@@ -1,0 +1,1336 @@
+[
+  {
+    "mode": "blog",
+    "data": {
+      "items": [
+        {
+          "ancestors": [
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "",
+              "image": "none",
+              "opacity": "1",
+              "tag": "A"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "comment-author",
+              "image": "none",
+              "opacity": "1",
+              "tag": "STRONG"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "comment-header",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(255, 255, 255, 0.34)",
+              "cls": "comment-body bp-modern-comment-body flex-grow-1",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "comment-item bp-modern-comment-item mb-3 d-flex gap-2",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "mt-5",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "mb-4 blog-post-entry blog-post-card",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "page-top-align",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "container page-top-align blog-posts-shell",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "col-md-6 blog-main-content-column ",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "row align-items-start gx-4 home-main-row blog-main-layout-row ",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "container-fluid mt-3",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgb(1, 6, 17)",
+              "cls": "blog-cursor-theme blog-cursor-default blog-cursor-effect-none",
+              "image": "none",
+              "opacity": "1",
+              "tag": "BODY"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "",
+              "image": "none",
+              "opacity": "1",
+              "tag": "HTML"
+            }
+          ],
+          "color": "rgb(213, 229, 255)",
+          "opacity": "1",
+          "rect": {
+            "h": 18,
+            "w": 112.09375,
+            "x": 498.6666870117187,
+            "y": 813.96875
+          },
+          "selector": "",
+          "text": "qa100e_reader"
+        },
+        {
+          "ancestors": [
+            {
+              "bg": "rgb(1, 6, 17)",
+              "cls": "comment-time",
+              "image": "none",
+              "opacity": "1",
+              "tag": "SPAN"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "comment-header",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(255, 255, 255, 0.34)",
+              "cls": "comment-body bp-modern-comment-body flex-grow-1",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "comment-item bp-modern-comment-item mb-3 d-flex gap-2",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "mt-5",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "mb-4 blog-post-entry blog-post-card",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "page-top-align",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "container page-top-align blog-posts-shell",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "col-md-6 blog-main-content-column ",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "row align-items-start gx-4 home-main-row blog-main-layout-row ",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "container-fluid mt-3",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgb(1, 6, 17)",
+              "cls": "blog-cursor-theme blog-cursor-default blog-cursor-effect-none",
+              "image": "none",
+              "opacity": "1",
+              "tag": "BODY"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "",
+              "image": "none",
+              "opacity": "1",
+              "tag": "HTML"
+            }
+          ],
+          "color": "rgb(213, 229, 255)",
+          "opacity": "1",
+          "rect": {
+            "h": 22.072917938232425,
+            "w": 114.60417175292967,
+            "x": 618.7604370117188,
+            "y": 812.6354370117188
+          },
+          "selector": "comment-time",
+          "text": "10.10.2026 21:58"
+        },
+        {
+          "ancestors": [
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "comment-text",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(255, 255, 255, 0.34)",
+              "cls": "comment-body bp-modern-comment-body flex-grow-1",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "comment-item bp-modern-comment-item mb-3 d-flex gap-2",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "mt-5",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "mb-4 blog-post-entry blog-post-card",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "page-top-align",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "container page-top-align blog-posts-shell",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "col-md-6 blog-main-content-column ",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "row align-items-start gx-4 home-main-row blog-main-layout-row ",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "container-fluid mt-3",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgb(1, 6, 17)",
+              "cls": "blog-cursor-theme blog-cursor-default blog-cursor-effect-none",
+              "image": "none",
+              "opacity": "1",
+              "tag": "BODY"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "",
+              "image": "none",
+              "opacity": "1",
+              "tag": "HTML"
+            }
+          ],
+          "color": "rgb(213, 229, 255)",
+          "opacity": "1",
+          "rect": {
+            "h": 34.79166793823242,
+            "w": 403.3333435058594,
+            "x": 498.6666870117187,
+            "y": 839.3021240234375
+          },
+          "selector": "comment-text",
+          "text": "A synthetic reader comment with enough words to wrap onto several lines on a narrow screen."
+        },
+        {
+          "ancestors": [
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "",
+              "image": "none",
+              "opacity": "1",
+              "tag": "A"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "comment-author",
+              "image": "none",
+              "opacity": "1",
+              "tag": "STRONG"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "comment-header",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(255, 255, 255, 0.34)",
+              "cls": "comment-body bp-modern-comment-body flex-grow-1",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "comment-item bp-modern-comment-item mb-3 d-flex gap-2",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "mt-5",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "mb-4 blog-post-entry blog-post-card",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "page-top-align",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "container page-top-align blog-posts-shell",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "col-md-6 blog-main-content-column ",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "row align-items-start gx-4 home-main-row blog-main-layout-row ",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "container-fluid mt-3",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgb(1, 6, 17)",
+              "cls": "blog-cursor-theme blog-cursor-default blog-cursor-effect-none",
+              "image": "none",
+              "opacity": "1",
+              "tag": "BODY"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "",
+              "image": "none",
+              "opacity": "1",
+              "tag": "HTML"
+            }
+          ],
+          "color": "rgb(213, 229, 255)",
+          "opacity": "1",
+          "rect": {
+            "h": 18,
+            "w": 185.84375,
+            "x": 498.6666870117187,
+            "y": 916.09375
+          },
+          "selector": "",
+          "text": "qa100l_podvodna_tisina"
+        },
+        {
+          "ancestors": [
+            {
+              "bg": "rgb(1, 6, 17)",
+              "cls": "comment-time",
+              "image": "none",
+              "opacity": "1",
+              "tag": "SPAN"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "comment-header",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(255, 255, 255, 0.34)",
+              "cls": "comment-body bp-modern-comment-body flex-grow-1",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "comment-item bp-modern-comment-item mb-3 d-flex gap-2",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "mt-5",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "mb-4 blog-post-entry blog-post-card",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "page-top-align",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "container page-top-align blog-posts-shell",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "col-md-6 blog-main-content-column ",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "row align-items-start gx-4 home-main-row blog-main-layout-row ",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "container-fluid mt-3",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgb(1, 6, 17)",
+              "cls": "blog-cursor-theme blog-cursor-default blog-cursor-effect-none",
+              "image": "none",
+              "opacity": "1",
+              "tag": "BODY"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "",
+              "image": "none",
+              "opacity": "1",
+              "tag": "HTML"
+            }
+          ],
+          "color": "rgb(213, 229, 255)",
+          "opacity": "1",
+          "rect": {
+            "h": 22.072917938232425,
+            "w": 114.60417175292967,
+            "x": 692.5104370117188,
+            "y": 914.7604370117188
+          },
+          "selector": "comment-time",
+          "text": "10.10.2026 21:58"
+        },
+        {
+          "ancestors": [
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "comment-text",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(255, 255, 255, 0.34)",
+              "cls": "comment-body bp-modern-comment-body flex-grow-1",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "comment-item bp-modern-comment-item mb-3 d-flex gap-2",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "mt-5",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "mb-4 blog-post-entry blog-post-card",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "page-top-align",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "container page-top-align blog-posts-shell",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "col-md-6 blog-main-content-column ",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "row align-items-start gx-4 home-main-row blog-main-layout-row ",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "container-fluid mt-3",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgb(1, 6, 17)",
+              "cls": "blog-cursor-theme blog-cursor-default blog-cursor-effect-none",
+              "image": "none",
+              "opacity": "1",
+              "tag": "BODY"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "",
+              "image": "none",
+              "opacity": "1",
+              "tag": "HTML"
+            }
+          ],
+          "color": "rgb(213, 229, 255)",
+          "opacity": "1",
+          "rect": {
+            "h": 17.39583396911621,
+            "w": 403.3333435058594,
+            "x": 498.6666870117187,
+            "y": 941.4271240234376
+          },
+          "selector": "comment-text",
+          "text": "A synthetic author reply for contrast verification."
+        }
+      ],
+      "overflow": -15,
+      "photo": "864px",
+      "scrollY": 0,
+      "url": "http://127.0.0.1:8017/blog/qa100l_podvodna_tisina/",
+      "width": 1440
+    },
+    "surface": {
+      "bg": "linear-gradient(rgba(1, 6, 17, 0) 0%, rgba(1, 6, 17, 0.04) 48%, rgba(1, 6, 17, 0.18) 64%, rgba(1, 6, 17, 0.52) 80%, rgb(1, 6, 17) 100%), url(\"http://127.0.0.1:8017/static/blog/images/design-backgrounds/podvodna_tisina.png\")",
+      "blend": "normal, normal",
+      "body": {
+        "bottom": 1356.6875,
+        "height": 1356.6875,
+        "left": 0,
+        "right": 1424.666748046875,
+        "top": 0,
+        "width": 1424.666748046875,
+        "x": 0,
+        "y": 0
+      },
+      "filter": "none",
+      "height": "864px",
+      "left": "0px",
+      "offset": "50% 0%, 50% -40px",
+      "opacity": "1",
+      "overflow": 0,
+      "position": "absolute",
+      "size": "100% 100%, 100% auto",
+      "top": "0px",
+      "transform": "none",
+      "width": "1424.67px"
+    }
+  },
+  {
+    "mode": "detail",
+    "data": {
+      "items": [
+        {
+          "ancestors": [
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "",
+              "image": "none",
+              "opacity": "1",
+              "tag": "A"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "comment-author",
+              "image": "none",
+              "opacity": "1",
+              "tag": "STRONG"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "comment-header",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(255, 255, 255, 0.34)",
+              "cls": "comment-body bp-modern-comment-body flex-grow-1",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "comment-item bp-modern-comment-item mb-3 d-flex gap-2",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "mt-5",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "mb-4 blog-post-entry blog-post-card",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "page-top-align",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "container page-top-align blog-posts-shell",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "col-md-6 blog-main-content-column ",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "row align-items-start gx-4 home-main-row blog-main-layout-row ",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "container-fluid mt-3",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgb(1, 6, 17)",
+              "cls": "blog-cursor-theme blog-cursor-default blog-cursor-effect-none",
+              "image": "none",
+              "opacity": "1",
+              "tag": "BODY"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "",
+              "image": "none",
+              "opacity": "1",
+              "tag": "HTML"
+            }
+          ],
+          "color": "rgb(213, 229, 255)",
+          "opacity": "1",
+          "rect": {
+            "h": 18,
+            "w": 112.09375,
+            "x": 498.6666870117187,
+            "y": 813.96875
+          },
+          "selector": "",
+          "text": "qa100e_reader"
+        },
+        {
+          "ancestors": [
+            {
+              "bg": "rgb(1, 6, 17)",
+              "cls": "comment-time",
+              "image": "none",
+              "opacity": "1",
+              "tag": "SPAN"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "comment-header",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(255, 255, 255, 0.34)",
+              "cls": "comment-body bp-modern-comment-body flex-grow-1",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "comment-item bp-modern-comment-item mb-3 d-flex gap-2",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "mt-5",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "mb-4 blog-post-entry blog-post-card",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "page-top-align",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "container page-top-align blog-posts-shell",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "col-md-6 blog-main-content-column ",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "row align-items-start gx-4 home-main-row blog-main-layout-row ",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "container-fluid mt-3",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgb(1, 6, 17)",
+              "cls": "blog-cursor-theme blog-cursor-default blog-cursor-effect-none",
+              "image": "none",
+              "opacity": "1",
+              "tag": "BODY"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "",
+              "image": "none",
+              "opacity": "1",
+              "tag": "HTML"
+            }
+          ],
+          "color": "rgb(213, 229, 255)",
+          "opacity": "1",
+          "rect": {
+            "h": 22.072917938232425,
+            "w": 114.60417175292967,
+            "x": 618.7604370117188,
+            "y": 812.6354370117188
+          },
+          "selector": "comment-time",
+          "text": "10.10.2026 21:58"
+        },
+        {
+          "ancestors": [
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "comment-text",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(255, 255, 255, 0.34)",
+              "cls": "comment-body bp-modern-comment-body flex-grow-1",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "comment-item bp-modern-comment-item mb-3 d-flex gap-2",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "mt-5",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "mb-4 blog-post-entry blog-post-card",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "page-top-align",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "container page-top-align blog-posts-shell",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "col-md-6 blog-main-content-column ",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "row align-items-start gx-4 home-main-row blog-main-layout-row ",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "container-fluid mt-3",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgb(1, 6, 17)",
+              "cls": "blog-cursor-theme blog-cursor-default blog-cursor-effect-none",
+              "image": "none",
+              "opacity": "1",
+              "tag": "BODY"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "",
+              "image": "none",
+              "opacity": "1",
+              "tag": "HTML"
+            }
+          ],
+          "color": "rgb(213, 229, 255)",
+          "opacity": "1",
+          "rect": {
+            "h": 34.79166793823242,
+            "w": 403.3333435058594,
+            "x": 498.6666870117187,
+            "y": 839.3021240234375
+          },
+          "selector": "comment-text",
+          "text": "A synthetic reader comment with enough words to wrap onto several lines on a narrow screen."
+        },
+        {
+          "ancestors": [
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "",
+              "image": "none",
+              "opacity": "1",
+              "tag": "A"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "comment-author",
+              "image": "none",
+              "opacity": "1",
+              "tag": "STRONG"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "comment-header",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(255, 255, 255, 0.34)",
+              "cls": "comment-body bp-modern-comment-body flex-grow-1",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "comment-item bp-modern-comment-item mb-3 d-flex gap-2",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "mt-5",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "mb-4 blog-post-entry blog-post-card",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "page-top-align",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "container page-top-align blog-posts-shell",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "col-md-6 blog-main-content-column ",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "row align-items-start gx-4 home-main-row blog-main-layout-row ",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "container-fluid mt-3",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgb(1, 6, 17)",
+              "cls": "blog-cursor-theme blog-cursor-default blog-cursor-effect-none",
+              "image": "none",
+              "opacity": "1",
+              "tag": "BODY"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "",
+              "image": "none",
+              "opacity": "1",
+              "tag": "HTML"
+            }
+          ],
+          "color": "rgb(213, 229, 255)",
+          "opacity": "1",
+          "rect": {
+            "h": 18,
+            "w": 185.84375,
+            "x": 498.6666870117187,
+            "y": 916.09375
+          },
+          "selector": "",
+          "text": "qa100l_podvodna_tisina"
+        },
+        {
+          "ancestors": [
+            {
+              "bg": "rgb(1, 6, 17)",
+              "cls": "comment-time",
+              "image": "none",
+              "opacity": "1",
+              "tag": "SPAN"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "comment-header",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(255, 255, 255, 0.34)",
+              "cls": "comment-body bp-modern-comment-body flex-grow-1",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "comment-item bp-modern-comment-item mb-3 d-flex gap-2",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "mt-5",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "mb-4 blog-post-entry blog-post-card",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "page-top-align",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "container page-top-align blog-posts-shell",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "col-md-6 blog-main-content-column ",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "row align-items-start gx-4 home-main-row blog-main-layout-row ",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "container-fluid mt-3",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgb(1, 6, 17)",
+              "cls": "blog-cursor-theme blog-cursor-default blog-cursor-effect-none",
+              "image": "none",
+              "opacity": "1",
+              "tag": "BODY"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "",
+              "image": "none",
+              "opacity": "1",
+              "tag": "HTML"
+            }
+          ],
+          "color": "rgb(213, 229, 255)",
+          "opacity": "1",
+          "rect": {
+            "h": 22.072917938232425,
+            "w": 114.60417175292967,
+            "x": 692.5104370117188,
+            "y": 914.7604370117188
+          },
+          "selector": "comment-time",
+          "text": "10.10.2026 21:58"
+        },
+        {
+          "ancestors": [
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "comment-text",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(255, 255, 255, 0.34)",
+              "cls": "comment-body bp-modern-comment-body flex-grow-1",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "comment-item bp-modern-comment-item mb-3 d-flex gap-2",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "mt-5",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "mb-4 blog-post-entry blog-post-card",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "page-top-align",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "container page-top-align blog-posts-shell",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "col-md-6 blog-main-content-column ",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "row align-items-start gx-4 home-main-row blog-main-layout-row ",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "container-fluid mt-3",
+              "image": "none",
+              "opacity": "1",
+              "tag": "DIV"
+            },
+            {
+              "bg": "rgb(1, 6, 17)",
+              "cls": "blog-cursor-theme blog-cursor-default blog-cursor-effect-none",
+              "image": "none",
+              "opacity": "1",
+              "tag": "BODY"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "cls": "",
+              "image": "none",
+              "opacity": "1",
+              "tag": "HTML"
+            }
+          ],
+          "color": "rgb(213, 229, 255)",
+          "opacity": "1",
+          "rect": {
+            "h": 17.39583396911621,
+            "w": 403.3333435058594,
+            "x": 498.6666870117187,
+            "y": 941.4271240234376
+          },
+          "selector": "comment-text",
+          "text": "A synthetic author reply for contrast verification."
+        }
+      ],
+      "overflow": -15,
+      "photo": "864px",
+      "scrollY": 0,
+      "url": "http://127.0.0.1:8017/post/14/a-longer-editorial-story-for-mobile-and-desktop-verification/",
+      "width": 1440
+    },
+    "surface": {
+      "bg": "linear-gradient(rgba(1, 6, 17, 0) 0%, rgba(1, 6, 17, 0.04) 48%, rgba(1, 6, 17, 0.18) 64%, rgba(1, 6, 17, 0.52) 80%, rgb(1, 6, 17) 100%), url(\"http://127.0.0.1:8017/static/blog/images/design-backgrounds/podvodna_tisina.png\")",
+      "blend": "normal, normal",
+      "body": {
+        "bottom": 1356.6875,
+        "height": 1356.6875,
+        "left": 0,
+        "right": 1424.666748046875,
+        "top": 0,
+        "width": 1424.666748046875,
+        "x": 0,
+        "y": 0
+      },
+      "filter": "none",
+      "height": "864px",
+      "left": "0px",
+      "offset": "50% 0%, 50% -40px",
+      "opacity": "1",
+      "overflow": 0,
+      "position": "absolute",
+      "size": "100% 100%, 100% auto",
+      "top": "0px",
+      "transform": "none",
+      "width": "1424.67px"
+    }
+  }
+]

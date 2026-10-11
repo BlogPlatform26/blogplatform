@@ -1,0 +1,101 @@
+{
+  "asset_sha256": "42260c507af839837f772b2c10d5f67930fe5d9490bc820eab251de565a6a9f8",
+  "size": [
+    1536,
+    1024
+  ],
+  "results": [
+    {
+      "mode": "blog",
+      "element": "author",
+      "y": 813.96875,
+      "source_row_start": 904,
+      "source_max": [
+        61,
+        62,
+        67
+      ],
+      "padded_max": [
+        77,
+        78,
+        83
+      ],
+      "gradient_min_alpha": 0.8610243055555554,
+      "background_upper": [
+        94.33102083333334,
+        97.264125,
+        103.97378125
+      ],
+      "contrast_lower": 4.848922232336679
+    },
+    {
+      "mode": "blog",
+      "element": "body",
+      "y": 839.3021240234375,
+      "source_row_start": 932,
+      "source_max": [
+        61,
+        62,
+        67
+      ],
+      "padded_max": [
+        77,
+        78,
+        83
+      ],
+      "gradient_min_alpha": 0.9313947889539931,
+      "background_upper": [
+        90.80123738606771,
+        93.92011962890625,
+        100.90844299316407
+      ],
+      "contrast_lower": 5.1046564468202575
+    },
+    {
+      "mode": "detail",
+      "element": "author",
+      "y": 813.96875,
+      "source_row_start": 904,
+      "source_max": [
+        61,
+        62,
+        67
+      ],
+      "padded_max": [
+        77,
+        78,
+        83
+      ],
+      "gradient_min_alpha": 0.8610243055555554,
+      "background_upper": [
+        94.33102083333334,
+        97.264125,
+        103.97378125
+      ],
+      "contrast_lower": 4.848922232336679
+    },
+    {
+      "mode": "detail",
+      "element": "body",
+      "y": 839.3021240234375,
+      "source_row_start": 932,
+      "source_max": [
+        61,
+        62,
+        67
+      ],
+      "padded_max": [
+        77,
+        78,
+        83
+      ],
+      "gradient_min_alpha": 0.9313947889539931,
+      "background_upper": [
+        90.80123738606771,
+        93.92011962890625,
+        100.90844299316407
+      ],
+      "contrast_lower": 5.1046564468202575
+    }
+  ]
+}
