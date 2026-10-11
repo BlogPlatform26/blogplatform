@@ -27,13 +27,15 @@ class Phase84f2CommentContrastContractTests(TestCase):
             self.assertIn('[id^="comments-"] > .small.text-muted', content)
             self.assertIn("#b8c9e5", content)
 
-    def test_podvodna_renders_desktop_author_override_only(self):
+    def test_podvodna_renders_author_override_at_all_widths(self):
         self.author.profile.template = "podvodna_tisina"
         self.author.profile.save(update_fields=["template"])
         response = self.client.get(reverse("post_detail", args=[self.post.pk]), follow=True)
         content = response.content.decode(response.charset)
-        self.assertIn("@media (min-width: 768px)", content)
-        self.assertIn("color: #d5e5ff !important", content)
+        author_contract = content.split("/* Phase 100m:", 1)[1].split("</style>", 1)[0]
+        self.assertNotIn("@media", author_contract)
+        self.assertIn(".comment-author a", author_contract)
+        self.assertIn("color: #d5e5ff !important", author_contract)
 
         self.author.profile.template = "litica_noci"
         self.author.profile.save(update_fields=["template"])

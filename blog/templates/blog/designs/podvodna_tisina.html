@@ -381,10 +381,9 @@
         color: #b8c9e5 !important;
     }
 
-    @media (min-width: 768px) {
-        .comment-author a {
-            color: #d5e5ff !important;
-        }
+    /* Phase 100m: use the theme author color on mobile comment surfaces too. */
+    .comment-author a {
+        color: #d5e5ff !important;
     }
     </style>
     {% include "blog/components/blog_posts.html" %}
