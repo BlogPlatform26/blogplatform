@@ -1,3 +1,5 @@
+[Phase100s](phase100s_vodopad_planine_current_matrix.md) dodaje16 aktualnih stanja Vodopad/Planine s2komentara: timestamp P1 3.42-3.96, uski naslov/comment overflow i tablet kalendari jos otvoreni. Obuhvat15/37 nije15 prolaznih;ostalih22 posebna dizajna trebaju novu matricu. Aplikacija nepromijenjena.
+
 [Phase100r](phase100r_podvodna_photo_bound.md) dodaje analiticku foto-procjenu prvog Podvodna desktop komentara: autor>=4.85,tijelo>=5.10 u provjerenom1440 rasporedu. Izracun koristi stvarni asset i slojeve s marginom; nije izravni rendered-pixel dokaz niti cijela tema prolaz. Aplikacija nepromijenjena.
 
 [Phase100q](phase100q_comment_time_surface.md) zatvara P1 datuma komentara Litica/Podvodna na768/1440: lokalna neprozirna podloga daje15.92:1 i preko fotografije, geometrija svih komentara u16 stanja ista. Mobilni datumi nepromijenjeni. Ostali fotografski kontrasti jos otvoreni.
