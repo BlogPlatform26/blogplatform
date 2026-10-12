@@ -3921,6 +3921,20 @@ html body .blog-page-title a.blog-link {
 }
 
 {% if blog.profile.template == 'vodopad_u_magli' or blog.profile.template == 'planine_u_magli' %}
+/* Phase 100u: give phone titles a full row above the date. */
+@media (max-width: 575.98px) {
+    .blog-post-header {
+        flex-direction: column;
+    }
+    .blog-post-header > :first-child {
+        width: 100%;
+        overflow-wrap: anywhere;
+    }
+    .blog-post-header > .blog-date-shell {
+        margin-left: 0 !important;
+        max-width: 100%;
+    }
+}
 /* Phase 100t: keep comment dates legible over translucent and photo surfaces. */
 .comment-item.bp-modern-comment-item .comment-body .comment-time {
     color: #43513e !important;
