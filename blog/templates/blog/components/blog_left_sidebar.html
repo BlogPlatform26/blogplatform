@@ -85,7 +85,7 @@
             <a href="{{ next_month_url }}" class="calendar-month-nav-link" aria-label="Sljedeći mjesec">&#8250;</a>
         </div>
 
-        {% if blog.profile.template == 'litica_noci' or blog.profile.template == 'podvodna_tisina' %}
+        {% if blog.profile.template == 'litica_noci' or blog.profile.template == 'podvodna_tisina' or blog.profile.template == 'vodopad_u_magli' or blog.profile.template == 'planine_u_magli' %}
         <p class="calendar-scroll-hint">Pomaknite kalendar vodoravno za ostale dane.</p>
         <div class="calendar-scroll-region" role="region" aria-label="Dani kalendara" tabindex="0">
         {% endif %}
@@ -122,7 +122,7 @@
             {% endfor %}
         {% endfor %}
         </div>
-        {% if blog.profile.template == 'litica_noci' or blog.profile.template == 'podvodna_tisina' %}
+        {% if blog.profile.template == 'litica_noci' or blog.profile.template == 'podvodna_tisina' or blog.profile.template == 'vodopad_u_magli' or blog.profile.template == 'planine_u_magli' %}
         </div>
         {% endif %}
     </div>

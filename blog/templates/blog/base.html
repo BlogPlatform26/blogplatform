@@ -3959,6 +3959,9 @@ html body .blog-page-title a.blog-link {
         border-radius: 2px;
     }
 }
+{% endif %}
+{% if blog.profile.template == 'litica_noci' or blog.profile.template == 'podvodna_tisina' or blog.profile.template == 'vodopad_u_magli' or blog.profile.template == 'planine_u_magli' %}
+/* Phase 100w: share proven calendar capacity with Vodopad/Planine. */
 .calendar-scroll-hint {
     display: none;
 }
@@ -4012,6 +4015,13 @@ html body .blog-page-title a.blog-link {
     .calendar-grid .calendar-day-today {
         transform: none;
     }
+}
+{% endif %}
+
+{% if blog.profile.template == 'vodopad_u_magli' or blog.profile.template == 'planine_u_magli' %}
+.calendar-scroll-hint {
+    color: #43513e;
+    background: #eef0e9;
 }
 {% endif %}
 
