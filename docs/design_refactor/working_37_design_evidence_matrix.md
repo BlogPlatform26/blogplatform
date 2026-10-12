@@ -74,7 +74,9 @@ Ovo je **indeks postojećih mjerenja**, ne završna potvrda da je svih 37 dizajn
 | 36 | `mjesecev_ples` | [94c fotografski kontrast](phase94c_mjesecev_photo_contrast.md), [96c mobilni kalendar](phase96c_mjesecev_mobile_calendar_touch.md), [97a mobilni post](phase97a_mjesecev_mobile_post_layout.md) |
 | 37 | `asfaltni_plamen` | [95c3 post](phase95c3_asfaltni_post_contrast.md), [95c4 komentar](phase95c4_asfaltni_comment_contrast.md), [95c5 sidebar](phase95c5_asfaltni_sidebar_contrast.md), [95c6 mobilni post](phase95c6_asfaltni_mobile_post_layout.md), [96d mobilni kalendar](phase96d_asfaltni_mobile_calendar_touch.md) |
 
-## Aktualni status nakon Phase100u
+## Aktualni status nakon Phase100v
+
+[100v](phase100v_vodopad_planine_comment_wrap.md) zatvara lokalni preljev pojedinacne rijeci komentara Vodopada/Planina na mobitelu. Kalendari i druge navedene provjere ostaju otvoreni.
 
 Ovaj indeks nije postotak dovrsenosti projekta. Aktualnim serijama obuhvaceno je 15/37 kljuceva, ali nisu svi dobili zavrsni prolaz. Preostala 22 imaju ranije radove, a cekaju aktualnu verifikaciju. [Preostali opseg](remaining_verification_scope.md) odvaja otvorene nalaze od dovrsenih zahvata. [100u](phase100u_vodopad_planine_phone_titles.md) zatvara mobilne post-naslove Vodopada/Planina; 100t njihove datume komentara. Povijesni P1 navodi za Simple naslove i zajednicki like iz 100a zatvoreni su u 100d/e.
 

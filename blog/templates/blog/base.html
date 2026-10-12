@@ -3923,6 +3923,12 @@ html body .blog-page-title a.blog-link {
 {% if blog.profile.template == 'vodopad_u_magli' or blog.profile.template == 'planine_u_magli' %}
 /* Phase 100u: give phone titles a full row above the date. */
 @media (max-width: 575.98px) {
+    /* Phase 100v: allow an individual long comment word to fit its column. */
+    .comment-body .comment-text .bp-comment-word {
+        max-width: 100%;
+        white-space: normal !important;
+        overflow-wrap: anywhere !important;
+    }
     .blog-post-header {
         flex-direction: column;
     }
