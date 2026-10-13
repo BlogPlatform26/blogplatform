@@ -3987,6 +3987,14 @@ html body .blog-box-title {
     border-radius: 2px;
 }
 {% endif %}
+{% if blog.profile.template == 'simple_pattern' or blog.profile.template == 'simple_image' or blog.profile.template == 'simple_retro' or blog.profile.template == 'magazin' %}
+/* Phase 101g: retain theme timestamp ink without the shared tablet/desktop fade. */
+@media (min-width: 768px) {
+    .comment-item.bp-modern-comment-item .comment-body .comment-time {
+        opacity: 1 !important;
+    }
+}
+{% endif %}
 {% if blog.profile.template == 'nebeski_mir' and blog_preferences.active_design_customization.body_text_color == '#72788a' %}
 @media (max-width: 575.98px) {
     .blog-rich-content { color: #475569 !important; }
