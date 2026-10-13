@@ -74,7 +74,9 @@ Ovo je **indeks postojećih mjerenja**, ne završna potvrda da je svih 37 dizajn
 | 36 | `mjesecev_ples` | [94c fotografski kontrast](phase94c_mjesecev_photo_contrast.md), [96c mobilni kalendar](phase96c_mjesecev_mobile_calendar_touch.md), [97a mobilni post](phase97a_mjesecev_mobile_post_layout.md) |
 | 37 | `asfaltni_plamen` | [95c3 post](phase95c3_asfaltni_post_contrast.md), [95c4 komentar](phase95c4_asfaltni_comment_contrast.md), [95c5 sidebar](phase95c5_asfaltni_sidebar_contrast.md), [95c6 mobilni post](phase95c6_asfaltni_mobile_post_layout.md), [96d mobilni kalendar](phase96d_asfaltni_mobile_calendar_touch.md) |
 
-## Aktualni status nakon Phase100v
+## Aktualni status nakon Phase100y
+
+[100y](phase100y_nebeski_svemirski_current_matrix.md) dodaje aktualnih16 stanja Nebeskog mira i Svemirskog horizonta:17/37 obuhvacenih, ne17 prolaznih. Dvadeset posebnih kljuceva jos ceka aktualnu seriju. Novi potvrdeni nalazi i preostali opseg nalaze se u izvjestaju i remaining_verification_scope.md; brojevi u starijim odlomcima su povijesni.
 
 [100v](phase100v_vodopad_planine_comment_wrap.md) zatvara lokalni preljev pojedinacne rijeci komentara Vodopada/Planina na mobitelu. Kalendari i druge navedene provjere ostaju otvoreni.
 
