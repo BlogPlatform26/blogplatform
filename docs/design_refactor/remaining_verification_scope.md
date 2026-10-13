@@ -22,3 +22,5 @@ Implementation gates remain isolated fixtures, browser before/after, safe naviga
 Next: measure pale month/archive labels observed in101c, then remaining18 current theme series. Do not infer a total percentage from the count of currently verified designs.
 
 Phase101e evidence correction: final contrast evidence must use actual -webkit-text-fill-color where present, not color alone. Reconcile prior passes where inherited fill differs. Iznad factory month/archive/arrow fill corrected and verified8.190:1.
+
+Phase101f targeted actual-fill reconciliation covers152 states of19 keys; see phase101f_fill_reconciliation.md for remaining small date/weekday/header findings. Nebeski subtitle2.543 confirmed; Planine desktop actual5.009 still passes. This does not complete the broader matrix.
