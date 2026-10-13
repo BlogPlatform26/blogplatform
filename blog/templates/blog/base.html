@@ -3920,7 +3920,7 @@ html body .blog-page-title a.blog-link {
     }
 }
 
-{% if blog.profile.template == 'vodopad_u_magli' or blog.profile.template == 'planine_u_magli' or blog.profile.template == 'nebeski_mir' or blog.profile.template == 'svemirski_horizont' %}
+{% if blog.profile.template == 'vodopad_u_magli' or blog.profile.template == 'planine_u_magli' or blog.profile.template == 'nebeski_mir' or blog.profile.template == 'svemirski_horizont' or blog.profile.template == 'zlatni_horizont' or blog.profile.template == 'iznad_oblaka' %}
 /* Phase 100u/100z: give phone titles a full row above the date. */
 @media (max-width: 575.98px) {
     /* Phase 100v: allow an individual long comment word to fit its column. */
@@ -3953,6 +3953,25 @@ html body .blog-page-title a.blog-link {
     }
 }
 {% endif %}
+{% if blog.profile.template == 'zlatni_horizont' %}
+/* Phase 101c: warm date ink on a photo-independent local surface. */
+@media (min-width: 768px) {
+    .comment-item.bp-modern-comment-item .comment-body .comment-time {
+        color: #f0d6bd !important;
+        background-color: #1a1009;
+        opacity: 1 !important;
+        border-radius: 2px;
+    }
+}
+{% endif %}
+{% if blog.profile.template == 'iznad_oblaka' %}
+.comment-item.bp-modern-comment-item .comment-body .comment-time {
+    color: #514956 !important;
+    background-color: #fff7fc;
+    opacity: 1 !important;
+    border-radius: 2px;
+}
+{% endif %}
 {% if blog.profile.template == 'nebeski_mir' and blog_preferences.active_design_customization.body_text_color == '#72788a' %}
 @media (max-width: 575.98px) {
     .blog-rich-content { color: #475569 !important; }
@@ -3978,7 +3997,7 @@ html body .blog-page-title a.blog-link {
     }
 }
 {% endif %}
-{% if blog.profile.template == 'litica_noci' or blog.profile.template == 'podvodna_tisina' or blog.profile.template == 'vodopad_u_magli' or blog.profile.template == 'planine_u_magli' or blog.profile.template == 'nebeski_mir' or blog.profile.template == 'svemirski_horizont' %}
+{% if blog.profile.template == 'litica_noci' or blog.profile.template == 'podvodna_tisina' or blog.profile.template == 'vodopad_u_magli' or blog.profile.template == 'planine_u_magli' or blog.profile.template == 'nebeski_mir' or blog.profile.template == 'svemirski_horizont' or blog.profile.template == 'zlatni_horizont' or blog.profile.template == 'iznad_oblaka' %}
 /* Phase 100w: share proven calendar capacity with Vodopad/Planine. */
 .calendar-scroll-hint {
     display: none;

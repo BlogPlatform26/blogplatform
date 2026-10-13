@@ -89,3 +89,7 @@ Završna matrica mora za **svaki** ključ zasebno zabilježiti blog i detalj na 
 Od izrade početnog indeksa zatvoreni su navedeni lokalni nalazi Asfaltnog plamena i Kraljevske pozornice te četiri mobilna kalendara (Phase95c3–c6 i Phase96a–d). [Phase98a](phase98a_all_design_tablet_post_actions.md) obuhvatila je zajedničke tabletne post-akcije, ali završna provjera dodirnih meta i desktopnih kalendara još nije dovršena. [Phase100a](phase100a_shared_base_final_matrix_batch.md) potvrdila je nove P1 nalaze: naslovi postova tri Simple dizajna i `like` u tamnoj, klasičnoj i Simple obitelji i dalje su ispod 4,5:1. Tvornički `default` treba ponoviti bez naslijeđenih preferencija ID-a 1. Ne smije se zaključiti da drugi redovi prolaze samo zato što u ovom indeksu nema zabilježenog P1 nalaza.
 
 Osvježeni indeks sadrži **37 jedinstvenih redaka i 0 nepostojećih poveznica**. `manage.py check`, `makemigrations --check --dry-run` i `git diff --check` prošli su. Nije bilo promjene aplikacijskog koda; puni skup 213/213 prošao je u prethodnoj Phase100b i ovdje nije ponovno pokretan. Indeks i dalje ne potvrđuje svih 37 aktualnim mjerenjem.
+
+
+## Phase101c current addition
+Zlatni horizont / Iznad oblaka:32 standard+dense before/after states and repairs in phase101c_zlatni_iznad_mobile.md. Current coverage19/37, not19 completed passes. Pale calendar month/archive labels observed in screenshot remain candidates; photo zones and desktop targets remain open.
