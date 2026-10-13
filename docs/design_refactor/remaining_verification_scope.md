@@ -1,4 +1,4 @@
-# Remaining scope after Phase100y
+# Remaining scope after Phase100z
 
 This ledger is not a completion percentage. Earlier estimates lacked a stable workload denominator and cannot support an ETA. Historical implementation and current verification are distinct.
 
@@ -8,7 +8,7 @@ This ledger is not a completion percentage. Earlier estimates lacked a stable wo
 | Studio/Magazin | 100g; 100h/i/k fixes | Reconcile final matrix, targets and unproven photo zones |
 | Litica/Podvodna | 100l; 100m/n/o/q fixes; 100r bound | Remaining photographic evidence and targets; analytical bound is not direct rendered-pixel proof |
 | Vodopad/Planine | 100s; 100t dates; 100u titles; 100v comment wrapping; 100w dense calendars; 100x subtitle and keyboard proof | Photo zones and desktop targets |
-| Nebeski mir / Svemirski horizont | 100y current16-state audit | Timestamp contrast, Nebeski mobile body, phone title/comment wrapping, dense calendars, photo zones and desktop targets |
+| Nebeski mir / Svemirski horizont | 100y audit; 100z timestamp/mobile-body contrast and phone wrapping fixes | Dense calendars, photo zones and desktop targets |
 | Other 20 keys | Historical reports in working index | Current blog/detail 320/390/768/1440 with comments, photo surfaces, overflow, targets and safe navigation; repair failures |
 | User-facing pages | Phase75 inventory; 76–81 dashboard/settings/forms/editor/profile/notification work | Reconcile historical evidence with routes, verify uncovered controls and public/account/content flows, current regressions. These pages are not wholly unimplemented |
 
@@ -18,4 +18,4 @@ Each key needs current evidence and closure of findings while preserving desktop
 
 Implementation gates remain isolated fixtures, browser before/after, safe navigation, check/migration/full suite, durable raw evidence and design-refactor-only push. Original repo/database/media/port8000 stay untouched; no main/merge/deploy.
 
-Next: close confirmed100y contrast and phone wrapping findings in a combined batch, then dense calendars and remaining20 current theme series. Do not infer a total percentage from the count of currently verified designs.
+Next: dense calendars for Nebeski/Svemirski and remaining20 current theme series. Do not infer a total percentage from the count of currently verified designs.

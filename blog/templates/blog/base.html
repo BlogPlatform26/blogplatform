@@ -3920,8 +3920,8 @@ html body .blog-page-title a.blog-link {
     }
 }
 
-{% if blog.profile.template == 'vodopad_u_magli' or blog.profile.template == 'planine_u_magli' %}
-/* Phase 100u: give phone titles a full row above the date. */
+{% if blog.profile.template == 'vodopad_u_magli' or blog.profile.template == 'planine_u_magli' or blog.profile.template == 'nebeski_mir' or blog.profile.template == 'svemirski_horizont' %}
+/* Phase 100u/100z: give phone titles a full row above the date. */
 @media (max-width: 575.98px) {
     /* Phase 100v: allow an individual long comment word to fit its column. */
     .comment-body .comment-text .bp-comment-word {
@@ -3941,6 +3941,24 @@ html body .blog-page-title a.blog-link {
         max-width: 100%;
     }
 }
+{% endif %}
+{% if blog.profile.template == 'nebeski_mir' or blog.profile.template == 'svemirski_horizont' %}
+/* Phase 100z: readable small dates independently of the photograph. */
+@media (min-width: 768px) {
+    .comment-item.bp-modern-comment-item .comment-body .comment-time {
+        color: #dbe7ff !important;
+        background-color: #08101e;
+        opacity: 1 !important;
+        border-radius: 2px;
+    }
+}
+{% endif %}
+{% if blog.profile.template == 'nebeski_mir' and blog_preferences.active_design_customization.body_text_color == '#72788a' %}
+@media (max-width: 575.98px) {
+    .blog-rich-content { color: #475569 !important; }
+}
+{% endif %}
+{% if blog.profile.template == 'vodopad_u_magli' or blog.profile.template == 'planine_u_magli' %}
 /* Phase 100t: keep comment dates legible over translucent and photo surfaces. */
 .comment-item.bp-modern-comment-item .comment-body .comment-time {
     color: #43513e !important;
