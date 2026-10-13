@@ -3972,6 +3972,21 @@ html body .blog-page-title a.blog-link {
     border-radius: 2px;
 }
 {% endif %}
+{% if blog.profile.template == 'iznad_oblaka' and blog_preferences.active_design_customization.box_title_color == '#f0dbe9' %}
+/* Phase 101e: factory sidebar labels remain readable over every cloud crop. */
+html body .calendar-title--nav .calendar-month-nav-link {
+    -webkit-text-fill-color: currentColor !important;
+}
+html body .calendar-title--nav > span,
+html body .archive-title,
+html body .sidebar-box-title,
+html body .blog-box-title {
+    color: #514956 !important;
+    -webkit-text-fill-color: currentColor !important;
+    background: #fff7fc !important;
+    border-radius: 2px;
+}
+{% endif %}
 {% if blog.profile.template == 'nebeski_mir' and blog_preferences.active_design_customization.body_text_color == '#72788a' %}
 @media (max-width: 575.98px) {
     .blog-rich-content { color: #475569 !important; }
