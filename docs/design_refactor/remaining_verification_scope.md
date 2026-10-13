@@ -1,4 +1,4 @@
-# Remaining scope after Phase100z
+# Remaining scope after Phase101b
 
 This ledger is not a completion percentage. Earlier estimates lacked a stable workload denominator and cannot support an ETA. Historical implementation and current verification are distinct.
 
@@ -8,9 +8,9 @@ This ledger is not a completion percentage. Earlier estimates lacked a stable wo
 | Studio/Magazin | 100g; 100h/i/k fixes | Reconcile final matrix, targets and unproven photo zones |
 | Litica/Podvodna | 100l; 100m/n/o/q fixes; 100r bound | Remaining photographic evidence and targets; analytical bound is not direct rendered-pixel proof |
 | Vodopad/Planine | 100s; 100t dates; 100u titles; 100v comment wrapping; 100w dense calendars; 100x subtitle and keyboard proof | Photo zones and desktop targets |
-| Nebeski mir / Svemirski horizont | 100y audit; 100z timestamp/mobile-body contrast and phone wrapping fixes | Dense calendars, photo zones and desktop targets |
+| Nebeski mir / Svemirski horizont | 100y audit; 100z timestamp/mobile-body contrast and phone wrapping fixes | 101b dense calendars closed; photo zones and desktop targets remain |
 | Other 20 keys | Historical reports in working index | Current blog/detail 320/390/768/1440 with comments, photo surfaces, overflow, targets and safe navigation; repair failures |
-| User-facing pages | Phase75 inventory; 76–81 dashboard/settings/forms/editor/profile/notification work | Reconcile historical evidence with routes, verify uncovered controls and public/account/content flows, current regressions. These pages are not wholly unimplemented |
+| User-facing pages | Phase75 inventory; 76â€“81 dashboard/settings/forms/editor/profile/notification work | Reconcile historical evidence with routes, verify uncovered controls and public/account/content flows, current regressions. These pages are not wholly unimplemented |
 
 The 20 keys awaiting current series: zlatni_horizont, iznad_oblaka, sumska_svjetlost, polarna_svjetlost, zlatno_polje, neonski_grad, polje_lavande, carobna_ljubicasta, kraljevska_pozornica, dimni_akordi, nebeska_klasika, ponocna_elegancija, ruzicasti_vrt, stara_aleja, staza_prema_vrhovima, jedro_u_suton, misticno_jezero, sjene_ulice, mjesecev_ples, asfaltni_plamen.
 
@@ -18,4 +18,4 @@ Each key needs current evidence and closure of findings while preserving desktop
 
 Implementation gates remain isolated fixtures, browser before/after, safe navigation, check/migration/full suite, durable raw evidence and design-refactor-only push. Original repo/database/media/port8000 stay untouched; no main/merge/deploy.
 
-Next: dense calendars for Nebeski/Svemirski and remaining20 current theme series. Do not infer a total percentage from the count of currently verified designs.
+Next: remaining20 current theme series, starting Zlatni horizont / Iznad oblaka. Do not infer a total percentage from the count of currently verified designs.
