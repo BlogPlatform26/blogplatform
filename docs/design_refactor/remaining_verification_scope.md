@@ -1,4 +1,4 @@
-# Remaining scope after Phase101j
+# Remaining scope after Phase101k
 
 This ledger is not a completion percentage. Earlier estimates lacked a stable workload denominator and cannot support an ETA. Historical implementation and current verification are distinct.
 
@@ -26,3 +26,5 @@ Phase101e evidence correction: final contrast evidence must use actual -webkit-t
 Phase101f targeted actual-fill reconciliation covers152 states of19 keys; see phase101f_fill_reconciliation.md for remaining small date/weekday/header findings. Nebeski subtitle2.543 confirmed; Planine desktop actual5.009 still passes. This does not complete the broader matrix.
 
 Phase101g/h close the confirmed Simple/Magazin and dark/classic/right comment-date contrasts. Phase101i closes observed dark/classic/right tablet column collisions at768–991.98; this is not a dense-week pass. Phase101j closes Nebeski factory subtitle actual fill (5.713:1) and extends factory phone body ink through tablet (7.490:1 at768). Desktop body photo contrast remains unproven. Weekday/archive findings and other photograph-dependent text from101f remain open. All four phases preserve measured geometry outside their stated scope; none is a complete theme pass.
+
+Phase101k closes confirmed weekday labels in dark/classic/right and all Simple calendars at all four widths, plus phone weekday labels in Vodopad/Planine/Nebeski/Iznad and factory phone archive titles in Planine/Nebeski. Their tablet/desktop photographic labels remain unresolved. Next current series: Sumska svjetlost / Polarna svjetlost, then the remaining16; preserve the broader open scope above.

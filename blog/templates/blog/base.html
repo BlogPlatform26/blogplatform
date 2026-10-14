@@ -4128,6 +4128,25 @@ html body .blog-header-main .blog-page-subtitle {
 }
 {% endif %}
 
+/* Phase 101k: opaque weekday ink for confirmed phone label failures. */
+@media (max-width: 575.98px) {
+{% if blog.profile.template == 'vodopad_u_magli' %}
+    .calendar-weekdays { color: #465042 !important; }
+{% elif blog.profile.template == 'planine_u_magli' %}
+    .calendar-weekdays { color: #5f6975 !important; }
+{% elif blog.profile.template == 'nebeski_mir' %}
+    .calendar-weekdays { color: #334155 !important; }
+{% elif blog.profile.template == 'iznad_oblaka' %}
+    .calendar-weekdays { color: #5f6670 !important; }
+{% endif %}
+{% if blog.profile.template == 'planine_u_magli' and blog_preferences.active_design_customization.box_title_color == '#6c7d8f' %}
+    .archive-title { color: #43566c !important; -webkit-text-fill-color: currentColor !important; }
+{% endif %}
+{% if blog.profile.template == 'nebeski_mir' and blog_preferences.active_design_customization.box_title_color == '#8f96aa' %}
+    .archive-title { color: #475569 !important; -webkit-text-fill-color: currentColor !important; }
+{% endif %}
+}
+
 /* Phase 98a: keep the same action hit areas on every tablet design. */
 @media (min-width: 576px) and (max-width: 991.98px) {
     html body .post-actions > form {
