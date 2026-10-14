@@ -4104,6 +4104,23 @@ html body .blog-box-title {
 }
 {% endif %}
 
+{% if blog.profile.template == 'dark' or blog.profile.template == 'dark_right' or blog.profile.template == 'classic' or blog.profile.template == 'classic_right' %}
+/* Phase 101i: fixed-width calendars must not intrude into tablet posts. */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .blog-main-layout-row > .blog-main-left-column,
+    .blog-main-layout-row > .blog-main-content-column,
+    .blog-main-layout-row > .blog-main-right-column {
+        flex: 0 0 100%;
+        width: 100%;
+        max-width: 100%;
+    }
+    .blog-main-layout-row > .blog-main-content-column { order: 0; }
+    .blog-main-layout-row > .blog-main-left-column { order: 1; }
+    .blog-main-layout-row > .blog-main-right-column { order: 2; }
+    .blog-main-layout-row .page-top-align { margin-top: 24px; }
+}
+{% endif %}
+
 /* Phase 98a: keep the same action hit areas on every tablet design. */
 @media (min-width: 576px) and (max-width: 991.98px) {
     html body .post-actions > form {
