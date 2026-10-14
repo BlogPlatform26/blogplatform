@@ -3995,6 +3995,23 @@ html body .blog-box-title {
     }
 }
 {% endif %}
+{% if blog.profile.template == 'dark' or blog.profile.template == 'dark_right' or blog.profile.template == 'classic' or blog.profile.template == 'classic_right' %}
+/* Phase 101h: small comment dates need solid theme-appropriate contrast. */
+@media (min-width: 768px) {
+    .comment-item.bp-modern-comment-item .comment-body .comment-time {
+        {% if blog.profile.template == 'dark' or blog.profile.template == 'dark_right' %}
+        color: #eeeeee !important;
+        background-color: #222222;
+        {% else %}
+        color: #555555 !important;
+        background-color: #ffffff;
+        {% endif %}
+        -webkit-text-fill-color: currentColor !important;
+        opacity: 1 !important;
+        border-radius: 2px;
+    }
+}
+{% endif %}
 {% if blog.profile.template == 'nebeski_mir' and blog_preferences.active_design_customization.body_text_color == '#72788a' %}
 @media (max-width: 575.98px) {
     .blog-rich-content { color: #475569 !important; }
