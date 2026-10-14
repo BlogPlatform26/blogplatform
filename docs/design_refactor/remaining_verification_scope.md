@@ -1,4 +1,4 @@
-# Remaining scope after Phase101e
+# Remaining scope after Phase101j
 
 This ledger is not a completion percentage. Earlier estimates lacked a stable workload denominator and cannot support an ETA. Historical implementation and current verification are distinct.
 
@@ -19,8 +19,10 @@ Each key needs current evidence and closure of findings while preserving desktop
 
 Implementation gates remain isolated fixtures, browser before/after, safe navigation, check/migration/full suite, durable raw evidence and design-refactor-only push. Original repo/database/media/port8000 stay untouched; no main/merge/deploy.
 
-Next: measure pale month/archive labels observed in101c, then remaining18 current theme series. Do not infer a total percentage from the count of currently verified designs.
+Next: close remaining weekday/archive actual-fill findings from101f and continue the remaining18 current theme series. Inspect actual overlaps as well as document overflow. Do not infer a total percentage from theme coverage.
 
 Phase101e evidence correction: final contrast evidence must use actual -webkit-text-fill-color where present, not color alone. Reconcile prior passes where inherited fill differs. Iznad factory month/archive/arrow fill corrected and verified8.190:1.
 
 Phase101f targeted actual-fill reconciliation covers152 states of19 keys; see phase101f_fill_reconciliation.md for remaining small date/weekday/header findings. Nebeski subtitle2.543 confirmed; Planine desktop actual5.009 still passes. This does not complete the broader matrix.
+
+Phase101g/h close the confirmed Simple/Magazin and dark/classic/right comment-date contrasts. Phase101i closes observed dark/classic/right tablet column collisions at768–991.98; this is not a dense-week pass. Phase101j closes Nebeski factory subtitle actual fill (5.713:1) and extends factory phone body ink through tablet (7.490:1 at768). Desktop body photo contrast remains unproven. Weekday/archive findings and other photograph-dependent text from101f remain open. All four phases preserve measured geometry outside their stated scope; none is a complete theme pass.

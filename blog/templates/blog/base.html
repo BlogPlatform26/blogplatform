@@ -4013,8 +4013,15 @@ html body .blog-box-title {
 }
 {% endif %}
 {% if blog.profile.template == 'nebeski_mir' and blog_preferences.active_design_customization.body_text_color == '#72788a' %}
-@media (max-width: 575.98px) {
+/* Phase 101j: retain phone ink through tablet widths on the factory palette. */
+@media (max-width: 991.98px) {
     .blog-rich-content { color: #475569 !important; }
+}
+{% endif %}
+{% if blog.profile.template == 'nebeski_mir' and blog_preferences.active_design_customization.blog_title_color == '#81879a' %}
+/* The subtitle inherits a separate text fill from the factory title palette. */
+html body .blog-header-main .blog-page-subtitle {
+    -webkit-text-fill-color: currentColor !important;
 }
 {% endif %}
 {% if blog.profile.template == 'vodopad_u_magli' or blog.profile.template == 'planine_u_magli' %}
