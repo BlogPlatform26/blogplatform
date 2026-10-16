@@ -4166,6 +4166,50 @@ html body .blog-post-entry .blog-post-title a {
 {% endif %}
 {% endif %}
 
+{% if blog.profile.template == 'polarna_svjetlost' %}
+/* Phase 101n: reconcile real anchors and mobile word fill with existing reading surfaces. */
+html body .blog-post-entry .post-author-link a {
+    color: #123047 !important;
+    -webkit-text-fill-color: currentColor !important;
+}
+html body .blog-post-entry .post-author-link a:hover,
+html body .blog-post-entry .post-author-link a:focus-visible {
+    color: #081e2d !important;
+}
+html body .blog-main-layout-row .comment-item .comment-body .comment-text,
+html body .blog-main-layout-row .comment-item .comment-body .comment-text .bp-comment-text,
+html body .blog-main-layout-row .comment-item .comment-body .comment-text .bp-comment-word,
+html body .blog-main-layout-row .comment-item .comment-body .comment-author a {
+    -webkit-text-fill-color: currentColor !important;
+}
+html body [id^="comments-"] > .small.text-muted {
+    color: #123047 !important;
+    -webkit-text-fill-color: currentColor !important;
+    background: #f1fbff;
+    border-radius: 0.32em;
+}
+@media (min-width: 768px) {
+    .comment-item.bp-modern-comment-item .comment-body .comment-time {
+        color: #123047 !important;
+        -webkit-text-fill-color: currentColor !important;
+        background: #f1fbff;
+        opacity: 1 !important;
+        border-radius: 2px;
+    }
+}
+{% elif blog.profile.template == 'sumska_svjetlost' %}
+/* Existing forest reading ink also covers small timestamps on translucent cards. */
+@media (min-width: 768px) {
+    .comment-item.bp-modern-comment-item .comment-body .comment-time {
+        color: #354b32 !important;
+        -webkit-text-fill-color: currentColor !important;
+        background: #f5fbef;
+        opacity: 1 !important;
+        border-radius: 2px;
+    }
+}
+{% endif %}
+
 /* Phase 98a: keep the same action hit areas on every tablet design. */
 @media (min-width: 576px) and (max-width: 991.98px) {
     html body .post-actions > form {
