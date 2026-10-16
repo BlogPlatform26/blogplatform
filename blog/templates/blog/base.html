@@ -4147,6 +4147,25 @@ html body .blog-header-main .blog-page-subtitle {
 {% endif %}
 }
 
+{% if blog.profile.template == 'sumska_svjetlost' %}
+/* Phase 101m: factory text fill must use the light ink on existing forest surfaces. */
+{% if blog_preferences.active_design_customization.blog_title_color == '#56614d' %}
+html body .blog-header-main .blog-page-title,
+html body .blog-header-main .blog-page-title a,
+html body .blog-header-main .blog-page-subtitle {
+    color: #f5fbef !important;
+    -webkit-text-fill-color: currentColor !important;
+}
+{% endif %}
+{% if blog_preferences.active_design_customization.post_title_color == '#53604b' %}
+html body .blog-post-entry .blog-post-title,
+html body .blog-post-entry .blog-post-title a {
+    color: #f5fbef !important;
+    -webkit-text-fill-color: currentColor !important;
+}
+{% endif %}
+{% endif %}
+
 /* Phase 98a: keep the same action hit areas on every tablet design. */
 @media (min-width: 576px) and (max-width: 991.98px) {
     html body .post-actions > form {

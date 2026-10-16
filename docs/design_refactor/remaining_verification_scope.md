@@ -1,4 +1,4 @@
-# Remaining scope after Phase101l
+# Remaining scope after Phase101m
 
 This ledger is not a completion percentage. Earlier estimates lacked a stable workload denominator and cannot support an ETA. Historical implementation and current verification are distinct.
 
@@ -30,3 +30,5 @@ Phase101g/h close the confirmed Simple/Magazin and dark/classic/right comment-da
 Phase101k closes confirmed weekday labels in dark/classic/right and all Simple calendars at all four widths, plus phone weekday labels in Vodopad/Planine/Nebeski/Iznad and factory phone archive titles in Planine/Nebeski. Their tablet/desktop photographic labels remain unresolved. Next current series: Sumska svjetlost / Polarna svjetlost, then the remaining16; preserve the broader open scope above.
 
 Phase101l adds current standard+dense audit for Sumska/Polarna:21/37 coverage, not passes. Confirmed severe factory-fill contrast and phone overflow/touch findings are open in phase101l_sumska_polarna_current_matrix.md. Remaining16 begin Zlatno polje/Neonski grad. Historical18-key list above is superseded for these two only.
+
+Phase101m closes only Sumska factory title/subtitle/post-title actual fill on existing opaque surfaces. All other101l findings remain open; current coverage stays21/37.
