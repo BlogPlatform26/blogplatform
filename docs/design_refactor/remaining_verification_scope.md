@@ -34,3 +34,6 @@ Phase101l adds current standard+dense audit for Sumska/Polarna:21/37 coverage, n
 Phase101m closes only Sumska factory title/subtitle/post-title actual fill on existing opaque surfaces. All other101l findings remain open; current coverage stays21/37.
 
 Phase101n closes Polarna post-author/mobile comment actual ink and registration message plus Sumska/Polarna timestamps>=768. Phone dates unchanged. Next101l phone wrapping, dense calendar containment and tablet44px targets; archive/active-day and photo findings remain open.
+
+
+Phase101o: Sumska/Polarna phone post-title and comment-word wrapping closed in16 standard states,8 explicit header overlap checks; tablet/desktop geometry and actual ink unchanged. Dense calendars/tablet targets and remaining archive/active-day contrast still open. See phase101o_sumska_polarna_phone_wrapping.md.
