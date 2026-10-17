@@ -4210,6 +4210,29 @@ html body [id^="comments-"] > .small.text-muted {
 }
 {% endif %}
 
+{% if blog.profile.template == 'sumska_svjetlost' and blog_preferences.active_design_customization.box_title_color == '#66755b' %}
+/* Phase 101q: factory archive ink on the opaque phone background. */
+@media (max-width: 575.98px) {
+    html body .archive-title { color: #354b32 !important; -webkit-text-fill-color: currentColor !important; }
+}
+{% elif blog.profile.template == 'polarna_svjetlost' and blog_preferences.active_design_customization.box_title_color == '#d6efff' %}
+/* Phase 101q: factory archive ink uses a local polar reading surface. */
+@media (max-width: 575.98px) {
+    html body .archive-title { color: #123047 !important; -webkit-text-fill-color: currentColor !important; background: #f1fbff !important; }
+}
+{% endif %}
+{% if blog.profile.template == 'polarna_svjetlost' %}
+/* Phase 101q: active days retain the existing polar reading palette. */
+@media (max-width: 575.98px) {
+    html body .calendar-grid .calendar-day-has-post,
+    html body .calendar-grid .calendar-day-today {
+        color: #123047 !important;
+        -webkit-text-fill-color: currentColor !important;
+        background: #f1fbff;
+    }
+}
+{% endif %}
+
 /* Phase 98a: keep the same action hit areas on every tablet design. */
 @media (min-width: 576px) and (max-width: 991.98px) {
     html body .post-actions > form {

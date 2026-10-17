@@ -39,3 +39,5 @@ Phase101n closes Polarna post-author/mobile comment actual ink and registration 
 Phase101o: Sumska/Polarna phone post-title and comment-word wrapping closed in16 standard states,8 explicit header overlap checks; tablet/desktop geometry and actual ink unchanged. Dense calendars/tablet targets and remaining archive/active-day contrast still open. See phase101o_sumska_polarna_phone_wrapping.md.
 
 Phase101p: Sumska/Polarna dense phone calendars contained with7x44px and keyboard/day11 proof; tablet768-991.98 full columns and44px targets.40 states/doc0; desktop static geometry unchanged. Archive/active-day contrast and desktop targets remain open. See phase101p_sumska_polarna_calendar.md.
+
+Phase101q closes Sumska/Polarna factory phone archive and Polarna active/today contrast with32 measured states, unchanged geometry. Tablet/desktop photo labels remain open. Next: Zlatno polje/Neonski grad;21/37 coverage is not a pass count.
