@@ -515,6 +515,24 @@ select.form-select:focus {
     justify-content: center;
 }
 
+/* Phase101u: match the like control to the existing opaque post action ink. */
+.post-actions button.btn-link,
+.post-actions button.btn-link i {
+    color: #4b2d05 !important;
+    -webkit-text-fill-color: currentColor !important;
+}
+
+{% if blog_preferences.active_design_customization.box_title_color == '#6c4410' %}
+@media (max-width: 991.98px) {
+    /* Factory archive ink only; custom palette values remain authoritative. */
+    html body .archive-title {
+        background: #fff8e4 !important;
+        color: #4b2d05 !important;
+        -webkit-text-fill-color: currentColor !important;
+    }
+}
+{% endif %}
+
 /* Phase 89d: keep post text independent of the changing wheat photograph. */
 .blog-post-entry {
     background: #fff8e4 !important;

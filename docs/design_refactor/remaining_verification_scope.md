@@ -49,3 +49,7 @@ Phase101s: Zlatno/Neonski phone title/comment wrapping closed in32 standard/dens
 
 ## Phase101t calendar update
 Zlatno/Neonski dense phone containment and tablet capacity closed:40 states,7x44px,16 tablet nonoverlap checks,desktop rectangles unchanged,safe day11 posts101/108 and keyboard40,214 tests64.398s. Remaining Zlatno like/archive contrast,photo zones,desktop targets and14 themes remain open.
+
+
+## Phase101u ink update
+Zlatno like actual button/icon11.808 all widths; factory archive<=991.98 opaque11.808,desktop photo archive unresolved. Eight before/after states geometry unchanged/doc0; next Polje lavande/Carobna ljubicasta current matrices.
