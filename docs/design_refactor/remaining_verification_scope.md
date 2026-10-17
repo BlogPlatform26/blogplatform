@@ -45,3 +45,7 @@ Phase101q closes Sumska/Polarna factory phone archive and Polarna active/today c
 Phase101r adds current standard/dense Zlatno polje/Neonski grad32 states.23/37 covered, not passes. Confirmed phone title/densecalendar overflow, tablet calendar overlap and Zlatno like/archive contrast; see phase101r_zlatno_neonski_current_matrix.md. Application unchanged.14 special-theme series remain.
 
 Phase101s: Zlatno/Neonski phone title/comment wrapping closed in32 standard/dense states; tablet/desktop geometry and actualfill unchanged. Dense calendar containment/tablet overlap and Zlatno like/archive contrast remain101r priorities.
+
+
+## Phase101t calendar update
+Zlatno/Neonski dense phone containment and tablet capacity closed:40 states,7x44px,16 tablet nonoverlap checks,desktop rectangles unchanged,safe day11 posts101/108 and keyboard40,214 tests64.398s. Remaining Zlatno like/archive contrast,photo zones,desktop targets and14 themes remain open.
