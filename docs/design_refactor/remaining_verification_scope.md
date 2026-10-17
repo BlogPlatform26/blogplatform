@@ -41,3 +41,5 @@ Phase101o: Sumska/Polarna phone post-title and comment-word wrapping closed in16
 Phase101p: Sumska/Polarna dense phone calendars contained with7x44px and keyboard/day11 proof; tablet768-991.98 full columns and44px targets.40 states/doc0; desktop static geometry unchanged. Archive/active-day contrast and desktop targets remain open. See phase101p_sumska_polarna_calendar.md.
 
 Phase101q closes Sumska/Polarna factory phone archive and Polarna active/today contrast with32 measured states, unchanged geometry. Tablet/desktop photo labels remain open. Next: Zlatno polje/Neonski grad;21/37 coverage is not a pass count.
+
+Phase101r adds current standard/dense Zlatno polje/Neonski grad32 states.23/37 covered, not passes. Confirmed phone title/densecalendar overflow, tablet calendar overlap and Zlatno like/archive contrast; see phase101r_zlatno_neonski_current_matrix.md. Application unchanged.14 special-theme series remain.
