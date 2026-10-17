@@ -18,12 +18,14 @@ class Phase88eForestPolarCalendarFitTests(TestCase):
             author.profile.save(update_fields=["template"])
             response = self.client.get(reverse("user_blog", args=[author.username]))
             content = response.content.decode(response.charset)
-            self.assertIn("Phase 88e", content)
+            self.assertIn("Phase 101p", content)
             self.assertIn("grid-template-columns: 44px minmax(0, 1fr) 44px", content)
             self.assertIn("repeat(7, minmax(0, 1fr)) !important", content)
+            self.assertIn("min-width: 44px !important; min-height: 44px !important; width: 100%", content)
+            self.assertIn('aria-label="Dani kalendara" tabindex="0"', content)
 
     def test_other_design_does_not_receive_calendar_contract(self):
         self.forest.profile.template = "zlatni_horizont"
         self.forest.profile.save(update_fields=["template"])
         response = self.client.get(reverse("user_blog", args=[self.forest.username]))
-        self.assertNotIn("Phase 88e", response.content.decode(response.charset))
+        self.assertNotIn("Phase 101p", response.content.decode(response.charset))
