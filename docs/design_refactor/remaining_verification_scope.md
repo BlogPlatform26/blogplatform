@@ -53,3 +53,7 @@ Zlatno/Neonski dense phone containment and tablet capacity closed:40 states,7x44
 
 ## Phase101u ink update
 Zlatno like actual button/icon11.808 all widths; factory archive<=991.98 opaque11.808,desktop photo archive unresolved. Eight before/after states geometry unchanged/doc0; next Polje lavande/Carobna ljubicasta current matrices.
+
+
+## Phase101v current coverage and layout
+Polje lavande/Carobna ljubicasta standard+dense series completed;phone title/comment and local calendar containment fixed,Lavande tablet full columns,Carobna tablet today scale reset.40 after states doc/local0,7x44 targets,16 tablet nonoverlap,desktop rectangles unchanged. Coverage25/37 is not passes. Lavande archive4.396 remains open;photo zones/desktop targets remain. Next12 themes begin Kraljevska pozornica/Dimni akordi.
