@@ -57,3 +57,7 @@ Zlatno like actual button/icon11.808 all widths; factory archive<=991.98 opaque1
 
 ## Phase101v current coverage and layout
 Polje lavande/Carobna ljubicasta standard+dense series completed;phone title/comment and local calendar containment fixed,Lavande tablet full columns,Carobna tablet today scale reset.40 after states doc/local0,7x44 targets,16 tablet nonoverlap,desktop rectangles unchanged. Coverage25/37 is not passes. Lavande archive4.396 remains open;photo zones/desktop targets remain. Next12 themes begin Kraljevska pozornica/Dimni akordi.
+
+
+## Phase101w archive
+Lavande factory archive<=991.98 actual9.576 on opaque local surface,8 states geometry unchanged/doc0. Desktop archive/photo header/title/subtitle and calendar photo labels remain unverified; screenshot101w makes header follow-up explicit. Coverage unchanged25/37,not passes.

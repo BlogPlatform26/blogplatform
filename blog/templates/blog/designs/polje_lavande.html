@@ -541,6 +541,17 @@ select.form-select:focus {
     background: rgba(255, 255, 255, 0.28) !important;
 }
 
+/* Phase101w: stable factory archive ink on phone and tablet. */
+{% if blog_preferences.active_design_customization.box_title_color == '#6a3c84' %}
+@media (max-width: 991.98px) {
+    html body .archive-title {
+        background: #f5e6fa !important;
+        color: #512767 !important;
+        -webkit-text-fill-color: currentColor !important;
+    }
+}
+{% endif %}
+
 /* Phase 89e: stable lavender ink surfaces over every photographic crop. */
 .blog-post-entry {
     background: #f5e6fa !important;
