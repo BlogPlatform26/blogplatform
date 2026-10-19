@@ -61,3 +61,7 @@ Polje lavande/Carobna ljubicasta standard+dense series completed;phone title/com
 
 ## Phase101w archive
 Lavande factory archive<=991.98 actual9.576 on opaque local surface,8 states geometry unchanged/doc0. Desktop archive/photo header/title/subtitle and calendar photo labels remain unverified; screenshot101w makes header follow-up explicit. Coverage unchanged25/37,not passes.
+
+
+## Phase101x current audit
+Kraljevska/Dimni32 standard+dense states saved;application unchanged. Phone title/comment failures,Kraljevska clipped dense grid,Dimni320 calendar x=-7.667/doc+8 need fixes. Tablet dense targets already44px;preserve fitting layouts. Coverage27/37 not passes;10 themes remain from Nebeska klasika/Ponocna elegancija.
