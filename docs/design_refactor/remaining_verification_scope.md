@@ -65,3 +65,7 @@ Lavande factory archive<=991.98 actual9.576 on opaque local surface,8 states geo
 
 ## Phase101x current audit
 Kraljevska/Dimni32 standard+dense states saved;application unchanged. Phone title/comment failures,Kraljevska clipped dense grid,Dimni320 calendar x=-7.667/doc+8 need fixes. Tablet dense targets already44px;preserve fitting layouts. Coverage27/37 not passes;10 themes remain from Nebeska klasika/Ponocna elegancija.
+
+
+## Phase101y phone wrapping
+Kraljevska/Dimni phone title/comment overflow closed32states. Calendar containment/negative position remain open;Dimni narrow comment content warrants usability follow-up. Tablet/desktop static geometry unchanged except real today18->19 calendar state.
