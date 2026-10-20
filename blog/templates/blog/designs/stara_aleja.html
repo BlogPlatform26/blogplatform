@@ -617,6 +617,17 @@ html body .sa-theme .comment-body a {
         width: 100%;
     }
 }
+/* Phase102e: separate seven phone targets inside a local scroll region. */
+@media (max-width: 767.98px) {
+    .sa-layout { grid-template-columns: minmax(0, 1fr); }
+    .sa-layout > * { min-width: 0; }
+    .sa-calendar-scroll { max-width: 100%; overflow-x: auto; }
+    .sa-calendar-weekdays, .sa-calendar-grid {
+        min-width: 344px;
+        grid-template-columns: repeat(7, minmax(44px, 1fr));
+        column-gap: 6px;
+    }
+}
 </style>
 
 <div class="sa-theme">
@@ -683,12 +694,14 @@ html body .sa-theme .comment-body a {
                 <section class="sa-section">
                     <div class="sa-calendar-title box-title">Kalendar</div>
                     <div class="sa-calendar-month calendar-month-nav"><a href="{{ prev_month_url }}" class="calendar-month-nav-link" aria-label="Prethodni mjesec">&#8249;</a><span>{{ current_month_hr|upper }}, {{ current_year }}</span><a href="{{ next_month_url }}" class="calendar-month-nav-link" aria-label="Sljedeći mjesec">&#8250;</a></div>
-                    <div class="sa-calendar-weekdays">
+                    <div class="sa-calendar-scroll" role="region" aria-label="Dani kalendara" tabindex="0">
+                <div class="sa-calendar-weekdays">
                         <div>P</div><div>U</div><div>S</div><div>Č</div><div>P</div><div>S</div><div>N</div>
                     </div>
                     <div class="sa-calendar-grid">
                         {% include "blog/components/blog_calendar_grid.html" with calendar_empty_class="sa-calendar-empty" calendar_day_class="sa-calendar-day" calendar_has_post_class="sa-calendar-day--has-post" calendar_today_class="sa-calendar-day--today" %}
                     </div>
+                </div>
                 </section>
                 {% endif %}
 

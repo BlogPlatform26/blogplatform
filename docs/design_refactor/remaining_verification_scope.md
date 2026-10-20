@@ -87,3 +87,6 @@ Nebeska timestamp actual contrast7.875 at768/1440,phone6.050 unchanged; eight bl
 
 ## Phase102d current matrix
 Ruzicasti/Stara32states doc0 but dense320 calendar targets overlap;390 grid edges overflow. Tablet768 seven44px fit. Ruzicasti month3.359 andweekday2.948 actual normal text fail. Coverage31/37 is not passes;6special themes remain. See phase102d_ruzicasti_stara_matrix.md.
+
+## Phase102e phone calendars
+Ruzicasti/Stara local scroll7x44 with6px separation closes phone target overlap and edge overflow;32states doc0,tablet/desktop geometry and actual ink unchanged. Keyboard40 both,safe165/172. Month/weekday contrast remains next. Screenshot APIs unavailable; DOM/interaction evidence only.
