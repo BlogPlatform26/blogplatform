@@ -427,12 +427,12 @@ html body .calendar-title--nav a.calendar-month-nav-link {
 
 /* Phase 92b: restore the seven-day calendar without crowding the tablet sidebar. */
 @media (max-width: 767.98px) {
-    /* Phase 96a: an edge-to-edge mobile calendar fits seven 44px day targets. */
+    /* Phase101z: local scrolling keeps seven 44px days inside the phone column. */
     html body .blog-main-layout-row .calendar-box {
         position: relative;
-        left: 50%;
-        transform: translateX(-50%);
-        width: min(100vw, 376px) !important;
+        left: 0;
+        transform: none;
+        width: 100% !important;
         max-width: none !important;
         margin-inline: 0 !important;
         padding: 2px !important;

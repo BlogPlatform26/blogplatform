@@ -69,3 +69,7 @@ Kraljevska/Dimni32 standard+dense states saved;application unchanged. Phone titl
 
 ## Phase101y phone wrapping
 Kraljevska/Dimni phone title/comment overflow closed32states. Calendar containment/negative position remain open;Dimni narrow comment content warrants usability follow-up. Tablet/desktop static geometry unchanged except real today18->19 calendar state.
+
+
+## Phase101z calendars
+Kraljevska/Dimni phone containment and negative calendar position closed40states;7x44 targets,doc/grid0,16tablet nonoverlap,desktop rectangles unchanged101y,safe133/140 and keyboard40. Dimni narrow comment usability and photo/desktop issues remain.

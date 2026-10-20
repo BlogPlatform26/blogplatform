@@ -16,7 +16,7 @@ class Phase96aDimniMobileCalendarTouchTests(TestCase):
             status="published",
         )
 
-    def test_full_width_mobile_calendar_is_local_to_dimni_blog_and_detail(self):
+    def test_scrollable_mobile_calendar_is_local_to_dimni_blog_and_detail(self):
         self.author.profile.template = "dimni_akordi"
         self.author.profile.save(update_fields=["template"])
         for url in (
@@ -27,8 +27,10 @@ class Phase96aDimniMobileCalendarTouchTests(TestCase):
                 response = self.client.get(url, follow=True)
                 self.assertEqual(response.status_code, 200)
                 html = response.content.decode(response.charset)
-                self.assertIn("Phase 96a: an edge-to-edge mobile calendar", html)
-                self.assertIn("width: min(100vw, 376px) !important", html)
+                self.assertIn("Phase101z: local scrolling keeps seven 44px days", html)
+                self.assertIn('class="calendar-scroll-region"', html)
+                self.assertIn('tabindex="0"', html)
+                self.assertIn("overflow-x: auto", html)
                 self.assertIn("column-gap: 1px", html)
                 self.assertIn("min-width: 44px !important", html)
 
@@ -38,6 +40,6 @@ class Phase96aDimniMobileCalendarTouchTests(TestCase):
         response = self.client.get(reverse("user_blog", args=[self.author.username]))
         self.assertEqual(response.status_code, 200)
         self.assertNotIn(
-            "Phase 96a: an edge-to-edge mobile calendar",
+            "Phase101z: local scrolling keeps seven 44px days",
             response.content.decode(response.charset),
         )
