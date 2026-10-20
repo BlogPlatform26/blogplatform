@@ -84,3 +84,6 @@ Nebeska/Ponocna phone intrinsic grid width and overlapping dense calendar target
 
 ## Phase102c timestamp
 Nebeska timestamp actual contrast7.875 at768/1440,phone6.050 unchanged; eight blog/detail states geometry unchanged. See phase102c_nebeska_comment_time.md. Next eight themes begin Ruzicasti vrt/Stara aleja; other open verification scope unchanged.
+
+## Phase102d current matrix
+Ruzicasti/Stara32states doc0 but dense320 calendar targets overlap;390 grid edges overflow. Tablet768 seven44px fit. Ruzicasti month3.359 andweekday2.948 actual normal text fail. Coverage31/37 is not passes;6special themes remain. See phase102d_ruzicasti_stara_matrix.md.
