@@ -612,6 +612,10 @@ html body .nk-theme .comment-body a {
         column-gap: 6px;
     }
 }
+/* Phase102c: retain the comment ink at full opacity on larger screens. */
+@media (min-width: 768px) {
+    html body .nk-theme .comment-body .comment-time { opacity: 1 !important; }
+}
 </style>
 
 <div class="nk-theme">
