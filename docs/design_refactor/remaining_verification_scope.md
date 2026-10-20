@@ -73,3 +73,7 @@ Kraljevska/Dimni phone title/comment overflow closed32states. Calendar containme
 
 ## Phase101z calendars
 Kraljevska/Dimni phone containment and negative calendar position closed40states;7x44 targets,doc/grid0,16tablet nonoverlap,desktop rectangles unchanged101y,safe133/140 and keyboard40. Dimni narrow comment usability and photo/desktop issues remain.
+
+
+## Phase102a current matrix
+Nebeska klasika/Ponocna elegancija32 standard/dense states; application unchanged. Standard320 document overflow6/34; dense phone44px day targets overlap despite doc0. Tablet768 fits seven44px days. Nebeska timestamps4.467 at768/1440. See phase102a_nebeska_ponocna_matrix.md and raw. Coverage29/37 is not passes;8 special themes remain.
