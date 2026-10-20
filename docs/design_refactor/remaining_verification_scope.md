@@ -77,3 +77,7 @@ Kraljevska/Dimni phone containment and negative calendar position closed40states
 
 ## Phase102a current matrix
 Nebeska klasika/Ponocna elegancija32 standard/dense states; application unchanged. Standard320 document overflow6/34; dense phone44px day targets overlap despite doc0. Tablet768 fits seven44px days. Nebeska timestamps4.467 at768/1440. See phase102a_nebeska_ponocna_matrix.md and raw. Coverage29/37 is not passes;8 special themes remain.
+
+
+## Phase102b mobile containment
+Nebeska/Ponocna phone intrinsic grid width and overlapping dense calendar targets fixed;32 states doc0,tablet/desktop measured rectangles and ink unchanged. Seven44px days now separated by6px with local keyboard scroll. Timestamp4.467 remains open.

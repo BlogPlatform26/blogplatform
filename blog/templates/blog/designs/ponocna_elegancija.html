@@ -627,6 +627,20 @@ html body .pe-theme .comment-body a {
         width: 100%;
     }
 }
+/* Phase102b: constrain the phone grid's intrinsic content width. */
+@media (max-width: 767.98px) {
+    .pe-layout { grid-template-columns: minmax(0, 1fr); }
+    .pe-layout > * { min-width: 0; }
+    .pe-post { overflow-wrap: anywhere; }
+}
+@media (max-width: 767.98px) {
+    .pe-calendar-scroll { max-width: 100%; overflow-x: auto; }
+    .pe-calendar-weekdays, .pe-calendar-grid {
+        min-width: 344px;
+        grid-template-columns: repeat(7, minmax(44px, 1fr));
+        column-gap: 6px;
+    }
+}
 </style>
 
 <div class="pe-theme">
@@ -692,11 +706,13 @@ html body .pe-theme .comment-body a {
             <div class="pe-side-card">
                 <div class="pe-calendar-title box-title">Kalendar</div>
                 <div class="pe-calendar-month calendar-month-nav"><a href="{{ prev_month_url }}" class="calendar-month-nav-link" aria-label="Prethodni mjesec">&#8249;</a><span>{{ current_month_hr|upper }}, {{ current_year }}</span><a href="{{ next_month_url }}" class="calendar-month-nav-link" aria-label="Sljedeći mjesec">&#8250;</a></div>
+                <div class="pe-calendar-scroll" role="region" aria-label="Dani kalendara" tabindex="0">
                 <div class="pe-calendar-weekdays">
                     <div>P</div><div>U</div><div>S</div><div>Č</div><div>P</div><div>S</div><div>N</div>
                 </div>
                 <div class="pe-calendar-grid">
                     {% include "blog/components/blog_calendar_grid.html" with calendar_empty_class="pe-calendar-empty" calendar_day_class="pe-calendar-day" calendar_has_post_class="pe-calendar-day--has-post" calendar_today_class="pe-calendar-day--today" %}
+                </div>
                 </div>
             </div>
             {% endif %}
