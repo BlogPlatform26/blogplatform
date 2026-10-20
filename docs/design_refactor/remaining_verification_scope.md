@@ -90,3 +90,6 @@ Ruzicasti/Stara32states doc0 but dense320 calendar targets overlap;390 grid edge
 
 ## Phase102e phone calendars
 Ruzicasti/Stara local scroll7x44 with6px separation closes phone target overlap and edge overflow;32states doc0,tablet/desktop geometry and actual ink unchanged. Keyboard40 both,safe165/172. Month/weekday contrast remains next. Screenshot APIs unavailable; DOM/interaction evidence only.
+
+## Phase102f calendar labels
+Ruzicasti month/weekday actual ink6.236 across320/390/768/1440; eight states geometry unchanged. Next six special themes begin Staza prema vrhovima/Jedro u suton; broader open scope unchanged.
