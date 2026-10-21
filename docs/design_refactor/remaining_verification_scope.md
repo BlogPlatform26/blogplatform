@@ -93,3 +93,8 @@ Ruzicasti/Stara local scroll7x44 with6px separation closes phone target overlap 
 
 ## Phase102f calendar labels
 Ruzicasti month/weekday actual ink6.236 across320/390/768/1440; eight states geometry unchanged. Next six special themes begin Staza prema vrhovima/Jedro u suton; broader open scope unchanged.
+
+
+## Phase102g current audit
+
+Staza/Jedro current 32-state standard/dense series recorded. Staza320 intrinsic grid produces59px document overflow; both dense phone calendars overlap44px targets. Tablet768 seven44px days fit. See phase102g_staza_jedro_matrix.md and raw bundle. Photo readability remains unresolved (Jedro screenshot visibly weak over photograph). Coverage33/37 is not a pass count. Remaining initial series: Misticno jezero, Sjene ulice, Mjesecev ples, Asfaltni plamen. Application unchanged.
