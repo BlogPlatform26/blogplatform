@@ -801,6 +801,18 @@ html body .jus-theme .comment-item.bp-modern-comment-item .comment-body.bp-moder
 }
 /* BLOGPLATFORM_JEDRO_BANNER_CONTENT_GAP_END */
 
+/* Phase102h: contain phone columns and keep seven calendar targets separate. */
+@media (max-width: 767.98px) {
+    .jus-layout { grid-template-columns: minmax(0, 1fr); }
+    .jus-layout > * { min-width: 0; }
+    .jus-post { overflow-wrap: anywhere; }
+    .jus-calendar-scroll { max-width: 100%; overflow-x: auto; }
+    .jus-calendar-weekdays, .jus-calendar-grid {
+        min-width: 344px;
+        grid-template-columns: repeat(7, minmax(44px, 1fr));
+        column-gap: 6px;
+    }
+}
 </style>
 
 <div class="jus-theme">
@@ -882,12 +894,14 @@ html body .jus-theme .comment-item.bp-modern-comment-item .comment-body.bp-moder
                 <section class="jus-section">
                     <div class="jus-calendar-title box-title">Kalendar</div>
                     <div class="jus-calendar-month calendar-month-nav"><a href="{{ prev_month_url }}" class="calendar-month-nav-link" aria-label="Prethodni mjesec">&#8249;</a><span>{{ current_month_hr|upper }}, {{ current_year }}</span><a href="{{ next_month_url }}" class="calendar-month-nav-link" aria-label="Sljedeći mjesec">&#8250;</a></div>
-                    <div class="jus-calendar-weekdays">
+                    <div class="jus-calendar-scroll" role="region" aria-label="Dani kalendara" tabindex="0">
+<div class="jus-calendar-weekdays">
                         <div>P</div><div>U</div><div>S</div><div>Č</div><div>P</div><div>S</div><div>N</div>
                     </div>
                     <div class="jus-calendar-grid">
                         {% include "blog/components/blog_calendar_grid.html" with calendar_empty_class="jus-calendar-empty" calendar_day_class="jus-calendar-day" calendar_has_post_class="jus-calendar-day--has-post" calendar_today_class="jus-calendar-day--today" %}
                     </div>
+                </div>
                 </section>
                 {% endif %}
 
