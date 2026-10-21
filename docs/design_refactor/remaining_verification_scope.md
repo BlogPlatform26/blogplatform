@@ -103,3 +103,8 @@ Staza/Jedro current 32-state standard/dense series recorded. Staza320 intrinsic 
 ## Phase102h
 
 Staza/Jedro phone intrinsic sizing and dense calendar overlap closed:32 states, doc/grid0,44px targets50px apart, tablet/desktop sampled rectangles and actual ink unchanged102g. Safe173/174/181/188, native Right40 both.214tests46.558s. Photo readability remains open including Jedro calendar/profile visible in screenshot. Four initial theme series remain;33/37 coverage is not a pass count.
+
+
+## Phase102i
+
+Misticno/Sjene32-state audit completed. Misticno phone dense days overlap (44px target/35.62px starts); Sjene calendar is negatively positioned at320/390. Tablet dense weeks fit; preserve. Coverage35/37 is not passes; Mjesecev ples/Asfaltni plamen initial series remain. See phase102i_misticno_sjene_matrix.md and raw evidence.
