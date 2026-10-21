@@ -363,12 +363,12 @@ input.form-control::placeholder {
 }
 
 @media (max-width: 767.98px) {
-    /* Phase 96b: give the seven mobile calendar days full-size touch targets. */
+    /* Phase102j: keep the phone calendar inside its column. */
     html body .blog-main-layout-row .calendar-box {
         position: relative;
-        left: 50%;
-        transform: translateX(-50%);
-        width: min(100vw, 376px) !important;
+        left: 0;
+        transform: none;
+        width: 100% !important;
         max-width: none !important;
         margin-inline: 0 !important;
         padding: 2px !important;

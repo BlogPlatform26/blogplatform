@@ -640,6 +640,13 @@ html body .mj-theme .comment-body a {
         width: 100%;
     }
 }
+/* Phase102j: separate phone calendar targets inside their own scroll region. */
+@media (max-width: 767.98px) {
+ .mj-layout { grid-template-columns: minmax(0, 1fr); }
+ .mj-layout > * { min-width: 0; }
+ .mj-calendar-scroll { max-width: 100%; overflow-x: auto; }
+ .mj-calendar-weekdays, .mj-calendar-grid { min-width: 344px; grid-template-columns: repeat(7, minmax(44px, 1fr)); column-gap: 6px; }
+}
 </style>
 
 <div class="mj-theme">
@@ -705,12 +712,14 @@ html body .mj-theme .comment-body a {
             <div class="mj-side-card">
                 <div class="mj-calendar-title box-title">Kalendar</div>
                 <div class="mj-calendar-month calendar-month-nav"><a href="{{ prev_month_url }}" class="calendar-month-nav-link" aria-label="Prethodni mjesec">&#8249;</a><span>{{ current_month_hr|upper }}, {{ current_year }}</span><a href="{{ next_month_url }}" class="calendar-month-nav-link" aria-label="Sljedeći mjesec">&#8250;</a></div>
-                <div class="mj-calendar-weekdays">
+                <div class="mj-calendar-scroll" role="region" aria-label="Dani kalendara" tabindex="0">
+<div class="mj-calendar-weekdays">
                     <div>P</div><div>U</div><div>S</div><div>Č</div><div>P</div><div>S</div><div>N</div>
                 </div>
                 <div class="mj-calendar-grid">
                     {% include "blog/components/blog_calendar_grid.html" with calendar_empty_class="mj-calendar-empty" calendar_day_class="mj-calendar-day" calendar_has_post_class="mj-calendar-day--has-post" calendar_today_class="mj-calendar-day--today" %}
                 </div>
+</div>
             </div>
             {% endif %}
 

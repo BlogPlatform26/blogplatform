@@ -27,8 +27,10 @@ class Phase96bSjeneMobileCalendarTouchTests(TestCase):
                 response = self.client.get(url, follow=True)
                 self.assertEqual(response.status_code, 200)
                 html = response.content.decode(response.charset)
-                self.assertIn("Phase 96b: give the seven mobile calendar days", html)
-                self.assertIn("width: min(100vw, 376px) !important", html)
+                self.assertIn("Phase102j: keep the phone calendar inside its column.", html)
+                self.assertIn('class="calendar-scroll-region" role="region"', html)
+                self.assertIn("min-width: 344px", html)
+                self.assertNotIn("width: min(100vw, 376px) !important", html)
                 self.assertIn("column-gap: 1px", html)
                 self.assertIn("min-width: 44px !important", html)
 
@@ -38,6 +40,6 @@ class Phase96bSjeneMobileCalendarTouchTests(TestCase):
         response = self.client.get(reverse("user_blog", args=[self.author.username]))
         self.assertEqual(response.status_code, 200)
         self.assertNotIn(
-            "Phase 96b: give the seven mobile calendar days",
+            "Phase102j: keep the phone calendar inside its column.",
             response.content.decode(response.charset),
         )
