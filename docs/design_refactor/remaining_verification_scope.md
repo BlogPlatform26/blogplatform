@@ -113,3 +113,8 @@ Misticno/Sjene32-state audit completed. Misticno phone dense days overlap (44px 
 ## Phase102j
 
 Misticno/Sjene phone calendar overlap/position closed:32 final states doc/grid0,44px days with6px gaps, tablet/desktop sampled geometry and actual ink unchanged102i.214tests94.641s. Safe189/190/197/204 and Right40 both. Existing Sjene header spacing remains follow-up; no whole-theme pass. Next initial series Mjesecev ples/Asfaltni plamen.
+
+
+## Phase102k
+
+Mjesecev/Asfaltni32-state audit recorded. Both320 calendarx=-7.67/doc8;390x=-0.67. Tablet dense weeks fit. Safe205/206/213/220. All37 current series covered, not37 passes: confirmed calendar repair and broader recorded work remain. See phase102k_mjesecev_asfaltni_matrix.md.
