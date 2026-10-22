@@ -28,7 +28,9 @@ class Phase96cMjesecevMobileCalendarTouchTests(TestCase):
                 self.assertEqual(response.status_code, 200)
                 html = response.content.decode(response.charset)
                 self.assertIn("Phase 96c: let all seven moonlit day targets", html)
-                self.assertIn("width: min(100vw, 376px) !important", html)
+                self.assertNotIn("width: min(100vw, 376px) !important", html)
+                self.assertIn('class="calendar-scroll-region" role="region"', html)
+                self.assertIn("min-width: 344px", html)
                 self.assertIn("column-gap: 1px !important", html)
                 self.assertIn("min-width: 44px !important", html)
 
