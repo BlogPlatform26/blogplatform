@@ -1,25 +1,41 @@
-# Remaining scope after Phase101n
+# Remaining acceptance scope after Phase102l
 
-This ledger is not a completion percentage. Earlier estimates lacked a stable workload denominator and cannot support an ETA. Historical implementation and current verification are distinct.
+All 37 design keys have a current series. This is coverage, not 37 accepted designs. The initial per-design series is finished; do not restart it. Phase102l (0f39587) closed the last recorded phone calendar positioning failures in Mjesecev/Asfaltni. Previously closed findings are reopened only with new evidence.
 
-| Workstream | Existing evidence | Remaining acceptance work |
+## Current work queue
+
+| Order | Remaining work | Evidence and acceptance boundary |
 | --- | --- | --- |
-| Base/Simple nine keys | 100a; subsequent 100d/e/f fixes | Full factory Default without legacy ID1; reconcile later fixes; local overflow and outstanding targets |
-| Studio/Magazin | 100g; 100h/i/k fixes | Reconcile final matrix, targets and unproven photo zones |
-| Litica/Podvodna | 100l; 100m/n/o/q fixes; 100r bound | Remaining photographic evidence and targets; analytical bound is not direct rendered-pixel proof |
-| Vodopad/Planine | 100s; 100t dates; 100u titles; 100v comment wrapping; 100w dense calendars; 100x subtitle and keyboard proof | Photo zones and desktop targets |
-| Nebeski mir / Svemirski horizont | 100y audit; 100z timestamp/mobile-body contrast and phone wrapping fixes | 101b dense calendars closed; photo zones and desktop targets remain |
-| Zlatni horizont / Iznad oblaka | 101c standard+dense audit and phone/contrast fixes | 101e factory labels fixed; actual text-fill reconciliation, photo zones and desktop targets remain |
-| Other 18 keys | Historical reports in working index | Current blog/detail 320/390/768/1440 with comments, photo surfaces, overflow, targets and safe navigation; repair failures |
-| User-facing pages | Phase75 inventory; 76â€“81 dashboard/settings/forms/editor/profile/notification work | Reconcile historical evidence with routes, verify uncovered controls and public/account/content flows, current regressions. These pages are not wholly unimplemented |
+| 1 | Phone usability follow-ups | Sjene/Mjesecev/Asfaltni large header gaps (102j/k/l screenshots); Dimni narrow comments at320 (101y). Measure available content width and spacing, fix only confirmed problems, preserve desktop. |
+| 2 | Photograph-dependent readability | Lavande header/title/subtitle (101w); Jedro body/registration/calendar/profile (102g/h); remaining photo-null text and labels in existing raw evidence. Verify actual child fill and the rendered photographic background. Fallback contrast and Podvodna100r analytical bounds are not rendered-pixel proof. |
+| 3 | Outstanding target and dense-week evidence | Desktop calendar targets remain small in several series. Base dark/classic/right tablet columns were repaired in101i but that phase did not verify a populated week. Use existing evidence to identify missing cases, then test only those cases;44px dimensions alone do not prove nonoverlap. |
+| 4 | Full factory Default | Verify factory Default without legacy ID1. Existing Base fixtures and shared checks do not close this requirement. Preserve custom palettes. |
+| 5 | User-facing routes and controls | Reconcile Phase75 route inventory with Phase76–81 implementations before testing uncovered public/account/content/dashboard flows. These pages are not wholly unimplemented. Staff-only admin stays a separate audit. |
+| 6 | Final acceptance matrix | Link each requirement to its latest proof and explicitly list unresolved cases. The working37 index is a retrieval index, not final acceptance. Close the goal only after required gaps above are resolved. |
 
-The 18 keys awaiting current series: sumska_svjetlost, polarna_svjetlost, zlatno_polje, neonski_grad, polje_lavande, carobna_ljubicasta, kraljevska_pozornica, dimni_akordi, nebeska_klasika, ponocna_elegancija, ruzicasti_vrt, stara_aleja, staza_prema_vrhovima, jedro_u_suton, misticno_jezero, sjene_ulice, mjesecev_ples, asfaltni_plamen.
+The queue is finite by workstream, but unresolved photo/route cases have not yet been enumerated into a reliable remaining workload. Do not infer a percentage or ETA from37-key coverage.
 
-Each key needs current evidence and closure of findings while preserving desktop appearance. Null photo contrast stays unresolved. Dense calendars require an actual populated week. User-page coverage follows the route inventory; staff-only admin remains a separate audit. Check later fixes before repeating historical findings.
+## Closed initial-series work
 
-Implementation gates remain isolated fixtures, browser before/after, safe navigation, check/migration/full suite, durable raw evidence and design-refactor-only push. Original repo/database/media/port8000 stay untouched; no main/merge/deploy.
+- Sumska/Polarna:101m–q title/comment/date ink, phone wrapping, dense calendars and phone archive/active labels.
+- Zlatno/Neonski:101s–u phone wrapping, dense calendars and confirmed Zlatno like/archive ink.
+- Lavande/Carobna:101v–w phone wrapping/calendars and Lavande factory archive.
+- Kraljevska/Dimni:101y–z phone wrapping/calendars.
+- Nebeska klasika/Ponocna:102b–c phone grid/calendars and Nebeska timestamp.
+- Ruzicasti/Stara:102e–f phone calendars and Ruzicasti month/weekday ink.
+- Staza/Jedro:102h phone intrinsic grid and dense calendar containment.
+- Misticno/Sjene:102j phone calendar containment/position.
+- Mjesecev/Asfaltni:102l phone calendar position.
 
-Next: close remaining weekday/archive actual-fill findings from101f and continue the remaining18 current theme series. Inspect actual overlaps as well as document overflow. Do not infer a total percentage from theme coverage.
+Earlier Base/Simple/editorial/scenic fixes remain recorded below and in their phase documents. Closure is limited to the measured finding, not the whole design.
+
+## Implementation gates
+
+Use isolated fixtures and browser before/after at320/390/768/1440, actual text fill/backgrounds, local overflow and overlap checks, safe navigation, check/migration/full suite, and durable raw evidence for application changes. Restart the QA server after changing a cached template. Push only origin/design-refactor. Original repo/database/media/port8000 and main/merge/deploy remain untouched.
+
+## Historical progression (superseded queue statements)
+
+The entries below preserve provenance. Their old “next” lists and coverage counts are historical, not current instructions; the current queue above takes precedence.
 
 Phase101e evidence correction: final contrast evidence must use actual -webkit-text-fill-color where present, not color alone. Reconcile prior passes where inherited fill differs. Iznad factory month/archive/arrow fill corrected and verified8.190:1.
 
