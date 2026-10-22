@@ -544,6 +544,16 @@ input.form-control::placeholder {
         justify-self: stretch !important;
     }
 }
-    </style>
+
+/* Phase102n: stacked phone sections need spacing, not repeated desktop hero offsets. */
+@media (max-width: 767.98px) {
+    html body .blog-main-layout-row .page-top-align {
+        margin-top: 24px;
+    }
+    html body .blog-posts-shell > .page-top-align {
+        margin-top: 0;
+    }
+}
+</style>
     {% include "blog/components/blog_posts.html" %}
 {% endblock %}

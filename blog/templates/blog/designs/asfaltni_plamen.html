@@ -558,6 +558,32 @@ input.form-control::placeholder {
         gap: 8px !important;
     }
 }
-    </style>
+
+/* Phase102n: stacked phone sections need spacing, not repeated desktop hero offsets. */
+@media (max-width: 767.98px) {
+    html body .blog-main-layout-row .page-top-align {
+        margin-top: 24px;
+    }
+    html body .blog-posts-shell > .page-top-align {
+        margin-top: 0;
+    }
+}
+
+/* The calendar can now overlap the smoke photograph: keep its backing stable. */
+@media (max-width: 767.98px) {
+    html body .calendar-box,
+    html body .archive-box,
+    html body .sidebar-box,
+    html body .live-analytics-widget,
+    html body .blog-profile-panel,
+    html body .blog-post-entry {
+        background: #18110d !important;
+    }
+    html body .calendar-day-today {
+        background: #21140e !important;
+        border-color: #dda065 !important;
+    }
+}
+</style>
     {% include "blog/components/blog_posts.html" %}
 {% endblock %}
