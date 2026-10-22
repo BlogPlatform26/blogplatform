@@ -666,6 +666,15 @@ html body .blog-header-main .blog-page-subtitle {
     text-shadow: none;
 }
 {% endif %}
+
+/* Phase102q: stable calendar backing and weekday ink across photographic crops. */
+html body .calendar-box {
+    background: #f5e6fa !important;
+}
+html body .calendar-weekdays > div {
+    color: #5a3271;
+    -webkit-text-fill-color: currentColor;
+}
 </style>
     {% include "blog/components/blog_posts.html" %}
 {% endblock %}
