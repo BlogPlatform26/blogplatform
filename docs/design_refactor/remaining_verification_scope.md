@@ -1,4 +1,4 @@
-# Remaining acceptance scope after Phase102o
+# Remaining acceptance scope after Phase102p
 
 All 37 design keys have a current series. This is coverage, not 37 accepted designs. The initial per-design series is finished; do not restart it. Phase102l (0f39587) closed the last recorded phone calendar positioning failures in Mjesecev/Asfaltni. Previously closed findings are reopened only with new evidence.
 
@@ -7,7 +7,7 @@ All 37 design keys have a current series. This is coverage, not 37 accepted desi
 | Order | Remaining work | Evidence and acceptance boundary |
 | --- | --- | --- |
 | 1 | Phone usability follow-ups | Sjene/Mjesecev/Asfaltni large phone gaps closed in102n. Dimni narrow comments closed in102o: text width76 to198px at320, tablet/desktop unchanged. These recorded usability items are closed; do not repeat them. |
-| 2 | Photograph-dependent readability | Lavande header/title/subtitle (101w); Jedro body/registration/calendar/profile (102g/h); remaining photo-null text and labels in existing raw evidence. Verify actual child fill and the rendered photographic background. Fallback contrast and Podvodna100r analytical bounds are not rendered-pixel proof. |
+| 2 | Photograph-dependent readability | Lavande factory header/title/subtitle closed102p (opaque9.647); its calendar/photo labels remain; Jedro body/registration/calendar/profile (102g/h); remaining photo-null text and labels in existing raw evidence. Verify actual child fill and the rendered photographic background. Fallback contrast and Podvodna100r analytical bounds are not rendered-pixel proof. |
 | 3 | Outstanding target and dense-week evidence | Desktop calendar targets remain small in several series. Base dark/classic/right tablet columns were repaired in101i but that phase did not verify a populated week. Use existing evidence to identify missing cases, then test only those cases;44px dimensions alone do not prove nonoverlap. |
 | 4 | Full factory Default | Verify factory Default without legacy ID1. Existing Base fixtures and shared checks do not close this requirement. Preserve custom palettes. |
 | 5 | User-facing routes and controls | Reconcile Phase75 route inventory with Phase76–81 implementations before testing uncovered public/account/content/dashboard flows. These pages are not wholly unimplemented. Staff-only admin stays a separate audit. |

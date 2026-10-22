@@ -656,6 +656,16 @@ html body [id^="comments-"] .comment-item .comment-author a {
         font-size: 26px;
     }
 }
-    </style>
+
+{% if blog_preferences.active_design_customization.blog_title_color == '#4f2768' %}
+/* Phase102p: factory header ink needs a stable surface over the lavender photo. */
+html body .blog-header-main .blog-page-title,
+html body .blog-header-main .blog-page-subtitle {
+    background: #f5e6fa !important;
+    opacity: 1;
+    text-shadow: none;
+}
+{% endif %}
+</style>
     {% include "blog/components/blog_posts.html" %}
 {% endblock %}
