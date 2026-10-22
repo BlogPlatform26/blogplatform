@@ -1,0 +1,5 @@
+# Phase102m: targeted phone spacing diagnosis
+
+Read-only browser inspection at320px confirms repeated page-top-align margins: Sjene214px, Mjesecev/Asfaltni210px before calendar, post shell and profile. Nested post wrappers carry the same margin but collapse; do not add their values as independent gaps. First post tops are1143.198/1151.750/1167.750px respectively. Raw rendered rectangles are in phase102m_spacing_before.json.
+
+This identifies the specific cause of the recorded usability follow-up, without repeating the37-theme audit. Application unchanged. Next: phone-only spacing correction, preserving tablet/desktop geometry, with before/after320/390/768/1440 blog/detail and real-background readability checks. Moving text upward changes the photograph behind it, so unchanged CSS ink alone cannot prove preserved contrast. Existing photo-null findings remain open. Check/migration/full suite required after implementation; not rerun for this diagnosis. Own8017 server/tab closed and viewport reset.
