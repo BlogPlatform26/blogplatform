@@ -1,4 +1,6 @@
-# Remaining acceptance scope after Phase102y
+# Remaining acceptance scope after Phase102z
+
+Phase102z closes missing default-post image requests in all three home fallback branches with a local decorative SVG. Four featured before/after widths and four all-post after controls load the asset with no document overflow. This intentionally restores image height where the broken image had collapsed; it does not claim identical card geometry or close route/contrast acceptance.
 
 Phase102y adds populated featured/tag/user/post and logged-in following evidence. It closes long search-user name clipping, phone secondary featured card width and missing last-page previous navigation.20 guest before/after states plus4 following states,217 tests pass. See phase102y_populated_discovery.md for exact limits; contrast, empty following/owner distinctions, keyboard order, tablet usability and missing image fallback remain open.
 
