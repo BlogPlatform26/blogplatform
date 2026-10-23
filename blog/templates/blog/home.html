@@ -140,11 +140,18 @@
 }
 
 @media (max-width: 767.98px){
+    .featured-secondary-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .featured-secondary-title, .featured-secondary-author { overflow-wrap: anywhere; }
     .featured-time-badge{
         top: 10px;
         right: 12px;
         font-size: 12px;
     }
+}
+</style>
+<style>
+@media (max-width: 575.98px) {
+    .featured-secondary-grid { grid-template-columns: minmax(0, 1fr); }
 }
 </style>
 
@@ -413,7 +420,7 @@
 {% endblock %}
 
 {% block after_main_row %}
-{% if filter_type == "featured" and featured_secondary_posts %}
+{% if filter_type == "featured" and featured_page.has_other_pages %}
 <div class="featured-secondary-wrap">
     <div class="featured-nav-row">
         {% if featured_page and featured_page.has_previous %}
@@ -429,6 +436,7 @@
         {% endif %}
     </div>
 
+    {% if featured_secondary_posts %}
     <h2 class="mt-4 mb-4">Više istaknutih</h2>
 
     <div class="featured-secondary-grid">
@@ -463,6 +471,7 @@
             </div>
         {% endfor %}
     </div>
+    {% endif %}
 </div>
 {% endif %}
 {% endblock %}

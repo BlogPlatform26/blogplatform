@@ -4,7 +4,7 @@
 
 {% block content %}
 <style>
-.search-query { overflow-wrap: anywhere; }
+.search-query, .search-user-result { overflow-wrap: anywhere; }
 @media (max-width: 767.98px) {
     .search-scope { display: flex; flex-wrap: wrap; gap: 8px; }
     .search-scope .filter-link, .search-pagination .btn {
@@ -116,7 +116,7 @@
         <h6 class="mt-4 mb-2">Korisnici</h6>
 
         {% for u in users_found %}
-            <div class="mb-2">
+            <div class="mb-2 search-user-result">
                 <a href="{% url 'user_blog' u.username %}" class="text-decoration-none">
                     {{ u.profile.blog_name }} <span class="text-muted">(@{{ u.username }})</span>
                 </a>
