@@ -1,4 +1,4 @@
-# Remaining acceptance scope after Phase102s
+# Remaining acceptance scope after Phase102t
 
 All 37 design keys have a current series. This is coverage, not 37 accepted designs. The initial per-design series is finished; do not restart it. Phase102l (0f39587) closed the last recorded phone calendar positioning failures in Mjesecev/Asfaltni. Previously closed findings are reopened only with new evidence.
 
@@ -13,7 +13,7 @@ All 37 design keys have a current series. This is coverage, not 37 accepted desi
 | 5 | User-facing routes and controls | Reconcile Phase75 route inventory with Phase76–81 implementations before testing uncovered public/account/content/dashboard flows. These pages are not wholly unimplemented. Staff-only admin stays a separate audit. |
 | 6 | Final acceptance matrix | Link each requirement to its latest proof and explicitly list unresolved cases. The working37 index is a retrieval index, not final acceptance. Close the goal only after required gaps above are resolved. |
 
-The queue is finite by workstream, but unresolved photo/route cases have not yet been enumerated into a reliable remaining workload. Do not infer a percentage or ETA from37-key coverage.
+The queue is finite by workstream, but routes are now grouped into12 explicit remaining batches in102t; photo cases still require enumeration from existing raw evidence. These are not a reliable time estimate. Do not infer a percentage or ETA from37-key coverage.
 
 ## Closed initial-series work
 

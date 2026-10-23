@@ -1,0 +1,415 @@
+{
+  "base_commit": "7633b61d4ea459a19b0eaeeb98e887f1cceec301",
+  "source": "blogplatform\\urls.py",
+  "method": "AST inventory, not runtime or acceptance proof",
+  "routes": [
+    {
+      "route": "mentions/search/",
+      "name": "mention_search",
+      "view": "views.mention_search",
+      "line": 20
+    },
+    {
+      "route": "ckeditor5/",
+      "name": null,
+      "view": "include('django_ckeditor_5.urls')",
+      "line": 22
+    },
+    {
+      "route": "blog/settings/export-posts/",
+      "name": "export_my_posts",
+      "view": "export_my_posts",
+      "line": 23
+    },
+    {
+      "route": "favicon.ico",
+      "name": "favicon",
+      "view": "RedirectView.as_view(url='/static/images/favicon.png', permanent=False)",
+      "line": 25
+    },
+    {
+      "route": "admin/security-events/overview/",
+      "name": "security_events_dashboard",
+      "view": "views.security_events_dashboard",
+      "line": 30
+    },
+    {
+      "route": "blog/settings/export-posts/",
+      "name": "export_my_posts",
+      "view": "views.export_my_posts",
+      "line": 31
+    },
+    {
+      "route": "admin/post-exports/",
+      "name": "admin_post_exports",
+      "view": "views.admin_post_exports",
+      "line": 32
+    },
+    {
+      "route": "admin/post-exports/<int:user_id>/download/",
+      "name": "admin_export_user_posts",
+      "view": "views.admin_export_user_posts",
+      "line": 33
+    },
+    {
+      "route": "admin/",
+      "name": null,
+      "view": "admin.site.urls",
+      "line": 34
+    },
+    {
+      "route": "",
+      "name": "home",
+      "view": "home",
+      "line": 35
+    },
+    {
+      "route": "pravila-koristenja/",
+      "name": "terms_of_use",
+      "view": "views.terms_of_use",
+      "line": 36
+    },
+    {
+      "route": "politika-privatnosti/",
+      "name": "privacy_policy",
+      "view": "views.privacy_policy",
+      "line": 37
+    },
+    {
+      "route": "pravila-sadrzaja/",
+      "name": "content_rules",
+      "view": "views.content_rules",
+      "line": 38
+    },
+    {
+      "route": "post/<int:post_id>/like/",
+      "name": "like_post",
+      "view": "views.like_post",
+      "line": 40
+    },
+    {
+      "route": "post/<int:post_id>/edit/",
+      "name": "edit_post",
+      "view": "edit_post",
+      "line": 43
+    },
+    {
+      "route": "post/<int:post_id>/delete/",
+      "name": "delete_post",
+      "view": "delete_post",
+      "line": 44
+    },
+    {
+      "route": "post/<int:pk>/comment/",
+      "name": "create_comment",
+      "view": "views.create_comment",
+      "line": 45
+    },
+    {
+      "route": "post/<int:post_id>/<slug:post_slug>/",
+      "name": "post_detail_slug",
+      "view": "post_detail",
+      "line": 46
+    },
+    {
+      "route": "post/<int:post_id>/",
+      "name": "post_detail",
+      "view": "post_detail",
+      "line": 48
+    },
+    {
+      "route": "sitemap.xml",
+      "name": "sitemap_xml",
+      "view": "views.sitemap_xml",
+      "line": 49
+    },
+    {
+      "route": "robots.txt",
+      "name": "robots_txt",
+      "view": "views.robots_txt",
+      "line": 50
+    },
+    {
+      "route": "google971f18637c646cba.html",
+      "name": "google_site_verification",
+      "view": "views.google_site_verification",
+      "line": 51
+    },
+    {
+      "route": "register/",
+      "name": "register",
+      "view": "register",
+      "line": 52
+    },
+    {
+      "route": "aktivacija/",
+      "name": "activation_sent",
+      "view": "views.activation_sent",
+      "line": 53
+    },
+    {
+      "route": "o-autoru/",
+      "name": "author_onboarding",
+      "view": "views.author_onboarding",
+      "line": 54
+    },
+    {
+      "route": "login/",
+      "name": "login",
+      "view": "views.custom_login",
+      "line": 55
+    },
+    {
+      "route": "logout/",
+      "name": "logout",
+      "view": "auth_views.LogoutView.as_view()",
+      "line": 56
+    },
+    {
+      "route": "account/delete/",
+      "name": "request_delete_account",
+      "view": "views.request_delete_account",
+      "line": 57
+    },
+    {
+      "route": "account/reactivate/<uidb64>/<token>/",
+      "name": "reactivate_account",
+      "view": "views.reactivate_account",
+      "line": 58
+    },
+    {
+      "route": "account/deactivate/",
+      "name": "deactivate_account",
+      "view": "views.deactivate_account",
+      "line": 60
+    },
+    {
+      "route": "new/",
+      "name": "create_post",
+      "view": "create_post",
+      "line": 61
+    },
+    {
+      "route": "comment/<int:comment_id>/delete/",
+      "name": "delete_comment",
+      "view": "delete_comment",
+      "line": 62
+    },
+    {
+      "route": "comment/<int:comment_id>/edit/",
+      "name": "edit_comment",
+      "view": "edit_comment",
+      "line": 63
+    },
+    {
+      "route": "profile/",
+      "name": "profile",
+      "view": "profile",
+      "line": 64
+    },
+    {
+      "route": "profile/edit/",
+      "name": "edit_profile",
+      "view": "edit_profile",
+      "line": 65
+    },
+    {
+      "route": "password_change/",
+      "name": "password_change",
+      "view": "auth_views.PasswordChangeView.as_view(template_name='blog/password_change.html')",
+      "line": 66
+    },
+    {
+      "route": "password_change/done/",
+      "name": "password_change_done",
+      "view": "auth_views.PasswordChangeDoneView.as_view(template_name='blog/password_change_done.html')",
+      "line": 67
+    },
+    {
+      "route": "blog/settings/",
+      "name": "blog_settings",
+      "view": "views.blog_settings",
+      "line": 68
+    },
+    {
+      "route": "blog/settings/autosave-post-draft/",
+      "name": "autosave_post_draft",
+      "view": "views.autosave_post_draft",
+      "line": 69
+    },
+    {
+      "route": "blog/settings/live-editor/naslovi/",
+      "name": "design_live_editor_titles",
+      "view": "views.design_live_editor_titles",
+      "line": 70
+    },
+    {
+      "route": "blog/<str:username>/upoznaj-autora/",
+      "name": "author_detail",
+      "view": "views.author_detail",
+      "line": 71
+    },
+    {
+      "route": "blog/<str:username>/upoznaj-autora/pitanje/",
+      "name": "submit_author_question",
+      "view": "views.submit_author_question",
+      "line": 72
+    },
+    {
+      "route": "blog/<str:username>/",
+      "name": "user_blog",
+      "view": "views.user_blog",
+      "line": 73
+    },
+    {
+      "route": "add-box/",
+      "name": "add_box",
+      "view": "views.add_box",
+      "line": 74
+    },
+    {
+      "route": "box/<int:box_id>/edit/",
+      "name": "edit_box",
+      "view": "views.edit_box",
+      "line": 75
+    },
+    {
+      "route": "box/<int:box_id>/delete/",
+      "name": "delete_box",
+      "view": "views.delete_box",
+      "line": 76
+    },
+    {
+      "route": "follow/<str:username>/",
+      "name": "follow_toggle",
+      "view": "views.follow_toggle",
+      "line": 77
+    },
+    {
+      "route": "notifications/",
+      "name": "notifications",
+      "view": "views.notifications",
+      "line": 78
+    },
+    {
+      "route": "notifications/read-all/",
+      "name": "mark_all_notifications_read",
+      "view": "views.mark_all_notifications_read",
+      "line": 79
+    },
+    {
+      "route": "notification/<int:notification_id>/",
+      "name": "notification_redirect",
+      "view": "views.notification_redirect",
+      "line": 80
+    },
+    {
+      "route": "delete-avatar/",
+      "name": "delete_avatar",
+      "view": "views.delete_avatar",
+      "line": 81
+    },
+    {
+      "route": "password-reset/",
+      "name": "password_reset",
+      "view": "auth_views.PasswordResetView.as_view(template_name='registration/password_reset_form.html')",
+      "line": 82
+    },
+    {
+      "route": "password-reset/done/",
+      "name": "password_reset_done",
+      "view": "auth_views.PasswordResetDoneView.as_view(template_name='registration/password_reset_done.html')",
+      "line": 89
+    },
+    {
+      "route": "reset/<uidb64>/<token>/",
+      "name": "password_reset_confirm",
+      "view": "auth_views.PasswordResetConfirmView.as_view(template_name='registration/password_reset_confirm.html')",
+      "line": 97
+    },
+    {
+      "route": "reset/done/",
+      "name": "password_reset_complete",
+      "view": "auth_views.PasswordResetCompleteView.as_view(template_name='registration/password_reset_complete.html')",
+      "line": 105
+    },
+    {
+      "route": "activate/<uidb64>/<token>/",
+      "name": "activate",
+      "view": "views.activate",
+      "line": 112
+    },
+    {
+      "route": "confirm-email/<uidb64>/<token>/",
+      "name": "confirm_email_change",
+      "view": "views.confirm_email_change",
+      "line": 113
+    },
+    {
+      "route": "resend-confirmation/",
+      "name": "resend_confirmation_email",
+      "view": "views.resend_confirmation_email",
+      "line": 114
+    },
+    {
+      "route": "search/",
+      "name": "search",
+      "view": "views.search",
+      "line": 117
+    },
+    {
+      "route": "post/<int:post_id>/quiz/answer/",
+      "name": "quiz_answer",
+      "view": "views.quiz_answer",
+      "line": 120
+    },
+    {
+      "route": "post/<int:post_id>/poll/vote/",
+      "name": "poll_vote",
+      "view": "views.poll_vote",
+      "line": 121
+    },
+    {
+      "route": "bug-report/",
+      "name": "submit_bug_report",
+      "view": "submit_bug_report",
+      "line": 122
+    },
+    {
+      "route": "admin-box/update/",
+      "name": "update_site_message",
+      "view": "update_site_message",
+      "line": 123
+    },
+    {
+      "route": "block/<str:username>/",
+      "name": "block_user",
+      "view": "views.block_user",
+      "line": 124
+    },
+    {
+      "route": "restrict/<str:username>/",
+      "name": "restrict_user",
+      "view": "views.restrict_user",
+      "line": 125
+    },
+    {
+      "route": "unfollow/<str:username>/",
+      "name": "unfollow_user",
+      "view": "views.unfollow_user",
+      "line": 126
+    },
+    {
+      "route": "analytics/ping/",
+      "name": "analytics_ping",
+      "view": "analytics_ping",
+      "line": 127
+    },
+    {
+      "route": "blog/<str:username>/analytics-summary/",
+      "name": "blog_analytics_summary",
+      "view": "blog_analytics_summary",
+      "line": 128
+    }
+  ]
+}
