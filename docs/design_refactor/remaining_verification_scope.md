@@ -1,4 +1,4 @@
-# Remaining acceptance scope after Phase102t
+# Remaining acceptance scope after Phase102u
 
 All 37 design keys have a current series. This is coverage, not 37 accepted designs. The initial per-design series is finished; do not restart it. Phase102l (0f39587) closed the last recorded phone calendar positioning failures in Mjesecev/Asfaltni. Previously closed findings are reopened only with new evidence.
 
