@@ -3,6 +3,15 @@
 {% load custom_tags %}
 
 {% block content %}
+<style>
+@media (max-width: 767.98px) {
+    .search-scope { display: flex; flex-wrap: wrap; gap: 8px; }
+    .search-scope .filter-link, .search-pagination .btn {
+        display: inline-flex; align-items: center; justify-content: center;
+        min-width: 44px; min-height: 44px;
+    }
+}
+</style>
 
 <h4 class="mb-3">Pretraga</h4>
 
@@ -17,7 +26,7 @@
         <strong>"{{ q }}"</strong>
     </div>
 
-    <div class="post-filter mb-4">
+    <div class="post-filter search-scope mb-4">
         <a href="{% url 'search' %}?q={{ q|urlencode }}&scope=all"
         class="filter-link {% if scope == 'all' %}active{% endif %}">
             Sve
@@ -89,6 +98,17 @@
         {% empty %}
             <p class="text-muted">Nema postova za ovaj pojam.</p>
         {% endfor %}
+        {% if posts.has_other_pages %}
+        <nav class="search-pagination d-flex flex-wrap justify-content-center gap-2 my-4" aria-label="Stranice rezultata pretrage">
+            {% if posts.has_previous %}
+            <a class="btn btn-sm btn-outline-secondary" rel="prev" href="?q={{ q|urlencode }}&scope={{ scope|urlencode }}&page={{ posts.previous_page_number }}">Prethodna</a>
+            {% endif %}
+            <span class="align-self-center small">Stranica {{ posts.number }} / {{ posts.paginator.num_pages }}</span>
+            {% if posts.has_next %}
+            <a class="btn btn-sm btn-outline-secondary" rel="next" href="?q={{ q|urlencode }}&scope={{ scope|urlencode }}&page={{ posts.next_page_number }}">Sljedeca</a>
+            {% endif %}
+        </nav>
+        {% endif %}
     {% endif %}
 
     {% if scope == "all" or scope == "users" %}

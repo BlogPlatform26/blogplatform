@@ -30,6 +30,12 @@
 {% block content %}
 
 <style>
+@media (max-width: 767.98px) {
+    .home-pagination .btn, .featured-nav-row .btn {
+        display: inline-flex; align-items: center; justify-content: center;
+        min-width: 44px; min-height: 44px;
+    }
+}
 .featured-card-wrap{
     position: relative;
 }
@@ -391,7 +397,7 @@
 {% endif %}
 
 {% if filter_type != "featured" and posts.has_other_pages %}
-<div class="d-flex justify-content-center gap-2 mt-4 mb-4 flex-wrap">
+<div class="home-pagination d-flex justify-content-center gap-2 mt-4 mb-4 flex-wrap">
     {% if posts.has_previous %}
         <a href="?page={{ posts.previous_page_number }}{% if request.GET.filter %}&filter={{ request.GET.filter }}{% endif %}{% if active_category %}&category={{ active_category }}{% endif %}{% if active_tag %}&tag={{ active_tag|urlencode }}{% endif %}" class="btn btn-sm btn-outline-secondary">Prethodna</a>
     {% endif %}

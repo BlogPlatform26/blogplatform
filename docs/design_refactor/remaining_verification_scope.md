@@ -1,4 +1,6 @@
-# Remaining acceptance scope after Phase102u
+# Remaining acceptance scope after Phase102v
+
+Phase102v closes missing search post pagination and phone search-scope/home-pagination target sizing.24 guest states, query/scope-preserving next/previous and216 tests pass. U01 remains open for support ordering, following-owner, populated featured/tags, long text and composed contrast. See phase102v_search_pagination.md; do not repeat these closed navigation fixes.
 
 All 37 design keys have a current series. This is coverage, not 37 accepted designs. The initial per-design series is finished; do not restart it. Phase102l (0f39587) closed the last recorded phone calendar positioning failures in Mjesecev/Asfaltni. Previously closed findings are reopened only with new evidence.
 
