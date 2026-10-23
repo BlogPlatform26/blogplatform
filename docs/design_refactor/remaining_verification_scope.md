@@ -1,4 +1,6 @@
-# Remaining acceptance scope after Phase102w
+# Remaining acceptance scope after Phase102x
+
+Phase102x closes unbroken search query-summary clipping at320/390/768/1440 using actual text rectangles (document overflow was already0 before). Ordinary query controls retain measured geometry/fill. This does not close long result content, populated tags/featured, following-owner, keyboard order or contrast.
 
 Phase102w closes phone visual support-before-results ordering for home/search:24 states,12 phone column nonoverlap checks, tablet/desktop sampled rectangles identical. Source/keyboard order remains a separate open workflow check. U01 following-owner, populated featured/tags, long text and composed contrast remain open. See phase102w_discovery_content_order.md.
 

@@ -4,6 +4,7 @@
 
 {% block content %}
 <style>
+.search-query { overflow-wrap: anywhere; }
 @media (max-width: 767.98px) {
     .search-scope { display: flex; flex-wrap: wrap; gap: 8px; }
     .search-scope .filter-link, .search-pagination .btn {
@@ -21,7 +22,7 @@
     </div>
 {% else %}
 
-    <div class="mb-3">
+    <div class="mb-3 search-query">
         <span class="text-muted">Tražiš:</span>
         <strong>"{{ q }}"</strong>
     </div>
