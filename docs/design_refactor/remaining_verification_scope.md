@@ -1,4 +1,6 @@
-# Remaining acceptance scope after Phase102v
+# Remaining acceptance scope after Phase102w
+
+Phase102w closes phone visual support-before-results ordering for home/search:24 states,12 phone column nonoverlap checks, tablet/desktop sampled rectangles identical. Source/keyboard order remains a separate open workflow check. U01 following-owner, populated featured/tags, long text and composed contrast remain open. See phase102w_discovery_content_order.md.
 
 Phase102v closes missing search post pagination and phone search-scope/home-pagination target sizing.24 guest states, query/scope-preserving next/previous and216 tests pass. U01 remains open for support ordering, following-owner, populated featured/tags, long text and composed contrast. See phase102v_search_pagination.md; do not repeat these closed navigation fixes.
 

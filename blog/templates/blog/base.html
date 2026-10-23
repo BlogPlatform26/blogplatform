@@ -1378,7 +1378,14 @@
     </div>
     {% endif %}
 
-<div class="row align-items-start gx-4 home-main-row blog-main-layout-row {% if request.resolver_match.url_name == "home" %}home-layout-row{% endif %}{% if blog.profile.template == 'simple_retro' %} blog-main-layout-row--simple-retro{% endif %}">
+{% if request.resolver_match.url_name == 'home' or request.resolver_match.url_name == 'search' %}
+<style>
+@media (max-width: 767.98px) {
+    .discovery-layout-row > .blog-main-content-column { order: -1; }
+}
+</style>
+{% endif %}
+<div class="row align-items-start gx-4 home-main-row blog-main-layout-row {% if request.resolver_match.url_name == 'home' or request.resolver_match.url_name == 'search' %}discovery-layout-row {% endif %}{% if request.resolver_match.url_name == "home" %}home-layout-row{% endif %}{% if blog.profile.template == 'simple_retro' %} blog-main-layout-row--simple-retro{% endif %}">
 
     <!-- LIJEVI SIDEBAR -->
     <div class="col-md-3 blog-main-left-column {% if request.resolver_match.url_name == "home" %}home-sidebar-column{% endif %}{% if blog.profile.template == 'simple_retro' %} blog-main-left-column--simple-retro{% endif %}">
