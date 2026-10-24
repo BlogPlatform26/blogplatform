@@ -1,4 +1,6 @@
-# Remaining acceptance scope after Phase103c
+# Remaining acceptance scope after Phase103d
+
+Phase103d darkens home title normal/hover gradient stops. Eight featured/all states retain title rectangles and doc0; normal actual backgroundImage verified. Calculated normal white contrast bound6.660, hover9.114; not rendered-pixel proof. Both screenshot APIs unavailable and native hover not exercised: these remain acceptance gaps. See phase103d_home_title_gradient.md. Desktop long-author clamp and empty following/owner remain next concrete U01 work.
 
 Phase103c closes secondary featured date ink (actual #595959 on white,7.005) and tablet768-991.98 three-column card width/wrapping. Six paired widths retain phone/1440 sampled rectangles, tablet author local overflow0 and nonoverlap. See phase103c_featured_secondary_cards.md. Bright gradient titles and clamped long desktop author remain open, alongside empty following/owner and other acceptance work.
 
