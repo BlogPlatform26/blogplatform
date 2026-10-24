@@ -1,4 +1,6 @@
-# Remaining acceptance scope after Phase103b
+# Remaining acceptance scope after Phase103c
+
+Phase103c closes secondary featured date ink (actual #595959 on white,7.005) and tablet768-991.98 three-column card width/wrapping. Six paired widths retain phone/1440 sampled rectangles, tablet author local overflow0 and nonoverlap. See phase103c_featured_secondary_cards.md. Bright gradient titles and clamped long desktop author remain open, alongside empty following/owner and other acceptance work.
 
 Phase103b closes discovery main-before-support keyboard/source order. Main column is rendered first in shared base; low-specificity visual left ordering preserves desktop and existing specific tablet rules. Eight native Tab checks reach first main filter after Registration. Home stable geometry and12 search/dark blog/detail states retain column rectangles. See phase103b_discovery_focus_order.md for transient measurement exclusions. U01 gradient contrast, empty following/owner and tablet secondary-card usability remain.
 
