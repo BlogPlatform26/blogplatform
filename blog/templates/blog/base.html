@@ -1380,6 +1380,10 @@
 
 {% if request.resolver_match.url_name == 'home' or request.resolver_match.url_name == 'search' %}
 <style>
+.discovery-layout-row .filter-link:not(.active):not(:hover) {
+    color: #595959;
+    -webkit-text-fill-color: #595959;
+}
 @media (max-width: 767.98px) {
     .discovery-layout-row > .blog-main-content-column { order: -1; }
 }

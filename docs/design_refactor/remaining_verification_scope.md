@@ -1,4 +1,6 @@
-# Remaining acceptance scope after Phase102z
+# Remaining acceptance scope after Phase103a
+
+Phase103a closes inactive home/search filter ink: actual #595959 on white,7.005:1 at all four widths, eight before/after filter rectangle sets identical. Native Tab after Registration on phone focuses support radio before visually earlier results; keyboard order remains confirmed open, not accepted. See phase103a_discovery_filter_ink.md.
 
 Phase102z closes missing default-post image requests in all three home fallback branches with a local decorative SVG. Four featured before/after widths and four all-post after controls load the asset with no document overflow. This intentionally restores image height where the broken image had collapsed; it does not claim identical card geometry or close route/contrast acceptance.
 
