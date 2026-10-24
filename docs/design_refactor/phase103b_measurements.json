@@ -1,0 +1,5377 @@
+{
+  "after-settled": [
+    {
+      "columns": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-6 blog-main-content-column home-content-column",
+          "fill": "rgb(33, 37, 41)",
+          "order": "-1",
+          "rect": {
+            "h": 4543.20849609375,
+            "w": 280.66668701171875,
+            "x": 12,
+            "y": 272.1875
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-left-column home-sidebar-column",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 538,
+            "w": 280.66668701171875,
+            "x": 12,
+            "y": 4815.39599609375
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-right-column home-sidebar-column",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 958,
+            "w": 280.66668701171875,
+            "x": 12,
+            "y": 5353.39599609375
+          }
+        }
+      ],
+      "overflow": 0,
+      "text": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(0, 0, 0)",
+          "rect": {
+            "h": 28,
+            "w": 120.76042175292967,
+            "x": 24,
+            "y": 272.1875
+          },
+          "text": "Istaknuti postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(89, 89, 89)",
+          "rect": {
+            "h": 28,
+            "w": 78.6875,
+            "x": 169.7604217529297,
+            "y": 272.1875
+          },
+          "text": "Svi postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "rect": {
+            "h": 25.635417938232425,
+            "w": 256.66668701171875,
+            "x": 24,
+            "y": 324.1875
+          },
+          "text": "Istaknuti postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 410.1666870117187,
+            "w": 136.08334350585938,
+            "x": 103.91667175292967,
+            "y": 467.03125
+          },
+          "text": "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 76.90625,
+            "w": 136.08334350585938,
+            "x": 103.91667175292967,
+            "y": 1583.010498046875
+          },
+          "text": "qa102y Featured result 1"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 76.90625,
+            "w": 136.08334350585938,
+            "x": 103.91667175292967,
+            "y": 2259.729248046875
+          },
+          "text": "qa102y Featured result 2"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 76.90625,
+            "w": 136.08334350585938,
+            "x": 103.91667175292967,
+            "y": 2936.447998046875
+          },
+          "text": "qa102y Featured result 3"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 76.90625,
+            "w": 136.08334350585938,
+            "x": 103.91667175292967,
+            "y": 3613.166748046875
+          },
+          "text": "qa102y Featured result 4"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 76.90625,
+            "w": 136.08334350585938,
+            "x": 103.91667175292967,
+            "y": 4289.8857421875
+          },
+          "text": "qa102y Featured result 5"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/?filter=featured",
+      "width": 320
+    },
+    {
+      "columns": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-6 blog-main-content-column home-content-column",
+          "fill": "rgb(33, 37, 41)",
+          "order": "-1",
+          "rect": {
+            "h": 3918.96875,
+            "w": 350.66668701171875,
+            "x": 12,
+            "y": 272.1875
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-left-column home-sidebar-column",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 538,
+            "w": 350.66668701171875,
+            "x": 12,
+            "y": 4191.15625
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-right-column home-sidebar-column",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 865,
+            "w": 350.66668701171875,
+            "x": 12,
+            "y": 4729.15625
+          }
+        }
+      ],
+      "overflow": 0,
+      "text": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(0, 0, 0)",
+          "rect": {
+            "h": 28,
+            "w": 120.76042175292967,
+            "x": 24,
+            "y": 272.1875
+          },
+          "text": "Istaknuti postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(89, 89, 89)",
+          "rect": {
+            "h": 28,
+            "w": 78.6875,
+            "x": 169.7604217529297,
+            "y": 272.1875
+          },
+          "text": "Svi postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "rect": {
+            "h": 25.885417938232425,
+            "w": 326.66668701171875,
+            "x": 24,
+            "y": 324.1875
+          },
+          "text": "Istaknuti postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 258.85418701171875,
+            "w": 206.08334350585935,
+            "x": 103.91667175292967,
+            "y": 506.65625
+          },
+          "text": "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 51.77083587646485,
+            "w": 206.08334350585935,
+            "x": 103.91667175292967,
+            "y": 1413.40625
+          },
+          "text": "qa102y Featured result 1"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 51.77083587646485,
+            "w": 206.08334350585935,
+            "x": 103.91667175292967,
+            "y": 2007.072998046875
+          },
+          "text": "qa102y Featured result 2"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 51.77083587646485,
+            "w": 206.08334350585935,
+            "x": 103.91667175292967,
+            "y": 2600.73974609375
+          },
+          "text": "qa102y Featured result 3"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 51.77083587646485,
+            "w": 206.08334350585935,
+            "x": 103.91667175292967,
+            "y": 3194.40625
+          },
+          "text": "qa102y Featured result 4"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 51.77083587646485,
+            "w": 206.08334350585935,
+            "x": 103.91667175292967,
+            "y": 3788.072998046875
+          },
+          "text": "qa102y Featured result 5"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/?filter=featured",
+      "width": 390
+    },
+    {
+      "columns": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-6 blog-main-content-column home-content-column",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 5575.71875,
+            "w": 304.04168701171875,
+            "x": 171.9791717529297,
+            "y": 295.1875
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-left-column home-sidebar-column",
+          "fill": "rgb(33, 37, 41)",
+          "order": "-1",
+          "rect": {
+            "h": 710,
+            "w": 152.02084350585938,
+            "x": 19.95833396911621,
+            "y": 295.1875
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-right-column home-sidebar-column",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 1628,
+            "w": 152.02084350585938,
+            "x": 476.0208435058594,
+            "y": 295.1875
+          }
+        }
+      ],
+      "overflow": 0,
+      "text": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(0, 0, 0)",
+          "rect": {
+            "h": 28,
+            "w": 120.76042175292967,
+            "x": 183.9791717529297,
+            "y": 287.1875
+          },
+          "text": "Istaknuti postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(89, 89, 89)",
+          "rect": {
+            "h": 28,
+            "w": 78.6875,
+            "x": 329.7395935058594,
+            "y": 287.1875
+          },
+          "text": "Svi postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "rect": {
+            "h": 27.25,
+            "w": 280.04168701171875,
+            "x": 183.9791717529297,
+            "y": 339.1875
+          },
+          "text": "Istaknuti postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 647.1354370117188,
+            "w": 83.01042175292969,
+            "x": 340.3333435058594,
+            "y": 407.1041870117187
+          },
+          "text": "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 103.54167175292967,
+            "w": 83.01042175292969,
+            "x": 340.3333435058594,
+            "y": 1851.510498046875
+          },
+          "text": "qa102y Featured result 1"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 103.54167175292967,
+            "w": 83.01042175292969,
+            "x": 340.3333435058594,
+            "y": 2670.322998046875
+          },
+          "text": "qa102y Featured result 2"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 103.54167175292967,
+            "w": 83.01042175292969,
+            "x": 340.3333435058594,
+            "y": 3489.135498046875
+          },
+          "text": "qa102y Featured result 3"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 103.54167175292967,
+            "w": 83.01042175292969,
+            "x": 340.3333435058594,
+            "y": 4307.9482421875
+          },
+          "text": "qa102y Featured result 4"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 103.54167175292967,
+            "w": 83.01042175292969,
+            "x": 340.3333435058594,
+            "y": 5126.7607421875
+          },
+          "text": "qa102y Featured result 5"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/?filter=featured",
+      "width": 768
+    },
+    {
+      "columns": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-6 blog-main-content-column home-content-column",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 2695.75,
+            "w": 624,
+            "x": 348,
+            "y": 295.1875
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-left-column home-sidebar-column",
+          "fill": "rgb(33, 37, 41)",
+          "order": "-1",
+          "rect": {
+            "h": 638,
+            "w": 312,
+            "x": 36,
+            "y": 295.1875
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-right-column home-sidebar-column",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 1010,
+            "w": 312,
+            "x": 972,
+            "y": 295.1875
+          }
+        }
+      ],
+      "overflow": 0,
+      "text": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(0, 0, 0)",
+          "rect": {
+            "h": 28,
+            "w": 120.76042175292967,
+            "x": 360,
+            "y": 287.1875
+          },
+          "text": "Istaknuti postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(89, 89, 89)",
+          "rect": {
+            "h": 28,
+            "w": 78.6875,
+            "x": 505.7604370117187,
+            "y": 287.1875
+          },
+          "text": "Svi postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "rect": {
+            "h": 28.791667938232425,
+            "w": 600,
+            "x": 360,
+            "y": 339.1875
+          },
+          "text": "Istaknuti postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 259.125,
+            "w": 269.65625,
+            "x": 649.6666870117188,
+            "y": 408.6458435058594
+          },
+          "text": "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 28.791667938232425,
+            "w": 269.65625,
+            "x": 649.6666870117188,
+            "y": 1151.75
+          },
+          "text": "qa102y Featured result 1"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 28.791667938232425,
+            "w": 269.65625,
+            "x": 649.6666870117188,
+            "y": 1534.5208740234375
+          },
+          "text": "qa102y Featured result 2"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 28.791667938232425,
+            "w": 269.65625,
+            "x": 649.6666870117188,
+            "y": 1917.291748046875
+          },
+          "text": "qa102y Featured result 3"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 28.791667938232425,
+            "w": 269.65625,
+            "x": 649.6666870117188,
+            "y": 2300.0625
+          },
+          "text": "qa102y Featured result 4"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 28.791667938232425,
+            "w": 269.65625,
+            "x": 649.6666870117188,
+            "y": 2682.83349609375
+          },
+          "text": "qa102y Featured result 5"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/?filter=featured",
+      "width": 1440
+    }
+  ],
+  "after": [
+    {
+      "columns": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-6 blog-main-content-column home-content-column",
+          "fill": "rgb(33, 37, 41)",
+          "order": "-1",
+          "rect": {
+            "h": 4653.5107421875,
+            "w": 280.66668701171875,
+            "x": 12,
+            "y": 272.1875
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-left-column home-sidebar-column",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 538,
+            "w": 280.66668701171875,
+            "x": 12,
+            "y": 4925.6982421875
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-right-column home-sidebar-column",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 958,
+            "w": 280.66668701171875,
+            "x": 12,
+            "y": 5463.6982421875
+          }
+        }
+      ],
+      "overflow": 0,
+      "text": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(0, 0, 0)",
+          "rect": {
+            "h": 28,
+            "w": 120.76042175292967,
+            "x": 24,
+            "y": 272.1875
+          },
+          "text": "Istaknuti postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(89, 89, 89)",
+          "rect": {
+            "h": 28,
+            "w": 78.6875,
+            "x": 169.7604217529297,
+            "y": 272.1875
+          },
+          "text": "Svi postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "rect": {
+            "h": 25.635417938232425,
+            "w": 256.66668701171875,
+            "x": 24,
+            "y": 324.1875
+          },
+          "text": "Istaknuti postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(33, 37, 41, 0.024)",
+          "rect": {
+            "h": 480.78125,
+            "w": 136.08334350585938,
+            "x": 103.91667175292967,
+            "y": 467.03125
+          },
+          "text": "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(33, 37, 41, 0.024)",
+          "rect": {
+            "h": 84.84375,
+            "w": 136.08334350585938,
+            "x": 103.91667175292967,
+            "y": 1653.625
+          },
+          "text": "qa102y Featured result 1"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(33, 37, 41, 0.024)",
+          "rect": {
+            "h": 84.84375,
+            "w": 136.08334350585938,
+            "x": 103.91667175292967,
+            "y": 2338.28125
+          },
+          "text": "qa102y Featured result 2"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(33, 37, 41, 0.024)",
+          "rect": {
+            "h": 84.84375,
+            "w": 136.08334350585938,
+            "x": 103.91667175292967,
+            "y": 3022.9375
+          },
+          "text": "qa102y Featured result 3"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(33, 37, 41, 0.024)",
+          "rect": {
+            "h": 84.84375,
+            "w": 136.08334350585938,
+            "x": 103.91667175292967,
+            "y": 3707.59375
+          },
+          "text": "qa102y Featured result 4"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(33, 37, 41, 0.024)",
+          "rect": {
+            "h": 84.84375,
+            "w": 136.08334350585938,
+            "x": 103.91667175292967,
+            "y": 4392.25
+          },
+          "text": "qa102y Featured result 5"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/?filter=featured",
+      "width": 320
+    },
+    {
+      "columns": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-6 blog-main-content-column home-content-column",
+          "fill": "rgb(33, 37, 41)",
+          "order": "-1",
+          "rect": {
+            "h": 3995.166748046875,
+            "w": 350.66668701171875,
+            "x": 12,
+            "y": 272.1875
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-left-column home-sidebar-column",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 538,
+            "w": 350.66668701171875,
+            "x": 12,
+            "y": 4267.3544921875
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-right-column home-sidebar-column",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 865,
+            "w": 350.66668701171875,
+            "x": 12,
+            "y": 4805.3544921875
+          }
+        }
+      ],
+      "overflow": 0,
+      "text": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(0, 0, 0)",
+          "rect": {
+            "h": 28,
+            "w": 120.76042175292967,
+            "x": 24,
+            "y": 272.1875
+          },
+          "text": "Istaknuti postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(89, 89, 89)",
+          "rect": {
+            "h": 28,
+            "w": 78.6875,
+            "x": 169.7604217529297,
+            "y": 272.1875
+          },
+          "text": "Svi postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "rect": {
+            "h": 25.885417938232425,
+            "w": 326.66668701171875,
+            "x": 24,
+            "y": 324.1875
+          },
+          "text": "Istaknuti postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 311.09375,
+            "w": 206.08334350585935,
+            "x": 103.91667175292967,
+            "y": 506.65625
+          },
+          "text": "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 56.5625,
+            "w": 206.08334350585935,
+            "x": 103.91667175292967,
+            "y": 1465.6458740234375
+          },
+          "text": "qa102y Featured result 1"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 56.5625,
+            "w": 206.08334350585935,
+            "x": 103.91667175292967,
+            "y": 2064.104248046875
+          },
+          "text": "qa102y Featured result 2"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 56.5625,
+            "w": 206.08334350585935,
+            "x": 103.91667175292967,
+            "y": 2662.5625
+          },
+          "text": "qa102y Featured result 3"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 56.5625,
+            "w": 206.08334350585935,
+            "x": 103.91667175292967,
+            "y": 3261.02099609375
+          },
+          "text": "qa102y Featured result 4"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 56.5625,
+            "w": 206.08334350585935,
+            "x": 103.91667175292967,
+            "y": 3859.479248046875
+          },
+          "text": "qa102y Featured result 5"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/?filter=featured",
+      "width": 390
+    },
+    {
+      "columns": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-6 blog-main-content-column home-content-column",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 5738.625,
+            "w": 304.04168701171875,
+            "x": 171.9791717529297,
+            "y": 295.1875
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-left-column home-sidebar-column",
+          "fill": "rgb(33, 37, 41)",
+          "order": "-1",
+          "rect": {
+            "h": 710,
+            "w": 152.02084350585938,
+            "x": 19.95833396911621,
+            "y": 295.1875
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-right-column home-sidebar-column",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 1628,
+            "w": 152.02084350585938,
+            "x": 476.0208435058594,
+            "y": 295.1875
+          }
+        }
+      ],
+      "overflow": 0,
+      "text": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(0, 0, 0)",
+          "rect": {
+            "h": 28,
+            "w": 120.76042175292967,
+            "x": 183.9791717529297,
+            "y": 287.1875
+          },
+          "text": "Istaknuti postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(89, 89, 89)",
+          "rect": {
+            "h": 28,
+            "w": 78.6875,
+            "x": 329.7395935058594,
+            "y": 287.1875
+          },
+          "text": "Svi postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "rect": {
+            "h": 27.25,
+            "w": 280.04168701171875,
+            "x": 183.9791717529297,
+            "y": 339.1875
+          },
+          "text": "Istaknuti postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 762.75,
+            "w": 83.01042175292969,
+            "x": 340.3333435058594,
+            "y": 407.1041870117187
+          },
+          "text": "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 113,
+            "w": 83.01042175292969,
+            "x": 340.3333435058594,
+            "y": 1967.125
+          },
+          "text": "qa102y Featured result 1"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 113,
+            "w": 83.01042175292969,
+            "x": 340.3333435058594,
+            "y": 2795.39599609375
+          },
+          "text": "qa102y Featured result 2"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 113,
+            "w": 83.01042175292969,
+            "x": 340.3333435058594,
+            "y": 3623.666748046875
+          },
+          "text": "qa102y Featured result 3"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 113,
+            "w": 83.01042175292969,
+            "x": 340.3333435058594,
+            "y": 4451.9375
+          },
+          "text": "qa102y Featured result 4"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 113,
+            "w": 83.01042175292969,
+            "x": 340.3333435058594,
+            "y": 5280.20849609375
+          },
+          "text": "qa102y Featured result 5"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/?filter=featured",
+      "width": 768
+    },
+    {
+      "columns": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-6 blog-main-content-column home-content-column",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 2688.166748046875,
+            "w": 624,
+            "x": 348,
+            "y": 295.1875
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-left-column home-sidebar-column",
+          "fill": "rgb(33, 37, 41)",
+          "order": "-1",
+          "rect": {
+            "h": 638,
+            "w": 312,
+            "x": 36,
+            "y": 295.1875
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-right-column home-sidebar-column",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 1010,
+            "w": 312,
+            "x": 972,
+            "y": 295.1875
+          }
+        }
+      ],
+      "overflow": 0,
+      "text": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(0, 0, 0)",
+          "rect": {
+            "h": 28,
+            "w": 120.76042175292967,
+            "x": 360,
+            "y": 287.1875
+          },
+          "text": "Istaknuti postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(89, 89, 89)",
+          "rect": {
+            "h": 28,
+            "w": 78.6875,
+            "x": 505.7604370117187,
+            "y": 287.1875
+          },
+          "text": "Svi postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "rect": {
+            "h": 28.791667938232425,
+            "w": 600,
+            "x": 360,
+            "y": 339.1875
+          },
+          "text": "Istaknuti postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 254.25,
+            "w": 269.65625,
+            "x": 649.6666870117188,
+            "y": 408.6458435058594
+          },
+          "text": "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 28.25,
+            "w": 269.65625,
+            "x": 649.6666870117188,
+            "y": 1146.875
+          },
+          "text": "qa102y Featured result 1"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 28.25,
+            "w": 269.65625,
+            "x": 649.6666870117188,
+            "y": 1529.104248046875
+          },
+          "text": "qa102y Featured result 2"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 28.25,
+            "w": 269.65625,
+            "x": 649.6666870117188,
+            "y": 1911.3333740234375
+          },
+          "text": "qa102y Featured result 3"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 28.25,
+            "w": 269.65625,
+            "x": 649.6666870117188,
+            "y": 2293.5625
+          },
+          "text": "qa102y Featured result 4"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 28.25,
+            "w": 269.65625,
+            "x": 649.6666870117188,
+            "y": 2675.791748046875
+          },
+          "text": "qa102y Featured result 5"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/?filter=featured",
+      "width": 1440
+    },
+    {
+      "columns": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-6 blog-main-content-column ",
+          "fill": "rgb(33, 37, 41)",
+          "order": "-1",
+          "rect": {
+            "h": 3734.45849609375,
+            "w": 280.66668701171875,
+            "x": 12,
+            "y": 114.1875
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-left-column ",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 538,
+            "w": 280.66668701171875,
+            "x": 12,
+            "y": 3848.64599609375
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-right-column ",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 958,
+            "w": 280.66668701171875,
+            "x": 12,
+            "y": 4386.64599609375
+          }
+        }
+      ],
+      "overflow": 0,
+      "text": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "rect": {
+            "h": 25.635417938232425,
+            "w": 256.66668701171875,
+            "x": 24,
+            "y": 114.1875
+          },
+          "text": "Pretraga"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(89, 89, 89)",
+          "rect": {
+            "h": 44,
+            "w": 44,
+            "x": 24,
+            "y": 195.8229217529297
+          },
+          "text": "Sve"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(0, 0, 0)",
+          "rect": {
+            "h": 44,
+            "w": 52.8125,
+            "x": 76,
+            "y": 195.8229217529297
+          },
+          "text": "Postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(89, 89, 89)",
+          "rect": {
+            "h": 44,
+            "w": 61.36458587646485,
+            "x": 136.8125,
+            "y": 195.8229217529297
+          },
+          "text": "Korisnici"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(89, 89, 89)",
+          "rect": {
+            "h": 44,
+            "w": 47.125,
+            "x": 206.17709350585935,
+            "y": 195.8229217529297
+          },
+          "text": "Tagovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(19, 26, 39)",
+          "rect": {
+            "h": 489.4583435058594,
+            "w": 160.08334350585938,
+            "x": 103.91667175292967,
+            "y": 315.6875
+          },
+          "text": "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(19, 26, 39)",
+          "rect": {
+            "h": 86.375,
+            "w": 160.08334350585938,
+            "x": 103.91667175292967,
+            "y": 1768.479248046875
+          },
+          "text": "qa102y Featured result 1"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(19, 26, 39)",
+          "rect": {
+            "h": 86.375,
+            "w": 160.08334350585938,
+            "x": 103.91667175292967,
+            "y": 2290.1875
+          },
+          "text": "qa102y Featured result 2"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(19, 26, 39)",
+          "rect": {
+            "h": 86.375,
+            "w": 160.08334350585938,
+            "x": 103.91667175292967,
+            "y": 2811.89599609375
+          },
+          "text": "qa102y Featured result 3"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(19, 26, 39)",
+          "rect": {
+            "h": 86.375,
+            "w": 160.08334350585938,
+            "x": 103.91667175292967,
+            "y": 3333.604248046875
+          },
+          "text": "qa102y Featured result 4"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/search/?q=qa102y&scope=posts",
+      "width": 320
+    },
+    {
+      "columns": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-6 blog-main-content-column ",
+          "fill": "rgb(33, 37, 41)",
+          "order": "-1",
+          "rect": {
+            "h": 2851.58349609375,
+            "w": 350.66668701171875,
+            "x": 12,
+            "y": 114.1875
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-left-column ",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 538,
+            "w": 350.66668701171875,
+            "x": 12,
+            "y": 2965.77099609375
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-right-column ",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 865,
+            "w": 350.66668701171875,
+            "x": 12,
+            "y": 3503.77099609375
+          }
+        }
+      ],
+      "overflow": 0,
+      "text": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "rect": {
+            "h": 25.885417938232425,
+            "w": 326.66668701171875,
+            "x": 24,
+            "y": 114.1875
+          },
+          "text": "Pretraga"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(89, 89, 89)",
+          "rect": {
+            "h": 44,
+            "w": 44,
+            "x": 24,
+            "y": 196.0729217529297
+          },
+          "text": "Sve"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(0, 0, 0)",
+          "rect": {
+            "h": 44,
+            "w": 52.8125,
+            "x": 76,
+            "y": 196.0729217529297
+          },
+          "text": "Postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(89, 89, 89)",
+          "rect": {
+            "h": 44,
+            "w": 61.36458587646485,
+            "x": 136.8125,
+            "y": 196.0729217529297
+          },
+          "text": "Korisnici"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(89, 89, 89)",
+          "rect": {
+            "h": 44,
+            "w": 47.125,
+            "x": 206.17709350585935,
+            "y": 196.0729217529297
+          },
+          "text": "Tagovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(19, 26, 39)",
+          "rect": {
+            "h": 345.5,
+            "w": 230.08334350585935,
+            "x": 103.91667175292967,
+            "y": 315.9375
+          },
+          "text": "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(19, 26, 39)",
+          "rect": {
+            "h": 57.58333587646485,
+            "w": 230.08334350585935,
+            "x": 103.91667175292967,
+            "y": 1384.7708740234375
+          },
+          "text": "qa102y Featured result 1"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(19, 26, 39)",
+          "rect": {
+            "h": 57.58333587646485,
+            "w": 230.08334350585935,
+            "x": 103.91667175292967,
+            "y": 1781.6875
+          },
+          "text": "qa102y Featured result 2"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(19, 26, 39)",
+          "rect": {
+            "h": 57.58333587646485,
+            "w": 230.08334350585935,
+            "x": 103.91667175292967,
+            "y": 2178.604248046875
+          },
+          "text": "qa102y Featured result 3"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(19, 26, 39)",
+          "rect": {
+            "h": 57.58333587646485,
+            "w": 230.08334350585935,
+            "x": 103.91667175292967,
+            "y": 2575.52099609375
+          },
+          "text": "qa102y Featured result 4"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/search/?q=qa102y&scope=posts",
+      "width": 390
+    },
+    {
+      "columns": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-6 blog-main-content-column ",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 3428.03125,
+            "w": 304.04168701171875,
+            "x": 171.9791717529297,
+            "y": 70.1875
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-left-column ",
+          "fill": "rgb(33, 37, 41)",
+          "order": "-1",
+          "rect": {
+            "h": 610,
+            "w": 152.02084350585938,
+            "x": 19.95833396911621,
+            "y": 70.1875
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-right-column ",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 1528,
+            "w": 152.02084350585938,
+            "x": 476.0208435058594,
+            "y": 70.1875
+          }
+        }
+      ],
+      "overflow": 0,
+      "text": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "rect": {
+            "h": 27.25,
+            "w": 280.04168701171875,
+            "x": 183.9791717529297,
+            "y": 70.1875
+          },
+          "text": "Pretraga"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(89, 89, 89)",
+          "rect": {
+            "h": 28,
+            "w": 24.854167938232425,
+            "x": 183.9791717529297,
+            "y": 153.4375
+          },
+          "text": "Sve"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(0, 0, 0)",
+          "rect": {
+            "h": 28,
+            "w": 52.8125,
+            "x": 233.83334350585935,
+            "y": 153.4375
+          },
+          "text": "Postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(89, 89, 89)",
+          "rect": {
+            "h": 28,
+            "w": 61.36458587646485,
+            "x": 311.6458435058594,
+            "y": 153.4375
+          },
+          "text": "Korisnici"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(89, 89, 89)",
+          "rect": {
+            "h": 28,
+            "w": 47.125,
+            "x": 398.0104370117187,
+            "y": 153.4375
+          },
+          "text": "Tagovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(17, 24, 39)",
+          "rect": {
+            "h": 403.0833435058594,
+            "w": 183.45834350585935,
+            "x": 263.8958435058594,
+            "y": 257.3020935058594
+          },
+          "text": "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(17, 24, 39)",
+          "rect": {
+            "h": 86.375,
+            "w": 183.45834350585935,
+            "x": 263.8958435058594,
+            "y": 1527.71875
+          },
+          "text": "qa102y Featured result 1"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(17, 24, 39)",
+          "rect": {
+            "h": 86.375,
+            "w": 183.45834350585935,
+            "x": 263.8958435058594,
+            "y": 2025.4271240234375
+          },
+          "text": "qa102y Featured result 2"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(17, 24, 39)",
+          "rect": {
+            "h": 86.375,
+            "w": 183.45834350585935,
+            "x": 263.8958435058594,
+            "y": 2523.135498046875
+          },
+          "text": "qa102y Featured result 3"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(17, 24, 39)",
+          "rect": {
+            "h": 86.375,
+            "w": 183.45834350585935,
+            "x": 263.8958435058594,
+            "y": 3020.84375
+          },
+          "text": "qa102y Featured result 4"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/search/?q=qa102y&scope=posts",
+      "width": 768
+    },
+    {
+      "columns": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-6 blog-main-content-column ",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 1960.90625,
+            "w": 624,
+            "x": 348,
+            "y": 70.1875
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-left-column ",
+          "fill": "rgb(33, 37, 41)",
+          "order": "-1",
+          "rect": {
+            "h": 538,
+            "w": 312,
+            "x": 36,
+            "y": 70.1875
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-right-column ",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 910,
+            "w": 312,
+            "x": 972,
+            "y": 70.1875
+          }
+        }
+      ],
+      "overflow": 0,
+      "text": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "rect": {
+            "h": 28.791667938232425,
+            "w": 600,
+            "x": 360,
+            "y": 70.1875
+          },
+          "text": "Pretraga"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(89, 89, 89)",
+          "rect": {
+            "h": 28,
+            "w": 24.854167938232425,
+            "x": 360,
+            "y": 154.9791717529297
+          },
+          "text": "Sve"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(0, 0, 0)",
+          "rect": {
+            "h": 28,
+            "w": 52.8125,
+            "x": 409.8541870117187,
+            "y": 154.9791717529297
+          },
+          "text": "Postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(89, 89, 89)",
+          "rect": {
+            "h": 28,
+            "w": 61.36458587646485,
+            "x": 487.6666870117187,
+            "y": 154.9791717529297
+          },
+          "text": "Korisnici"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(89, 89, 89)",
+          "rect": {
+            "h": 28,
+            "w": 47.125,
+            "x": 574.03125,
+            "y": 154.9791717529297
+          },
+          "text": "Tagovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(17, 24, 39)",
+          "rect": {
+            "h": 172.75,
+            "w": 503.4166870117187,
+            "x": 439.9166870117187,
+            "y": 258.84375
+          },
+          "text": "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(17, 24, 39)",
+          "rect": {
+            "h": 28.791667938232425,
+            "w": 503.4166870117187,
+            "x": 439.9166870117187,
+            "y": 866.9271240234375
+          },
+          "text": "qa102y Featured result 1"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(17, 24, 39)",
+          "rect": {
+            "h": 28.791667938232425,
+            "w": 503.4166870117187,
+            "x": 439.9166870117187,
+            "y": 1163.0521240234375
+          },
+          "text": "qa102y Featured result 2"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(17, 24, 39)",
+          "rect": {
+            "h": 28.791667938232425,
+            "w": 503.4166870117187,
+            "x": 439.9166870117187,
+            "y": 1459.1771240234375
+          },
+          "text": "qa102y Featured result 3"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(17, 24, 39)",
+          "rect": {
+            "h": 28.791667938232425,
+            "w": 503.4166870117187,
+            "x": 439.9166870117187,
+            "y": 1755.3021240234375
+          },
+          "text": "qa102y Featured result 4"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/search/?q=qa102y&scope=posts",
+      "width": 1440
+    },
+    {
+      "columns": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-6 blog-main-content-column ",
+          "fill": "rgb(255, 255, 255)",
+          "order": "0",
+          "rect": {
+            "h": 1313.8125,
+            "w": 280.66668701171875,
+            "x": 12,
+            "y": 745.9375
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-left-column ",
+          "fill": "rgb(255, 255, 255)",
+          "order": "-1",
+          "rect": {
+            "h": 565.1666870117188,
+            "w": 280.66668701171875,
+            "x": 12,
+            "y": 180.77084350585935
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-right-column ",
+          "fill": "rgb(255, 255, 255)",
+          "order": "0",
+          "rect": {
+            "h": 236.1666717529297,
+            "w": 280.66668701171875,
+            "x": 12,
+            "y": 2059.75
+          }
+        }
+      ],
+      "overflow": 0,
+      "text": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(255, 255, 255)",
+          "rect": {
+            "h": 84.9375,
+            "w": 89.15625,
+            "x": 36,
+            "y": 905.9375
+          },
+          "text": "Empty comments QA"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(255, 255, 255)",
+          "rect": {
+            "h": 56.625,
+            "w": 89.15625,
+            "x": 36,
+            "y": 1455.3333740234375
+          },
+          "text": "Readable story"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/blog/qa100e_dark/",
+      "width": 320
+    },
+    {
+      "columns": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-6 blog-main-content-column ",
+          "fill": "rgb(255, 255, 255)",
+          "order": "0",
+          "rect": {
+            "h": 1173.1875,
+            "w": 350.66668701171875,
+            "x": 12,
+            "y": 746.03125
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-left-column ",
+          "fill": "rgb(255, 255, 255)",
+          "order": "-1",
+          "rect": {
+            "h": 565.1666870117188,
+            "w": 350.66668701171875,
+            "x": 12,
+            "y": 180.86459350585935
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-right-column ",
+          "fill": "rgb(255, 255, 255)",
+          "order": "0",
+          "rect": {
+            "h": 236.1666717529297,
+            "w": 350.66668701171875,
+            "x": 12,
+            "y": 1919.21875
+          }
+        }
+      ],
+      "overflow": 0,
+      "text": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(255, 255, 255)",
+          "rect": {
+            "h": 56.625,
+            "w": 159.15625,
+            "x": 36,
+            "y": 906.03125
+          },
+          "text": "Empty comments QA"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(255, 255, 255)",
+          "rect": {
+            "h": 28.3125,
+            "w": 159.15625,
+            "x": 36,
+            "y": 1385.1146240234375
+          },
+          "text": "Readable story"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/blog/qa100e_dark/",
+      "width": 390
+    },
+    {
+      "columns": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-6 blog-main-content-column ",
+          "fill": "rgb(255, 255, 255)",
+          "order": "0",
+          "rect": {
+            "h": 853.2708740234375,
+            "w": 608.0833740234375,
+            "x": 19.95833396911621,
+            "y": 138.0729217529297
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-left-column ",
+          "fill": "rgb(255, 255, 255)",
+          "order": "1",
+          "rect": {
+            "h": 429.1666870117187,
+            "w": 608.0833740234375,
+            "x": 19.95833396911621,
+            "y": 991.34375
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-right-column ",
+          "fill": "rgb(255, 255, 255)",
+          "order": "2",
+          "rect": {
+            "h": 100.16667175292967,
+            "w": 608.0833740234375,
+            "x": 19.95833396911621,
+            "y": 1420.510498046875
+          }
+        }
+      ],
+      "overflow": 0,
+      "text": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(255, 255, 255)",
+          "rect": {
+            "h": 28.3125,
+            "w": 416.5729370117187,
+            "x": 43.95833587646485,
+            "y": 162.0729217529297
+          },
+          "text": "Empty comments QA"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(255, 255, 255)",
+          "rect": {
+            "h": 28.3125,
+            "w": 416.5729370117187,
+            "x": 43.95833587646485,
+            "y": 552.84375
+          },
+          "text": "Readable story"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/blog/qa100e_dark/",
+      "width": 768
+    },
+    {
+      "columns": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-6 blog-main-content-column ",
+          "fill": "rgb(255, 255, 255)",
+          "order": "0",
+          "rect": {
+            "h": 951.9375,
+            "w": 624,
+            "x": 348,
+            "y": 140.21875
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-left-column ",
+          "fill": "rgb(255, 255, 255)",
+          "order": "-1",
+          "rect": {
+            "h": 521.4271240234375,
+            "w": 312,
+            "x": 36,
+            "y": 140.21875
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-right-column ",
+          "fill": "rgb(255, 255, 255)",
+          "order": "0",
+          "rect": {
+            "h": 236.1666717529297,
+            "w": 312,
+            "x": 972,
+            "y": 140.21875
+          }
+        }
+      ],
+      "overflow": 0,
+      "text": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(255, 255, 255)",
+          "rect": {
+            "h": 28.3125,
+            "w": 432.4895935058594,
+            "x": 372,
+            "y": 300.21875
+          },
+          "text": "Empty comments QA"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(255, 255, 255)",
+          "rect": {
+            "h": 28.3125,
+            "w": 432.4895935058594,
+            "x": 372,
+            "y": 672.3229370117188
+          },
+          "text": "Readable story"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/blog/qa100e_dark/",
+      "width": 1440
+    },
+    {
+      "columns": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-6 blog-main-content-column ",
+          "fill": "rgb(255, 255, 255)",
+          "order": "0",
+          "rect": {
+            "h": 709.3958740234375,
+            "w": 280.66668701171875,
+            "x": 12,
+            "y": 745.9375
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-left-column ",
+          "fill": "rgb(255, 255, 255)",
+          "order": "-1",
+          "rect": {
+            "h": 565.1666870117188,
+            "w": 280.66668701171875,
+            "x": 12,
+            "y": 180.77084350585935
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-right-column ",
+          "fill": "rgb(255, 255, 255)",
+          "order": "0",
+          "rect": {
+            "h": 236.1666717529297,
+            "w": 280.66668701171875,
+            "x": 12,
+            "y": 1455.3333740234375
+          }
+        }
+      ],
+      "overflow": 0,
+      "text": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(255, 255, 255)",
+          "rect": {
+            "h": 84.9375,
+            "w": 89.15625,
+            "x": 36,
+            "y": 905.9375
+          },
+          "text": "Empty comments QA"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/post/10/empty-comments-qa/",
+      "width": 320
+    },
+    {
+      "columns": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-6 blog-main-content-column ",
+          "fill": "rgb(255, 255, 255)",
+          "order": "0",
+          "rect": {
+            "h": 579.0833740234375,
+            "w": 350.66668701171875,
+            "x": 12,
+            "y": 746.03125
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-left-column ",
+          "fill": "rgb(255, 255, 255)",
+          "order": "-1",
+          "rect": {
+            "h": 565.1666870117188,
+            "w": 350.66668701171875,
+            "x": 12,
+            "y": 180.86459350585935
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-right-column ",
+          "fill": "rgb(255, 255, 255)",
+          "order": "0",
+          "rect": {
+            "h": 236.1666717529297,
+            "w": 350.66668701171875,
+            "x": 12,
+            "y": 1325.1146240234375
+          }
+        }
+      ],
+      "overflow": 0,
+      "text": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(255, 255, 255)",
+          "rect": {
+            "h": 56.625,
+            "w": 159.15625,
+            "x": 36,
+            "y": 906.03125
+          },
+          "text": "Empty comments QA"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/post/10/empty-comments-qa/",
+      "width": 390
+    },
+    {
+      "columns": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-6 blog-main-content-column ",
+          "fill": "rgb(255, 255, 255)",
+          "order": "0",
+          "rect": {
+            "h": 414.7708435058594,
+            "w": 608.0833740234375,
+            "x": 19.95833396911621,
+            "y": 138.0729217529297
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-left-column ",
+          "fill": "rgb(255, 255, 255)",
+          "order": "1",
+          "rect": {
+            "h": 429.1666870117187,
+            "w": 608.0833740234375,
+            "x": 19.95833396911621,
+            "y": 552.84375
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-right-column ",
+          "fill": "rgb(255, 255, 255)",
+          "order": "2",
+          "rect": {
+            "h": 100.16667175292967,
+            "w": 608.0833740234375,
+            "x": 19.95833396911621,
+            "y": 982.0104370117188
+          }
+        }
+      ],
+      "overflow": 0,
+      "text": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(255, 255, 255)",
+          "rect": {
+            "h": 28.3125,
+            "w": 416.5729370117187,
+            "x": 43.95833587646485,
+            "y": 162.0729217529297
+          },
+          "text": "Empty comments QA"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/post/10/empty-comments-qa/",
+      "width": 768
+    },
+    {
+      "columns": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-6 blog-main-content-column ",
+          "fill": "rgb(255, 255, 255)",
+          "order": "0",
+          "rect": {
+            "h": 532.1041870117188,
+            "w": 624,
+            "x": 348,
+            "y": 140.21875
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-left-column ",
+          "fill": "rgb(255, 255, 255)",
+          "order": "-1",
+          "rect": {
+            "h": 521.4271240234375,
+            "w": 312,
+            "x": 36,
+            "y": 140.21875
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-right-column ",
+          "fill": "rgb(255, 255, 255)",
+          "order": "0",
+          "rect": {
+            "h": 236.1666717529297,
+            "w": 312,
+            "x": 972,
+            "y": 140.21875
+          }
+        }
+      ],
+      "overflow": 0,
+      "text": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(255, 255, 255)",
+          "rect": {
+            "h": 28.3125,
+            "w": 432.4895935058594,
+            "x": 372,
+            "y": 300.21875
+          },
+          "text": "Empty comments QA"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/post/10/empty-comments-qa/",
+      "width": 1440
+    }
+  ],
+  "after768-fresh": {
+    "columns": [
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "col-md-6 blog-main-content-column home-content-column",
+        "fill": "rgb(33, 37, 41)",
+        "order": "0",
+        "rect": {
+          "h": 5691.625,
+          "w": 304.04168701171875,
+          "x": 171.9791717529297,
+          "y": 295.1875
+        }
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "col-md-3 blog-main-left-column home-sidebar-column",
+        "fill": "rgb(33, 37, 41)",
+        "order": "-1",
+        "rect": {
+          "h": 710,
+          "w": 152.02084350585938,
+          "x": 19.95833396911621,
+          "y": 295.1875
+        }
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "col-md-3 blog-main-right-column home-sidebar-column",
+        "fill": "rgb(33, 37, 41)",
+        "order": "0",
+        "rect": {
+          "h": 1628,
+          "w": 152.02084350585938,
+          "x": 476.0208435058594,
+          "y": 295.1875
+        }
+      }
+    ],
+    "overflow": 0,
+    "text": [
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "fill": "rgb(0, 0, 0)",
+        "rect": {
+          "h": 28,
+          "w": 120.76042175292967,
+          "x": 183.9791717529297,
+          "y": 287.1875
+        },
+        "text": "Istaknuti postovi"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "fill": "rgb(89, 89, 89)",
+        "rect": {
+          "h": 28,
+          "w": 78.6875,
+          "x": 329.7395935058594,
+          "y": 287.1875
+        },
+        "text": "Svi postovi"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "fill": "rgb(33, 37, 41)",
+        "rect": {
+          "h": 27.25,
+          "w": 280.04168701171875,
+          "x": 183.9791717529297,
+          "y": 339.1875
+        },
+        "text": "Istaknuti postovi"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "fill": "rgba(0, 0, 0, 0)",
+        "rect": {
+          "h": 735.75,
+          "w": 83.01042175292969,
+          "x": 340.3333435058594,
+          "y": 407.1041870117187
+        },
+        "text": "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "fill": "rgba(0, 0, 0, 0)",
+        "rect": {
+          "h": 109,
+          "w": 83.01042175292969,
+          "x": 340.3333435058594,
+          "y": 1940.125
+        },
+        "text": "qa102y Featured result 1"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "fill": "rgba(0, 0, 0, 0)",
+        "rect": {
+          "h": 109,
+          "w": 83.01042175292969,
+          "x": 340.3333435058594,
+          "y": 2764.39599609375
+        },
+        "text": "qa102y Featured result 2"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "fill": "rgba(0, 0, 0, 0)",
+        "rect": {
+          "h": 109,
+          "w": 83.01042175292969,
+          "x": 340.3333435058594,
+          "y": 3588.666748046875
+        },
+        "text": "qa102y Featured result 3"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "fill": "rgba(0, 0, 0, 0)",
+        "rect": {
+          "h": 109,
+          "w": 83.01042175292969,
+          "x": 340.3333435058594,
+          "y": 4412.9375
+        },
+        "text": "qa102y Featured result 4"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "fill": "rgba(0, 0, 0, 0)",
+        "rect": {
+          "h": 109,
+          "w": 83.01042175292969,
+          "x": 340.3333435058594,
+          "y": 5237.20849609375
+        },
+        "text": "qa102y Featured result 5"
+      }
+    ],
+    "url": "http://127.0.0.1:8017/?filter=featured",
+    "width": 768
+  },
+  "before-recheck": [
+    {
+      "columns": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-left-column home-sidebar-column",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 538,
+            "w": 280.66668701171875,
+            "x": 12,
+            "y": 4930.6982421875
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-6 blog-main-content-column home-content-column",
+          "fill": "rgb(33, 37, 41)",
+          "order": "-1",
+          "rect": {
+            "h": 4658.5107421875,
+            "w": 280.66668701171875,
+            "x": 12,
+            "y": 272.1875
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-right-column home-sidebar-column",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 958,
+            "w": 280.66668701171875,
+            "x": 12,
+            "y": 5468.6982421875
+          }
+        }
+      ],
+      "overflow": 0,
+      "text": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(0, 0, 0)",
+          "rect": {
+            "h": 28,
+            "w": 120.76042175292967,
+            "x": 24,
+            "y": 272.1875
+          },
+          "text": "Istaknuti postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(89, 89, 89)",
+          "rect": {
+            "h": 28,
+            "w": 78.6875,
+            "x": 169.7604217529297,
+            "y": 272.1875
+          },
+          "text": "Svi postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "rect": {
+            "h": 25.635417938232425,
+            "w": 256.66668701171875,
+            "x": 24,
+            "y": 324.1875
+          },
+          "text": "Istaknuti postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 483.4375,
+            "w": 136.08334350585938,
+            "x": 103.91667175292967,
+            "y": 467.03125
+          },
+          "text": "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 85.3125,
+            "w": 136.08334350585938,
+            "x": 103.91667175292967,
+            "y": 1656.28125
+          },
+          "text": "qa102y Featured result 1"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 85.3125,
+            "w": 136.08334350585938,
+            "x": 103.91667175292967,
+            "y": 2341.40625
+          },
+          "text": "qa102y Featured result 2"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 85.3125,
+            "w": 136.08334350585938,
+            "x": 103.91667175292967,
+            "y": 3026.53125
+          },
+          "text": "qa102y Featured result 3"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 85.3125,
+            "w": 136.08334350585938,
+            "x": 103.91667175292967,
+            "y": 3711.65625
+          },
+          "text": "qa102y Featured result 4"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 85.3125,
+            "w": 136.08334350585938,
+            "x": 103.91667175292967,
+            "y": 4396.78125
+          },
+          "text": "qa102y Featured result 5"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/?filter=featured",
+      "width": 320
+    },
+    {
+      "columns": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-left-column home-sidebar-column",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 538,
+            "w": 350.66668701171875,
+            "x": 12,
+            "y": 4270.6357421875
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-6 blog-main-content-column home-content-column",
+          "fill": "rgb(33, 37, 41)",
+          "order": "-1",
+          "rect": {
+            "h": 3998.447998046875,
+            "w": 350.66668701171875,
+            "x": 12,
+            "y": 272.1875
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-right-column home-sidebar-column",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 865,
+            "w": 350.66668701171875,
+            "x": 12,
+            "y": 4808.6357421875
+          }
+        }
+      ],
+      "overflow": 0,
+      "text": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(0, 0, 0)",
+          "rect": {
+            "h": 28,
+            "w": 120.76042175292967,
+            "x": 24,
+            "y": 272.1875
+          },
+          "text": "Istaknuti postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(89, 89, 89)",
+          "rect": {
+            "h": 28,
+            "w": 78.6875,
+            "x": 169.7604217529297,
+            "y": 272.1875
+          },
+          "text": "Svi postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "rect": {
+            "h": 25.885417938232425,
+            "w": 326.66668701171875,
+            "x": 24,
+            "y": 324.1875
+          },
+          "text": "Istaknuti postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 312.8125,
+            "w": 206.08334350585935,
+            "x": 103.91667175292967,
+            "y": 506.65625
+          },
+          "text": "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 56.875,
+            "w": 206.08334350585935,
+            "x": 103.91667175292967,
+            "y": 1467.3646240234375
+          },
+          "text": "qa102y Featured result 1"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 56.875,
+            "w": 206.08334350585935,
+            "x": 103.91667175292967,
+            "y": 2066.135498046875
+          },
+          "text": "qa102y Featured result 2"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 56.875,
+            "w": 206.08334350585935,
+            "x": 103.91667175292967,
+            "y": 2664.90625
+          },
+          "text": "qa102y Featured result 3"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 56.875,
+            "w": 206.08334350585935,
+            "x": 103.91667175292967,
+            "y": 3263.67724609375
+          },
+          "text": "qa102y Featured result 4"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 56.875,
+            "w": 206.08334350585935,
+            "x": 103.91667175292967,
+            "y": 3862.447998046875
+          },
+          "text": "qa102y Featured result 5"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/?filter=featured",
+      "width": 390
+    },
+    {
+      "columns": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-left-column home-sidebar-column",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 710,
+            "w": 152.02084350585938,
+            "x": 19.95833396911621,
+            "y": 295.1875
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-6 blog-main-content-column home-content-column",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 5692.11474609375,
+            "w": 304.04168701171875,
+            "x": 171.9791717529297,
+            "y": 295.1875
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-right-column home-sidebar-column",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 1628,
+            "w": 152.02084350585938,
+            "x": 476.0208435058594,
+            "y": 295.1875
+          }
+        }
+      ],
+      "overflow": 0,
+      "text": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(0, 0, 0)",
+          "rect": {
+            "h": 28,
+            "w": 120.76042175292967,
+            "x": 183.9791717529297,
+            "y": 287.1875
+          },
+          "text": "Istaknuti postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(89, 89, 89)",
+          "rect": {
+            "h": 28,
+            "w": 78.6875,
+            "x": 329.7395935058594,
+            "y": 287.1875
+          },
+          "text": "Svi postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "rect": {
+            "h": 27.25,
+            "w": 280.04168701171875,
+            "x": 183.9791717529297,
+            "y": 339.1875
+          },
+          "text": "Istaknuti postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 736.03125,
+            "w": 83.01042175292969,
+            "x": 340.3333435058594,
+            "y": 407.1041870117187
+          },
+          "text": "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 109.04167175292967,
+            "w": 83.01042175292969,
+            "x": 340.3333435058594,
+            "y": 1940.40625
+          },
+          "text": "qa102y Featured result 1"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 109.04167175292967,
+            "w": 83.01042175292969,
+            "x": 340.3333435058594,
+            "y": 2764.71875
+          },
+          "text": "qa102y Featured result 2"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 109.04167175292967,
+            "w": 83.01042175292969,
+            "x": 340.3333435058594,
+            "y": 3589.03125
+          },
+          "text": "qa102y Featured result 3"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 109.04167175292967,
+            "w": 83.01042175292969,
+            "x": 340.3333435058594,
+            "y": 4413.34375
+          },
+          "text": "qa102y Featured result 4"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 109.04167175292967,
+            "w": 83.01042175292969,
+            "x": 340.3333435058594,
+            "y": 5237.65625
+          },
+          "text": "qa102y Featured result 5"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/?filter=featured",
+      "width": 768
+    },
+    {
+      "columns": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-left-column home-sidebar-column",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 638,
+            "w": 312,
+            "x": 36,
+            "y": 295.1875
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-6 blog-main-content-column home-content-column",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 2674.3125,
+            "w": 624,
+            "x": 348,
+            "y": 295.1875
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-right-column home-sidebar-column",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 1010,
+            "w": 312,
+            "x": 972,
+            "y": 295.1875
+          }
+        }
+      ],
+      "overflow": 0,
+      "text": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(0, 0, 0)",
+          "rect": {
+            "h": 28,
+            "w": 120.76042175292967,
+            "x": 360,
+            "y": 287.1875
+          },
+          "text": "Istaknuti postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(89, 89, 89)",
+          "rect": {
+            "h": 28,
+            "w": 78.6875,
+            "x": 505.7604370117187,
+            "y": 287.1875
+          },
+          "text": "Svi postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "rect": {
+            "h": 28.791667938232425,
+            "w": 600,
+            "x": 360,
+            "y": 339.1875
+          },
+          "text": "Istaknuti postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 245.34375,
+            "w": 269.65625,
+            "x": 649.6666870117188,
+            "y": 408.6458435058594
+          },
+          "text": "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 27.260417938232425,
+            "w": 269.65625,
+            "x": 649.6666870117188,
+            "y": 1137.96875
+          },
+          "text": "qa102y Featured result 1"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 27.260417938232425,
+            "w": 269.65625,
+            "x": 649.6666870117188,
+            "y": 1519.2083740234375
+          },
+          "text": "qa102y Featured result 2"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 27.260417938232425,
+            "w": 269.65625,
+            "x": 649.6666870117188,
+            "y": 1900.447998046875
+          },
+          "text": "qa102y Featured result 3"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 27.260417938232425,
+            "w": 269.65625,
+            "x": 649.6666870117188,
+            "y": 2281.6875
+          },
+          "text": "qa102y Featured result 4"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 27.260417938232425,
+            "w": 269.65625,
+            "x": 649.6666870117188,
+            "y": 2662.92724609375
+          },
+          "text": "qa102y Featured result 5"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/?filter=featured",
+      "width": 1440
+    }
+  ],
+  "before-settled": [
+    {
+      "columns": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-left-column home-sidebar-column",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 538,
+            "w": 280.66668701171875,
+            "x": 12,
+            "y": 4815.39599609375
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-6 blog-main-content-column home-content-column",
+          "fill": "rgb(33, 37, 41)",
+          "order": "-1",
+          "rect": {
+            "h": 4543.20849609375,
+            "w": 280.66668701171875,
+            "x": 12,
+            "y": 272.1875
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-right-column home-sidebar-column",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 958,
+            "w": 280.66668701171875,
+            "x": 12,
+            "y": 5353.39599609375
+          }
+        }
+      ],
+      "overflow": 0,
+      "text": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(0, 0, 0)",
+          "rect": {
+            "h": 28,
+            "w": 120.76042175292967,
+            "x": 24,
+            "y": 272.1875
+          },
+          "text": "Istaknuti postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(89, 89, 89)",
+          "rect": {
+            "h": 28,
+            "w": 78.6875,
+            "x": 169.7604217529297,
+            "y": 272.1875
+          },
+          "text": "Svi postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "rect": {
+            "h": 25.635417938232425,
+            "w": 256.66668701171875,
+            "x": 24,
+            "y": 324.1875
+          },
+          "text": "Istaknuti postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 410.1666870117187,
+            "w": 136.08334350585938,
+            "x": 103.91667175292967,
+            "y": 467.03125
+          },
+          "text": "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 76.90625,
+            "w": 136.08334350585938,
+            "x": 103.91667175292967,
+            "y": 1583.010498046875
+          },
+          "text": "qa102y Featured result 1"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 76.90625,
+            "w": 136.08334350585938,
+            "x": 103.91667175292967,
+            "y": 2259.729248046875
+          },
+          "text": "qa102y Featured result 2"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 76.90625,
+            "w": 136.08334350585938,
+            "x": 103.91667175292967,
+            "y": 2936.447998046875
+          },
+          "text": "qa102y Featured result 3"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 76.90625,
+            "w": 136.08334350585938,
+            "x": 103.91667175292967,
+            "y": 3613.166748046875
+          },
+          "text": "qa102y Featured result 4"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 76.90625,
+            "w": 136.08334350585938,
+            "x": 103.91667175292967,
+            "y": 4289.8857421875
+          },
+          "text": "qa102y Featured result 5"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/?filter=featured",
+      "width": 320
+    },
+    {
+      "columns": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-left-column home-sidebar-column",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 538,
+            "w": 350.66668701171875,
+            "x": 12,
+            "y": 4191.15625
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-6 blog-main-content-column home-content-column",
+          "fill": "rgb(33, 37, 41)",
+          "order": "-1",
+          "rect": {
+            "h": 3918.96875,
+            "w": 350.66668701171875,
+            "x": 12,
+            "y": 272.1875
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-right-column home-sidebar-column",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 865,
+            "w": 350.66668701171875,
+            "x": 12,
+            "y": 4729.15625
+          }
+        }
+      ],
+      "overflow": 0,
+      "text": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(0, 0, 0)",
+          "rect": {
+            "h": 28,
+            "w": 120.76042175292967,
+            "x": 24,
+            "y": 272.1875
+          },
+          "text": "Istaknuti postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(89, 89, 89)",
+          "rect": {
+            "h": 28,
+            "w": 78.6875,
+            "x": 169.7604217529297,
+            "y": 272.1875
+          },
+          "text": "Svi postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "rect": {
+            "h": 25.885417938232425,
+            "w": 326.66668701171875,
+            "x": 24,
+            "y": 324.1875
+          },
+          "text": "Istaknuti postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 258.85418701171875,
+            "w": 206.08334350585935,
+            "x": 103.91667175292967,
+            "y": 506.65625
+          },
+          "text": "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 51.77083587646485,
+            "w": 206.08334350585935,
+            "x": 103.91667175292967,
+            "y": 1413.40625
+          },
+          "text": "qa102y Featured result 1"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 51.77083587646485,
+            "w": 206.08334350585935,
+            "x": 103.91667175292967,
+            "y": 2007.072998046875
+          },
+          "text": "qa102y Featured result 2"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 51.77083587646485,
+            "w": 206.08334350585935,
+            "x": 103.91667175292967,
+            "y": 2600.73974609375
+          },
+          "text": "qa102y Featured result 3"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 51.77083587646485,
+            "w": 206.08334350585935,
+            "x": 103.91667175292967,
+            "y": 3194.40625
+          },
+          "text": "qa102y Featured result 4"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 51.77083587646485,
+            "w": 206.08334350585935,
+            "x": 103.91667175292967,
+            "y": 3788.072998046875
+          },
+          "text": "qa102y Featured result 5"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/?filter=featured",
+      "width": 390
+    },
+    {
+      "columns": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-left-column home-sidebar-column",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 710,
+            "w": 152.02084350585938,
+            "x": 19.95833396911621,
+            "y": 295.1875
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-6 blog-main-content-column home-content-column",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 5691.625,
+            "w": 304.04168701171875,
+            "x": 171.9791717529297,
+            "y": 295.1875
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-right-column home-sidebar-column",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 1628,
+            "w": 152.02084350585938,
+            "x": 476.0208435058594,
+            "y": 295.1875
+          }
+        }
+      ],
+      "overflow": 0,
+      "text": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(0, 0, 0)",
+          "rect": {
+            "h": 28,
+            "w": 120.76042175292967,
+            "x": 183.9791717529297,
+            "y": 287.1875
+          },
+          "text": "Istaknuti postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(89, 89, 89)",
+          "rect": {
+            "h": 28,
+            "w": 78.6875,
+            "x": 329.7395935058594,
+            "y": 287.1875
+          },
+          "text": "Svi postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "rect": {
+            "h": 27.25,
+            "w": 280.04168701171875,
+            "x": 183.9791717529297,
+            "y": 339.1875
+          },
+          "text": "Istaknuti postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 735.75,
+            "w": 83.01042175292969,
+            "x": 340.3333435058594,
+            "y": 407.1041870117187
+          },
+          "text": "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 109,
+            "w": 83.01042175292969,
+            "x": 340.3333435058594,
+            "y": 1940.125
+          },
+          "text": "qa102y Featured result 1"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 109,
+            "w": 83.01042175292969,
+            "x": 340.3333435058594,
+            "y": 2764.39599609375
+          },
+          "text": "qa102y Featured result 2"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 109,
+            "w": 83.01042175292969,
+            "x": 340.3333435058594,
+            "y": 3588.666748046875
+          },
+          "text": "qa102y Featured result 3"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 109,
+            "w": 83.01042175292969,
+            "x": 340.3333435058594,
+            "y": 4412.9375
+          },
+          "text": "qa102y Featured result 4"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 109,
+            "w": 83.01042175292969,
+            "x": 340.3333435058594,
+            "y": 5237.20849609375
+          },
+          "text": "qa102y Featured result 5"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/?filter=featured",
+      "width": 768
+    },
+    {
+      "columns": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-left-column home-sidebar-column",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 638,
+            "w": 312,
+            "x": 36,
+            "y": 295.1875
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-6 blog-main-content-column home-content-column",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 2695.75,
+            "w": 624,
+            "x": 348,
+            "y": 295.1875
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-right-column home-sidebar-column",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 1010,
+            "w": 312,
+            "x": 972,
+            "y": 295.1875
+          }
+        }
+      ],
+      "overflow": 0,
+      "text": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(0, 0, 0)",
+          "rect": {
+            "h": 28,
+            "w": 120.76042175292967,
+            "x": 360,
+            "y": 287.1875
+          },
+          "text": "Istaknuti postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(89, 89, 89)",
+          "rect": {
+            "h": 28,
+            "w": 78.6875,
+            "x": 505.7604370117187,
+            "y": 287.1875
+          },
+          "text": "Svi postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "rect": {
+            "h": 28.791667938232425,
+            "w": 600,
+            "x": 360,
+            "y": 339.1875
+          },
+          "text": "Istaknuti postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 259.125,
+            "w": 269.65625,
+            "x": 649.6666870117188,
+            "y": 408.6458435058594
+          },
+          "text": "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 28.791667938232425,
+            "w": 269.65625,
+            "x": 649.6666870117188,
+            "y": 1151.75
+          },
+          "text": "qa102y Featured result 1"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 28.791667938232425,
+            "w": 269.65625,
+            "x": 649.6666870117188,
+            "y": 1534.5208740234375
+          },
+          "text": "qa102y Featured result 2"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 28.791667938232425,
+            "w": 269.65625,
+            "x": 649.6666870117188,
+            "y": 1917.291748046875
+          },
+          "text": "qa102y Featured result 3"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 28.791667938232425,
+            "w": 269.65625,
+            "x": 649.6666870117188,
+            "y": 2300.0625
+          },
+          "text": "qa102y Featured result 4"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 28.791667938232425,
+            "w": 269.65625,
+            "x": 649.6666870117188,
+            "y": 2682.83349609375
+          },
+          "text": "qa102y Featured result 5"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/?filter=featured",
+      "width": 1440
+    }
+  ],
+  "before": [
+    {
+      "columns": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-left-column home-sidebar-column",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 538,
+            "w": 280.66668701171875,
+            "x": 12,
+            "y": 4829.6044921875
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-6 blog-main-content-column home-content-column",
+          "fill": "rgb(33, 37, 41)",
+          "order": "-1",
+          "rect": {
+            "h": 4557.4169921875,
+            "w": 280.66668701171875,
+            "x": 12,
+            "y": 272.1875
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-right-column home-sidebar-column",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 958,
+            "w": 280.66668701171875,
+            "x": 12,
+            "y": 5367.6044921875
+          }
+        }
+      ],
+      "overflow": 0,
+      "text": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(0, 0, 0)",
+          "rect": {
+            "h": 28,
+            "w": 120.76042175292967,
+            "x": 24,
+            "y": 272.1875
+          },
+          "text": "Istaknuti postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(89, 89, 89)",
+          "rect": {
+            "h": 28,
+            "w": 78.6875,
+            "x": 169.7604217529297,
+            "y": 272.1875
+          },
+          "text": "Svi postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "rect": {
+            "h": 25.635417938232425,
+            "w": 256.66668701171875,
+            "x": 24,
+            "y": 324.1875
+          },
+          "text": "Istaknuti postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 417.5,
+            "w": 136.08334350585938,
+            "x": 103.91667175292967,
+            "y": 467.03125
+          },
+          "text": "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 78.28125,
+            "w": 136.08334350585938,
+            "x": 103.91667175292967,
+            "y": 1590.34375
+          },
+          "text": "qa102y Featured result 1"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 78.28125,
+            "w": 136.08334350585938,
+            "x": 103.91667175292967,
+            "y": 2268.4375
+          },
+          "text": "qa102y Featured result 2"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 78.28125,
+            "w": 136.08334350585938,
+            "x": 103.91667175292967,
+            "y": 2946.53125
+          },
+          "text": "qa102y Featured result 3"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 78.28125,
+            "w": 136.08334350585938,
+            "x": 103.91667175292967,
+            "y": 3624.625
+          },
+          "text": "qa102y Featured result 4"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 78.28125,
+            "w": 136.08334350585938,
+            "x": 103.91667175292967,
+            "y": 4302.71875
+          },
+          "text": "qa102y Featured result 5"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/?filter=featured",
+      "width": 320
+    },
+    {
+      "columns": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-left-column home-sidebar-column",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 538,
+            "w": 350.66668701171875,
+            "x": 12,
+            "y": 4221.4169921875
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-6 blog-main-content-column home-content-column",
+          "fill": "rgb(33, 37, 41)",
+          "order": "-1",
+          "rect": {
+            "h": 3949.229248046875,
+            "w": 350.66668701171875,
+            "x": 12,
+            "y": 272.1875
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-right-column home-sidebar-column",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 865,
+            "w": 350.66668701171875,
+            "x": 12,
+            "y": 4759.4169921875
+          }
+        }
+      ],
+      "overflow": 0,
+      "text": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(0, 0, 0)",
+          "rect": {
+            "h": 28,
+            "w": 120.76042175292967,
+            "x": 24,
+            "y": 272.1875
+          },
+          "text": "Istaknuti postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(89, 89, 89)",
+          "rect": {
+            "h": 28,
+            "w": 78.6875,
+            "x": 169.7604217529297,
+            "y": 272.1875
+          },
+          "text": "Svi postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "rect": {
+            "h": 25.885417938232425,
+            "w": 326.66668701171875,
+            "x": 24,
+            "y": 324.1875
+          },
+          "text": "Istaknuti postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 287.03125,
+            "w": 206.08334350585935,
+            "x": 103.91667175292967,
+            "y": 506.65625
+          },
+          "text": "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 52.1875,
+            "w": 206.08334350585935,
+            "x": 103.91667175292967,
+            "y": 1441.5833740234375
+          },
+          "text": "qa102y Featured result 1"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 52.1875,
+            "w": 206.08334350585935,
+            "x": 103.91667175292967,
+            "y": 2035.666748046875
+          },
+          "text": "qa102y Featured result 2"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 52.1875,
+            "w": 206.08334350585935,
+            "x": 103.91667175292967,
+            "y": 2629.75
+          },
+          "text": "qa102y Featured result 3"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 52.1875,
+            "w": 206.08334350585935,
+            "x": 103.91667175292967,
+            "y": 3223.83349609375
+          },
+          "text": "qa102y Featured result 4"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 52.1875,
+            "w": 206.08334350585935,
+            "x": 103.91667175292967,
+            "y": 3817.916748046875
+          },
+          "text": "qa102y Featured result 5"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/?filter=featured",
+      "width": 390
+    },
+    {
+      "columns": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-left-column home-sidebar-column",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 710,
+            "w": 152.02084350585938,
+            "x": 19.95833396911621,
+            "y": 295.1875
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-6 blog-main-content-column home-content-column",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 5585.09375,
+            "w": 304.04168701171875,
+            "x": 171.9791717529297,
+            "y": 295.1875
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-right-column home-sidebar-column",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 1628,
+            "w": 152.02084350585938,
+            "x": 476.0208435058594,
+            "y": 295.1875
+          }
+        }
+      ],
+      "overflow": 0,
+      "text": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(0, 0, 0)",
+          "rect": {
+            "h": 28,
+            "w": 120.76042175292967,
+            "x": 183.9791717529297,
+            "y": 287.1875
+          },
+          "text": "Istaknuti postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(89, 89, 89)",
+          "rect": {
+            "h": 28,
+            "w": 78.6875,
+            "x": 329.7395935058594,
+            "y": 287.1875
+          },
+          "text": "Svi postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "rect": {
+            "h": 27.25,
+            "w": 280.04168701171875,
+            "x": 183.9791717529297,
+            "y": 339.1875
+          },
+          "text": "Istaknuti postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 652.34375,
+            "w": 83.01042175292969,
+            "x": 340.3333435058594,
+            "y": 407.1041870117187
+          },
+          "text": "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 104.375,
+            "w": 83.01042175292969,
+            "x": 340.3333435058594,
+            "y": 1856.71875
+          },
+          "text": "qa102y Featured result 1"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 104.375,
+            "w": 83.01042175292969,
+            "x": 340.3333435058594,
+            "y": 2676.36474609375
+          },
+          "text": "qa102y Featured result 2"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 104.375,
+            "w": 83.01042175292969,
+            "x": 340.3333435058594,
+            "y": 3496.010498046875
+          },
+          "text": "qa102y Featured result 3"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 104.375,
+            "w": 83.01042175292969,
+            "x": 340.3333435058594,
+            "y": 4315.65625
+          },
+          "text": "qa102y Featured result 4"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 104.375,
+            "w": 83.01042175292969,
+            "x": 340.3333435058594,
+            "y": 5135.30224609375
+          },
+          "text": "qa102y Featured result 5"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/?filter=featured",
+      "width": 768
+    },
+    {
+      "columns": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-left-column home-sidebar-column",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 638,
+            "w": 312,
+            "x": 36,
+            "y": 295.1875
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-6 blog-main-content-column home-content-column",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 2631.885498046875,
+            "w": 624,
+            "x": 348,
+            "y": 295.1875
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-right-column home-sidebar-column",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 1010,
+            "w": 312,
+            "x": 972,
+            "y": 295.1875
+          }
+        }
+      ],
+      "overflow": 0,
+      "text": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(0, 0, 0)",
+          "rect": {
+            "h": 28,
+            "w": 120.76042175292967,
+            "x": 360,
+            "y": 287.1875
+          },
+          "text": "Istaknuti postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(89, 89, 89)",
+          "rect": {
+            "h": 28,
+            "w": 78.6875,
+            "x": 505.7604370117187,
+            "y": 287.1875
+          },
+          "text": "Svi postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "rect": {
+            "h": 28.791667938232425,
+            "w": 600,
+            "x": 360,
+            "y": 339.1875
+          },
+          "text": "Istaknuti postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 208.75,
+            "w": 269.65625,
+            "x": 649.6666870117188,
+            "y": 408.6458435058594
+          },
+          "text": "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 26.09375,
+            "w": 269.65625,
+            "x": 649.6666870117188,
+            "y": 1101.375
+          },
+          "text": "qa102y Featured result 1"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 26.09375,
+            "w": 269.65625,
+            "x": 649.6666870117188,
+            "y": 1481.447998046875
+          },
+          "text": "qa102y Featured result 2"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 26.09375,
+            "w": 269.65625,
+            "x": 649.6666870117188,
+            "y": 1861.5208740234375
+          },
+          "text": "qa102y Featured result 3"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 26.09375,
+            "w": 269.65625,
+            "x": 649.6666870117188,
+            "y": 2241.59375
+          },
+          "text": "qa102y Featured result 4"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "rect": {
+            "h": 26.09375,
+            "w": 269.65625,
+            "x": 649.6666870117188,
+            "y": 2621.666748046875
+          },
+          "text": "qa102y Featured result 5"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/?filter=featured",
+      "width": 1440
+    },
+    {
+      "columns": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-left-column ",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 538,
+            "w": 280.66668701171875,
+            "x": 12,
+            "y": 3848.64599609375
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-6 blog-main-content-column ",
+          "fill": "rgb(33, 37, 41)",
+          "order": "-1",
+          "rect": {
+            "h": 3734.45849609375,
+            "w": 280.66668701171875,
+            "x": 12,
+            "y": 114.1875
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-right-column ",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 958,
+            "w": 280.66668701171875,
+            "x": 12,
+            "y": 4386.64599609375
+          }
+        }
+      ],
+      "overflow": 0,
+      "text": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "rect": {
+            "h": 25.635417938232425,
+            "w": 256.66668701171875,
+            "x": 24,
+            "y": 114.1875
+          },
+          "text": "Pretraga"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(89, 89, 89)",
+          "rect": {
+            "h": 44,
+            "w": 44,
+            "x": 24,
+            "y": 195.8229217529297
+          },
+          "text": "Sve"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(0, 0, 0)",
+          "rect": {
+            "h": 44,
+            "w": 52.8125,
+            "x": 76,
+            "y": 195.8229217529297
+          },
+          "text": "Postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(89, 89, 89)",
+          "rect": {
+            "h": 44,
+            "w": 61.36458587646485,
+            "x": 136.8125,
+            "y": 195.8229217529297
+          },
+          "text": "Korisnici"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(89, 89, 89)",
+          "rect": {
+            "h": 44,
+            "w": 47.125,
+            "x": 206.17709350585935,
+            "y": 195.8229217529297
+          },
+          "text": "Tagovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(18, 25, 39)",
+          "rect": {
+            "h": 489.4583435058594,
+            "w": 160.08334350585938,
+            "x": 103.91667175292967,
+            "y": 315.6875
+          },
+          "text": "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(18, 25, 39)",
+          "rect": {
+            "h": 86.375,
+            "w": 160.08334350585938,
+            "x": 103.91667175292967,
+            "y": 1768.479248046875
+          },
+          "text": "qa102y Featured result 1"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(18, 25, 39)",
+          "rect": {
+            "h": 86.375,
+            "w": 160.08334350585938,
+            "x": 103.91667175292967,
+            "y": 2290.1875
+          },
+          "text": "qa102y Featured result 2"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(18, 25, 39)",
+          "rect": {
+            "h": 86.375,
+            "w": 160.08334350585938,
+            "x": 103.91667175292967,
+            "y": 2811.89599609375
+          },
+          "text": "qa102y Featured result 3"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(18, 25, 39)",
+          "rect": {
+            "h": 86.375,
+            "w": 160.08334350585938,
+            "x": 103.91667175292967,
+            "y": 3333.604248046875
+          },
+          "text": "qa102y Featured result 4"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/search/?q=qa102y&scope=posts",
+      "width": 320
+    },
+    {
+      "columns": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-left-column ",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 538,
+            "w": 350.66668701171875,
+            "x": 12,
+            "y": 2965.77099609375
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-6 blog-main-content-column ",
+          "fill": "rgb(33, 37, 41)",
+          "order": "-1",
+          "rect": {
+            "h": 2851.58349609375,
+            "w": 350.66668701171875,
+            "x": 12,
+            "y": 114.1875
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-right-column ",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 865,
+            "w": 350.66668701171875,
+            "x": 12,
+            "y": 3503.77099609375
+          }
+        }
+      ],
+      "overflow": 0,
+      "text": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "rect": {
+            "h": 25.885417938232425,
+            "w": 326.66668701171875,
+            "x": 24,
+            "y": 114.1875
+          },
+          "text": "Pretraga"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(89, 89, 89)",
+          "rect": {
+            "h": 44,
+            "w": 44,
+            "x": 24,
+            "y": 196.0729217529297
+          },
+          "text": "Sve"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(0, 0, 0)",
+          "rect": {
+            "h": 44,
+            "w": 52.8125,
+            "x": 76,
+            "y": 196.0729217529297
+          },
+          "text": "Postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(89, 89, 89)",
+          "rect": {
+            "h": 44,
+            "w": 61.36458587646485,
+            "x": 136.8125,
+            "y": 196.0729217529297
+          },
+          "text": "Korisnici"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(89, 89, 89)",
+          "rect": {
+            "h": 44,
+            "w": 47.125,
+            "x": 206.17709350585935,
+            "y": 196.0729217529297
+          },
+          "text": "Tagovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(18, 25, 39)",
+          "rect": {
+            "h": 345.5,
+            "w": 230.08334350585935,
+            "x": 103.91667175292967,
+            "y": 315.9375
+          },
+          "text": "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(18, 25, 39)",
+          "rect": {
+            "h": 57.58333587646485,
+            "w": 230.08334350585935,
+            "x": 103.91667175292967,
+            "y": 1384.7708740234375
+          },
+          "text": "qa102y Featured result 1"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(18, 25, 39)",
+          "rect": {
+            "h": 57.58333587646485,
+            "w": 230.08334350585935,
+            "x": 103.91667175292967,
+            "y": 1781.6875
+          },
+          "text": "qa102y Featured result 2"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(18, 25, 39)",
+          "rect": {
+            "h": 57.58333587646485,
+            "w": 230.08334350585935,
+            "x": 103.91667175292967,
+            "y": 2178.604248046875
+          },
+          "text": "qa102y Featured result 3"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(18, 25, 39)",
+          "rect": {
+            "h": 57.58333587646485,
+            "w": 230.08334350585935,
+            "x": 103.91667175292967,
+            "y": 2575.52099609375
+          },
+          "text": "qa102y Featured result 4"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/search/?q=qa102y&scope=posts",
+      "width": 390
+    },
+    {
+      "columns": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-left-column ",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 610,
+            "w": 152.02084350585938,
+            "x": 19.95833396911621,
+            "y": 70.1875
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-6 blog-main-content-column ",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 3428.03125,
+            "w": 304.04168701171875,
+            "x": 171.9791717529297,
+            "y": 70.1875
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-right-column ",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 1528,
+            "w": 152.02084350585938,
+            "x": 476.0208435058594,
+            "y": 70.1875
+          }
+        }
+      ],
+      "overflow": 0,
+      "text": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "rect": {
+            "h": 27.25,
+            "w": 280.04168701171875,
+            "x": 183.9791717529297,
+            "y": 70.1875
+          },
+          "text": "Pretraga"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(89, 89, 89)",
+          "rect": {
+            "h": 28,
+            "w": 24.854167938232425,
+            "x": 183.9791717529297,
+            "y": 153.4375
+          },
+          "text": "Sve"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(0, 0, 0)",
+          "rect": {
+            "h": 28,
+            "w": 52.8125,
+            "x": 233.83334350585935,
+            "y": 153.4375
+          },
+          "text": "Postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(89, 89, 89)",
+          "rect": {
+            "h": 28,
+            "w": 61.36458587646485,
+            "x": 311.6458435058594,
+            "y": 153.4375
+          },
+          "text": "Korisnici"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(89, 89, 89)",
+          "rect": {
+            "h": 28,
+            "w": 47.125,
+            "x": 398.0104370117187,
+            "y": 153.4375
+          },
+          "text": "Tagovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(17, 24, 39)",
+          "rect": {
+            "h": 403.0833435058594,
+            "w": 183.45834350585935,
+            "x": 263.8958435058594,
+            "y": 257.3020935058594
+          },
+          "text": "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(17, 24, 39)",
+          "rect": {
+            "h": 86.375,
+            "w": 183.45834350585935,
+            "x": 263.8958435058594,
+            "y": 1527.71875
+          },
+          "text": "qa102y Featured result 1"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(17, 24, 39)",
+          "rect": {
+            "h": 86.375,
+            "w": 183.45834350585935,
+            "x": 263.8958435058594,
+            "y": 2025.4271240234375
+          },
+          "text": "qa102y Featured result 2"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(17, 24, 39)",
+          "rect": {
+            "h": 86.375,
+            "w": 183.45834350585935,
+            "x": 263.8958435058594,
+            "y": 2523.135498046875
+          },
+          "text": "qa102y Featured result 3"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(17, 24, 39)",
+          "rect": {
+            "h": 86.375,
+            "w": 183.45834350585935,
+            "x": 263.8958435058594,
+            "y": 3020.84375
+          },
+          "text": "qa102y Featured result 4"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/search/?q=qa102y&scope=posts",
+      "width": 768
+    },
+    {
+      "columns": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-left-column ",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 538,
+            "w": 312,
+            "x": 36,
+            "y": 70.1875
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-6 blog-main-content-column ",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 1960.90625,
+            "w": 624,
+            "x": 348,
+            "y": 70.1875
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-right-column ",
+          "fill": "rgb(33, 37, 41)",
+          "order": "0",
+          "rect": {
+            "h": 910,
+            "w": 312,
+            "x": 972,
+            "y": 70.1875
+          }
+        }
+      ],
+      "overflow": 0,
+      "text": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "rect": {
+            "h": 28.791667938232425,
+            "w": 600,
+            "x": 360,
+            "y": 70.1875
+          },
+          "text": "Pretraga"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(89, 89, 89)",
+          "rect": {
+            "h": 28,
+            "w": 24.854167938232425,
+            "x": 360,
+            "y": 154.9791717529297
+          },
+          "text": "Sve"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(0, 0, 0)",
+          "rect": {
+            "h": 28,
+            "w": 52.8125,
+            "x": 409.8541870117187,
+            "y": 154.9791717529297
+          },
+          "text": "Postovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(89, 89, 89)",
+          "rect": {
+            "h": 28,
+            "w": 61.36458587646485,
+            "x": 487.6666870117187,
+            "y": 154.9791717529297
+          },
+          "text": "Korisnici"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(89, 89, 89)",
+          "rect": {
+            "h": 28,
+            "w": 47.125,
+            "x": 574.03125,
+            "y": 154.9791717529297
+          },
+          "text": "Tagovi"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(17, 24, 39)",
+          "rect": {
+            "h": 172.75,
+            "w": 503.4166870117187,
+            "x": 439.9166870117187,
+            "y": 258.84375
+          },
+          "text": "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(17, 24, 39)",
+          "rect": {
+            "h": 28.791667938232425,
+            "w": 503.4166870117187,
+            "x": 439.9166870117187,
+            "y": 866.9271240234375
+          },
+          "text": "qa102y Featured result 1"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(17, 24, 39)",
+          "rect": {
+            "h": 28.791667938232425,
+            "w": 503.4166870117187,
+            "x": 439.9166870117187,
+            "y": 1163.0521240234375
+          },
+          "text": "qa102y Featured result 2"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(17, 24, 39)",
+          "rect": {
+            "h": 28.791667938232425,
+            "w": 503.4166870117187,
+            "x": 439.9166870117187,
+            "y": 1459.1771240234375
+          },
+          "text": "qa102y Featured result 3"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(17, 24, 39)",
+          "rect": {
+            "h": 28.791667938232425,
+            "w": 503.4166870117187,
+            "x": 439.9166870117187,
+            "y": 1755.3021240234375
+          },
+          "text": "qa102y Featured result 4"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/search/?q=qa102y&scope=posts",
+      "width": 1440
+    },
+    {
+      "columns": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-left-column ",
+          "fill": "rgb(255, 255, 255)",
+          "order": "0",
+          "rect": {
+            "h": 565.1666870117188,
+            "w": 280.66668701171875,
+            "x": 12,
+            "y": 180.77084350585935
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-6 blog-main-content-column ",
+          "fill": "rgb(255, 255, 255)",
+          "order": "0",
+          "rect": {
+            "h": 1313.8125,
+            "w": 280.66668701171875,
+            "x": 12,
+            "y": 745.9375
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-right-column ",
+          "fill": "rgb(255, 255, 255)",
+          "order": "0",
+          "rect": {
+            "h": 236.1666717529297,
+            "w": 280.66668701171875,
+            "x": 12,
+            "y": 2059.75
+          }
+        }
+      ],
+      "overflow": 0,
+      "text": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(255, 255, 255)",
+          "rect": {
+            "h": 84.9375,
+            "w": 89.15625,
+            "x": 36,
+            "y": 905.9375
+          },
+          "text": "Empty comments QA"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(255, 255, 255)",
+          "rect": {
+            "h": 56.625,
+            "w": 89.15625,
+            "x": 36,
+            "y": 1455.3333740234375
+          },
+          "text": "Readable story"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/blog/qa100e_dark/",
+      "width": 320
+    },
+    {
+      "columns": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-left-column ",
+          "fill": "rgb(255, 255, 255)",
+          "order": "0",
+          "rect": {
+            "h": 565.1666870117188,
+            "w": 350.66668701171875,
+            "x": 12,
+            "y": 180.86459350585935
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-6 blog-main-content-column ",
+          "fill": "rgb(255, 255, 255)",
+          "order": "0",
+          "rect": {
+            "h": 1173.1875,
+            "w": 350.66668701171875,
+            "x": 12,
+            "y": 746.03125
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-right-column ",
+          "fill": "rgb(255, 255, 255)",
+          "order": "0",
+          "rect": {
+            "h": 236.1666717529297,
+            "w": 350.66668701171875,
+            "x": 12,
+            "y": 1919.21875
+          }
+        }
+      ],
+      "overflow": 0,
+      "text": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(255, 255, 255)",
+          "rect": {
+            "h": 56.625,
+            "w": 159.15625,
+            "x": 36,
+            "y": 906.03125
+          },
+          "text": "Empty comments QA"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(255, 255, 255)",
+          "rect": {
+            "h": 28.3125,
+            "w": 159.15625,
+            "x": 36,
+            "y": 1385.1146240234375
+          },
+          "text": "Readable story"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/blog/qa100e_dark/",
+      "width": 390
+    },
+    {
+      "columns": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-left-column ",
+          "fill": "rgb(255, 255, 255)",
+          "order": "1",
+          "rect": {
+            "h": 429.1666870117187,
+            "w": 608.0833740234375,
+            "x": 19.95833396911621,
+            "y": 991.34375
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-6 blog-main-content-column ",
+          "fill": "rgb(255, 255, 255)",
+          "order": "0",
+          "rect": {
+            "h": 853.2708740234375,
+            "w": 608.0833740234375,
+            "x": 19.95833396911621,
+            "y": 138.0729217529297
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-right-column ",
+          "fill": "rgb(255, 255, 255)",
+          "order": "2",
+          "rect": {
+            "h": 100.16667175292967,
+            "w": 608.0833740234375,
+            "x": 19.95833396911621,
+            "y": 1420.510498046875
+          }
+        }
+      ],
+      "overflow": 0,
+      "text": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(255, 255, 255)",
+          "rect": {
+            "h": 28.3125,
+            "w": 416.5729370117187,
+            "x": 43.95833587646485,
+            "y": 162.0729217529297
+          },
+          "text": "Empty comments QA"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(255, 255, 255)",
+          "rect": {
+            "h": 28.3125,
+            "w": 416.5729370117187,
+            "x": 43.95833587646485,
+            "y": 552.84375
+          },
+          "text": "Readable story"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/blog/qa100e_dark/",
+      "width": 768
+    },
+    {
+      "columns": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-left-column ",
+          "fill": "rgb(255, 255, 255)",
+          "order": "0",
+          "rect": {
+            "h": 521.4271240234375,
+            "w": 312,
+            "x": 36,
+            "y": 140.21875
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-6 blog-main-content-column ",
+          "fill": "rgb(255, 255, 255)",
+          "order": "0",
+          "rect": {
+            "h": 951.9375,
+            "w": 624,
+            "x": 348,
+            "y": 140.21875
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-right-column ",
+          "fill": "rgb(255, 255, 255)",
+          "order": "0",
+          "rect": {
+            "h": 236.1666717529297,
+            "w": 312,
+            "x": 972,
+            "y": 140.21875
+          }
+        }
+      ],
+      "overflow": 0,
+      "text": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(255, 255, 255)",
+          "rect": {
+            "h": 28.3125,
+            "w": 432.4895935058594,
+            "x": 372,
+            "y": 300.21875
+          },
+          "text": "Empty comments QA"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(255, 255, 255)",
+          "rect": {
+            "h": 28.3125,
+            "w": 432.4895935058594,
+            "x": 372,
+            "y": 672.3229370117188
+          },
+          "text": "Readable story"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/blog/qa100e_dark/",
+      "width": 1440
+    },
+    {
+      "columns": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-left-column ",
+          "fill": "rgb(255, 255, 255)",
+          "order": "0",
+          "rect": {
+            "h": 565.1666870117188,
+            "w": 280.66668701171875,
+            "x": 12,
+            "y": 180.77084350585935
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-6 blog-main-content-column ",
+          "fill": "rgb(255, 255, 255)",
+          "order": "0",
+          "rect": {
+            "h": 709.3958740234375,
+            "w": 280.66668701171875,
+            "x": 12,
+            "y": 745.9375
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-right-column ",
+          "fill": "rgb(255, 255, 255)",
+          "order": "0",
+          "rect": {
+            "h": 236.1666717529297,
+            "w": 280.66668701171875,
+            "x": 12,
+            "y": 1455.3333740234375
+          }
+        }
+      ],
+      "overflow": 0,
+      "text": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(255, 255, 255)",
+          "rect": {
+            "h": 84.9375,
+            "w": 89.15625,
+            "x": 36,
+            "y": 905.9375
+          },
+          "text": "Empty comments QA"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/post/10/empty-comments-qa/",
+      "width": 320
+    },
+    {
+      "columns": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-left-column ",
+          "fill": "rgb(255, 255, 255)",
+          "order": "0",
+          "rect": {
+            "h": 565.1666870117188,
+            "w": 350.66668701171875,
+            "x": 12,
+            "y": 180.86459350585935
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-6 blog-main-content-column ",
+          "fill": "rgb(255, 255, 255)",
+          "order": "0",
+          "rect": {
+            "h": 579.0833740234375,
+            "w": 350.66668701171875,
+            "x": 12,
+            "y": 746.03125
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-right-column ",
+          "fill": "rgb(255, 255, 255)",
+          "order": "0",
+          "rect": {
+            "h": 236.1666717529297,
+            "w": 350.66668701171875,
+            "x": 12,
+            "y": 1325.1146240234375
+          }
+        }
+      ],
+      "overflow": 0,
+      "text": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(255, 255, 255)",
+          "rect": {
+            "h": 56.625,
+            "w": 159.15625,
+            "x": 36,
+            "y": 906.03125
+          },
+          "text": "Empty comments QA"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/post/10/empty-comments-qa/",
+      "width": 390
+    },
+    {
+      "columns": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-left-column ",
+          "fill": "rgb(255, 255, 255)",
+          "order": "1",
+          "rect": {
+            "h": 429.1666870117187,
+            "w": 608.0833740234375,
+            "x": 19.95833396911621,
+            "y": 552.84375
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-6 blog-main-content-column ",
+          "fill": "rgb(255, 255, 255)",
+          "order": "0",
+          "rect": {
+            "h": 414.7708435058594,
+            "w": 608.0833740234375,
+            "x": 19.95833396911621,
+            "y": 138.0729217529297
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-right-column ",
+          "fill": "rgb(255, 255, 255)",
+          "order": "2",
+          "rect": {
+            "h": 100.16667175292967,
+            "w": 608.0833740234375,
+            "x": 19.95833396911621,
+            "y": 982.0104370117188
+          }
+        }
+      ],
+      "overflow": 0,
+      "text": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(255, 255, 255)",
+          "rect": {
+            "h": 28.3125,
+            "w": 416.5729370117187,
+            "x": 43.95833587646485,
+            "y": 162.0729217529297
+          },
+          "text": "Empty comments QA"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/post/10/empty-comments-qa/",
+      "width": 768
+    },
+    {
+      "columns": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-left-column ",
+          "fill": "rgb(255, 255, 255)",
+          "order": "0",
+          "rect": {
+            "h": 521.4271240234375,
+            "w": 312,
+            "x": 36,
+            "y": 140.21875
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-6 blog-main-content-column ",
+          "fill": "rgb(255, 255, 255)",
+          "order": "0",
+          "rect": {
+            "h": 532.1041870117188,
+            "w": 624,
+            "x": 348,
+            "y": 140.21875
+          }
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "col-md-3 blog-main-right-column ",
+          "fill": "rgb(255, 255, 255)",
+          "order": "0",
+          "rect": {
+            "h": 236.1666717529297,
+            "w": 312,
+            "x": 972,
+            "y": 140.21875
+          }
+        }
+      ],
+      "overflow": 0,
+      "text": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(255, 255, 255)",
+          "rect": {
+            "h": 28.3125,
+            "w": 432.4895935058594,
+            "x": 372,
+            "y": 300.21875
+          },
+          "text": "Empty comments QA"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/post/10/empty-comments-qa/",
+      "width": 1440
+    }
+  ],
+  "focus": [
+    {
+      "active": {
+        "href": "/?filter=featured",
+        "tag": "A",
+        "text": "Istaknuti postovi"
+      },
+      "order": [
+        "col-md-6 blog-main-content-column home-content-column",
+        "col-md-3 blog-main-left-column home-sidebar-column",
+        "col-md-3 blog-main-right-column home-sidebar-column"
+      ],
+      "url": "http://127.0.0.1:8017/?filter=featured",
+      "width": 320
+    },
+    {
+      "active": {
+        "href": "/?filter=featured",
+        "tag": "A",
+        "text": "Istaknuti postovi"
+      },
+      "order": [
+        "col-md-6 blog-main-content-column home-content-column",
+        "col-md-3 blog-main-left-column home-sidebar-column",
+        "col-md-3 blog-main-right-column home-sidebar-column"
+      ],
+      "url": "http://127.0.0.1:8017/?filter=featured",
+      "width": 390
+    },
+    {
+      "active": {
+        "href": "/?filter=featured",
+        "tag": "A",
+        "text": "Istaknuti postovi"
+      },
+      "order": [
+        "col-md-6 blog-main-content-column home-content-column",
+        "col-md-3 blog-main-left-column home-sidebar-column",
+        "col-md-3 blog-main-right-column home-sidebar-column"
+      ],
+      "url": "http://127.0.0.1:8017/?filter=featured",
+      "width": 768
+    },
+    {
+      "active": {
+        "href": "/?filter=featured",
+        "tag": "A",
+        "text": "Istaknuti postovi"
+      },
+      "order": [
+        "col-md-6 blog-main-content-column home-content-column",
+        "col-md-3 blog-main-left-column home-sidebar-column",
+        "col-md-3 blog-main-right-column home-sidebar-column"
+      ],
+      "url": "http://127.0.0.1:8017/?filter=featured",
+      "width": 1440
+    },
+    {
+      "active": {
+        "href": "/search/?q=qa102y&scope=all",
+        "tag": "A",
+        "text": "Sve"
+      },
+      "order": [
+        "col-md-6 blog-main-content-column ",
+        "col-md-3 blog-main-left-column ",
+        "col-md-3 blog-main-right-column "
+      ],
+      "url": "http://127.0.0.1:8017/search/?q=qa102y&scope=posts",
+      "width": 320
+    },
+    {
+      "active": {
+        "href": "/search/?q=qa102y&scope=all",
+        "tag": "A",
+        "text": "Sve"
+      },
+      "order": [
+        "col-md-6 blog-main-content-column ",
+        "col-md-3 blog-main-left-column ",
+        "col-md-3 blog-main-right-column "
+      ],
+      "url": "http://127.0.0.1:8017/search/?q=qa102y&scope=posts",
+      "width": 390
+    },
+    {
+      "active": {
+        "href": "/search/?q=qa102y&scope=all",
+        "tag": "A",
+        "text": "Sve"
+      },
+      "order": [
+        "col-md-6 blog-main-content-column ",
+        "col-md-3 blog-main-left-column ",
+        "col-md-3 blog-main-right-column "
+      ],
+      "url": "http://127.0.0.1:8017/search/?q=qa102y&scope=posts",
+      "width": 768
+    },
+    {
+      "active": {
+        "href": "/search/?q=qa102y&scope=all",
+        "tag": "A",
+        "text": "Sve"
+      },
+      "order": [
+        "col-md-6 blog-main-content-column ",
+        "col-md-3 blog-main-left-column ",
+        "col-md-3 blog-main-right-column "
+      ],
+      "url": "http://127.0.0.1:8017/search/?q=qa102y&scope=posts",
+      "width": 1440
+    }
+  ],
+  "safe": {
+    "scope": "http://127.0.0.1:8017/search/?q=qa102y&scope=users"
+  }
+}

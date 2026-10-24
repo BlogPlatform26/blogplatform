@@ -1,4 +1,6 @@
-# Remaining acceptance scope after Phase103a
+# Remaining acceptance scope after Phase103b
+
+Phase103b closes discovery main-before-support keyboard/source order. Main column is rendered first in shared base; low-specificity visual left ordering preserves desktop and existing specific tablet rules. Eight native Tab checks reach first main filter after Registration. Home stable geometry and12 search/dark blog/detail states retain column rectangles. See phase103b_discovery_focus_order.md for transient measurement exclusions. U01 gradient contrast, empty following/owner and tablet secondary-card usability remain.
 
 Phase103a closes inactive home/search filter ink: actual #595959 on white,7.005:1 at all four widths, eight before/after filter rectangle sets identical. Native Tab after Registration on phone focuses support radio before visually earlier results; keyboard order remains confirmed open, not accepted. See phase103a_discovery_filter_ink.md.
 

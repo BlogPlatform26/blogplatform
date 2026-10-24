@@ -1378,6 +1378,10 @@
     </div>
     {% endif %}
 
+<style>
+/* Main content comes first in source; preserve the established left column visually. */
+.blog-main-left-column { order: -1; }
+</style>
 {% if request.resolver_match.url_name == 'home' or request.resolver_match.url_name == 'search' %}
 <style>
 .discovery-layout-row .filter-link:not(.active):not(:hover) {
@@ -1386,10 +1390,39 @@
 }
 @media (max-width: 767.98px) {
     .discovery-layout-row > .blog-main-content-column { order: -1; }
+    .discovery-layout-row > .blog-main-left-column { order: 0; }
 }
 </style>
 {% endif %}
 <div class="row align-items-start gx-4 home-main-row blog-main-layout-row {% if request.resolver_match.url_name == 'home' or request.resolver_match.url_name == 'search' %}discovery-layout-row {% endif %}{% if request.resolver_match.url_name == "home" %}home-layout-row{% endif %}{% if blog.profile.template == 'simple_retro' %} blog-main-layout-row--simple-retro{% endif %}">
+
+        <!-- SREDINA -->
+        <div class="col-md-6 blog-main-content-column {% if request.resolver_match.url_name == "home" %}home-content-column{% endif %}{% if blog.profile.template == 'simple_retro' %} blog-main-content-column--simple-retro{% endif %}">
+
+         {% if request.resolver_match.url_name == "home" %}
+            <div class="post-filter post-filter-home mb-4">
+                <a href="{% url 'home' %}?filter=featured{% if active_category %}&category={{ active_category }}{% endif %}{% if active_tag %}&tag={{ active_tag|urlencode }}{% endif %}"
+                   class="filter-link {% if filter_type == 'featured' %}active{% endif %}">
+                    Istaknuti postovi
+                </a>
+
+                <a href="{% url 'home' %}?filter=all{% if active_category %}&category={{ active_category }}{% endif %}{% if active_tag %}&tag={{ active_tag|urlencode }}{% endif %}"
+                   class="filter-link {% if filter_type == 'all' %}active{% endif %}">
+                    Svi postovi
+                </a>
+
+                {% if user.is_authenticated %}
+                <a href="{% url 'home' %}?filter=following{% if active_category %}&category={{ active_category }}{% endif %}{% if active_tag %}&tag={{ active_tag|urlencode }}{% endif %}"
+                   class="filter-link {% if filter_type == 'following' %}active{% endif %}">
+                    Samo oni koje pratim
+                </a>
+                {% endif %}
+            </div>
+            {% endif %}
+
+            {% block content %}{% endblock %}
+        </div>
+
 
     <!-- LIJEVI SIDEBAR -->
     <div class="col-md-3 blog-main-left-column {% if request.resolver_match.url_name == "home" %}home-sidebar-column{% endif %}{% if blog.profile.template == 'simple_retro' %} blog-main-left-column--simple-retro{% endif %}">
@@ -1555,33 +1588,6 @@
             {% endblock %}
         </div>
 
-
-        <!-- SREDINA -->
-        <div class="col-md-6 blog-main-content-column {% if request.resolver_match.url_name == "home" %}home-content-column{% endif %}{% if blog.profile.template == 'simple_retro' %} blog-main-content-column--simple-retro{% endif %}">
-
-         {% if request.resolver_match.url_name == "home" %}
-            <div class="post-filter post-filter-home mb-4">
-                <a href="{% url 'home' %}?filter=featured{% if active_category %}&category={{ active_category }}{% endif %}{% if active_tag %}&tag={{ active_tag|urlencode }}{% endif %}"
-                   class="filter-link {% if filter_type == 'featured' %}active{% endif %}">
-                    Istaknuti postovi
-                </a>
-
-                <a href="{% url 'home' %}?filter=all{% if active_category %}&category={{ active_category }}{% endif %}{% if active_tag %}&tag={{ active_tag|urlencode }}{% endif %}"
-                   class="filter-link {% if filter_type == 'all' %}active{% endif %}">
-                    Svi postovi
-                </a>
-
-                {% if user.is_authenticated %}
-                <a href="{% url 'home' %}?filter=following{% if active_category %}&category={{ active_category }}{% endif %}{% if active_tag %}&tag={{ active_tag|urlencode }}{% endif %}"
-                   class="filter-link {% if filter_type == 'following' %}active{% endif %}">
-                    Samo oni koje pratim
-                </a>
-                {% endif %}
-            </div>
-            {% endif %}
-
-            {% block content %}{% endblock %}
-        </div>
 
             <!-- DESNI SIDEBAR -->
             <div class="col-md-3 blog-main-right-column {% if request.resolver_match.url_name == "home" %}home-sidebar-column{% endif %}{% if blog.profile.template == 'simple_retro' %} blog-main-right-column--simple-retro{% endif %}">
