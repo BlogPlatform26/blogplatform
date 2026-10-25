@@ -1,4 +1,6 @@
-# Remaining acceptance scope after Phase103h
+# Remaining acceptance scope after Phase103i
+
+Phase103i adds opaque Jedro subtitle/profile panel #fff7e9 and date #2d1f18. Actual child contrasts17.692/7.586(profile link)/11.018(date). Eight blog/detail states320/390/768/1440 retain sampled rectangles/font/ink,doc0; backgrounds intentionally change on desktop too. Safe174,223 tests61.059s/check/migration green. See phase103i_jedro_supporting_text_surfaces.md. Header and section captions remain photo-dependent; authenticated profile actions remain unverified.
 
 Phase103h adds normal-gradient screenshots (phone320/desktop1440 visually inspected; four captures). Raster dimensions differ from viewport overrides, so no 1:1 pixel contrast claim. Native hover has no documented action in current browser API and remains open, alongside rendered-pixel contrast and all other ledger items. See phase103h_gradient_visual_followup.md. No application changes.
 
