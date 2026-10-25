@@ -36,7 +36,9 @@ def home(request):
     now = timezone.now()
     publish_due_home_featured_posts(now=now)
     filter_type = (request.GET.get('filter') or '').strip()
-    if filter_type not in ('featured', 'following', 'all'):
+    if filter_type not in ('featured', 'following', 'all') or (
+        filter_type == 'following' and not request.user.is_authenticated
+    ):
         filter_type = 'featured'
 
     blocked_ids = []

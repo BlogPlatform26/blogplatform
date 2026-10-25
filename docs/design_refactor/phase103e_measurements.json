@@ -1,0 +1,1850 @@
+{
+  "guest-before": [
+    {
+      "width": 320,
+      "ax": "Browser tab: 65, Title: \"BlogPlatform\", URL: \"http://127.0.0.1:8017/?filter=following\".\n1 AXWebArea BlogPlatform, URL: 127.0.0.1:8017/?filter=following\n\t2 container\n\t\t3 link Description: Logo, Value: 127.0.0.1:8017/\n\t\t4 button (collapsed) , Help: Pretraga, ID: searchToggleBtn, Secondary Actions: Expand\n\t\t\t5 text \n\t\t6 link Description: Prijava, Value: 127.0.0.1:8017/login/\n\t\t7 link Description: Registracija, Value: 127.0.0.1:8017/register/\n\t8 container\n\t\t9 link Description: Istaknuti postovi, Value: 127.0.0.1:8017/?filter=featured\n\t\t10 link Description: Svi postovi, Value: 127.0.0.1:8017/?filter=all\n\t11 heading Postovi korisnika koje pratiš, Value: 4\n\t\t12 text Postovi korisnika koje pratiš\n\t13 text 23\n\t14 text LIS\n\t15 container\n\t\t16 text 16:54 h\n\t\t17 heading Value: 4, qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle\n\t\t\t18 link Value: 127.0.0.1:8017/post/221/, Description: qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle\n\t\t19 text /\n\t\t20 link Description: #qa102ylongtaglongtaglongtag, Value: 127.0.0.1:8017/?tag=qa102ylongtaglongtaglongtag&filter=following\n\t\t21 text UnbrokenBodyUnbrokenBodyUnbrokenBodyUnbrokenBodyUnbrokenBodyUnbrokenBodyUnbrokenBodyUnbrokenBodyUnbrokenBodyUnbrokenBodyUnbrokenBodyUnbrokenBodyUnbrokenBodyUnbrokenBodyUnbrokenBodyUnbrokenBodyUnbrokenBodyUnbrokenBodyUnbrokenBodyUnbrokenBodyUnbrokenBodyUnbrokenBodyUnbrokenBodyUnbrokenBodyUnbrokenBodyUnbrokenBodyUnbrokenBodyUnbrokenBodyUnbrokenBodyUnbrokenBodyUnbrokenBodyUnbrokenBodyUnbrokenBodyUnbrokenBodyUnbrokenBody\n\t\t22 text Autor: \n\t\t23 link Value: 127.0.0.1:8017/blog/qa102y_author/, Description: LongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorName\n\t\t24 link Description: Saznaj više, Value: 127.0.0.1:8017/post/221/\n\t25 text 23\n\t26 text LIS\n\t27 container\n\t\t28 text 16:53 h\n\t\t29 heading qa102y Featured result 1, Value: 4\n\t\t\t30 link Description: qa102y Featured result 1, Value: 127.0.0.1:8017/post/222/\n\t\t31 text /\n\t\t32 link Description: #qa102ylongtaglongtaglongtag, Value: 127.0.0.1:8017/?tag=qa102ylongtaglongtaglongtag&filter=following\n\t\t33 text Synthetic discovery paragraph.\n\t\t34 text Autor: \n\t\t35 link Value: 127.0.0.1:8017/blog/qa102y_author/, Description: LongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorName\n\t\t36 link Description: Saznaj više, Value: 127.0.0.1:8017/post/222/\n\t37 text 23\n\t38 text LIS\n\t39 container\n\t\t40 text 16:52 h\n\t\t41 heading qa102y Featured result 2, Value: 4\n\t\t\t42 link Description: qa102y Featured result 2, Value: 127.0.0.1:8017/post/223/\n\t\t43 text /\n\t\t44 link Description: #qa102ylongtaglongtaglongtag, Value: 127.0.0.1:8017/?tag=qa102ylongtaglongtaglongtag&filter=following\n\t\t45 text Synthetic discovery paragraph.\n\t\t46 text Autor: \n\t\t47 link Value: 127.0.0.1:8017/blog/qa102y_author/, Description: LongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorName\n\t\t48 link Description: Saznaj više, Value: 127.0.0.1:8017/post/223/\n\t49 text 23\n\t50 text LIS\n\t51 container\n\t\t52 text 16:51 h\n\t\t53 heading qa102y Featured result 3, Value: 4\n\t\t\t54 link Description: qa102y Featured result 3, Value: 127.0.0.1:8017/post/224/\n\t\t55 text /\n\t\t56 link Description: #qa102ylongtaglongtaglongtag, Value: 127.0.0.1:8017/?tag=qa102ylongtaglongtaglongtag&filter=following\n\t\t57 text Synthetic discovery paragraph.\n\t\t58 text Autor: \n\t\t59 link Value: 127.0.0.1:8017/blog/qa102y_author/, Description: LongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorName\n\t\t60 link Description: Saznaj više, Value: 127.0.0.1:8017/post/224/\n\t61 text 23\n\t62 text LIS\n\t63 container\n\t\t64 text 16:50 h\n\t\t65 heading qa102y Featured result 4, Value: 4\n\t\t\t66 link Description: qa102y Featured result 4, Value: 127.0.0.1:8017/post/225/\n\t\t67 text /\n\t\t68 link Description: #qa102ylongtaglongtaglongtag, Value: 127.0.0.1:8017/?tag=qa102ylongtaglongtaglongtag&filter=following\n\t\t69 text Synthetic discovery paragraph.\n\t\t70 text Autor: \n\t\t71 link Value: 127.0.0.1:8017/blog/qa102y_author/, Description: LongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorName\n\t\t72 link Description: Saznaj više, Value: 127.0.0.1:8017/post/225/\n\t73 text Stranica 1 / 46\n\t74 link Description: Sljedeća, Value: 127.0.0.1:8017/?page=2&filter=following\n\t75 container\n\t\t76 text Obavijesti Nema poruke.\n\t77 container\n\t\t78 text Pomoć i podrška\n\t\t79 container\n\t\t\t80 radio button (settable, integer) Description: Kvar, Value: 1\n\t\t\t81 text Kvar\n\t\t\t82 radio button (settable, integer) Description: Pitanje, Value: 0\n\t\t\t83 text Pitanje\n\t\t\t84 radio button (settable, integer) Description: Prijedlog, Value: 0\n\t\t\t85 text Prijedlog\n\t\t86 text field (settable)\n\t\t87 text entry area (settable)\n\t\t88 text field (settable)\n\t\t89 button Pošalji\n\t90 container\n\t\t91 text Top blogeri\n\t\t92 link Description: QA soho, Value: 127.0.0.1:8017/blog/qa100g_soho/\n\t\t93 link Description: QA magazin, Value: 127.0.0.1:8017/blog/qa100g_magazin/\n\t\t94 link Description: QA litica noci, Value: 127.0.0.1:8017/blog/qa100l_litica_noci/\n\t\t95 link Description: QA podvodna tisina, Value: 127.0.0.1:8017/blog/qa100l_podvodna_tisina/\n\t\t96 link Description: QA vodopad u magli, Value: 127.0.0.1:8017/blog/qa100s_vodopad_u_magli/\n\t97 container\n\t\t98 text Post tjedna\n\t\t99 link Description: A longer editorial story for mobile and desktop verification, Value: 127.0.0.1:8017/post/45/\n\t\t100 text Autor: QA nebeski mir\n\t101 container\n\t\t102 text Post dana\n\t\t103 link Description: qa102y Featured result 6, Value: 127.0.0.1:8017/post/227/\n\t\t104 text Autor: LongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorName\n\t105 container\n\t\t106 heading BlogPlatform, Value: 5\n\t\t\t107 text BlogPlatform\n\t\t108 text Platforma za dijeljenje znanja, ideja i iskustava.\n\t\t109 heading Navigacija, Value: 6\n\t\t\t110 text Navigacija\n\t\t111 content list\n\t\t\t112 link Description: Početna, Value: 127.0.0.1:8017/\n\t\t\t113 link Description: Registracija, Value: 127.0.0.1:8017/register/\n\t\t\t114 link Description: Login, Value: 127.0.0.1:8017/login/\n\t\t115 heading Informacije, Value: 6\n\t\t\t116 text Informacije\n\t\t117 text © 2026 BlogPlatform Kontakt: \n\t\t118 link Description: blogplatform.site@gmail.com, Value: mailto:blogplatform.site@gmail.com\n\t\t119 link Description: Pravila korištenja, Value: 127.0.0.1:8017/pravila-koristenja/\n\t\t120 link Description: Politika privatnosti, Value: 127.0.0.1:8017/politika-privatnosti/\n\t\t121 link Description: Pravila komentiranja, Value: 127.0.0.1:8017/pravila-sadrzaja/\n\t\t122 text Sva prava pridržana.\n\nThe focused UI element is 1 AXWebArea BlogPlatform, URL: 127.0.0.1:8017/?filter=following",
+      "dom": {
+        "doc": -15,
+        "headings": [
+          "Postovi korisnika koje pratiš",
+          "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle",
+          "qa102y Featured result 1",
+          "qa102y Featured result 2",
+          "qa102y Featured result 3",
+          "qa102y Featured result 4"
+        ],
+        "postLinks": [
+          {
+            "href": "/post/221/",
+            "text": "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle"
+          },
+          {
+            "href": "/post/221/",
+            "text": "Saznaj više"
+          },
+          {
+            "href": "/post/222/",
+            "text": "qa102y Featured result 1"
+          },
+          {
+            "href": "/post/222/",
+            "text": "Saznaj više"
+          },
+          {
+            "href": "/post/223/",
+            "text": "qa102y Featured result 2"
+          },
+          {
+            "href": "/post/223/",
+            "text": "Saznaj više"
+          },
+          {
+            "href": "/post/224/",
+            "text": "qa102y Featured result 3"
+          },
+          {
+            "href": "/post/224/",
+            "text": "Saznaj više"
+          },
+          {
+            "href": "/post/225/",
+            "text": "qa102y Featured result 4"
+          },
+          {
+            "href": "/post/225/",
+            "text": "Saznaj više"
+          },
+          {
+            "href": "/post/45/",
+            "text": "A longer editorial story for mobile and desktop verification"
+          },
+          {
+            "href": "/post/227/",
+            "text": "qa102y Featured result 6"
+          }
+        ],
+        "width": 320
+      }
+    },
+    {
+      "width": 390,
+      "ax": "Browser tab: 65, Title: \"BlogPlatform\", URL: \"http://127.0.0.1:8017/?filter=following\".\nThere has been no change in the accessibility tree.\nThe focused UI element is 1 AXWebArea BlogPlatform, URL: 127.0.0.1:8017/?filter=following",
+      "dom": {
+        "doc": -15,
+        "headings": [
+          "Postovi korisnika koje pratiš",
+          "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle",
+          "qa102y Featured result 1",
+          "qa102y Featured result 2",
+          "qa102y Featured result 3",
+          "qa102y Featured result 4"
+        ],
+        "postLinks": [
+          {
+            "href": "/post/221/",
+            "text": "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle"
+          },
+          {
+            "href": "/post/221/",
+            "text": "Saznaj više"
+          },
+          {
+            "href": "/post/222/",
+            "text": "qa102y Featured result 1"
+          },
+          {
+            "href": "/post/222/",
+            "text": "Saznaj više"
+          },
+          {
+            "href": "/post/223/",
+            "text": "qa102y Featured result 2"
+          },
+          {
+            "href": "/post/223/",
+            "text": "Saznaj više"
+          },
+          {
+            "href": "/post/224/",
+            "text": "qa102y Featured result 3"
+          },
+          {
+            "href": "/post/224/",
+            "text": "Saznaj više"
+          },
+          {
+            "href": "/post/225/",
+            "text": "qa102y Featured result 4"
+          },
+          {
+            "href": "/post/225/",
+            "text": "Saznaj više"
+          },
+          {
+            "href": "/post/45/",
+            "text": "A longer editorial story for mobile and desktop verification"
+          },
+          {
+            "href": "/post/227/",
+            "text": "qa102y Featured result 6"
+          }
+        ],
+        "width": 390
+      }
+    },
+    {
+      "width": 768,
+      "ax": "Browser tab: 65, Title: \"BlogPlatform\", URL: \"http://127.0.0.1:8017/?filter=following\".\nThere has been no change in the accessibility tree.\nThe focused UI element is 1 AXWebArea BlogPlatform, URL: 127.0.0.1:8017/?filter=following",
+      "dom": {
+        "doc": -15,
+        "headings": [
+          "Postovi korisnika koje pratiš",
+          "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle",
+          "qa102y Featured result 1",
+          "qa102y Featured result 2",
+          "qa102y Featured result 3",
+          "qa102y Featured result 4"
+        ],
+        "postLinks": [
+          {
+            "href": "/post/221/",
+            "text": "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle"
+          },
+          {
+            "href": "/post/221/",
+            "text": "Saznaj više"
+          },
+          {
+            "href": "/post/222/",
+            "text": "qa102y Featured result 1"
+          },
+          {
+            "href": "/post/222/",
+            "text": "Saznaj više"
+          },
+          {
+            "href": "/post/223/",
+            "text": "qa102y Featured result 2"
+          },
+          {
+            "href": "/post/223/",
+            "text": "Saznaj više"
+          },
+          {
+            "href": "/post/224/",
+            "text": "qa102y Featured result 3"
+          },
+          {
+            "href": "/post/224/",
+            "text": "Saznaj više"
+          },
+          {
+            "href": "/post/225/",
+            "text": "qa102y Featured result 4"
+          },
+          {
+            "href": "/post/225/",
+            "text": "Saznaj više"
+          },
+          {
+            "href": "/post/45/",
+            "text": "A longer editorial story for mobile and desktop verification"
+          },
+          {
+            "href": "/post/227/",
+            "text": "qa102y Featured result 6"
+          }
+        ],
+        "width": 768
+      }
+    },
+    {
+      "width": 1440,
+      "ax": "Browser tab: 65, Title: \"BlogPlatform\", URL: \"http://127.0.0.1:8017/?filter=following\".\nThere has been no change in the accessibility tree.\nThe focused UI element is 1 AXWebArea BlogPlatform, URL: 127.0.0.1:8017/?filter=following",
+      "dom": {
+        "doc": -15,
+        "headings": [
+          "Postovi korisnika koje pratiš",
+          "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle",
+          "qa102y Featured result 1",
+          "qa102y Featured result 2",
+          "qa102y Featured result 3",
+          "qa102y Featured result 4"
+        ],
+        "postLinks": [
+          {
+            "href": "/post/221/",
+            "text": "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle"
+          },
+          {
+            "href": "/post/221/",
+            "text": "Saznaj više"
+          },
+          {
+            "href": "/post/222/",
+            "text": "qa102y Featured result 1"
+          },
+          {
+            "href": "/post/222/",
+            "text": "Saznaj više"
+          },
+          {
+            "href": "/post/223/",
+            "text": "qa102y Featured result 2"
+          },
+          {
+            "href": "/post/223/",
+            "text": "Saznaj više"
+          },
+          {
+            "href": "/post/224/",
+            "text": "qa102y Featured result 3"
+          },
+          {
+            "href": "/post/224/",
+            "text": "Saznaj više"
+          },
+          {
+            "href": "/post/225/",
+            "text": "qa102y Featured result 4"
+          },
+          {
+            "href": "/post/225/",
+            "text": "Saznaj više"
+          },
+          {
+            "href": "/post/45/",
+            "text": "A longer editorial story for mobile and desktop verification"
+          },
+          {
+            "href": "/post/227/",
+            "text": "qa102y Featured result 6"
+          }
+        ],
+        "width": 1440
+      }
+    }
+  ],
+  "guest-after": [
+    {
+      "kind": "guest-following",
+      "doc": 0,
+      "filters": [
+        {
+          "fill": "rgb(0, 0, 0)",
+          "href": "/?filter=featured",
+          "rect": {
+            "bottom": 300.1875,
+            "height": 28,
+            "left": 24,
+            "right": 144.7604217529297,
+            "top": 272.1875,
+            "width": 120.76042175292967,
+            "x": 24,
+            "y": 272.1875
+          },
+          "text": "Istaknuti postovi"
+        },
+        {
+          "fill": "rgb(89, 89, 89)",
+          "href": "/?filter=all",
+          "rect": {
+            "bottom": 300.1875,
+            "height": 28,
+            "left": 169.7604217529297,
+            "right": 248.4479217529297,
+            "top": 272.1875,
+            "width": 78.6875,
+            "x": 169.7604217529297,
+            "y": 272.1875
+          },
+          "text": "Svi postovi"
+        }
+      ],
+      "headings": [
+        "Istaknuti postovi",
+        "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle",
+        "qa102y Featured result 1",
+        "qa102y Featured result 2",
+        "qa102y Featured result 3",
+        "qa102y Featured result 4",
+        "qa102y Featured result 5"
+      ],
+      "titles": [
+        {
+          "href": "/post/221/",
+          "rect": {
+            "bottom": 878.2291870117188,
+            "height": 413.1979370117187,
+            "left": 103.91667175292967,
+            "right": 235.8229217529297,
+            "top": 465.03125,
+            "width": 131.90625,
+            "x": 103.91667175292967,
+            "y": 465.03125
+          },
+          "text": "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle"
+        },
+        {
+          "href": "/post/222/",
+          "rect": {
+            "bottom": 1660.947998046875,
+            "height": 79.9375,
+            "left": 103.91667175292967,
+            "right": 189.27084350585935,
+            "top": 1581.010498046875,
+            "width": 85.35417175292969,
+            "x": 103.91667175292967,
+            "y": 1581.010498046875
+          },
+          "text": "qa102y Featured result 1"
+        },
+        {
+          "href": "/post/223/",
+          "rect": {
+            "bottom": 2337.666748046875,
+            "height": 79.9375,
+            "left": 103.91667175292967,
+            "right": 189.27084350585935,
+            "top": 2257.729248046875,
+            "width": 85.35417175292969,
+            "x": 103.91667175292967,
+            "y": 2257.729248046875
+          },
+          "text": "qa102y Featured result 2"
+        },
+        {
+          "href": "/post/224/",
+          "rect": {
+            "bottom": 3014.385498046875,
+            "height": 79.9375,
+            "left": 103.91667175292967,
+            "right": 189.27084350585935,
+            "top": 2934.447998046875,
+            "width": 85.35417175292969,
+            "x": 103.91667175292967,
+            "y": 2934.447998046875
+          },
+          "text": "qa102y Featured result 3"
+        },
+        {
+          "href": "/post/225/",
+          "rect": {
+            "bottom": 3691.104248046875,
+            "height": 79.9375,
+            "left": 103.91667175292967,
+            "right": 189.27084350585935,
+            "top": 3611.166748046875,
+            "width": 85.35417175292969,
+            "x": 103.91667175292967,
+            "y": 3611.166748046875
+          },
+          "text": "qa102y Featured result 4"
+        },
+        {
+          "href": "/post/226/",
+          "rect": {
+            "bottom": 4367.8232421875,
+            "height": 79.9375,
+            "left": 103.91667175292967,
+            "right": 189.27084350585935,
+            "top": 4287.8857421875,
+            "width": 85.35417175292969,
+            "x": 103.91667175292967,
+            "y": 4287.8857421875
+          },
+          "text": "qa102y Featured result 5"
+        }
+      ],
+      "width": 320
+    },
+    {
+      "kind": "guest-following",
+      "doc": 0,
+      "filters": [
+        {
+          "fill": "rgb(0, 0, 0)",
+          "href": "/?filter=featured",
+          "rect": {
+            "bottom": 300.1875,
+            "height": 28,
+            "left": 24,
+            "right": 144.7604217529297,
+            "top": 272.1875,
+            "width": 120.76042175292967,
+            "x": 24,
+            "y": 272.1875
+          },
+          "text": "Istaknuti postovi"
+        },
+        {
+          "fill": "rgb(89, 89, 89)",
+          "href": "/?filter=all",
+          "rect": {
+            "bottom": 300.1875,
+            "height": 28,
+            "left": 169.7604217529297,
+            "right": 248.4479217529297,
+            "top": 272.1875,
+            "width": 78.6875,
+            "x": 169.7604217529297,
+            "y": 272.1875
+          },
+          "text": "Svi postovi"
+        }
+      ],
+      "headings": [
+        "Istaknuti postovi",
+        "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle",
+        "qa102y Featured result 1",
+        "qa102y Featured result 2",
+        "qa102y Featured result 3",
+        "qa102y Featured result 4",
+        "qa102y Featured result 5"
+      ],
+      "titles": [
+        {
+          "href": "/post/221/",
+          "rect": {
+            "bottom": 766.2916870117188,
+            "height": 261.63543701171875,
+            "left": 103.91667175292967,
+            "right": 309.1354217529297,
+            "top": 504.65625,
+            "width": 205.21875,
+            "x": 103.91667175292967,
+            "y": 504.65625
+          },
+          "text": "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle"
+        },
+        {
+          "href": "/post/222/",
+          "rect": {
+            "bottom": 1465.9583358764648,
+            "height": 54.55208587646485,
+            "left": 103.91667175292967,
+            "right": 263.81251525878906,
+            "top": 1411.40625,
+            "width": 159.89584350585938,
+            "x": 103.91667175292967,
+            "y": 1411.40625
+          },
+          "text": "qa102y Featured result 1"
+        },
+        {
+          "href": "/post/223/",
+          "rect": {
+            "bottom": 2059.62508392334,
+            "height": 54.55208587646485,
+            "left": 103.91667175292967,
+            "right": 263.81251525878906,
+            "top": 2005.072998046875,
+            "width": 159.89584350585938,
+            "x": 103.91667175292967,
+            "y": 2005.072998046875
+          },
+          "text": "qa102y Featured result 2"
+        },
+        {
+          "href": "/post/224/",
+          "rect": {
+            "bottom": 2653.291831970215,
+            "height": 54.55208587646485,
+            "left": 103.91667175292967,
+            "right": 263.81251525878906,
+            "top": 2598.73974609375,
+            "width": 159.89584350585938,
+            "x": 103.91667175292967,
+            "y": 2598.73974609375
+          },
+          "text": "qa102y Featured result 3"
+        },
+        {
+          "href": "/post/225/",
+          "rect": {
+            "bottom": 3246.958335876465,
+            "height": 54.55208587646485,
+            "left": 103.91667175292967,
+            "right": 263.81251525878906,
+            "top": 3192.40625,
+            "width": 159.89584350585938,
+            "x": 103.91667175292967,
+            "y": 3192.40625
+          },
+          "text": "qa102y Featured result 4"
+        },
+        {
+          "href": "/post/226/",
+          "rect": {
+            "bottom": 3840.62508392334,
+            "height": 54.55208587646485,
+            "left": 103.91667175292967,
+            "right": 263.81251525878906,
+            "top": 3786.072998046875,
+            "width": 159.89584350585938,
+            "x": 103.91667175292967,
+            "y": 3786.072998046875
+          },
+          "text": "qa102y Featured result 5"
+        }
+      ],
+      "width": 390
+    },
+    {
+      "kind": "guest-following",
+      "doc": 0,
+      "filters": [
+        {
+          "fill": "rgb(0, 0, 0)",
+          "href": "/?filter=featured",
+          "rect": {
+            "bottom": 315.1875,
+            "height": 28,
+            "left": 183.9791717529297,
+            "right": 304.7395935058594,
+            "top": 287.1875,
+            "width": 120.76042175292967,
+            "x": 183.9791717529297,
+            "y": 287.1875
+          },
+          "text": "Istaknuti postovi"
+        },
+        {
+          "fill": "rgb(89, 89, 89)",
+          "href": "/?filter=all",
+          "rect": {
+            "bottom": 315.1875,
+            "height": 28,
+            "left": 329.7395935058594,
+            "right": 408.4270935058594,
+            "top": 287.1875,
+            "width": 78.6875,
+            "x": 329.7395935058594,
+            "y": 287.1875
+          },
+          "text": "Svi postovi"
+        }
+      ],
+      "headings": [
+        "Istaknuti postovi",
+        "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle",
+        "qa102y Featured result 1",
+        "qa102y Featured result 2",
+        "qa102y Featured result 3",
+        "qa102y Featured result 4",
+        "qa102y Featured result 5"
+      ],
+      "titles": [
+        {
+          "href": "/post/221/",
+          "rect": {
+            "bottom": 1144.2708740234375,
+            "height": 739.1666870117188,
+            "left": 340.3333435058594,
+            "right": 416.8958435058594,
+            "top": 405.1041870117187,
+            "width": 76.5625,
+            "x": 340.3333435058594,
+            "y": 405.1041870117187
+          },
+          "text": "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle"
+        },
+        {
+          "href": "/post/222/",
+          "rect": {
+            "bottom": 2050.5416717529297,
+            "height": 112.41667175292967,
+            "left": 340.3333435058594,
+            "right": 417.68751525878906,
+            "top": 1938.125,
+            "width": 77.35417175292969,
+            "x": 340.3333435058594,
+            "y": 1938.125
+          },
+          "text": "qa102y Featured result 1"
+        },
+        {
+          "href": "/post/223/",
+          "rect": {
+            "bottom": 2874.8126678466797,
+            "height": 112.41667175292967,
+            "left": 340.3333435058594,
+            "right": 417.68751525878906,
+            "top": 2762.39599609375,
+            "width": 77.35417175292969,
+            "x": 340.3333435058594,
+            "y": 2762.39599609375
+          },
+          "text": "qa102y Featured result 2"
+        },
+        {
+          "href": "/post/224/",
+          "rect": {
+            "bottom": 3699.0834197998047,
+            "height": 112.41667175292967,
+            "left": 340.3333435058594,
+            "right": 417.68751525878906,
+            "top": 3586.666748046875,
+            "width": 77.35417175292969,
+            "x": 340.3333435058594,
+            "y": 3586.666748046875
+          },
+          "text": "qa102y Featured result 3"
+        },
+        {
+          "href": "/post/225/",
+          "rect": {
+            "bottom": 4523.35417175293,
+            "height": 112.41667175292967,
+            "left": 340.3333435058594,
+            "right": 417.68751525878906,
+            "top": 4410.9375,
+            "width": 77.35417175292969,
+            "x": 340.3333435058594,
+            "y": 4410.9375
+          },
+          "text": "qa102y Featured result 4"
+        },
+        {
+          "href": "/post/226/",
+          "rect": {
+            "bottom": 5347.62516784668,
+            "height": 112.41667175292967,
+            "left": 340.3333435058594,
+            "right": 417.68751525878906,
+            "top": 5235.20849609375,
+            "width": 77.35417175292969,
+            "x": 340.3333435058594,
+            "y": 5235.20849609375
+          },
+          "text": "qa102y Featured result 5"
+        }
+      ],
+      "width": 768
+    },
+    {
+      "kind": "guest-following",
+      "doc": 0,
+      "filters": [
+        {
+          "fill": "rgb(0, 0, 0)",
+          "href": "/?filter=featured",
+          "rect": {
+            "bottom": 315.1875,
+            "height": 28,
+            "left": 360,
+            "right": 480.7604217529297,
+            "top": 287.1875,
+            "width": 120.76042175292967,
+            "x": 360,
+            "y": 287.1875
+          },
+          "text": "Istaknuti postovi"
+        },
+        {
+          "fill": "rgb(89, 89, 89)",
+          "href": "/?filter=all",
+          "rect": {
+            "bottom": 315.1875,
+            "height": 28,
+            "left": 505.7604370117187,
+            "right": 584.4479370117188,
+            "top": 287.1875,
+            "width": 78.6875,
+            "x": 505.7604370117187,
+            "y": 287.1875
+          },
+          "text": "Svi postovi"
+        }
+      ],
+      "headings": [
+        "Istaknuti postovi",
+        "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle",
+        "qa102y Featured result 1",
+        "qa102y Featured result 2",
+        "qa102y Featured result 3",
+        "qa102y Featured result 4",
+        "qa102y Featured result 5"
+      ],
+      "titles": [
+        {
+          "href": "/post/221/",
+          "rect": {
+            "bottom": 668.9791870117188,
+            "height": 262.3333435058594,
+            "left": 649.6666870117188,
+            "right": 911.4166870117188,
+            "top": 406.6458435058594,
+            "width": 261.75,
+            "x": 649.6666870117188,
+            "y": 406.6458435058594
+          },
+          "text": "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle"
+        },
+        {
+          "href": "/post/222/",
+          "rect": {
+            "bottom": 1181.75,
+            "height": 32,
+            "left": 649.6666870117188,
+            "right": 911.218780517578,
+            "top": 1149.75,
+            "width": 261.5520935058594,
+            "x": 649.6666870117188,
+            "y": 1149.75
+          },
+          "text": "qa102y Featured result 1"
+        },
+        {
+          "href": "/post/223/",
+          "rect": {
+            "bottom": 1564.5208740234375,
+            "height": 32,
+            "left": 649.6666870117188,
+            "right": 914.8854370117188,
+            "top": 1532.5208740234375,
+            "width": 265.21875,
+            "x": 649.6666870117188,
+            "y": 1532.5208740234375
+          },
+          "text": "qa102y Featured result 2"
+        },
+        {
+          "href": "/post/224/",
+          "rect": {
+            "bottom": 1947.291748046875,
+            "height": 32,
+            "left": 649.6666870117188,
+            "right": 914.8854370117188,
+            "top": 1915.291748046875,
+            "width": 265.21875,
+            "x": 649.6666870117188,
+            "y": 1915.291748046875
+          },
+          "text": "qa102y Featured result 3"
+        },
+        {
+          "href": "/post/225/",
+          "rect": {
+            "bottom": 2330.0625,
+            "height": 32,
+            "left": 649.6666870117188,
+            "right": 915.3958740234376,
+            "top": 2298.0625,
+            "width": 265.72918701171875,
+            "x": 649.6666870117188,
+            "y": 2298.0625
+          },
+          "text": "qa102y Featured result 4"
+        },
+        {
+          "href": "/post/226/",
+          "rect": {
+            "bottom": 2712.83349609375,
+            "height": 32,
+            "left": 649.6666870117188,
+            "right": 914.8854370117188,
+            "top": 2680.83349609375,
+            "width": 265.21875,
+            "x": 649.6666870117188,
+            "y": 2680.83349609375
+          },
+          "text": "qa102y Featured result 5"
+        }
+      ],
+      "width": 1440
+    }
+  ],
+  "reader-after": [
+    {
+      "doc": 0,
+      "filters": [
+        {
+          "fill": "rgb(89, 89, 89)",
+          "href": "/?filter=featured",
+          "rect": {
+            "bottom": 325.1875,
+            "height": 52,
+            "left": 24,
+            "right": 90.90625,
+            "top": 273.1875,
+            "width": 66.90625,
+            "x": 24,
+            "y": 273.1875
+          },
+          "text": "Istaknuti postovi"
+        },
+        {
+          "fill": "rgb(89, 89, 89)",
+          "href": "/?filter=all",
+          "rect": {
+            "bottom": 325.1875,
+            "height": 52,
+            "left": 115.90625,
+            "right": 169.53125,
+            "top": 273.1875,
+            "width": 53.625,
+            "x": 115.90625,
+            "y": 273.1875
+          },
+          "text": "Svi postovi"
+        },
+        {
+          "fill": "rgb(0, 0, 0)",
+          "href": "/?filter=following",
+          "rect": {
+            "bottom": 325.1875,
+            "height": 52,
+            "left": 194.53125,
+            "right": 280.6666717529297,
+            "top": 273.1875,
+            "width": 86.13542175292969,
+            "x": 194.53125,
+            "y": 273.1875
+          },
+          "text": "Samo oni koje pratim"
+        }
+      ],
+      "headings": [
+        "Postovi korisnika koje pratiš",
+        "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle",
+        "qa102y Featured result 1",
+        "qa102y Featured result 2",
+        "qa102y Featured result 3",
+        "qa102y Featured result 4"
+      ],
+      "titles": [
+        {
+          "href": "/post/221/",
+          "rect": {
+            "bottom": 928.8646240234376,
+            "height": 413.1979370117187,
+            "left": 103.91667175292967,
+            "right": 235.8229217529297,
+            "top": 515.6666870117188,
+            "width": 131.90625,
+            "x": 103.91667175292967,
+            "y": 515.6666870117188
+          },
+          "text": "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle"
+        },
+        {
+          "href": "/post/222/",
+          "rect": {
+            "bottom": 1711.5833740234375,
+            "height": 79.9375,
+            "left": 103.91667175292967,
+            "right": 189.27084350585935,
+            "top": 1631.6458740234375,
+            "width": 85.35417175292969,
+            "x": 103.91667175292967,
+            "y": 1631.6458740234375
+          },
+          "text": "qa102y Featured result 1"
+        },
+        {
+          "href": "/post/223/",
+          "rect": {
+            "bottom": 2388.30224609375,
+            "height": 79.9375,
+            "left": 103.91667175292967,
+            "right": 189.27084350585935,
+            "top": 2308.36474609375,
+            "width": 85.35417175292969,
+            "x": 103.91667175292967,
+            "y": 2308.36474609375
+          },
+          "text": "qa102y Featured result 2"
+        },
+        {
+          "href": "/post/224/",
+          "rect": {
+            "bottom": 3065.02099609375,
+            "height": 79.9375,
+            "left": 103.91667175292967,
+            "right": 189.27084350585935,
+            "top": 2985.08349609375,
+            "width": 85.35417175292969,
+            "x": 103.91667175292967,
+            "y": 2985.08349609375
+          },
+          "text": "qa102y Featured result 3"
+        },
+        {
+          "href": "/post/225/",
+          "rect": {
+            "bottom": 3741.73974609375,
+            "height": 79.9375,
+            "left": 103.91667175292967,
+            "right": 189.27084350585935,
+            "top": 3661.80224609375,
+            "width": 85.35417175292969,
+            "x": 103.91667175292967,
+            "y": 3661.80224609375
+          },
+          "text": "qa102y Featured result 4"
+        }
+      ],
+      "width": 320
+    },
+    {
+      "doc": 0,
+      "filters": [
+        {
+          "fill": "rgb(89, 89, 89)",
+          "href": "/?filter=featured",
+          "rect": {
+            "bottom": 325.1875,
+            "height": 52,
+            "left": 24,
+            "right": 118.13542175292967,
+            "top": 273.1875,
+            "width": 94.13542175292967,
+            "x": 24,
+            "y": 273.1875
+          },
+          "text": "Istaknuti postovi"
+        },
+        {
+          "fill": "rgb(89, 89, 89)",
+          "href": "/?filter=all",
+          "rect": {
+            "bottom": 325.1875,
+            "height": 52,
+            "left": 143.1354217529297,
+            "right": 204.4791717529297,
+            "top": 273.1875,
+            "width": 61.34375,
+            "x": 143.1354217529297,
+            "y": 273.1875
+          },
+          "text": "Svi postovi"
+        },
+        {
+          "fill": "rgb(0, 0, 0)",
+          "href": "/?filter=following",
+          "rect": {
+            "bottom": 325.1875,
+            "height": 52,
+            "left": 229.4791717529297,
+            "right": 350.6666717529297,
+            "top": 273.1875,
+            "width": 121.1875,
+            "x": 229.4791717529297,
+            "y": 273.1875
+          },
+          "text": "Samo oni koje pratim"
+        }
+      ],
+      "headings": [
+        "Postovi korisnika koje pratiš",
+        "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle",
+        "qa102y Featured result 1",
+        "qa102y Featured result 2",
+        "qa102y Featured result 3",
+        "qa102y Featured result 4"
+      ],
+      "titles": [
+        {
+          "href": "/post/221/",
+          "rect": {
+            "bottom": 791.2916870117188,
+            "height": 261.63543701171875,
+            "left": 103.91667175292967,
+            "right": 309.1354217529297,
+            "top": 529.65625,
+            "width": 205.21875,
+            "x": 103.91667175292967,
+            "y": 529.65625
+          },
+          "text": "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle"
+        },
+        {
+          "href": "/post/222/",
+          "rect": {
+            "bottom": 1490.9583358764648,
+            "height": 54.55208587646485,
+            "left": 103.91667175292967,
+            "right": 263.81251525878906,
+            "top": 1436.40625,
+            "width": 159.89584350585938,
+            "x": 103.91667175292967,
+            "y": 1436.40625
+          },
+          "text": "qa102y Featured result 1"
+        },
+        {
+          "href": "/post/223/",
+          "rect": {
+            "bottom": 2084.62508392334,
+            "height": 54.55208587646485,
+            "left": 103.91667175292967,
+            "right": 263.81251525878906,
+            "top": 2030.072998046875,
+            "width": 159.89584350585938,
+            "x": 103.91667175292967,
+            "y": 2030.072998046875
+          },
+          "text": "qa102y Featured result 2"
+        },
+        {
+          "href": "/post/224/",
+          "rect": {
+            "bottom": 2678.291831970215,
+            "height": 54.55208587646485,
+            "left": 103.91667175292967,
+            "right": 263.81251525878906,
+            "top": 2623.73974609375,
+            "width": 159.89584350585938,
+            "x": 103.91667175292967,
+            "y": 2623.73974609375
+          },
+          "text": "qa102y Featured result 3"
+        },
+        {
+          "href": "/post/225/",
+          "rect": {
+            "bottom": 3271.958335876465,
+            "height": 54.55208587646485,
+            "left": 103.91667175292967,
+            "right": 263.81251525878906,
+            "top": 3217.40625,
+            "width": 159.89584350585938,
+            "x": 103.91667175292967,
+            "y": 3217.40625
+          },
+          "text": "qa102y Featured result 4"
+        }
+      ],
+      "width": 390
+    },
+    {
+      "doc": 0,
+      "filters": [
+        {
+          "fill": "rgb(89, 89, 89)",
+          "href": "/?filter=featured",
+          "rect": {
+            "bottom": 339.1875,
+            "height": 52,
+            "left": 183.9791717529297,
+            "right": 261.1041717529297,
+            "top": 287.1875,
+            "width": 77.125,
+            "x": 183.9791717529297,
+            "y": 287.1875
+          },
+          "text": "Istaknuti postovi"
+        },
+        {
+          "fill": "rgb(89, 89, 89)",
+          "href": "/?filter=all",
+          "rect": {
+            "bottom": 339.1875,
+            "height": 52,
+            "left": 286.10418701171875,
+            "right": 339.72918701171875,
+            "top": 287.1875,
+            "width": 53.625,
+            "x": 286.10418701171875,
+            "y": 287.1875
+          },
+          "text": "Svi postovi"
+        },
+        {
+          "fill": "rgb(0, 0, 0)",
+          "href": "/?filter=following",
+          "rect": {
+            "bottom": 339.1875,
+            "height": 52,
+            "left": 364.7291870117187,
+            "right": 464.0208587646485,
+            "top": 287.1875,
+            "width": 99.29167175292967,
+            "x": 364.7291870117187,
+            "y": 287.1875
+          },
+          "text": "Samo oni koje pratim"
+        }
+      ],
+      "headings": [
+        "Postovi korisnika koje pratiš",
+        "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle",
+        "qa102y Featured result 1",
+        "qa102y Featured result 2",
+        "qa102y Featured result 3",
+        "qa102y Featured result 4"
+      ],
+      "titles": [
+        {
+          "href": "/post/221/",
+          "rect": {
+            "bottom": 1195.5208740234375,
+            "height": 739.1666870117188,
+            "left": 340.3333435058594,
+            "right": 416.8958435058594,
+            "top": 456.3541870117187,
+            "width": 76.5625,
+            "x": 340.3333435058594,
+            "y": 456.3541870117187
+          },
+          "text": "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle"
+        },
+        {
+          "href": "/post/222/",
+          "rect": {
+            "bottom": 2101.7916717529297,
+            "height": 112.41667175292967,
+            "left": 340.3333435058594,
+            "right": 417.68751525878906,
+            "top": 1989.375,
+            "width": 77.35417175292969,
+            "x": 340.3333435058594,
+            "y": 1989.375
+          },
+          "text": "qa102y Featured result 1"
+        },
+        {
+          "href": "/post/223/",
+          "rect": {
+            "bottom": 2926.0626678466797,
+            "height": 112.41667175292967,
+            "left": 340.3333435058594,
+            "right": 417.68751525878906,
+            "top": 2813.64599609375,
+            "width": 77.35417175292969,
+            "x": 340.3333435058594,
+            "y": 2813.64599609375
+          },
+          "text": "qa102y Featured result 2"
+        },
+        {
+          "href": "/post/224/",
+          "rect": {
+            "bottom": 3750.3334197998047,
+            "height": 112.41667175292967,
+            "left": 340.3333435058594,
+            "right": 417.68751525878906,
+            "top": 3637.916748046875,
+            "width": 77.35417175292969,
+            "x": 340.3333435058594,
+            "y": 3637.916748046875
+          },
+          "text": "qa102y Featured result 3"
+        },
+        {
+          "href": "/post/225/",
+          "rect": {
+            "bottom": 4574.60417175293,
+            "height": 112.41667175292967,
+            "left": 340.3333435058594,
+            "right": 417.68751525878906,
+            "top": 4462.1875,
+            "width": 77.35417175292969,
+            "x": 340.3333435058594,
+            "y": 4462.1875
+          },
+          "text": "qa102y Featured result 4"
+        }
+      ],
+      "width": 768
+    },
+    {
+      "doc": 0,
+      "filters": [
+        {
+          "fill": "rgb(89, 89, 89)",
+          "href": "/?filter=featured",
+          "rect": {
+            "bottom": 315.1875,
+            "height": 28,
+            "left": 360,
+            "right": 480.7604217529297,
+            "top": 287.1875,
+            "width": 120.76042175292967,
+            "x": 360,
+            "y": 287.1875
+          },
+          "text": "Istaknuti postovi"
+        },
+        {
+          "fill": "rgb(89, 89, 89)",
+          "href": "/?filter=all",
+          "rect": {
+            "bottom": 315.1875,
+            "height": 28,
+            "left": 505.7604370117187,
+            "right": 584.4479370117188,
+            "top": 287.1875,
+            "width": 78.6875,
+            "x": 505.7604370117187,
+            "y": 287.1875
+          },
+          "text": "Svi postovi"
+        },
+        {
+          "fill": "rgb(0, 0, 0)",
+          "href": "/?filter=following",
+          "rect": {
+            "bottom": 315.1875,
+            "height": 28,
+            "left": 609.4479370117188,
+            "right": 764.9062805175781,
+            "top": 287.1875,
+            "width": 155.45834350585938,
+            "x": 609.4479370117188,
+            "y": 287.1875
+          },
+          "text": "Samo oni koje pratim"
+        }
+      ],
+      "headings": [
+        "Postovi korisnika koje pratiš",
+        "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle",
+        "qa102y Featured result 1",
+        "qa102y Featured result 2",
+        "qa102y Featured result 3",
+        "qa102y Featured result 4"
+      ],
+      "titles": [
+        {
+          "href": "/post/221/",
+          "rect": {
+            "bottom": 668.9791870117188,
+            "height": 262.3333435058594,
+            "left": 649.6666870117188,
+            "right": 911.4166870117188,
+            "top": 406.6458435058594,
+            "width": 261.75,
+            "x": 649.6666870117188,
+            "y": 406.6458435058594
+          },
+          "text": "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle"
+        },
+        {
+          "href": "/post/222/",
+          "rect": {
+            "bottom": 1181.75,
+            "height": 32,
+            "left": 649.6666870117188,
+            "right": 911.218780517578,
+            "top": 1149.75,
+            "width": 261.5520935058594,
+            "x": 649.6666870117188,
+            "y": 1149.75
+          },
+          "text": "qa102y Featured result 1"
+        },
+        {
+          "href": "/post/223/",
+          "rect": {
+            "bottom": 1564.5208740234375,
+            "height": 32,
+            "left": 649.6666870117188,
+            "right": 914.8854370117188,
+            "top": 1532.5208740234375,
+            "width": 265.21875,
+            "x": 649.6666870117188,
+            "y": 1532.5208740234375
+          },
+          "text": "qa102y Featured result 2"
+        },
+        {
+          "href": "/post/224/",
+          "rect": {
+            "bottom": 1947.291748046875,
+            "height": 32,
+            "left": 649.6666870117188,
+            "right": 914.8854370117188,
+            "top": 1915.291748046875,
+            "width": 265.21875,
+            "x": 649.6666870117188,
+            "y": 1915.291748046875
+          },
+          "text": "qa102y Featured result 3"
+        },
+        {
+          "href": "/post/225/",
+          "rect": {
+            "bottom": 2330.0625,
+            "height": 32,
+            "left": 649.6666870117188,
+            "right": 915.3958740234376,
+            "top": 2298.0625,
+            "width": 265.72918701171875,
+            "x": 649.6666870117188,
+            "y": 2298.0625
+          },
+          "text": "qa102y Featured result 4"
+        }
+      ],
+      "width": 1440
+    }
+  ],
+  "featured-controls": [
+    {
+      "doc": 0,
+      "filters": [
+        {
+          "fill": "rgb(0, 0, 0)",
+          "href": "/?filter=featured",
+          "rect": {
+            "bottom": 300.1875,
+            "height": 28,
+            "left": 24,
+            "right": 144.7604217529297,
+            "top": 272.1875,
+            "width": 120.76042175292967,
+            "x": 24,
+            "y": 272.1875
+          },
+          "text": "Istaknuti postovi"
+        },
+        {
+          "fill": "rgb(89, 89, 89)",
+          "href": "/?filter=all",
+          "rect": {
+            "bottom": 300.1875,
+            "height": 28,
+            "left": 169.7604217529297,
+            "right": 248.4479217529297,
+            "top": 272.1875,
+            "width": 78.6875,
+            "x": 169.7604217529297,
+            "y": 272.1875
+          },
+          "text": "Svi postovi"
+        }
+      ],
+      "headings": [
+        "Istaknuti postovi",
+        "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle",
+        "qa102y Featured result 1",
+        "qa102y Featured result 2",
+        "qa102y Featured result 3",
+        "qa102y Featured result 4",
+        "qa102y Featured result 5"
+      ],
+      "titles": [
+        {
+          "href": "/post/221/",
+          "rect": {
+            "bottom": 878.2291870117188,
+            "height": 413.1979370117187,
+            "left": 103.91667175292967,
+            "right": 235.8229217529297,
+            "top": 465.03125,
+            "width": 131.90625,
+            "x": 103.91667175292967,
+            "y": 465.03125
+          },
+          "text": "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle"
+        },
+        {
+          "href": "/post/222/",
+          "rect": {
+            "bottom": 1660.947998046875,
+            "height": 79.9375,
+            "left": 103.91667175292967,
+            "right": 189.27084350585935,
+            "top": 1581.010498046875,
+            "width": 85.35417175292969,
+            "x": 103.91667175292967,
+            "y": 1581.010498046875
+          },
+          "text": "qa102y Featured result 1"
+        },
+        {
+          "href": "/post/223/",
+          "rect": {
+            "bottom": 2337.666748046875,
+            "height": 79.9375,
+            "left": 103.91667175292967,
+            "right": 189.27084350585935,
+            "top": 2257.729248046875,
+            "width": 85.35417175292969,
+            "x": 103.91667175292967,
+            "y": 2257.729248046875
+          },
+          "text": "qa102y Featured result 2"
+        },
+        {
+          "href": "/post/224/",
+          "rect": {
+            "bottom": 3014.385498046875,
+            "height": 79.9375,
+            "left": 103.91667175292967,
+            "right": 189.27084350585935,
+            "top": 2934.447998046875,
+            "width": 85.35417175292969,
+            "x": 103.91667175292967,
+            "y": 2934.447998046875
+          },
+          "text": "qa102y Featured result 3"
+        },
+        {
+          "href": "/post/225/",
+          "rect": {
+            "bottom": 3691.104248046875,
+            "height": 79.9375,
+            "left": 103.91667175292967,
+            "right": 189.27084350585935,
+            "top": 3611.166748046875,
+            "width": 85.35417175292969,
+            "x": 103.91667175292967,
+            "y": 3611.166748046875
+          },
+          "text": "qa102y Featured result 4"
+        },
+        {
+          "href": "/post/226/",
+          "rect": {
+            "bottom": 4367.8232421875,
+            "height": 79.9375,
+            "left": 103.91667175292967,
+            "right": 189.27084350585935,
+            "top": 4287.8857421875,
+            "width": 85.35417175292969,
+            "x": 103.91667175292967,
+            "y": 4287.8857421875
+          },
+          "text": "qa102y Featured result 5"
+        }
+      ],
+      "width": 320
+    },
+    {
+      "doc": 0,
+      "filters": [
+        {
+          "fill": "rgb(0, 0, 0)",
+          "href": "/?filter=featured",
+          "rect": {
+            "bottom": 300.1875,
+            "height": 28,
+            "left": 24,
+            "right": 144.7604217529297,
+            "top": 272.1875,
+            "width": 120.76042175292967,
+            "x": 24,
+            "y": 272.1875
+          },
+          "text": "Istaknuti postovi"
+        },
+        {
+          "fill": "rgb(89, 89, 89)",
+          "href": "/?filter=all",
+          "rect": {
+            "bottom": 300.1875,
+            "height": 28,
+            "left": 169.7604217529297,
+            "right": 248.4479217529297,
+            "top": 272.1875,
+            "width": 78.6875,
+            "x": 169.7604217529297,
+            "y": 272.1875
+          },
+          "text": "Svi postovi"
+        }
+      ],
+      "headings": [
+        "Istaknuti postovi",
+        "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle",
+        "qa102y Featured result 1",
+        "qa102y Featured result 2",
+        "qa102y Featured result 3",
+        "qa102y Featured result 4",
+        "qa102y Featured result 5"
+      ],
+      "titles": [
+        {
+          "href": "/post/221/",
+          "rect": {
+            "bottom": 766.2916870117188,
+            "height": 261.63543701171875,
+            "left": 103.91667175292967,
+            "right": 309.1354217529297,
+            "top": 504.65625,
+            "width": 205.21875,
+            "x": 103.91667175292967,
+            "y": 504.65625
+          },
+          "text": "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle"
+        },
+        {
+          "href": "/post/222/",
+          "rect": {
+            "bottom": 1465.9583358764648,
+            "height": 54.55208587646485,
+            "left": 103.91667175292967,
+            "right": 263.81251525878906,
+            "top": 1411.40625,
+            "width": 159.89584350585938,
+            "x": 103.91667175292967,
+            "y": 1411.40625
+          },
+          "text": "qa102y Featured result 1"
+        },
+        {
+          "href": "/post/223/",
+          "rect": {
+            "bottom": 2059.62508392334,
+            "height": 54.55208587646485,
+            "left": 103.91667175292967,
+            "right": 263.81251525878906,
+            "top": 2005.072998046875,
+            "width": 159.89584350585938,
+            "x": 103.91667175292967,
+            "y": 2005.072998046875
+          },
+          "text": "qa102y Featured result 2"
+        },
+        {
+          "href": "/post/224/",
+          "rect": {
+            "bottom": 2653.291831970215,
+            "height": 54.55208587646485,
+            "left": 103.91667175292967,
+            "right": 263.81251525878906,
+            "top": 2598.73974609375,
+            "width": 159.89584350585938,
+            "x": 103.91667175292967,
+            "y": 2598.73974609375
+          },
+          "text": "qa102y Featured result 3"
+        },
+        {
+          "href": "/post/225/",
+          "rect": {
+            "bottom": 3246.958335876465,
+            "height": 54.55208587646485,
+            "left": 103.91667175292967,
+            "right": 263.81251525878906,
+            "top": 3192.40625,
+            "width": 159.89584350585938,
+            "x": 103.91667175292967,
+            "y": 3192.40625
+          },
+          "text": "qa102y Featured result 4"
+        },
+        {
+          "href": "/post/226/",
+          "rect": {
+            "bottom": 3840.62508392334,
+            "height": 54.55208587646485,
+            "left": 103.91667175292967,
+            "right": 263.81251525878906,
+            "top": 3786.072998046875,
+            "width": 159.89584350585938,
+            "x": 103.91667175292967,
+            "y": 3786.072998046875
+          },
+          "text": "qa102y Featured result 5"
+        }
+      ],
+      "width": 390
+    },
+    {
+      "doc": 0,
+      "filters": [
+        {
+          "fill": "rgb(0, 0, 0)",
+          "href": "/?filter=featured",
+          "rect": {
+            "bottom": 315.1875,
+            "height": 28,
+            "left": 183.9791717529297,
+            "right": 304.7395935058594,
+            "top": 287.1875,
+            "width": 120.76042175292967,
+            "x": 183.9791717529297,
+            "y": 287.1875
+          },
+          "text": "Istaknuti postovi"
+        },
+        {
+          "fill": "rgb(89, 89, 89)",
+          "href": "/?filter=all",
+          "rect": {
+            "bottom": 315.1875,
+            "height": 28,
+            "left": 329.7395935058594,
+            "right": 408.4270935058594,
+            "top": 287.1875,
+            "width": 78.6875,
+            "x": 329.7395935058594,
+            "y": 287.1875
+          },
+          "text": "Svi postovi"
+        }
+      ],
+      "headings": [
+        "Istaknuti postovi",
+        "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle",
+        "qa102y Featured result 1",
+        "qa102y Featured result 2",
+        "qa102y Featured result 3",
+        "qa102y Featured result 4",
+        "qa102y Featured result 5"
+      ],
+      "titles": [
+        {
+          "href": "/post/221/",
+          "rect": {
+            "bottom": 1144.2708740234375,
+            "height": 739.1666870117188,
+            "left": 340.3333435058594,
+            "right": 416.8958435058594,
+            "top": 405.1041870117187,
+            "width": 76.5625,
+            "x": 340.3333435058594,
+            "y": 405.1041870117187
+          },
+          "text": "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle"
+        },
+        {
+          "href": "/post/222/",
+          "rect": {
+            "bottom": 2050.5416717529297,
+            "height": 112.41667175292967,
+            "left": 340.3333435058594,
+            "right": 417.68751525878906,
+            "top": 1938.125,
+            "width": 77.35417175292969,
+            "x": 340.3333435058594,
+            "y": 1938.125
+          },
+          "text": "qa102y Featured result 1"
+        },
+        {
+          "href": "/post/223/",
+          "rect": {
+            "bottom": 2874.8126678466797,
+            "height": 112.41667175292967,
+            "left": 340.3333435058594,
+            "right": 417.68751525878906,
+            "top": 2762.39599609375,
+            "width": 77.35417175292969,
+            "x": 340.3333435058594,
+            "y": 2762.39599609375
+          },
+          "text": "qa102y Featured result 2"
+        },
+        {
+          "href": "/post/224/",
+          "rect": {
+            "bottom": 3699.0834197998047,
+            "height": 112.41667175292967,
+            "left": 340.3333435058594,
+            "right": 417.68751525878906,
+            "top": 3586.666748046875,
+            "width": 77.35417175292969,
+            "x": 340.3333435058594,
+            "y": 3586.666748046875
+          },
+          "text": "qa102y Featured result 3"
+        },
+        {
+          "href": "/post/225/",
+          "rect": {
+            "bottom": 4523.35417175293,
+            "height": 112.41667175292967,
+            "left": 340.3333435058594,
+            "right": 417.68751525878906,
+            "top": 4410.9375,
+            "width": 77.35417175292969,
+            "x": 340.3333435058594,
+            "y": 4410.9375
+          },
+          "text": "qa102y Featured result 4"
+        },
+        {
+          "href": "/post/226/",
+          "rect": {
+            "bottom": 5347.62516784668,
+            "height": 112.41667175292967,
+            "left": 340.3333435058594,
+            "right": 417.68751525878906,
+            "top": 5235.20849609375,
+            "width": 77.35417175292969,
+            "x": 340.3333435058594,
+            "y": 5235.20849609375
+          },
+          "text": "qa102y Featured result 5"
+        }
+      ],
+      "width": 768
+    },
+    {
+      "doc": 0,
+      "filters": [
+        {
+          "fill": "rgb(0, 0, 0)",
+          "href": "/?filter=featured",
+          "rect": {
+            "bottom": 315.1875,
+            "height": 28,
+            "left": 360,
+            "right": 480.7604217529297,
+            "top": 287.1875,
+            "width": 120.76042175292967,
+            "x": 360,
+            "y": 287.1875
+          },
+          "text": "Istaknuti postovi"
+        },
+        {
+          "fill": "rgb(89, 89, 89)",
+          "href": "/?filter=all",
+          "rect": {
+            "bottom": 315.1875,
+            "height": 28,
+            "left": 505.7604370117187,
+            "right": 584.4479370117188,
+            "top": 287.1875,
+            "width": 78.6875,
+            "x": 505.7604370117187,
+            "y": 287.1875
+          },
+          "text": "Svi postovi"
+        }
+      ],
+      "headings": [
+        "Istaknuti postovi",
+        "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle",
+        "qa102y Featured result 1",
+        "qa102y Featured result 2",
+        "qa102y Featured result 3",
+        "qa102y Featured result 4",
+        "qa102y Featured result 5"
+      ],
+      "titles": [
+        {
+          "href": "/post/221/",
+          "rect": {
+            "bottom": 668.9791870117188,
+            "height": 262.3333435058594,
+            "left": 649.6666870117188,
+            "right": 911.4166870117188,
+            "top": 406.6458435058594,
+            "width": 261.75,
+            "x": 649.6666870117188,
+            "y": 406.6458435058594
+          },
+          "text": "qa102y UnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitleUnbrokenTitle"
+        },
+        {
+          "href": "/post/222/",
+          "rect": {
+            "bottom": 1181.75,
+            "height": 32,
+            "left": 649.6666870117188,
+            "right": 911.218780517578,
+            "top": 1149.75,
+            "width": 261.5520935058594,
+            "x": 649.6666870117188,
+            "y": 1149.75
+          },
+          "text": "qa102y Featured result 1"
+        },
+        {
+          "href": "/post/223/",
+          "rect": {
+            "bottom": 1564.5208740234375,
+            "height": 32,
+            "left": 649.6666870117188,
+            "right": 914.8854370117188,
+            "top": 1532.5208740234375,
+            "width": 265.21875,
+            "x": 649.6666870117188,
+            "y": 1532.5208740234375
+          },
+          "text": "qa102y Featured result 2"
+        },
+        {
+          "href": "/post/224/",
+          "rect": {
+            "bottom": 1947.291748046875,
+            "height": 32,
+            "left": 649.6666870117188,
+            "right": 914.8854370117188,
+            "top": 1915.291748046875,
+            "width": 265.21875,
+            "x": 649.6666870117188,
+            "y": 1915.291748046875
+          },
+          "text": "qa102y Featured result 3"
+        },
+        {
+          "href": "/post/225/",
+          "rect": {
+            "bottom": 2330.0625,
+            "height": 32,
+            "left": 649.6666870117188,
+            "right": 915.3958740234376,
+            "top": 2298.0625,
+            "width": 265.72918701171875,
+            "x": 649.6666870117188,
+            "y": 2298.0625
+          },
+          "text": "qa102y Featured result 4"
+        },
+        {
+          "href": "/post/226/",
+          "rect": {
+            "bottom": 2712.83349609375,
+            "height": 32,
+            "left": 649.6666870117188,
+            "right": 914.8854370117188,
+            "top": 2680.83349609375,
+            "width": 265.21875,
+            "x": 649.6666870117188,
+            "y": 2680.83349609375
+          },
+          "text": "qa102y Featured result 5"
+        }
+      ],
+      "width": 1440
+    }
+  ]
+}
