@@ -1,4 +1,6 @@
-# Remaining acceptance scope after Phase103f
+# Remaining acceptance scope after Phase103g
+
+Phase103g closes the empty-owner browser check using synthetic owner2673/post229: login, four widths320/390/768/1440 with empty following, zero document/sampled local overflow and sampled nonoverlap; safe all-feed shows own post, return is empty, logout verified. No application changes or new full-suite run. See phase103g_empty_owner_browser.md and measurements. Latest entries supersede historical open/next statements below. Gradient native-hover/pixel evidence and remaining ledger stay open.
 
 Phase103f closes desktop secondary-author horizontal clipping: local excess1044 to0 at1440 by anywhere wrapping, retaining two-line ellipsis and six columns. Desktop card height intentionally grows16.896px; phone/tablet sampled rectangles and all sampled ink unchanged. Four paired widths, safe227,223 tests49.363s. See phase103f_desktop_author_wrapping.md. Full-name preview is still clamped; empty-owner browser and gradient hover/pixel remain open.
 

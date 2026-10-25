@@ -1,0 +1,413 @@
+{
+  "baseline": "757d539",
+  "fixture": {
+    "owner": 2673,
+    "username": "qa103g_empty_owner",
+    "post": 229,
+    "following": 0
+  },
+  "states": [
+    {
+      "docOverflow": 0,
+      "elements": [
+        {
+          "backgroundChain": [
+            "rgba(0, 0, 0, 0)",
+            "rgba(0, 0, 0, 0)",
+            "rgb(255, 255, 255)"
+          ],
+          "color": "rgb(89, 89, 89)",
+          "fill": "rgb(89, 89, 89)",
+          "font": "500 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "localOverflow": 0,
+          "rect": {
+            "h": 52,
+            "w": 66.90625,
+            "x": 24,
+            "y": 273.1875
+          },
+          "text": "Istaknuti postovi"
+        },
+        {
+          "backgroundChain": [
+            "rgba(0, 0, 0, 0)",
+            "rgba(0, 0, 0, 0)",
+            "rgb(255, 255, 255)"
+          ],
+          "color": "rgb(89, 89, 89)",
+          "fill": "rgb(89, 89, 89)",
+          "font": "500 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "localOverflow": 0,
+          "rect": {
+            "h": 52,
+            "w": 53.625,
+            "x": 115.90625,
+            "y": 273.1875
+          },
+          "text": "Svi postovi"
+        },
+        {
+          "backgroundChain": [
+            "rgba(0, 0, 0, 0)",
+            "rgba(0, 0, 0, 0)",
+            "rgb(255, 255, 255)"
+          ],
+          "color": "rgb(0, 0, 0)",
+          "fill": "rgb(0, 0, 0)",
+          "font": "500 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "localOverflow": 0,
+          "rect": {
+            "h": 52,
+            "w": 86.13542175292969,
+            "x": 194.53125,
+            "y": 273.1875
+          },
+          "text": "Samo oni koje pratim"
+        },
+        {
+          "backgroundChain": [
+            "rgba(0, 0, 0, 0)",
+            "rgba(0, 0, 0, 0)",
+            "rgb(255, 255, 255)"
+          ],
+          "color": "rgb(33, 37, 41)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "500 21.36px / 25.632px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "localOverflow": 0,
+          "rect": {
+            "h": 51.27083587646485,
+            "w": 256.66668701171875,
+            "x": 24,
+            "y": 349.1875
+          },
+          "text": "Postovi korisnika koje pratiÅ¡"
+        },
+        {
+          "backgroundChain": [
+            "rgba(0, 0, 0, 0)",
+            "rgba(0, 0, 0, 0)",
+            "rgb(255, 255, 255)"
+          ],
+          "color": "rgb(33, 37, 41)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "localOverflow": 0,
+          "rect": {
+            "h": 24,
+            "w": 256.66668701171875,
+            "x": 24,
+            "y": 424.4583435058594
+          },
+          "text": "Nema postova."
+        }
+      ],
+      "posts": [],
+      "url": "http://127.0.0.1:8017/?filter=following",
+      "width": 320
+    },
+    {
+      "docOverflow": 0,
+      "elements": [
+        {
+          "backgroundChain": [
+            "rgba(0, 0, 0, 0)",
+            "rgba(0, 0, 0, 0)",
+            "rgb(255, 255, 255)"
+          ],
+          "color": "rgb(89, 89, 89)",
+          "fill": "rgb(89, 89, 89)",
+          "font": "500 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "localOverflow": 0,
+          "rect": {
+            "h": 52,
+            "w": 94.13542175292967,
+            "x": 24,
+            "y": 273.1875
+          },
+          "text": "Istaknuti postovi"
+        },
+        {
+          "backgroundChain": [
+            "rgba(0, 0, 0, 0)",
+            "rgba(0, 0, 0, 0)",
+            "rgb(255, 255, 255)"
+          ],
+          "color": "rgb(89, 89, 89)",
+          "fill": "rgb(89, 89, 89)",
+          "font": "500 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "localOverflow": 0,
+          "rect": {
+            "h": 52,
+            "w": 61.34375,
+            "x": 143.1354217529297,
+            "y": 273.1875
+          },
+          "text": "Svi postovi"
+        },
+        {
+          "backgroundChain": [
+            "rgba(0, 0, 0, 0)",
+            "rgba(0, 0, 0, 0)",
+            "rgb(255, 255, 255)"
+          ],
+          "color": "rgb(0, 0, 0)",
+          "fill": "rgb(0, 0, 0)",
+          "font": "500 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "localOverflow": 0,
+          "rect": {
+            "h": 52,
+            "w": 121.1875,
+            "x": 229.4791717529297,
+            "y": 273.1875
+          },
+          "text": "Samo oni koje pratim"
+        },
+        {
+          "backgroundChain": [
+            "rgba(0, 0, 0, 0)",
+            "rgba(0, 0, 0, 0)",
+            "rgb(255, 255, 255)"
+          ],
+          "color": "rgb(33, 37, 41)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "500 21.57px / 25.884px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "localOverflow": 0,
+          "rect": {
+            "h": 25.885417938232425,
+            "w": 326.66668701171875,
+            "x": 24,
+            "y": 349.1875
+          },
+          "text": "Postovi korisnika koje pratiÅ¡"
+        },
+        {
+          "backgroundChain": [
+            "rgba(0, 0, 0, 0)",
+            "rgba(0, 0, 0, 0)",
+            "rgb(255, 255, 255)"
+          ],
+          "color": "rgb(33, 37, 41)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "localOverflow": 0,
+          "rect": {
+            "h": 24,
+            "w": 326.66668701171875,
+            "x": 24,
+            "y": 399.0729370117187
+          },
+          "text": "Nema postova."
+        }
+      ],
+      "posts": [],
+      "url": "http://127.0.0.1:8017/?filter=following",
+      "width": 390
+    },
+    {
+      "docOverflow": 0,
+      "elements": [
+        {
+          "backgroundChain": [
+            "rgba(0, 0, 0, 0)",
+            "rgba(0, 0, 0, 0)",
+            "rgb(255, 255, 255)"
+          ],
+          "color": "rgb(89, 89, 89)",
+          "fill": "rgb(89, 89, 89)",
+          "font": "500 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "localOverflow": 0,
+          "rect": {
+            "h": 52,
+            "w": 77.125,
+            "x": 183.9791717529297,
+            "y": 287.1875
+          },
+          "text": "Istaknuti postovi"
+        },
+        {
+          "backgroundChain": [
+            "rgba(0, 0, 0, 0)",
+            "rgba(0, 0, 0, 0)",
+            "rgb(255, 255, 255)"
+          ],
+          "color": "rgb(89, 89, 89)",
+          "fill": "rgb(89, 89, 89)",
+          "font": "500 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "localOverflow": 0,
+          "rect": {
+            "h": 52,
+            "w": 53.625,
+            "x": 286.10418701171875,
+            "y": 287.1875
+          },
+          "text": "Svi postovi"
+        },
+        {
+          "backgroundChain": [
+            "rgba(0, 0, 0, 0)",
+            "rgba(0, 0, 0, 0)",
+            "rgb(255, 255, 255)"
+          ],
+          "color": "rgb(0, 0, 0)",
+          "fill": "rgb(0, 0, 0)",
+          "font": "500 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "localOverflow": 0,
+          "rect": {
+            "h": 52,
+            "w": 99.29167175292967,
+            "x": 364.7291870117187,
+            "y": 287.1875
+          },
+          "text": "Samo oni koje pratim"
+        },
+        {
+          "backgroundChain": [
+            "rgba(0, 0, 0, 0)",
+            "rgba(0, 0, 0, 0)",
+            "rgb(255, 255, 255)"
+          ],
+          "color": "rgb(33, 37, 41)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "500 22.704px / 27.2448px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "localOverflow": 0,
+          "rect": {
+            "h": 54.5,
+            "w": 280.04168701171875,
+            "x": 183.9791717529297,
+            "y": 363.1875
+          },
+          "text": "Postovi korisnika koje pratiÅ¡"
+        },
+        {
+          "backgroundChain": [
+            "rgba(0, 0, 0, 0)",
+            "rgba(0, 0, 0, 0)",
+            "rgb(255, 255, 255)"
+          ],
+          "color": "rgb(33, 37, 41)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "localOverflow": 0,
+          "rect": {
+            "h": 24,
+            "w": 280.04168701171875,
+            "x": 183.9791717529297,
+            "y": 441.6875
+          },
+          "text": "Nema postova."
+        }
+      ],
+      "posts": [],
+      "url": "http://127.0.0.1:8017/?filter=following",
+      "width": 768
+    },
+    {
+      "docOverflow": 0,
+      "elements": [
+        {
+          "backgroundChain": [
+            "rgba(0, 0, 0, 0)",
+            "rgba(0, 0, 0, 0)",
+            "rgb(255, 255, 255)"
+          ],
+          "color": "rgb(89, 89, 89)",
+          "fill": "rgb(89, 89, 89)",
+          "font": "500 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "localOverflow": 0,
+          "rect": {
+            "h": 28,
+            "w": 120.76042175292967,
+            "x": 360,
+            "y": 287.1875
+          },
+          "text": "Istaknuti postovi"
+        },
+        {
+          "backgroundChain": [
+            "rgba(0, 0, 0, 0)",
+            "rgba(0, 0, 0, 0)",
+            "rgb(255, 255, 255)"
+          ],
+          "color": "rgb(89, 89, 89)",
+          "fill": "rgb(89, 89, 89)",
+          "font": "500 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "localOverflow": 0,
+          "rect": {
+            "h": 28,
+            "w": 78.6875,
+            "x": 505.7604370117187,
+            "y": 287.1875
+          },
+          "text": "Svi postovi"
+        },
+        {
+          "backgroundChain": [
+            "rgba(0, 0, 0, 0)",
+            "rgba(0, 0, 0, 0)",
+            "rgb(255, 255, 255)"
+          ],
+          "color": "rgb(0, 0, 0)",
+          "fill": "rgb(0, 0, 0)",
+          "font": "500 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "localOverflow": 0,
+          "rect": {
+            "h": 28,
+            "w": 155.45834350585938,
+            "x": 609.4479370117188,
+            "y": 287.1875
+          },
+          "text": "Samo oni koje pratim"
+        },
+        {
+          "backgroundChain": [
+            "rgba(0, 0, 0, 0)",
+            "rgba(0, 0, 0, 0)",
+            "rgb(255, 255, 255)"
+          ],
+          "color": "rgb(33, 37, 41)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "500 24px / 28.8px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "localOverflow": 0,
+          "rect": {
+            "h": 28.791667938232425,
+            "w": 600,
+            "x": 360,
+            "y": 339.1875
+          },
+          "text": "Postovi korisnika koje pratiÅ¡"
+        },
+        {
+          "backgroundChain": [
+            "rgba(0, 0, 0, 0)",
+            "rgba(0, 0, 0, 0)",
+            "rgb(255, 255, 255)"
+          ],
+          "color": "rgb(33, 37, 41)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "localOverflow": 0,
+          "rect": {
+            "h": 24,
+            "w": 600,
+            "x": 360,
+            "y": 391.9791870117187
+          },
+          "text": "Nema postova."
+        }
+      ],
+      "posts": [],
+      "url": "http://127.0.0.1:8017/?filter=following",
+      "width": 1440
+    }
+  ],
+  "safeAll": {
+    "ownerPost": [
+      {
+        "href": "/post/229/",
+        "text": "\n                                            qa103g Own published post\n                                        "
+      }
+    ],
+    "url": "http://127.0.0.1:8017/?filter=all"
+  },
+  "logoutLoginLinkCount": 1
+}
