@@ -1,4 +1,6 @@
-# Remaining acceptance scope after Phase103g
+# Remaining acceptance scope after Phase103h
+
+Phase103h adds normal-gradient screenshots (phone320/desktop1440 visually inspected; four captures). Raster dimensions differ from viewport overrides, so no 1:1 pixel contrast claim. Native hover has no documented action in current browser API and remains open, alongside rendered-pixel contrast and all other ledger items. See phase103h_gradient_visual_followup.md. No application changes.
 
 Phase103g closes the empty-owner browser check using synthetic owner2673/post229: login, four widths320/390/768/1440 with empty following, zero document/sampled local overflow and sampled nonoverlap; safe all-feed shows own post, return is empty, logout verified. No application changes or new full-suite run. See phase103g_empty_owner_browser.md and measurements. Latest entries supersede historical open/next statements below. Gradient native-hover/pixel evidence and remaining ledger stay open.
 
