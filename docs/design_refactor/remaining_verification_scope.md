@@ -1,4 +1,6 @@
-# Remaining acceptance scope after Phase103e
+# Remaining acceptance scope after Phase103f
+
+Phase103f closes desktop secondary-author horizontal clipping: local excess1044 to0 at1440 by anywhere wrapping, retaining two-line ellipsis and six columns. Desktop card height intentionally grows16.896px; phone/tablet sampled rectangles and all sampled ink unchanged. Four paired widths, safe227,223 tests49.363s. See phase103f_desktop_author_wrapping.md. Full-name preview is still clamped; empty-owner browser and gradient hover/pixel remain open.
 
 Phase103e normalizes anonymous following to the existing featured default, avoiding all-post results under a personal heading. Four guest states and four direct featured controls match sampled filters/title rectangles; four logged-in reader states retain following behavior.223 tests pass64.364s. Empty-owner is covered by server test only; browser owner login credential mismatch remains to resolve in synthetic fixtures. See phase103e_guest_following.md. Desktop author clamp, gradient hover/pixel evidence and broader acceptance remain open.
 

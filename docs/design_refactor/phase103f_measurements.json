@@ -1,0 +1,1031 @@
+{
+  "before": [
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "children": 2,
+          "clamp": "none",
+          "cls": "featured-secondary-grid",
+          "color": "rgb(33, 37, 41)",
+          "fill": "rgb(33, 37, 41)",
+          "local": 0,
+          "rect": {
+            "h": 799.9166870117188,
+            "w": 280.66668701171875,
+            "x": 12,
+            "y": 6308.2919921875
+          },
+          "text": "23.10.2026\n                            \n                        \n                        qa102y Featured result 6\n                        LongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorName\n                    \n                \n            \n        \n            \n                \n                    \n                        \n                            \n                        \n                    \n\n                    \n                        \n                            \n                            \n                                23.10.2026\n                            \n                        \n                        qa102y Featured result 7\n                        LongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorName",
+          "wrap": "normal"
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "children": 1,
+          "clamp": "none",
+          "cls": "featured-secondary-card",
+          "color": "rgb(33, 37, 41)",
+          "fill": "rgb(33, 37, 41)",
+          "local": 0,
+          "rect": {
+            "h": 390.9583435058594,
+            "w": 280.66668701171875,
+            "x": 12,
+            "y": 6308.2919921875
+          },
+          "text": "23.10.2026\n                            \n                        \n                        qa102y Featured result 6\n                        LongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorName",
+          "wrap": "normal"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "children": 0,
+          "clamp": "2",
+          "cls": "featured-secondary-title",
+          "color": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "local": 0,
+          "rect": {
+            "h": 20,
+            "w": 251.33334350585935,
+            "x": 26.666667938232425,
+            "y": 6622.7919921875
+          },
+          "text": "qa102y Featured result 6",
+          "wrap": "anywhere"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "children": 0,
+          "clamp": "2",
+          "cls": "featured-secondary-author",
+          "color": "rgba(0, 0, 0, 0.58)",
+          "fill": "rgba(0, 0, 0, 0.58)",
+          "local": 0,
+          "rect": {
+            "h": 33.79166793823242,
+            "w": 251.33334350585935,
+            "x": 26.666667938232425,
+            "y": 6650.7919921875
+          },
+          "text": "LongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorName",
+          "wrap": "anywhere"
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "children": 1,
+          "clamp": "none",
+          "cls": "featured-secondary-card",
+          "color": "rgb(33, 37, 41)",
+          "fill": "rgb(33, 37, 41)",
+          "local": 0,
+          "rect": {
+            "h": 390.9583435058594,
+            "w": 280.66668701171875,
+            "x": 12,
+            "y": 6717.25
+          },
+          "text": "23.10.2026\n                            \n                        \n                        qa102y Featured result 7\n                        LongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorName",
+          "wrap": "normal"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "children": 0,
+          "clamp": "2",
+          "cls": "featured-secondary-title",
+          "color": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "local": 0,
+          "rect": {
+            "h": 20,
+            "w": 251.33334350585935,
+            "x": 26.666667938232425,
+            "y": 7031.75
+          },
+          "text": "qa102y Featured result 7",
+          "wrap": "anywhere"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "children": 0,
+          "clamp": "2",
+          "cls": "featured-secondary-author",
+          "color": "rgba(0, 0, 0, 0.58)",
+          "fill": "rgba(0, 0, 0, 0.58)",
+          "local": 0,
+          "rect": {
+            "h": 33.79166793823242,
+            "w": 251.33334350585935,
+            "x": 26.666667938232425,
+            "y": 7059.75
+          },
+          "text": "LongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorName",
+          "wrap": "anywhere"
+        }
+      ],
+      "width": 320
+    },
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "children": 2,
+          "clamp": "none",
+          "cls": "featured-secondary-grid",
+          "color": "rgb(33, 37, 41)",
+          "fill": "rgb(33, 37, 41)",
+          "local": 0,
+          "rect": {
+            "h": 939.9166870117188,
+            "w": 350.66668701171875,
+            "x": 12,
+            "y": 5639.80224609375
+          },
+          "text": "23.10.2026\n                            \n                        \n                        qa102y Featured result 6\n                        LongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorName\n                    \n                \n            \n        \n            \n                \n                    \n                        \n                            \n                        \n                    \n\n                    \n                        \n                            \n                            \n                                23.10.2026\n                            \n                        \n                        qa102y Featured result 7\n                        LongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorName",
+          "wrap": "normal"
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "children": 1,
+          "clamp": "none",
+          "cls": "featured-secondary-card",
+          "color": "rgb(33, 37, 41)",
+          "fill": "rgb(33, 37, 41)",
+          "local": 0,
+          "rect": {
+            "h": 460.9583435058594,
+            "w": 350.66668701171875,
+            "x": 12,
+            "y": 5639.80224609375
+          },
+          "text": "23.10.2026\n                            \n                        \n                        qa102y Featured result 6\n                        LongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorName",
+          "wrap": "normal"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "children": 0,
+          "clamp": "2",
+          "cls": "featured-secondary-title",
+          "color": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "local": 0,
+          "rect": {
+            "h": 20,
+            "w": 321.3333435058594,
+            "x": 26.666667938232425,
+            "y": 6024.30224609375
+          },
+          "text": "qa102y Featured result 6",
+          "wrap": "anywhere"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "children": 0,
+          "clamp": "2",
+          "cls": "featured-secondary-author",
+          "color": "rgba(0, 0, 0, 0.58)",
+          "fill": "rgba(0, 0, 0, 0.58)",
+          "local": 0,
+          "rect": {
+            "h": 33.79166793823242,
+            "w": 321.3333435058594,
+            "x": 26.666667938232425,
+            "y": 6052.30224609375
+          },
+          "text": "LongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorName",
+          "wrap": "anywhere"
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "children": 1,
+          "clamp": "none",
+          "cls": "featured-secondary-card",
+          "color": "rgb(33, 37, 41)",
+          "fill": "rgb(33, 37, 41)",
+          "local": 0,
+          "rect": {
+            "h": 460.9583435058594,
+            "w": 350.66668701171875,
+            "x": 12,
+            "y": 6118.7607421875
+          },
+          "text": "23.10.2026\n                            \n                        \n                        qa102y Featured result 7\n                        LongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorName",
+          "wrap": "normal"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "children": 0,
+          "clamp": "2",
+          "cls": "featured-secondary-title",
+          "color": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "local": 0,
+          "rect": {
+            "h": 20,
+            "w": 321.3333435058594,
+            "x": 26.666667938232425,
+            "y": 6503.2607421875
+          },
+          "text": "qa102y Featured result 7",
+          "wrap": "anywhere"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "children": 0,
+          "clamp": "2",
+          "cls": "featured-secondary-author",
+          "color": "rgba(0, 0, 0, 0.58)",
+          "fill": "rgba(0, 0, 0, 0.58)",
+          "local": 0,
+          "rect": {
+            "h": 33.79166793823242,
+            "w": 321.3333435058594,
+            "x": 26.666667938232425,
+            "y": 6531.2607421875
+          },
+          "text": "LongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorName",
+          "wrap": "anywhere"
+        }
+      ],
+      "width": 390
+    },
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "children": 2,
+          "clamp": "none",
+          "cls": "featured-secondary-grid",
+          "color": "rgb(33, 37, 41)",
+          "fill": "rgb(33, 37, 41)",
+          "local": 0,
+          "rect": {
+            "h": 341.1770935058594,
+            "w": 728.6666870117188,
+            "x": 12,
+            "y": 6142.875
+          },
+          "text": "23.10.2026\n                            \n                        \n                        qa102y Featured result 6\n                        LongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorName\n                    \n                \n            \n        \n            \n                \n                    \n                        \n                            \n                        \n                    \n\n                    \n                        \n                            \n                            \n                                23.10.2026\n                            \n                        \n                        qa102y Featured result 7\n                        LongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorName",
+          "wrap": "normal"
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "children": 1,
+          "clamp": "none",
+          "cls": "featured-secondary-card",
+          "color": "rgb(33, 37, 41)",
+          "fill": "rgb(33, 37, 41)",
+          "local": 0,
+          "rect": {
+            "h": 341.1770935058594,
+            "w": 230.8854217529297,
+            "x": 12,
+            "y": 6142.875
+          },
+          "text": "23.10.2026\n                            \n                        \n                        qa102y Featured result 6\n                        LongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorName",
+          "wrap": "normal"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "children": 0,
+          "clamp": "2",
+          "cls": "featured-secondary-title",
+          "color": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "local": 0,
+          "rect": {
+            "h": 20,
+            "w": 201.55209350585935,
+            "x": 26.666667938232425,
+            "y": 6407.59375
+          },
+          "text": "qa102y Featured result 6",
+          "wrap": "anywhere"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "children": 0,
+          "clamp": "2",
+          "cls": "featured-secondary-author",
+          "color": "rgba(0, 0, 0, 0.58)",
+          "fill": "rgba(0, 0, 0, 0.58)",
+          "local": 0,
+          "rect": {
+            "h": 33.79166793823242,
+            "w": 201.55209350585935,
+            "x": 26.666667938232425,
+            "y": 6435.59375
+          },
+          "text": "LongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorName",
+          "wrap": "anywhere"
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "children": 1,
+          "clamp": "none",
+          "cls": "featured-secondary-card",
+          "color": "rgb(33, 37, 41)",
+          "fill": "rgb(33, 37, 41)",
+          "local": 0,
+          "rect": {
+            "h": 341.1770935058594,
+            "w": 230.8854217529297,
+            "x": 260.88543701171875,
+            "y": 6142.875
+          },
+          "text": "23.10.2026\n                            \n                        \n                        qa102y Featured result 7\n                        LongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorName",
+          "wrap": "normal"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "children": 0,
+          "clamp": "2",
+          "cls": "featured-secondary-title",
+          "color": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "local": 0,
+          "rect": {
+            "h": 20,
+            "w": 201.55209350585935,
+            "x": 275.5520935058594,
+            "y": 6407.59375
+          },
+          "text": "qa102y Featured result 7",
+          "wrap": "anywhere"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "children": 0,
+          "clamp": "2",
+          "cls": "featured-secondary-author",
+          "color": "rgba(0, 0, 0, 0.58)",
+          "fill": "rgba(0, 0, 0, 0.58)",
+          "local": 0,
+          "rect": {
+            "h": 33.79166793823242,
+            "w": 201.55209350585935,
+            "x": 275.5520935058594,
+            "y": 6435.59375
+          },
+          "text": "LongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorName",
+          "wrap": "anywhere"
+        }
+      ],
+      "width": 768
+    },
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "children": 2,
+          "clamp": "none",
+          "cls": "featured-secondary-grid",
+          "color": "rgb(33, 37, 41)",
+          "fill": "rgb(33, 37, 41)",
+          "local": 0,
+          "rect": {
+            "h": 311.84375,
+            "w": 1400.666748046875,
+            "x": 12,
+            "y": 3151.666748046875
+          },
+          "text": "23.10.2026\n                            \n                        \n                        qa102y Featured result 6\n                        LongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorName\n                    \n                \n            \n        \n            \n                \n                    \n                        \n                            \n                        \n                    \n\n                    \n                        \n                            \n                            \n                                23.10.2026\n                            \n                        \n                        qa102y Featured result 7\n                        LongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorName",
+          "wrap": "normal"
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "children": 1,
+          "clamp": "none",
+          "cls": "featured-secondary-card",
+          "color": "rgb(33, 37, 41)",
+          "fill": "rgb(33, 37, 41)",
+          "local": 0,
+          "rect": {
+            "h": 311.84375,
+            "w": 218.4375,
+            "x": 12,
+            "y": 3151.666748046875
+          },
+          "text": "23.10.2026\n                            \n                        \n                        qa102y Featured result 6\n                        LongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorName",
+          "wrap": "normal"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "children": 0,
+          "clamp": "2",
+          "cls": "featured-secondary-title",
+          "color": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "local": 0,
+          "rect": {
+            "h": 20,
+            "w": 189.1041717529297,
+            "x": 26.666667938232425,
+            "y": 3403.9375
+          },
+          "text": "qa102y Featured result 6",
+          "wrap": "normal"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "children": 0,
+          "clamp": "2",
+          "cls": "featured-secondary-author",
+          "color": "rgba(0, 0, 0, 0.58)",
+          "fill": "rgba(0, 0, 0, 0.58)",
+          "local": 1044,
+          "rect": {
+            "h": 16.89583396911621,
+            "w": 189.1041717529297,
+            "x": 26.666667938232425,
+            "y": 3431.9375
+          },
+          "text": "LongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorName",
+          "wrap": "normal"
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "children": 1,
+          "clamp": "none",
+          "cls": "featured-secondary-card",
+          "color": "rgb(33, 37, 41)",
+          "fill": "rgb(33, 37, 41)",
+          "local": 0,
+          "rect": {
+            "h": 311.84375,
+            "w": 218.4479217529297,
+            "x": 248.4375,
+            "y": 3151.666748046875
+          },
+          "text": "23.10.2026\n                            \n                        \n                        qa102y Featured result 7\n                        LongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorName",
+          "wrap": "normal"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "children": 0,
+          "clamp": "2",
+          "cls": "featured-secondary-title",
+          "color": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "local": 0,
+          "rect": {
+            "h": 20,
+            "w": 189.11459350585935,
+            "x": 263.10418701171875,
+            "y": 3403.947998046875
+          },
+          "text": "qa102y Featured result 7",
+          "wrap": "normal"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "children": 0,
+          "clamp": "2",
+          "cls": "featured-secondary-author",
+          "color": "rgba(0, 0, 0, 0.58)",
+          "fill": "rgba(0, 0, 0, 0.58)",
+          "local": 1044,
+          "rect": {
+            "h": 16.89583396911621,
+            "w": 189.11459350585935,
+            "x": 263.10418701171875,
+            "y": 3431.947998046875
+          },
+          "text": "LongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorName",
+          "wrap": "normal"
+        }
+      ],
+      "width": 1440
+    }
+  ],
+  "after": [
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "children": 2,
+          "clamp": "none",
+          "cls": "featured-secondary-grid",
+          "color": "rgb(33, 37, 41)",
+          "fill": "rgb(33, 37, 41)",
+          "local": 0,
+          "rect": {
+            "h": 799.9166870117188,
+            "w": 280.66668701171875,
+            "x": 12,
+            "y": 6308.2919921875
+          },
+          "text": "23.10.2026\n                            \n                        \n                        qa102y Featured result 6\n                        LongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorName\n                    \n                \n            \n        \n            \n                \n                    \n                        \n                            \n                        \n                    \n\n                    \n                        \n                            \n                            \n                                23.10.2026\n                            \n                        \n                        qa102y Featured result 7\n                        LongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorName",
+          "wrap": "normal"
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "children": 1,
+          "clamp": "none",
+          "cls": "featured-secondary-card",
+          "color": "rgb(33, 37, 41)",
+          "fill": "rgb(33, 37, 41)",
+          "local": 0,
+          "rect": {
+            "h": 390.9583435058594,
+            "w": 280.66668701171875,
+            "x": 12,
+            "y": 6308.2919921875
+          },
+          "text": "23.10.2026\n                            \n                        \n                        qa102y Featured result 6\n                        LongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorName",
+          "wrap": "normal"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "children": 0,
+          "clamp": "2",
+          "cls": "featured-secondary-title",
+          "color": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "local": 0,
+          "rect": {
+            "h": 20,
+            "w": 251.33334350585935,
+            "x": 26.666667938232425,
+            "y": 6622.7919921875
+          },
+          "text": "qa102y Featured result 6",
+          "wrap": "anywhere"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "children": 0,
+          "clamp": "2",
+          "cls": "featured-secondary-author",
+          "color": "rgba(0, 0, 0, 0.58)",
+          "fill": "rgba(0, 0, 0, 0.58)",
+          "local": 0,
+          "rect": {
+            "h": 33.79166793823242,
+            "w": 251.33334350585935,
+            "x": 26.666667938232425,
+            "y": 6650.7919921875
+          },
+          "text": "LongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorName",
+          "wrap": "anywhere"
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "children": 1,
+          "clamp": "none",
+          "cls": "featured-secondary-card",
+          "color": "rgb(33, 37, 41)",
+          "fill": "rgb(33, 37, 41)",
+          "local": 0,
+          "rect": {
+            "h": 390.9583435058594,
+            "w": 280.66668701171875,
+            "x": 12,
+            "y": 6717.25
+          },
+          "text": "23.10.2026\n                            \n                        \n                        qa102y Featured result 7\n                        LongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorName",
+          "wrap": "normal"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "children": 0,
+          "clamp": "2",
+          "cls": "featured-secondary-title",
+          "color": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "local": 0,
+          "rect": {
+            "h": 20,
+            "w": 251.33334350585935,
+            "x": 26.666667938232425,
+            "y": 7031.75
+          },
+          "text": "qa102y Featured result 7",
+          "wrap": "anywhere"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "children": 0,
+          "clamp": "2",
+          "cls": "featured-secondary-author",
+          "color": "rgba(0, 0, 0, 0.58)",
+          "fill": "rgba(0, 0, 0, 0.58)",
+          "local": 0,
+          "rect": {
+            "h": 33.79166793823242,
+            "w": 251.33334350585935,
+            "x": 26.666667938232425,
+            "y": 7059.75
+          },
+          "text": "LongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorName",
+          "wrap": "anywhere"
+        }
+      ],
+      "width": 320
+    },
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "children": 2,
+          "clamp": "none",
+          "cls": "featured-secondary-grid",
+          "color": "rgb(33, 37, 41)",
+          "fill": "rgb(33, 37, 41)",
+          "local": 0,
+          "rect": {
+            "h": 939.9166870117188,
+            "w": 350.66668701171875,
+            "x": 12,
+            "y": 5639.80224609375
+          },
+          "text": "23.10.2026\n                            \n                        \n                        qa102y Featured result 6\n                        LongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorName\n                    \n                \n            \n        \n            \n                \n                    \n                        \n                            \n                        \n                    \n\n                    \n                        \n                            \n                            \n                                23.10.2026\n                            \n                        \n                        qa102y Featured result 7\n                        LongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorName",
+          "wrap": "normal"
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "children": 1,
+          "clamp": "none",
+          "cls": "featured-secondary-card",
+          "color": "rgb(33, 37, 41)",
+          "fill": "rgb(33, 37, 41)",
+          "local": 0,
+          "rect": {
+            "h": 460.9583435058594,
+            "w": 350.66668701171875,
+            "x": 12,
+            "y": 5639.80224609375
+          },
+          "text": "23.10.2026\n                            \n                        \n                        qa102y Featured result 6\n                        LongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorName",
+          "wrap": "normal"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "children": 0,
+          "clamp": "2",
+          "cls": "featured-secondary-title",
+          "color": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "local": 0,
+          "rect": {
+            "h": 20,
+            "w": 321.3333435058594,
+            "x": 26.666667938232425,
+            "y": 6024.30224609375
+          },
+          "text": "qa102y Featured result 6",
+          "wrap": "anywhere"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "children": 0,
+          "clamp": "2",
+          "cls": "featured-secondary-author",
+          "color": "rgba(0, 0, 0, 0.58)",
+          "fill": "rgba(0, 0, 0, 0.58)",
+          "local": 0,
+          "rect": {
+            "h": 33.79166793823242,
+            "w": 321.3333435058594,
+            "x": 26.666667938232425,
+            "y": 6052.30224609375
+          },
+          "text": "LongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorName",
+          "wrap": "anywhere"
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "children": 1,
+          "clamp": "none",
+          "cls": "featured-secondary-card",
+          "color": "rgb(33, 37, 41)",
+          "fill": "rgb(33, 37, 41)",
+          "local": 0,
+          "rect": {
+            "h": 460.9583435058594,
+            "w": 350.66668701171875,
+            "x": 12,
+            "y": 6118.7607421875
+          },
+          "text": "23.10.2026\n                            \n                        \n                        qa102y Featured result 7\n                        LongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorName",
+          "wrap": "normal"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "children": 0,
+          "clamp": "2",
+          "cls": "featured-secondary-title",
+          "color": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "local": 0,
+          "rect": {
+            "h": 20,
+            "w": 321.3333435058594,
+            "x": 26.666667938232425,
+            "y": 6503.2607421875
+          },
+          "text": "qa102y Featured result 7",
+          "wrap": "anywhere"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "children": 0,
+          "clamp": "2",
+          "cls": "featured-secondary-author",
+          "color": "rgba(0, 0, 0, 0.58)",
+          "fill": "rgba(0, 0, 0, 0.58)",
+          "local": 0,
+          "rect": {
+            "h": 33.79166793823242,
+            "w": 321.3333435058594,
+            "x": 26.666667938232425,
+            "y": 6531.2607421875
+          },
+          "text": "LongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorName",
+          "wrap": "anywhere"
+        }
+      ],
+      "width": 390
+    },
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "children": 2,
+          "clamp": "none",
+          "cls": "featured-secondary-grid",
+          "color": "rgb(33, 37, 41)",
+          "fill": "rgb(33, 37, 41)",
+          "local": 0,
+          "rect": {
+            "h": 341.1770935058594,
+            "w": 728.6666870117188,
+            "x": 12,
+            "y": 6142.875
+          },
+          "text": "23.10.2026\n                            \n                        \n                        qa102y Featured result 6\n                        LongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorName\n                    \n                \n            \n        \n            \n                \n                    \n                        \n                            \n                        \n                    \n\n                    \n                        \n                            \n                            \n                                23.10.2026\n                            \n                        \n                        qa102y Featured result 7\n                        LongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorName",
+          "wrap": "normal"
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "children": 1,
+          "clamp": "none",
+          "cls": "featured-secondary-card",
+          "color": "rgb(33, 37, 41)",
+          "fill": "rgb(33, 37, 41)",
+          "local": 0,
+          "rect": {
+            "h": 341.1770935058594,
+            "w": 230.8854217529297,
+            "x": 12,
+            "y": 6142.875
+          },
+          "text": "23.10.2026\n                            \n                        \n                        qa102y Featured result 6\n                        LongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorName",
+          "wrap": "normal"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "children": 0,
+          "clamp": "2",
+          "cls": "featured-secondary-title",
+          "color": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "local": 0,
+          "rect": {
+            "h": 20,
+            "w": 201.55209350585935,
+            "x": 26.666667938232425,
+            "y": 6407.59375
+          },
+          "text": "qa102y Featured result 6",
+          "wrap": "anywhere"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "children": 0,
+          "clamp": "2",
+          "cls": "featured-secondary-author",
+          "color": "rgba(0, 0, 0, 0.58)",
+          "fill": "rgba(0, 0, 0, 0.58)",
+          "local": 0,
+          "rect": {
+            "h": 33.79166793823242,
+            "w": 201.55209350585935,
+            "x": 26.666667938232425,
+            "y": 6435.59375
+          },
+          "text": "LongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorName",
+          "wrap": "anywhere"
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "children": 1,
+          "clamp": "none",
+          "cls": "featured-secondary-card",
+          "color": "rgb(33, 37, 41)",
+          "fill": "rgb(33, 37, 41)",
+          "local": 0,
+          "rect": {
+            "h": 341.1770935058594,
+            "w": 230.8854217529297,
+            "x": 260.88543701171875,
+            "y": 6142.875
+          },
+          "text": "23.10.2026\n                            \n                        \n                        qa102y Featured result 7\n                        LongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorName",
+          "wrap": "normal"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "children": 0,
+          "clamp": "2",
+          "cls": "featured-secondary-title",
+          "color": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "local": 0,
+          "rect": {
+            "h": 20,
+            "w": 201.55209350585935,
+            "x": 275.5520935058594,
+            "y": 6407.59375
+          },
+          "text": "qa102y Featured result 7",
+          "wrap": "anywhere"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "children": 0,
+          "clamp": "2",
+          "cls": "featured-secondary-author",
+          "color": "rgba(0, 0, 0, 0.58)",
+          "fill": "rgba(0, 0, 0, 0.58)",
+          "local": 0,
+          "rect": {
+            "h": 33.79166793823242,
+            "w": 201.55209350585935,
+            "x": 275.5520935058594,
+            "y": 6435.59375
+          },
+          "text": "LongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorName",
+          "wrap": "anywhere"
+        }
+      ],
+      "width": 768
+    },
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "children": 2,
+          "clamp": "none",
+          "cls": "featured-secondary-grid",
+          "color": "rgb(33, 37, 41)",
+          "fill": "rgb(33, 37, 41)",
+          "local": 0,
+          "rect": {
+            "h": 328.7395935058594,
+            "w": 1400.666748046875,
+            "x": 12,
+            "y": 3151.666748046875
+          },
+          "text": "23.10.2026\n                            \n                        \n                        qa102y Featured result 6\n                        LongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorName\n                    \n                \n            \n        \n            \n                \n                    \n                        \n                            \n                        \n                    \n\n                    \n                        \n                            \n                            \n                                23.10.2026\n                            \n                        \n                        qa102y Featured result 7\n                        LongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorName",
+          "wrap": "normal"
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "children": 1,
+          "clamp": "none",
+          "cls": "featured-secondary-card",
+          "color": "rgb(33, 37, 41)",
+          "fill": "rgb(33, 37, 41)",
+          "local": 0,
+          "rect": {
+            "h": 328.7395935058594,
+            "w": 218.4375,
+            "x": 12,
+            "y": 3151.666748046875
+          },
+          "text": "23.10.2026\n                            \n                        \n                        qa102y Featured result 6\n                        LongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorName",
+          "wrap": "normal"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "children": 0,
+          "clamp": "2",
+          "cls": "featured-secondary-title",
+          "color": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "local": 0,
+          "rect": {
+            "h": 20,
+            "w": 189.1041717529297,
+            "x": 26.666667938232425,
+            "y": 3403.9375
+          },
+          "text": "qa102y Featured result 6",
+          "wrap": "normal"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "children": 0,
+          "clamp": "2",
+          "cls": "featured-secondary-author",
+          "color": "rgba(0, 0, 0, 0.58)",
+          "fill": "rgba(0, 0, 0, 0.58)",
+          "local": 0,
+          "rect": {
+            "h": 33.79166793823242,
+            "w": 189.1041717529297,
+            "x": 26.666667938232425,
+            "y": 3431.9375
+          },
+          "text": "LongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorName",
+          "wrap": "anywhere"
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "children": 1,
+          "clamp": "none",
+          "cls": "featured-secondary-card",
+          "color": "rgb(33, 37, 41)",
+          "fill": "rgb(33, 37, 41)",
+          "local": 0,
+          "rect": {
+            "h": 328.7395935058594,
+            "w": 218.4479217529297,
+            "x": 248.4375,
+            "y": 3151.666748046875
+          },
+          "text": "23.10.2026\n                            \n                        \n                        qa102y Featured result 7\n                        LongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorName",
+          "wrap": "normal"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "children": 0,
+          "clamp": "2",
+          "cls": "featured-secondary-title",
+          "color": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "local": 0,
+          "rect": {
+            "h": 20,
+            "w": 189.11459350585935,
+            "x": 263.10418701171875,
+            "y": 3403.947998046875
+          },
+          "text": "qa102y Featured result 7",
+          "wrap": "normal"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "children": 0,
+          "clamp": "2",
+          "cls": "featured-secondary-author",
+          "color": "rgba(0, 0, 0, 0.58)",
+          "fill": "rgba(0, 0, 0, 0.58)",
+          "local": 0,
+          "rect": {
+            "h": 33.79166793823242,
+            "w": 189.11459350585935,
+            "x": 263.10418701171875,
+            "y": 3431.947998046875
+          },
+          "text": "LongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorNameLongAuthorName",
+          "wrap": "anywhere"
+        }
+      ],
+      "width": 1440
+    }
+  ],
+  "desktopCards": {
+    "cards": [
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "href": "/post/227/",
+        "rect": {
+          "h": 327.40625,
+          "w": 217.1041717529297,
+          "x": 12.666666984558104,
+          "y": 303
+        }
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "href": "/post/228/",
+        "rect": {
+          "h": 327.40625,
+          "w": 217.11459350585935,
+          "x": 249.1041717529297,
+          "y": 303
+        }
+      }
+    ],
+    "grid": "218.438px 218.448px 218.438px 218.438px 218.438px 218.438px"
+  }
+}
