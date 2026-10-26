@@ -1,4 +1,6 @@
-# Remaining acceptance scope after Phase103i
+# Remaining acceptance scope after Phase103j
+
+Phase103j closes factory Jedro header and section-caption photo surfaces with independently guarded #2d1f18 backgrounds. Actual fills retained; calculated contrasts14.984/14.765, eight paired blog/detail widths retain sampled geometry/font/ink/local overflow, document excess0. Safe174, phone/desktop viewport screenshots inspected,224 tests79.639s/check/migration green. See phase103j_jedro_heading_surfaces.md. Custom palettes/authenticated actions/optional content and remaining photo zones/workflows remain open.
 
 Phase103i adds opaque Jedro subtitle/profile panel #fff7e9 and date #2d1f18. Actual child contrasts17.692/7.586(profile link)/11.018(date). Eight blog/detail states320/390/768/1440 retain sampled rectangles/font/ink,doc0; backgrounds intentionally change on desktop too. Safe174,223 tests61.059s/check/migration green. See phase103i_jedro_supporting_text_surfaces.md. Header and section captions remain photo-dependent; authenticated profile actions remain unverified.
 

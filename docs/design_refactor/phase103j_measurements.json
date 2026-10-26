@@ -1,0 +1,2402 @@
+{
+  "before-blog": [
+    {
+      "doc": -15,
+      "elements": [
+        {
+          "background": "rgba(58, 31, 20, 0.12)",
+          "children": [],
+          "class": "jus-title blog-page-title",
+          "fill": "rgb(255, 247, 238)",
+          "font": "500 32px / 33.28px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 52.60416793823242,
+            "width": 265.16668701171875,
+            "x": 14,
+            "y": 130.1875
+          },
+          "text": "QA jedro u suton"
+        },
+        {
+          "background": "rgb(255, 247, 233)",
+          "children": [],
+          "class": "blog-tagline-shared",
+          "fill": "rgb(23, 16, 11)",
+          "font": "15.2px / 22.04px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "local": 0,
+          "rect": {
+            "height": 44.0625,
+            "width": 276.66668701171875,
+            "x": 14,
+            "y": 210.7916717529297
+          },
+          "text": "Synthetic photographic design with two reader comments"
+        },
+        {
+          "background": "rgb(45, 31, 24)",
+          "children": [
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "SPAN"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "SPAN"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "SPAN"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "SPAN"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "SPAN"
+            }
+          ],
+          "class": "jus-post-date blog-date-shell blog-date-style-classic_vertical blog-date-effect-solid",
+          "fill": "rgb(23, 16, 11)",
+          "font": "15.2px / 24.32px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "local": 0,
+          "rect": {
+            "height": 53.54166793823242,
+            "width": 247.33334350585935,
+            "x": 28.666667938232425,
+            "y": 305.5208435058594
+          },
+          "text": "20\n        \n        \n            LISTOPAD\n            2026\n        \n    \n    \n        20\n        /\n        LISTOPAD\n        /\n        2026"
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "children": [
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(255, 245, 234)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgb(255, 247, 233)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(6, 71, 184)",
+              "tag": "A"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "SPAN"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "STRONG"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "SPAN"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "STRONG"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "STYLE"
+            }
+          ],
+          "class": "jus-section jus-profile-wrap",
+          "fill": "rgb(23, 16, 11)",
+          "font": "15.2px / 24.32px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "local": 0,
+          "rect": {
+            "height": 134.9479217529297,
+            "width": 247.33334350585935,
+            "x": 28.666667938232425,
+            "y": 1411.2708740234375
+          },
+          "text": "O autoru\n                    \n\n\n    \n        \n            \n                \n            \n        \n\n        \n            qa102g_jedro_u_suton\n            \n                QA jedro u suton\n            \n            \n                0 pratitelja\n                0 pratim\n            \n\n            \n        \n    \n\n    \n\n\n    \n\n\n\n\n.blog-profile-panel {\n    width: 100%;\n    max-width: 260px;\n    margin-bottom: 18px;\n    color: inherit;\n}\n\n.blog-profile-panel__top {\n    display: flex;\n    align-items: center;\n    gap: 12px;\n}\n\n.blog-profile-panel__avatar-link {\n    flex-shrink: 0;\n    text-decoration: none;\n}\n\n.blog-profile-panel__avatar {\n    width: 56px;\n    height: 56px;\n    border-radius: 50%;\n    object-fit: cover;\n    display: block;\n}\n\n.blog-profile-panel__identity {\n    min-width: 0;\n    display: flex;\n    flex-direction: column;\n    gap: 3px;\n}\n\n.blog-profile-panel__name {\n    font-size: 1.08rem;\n    font-weight: 700;\n    line-height: 1.08;\n    overflow-wrap: anywhere;\n    color: inherit;\n    text-decoration: none;\n}\n\n.blog-profile-panel__name:hover {\n    color: inherit;\n    text-decoration: none;\n}\n\n.blog-profile-panel__blog-name {\n    font-size: 0.84rem;\n    opacity: 0.8;\n    line-height: 1.18;\n    overflow-wrap: anywhere;\n}\n\n.blog-profile-panel__stats {\n    display: flex;\n    flex-wrap: wrap;\n    gap: 2px 10px;\n    font-size: 0.92rem;\n    line-height: 1.2;\n}\n\n.blog-profile-panel__stats strong {\n    font-weight: 700;\n}\n\n.blog-profile-panel__author-link {\n    margin-top: 4px;\n    display: inline-flex;\n    align-items: center;\n    gap: 6px;\n    font-size: 0.92rem;\n    font-weight: 600;\n    text-decoration: none;\n    color: inherit;\n    opacity: 0.92;\n}\n\n.blog-profile-panel__author-link:hover {\n    text-decoration: underline;\n    color: inherit;\n}\n\n.blog-profile-panel__actions {\n    margin-top: 10px;\n    display: flex;\n    align-items: center;\n    gap: 10px;\n}\n\n.blog-profile-panel__follow-btn {\n    min-width: 88px;\n}\n\n.blog-profile-panel__dropdown {\n    position: relative;\n    overflow: visible !important;\n}\n\n.blog-profile-panel__dropdown-toggle {\n    display: inline-flex;\n    align-items: center;\n    justify-content: center;\n    width: 34px;\n    height: 34px;\n    text-decoration: none;\n    color: inherit;\n}\n\n.blog-profile-panel__dropdown-toggle::after {\n    display: none !important;\n}\n\n.blog-profile-panel .blog-user-dropdown-menu {\n    min-width: 220px;\n    z-index: 9999;\n}\n\n.blog-profile-panel__note {\n    margin-top: 10px;\n    font-size: 0.84rem;\n    opacity: 0.82;\n    line-height: 1.3;\n}\n\n.blog-profile-panel--gradient .blog-profile-panel__name,\n.blog-profile-panel--gradient .blog-profile-panel__blog-name,\n.blog-profile-panel--gradient .blog-profile-panel__stats,\n.blog-profile-panel--gradient .blog-profile-panel__dropdown-toggle {\n    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.28);\n}\n\n.blog-profile-panel--gradient .blog-profile-panel__avatar {\n    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);\n}\n\n@media (max-width: 991.98px) {\n    .blog-profile-panel {\n        max-width: none;\n    }\n}"
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "children": [],
+          "class": "jus-side-title box-title",
+          "fill": "rgb(255, 245, 234)",
+          "font": "13px / 20.8px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 29.45833396911621,
+            "width": 247.33334350585935,
+            "x": 28.666667938232425,
+            "y": 1411.2708740234375
+          },
+          "text": "O autoru"
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "children": [],
+          "class": "jus-calendar-title box-title",
+          "fill": "rgb(255, 245, 234)",
+          "font": "13px / 20.8px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 29.45833396911621,
+            "width": 247.33334350585935,
+            "x": 28.666667938232425,
+            "y": 1562.21875
+          },
+          "text": "Kalendar"
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "children": [],
+          "class": "jus-archive-title box-title",
+          "fill": "rgb(255, 245, 234)",
+          "font": "13px / 20.8px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 29.45833396911621,
+            "width": 247.33334350585935,
+            "x": 28.666667938232425,
+            "y": 1935.2708740234375
+          },
+          "text": "Arhiva bloga"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/blog/qa102g_jedro_u_suton/",
+      "width": 320
+    },
+    {
+      "doc": -15,
+      "elements": [
+        {
+          "background": "rgba(58, 31, 20, 0.12)",
+          "children": [],
+          "class": "jus-title blog-page-title",
+          "fill": "rgb(255, 247, 238)",
+          "font": "500 32px / 33.28px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 52.60416793823242,
+            "width": 265.16668701171875,
+            "x": 14,
+            "y": 130.1875
+          },
+          "text": "QA jedro u suton"
+        },
+        {
+          "background": "rgb(255, 247, 233)",
+          "children": [],
+          "class": "blog-tagline-shared",
+          "fill": "rgb(23, 16, 11)",
+          "font": "15.258px / 22.1241px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "local": 0,
+          "rect": {
+            "height": 44.25,
+            "width": 346.66668701171875,
+            "x": 14,
+            "y": 210.7916717529297
+          },
+          "text": "Synthetic photographic design with two reader comments"
+        },
+        {
+          "background": "rgb(45, 31, 24)",
+          "children": [
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "SPAN"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "SPAN"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "SPAN"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "SPAN"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "SPAN"
+            }
+          ],
+          "class": "jus-post-date blog-date-shell blog-date-style-classic_vertical blog-date-effect-solid",
+          "fill": "rgb(23, 16, 11)",
+          "font": "15.2px / 24.32px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "local": 0,
+          "rect": {
+            "height": 53.54166793823242,
+            "width": 317.3333435058594,
+            "x": 28.666667938232425,
+            "y": 305.7083435058594
+          },
+          "text": "20\n        \n        \n            LISTOPAD\n            2026\n        \n    \n    \n        20\n        /\n        LISTOPAD\n        /\n        2026"
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "children": [
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(255, 245, 234)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgb(255, 247, 233)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(6, 71, 184)",
+              "tag": "A"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "SPAN"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "STRONG"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "SPAN"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "STRONG"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "STYLE"
+            }
+          ],
+          "class": "jus-section jus-profile-wrap",
+          "fill": "rgb(23, 16, 11)",
+          "font": "15.2px / 24.32px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "local": 0,
+          "rect": {
+            "height": 116.29167175292967,
+            "width": 317.3333435058594,
+            "x": 28.666667938232425,
+            "y": 1260.4375
+          },
+          "text": "O autoru\n                    \n\n\n    \n        \n            \n                \n            \n        \n\n        \n            qa102g_jedro_u_suton\n            \n                QA jedro u suton\n            \n            \n                0 pratitelja\n                0 pratim\n            \n\n            \n        \n    \n\n    \n\n\n    \n\n\n\n\n.blog-profile-panel {\n    width: 100%;\n    max-width: 260px;\n    margin-bottom: 18px;\n    color: inherit;\n}\n\n.blog-profile-panel__top {\n    display: flex;\n    align-items: center;\n    gap: 12px;\n}\n\n.blog-profile-panel__avatar-link {\n    flex-shrink: 0;\n    text-decoration: none;\n}\n\n.blog-profile-panel__avatar {\n    width: 56px;\n    height: 56px;\n    border-radius: 50%;\n    object-fit: cover;\n    display: block;\n}\n\n.blog-profile-panel__identity {\n    min-width: 0;\n    display: flex;\n    flex-direction: column;\n    gap: 3px;\n}\n\n.blog-profile-panel__name {\n    font-size: 1.08rem;\n    font-weight: 700;\n    line-height: 1.08;\n    overflow-wrap: anywhere;\n    color: inherit;\n    text-decoration: none;\n}\n\n.blog-profile-panel__name:hover {\n    color: inherit;\n    text-decoration: none;\n}\n\n.blog-profile-panel__blog-name {\n    font-size: 0.84rem;\n    opacity: 0.8;\n    line-height: 1.18;\n    overflow-wrap: anywhere;\n}\n\n.blog-profile-panel__stats {\n    display: flex;\n    flex-wrap: wrap;\n    gap: 2px 10px;\n    font-size: 0.92rem;\n    line-height: 1.2;\n}\n\n.blog-profile-panel__stats strong {\n    font-weight: 700;\n}\n\n.blog-profile-panel__author-link {\n    margin-top: 4px;\n    display: inline-flex;\n    align-items: center;\n    gap: 6px;\n    font-size: 0.92rem;\n    font-weight: 600;\n    text-decoration: none;\n    color: inherit;\n    opacity: 0.92;\n}\n\n.blog-profile-panel__author-link:hover {\n    text-decoration: underline;\n    color: inherit;\n}\n\n.blog-profile-panel__actions {\n    margin-top: 10px;\n    display: flex;\n    align-items: center;\n    gap: 10px;\n}\n\n.blog-profile-panel__follow-btn {\n    min-width: 88px;\n}\n\n.blog-profile-panel__dropdown {\n    position: relative;\n    overflow: visible !important;\n}\n\n.blog-profile-panel__dropdown-toggle {\n    display: inline-flex;\n    align-items: center;\n    justify-content: center;\n    width: 34px;\n    height: 34px;\n    text-decoration: none;\n    color: inherit;\n}\n\n.blog-profile-panel__dropdown-toggle::after {\n    display: none !important;\n}\n\n.blog-profile-panel .blog-user-dropdown-menu {\n    min-width: 220px;\n    z-index: 9999;\n}\n\n.blog-profile-panel__note {\n    margin-top: 10px;\n    font-size: 0.84rem;\n    opacity: 0.82;\n    line-height: 1.3;\n}\n\n.blog-profile-panel--gradient .blog-profile-panel__name,\n.blog-profile-panel--gradient .blog-profile-panel__blog-name,\n.blog-profile-panel--gradient .blog-profile-panel__stats,\n.blog-profile-panel--gradient .blog-profile-panel__dropdown-toggle {\n    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.28);\n}\n\n.blog-profile-panel--gradient .blog-profile-panel__avatar {\n    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);\n}\n\n@media (max-width: 991.98px) {\n    .blog-profile-panel {\n        max-width: none;\n    }\n}"
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "children": [],
+          "class": "jus-side-title box-title",
+          "fill": "rgb(255, 245, 234)",
+          "font": "13px / 20.8px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 29.45833396911621,
+            "width": 317.3333435058594,
+            "x": 28.666667938232425,
+            "y": 1260.4375
+          },
+          "text": "O autoru"
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "children": [],
+          "class": "jus-calendar-title box-title",
+          "fill": "rgb(255, 245, 234)",
+          "font": "13px / 20.8px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 29.45833396911621,
+            "width": 317.3333435058594,
+            "x": 28.666667938232425,
+            "y": 1392.729248046875
+          },
+          "text": "Kalendar"
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "children": [],
+          "class": "jus-archive-title box-title",
+          "fill": "rgb(255, 245, 234)",
+          "font": "13px / 20.8px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 29.45833396911621,
+            "width": 317.3333435058594,
+            "x": 28.666667938232425,
+            "y": 1765.78125
+          },
+          "text": "Arhiva bloga"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/blog/qa102g_jedro_u_suton/",
+      "width": 390
+    },
+    {
+      "doc": -15,
+      "elements": [
+        {
+          "background": "rgba(58, 31, 20, 0.12)",
+          "children": [],
+          "class": "jus-title blog-page-title",
+          "fill": "rgb(255, 247, 238)",
+          "font": "500 32px / 33.28px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 52.60416793823242,
+            "width": 269.16668701171875,
+            "x": 50.33333587646485,
+            "y": 112.1875
+          },
+          "text": "QA jedro u suton"
+        },
+        {
+          "background": "rgb(255, 247, 233)",
+          "children": [],
+          "class": "blog-tagline-shared",
+          "fill": "rgb(23, 16, 11)",
+          "font": "16.0896px / 23.3299px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "local": 0,
+          "rect": {
+            "height": 23.33333396911621,
+            "width": 652,
+            "x": 50.33333587646485,
+            "y": 192.7916717529297
+          },
+          "text": "Synthetic photographic design with two reader comments"
+        },
+        {
+          "background": "rgb(45, 31, 24)",
+          "children": [
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "SPAN"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "SPAN"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "SPAN"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "SPAN"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "SPAN"
+            }
+          ],
+          "class": "jus-post-date blog-date-shell blog-date-style-classic_vertical blog-date-effect-solid",
+          "fill": "rgb(23, 16, 11)",
+          "font": "15.2px / 24.32px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "local": 0,
+          "rect": {
+            "height": 53.54166793823242,
+            "width": 614.6666870117188,
+            "x": 69,
+            "y": 270.79168701171875
+          },
+          "text": "20\n        \n        \n            LISTOPAD\n            2026\n        \n    \n    \n        20\n        /\n        LISTOPAD\n        /\n        2026"
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "children": [
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(255, 245, 234)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgb(255, 247, 233)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(6, 71, 184)",
+              "tag": "A"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "SPAN"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "STRONG"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "SPAN"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "STRONG"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "STYLE"
+            }
+          ],
+          "class": "jus-section jus-profile-wrap",
+          "fill": "rgb(23, 16, 11)",
+          "font": "15.2px / 24.32px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "local": 0,
+          "rect": {
+            "height": 116.29167175292967,
+            "width": 614.6666870117188,
+            "x": 69,
+            "y": 991.09375
+          },
+          "text": "O autoru\n                    \n\n\n    \n        \n            \n                \n            \n        \n\n        \n            qa102g_jedro_u_suton\n            \n                QA jedro u suton\n            \n            \n                0 pratitelja\n                0 pratim\n            \n\n            \n        \n    \n\n    \n\n\n    \n\n\n\n\n.blog-profile-panel {\n    width: 100%;\n    max-width: 260px;\n    margin-bottom: 18px;\n    color: inherit;\n}\n\n.blog-profile-panel__top {\n    display: flex;\n    align-items: center;\n    gap: 12px;\n}\n\n.blog-profile-panel__avatar-link {\n    flex-shrink: 0;\n    text-decoration: none;\n}\n\n.blog-profile-panel__avatar {\n    width: 56px;\n    height: 56px;\n    border-radius: 50%;\n    object-fit: cover;\n    display: block;\n}\n\n.blog-profile-panel__identity {\n    min-width: 0;\n    display: flex;\n    flex-direction: column;\n    gap: 3px;\n}\n\n.blog-profile-panel__name {\n    font-size: 1.08rem;\n    font-weight: 700;\n    line-height: 1.08;\n    overflow-wrap: anywhere;\n    color: inherit;\n    text-decoration: none;\n}\n\n.blog-profile-panel__name:hover {\n    color: inherit;\n    text-decoration: none;\n}\n\n.blog-profile-panel__blog-name {\n    font-size: 0.84rem;\n    opacity: 0.8;\n    line-height: 1.18;\n    overflow-wrap: anywhere;\n}\n\n.blog-profile-panel__stats {\n    display: flex;\n    flex-wrap: wrap;\n    gap: 2px 10px;\n    font-size: 0.92rem;\n    line-height: 1.2;\n}\n\n.blog-profile-panel__stats strong {\n    font-weight: 700;\n}\n\n.blog-profile-panel__author-link {\n    margin-top: 4px;\n    display: inline-flex;\n    align-items: center;\n    gap: 6px;\n    font-size: 0.92rem;\n    font-weight: 600;\n    text-decoration: none;\n    color: inherit;\n    opacity: 0.92;\n}\n\n.blog-profile-panel__author-link:hover {\n    text-decoration: underline;\n    color: inherit;\n}\n\n.blog-profile-panel__actions {\n    margin-top: 10px;\n    display: flex;\n    align-items: center;\n    gap: 10px;\n}\n\n.blog-profile-panel__follow-btn {\n    min-width: 88px;\n}\n\n.blog-profile-panel__dropdown {\n    position: relative;\n    overflow: visible !important;\n}\n\n.blog-profile-panel__dropdown-toggle {\n    display: inline-flex;\n    align-items: center;\n    justify-content: center;\n    width: 34px;\n    height: 34px;\n    text-decoration: none;\n    color: inherit;\n}\n\n.blog-profile-panel__dropdown-toggle::after {\n    display: none !important;\n}\n\n.blog-profile-panel .blog-user-dropdown-menu {\n    min-width: 220px;\n    z-index: 9999;\n}\n\n.blog-profile-panel__note {\n    margin-top: 10px;\n    font-size: 0.84rem;\n    opacity: 0.82;\n    line-height: 1.3;\n}\n\n.blog-profile-panel--gradient .blog-profile-panel__name,\n.blog-profile-panel--gradient .blog-profile-panel__blog-name,\n.blog-profile-panel--gradient .blog-profile-panel__stats,\n.blog-profile-panel--gradient .blog-profile-panel__dropdown-toggle {\n    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.28);\n}\n\n.blog-profile-panel--gradient .blog-profile-panel__avatar {\n    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);\n}\n\n@media (max-width: 991.98px) {\n    .blog-profile-panel {\n        max-width: none;\n    }\n}"
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "children": [],
+          "class": "jus-side-title box-title",
+          "fill": "rgb(255, 245, 234)",
+          "font": "13px / 20.8px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 29.45833396911621,
+            "width": 614.6666870117188,
+            "x": 69,
+            "y": 991.09375
+          },
+          "text": "O autoru"
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "children": [],
+          "class": "jus-calendar-title box-title",
+          "fill": "rgb(255, 245, 234)",
+          "font": "13px / 20.8px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 29.45833396911621,
+            "width": 614.6666870117188,
+            "x": 69,
+            "y": 1123.385498046875
+          },
+          "text": "Kalendar"
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "children": [],
+          "class": "jus-archive-title box-title",
+          "fill": "rgb(255, 245, 234)",
+          "font": "13px / 20.8px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 29.45833396911621,
+            "width": 614.6666870117188,
+            "x": 69,
+            "y": 1481.104248046875
+          },
+          "text": "Arhiva bloga"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/blog/qa102g_jedro_u_suton/",
+      "width": 768
+    },
+    {
+      "doc": -15,
+      "elements": [
+        {
+          "background": "rgba(58, 31, 20, 0.12)",
+          "children": [],
+          "class": "jus-title blog-page-title",
+          "fill": "rgb(255, 247, 238)",
+          "font": "500 32px / 33.28px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 52.60416793823242,
+            "width": 269.16668701171875,
+            "x": 276.3333435058594,
+            "y": 112.1875
+          },
+          "text": "QA jedro u suton"
+        },
+        {
+          "background": "rgb(255, 247, 233)",
+          "children": [],
+          "class": "blog-tagline-shared",
+          "fill": "rgb(23, 16, 11)",
+          "font": "17.568px / 25.4736px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "local": 0,
+          "rect": {
+            "height": 25.479167938232425,
+            "width": 760,
+            "x": 276.3333435058594,
+            "y": 192.7916717529297
+          },
+          "text": "Synthetic photographic design with two reader comments"
+        },
+        {
+          "background": "rgb(45, 31, 24)",
+          "children": [
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "SPAN"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "SPAN"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "SPAN"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "SPAN"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "SPAN"
+            }
+          ],
+          "class": "jus-post-date blog-date-shell blog-date-style-classic_vertical blog-date-effect-solid",
+          "fill": "rgb(23, 16, 11)",
+          "font": "15.2px / 24.32px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "local": 0,
+          "rect": {
+            "height": 53.54166793823242,
+            "width": 584.6666870117188,
+            "x": 299,
+            "y": 274.9375
+          },
+          "text": "20\n        \n        \n            LISTOPAD\n            2026\n        \n    \n    \n        20\n        /\n        LISTOPAD\n        /\n        2026"
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "children": [
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(255, 245, 234)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgb(255, 247, 233)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(6, 71, 184)",
+              "tag": "A"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "SPAN"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "STRONG"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "SPAN"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "STRONG"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "STYLE"
+            }
+          ],
+          "class": "jus-section jus-profile-wrap",
+          "fill": "rgb(23, 16, 11)",
+          "font": "15.2px / 24.32px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "local": 0,
+          "rect": {
+            "height": 134.9479217529297,
+            "width": 220,
+            "x": 905.6666870117188,
+            "y": 274.9375
+          },
+          "text": "O autoru\n                    \n\n\n    \n        \n            \n                \n            \n        \n\n        \n            qa102g_jedro_u_suton\n            \n                QA jedro u suton\n            \n            \n                0 pratitelja\n                0 pratim\n            \n\n            \n        \n    \n\n    \n\n\n    \n\n\n\n\n.blog-profile-panel {\n    width: 100%;\n    max-width: 260px;\n    margin-bottom: 18px;\n    color: inherit;\n}\n\n.blog-profile-panel__top {\n    display: flex;\n    align-items: center;\n    gap: 12px;\n}\n\n.blog-profile-panel__avatar-link {\n    flex-shrink: 0;\n    text-decoration: none;\n}\n\n.blog-profile-panel__avatar {\n    width: 56px;\n    height: 56px;\n    border-radius: 50%;\n    object-fit: cover;\n    display: block;\n}\n\n.blog-profile-panel__identity {\n    min-width: 0;\n    display: flex;\n    flex-direction: column;\n    gap: 3px;\n}\n\n.blog-profile-panel__name {\n    font-size: 1.08rem;\n    font-weight: 700;\n    line-height: 1.08;\n    overflow-wrap: anywhere;\n    color: inherit;\n    text-decoration: none;\n}\n\n.blog-profile-panel__name:hover {\n    color: inherit;\n    text-decoration: none;\n}\n\n.blog-profile-panel__blog-name {\n    font-size: 0.84rem;\n    opacity: 0.8;\n    line-height: 1.18;\n    overflow-wrap: anywhere;\n}\n\n.blog-profile-panel__stats {\n    display: flex;\n    flex-wrap: wrap;\n    gap: 2px 10px;\n    font-size: 0.92rem;\n    line-height: 1.2;\n}\n\n.blog-profile-panel__stats strong {\n    font-weight: 700;\n}\n\n.blog-profile-panel__author-link {\n    margin-top: 4px;\n    display: inline-flex;\n    align-items: center;\n    gap: 6px;\n    font-size: 0.92rem;\n    font-weight: 600;\n    text-decoration: none;\n    color: inherit;\n    opacity: 0.92;\n}\n\n.blog-profile-panel__author-link:hover {\n    text-decoration: underline;\n    color: inherit;\n}\n\n.blog-profile-panel__actions {\n    margin-top: 10px;\n    display: flex;\n    align-items: center;\n    gap: 10px;\n}\n\n.blog-profile-panel__follow-btn {\n    min-width: 88px;\n}\n\n.blog-profile-panel__dropdown {\n    position: relative;\n    overflow: visible !important;\n}\n\n.blog-profile-panel__dropdown-toggle {\n    display: inline-flex;\n    align-items: center;\n    justify-content: center;\n    width: 34px;\n    height: 34px;\n    text-decoration: none;\n    color: inherit;\n}\n\n.blog-profile-panel__dropdown-toggle::after {\n    display: none !important;\n}\n\n.blog-profile-panel .blog-user-dropdown-menu {\n    min-width: 220px;\n    z-index: 9999;\n}\n\n.blog-profile-panel__note {\n    margin-top: 10px;\n    font-size: 0.84rem;\n    opacity: 0.82;\n    line-height: 1.3;\n}\n\n.blog-profile-panel--gradient .blog-profile-panel__name,\n.blog-profile-panel--gradient .blog-profile-panel__blog-name,\n.blog-profile-panel--gradient .blog-profile-panel__stats,\n.blog-profile-panel--gradient .blog-profile-panel__dropdown-toggle {\n    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.28);\n}\n\n.blog-profile-panel--gradient .blog-profile-panel__avatar {\n    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);\n}\n\n@media (max-width: 991.98px) {\n    .blog-profile-panel {\n        max-width: none;\n    }\n}"
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "children": [],
+          "class": "jus-side-title box-title",
+          "fill": "rgb(255, 245, 234)",
+          "font": "13px / 20.8px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 29.45833396911621,
+            "width": 220,
+            "x": 905.6666870117188,
+            "y": 274.9375
+          },
+          "text": "O autoru"
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "children": [],
+          "class": "jus-calendar-title box-title",
+          "fill": "rgb(255, 245, 234)",
+          "font": "13px / 20.8px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 29.45833396911621,
+            "width": 220,
+            "x": 905.6666870117188,
+            "y": 425.8854370117187
+          },
+          "text": "Kalendar"
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "children": [],
+          "class": "jus-archive-title box-title",
+          "fill": "rgb(255, 245, 234)",
+          "font": "13px / 20.8px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 29.45833396911621,
+            "width": 220,
+            "x": 905.6666870117188,
+            "y": 759.6041870117188
+          },
+          "text": "Arhiva bloga"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/blog/qa102g_jedro_u_suton/",
+      "width": 1440
+    }
+  ],
+  "before-detail": [
+    {
+      "clientWidth": 305,
+      "elements": [
+        {
+          "background": "rgba(58, 31, 20, 0.12)",
+          "class": "jus-title blog-page-title",
+          "fill": "rgb(255, 247, 238)",
+          "font": "500 32px / 33.28px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 52.60416793823242,
+            "width": 265.16668701171875,
+            "x": 14,
+            "y": 130.1875
+          },
+          "text": "QA jedro u suton"
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "class": "jus-side-title box-title",
+          "fill": "rgb(255, 245, 234)",
+          "font": "13px / 20.8px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 29.45833396911621,
+            "width": 247.33334350585935,
+            "x": 28.666667938232425,
+            "y": 1411.2708740234375
+          },
+          "text": "O autoru"
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "class": "jus-calendar-title box-title",
+          "fill": "rgb(255, 245, 234)",
+          "font": "13px / 20.8px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 29.45833396911621,
+            "width": 247.33334350585935,
+            "x": 28.666667938232425,
+            "y": 1562.21875
+          },
+          "text": "Kalendar"
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "class": "jus-archive-title box-title",
+          "fill": "rgb(255, 245, 234)",
+          "font": "13px / 20.8px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 29.45833396911621,
+            "width": 247.33334350585935,
+            "x": 28.666667938232425,
+            "y": 1935.2708740234375
+          },
+          "text": "Arhiva bloga"
+        }
+      ],
+      "scrollWidth": 305,
+      "url": "http://127.0.0.1:8017/post/174/a-longer-editorial-story-for-mobile-and-desktop-verification/",
+      "width": 320
+    },
+    {
+      "clientWidth": 375,
+      "elements": [
+        {
+          "background": "rgba(58, 31, 20, 0.12)",
+          "class": "jus-title blog-page-title",
+          "fill": "rgb(255, 247, 238)",
+          "font": "500 32px / 33.28px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 52.60416793823242,
+            "width": 265.16668701171875,
+            "x": 14,
+            "y": 130.1875
+          },
+          "text": "QA jedro u suton"
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "class": "jus-side-title box-title",
+          "fill": "rgb(255, 245, 234)",
+          "font": "13px / 20.8px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 29.45833396911621,
+            "width": 317.3333435058594,
+            "x": 28.666667938232425,
+            "y": 1200.4375
+          },
+          "text": "O autoru"
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "class": "jus-calendar-title box-title",
+          "fill": "rgb(255, 245, 234)",
+          "font": "13px / 20.8px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 29.45833396911621,
+            "width": 317.3333435058594,
+            "x": 28.666667938232425,
+            "y": 1332.729248046875
+          },
+          "text": "Kalendar"
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "class": "jus-archive-title box-title",
+          "fill": "rgb(255, 245, 234)",
+          "font": "13px / 20.8px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 29.45833396911621,
+            "width": 317.3333435058594,
+            "x": 28.666667938232425,
+            "y": 1705.78125
+          },
+          "text": "Arhiva bloga"
+        }
+      ],
+      "scrollWidth": 375,
+      "url": "http://127.0.0.1:8017/post/174/a-longer-editorial-story-for-mobile-and-desktop-verification/",
+      "width": 390
+    },
+    {
+      "clientWidth": 753,
+      "elements": [
+        {
+          "background": "rgba(58, 31, 20, 0.12)",
+          "class": "jus-title blog-page-title",
+          "fill": "rgb(255, 247, 238)",
+          "font": "500 32px / 33.28px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 52.60416793823242,
+            "width": 269.16668701171875,
+            "x": 50.33333587646485,
+            "y": 112.1875
+          },
+          "text": "QA jedro u suton"
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "class": "jus-side-title box-title",
+          "fill": "rgb(255, 245, 234)",
+          "font": "13px / 20.8px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 29.45833396911621,
+            "width": 614.6666870117188,
+            "x": 69,
+            "y": 991.09375
+          },
+          "text": "O autoru"
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "class": "jus-calendar-title box-title",
+          "fill": "rgb(255, 245, 234)",
+          "font": "13px / 20.8px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 29.45833396911621,
+            "width": 614.6666870117188,
+            "x": 69,
+            "y": 1123.385498046875
+          },
+          "text": "Kalendar"
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "class": "jus-archive-title box-title",
+          "fill": "rgb(255, 245, 234)",
+          "font": "13px / 20.8px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 29.45833396911621,
+            "width": 614.6666870117188,
+            "x": 69,
+            "y": 1481.104248046875
+          },
+          "text": "Arhiva bloga"
+        }
+      ],
+      "scrollWidth": 753,
+      "url": "http://127.0.0.1:8017/post/174/a-longer-editorial-story-for-mobile-and-desktop-verification/",
+      "width": 768
+    },
+    {
+      "clientWidth": 1425,
+      "elements": [
+        {
+          "background": "rgba(58, 31, 20, 0.12)",
+          "class": "jus-title blog-page-title",
+          "fill": "rgb(255, 247, 238)",
+          "font": "500 32px / 33.28px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 52.60416793823242,
+            "width": 269.16668701171875,
+            "x": 276.3333435058594,
+            "y": 112.1875
+          },
+          "text": "QA jedro u suton"
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "class": "jus-side-title box-title",
+          "fill": "rgb(255, 245, 234)",
+          "font": "13px / 20.8px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 29.45833396911621,
+            "width": 220,
+            "x": 905.6666870117188,
+            "y": 274.9375
+          },
+          "text": "O autoru"
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "class": "jus-calendar-title box-title",
+          "fill": "rgb(255, 245, 234)",
+          "font": "13px / 20.8px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 29.45833396911621,
+            "width": 220,
+            "x": 905.6666870117188,
+            "y": 425.8854370117187
+          },
+          "text": "Kalendar"
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "class": "jus-archive-title box-title",
+          "fill": "rgb(255, 245, 234)",
+          "font": "13px / 20.8px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 29.45833396911621,
+            "width": 220,
+            "x": 905.6666870117188,
+            "y": 759.6041870117188
+          },
+          "text": "Arhiva bloga"
+        }
+      ],
+      "scrollWidth": 1425,
+      "url": "http://127.0.0.1:8017/post/174/a-longer-editorial-story-for-mobile-and-desktop-verification/",
+      "width": 1440
+    }
+  ],
+  "after-blog": [
+    {
+      "clientWidth": 305,
+      "elements": [
+        {
+          "background": "rgb(45, 31, 24)",
+          "children": [],
+          "class": "jus-title blog-page-title",
+          "fill": "rgb(255, 247, 238)",
+          "font": "500 32px / 33.28px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 52.60416793823242,
+            "width": 265.16668701171875,
+            "x": 14,
+            "y": 130.1875
+          },
+          "text": "QA jedro u suton"
+        },
+        {
+          "background": "rgb(255, 247, 233)",
+          "children": [],
+          "class": "blog-tagline-shared",
+          "fill": "rgb(23, 16, 11)",
+          "font": "15.2px / 22.04px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "local": 0,
+          "rect": {
+            "height": 44.0625,
+            "width": 276.66668701171875,
+            "x": 14,
+            "y": 210.7916717529297
+          },
+          "text": "Synthetic photographic design with two reader comments"
+        },
+        {
+          "background": "rgb(45, 31, 24)",
+          "children": [
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "SPAN"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "SPAN"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "SPAN"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "SPAN"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "SPAN"
+            }
+          ],
+          "class": "jus-post-date blog-date-shell blog-date-style-classic_vertical blog-date-effect-solid",
+          "fill": "rgb(23, 16, 11)",
+          "font": "15.2px / 24.32px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "local": 0,
+          "rect": {
+            "height": 53.54166793823242,
+            "width": 247.33334350585935,
+            "x": 28.666667938232425,
+            "y": 305.5208435058594
+          },
+          "text": "20\n        \n        \n            LISTOPAD\n            2026\n        \n    \n    \n        20\n        /\n        LISTOPAD\n        /\n        2026"
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "children": [
+            {
+              "background": "rgb(45, 31, 24)",
+              "fill": "rgb(255, 245, 234)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgb(255, 247, 233)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(6, 71, 184)",
+              "tag": "A"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "SPAN"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "STRONG"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "SPAN"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "STRONG"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "STYLE"
+            }
+          ],
+          "class": "jus-section jus-profile-wrap",
+          "fill": "rgb(23, 16, 11)",
+          "font": "15.2px / 24.32px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "local": 0,
+          "rect": {
+            "height": 134.9479217529297,
+            "width": 247.33334350585935,
+            "x": 28.666667938232425,
+            "y": 1411.2708740234375
+          },
+          "text": "O autoru\n                    \n\n\n    \n        \n            \n                \n            \n        \n\n        \n            qa102g_jedro_u_suton\n            \n                QA jedro u suton\n            \n            \n                0 pratitelja\n                0 pratim\n            \n\n            \n        \n    \n\n    \n\n\n    \n\n\n\n\n.blog-profile-panel {\n    width: 100%;\n    max-width: 260px;\n    margin-bottom: 18px;\n    color: inherit;\n}\n\n.blog-profile-panel__top {\n    display: flex;\n    align-items: center;\n    gap: 12px;\n}\n\n.blog-profile-panel__avatar-link {\n    flex-shrink: 0;\n    text-decoration: none;\n}\n\n.blog-profile-panel__avatar {\n    width: 56px;\n    height: 56px;\n    border-radius: 50%;\n    object-fit: cover;\n    display: block;\n}\n\n.blog-profile-panel__identity {\n    min-width: 0;\n    display: flex;\n    flex-direction: column;\n    gap: 3px;\n}\n\n.blog-profile-panel__name {\n    font-size: 1.08rem;\n    font-weight: 700;\n    line-height: 1.08;\n    overflow-wrap: anywhere;\n    color: inherit;\n    text-decoration: none;\n}\n\n.blog-profile-panel__name:hover {\n    color: inherit;\n    text-decoration: none;\n}\n\n.blog-profile-panel__blog-name {\n    font-size: 0.84rem;\n    opacity: 0.8;\n    line-height: 1.18;\n    overflow-wrap: anywhere;\n}\n\n.blog-profile-panel__stats {\n    display: flex;\n    flex-wrap: wrap;\n    gap: 2px 10px;\n    font-size: 0.92rem;\n    line-height: 1.2;\n}\n\n.blog-profile-panel__stats strong {\n    font-weight: 700;\n}\n\n.blog-profile-panel__author-link {\n    margin-top: 4px;\n    display: inline-flex;\n    align-items: center;\n    gap: 6px;\n    font-size: 0.92rem;\n    font-weight: 600;\n    text-decoration: none;\n    color: inherit;\n    opacity: 0.92;\n}\n\n.blog-profile-panel__author-link:hover {\n    text-decoration: underline;\n    color: inherit;\n}\n\n.blog-profile-panel__actions {\n    margin-top: 10px;\n    display: flex;\n    align-items: center;\n    gap: 10px;\n}\n\n.blog-profile-panel__follow-btn {\n    min-width: 88px;\n}\n\n.blog-profile-panel__dropdown {\n    position: relative;\n    overflow: visible !important;\n}\n\n.blog-profile-panel__dropdown-toggle {\n    display: inline-flex;\n    align-items: center;\n    justify-content: center;\n    width: 34px;\n    height: 34px;\n    text-decoration: none;\n    color: inherit;\n}\n\n.blog-profile-panel__dropdown-toggle::after {\n    display: none !important;\n}\n\n.blog-profile-panel .blog-user-dropdown-menu {\n    min-width: 220px;\n    z-index: 9999;\n}\n\n.blog-profile-panel__note {\n    margin-top: 10px;\n    font-size: 0.84rem;\n    opacity: 0.82;\n    line-height: 1.3;\n}\n\n.blog-profile-panel--gradient .blog-profile-panel__name,\n.blog-profile-panel--gradient .blog-profile-panel__blog-name,\n.blog-profile-panel--gradient .blog-profile-panel__stats,\n.blog-profile-panel--gradient .blog-profile-panel__dropdown-toggle {\n    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.28);\n}\n\n.blog-profile-panel--gradient .blog-profile-panel__avatar {\n    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);\n}\n\n@media (max-width: 991.98px) {\n    .blog-profile-panel {\n        max-width: none;\n    }\n}"
+        },
+        {
+          "background": "rgb(45, 31, 24)",
+          "children": [],
+          "class": "jus-side-title box-title",
+          "fill": "rgb(255, 245, 234)",
+          "font": "13px / 20.8px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 29.45833396911621,
+            "width": 247.33334350585935,
+            "x": 28.666667938232425,
+            "y": 1411.2708740234375
+          },
+          "text": "O autoru"
+        },
+        {
+          "background": "rgb(45, 31, 24)",
+          "children": [],
+          "class": "jus-calendar-title box-title",
+          "fill": "rgb(255, 245, 234)",
+          "font": "13px / 20.8px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 29.45833396911621,
+            "width": 247.33334350585935,
+            "x": 28.666667938232425,
+            "y": 1562.21875
+          },
+          "text": "Kalendar"
+        },
+        {
+          "background": "rgb(45, 31, 24)",
+          "children": [],
+          "class": "jus-archive-title box-title",
+          "fill": "rgb(255, 245, 234)",
+          "font": "13px / 20.8px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 29.45833396911621,
+            "width": 247.33334350585935,
+            "x": 28.666667938232425,
+            "y": 1935.2708740234375
+          },
+          "text": "Arhiva bloga"
+        }
+      ],
+      "scrollWidth": 305,
+      "url": "http://127.0.0.1:8017/blog/qa102g_jedro_u_suton/",
+      "width": 320
+    },
+    {
+      "clientWidth": 375,
+      "elements": [
+        {
+          "background": "rgb(45, 31, 24)",
+          "children": [],
+          "class": "jus-title blog-page-title",
+          "fill": "rgb(255, 247, 238)",
+          "font": "500 32px / 33.28px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 52.60416793823242,
+            "width": 265.16668701171875,
+            "x": 14,
+            "y": 130.1875
+          },
+          "text": "QA jedro u suton"
+        },
+        {
+          "background": "rgb(255, 247, 233)",
+          "children": [],
+          "class": "blog-tagline-shared",
+          "fill": "rgb(23, 16, 11)",
+          "font": "15.258px / 22.1241px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "local": 0,
+          "rect": {
+            "height": 44.25,
+            "width": 346.66668701171875,
+            "x": 14,
+            "y": 210.7916717529297
+          },
+          "text": "Synthetic photographic design with two reader comments"
+        },
+        {
+          "background": "rgb(45, 31, 24)",
+          "children": [
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "SPAN"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "SPAN"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "SPAN"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "SPAN"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "SPAN"
+            }
+          ],
+          "class": "jus-post-date blog-date-shell blog-date-style-classic_vertical blog-date-effect-solid",
+          "fill": "rgb(23, 16, 11)",
+          "font": "15.2px / 24.32px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "local": 0,
+          "rect": {
+            "height": 53.54166793823242,
+            "width": 317.3333435058594,
+            "x": 28.666667938232425,
+            "y": 305.7083435058594
+          },
+          "text": "20\n        \n        \n            LISTOPAD\n            2026\n        \n    \n    \n        20\n        /\n        LISTOPAD\n        /\n        2026"
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "children": [
+            {
+              "background": "rgb(45, 31, 24)",
+              "fill": "rgb(255, 245, 234)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgb(255, 247, 233)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(6, 71, 184)",
+              "tag": "A"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "SPAN"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "STRONG"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "SPAN"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "STRONG"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "STYLE"
+            }
+          ],
+          "class": "jus-section jus-profile-wrap",
+          "fill": "rgb(23, 16, 11)",
+          "font": "15.2px / 24.32px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "local": 0,
+          "rect": {
+            "height": 116.29167175292967,
+            "width": 317.3333435058594,
+            "x": 28.666667938232425,
+            "y": 1260.4375
+          },
+          "text": "O autoru\n                    \n\n\n    \n        \n            \n                \n            \n        \n\n        \n            qa102g_jedro_u_suton\n            \n                QA jedro u suton\n            \n            \n                0 pratitelja\n                0 pratim\n            \n\n            \n        \n    \n\n    \n\n\n    \n\n\n\n\n.blog-profile-panel {\n    width: 100%;\n    max-width: 260px;\n    margin-bottom: 18px;\n    color: inherit;\n}\n\n.blog-profile-panel__top {\n    display: flex;\n    align-items: center;\n    gap: 12px;\n}\n\n.blog-profile-panel__avatar-link {\n    flex-shrink: 0;\n    text-decoration: none;\n}\n\n.blog-profile-panel__avatar {\n    width: 56px;\n    height: 56px;\n    border-radius: 50%;\n    object-fit: cover;\n    display: block;\n}\n\n.blog-profile-panel__identity {\n    min-width: 0;\n    display: flex;\n    flex-direction: column;\n    gap: 3px;\n}\n\n.blog-profile-panel__name {\n    font-size: 1.08rem;\n    font-weight: 700;\n    line-height: 1.08;\n    overflow-wrap: anywhere;\n    color: inherit;\n    text-decoration: none;\n}\n\n.blog-profile-panel__name:hover {\n    color: inherit;\n    text-decoration: none;\n}\n\n.blog-profile-panel__blog-name {\n    font-size: 0.84rem;\n    opacity: 0.8;\n    line-height: 1.18;\n    overflow-wrap: anywhere;\n}\n\n.blog-profile-panel__stats {\n    display: flex;\n    flex-wrap: wrap;\n    gap: 2px 10px;\n    font-size: 0.92rem;\n    line-height: 1.2;\n}\n\n.blog-profile-panel__stats strong {\n    font-weight: 700;\n}\n\n.blog-profile-panel__author-link {\n    margin-top: 4px;\n    display: inline-flex;\n    align-items: center;\n    gap: 6px;\n    font-size: 0.92rem;\n    font-weight: 600;\n    text-decoration: none;\n    color: inherit;\n    opacity: 0.92;\n}\n\n.blog-profile-panel__author-link:hover {\n    text-decoration: underline;\n    color: inherit;\n}\n\n.blog-profile-panel__actions {\n    margin-top: 10px;\n    display: flex;\n    align-items: center;\n    gap: 10px;\n}\n\n.blog-profile-panel__follow-btn {\n    min-width: 88px;\n}\n\n.blog-profile-panel__dropdown {\n    position: relative;\n    overflow: visible !important;\n}\n\n.blog-profile-panel__dropdown-toggle {\n    display: inline-flex;\n    align-items: center;\n    justify-content: center;\n    width: 34px;\n    height: 34px;\n    text-decoration: none;\n    color: inherit;\n}\n\n.blog-profile-panel__dropdown-toggle::after {\n    display: none !important;\n}\n\n.blog-profile-panel .blog-user-dropdown-menu {\n    min-width: 220px;\n    z-index: 9999;\n}\n\n.blog-profile-panel__note {\n    margin-top: 10px;\n    font-size: 0.84rem;\n    opacity: 0.82;\n    line-height: 1.3;\n}\n\n.blog-profile-panel--gradient .blog-profile-panel__name,\n.blog-profile-panel--gradient .blog-profile-panel__blog-name,\n.blog-profile-panel--gradient .blog-profile-panel__stats,\n.blog-profile-panel--gradient .blog-profile-panel__dropdown-toggle {\n    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.28);\n}\n\n.blog-profile-panel--gradient .blog-profile-panel__avatar {\n    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);\n}\n\n@media (max-width: 991.98px) {\n    .blog-profile-panel {\n        max-width: none;\n    }\n}"
+        },
+        {
+          "background": "rgb(45, 31, 24)",
+          "children": [],
+          "class": "jus-side-title box-title",
+          "fill": "rgb(255, 245, 234)",
+          "font": "13px / 20.8px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 29.45833396911621,
+            "width": 317.3333435058594,
+            "x": 28.666667938232425,
+            "y": 1260.4375
+          },
+          "text": "O autoru"
+        },
+        {
+          "background": "rgb(45, 31, 24)",
+          "children": [],
+          "class": "jus-calendar-title box-title",
+          "fill": "rgb(255, 245, 234)",
+          "font": "13px / 20.8px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 29.45833396911621,
+            "width": 317.3333435058594,
+            "x": 28.666667938232425,
+            "y": 1392.729248046875
+          },
+          "text": "Kalendar"
+        },
+        {
+          "background": "rgb(45, 31, 24)",
+          "children": [],
+          "class": "jus-archive-title box-title",
+          "fill": "rgb(255, 245, 234)",
+          "font": "13px / 20.8px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 29.45833396911621,
+            "width": 317.3333435058594,
+            "x": 28.666667938232425,
+            "y": 1765.78125
+          },
+          "text": "Arhiva bloga"
+        }
+      ],
+      "scrollWidth": 375,
+      "url": "http://127.0.0.1:8017/blog/qa102g_jedro_u_suton/",
+      "width": 390
+    },
+    {
+      "clientWidth": 753,
+      "elements": [
+        {
+          "background": "rgb(45, 31, 24)",
+          "children": [],
+          "class": "jus-title blog-page-title",
+          "fill": "rgb(255, 247, 238)",
+          "font": "500 32px / 33.28px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 52.60416793823242,
+            "width": 269.16668701171875,
+            "x": 50.33333587646485,
+            "y": 112.1875
+          },
+          "text": "QA jedro u suton"
+        },
+        {
+          "background": "rgb(255, 247, 233)",
+          "children": [],
+          "class": "blog-tagline-shared",
+          "fill": "rgb(23, 16, 11)",
+          "font": "16.0896px / 23.3299px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "local": 0,
+          "rect": {
+            "height": 23.33333396911621,
+            "width": 652,
+            "x": 50.33333587646485,
+            "y": 192.7916717529297
+          },
+          "text": "Synthetic photographic design with two reader comments"
+        },
+        {
+          "background": "rgb(45, 31, 24)",
+          "children": [
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "SPAN"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "SPAN"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "SPAN"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "SPAN"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "SPAN"
+            }
+          ],
+          "class": "jus-post-date blog-date-shell blog-date-style-classic_vertical blog-date-effect-solid",
+          "fill": "rgb(23, 16, 11)",
+          "font": "15.2px / 24.32px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "local": 0,
+          "rect": {
+            "height": 53.54166793823242,
+            "width": 614.6666870117188,
+            "x": 69,
+            "y": 270.79168701171875
+          },
+          "text": "20\n        \n        \n            LISTOPAD\n            2026\n        \n    \n    \n        20\n        /\n        LISTOPAD\n        /\n        2026"
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "children": [
+            {
+              "background": "rgb(45, 31, 24)",
+              "fill": "rgb(255, 245, 234)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgb(255, 247, 233)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(6, 71, 184)",
+              "tag": "A"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "SPAN"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "STRONG"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "SPAN"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "STRONG"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "STYLE"
+            }
+          ],
+          "class": "jus-section jus-profile-wrap",
+          "fill": "rgb(23, 16, 11)",
+          "font": "15.2px / 24.32px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "local": 0,
+          "rect": {
+            "height": 116.29167175292967,
+            "width": 614.6666870117188,
+            "x": 69,
+            "y": 991.09375
+          },
+          "text": "O autoru\n                    \n\n\n    \n        \n            \n                \n            \n        \n\n        \n            qa102g_jedro_u_suton\n            \n                QA jedro u suton\n            \n            \n                0 pratitelja\n                0 pratim\n            \n\n            \n        \n    \n\n    \n\n\n    \n\n\n\n\n.blog-profile-panel {\n    width: 100%;\n    max-width: 260px;\n    margin-bottom: 18px;\n    color: inherit;\n}\n\n.blog-profile-panel__top {\n    display: flex;\n    align-items: center;\n    gap: 12px;\n}\n\n.blog-profile-panel__avatar-link {\n    flex-shrink: 0;\n    text-decoration: none;\n}\n\n.blog-profile-panel__avatar {\n    width: 56px;\n    height: 56px;\n    border-radius: 50%;\n    object-fit: cover;\n    display: block;\n}\n\n.blog-profile-panel__identity {\n    min-width: 0;\n    display: flex;\n    flex-direction: column;\n    gap: 3px;\n}\n\n.blog-profile-panel__name {\n    font-size: 1.08rem;\n    font-weight: 700;\n    line-height: 1.08;\n    overflow-wrap: anywhere;\n    color: inherit;\n    text-decoration: none;\n}\n\n.blog-profile-panel__name:hover {\n    color: inherit;\n    text-decoration: none;\n}\n\n.blog-profile-panel__blog-name {\n    font-size: 0.84rem;\n    opacity: 0.8;\n    line-height: 1.18;\n    overflow-wrap: anywhere;\n}\n\n.blog-profile-panel__stats {\n    display: flex;\n    flex-wrap: wrap;\n    gap: 2px 10px;\n    font-size: 0.92rem;\n    line-height: 1.2;\n}\n\n.blog-profile-panel__stats strong {\n    font-weight: 700;\n}\n\n.blog-profile-panel__author-link {\n    margin-top: 4px;\n    display: inline-flex;\n    align-items: center;\n    gap: 6px;\n    font-size: 0.92rem;\n    font-weight: 600;\n    text-decoration: none;\n    color: inherit;\n    opacity: 0.92;\n}\n\n.blog-profile-panel__author-link:hover {\n    text-decoration: underline;\n    color: inherit;\n}\n\n.blog-profile-panel__actions {\n    margin-top: 10px;\n    display: flex;\n    align-items: center;\n    gap: 10px;\n}\n\n.blog-profile-panel__follow-btn {\n    min-width: 88px;\n}\n\n.blog-profile-panel__dropdown {\n    position: relative;\n    overflow: visible !important;\n}\n\n.blog-profile-panel__dropdown-toggle {\n    display: inline-flex;\n    align-items: center;\n    justify-content: center;\n    width: 34px;\n    height: 34px;\n    text-decoration: none;\n    color: inherit;\n}\n\n.blog-profile-panel__dropdown-toggle::after {\n    display: none !important;\n}\n\n.blog-profile-panel .blog-user-dropdown-menu {\n    min-width: 220px;\n    z-index: 9999;\n}\n\n.blog-profile-panel__note {\n    margin-top: 10px;\n    font-size: 0.84rem;\n    opacity: 0.82;\n    line-height: 1.3;\n}\n\n.blog-profile-panel--gradient .blog-profile-panel__name,\n.blog-profile-panel--gradient .blog-profile-panel__blog-name,\n.blog-profile-panel--gradient .blog-profile-panel__stats,\n.blog-profile-panel--gradient .blog-profile-panel__dropdown-toggle {\n    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.28);\n}\n\n.blog-profile-panel--gradient .blog-profile-panel__avatar {\n    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);\n}\n\n@media (max-width: 991.98px) {\n    .blog-profile-panel {\n        max-width: none;\n    }\n}"
+        },
+        {
+          "background": "rgb(45, 31, 24)",
+          "children": [],
+          "class": "jus-side-title box-title",
+          "fill": "rgb(255, 245, 234)",
+          "font": "13px / 20.8px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 29.45833396911621,
+            "width": 614.6666870117188,
+            "x": 69,
+            "y": 991.09375
+          },
+          "text": "O autoru"
+        },
+        {
+          "background": "rgb(45, 31, 24)",
+          "children": [],
+          "class": "jus-calendar-title box-title",
+          "fill": "rgb(255, 245, 234)",
+          "font": "13px / 20.8px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 29.45833396911621,
+            "width": 614.6666870117188,
+            "x": 69,
+            "y": 1123.385498046875
+          },
+          "text": "Kalendar"
+        },
+        {
+          "background": "rgb(45, 31, 24)",
+          "children": [],
+          "class": "jus-archive-title box-title",
+          "fill": "rgb(255, 245, 234)",
+          "font": "13px / 20.8px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 29.45833396911621,
+            "width": 614.6666870117188,
+            "x": 69,
+            "y": 1481.104248046875
+          },
+          "text": "Arhiva bloga"
+        }
+      ],
+      "scrollWidth": 753,
+      "url": "http://127.0.0.1:8017/blog/qa102g_jedro_u_suton/",
+      "width": 768
+    },
+    {
+      "clientWidth": 1425,
+      "elements": [
+        {
+          "background": "rgb(45, 31, 24)",
+          "children": [],
+          "class": "jus-title blog-page-title",
+          "fill": "rgb(255, 247, 238)",
+          "font": "500 32px / 33.28px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 52.60416793823242,
+            "width": 269.16668701171875,
+            "x": 276.3333435058594,
+            "y": 112.1875
+          },
+          "text": "QA jedro u suton"
+        },
+        {
+          "background": "rgb(255, 247, 233)",
+          "children": [],
+          "class": "blog-tagline-shared",
+          "fill": "rgb(23, 16, 11)",
+          "font": "17.568px / 25.4736px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "local": 0,
+          "rect": {
+            "height": 25.479167938232425,
+            "width": 760,
+            "x": 276.3333435058594,
+            "y": 192.7916717529297
+          },
+          "text": "Synthetic photographic design with two reader comments"
+        },
+        {
+          "background": "rgb(45, 31, 24)",
+          "children": [
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "SPAN"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "SPAN"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "SPAN"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "SPAN"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(246, 208, 174)",
+              "tag": "SPAN"
+            }
+          ],
+          "class": "jus-post-date blog-date-shell blog-date-style-classic_vertical blog-date-effect-solid",
+          "fill": "rgb(23, 16, 11)",
+          "font": "15.2px / 24.32px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "local": 0,
+          "rect": {
+            "height": 53.54166793823242,
+            "width": 584.6666870117188,
+            "x": 299,
+            "y": 274.9375
+          },
+          "text": "20\n        \n        \n            LISTOPAD\n            2026\n        \n    \n    \n        20\n        /\n        LISTOPAD\n        /\n        2026"
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "children": [
+            {
+              "background": "rgb(45, 31, 24)",
+              "fill": "rgb(255, 245, 234)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgb(255, 247, 233)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(6, 71, 184)",
+              "tag": "A"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "DIV"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "SPAN"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "STRONG"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "SPAN"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "STRONG"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "fill": "rgb(23, 16, 11)",
+              "tag": "STYLE"
+            }
+          ],
+          "class": "jus-section jus-profile-wrap",
+          "fill": "rgb(23, 16, 11)",
+          "font": "15.2px / 24.32px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "local": 0,
+          "rect": {
+            "height": 134.9479217529297,
+            "width": 220,
+            "x": 905.6666870117188,
+            "y": 274.9375
+          },
+          "text": "O autoru\n                    \n\n\n    \n        \n            \n                \n            \n        \n\n        \n            qa102g_jedro_u_suton\n            \n                QA jedro u suton\n            \n            \n                0 pratitelja\n                0 pratim\n            \n\n            \n        \n    \n\n    \n\n\n    \n\n\n\n\n.blog-profile-panel {\n    width: 100%;\n    max-width: 260px;\n    margin-bottom: 18px;\n    color: inherit;\n}\n\n.blog-profile-panel__top {\n    display: flex;\n    align-items: center;\n    gap: 12px;\n}\n\n.blog-profile-panel__avatar-link {\n    flex-shrink: 0;\n    text-decoration: none;\n}\n\n.blog-profile-panel__avatar {\n    width: 56px;\n    height: 56px;\n    border-radius: 50%;\n    object-fit: cover;\n    display: block;\n}\n\n.blog-profile-panel__identity {\n    min-width: 0;\n    display: flex;\n    flex-direction: column;\n    gap: 3px;\n}\n\n.blog-profile-panel__name {\n    font-size: 1.08rem;\n    font-weight: 700;\n    line-height: 1.08;\n    overflow-wrap: anywhere;\n    color: inherit;\n    text-decoration: none;\n}\n\n.blog-profile-panel__name:hover {\n    color: inherit;\n    text-decoration: none;\n}\n\n.blog-profile-panel__blog-name {\n    font-size: 0.84rem;\n    opacity: 0.8;\n    line-height: 1.18;\n    overflow-wrap: anywhere;\n}\n\n.blog-profile-panel__stats {\n    display: flex;\n    flex-wrap: wrap;\n    gap: 2px 10px;\n    font-size: 0.92rem;\n    line-height: 1.2;\n}\n\n.blog-profile-panel__stats strong {\n    font-weight: 700;\n}\n\n.blog-profile-panel__author-link {\n    margin-top: 4px;\n    display: inline-flex;\n    align-items: center;\n    gap: 6px;\n    font-size: 0.92rem;\n    font-weight: 600;\n    text-decoration: none;\n    color: inherit;\n    opacity: 0.92;\n}\n\n.blog-profile-panel__author-link:hover {\n    text-decoration: underline;\n    color: inherit;\n}\n\n.blog-profile-panel__actions {\n    margin-top: 10px;\n    display: flex;\n    align-items: center;\n    gap: 10px;\n}\n\n.blog-profile-panel__follow-btn {\n    min-width: 88px;\n}\n\n.blog-profile-panel__dropdown {\n    position: relative;\n    overflow: visible !important;\n}\n\n.blog-profile-panel__dropdown-toggle {\n    display: inline-flex;\n    align-items: center;\n    justify-content: center;\n    width: 34px;\n    height: 34px;\n    text-decoration: none;\n    color: inherit;\n}\n\n.blog-profile-panel__dropdown-toggle::after {\n    display: none !important;\n}\n\n.blog-profile-panel .blog-user-dropdown-menu {\n    min-width: 220px;\n    z-index: 9999;\n}\n\n.blog-profile-panel__note {\n    margin-top: 10px;\n    font-size: 0.84rem;\n    opacity: 0.82;\n    line-height: 1.3;\n}\n\n.blog-profile-panel--gradient .blog-profile-panel__name,\n.blog-profile-panel--gradient .blog-profile-panel__blog-name,\n.blog-profile-panel--gradient .blog-profile-panel__stats,\n.blog-profile-panel--gradient .blog-profile-panel__dropdown-toggle {\n    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.28);\n}\n\n.blog-profile-panel--gradient .blog-profile-panel__avatar {\n    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);\n}\n\n@media (max-width: 991.98px) {\n    .blog-profile-panel {\n        max-width: none;\n    }\n}"
+        },
+        {
+          "background": "rgb(45, 31, 24)",
+          "children": [],
+          "class": "jus-side-title box-title",
+          "fill": "rgb(255, 245, 234)",
+          "font": "13px / 20.8px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 29.45833396911621,
+            "width": 220,
+            "x": 905.6666870117188,
+            "y": 274.9375
+          },
+          "text": "O autoru"
+        },
+        {
+          "background": "rgb(45, 31, 24)",
+          "children": [],
+          "class": "jus-calendar-title box-title",
+          "fill": "rgb(255, 245, 234)",
+          "font": "13px / 20.8px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 29.45833396911621,
+            "width": 220,
+            "x": 905.6666870117188,
+            "y": 425.8854370117187
+          },
+          "text": "Kalendar"
+        },
+        {
+          "background": "rgb(45, 31, 24)",
+          "children": [],
+          "class": "jus-archive-title box-title",
+          "fill": "rgb(255, 245, 234)",
+          "font": "13px / 20.8px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 29.45833396911621,
+            "width": 220,
+            "x": 905.6666870117188,
+            "y": 759.6041870117188
+          },
+          "text": "Arhiva bloga"
+        }
+      ],
+      "scrollWidth": 1425,
+      "url": "http://127.0.0.1:8017/blog/qa102g_jedro_u_suton/",
+      "width": 1440
+    }
+  ],
+  "after-detail": [
+    {
+      "clientWidth": 305,
+      "elements": [
+        {
+          "background": "rgb(45, 31, 24)",
+          "class": "jus-title blog-page-title",
+          "fill": "rgb(255, 247, 238)",
+          "font": "500 32px / 33.28px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 52.60416793823242,
+            "width": 265.16668701171875,
+            "x": 14,
+            "y": 130.1875
+          },
+          "text": "QA jedro u suton"
+        },
+        {
+          "background": "rgb(45, 31, 24)",
+          "class": "jus-side-title box-title",
+          "fill": "rgb(255, 245, 234)",
+          "font": "13px / 20.8px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 29.45833396911621,
+            "width": 247.33334350585935,
+            "x": 28.666667938232425,
+            "y": 1411.2708740234375
+          },
+          "text": "O autoru"
+        },
+        {
+          "background": "rgb(45, 31, 24)",
+          "class": "jus-calendar-title box-title",
+          "fill": "rgb(255, 245, 234)",
+          "font": "13px / 20.8px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 29.45833396911621,
+            "width": 247.33334350585935,
+            "x": 28.666667938232425,
+            "y": 1562.21875
+          },
+          "text": "Kalendar"
+        },
+        {
+          "background": "rgb(45, 31, 24)",
+          "class": "jus-archive-title box-title",
+          "fill": "rgb(255, 245, 234)",
+          "font": "13px / 20.8px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 29.45833396911621,
+            "width": 247.33334350585935,
+            "x": 28.666667938232425,
+            "y": 1935.2708740234375
+          },
+          "text": "Arhiva bloga"
+        }
+      ],
+      "scrollWidth": 305,
+      "url": "http://127.0.0.1:8017/post/174/a-longer-editorial-story-for-mobile-and-desktop-verification/",
+      "width": 320
+    },
+    {
+      "clientWidth": 375,
+      "elements": [
+        {
+          "background": "rgb(45, 31, 24)",
+          "class": "jus-title blog-page-title",
+          "fill": "rgb(255, 247, 238)",
+          "font": "500 32px / 33.28px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 52.60416793823242,
+            "width": 265.16668701171875,
+            "x": 14,
+            "y": 130.1875
+          },
+          "text": "QA jedro u suton"
+        },
+        {
+          "background": "rgb(45, 31, 24)",
+          "class": "jus-side-title box-title",
+          "fill": "rgb(255, 245, 234)",
+          "font": "13px / 20.8px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 29.45833396911621,
+            "width": 317.3333435058594,
+            "x": 28.666667938232425,
+            "y": 1200.4375
+          },
+          "text": "O autoru"
+        },
+        {
+          "background": "rgb(45, 31, 24)",
+          "class": "jus-calendar-title box-title",
+          "fill": "rgb(255, 245, 234)",
+          "font": "13px / 20.8px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 29.45833396911621,
+            "width": 317.3333435058594,
+            "x": 28.666667938232425,
+            "y": 1332.729248046875
+          },
+          "text": "Kalendar"
+        },
+        {
+          "background": "rgb(45, 31, 24)",
+          "class": "jus-archive-title box-title",
+          "fill": "rgb(255, 245, 234)",
+          "font": "13px / 20.8px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 29.45833396911621,
+            "width": 317.3333435058594,
+            "x": 28.666667938232425,
+            "y": 1705.78125
+          },
+          "text": "Arhiva bloga"
+        }
+      ],
+      "scrollWidth": 375,
+      "url": "http://127.0.0.1:8017/post/174/a-longer-editorial-story-for-mobile-and-desktop-verification/",
+      "width": 390
+    },
+    {
+      "clientWidth": 753,
+      "elements": [
+        {
+          "background": "rgb(45, 31, 24)",
+          "class": "jus-title blog-page-title",
+          "fill": "rgb(255, 247, 238)",
+          "font": "500 32px / 33.28px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 52.60416793823242,
+            "width": 269.16668701171875,
+            "x": 50.33333587646485,
+            "y": 112.1875
+          },
+          "text": "QA jedro u suton"
+        },
+        {
+          "background": "rgb(45, 31, 24)",
+          "class": "jus-side-title box-title",
+          "fill": "rgb(255, 245, 234)",
+          "font": "13px / 20.8px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 29.45833396911621,
+            "width": 614.6666870117188,
+            "x": 69,
+            "y": 991.09375
+          },
+          "text": "O autoru"
+        },
+        {
+          "background": "rgb(45, 31, 24)",
+          "class": "jus-calendar-title box-title",
+          "fill": "rgb(255, 245, 234)",
+          "font": "13px / 20.8px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 29.45833396911621,
+            "width": 614.6666870117188,
+            "x": 69,
+            "y": 1123.385498046875
+          },
+          "text": "Kalendar"
+        },
+        {
+          "background": "rgb(45, 31, 24)",
+          "class": "jus-archive-title box-title",
+          "fill": "rgb(255, 245, 234)",
+          "font": "13px / 20.8px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 29.45833396911621,
+            "width": 614.6666870117188,
+            "x": 69,
+            "y": 1481.104248046875
+          },
+          "text": "Arhiva bloga"
+        }
+      ],
+      "scrollWidth": 753,
+      "url": "http://127.0.0.1:8017/post/174/a-longer-editorial-story-for-mobile-and-desktop-verification/",
+      "width": 768
+    },
+    {
+      "clientWidth": 1425,
+      "elements": [
+        {
+          "background": "rgb(45, 31, 24)",
+          "class": "jus-title blog-page-title",
+          "fill": "rgb(255, 247, 238)",
+          "font": "500 32px / 33.28px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 52.60416793823242,
+            "width": 269.16668701171875,
+            "x": 276.3333435058594,
+            "y": 112.1875
+          },
+          "text": "QA jedro u suton"
+        },
+        {
+          "background": "rgb(45, 31, 24)",
+          "class": "jus-side-title box-title",
+          "fill": "rgb(255, 245, 234)",
+          "font": "13px / 20.8px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 29.45833396911621,
+            "width": 220,
+            "x": 905.6666870117188,
+            "y": 274.9375
+          },
+          "text": "O autoru"
+        },
+        {
+          "background": "rgb(45, 31, 24)",
+          "class": "jus-calendar-title box-title",
+          "fill": "rgb(255, 245, 234)",
+          "font": "13px / 20.8px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 29.45833396911621,
+            "width": 220,
+            "x": 905.6666870117188,
+            "y": 425.8854370117187
+          },
+          "text": "Kalendar"
+        },
+        {
+          "background": "rgb(45, 31, 24)",
+          "class": "jus-archive-title box-title",
+          "fill": "rgb(255, 245, 234)",
+          "font": "13px / 20.8px Georgia, \"Times New Roman\", serif",
+          "local": 0,
+          "rect": {
+            "height": 29.45833396911621,
+            "width": 220,
+            "x": 905.6666870117188,
+            "y": 759.6041870117188
+          },
+          "text": "Arhiva bloga"
+        }
+      ],
+      "scrollWidth": 1425,
+      "url": "http://127.0.0.1:8017/post/174/a-longer-editorial-story-for-mobile-and-desktop-verification/",
+      "width": 1440
+    }
+  ],
+  "contrast": {
+    "fff7ee": 14.984469010667647,
+    "fff5ea": 14.765012869308295
+  }
+}
