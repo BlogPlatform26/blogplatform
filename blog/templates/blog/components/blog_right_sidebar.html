@@ -13,6 +13,9 @@
                 <a href="{{ next_month_url }}" class="calendar-month-nav-link" aria-label="Sljedeći mjesec">&#8250;</a>
             </div>
 
+            {% if blog.profile.template == 'dark_right' or blog.profile.template == 'classic_right' %}
+            <div class="calendar-scroll-region" role="region" aria-label="Dani kalendara" tabindex="0">
+            {% endif %}
             <div class="calendar-weekdays"{% if blog.profile.template == 'simple_pattern' or blog.profile.template == 'simple_image' or blog.profile.template == 'simple_retro' %} style="display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px;text-align:center;margin-bottom:10px;"{% endif %}>
                 <div>P</div><div>U</div><div>S</div><div>Č</div><div>P</div><div>S</div><div>N</div>
             </div>
@@ -46,6 +49,9 @@
                 {% endfor %}
             {% endfor %}
             </div>
+            {% if blog.profile.template == 'dark_right' or blog.profile.template == 'classic_right' %}
+            </div>
+            {% endif %}
         </div>
         {% endif %}
 

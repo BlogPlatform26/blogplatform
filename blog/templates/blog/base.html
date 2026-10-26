@@ -4128,6 +4128,30 @@ html body .blog-header-main .blog-page-subtitle {
 }
 {% endif %}
 
+{% if blog.profile.template == 'dark_right' or blog.profile.template == 'classic_right' %}
+/* Keep the seven touch targets inside their sidebar on phones and tablets. */
+@media (max-width: 991.98px) {
+    .blog-main-layout-row .calendar-box {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+    .blog-main-layout-row .calendar-scroll-region {
+        max-width: 100%;
+        overflow-x: auto;
+    }
+    .blog-main-layout-row .calendar-weekdays,
+    .blog-main-layout-row .calendar-grid {
+        min-width: 344px;
+        grid-template-columns: repeat(7, minmax(44px, 1fr));
+    }
+    .blog-main-layout-row .calendar-grid {
+        grid-auto-rows: minmax(44px, auto);
+    }
+}
+{% endif %}
+
 {% if blog.profile.template == 'dark' or blog.profile.template == 'dark_right' or blog.profile.template == 'classic' or blog.profile.template == 'classic_right' %}
 /* Phase 101i: fixed-width calendars must not intrude into tablet posts. */
 @media (min-width: 768px) and (max-width: 991.98px) {
