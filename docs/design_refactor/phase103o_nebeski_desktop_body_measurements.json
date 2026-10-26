@@ -1,0 +1,1954 @@
+{
+  "before": [
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgba(255, 255, 255, 0.78)",
+          "cls": "mb-4 blog-post-entry blog-post-card",
+          "color": "rgb(114, 120, 138)",
+          "fill": "rgb(114, 120, 138)",
+          "font": "16px / 24px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 2590.9271240234375,
+            "height": 1745.8958740234375,
+            "left": 48,
+            "right": 256.6666717529297,
+            "top": 845.03125,
+            "width": 208.6666717529297,
+            "x": 48,
+            "y": 845.03125
+          },
+          "tag": "DIV"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(71, 85, 105)",
+          "fill": "rgb(71, 85, 105)",
+          "font": "16px / 24px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 1260.135498046875,
+            "height": 120,
+            "left": 74.66667175292969,
+            "right": 230.00001525878903,
+            "top": 1140.135498046875,
+            "width": 155.33334350585938,
+            "x": 74.66667175292969,
+            "y": 1140.135498046875
+          },
+          "tag": "P"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(71, 85, 105)",
+          "fill": "rgb(71, 85, 105)",
+          "font": "16px / 24px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 1324.135498046875,
+            "height": 48,
+            "left": 74.66667175292969,
+            "right": 230.00001525878903,
+            "top": 1276.135498046875,
+            "width": 155.33334350585938,
+            "x": 74.66667175292969,
+            "y": 1276.135498046875
+          },
+          "tag": "P"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "calendar-title calendar-title--nav",
+          "color": "rgb(143, 150, 170)",
+          "fill": "rgb(143, 150, 170)",
+          "font": "700 13px / 15.34px Garamond, Georgia, serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 338.8020935058594,
+            "height": 44,
+            "left": 52.66666793823242,
+            "right": 252.0000114440918,
+            "top": 294.8020935058594,
+            "width": 199.33334350585935,
+            "x": 52.66666793823242,
+            "y": 294.8020935058594
+          },
+          "tag": "DIV"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "calendar-weekdays",
+          "color": "rgb(51, 65, 85)",
+          "fill": "rgb(51, 65, 85)",
+          "font": "600 11px / 16.5px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 423.6979370117187,
+            "height": 16.5,
+            "left": 54.66666793823242,
+            "right": 398.6666679382324,
+            "top": 407.1979370117187,
+            "width": 344,
+            "x": 54.66666793823242,
+            "y": 407.1979370117187
+          },
+          "tag": "DIV"
+        },
+        {
+          "bg": "rgba(255, 255, 255, 0.36)",
+          "cls": "archive-title",
+          "color": "rgb(71, 85, 105)",
+          "fill": "rgb(71, 85, 105)",
+          "font": "13px / 15.34px Garamond, Georgia, serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 728.3646240234375,
+            "height": 42,
+            "left": 36.66666793823242,
+            "right": 268.0000114440918,
+            "top": 686.3646240234375,
+            "width": 231.33334350585935,
+            "x": 36.66666793823242,
+            "y": 686.3646240234375
+          },
+          "tag": "DIV"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/blog/qa100y_nebeski_mir/",
+      "width": 320
+    },
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgba(255, 255, 255, 0.78)",
+          "cls": "mb-4 blog-post-entry blog-post-card",
+          "color": "rgb(114, 120, 138)",
+          "fill": "rgb(114, 120, 138)",
+          "font": "16px / 24px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 2062.4896240234375,
+            "height": 1217.2708740234375,
+            "left": 48,
+            "right": 326.66668701171875,
+            "top": 845.21875,
+            "width": 278.66668701171875,
+            "x": 48,
+            "y": 845.21875
+          },
+          "tag": "DIV"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(71, 85, 105)",
+          "fill": "rgb(71, 85, 105)",
+          "font": "16px / 24px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 1179.697998046875,
+            "height": 96,
+            "left": 74.66667175292969,
+            "right": 300.00001525878906,
+            "top": 1083.697998046875,
+            "width": 225.33334350585935,
+            "x": 74.66667175292969,
+            "y": 1083.697998046875
+          },
+          "tag": "P"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(71, 85, 105)",
+          "fill": "rgb(71, 85, 105)",
+          "font": "16px / 24px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 1243.697998046875,
+            "height": 48,
+            "left": 74.66667175292969,
+            "right": 300.00001525878906,
+            "top": 1195.697998046875,
+            "width": 225.33334350585935,
+            "x": 74.66667175292969,
+            "y": 1195.697998046875
+          },
+          "tag": "P"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "calendar-title calendar-title--nav",
+          "color": "rgb(143, 150, 170)",
+          "fill": "rgb(143, 150, 170)",
+          "font": "700 13px / 15.34px Garamond, Georgia, serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 338.9895935058594,
+            "height": 44,
+            "left": 52.66666793823242,
+            "right": 322.0000114440918,
+            "top": 294.9895935058594,
+            "width": 269.3333435058594,
+            "x": 52.66666793823242,
+            "y": 294.9895935058594
+          },
+          "tag": "DIV"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "calendar-weekdays",
+          "color": "rgb(51, 65, 85)",
+          "fill": "rgb(51, 65, 85)",
+          "font": "600 11px / 16.5px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 423.8854370117187,
+            "height": 16.5,
+            "left": 54.66666793823242,
+            "right": 398.6666679382324,
+            "top": 407.3854370117187,
+            "width": 344,
+            "x": 54.66666793823242,
+            "y": 407.3854370117187
+          },
+          "tag": "DIV"
+        },
+        {
+          "bg": "rgba(255, 255, 255, 0.36)",
+          "cls": "archive-title",
+          "color": "rgb(71, 85, 105)",
+          "fill": "rgb(71, 85, 105)",
+          "font": "13px / 15.34px Garamond, Georgia, serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 728.5521240234375,
+            "height": 42,
+            "left": 36.66666793823242,
+            "right": 338.0000114440918,
+            "top": 686.5521240234375,
+            "width": 301.3333435058594,
+            "x": 36.66666793823242,
+            "y": 686.5521240234375
+          },
+          "tag": "DIV"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/blog/qa100y_nebeski_mir/",
+      "width": 390
+    },
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgba(255, 255, 255, 0.78)",
+          "cls": "mb-4 blog-post-entry blog-post-card",
+          "color": "rgb(114, 120, 138)",
+          "fill": "rgb(114, 120, 138)",
+          "font": "16px / 24px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 1416.4271240234375,
+            "height": 686.5208740234375,
+            "left": 55.95833587646485,
+            "right": 696.7083358764648,
+            "top": 729.90625,
+            "width": 640.75,
+            "x": 55.95833587646485,
+            "y": 729.90625
+          },
+          "tag": "DIV"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(71, 85, 105)",
+          "fill": "rgb(71, 85, 105)",
+          "font": "16px / 24px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 905.4479370117188,
+            "height": 48,
+            "left": 82.625,
+            "right": 670.0416870117188,
+            "top": 857.4479370117188,
+            "width": 587.4166870117188,
+            "x": 82.625,
+            "y": 857.4479370117188
+          },
+          "tag": "P"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(71, 85, 105)",
+          "fill": "rgb(71, 85, 105)",
+          "font": "16px / 24px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 945.4479370117188,
+            "height": 24,
+            "left": 82.625,
+            "right": 670.0416870117188,
+            "top": 921.4479370117188,
+            "width": 587.4166870117188,
+            "x": 82.625,
+            "y": 921.4479370117188
+          },
+          "tag": "P"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "calendar-title calendar-title--nav",
+          "color": "rgb(143, 150, 170)",
+          "fill": "rgb(143, 150, 170)",
+          "font": "700 13px / 15.34px Garamond, Georgia, serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 297.40625,
+            "height": 44,
+            "left": 60.625,
+            "right": 692.0416870117188,
+            "top": 253.40625,
+            "width": 631.4166870117188,
+            "x": 60.625,
+            "y": 253.40625
+          },
+          "tag": "DIV"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "calendar-weekdays",
+          "color": "rgba(51, 65, 85, 0.7)",
+          "fill": "rgba(51, 65, 85, 0.7)",
+          "font": "600 11px / 16.5px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 325.90625,
+            "height": 16.5,
+            "left": 60.625,
+            "right": 692.0416870117188,
+            "top": 309.40625,
+            "width": 631.4166870117188,
+            "x": 60.625,
+            "y": 309.40625
+          },
+          "tag": "DIV"
+        },
+        {
+          "bg": "rgba(255, 255, 255, 0.36)",
+          "cls": "archive-title",
+          "color": "rgb(143, 150, 170)",
+          "fill": "rgb(143, 150, 170)",
+          "font": "13px / 15.34px Garamond, Georgia, serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 613.2396240234375,
+            "height": 42,
+            "left": 44.625,
+            "right": 708.0416870117188,
+            "top": 571.2396240234375,
+            "width": 663.4166870117188,
+            "x": 44.625,
+            "y": 571.2396240234375
+          },
+          "tag": "DIV"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/blog/qa100y_nebeski_mir/",
+      "width": 768
+    },
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgba(255, 255, 255, 0.78)",
+          "cls": "mb-4 blog-post-entry blog-post-card",
+          "color": "rgb(114, 120, 138)",
+          "fill": "rgb(114, 120, 138)",
+          "font": "16px / 24px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 1091.406280517578,
+            "height": 667.8541870117188,
+            "left": 404.3333435058594,
+            "right": 1020.3333435058594,
+            "top": 423.5520935058594,
+            "width": 616,
+            "x": 404.3333435058594,
+            "y": 423.5520935058594
+          },
+          "tag": "DIV"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(114, 120, 138)",
+          "fill": "rgb(114, 120, 138)",
+          "font": "16px / 24px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 599.09375,
+            "height": 48,
+            "left": 431,
+            "right": 993.6666870117188,
+            "top": 551.09375,
+            "width": 562.6666870117188,
+            "x": 431,
+            "y": 551.09375
+          },
+          "tag": "P"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(114, 120, 138)",
+          "fill": "rgb(114, 120, 138)",
+          "font": "16px / 24px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 639.09375,
+            "height": 24,
+            "left": 431,
+            "right": 993.6666870117188,
+            "top": 615.09375,
+            "width": 562.6666870117188,
+            "x": 431,
+            "y": 615.09375
+          },
+          "tag": "P"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "calendar-title calendar-title--nav",
+          "color": "rgb(143, 150, 170)",
+          "fill": "rgb(143, 150, 170)",
+          "font": "700 13px / 15.34px Garamond, Georgia, serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 470.21875,
+            "height": 30,
+            "left": 125,
+            "right": 351.6666717529297,
+            "top": 440.21875,
+            "width": 226.6666717529297,
+            "x": 125,
+            "y": 440.21875
+          },
+          "tag": "DIV"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "calendar-weekdays",
+          "color": "rgba(51, 65, 85, 0.7)",
+          "fill": "rgba(51, 65, 85, 0.7)",
+          "font": "600 11px / 16.5px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 498.71875,
+            "height": 16.5,
+            "left": 125,
+            "right": 351.6666717529297,
+            "top": 482.21875,
+            "width": 226.6666717529297,
+            "x": 125,
+            "y": 482.21875
+          },
+          "tag": "DIV"
+        },
+        {
+          "bg": "rgba(255, 255, 255, 0.36)",
+          "cls": "archive-title",
+          "color": "rgb(143, 150, 170)",
+          "fill": "rgb(143, 150, 170)",
+          "font": "13px / 15.34px Garamond, Georgia, serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 776.0521240234375,
+            "height": 42,
+            "left": 109,
+            "right": 367.6666870117187,
+            "top": 734.0521240234375,
+            "width": 258.66668701171875,
+            "x": 109,
+            "y": 734.0521240234375
+          },
+          "tag": "DIV"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/blog/qa100y_nebeski_mir/",
+      "width": 1440
+    },
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgba(255, 255, 255, 0.78)",
+          "cls": "mb-4 blog-post-entry blog-post-card",
+          "color": "rgb(114, 120, 138)",
+          "fill": "rgb(114, 120, 138)",
+          "font": "16px / 24px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 2530.9271240234375,
+            "height": 1685.8958740234375,
+            "left": 48,
+            "right": 256.6666717529297,
+            "top": 845.03125,
+            "width": 208.6666717529297,
+            "x": 48,
+            "y": 845.03125
+          },
+          "tag": "DIV"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(71, 85, 105)",
+          "fill": "rgb(71, 85, 105)",
+          "font": "16px / 24px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 1260.135498046875,
+            "height": 120,
+            "left": 74.66667175292969,
+            "right": 230.00001525878903,
+            "top": 1140.135498046875,
+            "width": 155.33334350585938,
+            "x": 74.66667175292969,
+            "y": 1140.135498046875
+          },
+          "tag": "P"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(71, 85, 105)",
+          "fill": "rgb(71, 85, 105)",
+          "font": "16px / 24px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 1324.135498046875,
+            "height": 48,
+            "left": 74.66667175292969,
+            "right": 230.00001525878903,
+            "top": 1276.135498046875,
+            "width": 155.33334350585938,
+            "x": 74.66667175292969,
+            "y": 1276.135498046875
+          },
+          "tag": "P"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "calendar-title calendar-title--nav",
+          "color": "rgb(143, 150, 170)",
+          "fill": "rgb(143, 150, 170)",
+          "font": "700 13px / 15.34px Garamond, Georgia, serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 338.8020935058594,
+            "height": 44,
+            "left": 52.66666793823242,
+            "right": 252.0000114440918,
+            "top": 294.8020935058594,
+            "width": 199.33334350585935,
+            "x": 52.66666793823242,
+            "y": 294.8020935058594
+          },
+          "tag": "DIV"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "calendar-weekdays",
+          "color": "rgb(51, 65, 85)",
+          "fill": "rgb(51, 65, 85)",
+          "font": "600 11px / 16.5px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 423.6979370117187,
+            "height": 16.5,
+            "left": 54.66666793823242,
+            "right": 398.6666679382324,
+            "top": 407.1979370117187,
+            "width": 344,
+            "x": 54.66666793823242,
+            "y": 407.1979370117187
+          },
+          "tag": "DIV"
+        },
+        {
+          "bg": "rgba(255, 255, 255, 0.36)",
+          "cls": "archive-title",
+          "color": "rgb(71, 85, 105)",
+          "fill": "rgb(71, 85, 105)",
+          "font": "13px / 15.34px Garamond, Georgia, serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 728.3646240234375,
+            "height": 42,
+            "left": 36.66666793823242,
+            "right": 268.0000114440918,
+            "top": 686.3646240234375,
+            "width": 231.33334350585935,
+            "x": 36.66666793823242,
+            "y": 686.3646240234375
+          },
+          "tag": "DIV"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/post/45/a-longer-editorial-story-for-mobile-and-desktop-verification/",
+      "width": 320
+    },
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgba(255, 255, 255, 0.78)",
+          "cls": "mb-4 blog-post-entry blog-post-card",
+          "color": "rgb(114, 120, 138)",
+          "fill": "rgb(114, 120, 138)",
+          "font": "16px / 24px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 2062.4896240234375,
+            "height": 1217.2708740234375,
+            "left": 48,
+            "right": 326.66668701171875,
+            "top": 845.21875,
+            "width": 278.66668701171875,
+            "x": 48,
+            "y": 845.21875
+          },
+          "tag": "DIV"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(71, 85, 105)",
+          "fill": "rgb(71, 85, 105)",
+          "font": "16px / 24px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 1179.697998046875,
+            "height": 96,
+            "left": 74.66667175292969,
+            "right": 300.00001525878906,
+            "top": 1083.697998046875,
+            "width": 225.33334350585935,
+            "x": 74.66667175292969,
+            "y": 1083.697998046875
+          },
+          "tag": "P"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(71, 85, 105)",
+          "fill": "rgb(71, 85, 105)",
+          "font": "16px / 24px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 1243.697998046875,
+            "height": 48,
+            "left": 74.66667175292969,
+            "right": 300.00001525878906,
+            "top": 1195.697998046875,
+            "width": 225.33334350585935,
+            "x": 74.66667175292969,
+            "y": 1195.697998046875
+          },
+          "tag": "P"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "calendar-title calendar-title--nav",
+          "color": "rgb(143, 150, 170)",
+          "fill": "rgb(143, 150, 170)",
+          "font": "700 13px / 15.34px Garamond, Georgia, serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 338.9895935058594,
+            "height": 44,
+            "left": 52.66666793823242,
+            "right": 322.0000114440918,
+            "top": 294.9895935058594,
+            "width": 269.3333435058594,
+            "x": 52.66666793823242,
+            "y": 294.9895935058594
+          },
+          "tag": "DIV"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "calendar-weekdays",
+          "color": "rgb(51, 65, 85)",
+          "fill": "rgb(51, 65, 85)",
+          "font": "600 11px / 16.5px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 423.8854370117187,
+            "height": 16.5,
+            "left": 54.66666793823242,
+            "right": 398.6666679382324,
+            "top": 407.3854370117187,
+            "width": 344,
+            "x": 54.66666793823242,
+            "y": 407.3854370117187
+          },
+          "tag": "DIV"
+        },
+        {
+          "bg": "rgba(255, 255, 255, 0.36)",
+          "cls": "archive-title",
+          "color": "rgb(71, 85, 105)",
+          "fill": "rgb(71, 85, 105)",
+          "font": "13px / 15.34px Garamond, Georgia, serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 728.5521240234375,
+            "height": 42,
+            "left": 36.66666793823242,
+            "right": 338.0000114440918,
+            "top": 686.5521240234375,
+            "width": 301.3333435058594,
+            "x": 36.66666793823242,
+            "y": 686.5521240234375
+          },
+          "tag": "DIV"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/post/45/a-longer-editorial-story-for-mobile-and-desktop-verification/",
+      "width": 390
+    },
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgba(255, 255, 255, 0.78)",
+          "cls": "mb-4 blog-post-entry blog-post-card",
+          "color": "rgb(114, 120, 138)",
+          "fill": "rgb(114, 120, 138)",
+          "font": "16px / 24px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 1416.4271240234375,
+            "height": 686.5208740234375,
+            "left": 55.95833587646485,
+            "right": 696.7083358764648,
+            "top": 729.90625,
+            "width": 640.75,
+            "x": 55.95833587646485,
+            "y": 729.90625
+          },
+          "tag": "DIV"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(71, 85, 105)",
+          "fill": "rgb(71, 85, 105)",
+          "font": "16px / 24px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 905.4479370117188,
+            "height": 48,
+            "left": 82.625,
+            "right": 670.0416870117188,
+            "top": 857.4479370117188,
+            "width": 587.4166870117188,
+            "x": 82.625,
+            "y": 857.4479370117188
+          },
+          "tag": "P"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(71, 85, 105)",
+          "fill": "rgb(71, 85, 105)",
+          "font": "16px / 24px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 945.4479370117188,
+            "height": 24,
+            "left": 82.625,
+            "right": 670.0416870117188,
+            "top": 921.4479370117188,
+            "width": 587.4166870117188,
+            "x": 82.625,
+            "y": 921.4479370117188
+          },
+          "tag": "P"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "calendar-title calendar-title--nav",
+          "color": "rgb(143, 150, 170)",
+          "fill": "rgb(143, 150, 170)",
+          "font": "700 13px / 15.34px Garamond, Georgia, serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 297.40625,
+            "height": 44,
+            "left": 60.625,
+            "right": 692.0416870117188,
+            "top": 253.40625,
+            "width": 631.4166870117188,
+            "x": 60.625,
+            "y": 253.40625
+          },
+          "tag": "DIV"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "calendar-weekdays",
+          "color": "rgba(51, 65, 85, 0.7)",
+          "fill": "rgba(51, 65, 85, 0.7)",
+          "font": "600 11px / 16.5px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 325.90625,
+            "height": 16.5,
+            "left": 60.625,
+            "right": 692.0416870117188,
+            "top": 309.40625,
+            "width": 631.4166870117188,
+            "x": 60.625,
+            "y": 309.40625
+          },
+          "tag": "DIV"
+        },
+        {
+          "bg": "rgba(255, 255, 255, 0.36)",
+          "cls": "archive-title",
+          "color": "rgb(143, 150, 170)",
+          "fill": "rgb(143, 150, 170)",
+          "font": "13px / 15.34px Garamond, Georgia, serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 613.2396240234375,
+            "height": 42,
+            "left": 44.625,
+            "right": 708.0416870117188,
+            "top": 571.2396240234375,
+            "width": 663.4166870117188,
+            "x": 44.625,
+            "y": 571.2396240234375
+          },
+          "tag": "DIV"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/post/45/a-longer-editorial-story-for-mobile-and-desktop-verification/",
+      "width": 768
+    },
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgba(255, 255, 255, 0.78)",
+          "cls": "mb-4 blog-post-entry blog-post-card",
+          "color": "rgb(114, 120, 138)",
+          "fill": "rgb(114, 120, 138)",
+          "font": "16px / 24px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 1091.406280517578,
+            "height": 667.8541870117188,
+            "left": 404.3333435058594,
+            "right": 1020.3333435058594,
+            "top": 423.5520935058594,
+            "width": 616,
+            "x": 404.3333435058594,
+            "y": 423.5520935058594
+          },
+          "tag": "DIV"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(114, 120, 138)",
+          "fill": "rgb(114, 120, 138)",
+          "font": "16px / 24px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 599.09375,
+            "height": 48,
+            "left": 431,
+            "right": 993.6666870117188,
+            "top": 551.09375,
+            "width": 562.6666870117188,
+            "x": 431,
+            "y": 551.09375
+          },
+          "tag": "P"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(114, 120, 138)",
+          "fill": "rgb(114, 120, 138)",
+          "font": "16px / 24px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 639.09375,
+            "height": 24,
+            "left": 431,
+            "right": 993.6666870117188,
+            "top": 615.09375,
+            "width": 562.6666870117188,
+            "x": 431,
+            "y": 615.09375
+          },
+          "tag": "P"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "calendar-title calendar-title--nav",
+          "color": "rgb(143, 150, 170)",
+          "fill": "rgb(143, 150, 170)",
+          "font": "700 13px / 15.34px Garamond, Georgia, serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 470.21875,
+            "height": 30,
+            "left": 125,
+            "right": 351.6666717529297,
+            "top": 440.21875,
+            "width": 226.6666717529297,
+            "x": 125,
+            "y": 440.21875
+          },
+          "tag": "DIV"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "calendar-weekdays",
+          "color": "rgba(51, 65, 85, 0.7)",
+          "fill": "rgba(51, 65, 85, 0.7)",
+          "font": "600 11px / 16.5px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 498.71875,
+            "height": 16.5,
+            "left": 125,
+            "right": 351.6666717529297,
+            "top": 482.21875,
+            "width": 226.6666717529297,
+            "x": 125,
+            "y": 482.21875
+          },
+          "tag": "DIV"
+        },
+        {
+          "bg": "rgba(255, 255, 255, 0.36)",
+          "cls": "archive-title",
+          "color": "rgb(143, 150, 170)",
+          "fill": "rgb(143, 150, 170)",
+          "font": "13px / 15.34px Garamond, Georgia, serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 776.0521240234375,
+            "height": 42,
+            "left": 109,
+            "right": 367.6666870117187,
+            "top": 734.0521240234375,
+            "width": 258.66668701171875,
+            "x": 109,
+            "y": 734.0521240234375
+          },
+          "tag": "DIV"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/post/45/a-longer-editorial-story-for-mobile-and-desktop-verification/",
+      "width": 1440
+    }
+  ],
+  "after": [
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgba(255, 255, 255, 0.78)",
+          "cls": "mb-4 blog-post-entry blog-post-card",
+          "color": "rgb(114, 120, 138)",
+          "fill": "rgb(114, 120, 138)",
+          "font": "16px / 24px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 2590.9271240234375,
+            "height": 1745.8958740234375,
+            "left": 48,
+            "right": 256.6666717529297,
+            "top": 845.03125,
+            "width": 208.6666717529297,
+            "x": 48,
+            "y": 845.03125
+          },
+          "tag": "DIV"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(71, 85, 105)",
+          "fill": "rgb(71, 85, 105)",
+          "font": "16px / 24px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 1260.135498046875,
+            "height": 120,
+            "left": 74.66667175292969,
+            "right": 230.00001525878903,
+            "top": 1140.135498046875,
+            "width": 155.33334350585938,
+            "x": 74.66667175292969,
+            "y": 1140.135498046875
+          },
+          "tag": "P"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(71, 85, 105)",
+          "fill": "rgb(71, 85, 105)",
+          "font": "16px / 24px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 1324.135498046875,
+            "height": 48,
+            "left": 74.66667175292969,
+            "right": 230.00001525878903,
+            "top": 1276.135498046875,
+            "width": 155.33334350585938,
+            "x": 74.66667175292969,
+            "y": 1276.135498046875
+          },
+          "tag": "P"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "calendar-title calendar-title--nav",
+          "color": "rgb(143, 150, 170)",
+          "fill": "rgb(143, 150, 170)",
+          "font": "700 13px / 15.34px Garamond, Georgia, serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 338.8020935058594,
+            "height": 44,
+            "left": 52.66666793823242,
+            "right": 252.0000114440918,
+            "top": 294.8020935058594,
+            "width": 199.33334350585935,
+            "x": 52.66666793823242,
+            "y": 294.8020935058594
+          },
+          "tag": "DIV"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "calendar-weekdays",
+          "color": "rgb(51, 65, 85)",
+          "fill": "rgb(51, 65, 85)",
+          "font": "600 11px / 16.5px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 423.6979370117187,
+            "height": 16.5,
+            "left": 54.66666793823242,
+            "right": 398.6666679382324,
+            "top": 407.1979370117187,
+            "width": 344,
+            "x": 54.66666793823242,
+            "y": 407.1979370117187
+          },
+          "tag": "DIV"
+        },
+        {
+          "bg": "rgba(255, 255, 255, 0.36)",
+          "cls": "archive-title",
+          "color": "rgb(71, 85, 105)",
+          "fill": "rgb(71, 85, 105)",
+          "font": "13px / 15.34px Garamond, Georgia, serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 728.3646240234375,
+            "height": 42,
+            "left": 36.66666793823242,
+            "right": 268.0000114440918,
+            "top": 686.3646240234375,
+            "width": 231.33334350585935,
+            "x": 36.66666793823242,
+            "y": 686.3646240234375
+          },
+          "tag": "DIV"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/blog/qa100y_nebeski_mir/",
+      "width": 320,
+      "backing": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgba(255, 255, 255, 0.78)",
+          "cls": "mb-4 blog-post-entry blog-post-card",
+          "color": "rgb(114, 120, 138)",
+          "fill": "rgb(114, 120, 138)",
+          "font": "16px / 24px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 2062.4896240234375,
+            "height": 1217.2708740234375,
+            "left": 48,
+            "right": 326.66668701171875,
+            "top": 845.21875,
+            "width": 278.66668701171875,
+            "x": 48,
+            "y": 845.21875
+          },
+          "tag": "DIV"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(71, 85, 105)",
+          "fill": "rgb(71, 85, 105)",
+          "font": "16px / 24px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 1179.697998046875,
+            "height": 96,
+            "left": 74.66667175292969,
+            "right": 300.00001525878906,
+            "top": 1083.697998046875,
+            "width": 225.33334350585935,
+            "x": 74.66667175292969,
+            "y": 1083.697998046875
+          },
+          "tag": "P"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(71, 85, 105)",
+          "fill": "rgb(71, 85, 105)",
+          "font": "16px / 24px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 1243.697998046875,
+            "height": 48,
+            "left": 74.66667175292969,
+            "right": 300.00001525878906,
+            "top": 1195.697998046875,
+            "width": 225.33334350585935,
+            "x": 74.66667175292969,
+            "y": 1195.697998046875
+          },
+          "tag": "P"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "calendar-title calendar-title--nav",
+          "color": "rgb(143, 150, 170)",
+          "fill": "rgb(143, 150, 170)",
+          "font": "700 13px / 15.34px Garamond, Georgia, serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 338.9895935058594,
+            "height": 44,
+            "left": 52.66666793823242,
+            "right": 322.0000114440918,
+            "top": 294.9895935058594,
+            "width": 269.3333435058594,
+            "x": 52.66666793823242,
+            "y": 294.9895935058594
+          },
+          "tag": "DIV"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "calendar-weekdays",
+          "color": "rgb(51, 65, 85)",
+          "fill": "rgb(51, 65, 85)",
+          "font": "600 11px / 16.5px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 423.8854370117187,
+            "height": 16.5,
+            "left": 54.66666793823242,
+            "right": 398.6666679382324,
+            "top": 407.3854370117187,
+            "width": 344,
+            "x": 54.66666793823242,
+            "y": 407.3854370117187
+          },
+          "tag": "DIV"
+        },
+        {
+          "bg": "rgba(255, 255, 255, 0.36)",
+          "cls": "archive-title",
+          "color": "rgb(71, 85, 105)",
+          "fill": "rgb(71, 85, 105)",
+          "font": "13px / 15.34px Garamond, Georgia, serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 728.5521240234375,
+            "height": 42,
+            "left": 36.66666793823242,
+            "right": 338.0000114440918,
+            "top": 686.5521240234375,
+            "width": 301.3333435058594,
+            "x": 36.66666793823242,
+            "y": 686.5521240234375
+          },
+          "tag": "DIV"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/blog/qa100y_nebeski_mir/",
+      "width": 390,
+      "backing": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgba(255, 255, 255, 0.78)",
+          "cls": "mb-4 blog-post-entry blog-post-card",
+          "color": "rgb(114, 120, 138)",
+          "fill": "rgb(114, 120, 138)",
+          "font": "16px / 24px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 1416.4271240234375,
+            "height": 686.5208740234375,
+            "left": 55.95833587646485,
+            "right": 696.7083358764648,
+            "top": 729.90625,
+            "width": 640.75,
+            "x": 55.95833587646485,
+            "y": 729.90625
+          },
+          "tag": "DIV"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(71, 85, 105)",
+          "fill": "rgb(71, 85, 105)",
+          "font": "16px / 24px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 905.4479370117188,
+            "height": 48,
+            "left": 82.625,
+            "right": 670.0416870117188,
+            "top": 857.4479370117188,
+            "width": 587.4166870117188,
+            "x": 82.625,
+            "y": 857.4479370117188
+          },
+          "tag": "P"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(71, 85, 105)",
+          "fill": "rgb(71, 85, 105)",
+          "font": "16px / 24px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 945.4479370117188,
+            "height": 24,
+            "left": 82.625,
+            "right": 670.0416870117188,
+            "top": 921.4479370117188,
+            "width": 587.4166870117188,
+            "x": 82.625,
+            "y": 921.4479370117188
+          },
+          "tag": "P"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "calendar-title calendar-title--nav",
+          "color": "rgb(143, 150, 170)",
+          "fill": "rgb(143, 150, 170)",
+          "font": "700 13px / 15.34px Garamond, Georgia, serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 297.40625,
+            "height": 44,
+            "left": 60.625,
+            "right": 692.0416870117188,
+            "top": 253.40625,
+            "width": 631.4166870117188,
+            "x": 60.625,
+            "y": 253.40625
+          },
+          "tag": "DIV"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "calendar-weekdays",
+          "color": "rgba(51, 65, 85, 0.7)",
+          "fill": "rgba(51, 65, 85, 0.7)",
+          "font": "600 11px / 16.5px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 325.90625,
+            "height": 16.5,
+            "left": 60.625,
+            "right": 692.0416870117188,
+            "top": 309.40625,
+            "width": 631.4166870117188,
+            "x": 60.625,
+            "y": 309.40625
+          },
+          "tag": "DIV"
+        },
+        {
+          "bg": "rgba(255, 255, 255, 0.36)",
+          "cls": "archive-title",
+          "color": "rgb(143, 150, 170)",
+          "fill": "rgb(143, 150, 170)",
+          "font": "13px / 15.34px Garamond, Georgia, serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 613.2396240234375,
+            "height": 42,
+            "left": 44.625,
+            "right": 708.0416870117188,
+            "top": 571.2396240234375,
+            "width": 663.4166870117188,
+            "x": 44.625,
+            "y": 571.2396240234375
+          },
+          "tag": "DIV"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/blog/qa100y_nebeski_mir/",
+      "width": 768,
+      "backing": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgba(255, 255, 255, 0.78)",
+          "cls": "mb-4 blog-post-entry blog-post-card",
+          "color": "rgb(114, 120, 138)",
+          "fill": "rgb(114, 120, 138)",
+          "font": "16px / 24px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 1091.406280517578,
+            "height": 667.8541870117188,
+            "left": 404.3333435058594,
+            "right": 1020.3333435058594,
+            "top": 423.5520935058594,
+            "width": 616,
+            "x": 404.3333435058594,
+            "y": 423.5520935058594
+          },
+          "tag": "DIV"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(71, 85, 105)",
+          "fill": "rgb(71, 85, 105)",
+          "font": "16px / 24px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 599.09375,
+            "height": 48,
+            "left": 431,
+            "right": 993.6666870117188,
+            "top": 551.09375,
+            "width": 562.6666870117188,
+            "x": 431,
+            "y": 551.09375
+          },
+          "tag": "P"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(71, 85, 105)",
+          "fill": "rgb(71, 85, 105)",
+          "font": "16px / 24px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 639.09375,
+            "height": 24,
+            "left": 431,
+            "right": 993.6666870117188,
+            "top": 615.09375,
+            "width": 562.6666870117188,
+            "x": 431,
+            "y": 615.09375
+          },
+          "tag": "P"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "calendar-title calendar-title--nav",
+          "color": "rgb(143, 150, 170)",
+          "fill": "rgb(143, 150, 170)",
+          "font": "700 13px / 15.34px Garamond, Georgia, serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 470.21875,
+            "height": 30,
+            "left": 125,
+            "right": 351.6666717529297,
+            "top": 440.21875,
+            "width": 226.6666717529297,
+            "x": 125,
+            "y": 440.21875
+          },
+          "tag": "DIV"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "calendar-weekdays",
+          "color": "rgba(51, 65, 85, 0.7)",
+          "fill": "rgba(51, 65, 85, 0.7)",
+          "font": "600 11px / 16.5px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 498.71875,
+            "height": 16.5,
+            "left": 125,
+            "right": 351.6666717529297,
+            "top": 482.21875,
+            "width": 226.6666717529297,
+            "x": 125,
+            "y": 482.21875
+          },
+          "tag": "DIV"
+        },
+        {
+          "bg": "rgba(255, 255, 255, 0.36)",
+          "cls": "archive-title",
+          "color": "rgb(143, 150, 170)",
+          "fill": "rgb(143, 150, 170)",
+          "font": "13px / 15.34px Garamond, Georgia, serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 776.0521240234375,
+            "height": 42,
+            "left": 109,
+            "right": 367.6666870117187,
+            "top": 734.0521240234375,
+            "width": 258.66668701171875,
+            "x": 109,
+            "y": 734.0521240234375
+          },
+          "tag": "DIV"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/blog/qa100y_nebeski_mir/",
+      "width": 1440,
+      "backing": "rgb(241, 245, 251)"
+    },
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgba(255, 255, 255, 0.78)",
+          "cls": "mb-4 blog-post-entry blog-post-card",
+          "color": "rgb(114, 120, 138)",
+          "fill": "rgb(114, 120, 138)",
+          "font": "16px / 24px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 2530.9271240234375,
+            "height": 1685.8958740234375,
+            "left": 48,
+            "right": 256.6666717529297,
+            "top": 845.03125,
+            "width": 208.6666717529297,
+            "x": 48,
+            "y": 845.03125
+          },
+          "tag": "DIV"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(71, 85, 105)",
+          "fill": "rgb(71, 85, 105)",
+          "font": "16px / 24px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 1260.135498046875,
+            "height": 120,
+            "left": 74.66667175292969,
+            "right": 230.00001525878903,
+            "top": 1140.135498046875,
+            "width": 155.33334350585938,
+            "x": 74.66667175292969,
+            "y": 1140.135498046875
+          },
+          "tag": "P"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(71, 85, 105)",
+          "fill": "rgb(71, 85, 105)",
+          "font": "16px / 24px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 1324.135498046875,
+            "height": 48,
+            "left": 74.66667175292969,
+            "right": 230.00001525878903,
+            "top": 1276.135498046875,
+            "width": 155.33334350585938,
+            "x": 74.66667175292969,
+            "y": 1276.135498046875
+          },
+          "tag": "P"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "calendar-title calendar-title--nav",
+          "color": "rgb(143, 150, 170)",
+          "fill": "rgb(143, 150, 170)",
+          "font": "700 13px / 15.34px Garamond, Georgia, serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 338.8020935058594,
+            "height": 44,
+            "left": 52.66666793823242,
+            "right": 252.0000114440918,
+            "top": 294.8020935058594,
+            "width": 199.33334350585935,
+            "x": 52.66666793823242,
+            "y": 294.8020935058594
+          },
+          "tag": "DIV"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "calendar-weekdays",
+          "color": "rgb(51, 65, 85)",
+          "fill": "rgb(51, 65, 85)",
+          "font": "600 11px / 16.5px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 423.6979370117187,
+            "height": 16.5,
+            "left": 54.66666793823242,
+            "right": 398.6666679382324,
+            "top": 407.1979370117187,
+            "width": 344,
+            "x": 54.66666793823242,
+            "y": 407.1979370117187
+          },
+          "tag": "DIV"
+        },
+        {
+          "bg": "rgba(255, 255, 255, 0.36)",
+          "cls": "archive-title",
+          "color": "rgb(71, 85, 105)",
+          "fill": "rgb(71, 85, 105)",
+          "font": "13px / 15.34px Garamond, Georgia, serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 728.3646240234375,
+            "height": 42,
+            "left": 36.66666793823242,
+            "right": 268.0000114440918,
+            "top": 686.3646240234375,
+            "width": 231.33334350585935,
+            "x": 36.66666793823242,
+            "y": 686.3646240234375
+          },
+          "tag": "DIV"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/post/45/a-longer-editorial-story-for-mobile-and-desktop-verification/",
+      "width": 320,
+      "backing": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgba(255, 255, 255, 0.78)",
+          "cls": "mb-4 blog-post-entry blog-post-card",
+          "color": "rgb(114, 120, 138)",
+          "fill": "rgb(114, 120, 138)",
+          "font": "16px / 24px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 2062.4896240234375,
+            "height": 1217.2708740234375,
+            "left": 48,
+            "right": 326.66668701171875,
+            "top": 845.21875,
+            "width": 278.66668701171875,
+            "x": 48,
+            "y": 845.21875
+          },
+          "tag": "DIV"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(71, 85, 105)",
+          "fill": "rgb(71, 85, 105)",
+          "font": "16px / 24px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 1179.697998046875,
+            "height": 96,
+            "left": 74.66667175292969,
+            "right": 300.00001525878906,
+            "top": 1083.697998046875,
+            "width": 225.33334350585935,
+            "x": 74.66667175292969,
+            "y": 1083.697998046875
+          },
+          "tag": "P"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(71, 85, 105)",
+          "fill": "rgb(71, 85, 105)",
+          "font": "16px / 24px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 1243.697998046875,
+            "height": 48,
+            "left": 74.66667175292969,
+            "right": 300.00001525878906,
+            "top": 1195.697998046875,
+            "width": 225.33334350585935,
+            "x": 74.66667175292969,
+            "y": 1195.697998046875
+          },
+          "tag": "P"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "calendar-title calendar-title--nav",
+          "color": "rgb(143, 150, 170)",
+          "fill": "rgb(143, 150, 170)",
+          "font": "700 13px / 15.34px Garamond, Georgia, serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 338.9895935058594,
+            "height": 44,
+            "left": 52.66666793823242,
+            "right": 322.0000114440918,
+            "top": 294.9895935058594,
+            "width": 269.3333435058594,
+            "x": 52.66666793823242,
+            "y": 294.9895935058594
+          },
+          "tag": "DIV"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "calendar-weekdays",
+          "color": "rgb(51, 65, 85)",
+          "fill": "rgb(51, 65, 85)",
+          "font": "600 11px / 16.5px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 423.8854370117187,
+            "height": 16.5,
+            "left": 54.66666793823242,
+            "right": 398.6666679382324,
+            "top": 407.3854370117187,
+            "width": 344,
+            "x": 54.66666793823242,
+            "y": 407.3854370117187
+          },
+          "tag": "DIV"
+        },
+        {
+          "bg": "rgba(255, 255, 255, 0.36)",
+          "cls": "archive-title",
+          "color": "rgb(71, 85, 105)",
+          "fill": "rgb(71, 85, 105)",
+          "font": "13px / 15.34px Garamond, Georgia, serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 728.5521240234375,
+            "height": 42,
+            "left": 36.66666793823242,
+            "right": 338.0000114440918,
+            "top": 686.5521240234375,
+            "width": 301.3333435058594,
+            "x": 36.66666793823242,
+            "y": 686.5521240234375
+          },
+          "tag": "DIV"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/post/45/a-longer-editorial-story-for-mobile-and-desktop-verification/",
+      "width": 390,
+      "backing": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgba(255, 255, 255, 0.78)",
+          "cls": "mb-4 blog-post-entry blog-post-card",
+          "color": "rgb(114, 120, 138)",
+          "fill": "rgb(114, 120, 138)",
+          "font": "16px / 24px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 1416.4271240234375,
+            "height": 686.5208740234375,
+            "left": 55.95833587646485,
+            "right": 696.7083358764648,
+            "top": 729.90625,
+            "width": 640.75,
+            "x": 55.95833587646485,
+            "y": 729.90625
+          },
+          "tag": "DIV"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(71, 85, 105)",
+          "fill": "rgb(71, 85, 105)",
+          "font": "16px / 24px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 905.4479370117188,
+            "height": 48,
+            "left": 82.625,
+            "right": 670.0416870117188,
+            "top": 857.4479370117188,
+            "width": 587.4166870117188,
+            "x": 82.625,
+            "y": 857.4479370117188
+          },
+          "tag": "P"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(71, 85, 105)",
+          "fill": "rgb(71, 85, 105)",
+          "font": "16px / 24px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 945.4479370117188,
+            "height": 24,
+            "left": 82.625,
+            "right": 670.0416870117188,
+            "top": 921.4479370117188,
+            "width": 587.4166870117188,
+            "x": 82.625,
+            "y": 921.4479370117188
+          },
+          "tag": "P"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "calendar-title calendar-title--nav",
+          "color": "rgb(143, 150, 170)",
+          "fill": "rgb(143, 150, 170)",
+          "font": "700 13px / 15.34px Garamond, Georgia, serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 297.40625,
+            "height": 44,
+            "left": 60.625,
+            "right": 692.0416870117188,
+            "top": 253.40625,
+            "width": 631.4166870117188,
+            "x": 60.625,
+            "y": 253.40625
+          },
+          "tag": "DIV"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "calendar-weekdays",
+          "color": "rgba(51, 65, 85, 0.7)",
+          "fill": "rgba(51, 65, 85, 0.7)",
+          "font": "600 11px / 16.5px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 325.90625,
+            "height": 16.5,
+            "left": 60.625,
+            "right": 692.0416870117188,
+            "top": 309.40625,
+            "width": 631.4166870117188,
+            "x": 60.625,
+            "y": 309.40625
+          },
+          "tag": "DIV"
+        },
+        {
+          "bg": "rgba(255, 255, 255, 0.36)",
+          "cls": "archive-title",
+          "color": "rgb(143, 150, 170)",
+          "fill": "rgb(143, 150, 170)",
+          "font": "13px / 15.34px Garamond, Georgia, serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 613.2396240234375,
+            "height": 42,
+            "left": 44.625,
+            "right": 708.0416870117188,
+            "top": 571.2396240234375,
+            "width": 663.4166870117188,
+            "x": 44.625,
+            "y": 571.2396240234375
+          },
+          "tag": "DIV"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/post/45/a-longer-editorial-story-for-mobile-and-desktop-verification/",
+      "width": 768,
+      "backing": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgba(255, 255, 255, 0.78)",
+          "cls": "mb-4 blog-post-entry blog-post-card",
+          "color": "rgb(114, 120, 138)",
+          "fill": "rgb(114, 120, 138)",
+          "font": "16px / 24px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 1091.406280517578,
+            "height": 667.8541870117188,
+            "left": 404.3333435058594,
+            "right": 1020.3333435058594,
+            "top": 423.5520935058594,
+            "width": 616,
+            "x": 404.3333435058594,
+            "y": 423.5520935058594
+          },
+          "tag": "DIV"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(71, 85, 105)",
+          "fill": "rgb(71, 85, 105)",
+          "font": "16px / 24px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 599.09375,
+            "height": 48,
+            "left": 431,
+            "right": 993.6666870117188,
+            "top": 551.09375,
+            "width": 562.6666870117188,
+            "x": 431,
+            "y": 551.09375
+          },
+          "tag": "P"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(71, 85, 105)",
+          "fill": "rgb(71, 85, 105)",
+          "font": "16px / 24px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 639.09375,
+            "height": 24,
+            "left": 431,
+            "right": 993.6666870117188,
+            "top": 615.09375,
+            "width": 562.6666870117188,
+            "x": 431,
+            "y": 615.09375
+          },
+          "tag": "P"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "calendar-title calendar-title--nav",
+          "color": "rgb(143, 150, 170)",
+          "fill": "rgb(143, 150, 170)",
+          "font": "700 13px / 15.34px Garamond, Georgia, serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 470.21875,
+            "height": 30,
+            "left": 125,
+            "right": 351.6666717529297,
+            "top": 440.21875,
+            "width": 226.6666717529297,
+            "x": 125,
+            "y": 440.21875
+          },
+          "tag": "DIV"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "calendar-weekdays",
+          "color": "rgba(51, 65, 85, 0.7)",
+          "fill": "rgba(51, 65, 85, 0.7)",
+          "font": "600 11px / 16.5px Arial, Helvetica, sans-serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 498.71875,
+            "height": 16.5,
+            "left": 125,
+            "right": 351.6666717529297,
+            "top": 482.21875,
+            "width": 226.6666717529297,
+            "x": 125,
+            "y": 482.21875
+          },
+          "tag": "DIV"
+        },
+        {
+          "bg": "rgba(255, 255, 255, 0.36)",
+          "cls": "archive-title",
+          "color": "rgb(143, 150, 170)",
+          "fill": "rgb(143, 150, 170)",
+          "font": "13px / 15.34px Garamond, Georgia, serif",
+          "opacity": "1",
+          "rect": {
+            "bottom": 776.0521240234375,
+            "height": 42,
+            "left": 109,
+            "right": 367.6666870117187,
+            "top": 734.0521240234375,
+            "width": 258.66668701171875,
+            "x": 109,
+            "y": 734.0521240234375
+          },
+          "tag": "DIV"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/post/45/a-longer-editorial-story-for-mobile-and-desktop-verification/",
+      "width": 1440,
+      "backing": "rgb(241, 245, 251)"
+    }
+  ],
+  "safe": {
+    "url": "http://127.0.0.1:8017/post/45/a-longer-editorial-story-for-mobile-and-desktop-verification/"
+  },
+  "contrast": 6.926029774202729
+}

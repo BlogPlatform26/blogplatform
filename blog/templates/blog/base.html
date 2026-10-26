@@ -4030,9 +4030,10 @@ html body .blog-box-title {
 }
 {% endif %}
 {% if blog.profile.template == 'nebeski_mir' and blog_preferences.active_design_customization.body_text_color == '#72788a' %}
-/* Phase 101j: retain phone ink through tablet widths on the factory palette. */
-@media (max-width: 991.98px) {
-    .blog-rich-content { color: #475569 !important; }
+/* Factory body ink stays readable on every viewport. */
+.blog-rich-content { color: #475569 !important; }
+@media (min-width: 992px) {
+    .blog-rich-content { background: #f1f5fb; }
 }
 {% endif %}
 {% if blog.profile.template == 'nebeski_mir' and blog_preferences.active_design_customization.blog_title_color == '#81879a' %}
