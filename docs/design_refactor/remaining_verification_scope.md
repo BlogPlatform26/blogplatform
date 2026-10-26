@@ -1,4 +1,6 @@
-# Remaining acceptance scope after Phase103j
+# Remaining acceptance scope after Phase103k
+
+Phase103k closes guest Lavande profile and factory desktop archive caption photo surfaces with #f5e6fa. Eight paired blog/detail widths retain sampled geometry/font/ink/local excess;doc0. Actual profile contrast8.257, secondary opacity0.8 composed4.987, desktop caption6.782. Safe109, inspected phone/desktop viewport captures,224 tests76.836s/check/migration green. See phase103k_lavande_profile_archive.md. Authenticated actions/custom content/palettes and other ledger work remain open.
 
 Phase103j closes factory Jedro header and section-caption photo surfaces with independently guarded #2d1f18 backgrounds. Actual fills retained; calculated contrasts14.984/14.765, eight paired blog/detail widths retain sampled geometry/font/ink/local overflow, document excess0. Safe174, phone/desktop viewport screenshots inspected,224 tests79.639s/check/migration green. See phase103j_jedro_heading_surfaces.md. Custom palettes/authenticated actions/optional content and remaining photo zones/workflows remain open.
 
