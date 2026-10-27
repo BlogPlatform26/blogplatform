@@ -1,4 +1,6 @@
-# Remaining acceptance scope after Phase103q
+# Remaining acceptance scope after Phase103r
+
+Phase103r resolves admin-template precedence for public reset done/confirm/complete using unique blog/ paths. Twelve direct-GET result/invalid-token layouts320/390/768/1440 have doc/local0; retry and login links verified.228 tests63.212s/check/migration green. See phase103r_reset_result_pages.md. This does not prove successful mail/password workflow, valid-token or expired-token states. Retry/login37.333px target heights remain follow-up; U03 stays open.
 
 Phase103q repairs U02 containing width, registration help/touch sizing and public password-reset template collision with Django admin. Twelve four-width final form states have doc0; registration768 fields54.677 to194.031px, help8 to14px, registration/reset controls48px. Wrong-login message and native required/email validation exercised; no account creation or mail. Sixteen sampled designed blog/detail controls identical to103p.226 tests64.337s/check/migration green. See phase103q_auth_forms.md. U02 server registration errors, full keyboard/contrast and successful workflows remain open; U03 reset result/token pages are not accepted by this change.
 

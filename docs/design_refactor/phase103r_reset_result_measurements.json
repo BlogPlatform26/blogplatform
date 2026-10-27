@@ -1,0 +1,1016 @@
+{
+  "phase": "103r",
+  "before": [
+    {
+      "doc": 0,
+      "links": [],
+      "text": "Resetiranje lozinke poslano\n\nPoslali smo vam e-mail s uputama za postavljanje lozinke, ako postoji ra\u010dun s e-mail adresom koju ste unijeli. Uskoro biste je trebali primiti.\n\nAko ne primite e-mail, provjerite je li e-mail adresa odgovara adresi s kojom ste se registrirali i provjeriti mapu ne\u017eeljene po\u0161te.\n\n\n",
+      "title": "Resetiranje lozinke poslano | Administrator Django web-stranice",
+      "url": "http://127.0.0.1:8017/password-reset/done/",
+      "width": 320
+    },
+    {
+      "doc": 0,
+      "links": [],
+      "text": "Resetiranje lozinke poslano\n\nPoslali smo vam e-mail s uputama za postavljanje lozinke, ako postoji ra\u010dun s e-mail adresom koju ste unijeli. Uskoro biste je trebali primiti.\n\nAko ne primite e-mail, provjerite je li e-mail adresa odgovara adresi s kojom ste se registrirali i provjeriti mapu ne\u017eeljene po\u0161te.\n\n\n",
+      "title": "Resetiranje lozinke poslano | Administrator Django web-stranice",
+      "url": "http://127.0.0.1:8017/password-reset/done/",
+      "width": 390
+    },
+    {
+      "doc": 0,
+      "links": [],
+      "text": "Resetiranje lozinke poslano\n\nPoslali smo vam e-mail s uputama za postavljanje lozinke, ako postoji ra\u010dun s e-mail adresom koju ste unijeli. Uskoro biste je trebali primiti.\n\nAko ne primite e-mail, provjerite je li e-mail adresa odgovara adresi s kojom ste se registrirali i provjeriti mapu ne\u017eeljene po\u0161te.\n\n\n",
+      "title": "Resetiranje lozinke poslano | Administrator Django web-stranice",
+      "url": "http://127.0.0.1:8017/password-reset/done/",
+      "width": 768
+    },
+    {
+      "doc": 0,
+      "links": [],
+      "text": "Resetiranje lozinke poslano\n\nPoslali smo vam e-mail s uputama za postavljanje lozinke, ako postoji ra\u010dun s e-mail adresom koju ste unijeli. Uskoro biste je trebali primiti.\n\nAko ne primite e-mail, provjerite je li e-mail adresa odgovara adresi s kojom ste se registrirali i provjeriti mapu ne\u017eeljene po\u0161te.\n\n\n",
+      "title": "Resetiranje lozinke poslano | Administrator Django web-stranice",
+      "url": "http://127.0.0.1:8017/password-reset/done/",
+      "width": 1440
+    },
+    {
+      "doc": 0,
+      "links": [],
+      "text": "Resetiranje lozinke neuspje\u0161no\n\nPoveznica za resetiranje lozinke je neispravna, jer se je vjerojatno ve\u0107 koristila. Zatra\u017eite novo resetiranje lozinke.\n\n\n",
+      "title": "Resetiranje lozinke neuspje\u0161no | Administrator Django web-stranice",
+      "url": "http://127.0.0.1:8017/reset/invalid/invalid/",
+      "width": 320
+    },
+    {
+      "doc": 0,
+      "links": [],
+      "text": "Resetiranje lozinke neuspje\u0161no\n\nPoveznica za resetiranje lozinke je neispravna, jer se je vjerojatno ve\u0107 koristila. Zatra\u017eite novo resetiranje lozinke.\n\n\n",
+      "title": "Resetiranje lozinke neuspje\u0161no | Administrator Django web-stranice",
+      "url": "http://127.0.0.1:8017/reset/invalid/invalid/",
+      "width": 390
+    },
+    {
+      "doc": 0,
+      "links": [],
+      "text": "Resetiranje lozinke neuspje\u0161no\n\nPoveznica za resetiranje lozinke je neispravna, jer se je vjerojatno ve\u0107 koristila. Zatra\u017eite novo resetiranje lozinke.\n\n\n",
+      "title": "Resetiranje lozinke neuspje\u0161no | Administrator Django web-stranice",
+      "url": "http://127.0.0.1:8017/reset/invalid/invalid/",
+      "width": 768
+    },
+    {
+      "doc": 0,
+      "links": [],
+      "text": "Resetiranje lozinke neuspje\u0161no\n\nPoveznica za resetiranje lozinke je neispravna, jer se je vjerojatno ve\u0107 koristila. Zatra\u017eite novo resetiranje lozinke.\n\n\n",
+      "title": "Resetiranje lozinke neuspje\u0161no | Administrator Django web-stranice",
+      "url": "http://127.0.0.1:8017/reset/invalid/invalid/",
+      "width": 1440
+    },
+    {
+      "doc": 0,
+      "links": [
+        {
+          "href": "/login/",
+          "rect": {
+            "bottom": 236.1979179382324,
+            "height": 18.666667938232425,
+            "left": 15,
+            "right": 80.875,
+            "top": 217.53125,
+            "width": 65.875,
+            "x": 15,
+            "y": 217.53125
+          },
+          "text": "Prijavite se"
+        }
+      ],
+      "text": "Resetiranje lozinke zavr\u0161eno\n\nVa\u0161a je lozinka postavljena. Sada se mo\u017eete prijaviti.\n\nPrijavite se\n\n\n",
+      "title": "Resetiranje lozinke zavr\u0161eno | Administrator Django web-stranice",
+      "url": "http://127.0.0.1:8017/reset/done/",
+      "width": 320
+    },
+    {
+      "doc": 0,
+      "links": [
+        {
+          "href": "/login/",
+          "rect": {
+            "bottom": 216.5937614440918,
+            "height": 18.666667938232425,
+            "left": 15,
+            "right": 80.875,
+            "top": 197.92709350585935,
+            "width": 65.875,
+            "x": 15,
+            "y": 197.92709350585935
+          },
+          "text": "Prijavite se"
+        }
+      ],
+      "text": "Resetiranje lozinke zavr\u0161eno\n\nVa\u0161a je lozinka postavljena. Sada se mo\u017eete prijaviti.\n\nPrijavite se\n\n\n",
+      "title": "Resetiranje lozinke zavr\u0161eno | Administrator Django web-stranice",
+      "url": "http://127.0.0.1:8017/reset/done/",
+      "width": 390
+    },
+    {
+      "doc": 0,
+      "links": [
+        {
+          "href": "/login/",
+          "rect": {
+            "bottom": 216.5937614440918,
+            "height": 18.666667938232425,
+            "left": 20,
+            "right": 85.875,
+            "top": 197.92709350585935,
+            "width": 65.875,
+            "x": 20,
+            "y": 197.92709350585935
+          },
+          "text": "Prijavite se"
+        }
+      ],
+      "text": "Resetiranje lozinke zavr\u0161eno\n\nVa\u0161a je lozinka postavljena. Sada se mo\u017eete prijaviti.\n\nPrijavite se\n\n\n",
+      "title": "Resetiranje lozinke zavr\u0161eno | Administrator Django web-stranice",
+      "url": "http://127.0.0.1:8017/reset/done/",
+      "width": 768
+    },
+    {
+      "doc": 0,
+      "links": [
+        {
+          "href": "/login/",
+          "rect": {
+            "bottom": 206.8020896911621,
+            "height": 18.666667938232425,
+            "left": 40,
+            "right": 105.875,
+            "top": 188.1354217529297,
+            "width": 65.875,
+            "x": 40,
+            "y": 188.1354217529297
+          },
+          "text": "Prijavite se"
+        }
+      ],
+      "text": "Resetiranje lozinke zavr\u0161eno\n\nVa\u0161a je lozinka postavljena. Sada se mo\u017eete prijaviti.\n\nPrijavite se\n\n\n",
+      "title": "Resetiranje lozinke zavr\u0161eno | Administrator Django web-stranice",
+      "url": "http://127.0.0.1:8017/reset/done/",
+      "width": 1440
+    }
+  ],
+  "after": [
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgb(255, 255, 255)",
+          "excess": 0,
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "rect": {
+            "bottom": 262.78125,
+            "height": 148.59375,
+            "left": 24,
+            "right": 296,
+            "top": 114.1875,
+            "width": 272,
+            "x": 24,
+            "y": 114.1875
+          },
+          "text": "Provjeri email\n                \n                    Ako ra\u010dun postoji za tu email adresu, poslan je link za reset lozinke."
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "excess": 0,
+          "fill": "rgb(33, 37, 41)",
+          "font": "500 22.72px / 27.264px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "rect": {
+            "bottom": 158.1145896911621,
+            "height": 27.260417938232425,
+            "left": 40.66666793823242,
+            "right": 279.3333396911621,
+            "top": 130.8541717529297,
+            "width": 238.6666717529297,
+            "x": 40.66666793823242,
+            "y": 130.8541717529297
+          },
+          "text": "Provjeri email"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "excess": 0,
+          "fill": "rgba(33, 37, 41, 0.75)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "rect": {
+            "bottom": 246.11459350585935,
+            "height": 72,
+            "left": 40.66666793823242,
+            "right": 279.3333396911621,
+            "top": 174.11459350585938,
+            "width": 238.6666717529297,
+            "x": 40.66666793823242,
+            "y": 174.11459350585938
+          },
+          "text": "Ako ra\u010dun postoji za tu email adresu, poslan je link za reset lozinke."
+        }
+      ],
+      "title": "Email poslan",
+      "url": "http://127.0.0.1:8017/password-reset/done/",
+      "width": 320
+    },
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgb(255, 255, 255)",
+          "excess": 0,
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "rect": {
+            "bottom": 239.28125,
+            "height": 125.09375,
+            "left": 24,
+            "right": 366,
+            "top": 114.1875,
+            "width": 342,
+            "x": 24,
+            "y": 114.1875
+          },
+          "text": "Provjeri email\n                \n                    Ako ra\u010dun postoji za tu email adresu, poslan je link za reset lozinke."
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "excess": 0,
+          "fill": "rgb(33, 37, 41)",
+          "font": "500 23.14px / 27.768px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "rect": {
+            "bottom": 158.6145896911621,
+            "height": 27.760417938232425,
+            "left": 40.66666793823242,
+            "right": 349.3333549499512,
+            "top": 130.8541717529297,
+            "width": 308.66668701171875,
+            "x": 40.66666793823242,
+            "y": 130.8541717529297
+          },
+          "text": "Provjeri email"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "excess": 0,
+          "fill": "rgba(33, 37, 41, 0.75)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "rect": {
+            "bottom": 222.61459350585935,
+            "height": 48,
+            "left": 40.66666793823242,
+            "right": 349.3333549499512,
+            "top": 174.61459350585938,
+            "width": 308.66668701171875,
+            "x": 40.66666793823242,
+            "y": 174.61459350585938
+          },
+          "text": "Ako ra\u010dun postoji za tu email adresu, poslan je link za reset lozinke."
+        }
+      ],
+      "title": "Email poslan",
+      "url": "http://127.0.0.1:8017/password-reset/done/",
+      "width": 390
+    },
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgb(255, 255, 255)",
+          "excess": 0,
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "rect": {
+            "bottom": 222,
+            "height": 151.8125,
+            "left": 183.9791717529297,
+            "right": 464.0208587646485,
+            "top": 70.1875,
+            "width": 280.04168701171875,
+            "x": 183.9791717529297,
+            "y": 70.1875
+          },
+          "text": "Provjeri email\n                \n                    Ako ra\u010dun postoji za tu email adresu, poslan je link za reset lozinke."
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "excess": 0,
+          "fill": "rgb(33, 37, 41)",
+          "font": "500 25.408px / 30.4896px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "rect": {
+            "bottom": 117.33333969116212,
+            "height": 30.479167938232425,
+            "left": 200.64584350585935,
+            "right": 447.3541870117187,
+            "top": 86.85417175292969,
+            "width": 246.70834350585935,
+            "x": 200.64584350585935,
+            "y": 86.85417175292969
+          },
+          "text": "Provjeri email"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "excess": 0,
+          "fill": "rgba(33, 37, 41, 0.75)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "rect": {
+            "bottom": 205.33334350585935,
+            "height": 72,
+            "left": 200.64584350585935,
+            "right": 447.3541870117187,
+            "top": 133.33334350585938,
+            "width": 246.70834350585935,
+            "x": 200.64584350585935,
+            "y": 133.33334350585938
+          },
+          "text": "Ako ra\u010dun postoji za tu email adresu, poslan je link za reset lozinke."
+        }
+      ],
+      "title": "Email poslan",
+      "url": "http://127.0.0.1:8017/password-reset/done/",
+      "width": 768
+    },
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgb(255, 255, 255)",
+          "excess": 0,
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "rect": {
+            "bottom": 177.11458587646484,
+            "height": 106.92708587646484,
+            "left": 360,
+            "right": 960,
+            "top": 70.1875,
+            "width": 600,
+            "x": 360,
+            "y": 70.1875
+          },
+          "text": "Provjeri email\n                \n                    Ako ra\u010dun postoji za tu email adresu, poslan je link za reset lozinke."
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "excess": 0,
+          "fill": "rgb(33, 37, 41)",
+          "font": "500 28px / 33.6px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "rect": {
+            "bottom": 120.44792175292967,
+            "height": 33.59375,
+            "left": 376.6666870117187,
+            "right": 943.3333740234376,
+            "top": 86.85417175292969,
+            "width": 566.6666870117188,
+            "x": 376.6666870117187,
+            "y": 86.85417175292969
+          },
+          "text": "Provjeri email"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "excess": 0,
+          "fill": "rgba(33, 37, 41, 0.75)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "rect": {
+            "bottom": 160.4479217529297,
+            "height": 24,
+            "left": 376.6666870117187,
+            "right": 943.3333740234376,
+            "top": 136.4479217529297,
+            "width": 566.6666870117188,
+            "x": 376.6666870117187,
+            "y": 136.4479217529297
+          },
+          "text": "Ako ra\u010dun postoji za tu email adresu, poslan je link za reset lozinke."
+        }
+      ],
+      "title": "Email poslan",
+      "url": "http://127.0.0.1:8017/password-reset/done/",
+      "width": 1440
+    },
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgb(255, 255, 255)",
+          "excess": 0,
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "rect": {
+            "bottom": 292.1145935058594,
+            "height": 177.92709350585938,
+            "left": 24,
+            "right": 296,
+            "top": 114.1875,
+            "width": 272,
+            "x": 24,
+            "y": 114.1875
+          },
+          "text": "Link nije valjan\n                    \n                        Link za reset lozinke nije valjan ili je istekao. Zatra\u017ei novi link.\n                    \n                    \n                        \n                            Zatra\u017ei novi link"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "excess": 0,
+          "fill": "rgb(33, 37, 41)",
+          "font": "500 22.72px / 27.264px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "rect": {
+            "bottom": 158.1145896911621,
+            "height": 27.260417938232425,
+            "left": 40.66666793823242,
+            "right": 279.3333396911621,
+            "top": 130.8541717529297,
+            "width": 238.6666717529297,
+            "x": 40.66666793823242,
+            "y": 130.8541717529297
+          },
+          "text": "Link nije valjan"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "excess": 0,
+          "fill": "rgba(33, 37, 41, 0.75)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "rect": {
+            "bottom": 222.11459350585935,
+            "height": 48,
+            "left": 40.66666793823242,
+            "right": 279.3333396911621,
+            "top": 174.11459350585938,
+            "width": 238.6666717529297,
+            "x": 40.66666793823242,
+            "y": 174.11459350585938
+          },
+          "text": "Link za reset lozinke nije valjan ili je istekao. Zatra\u017ei novi link."
+        },
+        {
+          "bg": "rgb(13, 110, 253)",
+          "excess": 0,
+          "fill": "rgb(255, 255, 255)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "rect": {
+            "bottom": 275.4479293823242,
+            "height": 37.33333587646485,
+            "left": 91.83333587646484,
+            "right": 228.16667938232425,
+            "top": 238.11459350585935,
+            "width": 136.33334350585938,
+            "x": 91.83333587646484,
+            "y": 238.11459350585935
+          },
+          "text": "Zatra\u017ei novi link"
+        }
+      ],
+      "title": "Nova lozinka",
+      "url": "http://127.0.0.1:8017/reset/invalid/invalid/",
+      "width": 320
+    },
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgb(255, 255, 255)",
+          "excess": 0,
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "rect": {
+            "bottom": 292.6145935058594,
+            "height": 178.42709350585938,
+            "left": 24,
+            "right": 366,
+            "top": 114.1875,
+            "width": 342,
+            "x": 24,
+            "y": 114.1875
+          },
+          "text": "Link nije valjan\n                    \n                        Link za reset lozinke nije valjan ili je istekao. Zatra\u017ei novi link.\n                    \n                    \n                        \n                            Zatra\u017ei novi link"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "excess": 0,
+          "fill": "rgb(33, 37, 41)",
+          "font": "500 23.14px / 27.768px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "rect": {
+            "bottom": 158.6145896911621,
+            "height": 27.760417938232425,
+            "left": 40.66666793823242,
+            "right": 349.3333549499512,
+            "top": 130.8541717529297,
+            "width": 308.66668701171875,
+            "x": 40.66666793823242,
+            "y": 130.8541717529297
+          },
+          "text": "Link nije valjan"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "excess": 0,
+          "fill": "rgba(33, 37, 41, 0.75)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "rect": {
+            "bottom": 222.61459350585935,
+            "height": 48,
+            "left": 40.66666793823242,
+            "right": 349.3333549499512,
+            "top": 174.61459350585938,
+            "width": 308.66668701171875,
+            "x": 40.66666793823242,
+            "y": 174.61459350585938
+          },
+          "text": "Link za reset lozinke nije valjan ili je istekao. Zatra\u017ei novi link."
+        },
+        {
+          "bg": "rgb(13, 110, 253)",
+          "excess": 0,
+          "fill": "rgb(255, 255, 255)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "rect": {
+            "bottom": 275.9479293823242,
+            "height": 37.33333587646485,
+            "left": 126.83333587646484,
+            "right": 263.1666793823242,
+            "top": 238.61459350585935,
+            "width": 136.33334350585938,
+            "x": 126.83333587646484,
+            "y": 238.61459350585935
+          },
+          "text": "Zatra\u017ei novi link"
+        }
+      ],
+      "title": "Nova lozinka",
+      "url": "http://127.0.0.1:8017/reset/invalid/invalid/",
+      "width": 390
+    },
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgb(255, 255, 255)",
+          "excess": 0,
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "rect": {
+            "bottom": 251.33334350585935,
+            "height": 181.14584350585935,
+            "left": 183.9791717529297,
+            "right": 464.0208587646485,
+            "top": 70.1875,
+            "width": 280.04168701171875,
+            "x": 183.9791717529297,
+            "y": 70.1875
+          },
+          "text": "Link nije valjan\n                    \n                        Link za reset lozinke nije valjan ili je istekao. Zatra\u017ei novi link.\n                    \n                    \n                        \n                            Zatra\u017ei novi link"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "excess": 0,
+          "fill": "rgb(33, 37, 41)",
+          "font": "500 25.408px / 30.4896px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "rect": {
+            "bottom": 117.33333969116212,
+            "height": 30.479167938232425,
+            "left": 200.64584350585935,
+            "right": 447.3541870117187,
+            "top": 86.85417175292969,
+            "width": 246.70834350585935,
+            "x": 200.64584350585935,
+            "y": 86.85417175292969
+          },
+          "text": "Link nije valjan"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "excess": 0,
+          "fill": "rgba(33, 37, 41, 0.75)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "rect": {
+            "bottom": 181.33334350585935,
+            "height": 48,
+            "left": 200.64584350585935,
+            "right": 447.3541870117187,
+            "top": 133.33334350585938,
+            "width": 246.70834350585935,
+            "x": 200.64584350585935,
+            "y": 133.33334350585938
+          },
+          "text": "Link za reset lozinke nije valjan ili je istekao. Zatra\u017ei novi link."
+        },
+        {
+          "bg": "rgb(13, 110, 253)",
+          "excess": 0,
+          "fill": "rgb(255, 255, 255)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "rect": {
+            "bottom": 234.66667938232425,
+            "height": 37.33333587646485,
+            "left": 255.83334350585935,
+            "right": 392.1666870117187,
+            "top": 197.33334350585935,
+            "width": 136.33334350585938,
+            "x": 255.83334350585935,
+            "y": 197.33334350585935
+          },
+          "text": "Zatra\u017ei novi link"
+        }
+      ],
+      "title": "Nova lozinka",
+      "url": "http://127.0.0.1:8017/reset/invalid/invalid/",
+      "width": 768
+    },
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgb(255, 255, 255)",
+          "excess": 0,
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "rect": {
+            "bottom": 230.4479217529297,
+            "height": 160.2604217529297,
+            "left": 360,
+            "right": 960,
+            "top": 70.1875,
+            "width": 600,
+            "x": 360,
+            "y": 70.1875
+          },
+          "text": "Link nije valjan\n                    \n                        Link za reset lozinke nije valjan ili je istekao. Zatra\u017ei novi link.\n                    \n                    \n                        \n                            Zatra\u017ei novi link"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "excess": 0,
+          "fill": "rgb(33, 37, 41)",
+          "font": "500 28px / 33.6px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "rect": {
+            "bottom": 120.44792175292967,
+            "height": 33.59375,
+            "left": 376.6666870117187,
+            "right": 943.3333740234376,
+            "top": 86.85417175292969,
+            "width": 566.6666870117188,
+            "x": 376.6666870117187,
+            "y": 86.85417175292969
+          },
+          "text": "Link nije valjan"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "excess": 0,
+          "fill": "rgba(33, 37, 41, 0.75)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "rect": {
+            "bottom": 160.4479217529297,
+            "height": 24,
+            "left": 376.6666870117187,
+            "right": 943.3333740234376,
+            "top": 136.4479217529297,
+            "width": 566.6666870117188,
+            "x": 376.6666870117187,
+            "y": 136.4479217529297
+          },
+          "text": "Link za reset lozinke nije valjan ili je istekao. Zatra\u017ei novi link."
+        },
+        {
+          "bg": "rgb(13, 110, 253)",
+          "excess": 0,
+          "fill": "rgb(255, 255, 255)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "rect": {
+            "bottom": 213.78125762939453,
+            "height": 37.33333587646485,
+            "left": 591.8333740234375,
+            "right": 728.1667175292969,
+            "top": 176.4479217529297,
+            "width": 136.33334350585938,
+            "x": 591.8333740234375,
+            "y": 176.4479217529297
+          },
+          "text": "Zatra\u017ei novi link"
+        }
+      ],
+      "title": "Nova lozinka",
+      "url": "http://127.0.0.1:8017/reset/invalid/invalid/",
+      "width": 1440
+    },
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgb(255, 255, 255)",
+          "excess": 0,
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "rect": {
+            "bottom": 319.375,
+            "height": 205.1875,
+            "left": 24,
+            "right": 296,
+            "top": 114.1875,
+            "width": 272,
+            "x": 24,
+            "y": 114.1875
+          },
+          "text": "Lozinka je promijenjena\n                Sada se mo\u017ee\u0161 prijaviti novom lozinkom.\n                \n                    Prijavi se"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "excess": 0,
+          "fill": "rgb(33, 37, 41)",
+          "font": "500 22.72px / 27.264px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "rect": {
+            "bottom": 185.37500762939453,
+            "height": 54.52083587646485,
+            "left": 40.66666793823242,
+            "right": 279.3333396911621,
+            "top": 130.8541717529297,
+            "width": 238.6666717529297,
+            "x": 40.66666793823242,
+            "y": 130.8541717529297
+          },
+          "text": "Lozinka je promijenjena"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "excess": 0,
+          "fill": "rgba(33, 37, 41, 0.75)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "rect": {
+            "bottom": 249.375,
+            "height": 48,
+            "left": 40.66666793823242,
+            "right": 279.3333396911621,
+            "top": 201.375,
+            "width": 238.6666717529297,
+            "x": 40.66666793823242,
+            "y": 201.375
+          },
+          "text": "Sada se mo\u017ee\u0161 prijaviti novom lozinkom."
+        },
+        {
+          "bg": "rgb(13, 110, 253)",
+          "excess": 0,
+          "fill": "rgb(255, 255, 255)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "rect": {
+            "bottom": 302.70833587646484,
+            "height": 37.33333587646485,
+            "left": 116.58333587646484,
+            "right": 203.4166717529297,
+            "top": 265.375,
+            "width": 86.83333587646484,
+            "x": 116.58333587646484,
+            "y": 265.375
+          },
+          "text": "Prijavi se"
+        }
+      ],
+      "title": "Lozinka promijenjena",
+      "url": "http://127.0.0.1:8017/reset/done/",
+      "width": 320
+    },
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgb(255, 255, 255)",
+          "excess": 0,
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "rect": {
+            "bottom": 268.6145935058594,
+            "height": 154.42709350585938,
+            "left": 24,
+            "right": 366,
+            "top": 114.1875,
+            "width": 342,
+            "x": 24,
+            "y": 114.1875
+          },
+          "text": "Lozinka je promijenjena\n                Sada se mo\u017ee\u0161 prijaviti novom lozinkom.\n                \n                    Prijavi se"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "excess": 0,
+          "fill": "rgb(33, 37, 41)",
+          "font": "500 23.14px / 27.768px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "rect": {
+            "bottom": 158.6145896911621,
+            "height": 27.760417938232425,
+            "left": 40.66666793823242,
+            "right": 349.3333549499512,
+            "top": 130.8541717529297,
+            "width": 308.66668701171875,
+            "x": 40.66666793823242,
+            "y": 130.8541717529297
+          },
+          "text": "Lozinka je promijenjena"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "excess": 0,
+          "fill": "rgba(33, 37, 41, 0.75)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "rect": {
+            "bottom": 198.61459350585935,
+            "height": 24,
+            "left": 40.66666793823242,
+            "right": 349.3333549499512,
+            "top": 174.61459350585938,
+            "width": 308.66668701171875,
+            "x": 40.66666793823242,
+            "y": 174.61459350585938
+          },
+          "text": "Sada se mo\u017ee\u0161 prijaviti novom lozinkom."
+        },
+        {
+          "bg": "rgb(13, 110, 253)",
+          "excess": 0,
+          "fill": "rgb(255, 255, 255)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "rect": {
+            "bottom": 251.94792938232425,
+            "height": 37.33333587646485,
+            "left": 151.58334350585938,
+            "right": 238.41667938232425,
+            "top": 214.61459350585935,
+            "width": 86.83333587646484,
+            "x": 151.58334350585938,
+            "y": 214.61459350585935
+          },
+          "text": "Prijavi se"
+        }
+      ],
+      "title": "Lozinka promijenjena",
+      "url": "http://127.0.0.1:8017/reset/done/",
+      "width": 390
+    },
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgb(255, 255, 255)",
+          "excess": 0,
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "rect": {
+            "bottom": 281.8125,
+            "height": 211.625,
+            "left": 183.9791717529297,
+            "right": 464.0208587646485,
+            "top": 70.1875,
+            "width": 280.04168701171875,
+            "x": 183.9791717529297,
+            "y": 70.1875
+          },
+          "text": "Lozinka je promijenjena\n                Sada se mo\u017ee\u0161 prijaviti novom lozinkom.\n                \n                    Prijavi se"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "excess": 0,
+          "fill": "rgb(33, 37, 41)",
+          "font": "500 25.408px / 30.4896px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "rect": {
+            "bottom": 147.81250762939453,
+            "height": 60.95833587646485,
+            "left": 200.64584350585935,
+            "right": 447.3541870117187,
+            "top": 86.85417175292969,
+            "width": 246.70834350585935,
+            "x": 200.64584350585935,
+            "y": 86.85417175292969
+          },
+          "text": "Lozinka je promijenjena"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "excess": 0,
+          "fill": "rgba(33, 37, 41, 0.75)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "rect": {
+            "bottom": 211.8125,
+            "height": 48,
+            "left": 200.64584350585935,
+            "right": 447.3541870117187,
+            "top": 163.8125,
+            "width": 246.70834350585935,
+            "x": 200.64584350585935,
+            "y": 163.8125
+          },
+          "text": "Sada se mo\u017ee\u0161 prijaviti novom lozinkom."
+        },
+        {
+          "bg": "rgb(13, 110, 253)",
+          "excess": 0,
+          "fill": "rgb(255, 255, 255)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "rect": {
+            "bottom": 265.14583587646484,
+            "height": 37.33333587646485,
+            "left": 280.5833435058594,
+            "right": 367.4166793823242,
+            "top": 227.8125,
+            "width": 86.83333587646484,
+            "x": 280.5833435058594,
+            "y": 227.8125
+          },
+          "text": "Prijavi se"
+        }
+      ],
+      "title": "Lozinka promijenjena",
+      "url": "http://127.0.0.1:8017/reset/done/",
+      "width": 768
+    },
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgb(255, 255, 255)",
+          "excess": 0,
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "rect": {
+            "bottom": 230.4479217529297,
+            "height": 160.2604217529297,
+            "left": 360,
+            "right": 960,
+            "top": 70.1875,
+            "width": 600,
+            "x": 360,
+            "y": 70.1875
+          },
+          "text": "Lozinka je promijenjena\n                Sada se mo\u017ee\u0161 prijaviti novom lozinkom.\n                \n                    Prijavi se"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "excess": 0,
+          "fill": "rgb(33, 37, 41)",
+          "font": "500 28px / 33.6px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "rect": {
+            "bottom": 120.44792175292967,
+            "height": 33.59375,
+            "left": 376.6666870117187,
+            "right": 943.3333740234376,
+            "top": 86.85417175292969,
+            "width": 566.6666870117188,
+            "x": 376.6666870117187,
+            "y": 86.85417175292969
+          },
+          "text": "Lozinka je promijenjena"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "excess": 0,
+          "fill": "rgba(33, 37, 41, 0.75)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "rect": {
+            "bottom": 160.4479217529297,
+            "height": 24,
+            "left": 376.6666870117187,
+            "right": 943.3333740234376,
+            "top": 136.4479217529297,
+            "width": 566.6666870117188,
+            "x": 376.6666870117187,
+            "y": 136.4479217529297
+          },
+          "text": "Sada se mo\u017ee\u0161 prijaviti novom lozinkom."
+        },
+        {
+          "bg": "rgb(13, 110, 253)",
+          "excess": 0,
+          "fill": "rgb(255, 255, 255)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "rect": {
+            "bottom": 213.78125762939453,
+            "height": 37.33333587646485,
+            "left": 616.5833740234375,
+            "right": 703.4167098999023,
+            "top": 176.4479217529297,
+            "width": 86.83333587646484,
+            "x": 616.5833740234375,
+            "y": 176.4479217529297
+          },
+          "text": "Prijavi se"
+        }
+      ],
+      "title": "Lozinka promijenjena",
+      "url": "http://127.0.0.1:8017/reset/done/",
+      "width": 1440
+    }
+  ],
+  "safe": [
+    "http://127.0.0.1:8017/password-reset/",
+    "http://127.0.0.1:8017/login/"
+  ],
+  "limits": [
+    "Direct GET result screens do not prove mail or password change",
+    "Valid-token form remains unverified",
+    "Retry/login links37.333px high remain target follow-up"
+  ]
+}
