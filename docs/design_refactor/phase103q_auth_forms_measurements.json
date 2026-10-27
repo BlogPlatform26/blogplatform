@@ -1,0 +1,4398 @@
+{
+  "phase": "103q",
+  "baseline": "824eebd",
+  "before": [
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 243.0104217529297,
+            "height": 48,
+            "left": 48.66666793823242,
+            "right": 256.0000114440918,
+            "top": 195.0104217529297,
+            "width": 207.33334350585935,
+            "x": 48.66666793823242,
+            "y": 195.0104217529297
+          },
+          "tag": "LABEL",
+          "text": "Korisni\u010dko ime ili email adresa"
+        },
+        {
+          "bg": "rgb(232, 240, 254)",
+          "fill": "rgb(0, 0, 0)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_username",
+          "overflow": 0,
+          "rect": {
+            "bottom": 299.0104217529297,
+            "height": 48,
+            "left": 48.66666793823242,
+            "right": 256.0000114440918,
+            "top": 251.0104217529297,
+            "width": 207.33334350585935,
+            "x": 48.66666793823242,
+            "y": 251.0104217529297
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 347.01043701171875,
+            "height": 24,
+            "left": 48.66666793823242,
+            "right": 103.73958587646484,
+            "top": 323.01043701171875,
+            "width": 55.07291793823242,
+            "x": 48.66666793823242,
+            "y": 323.01043701171875
+          },
+          "tag": "LABEL",
+          "text": "Lozinka"
+        },
+        {
+          "bg": "rgb(232, 240, 254)",
+          "fill": "rgb(0, 0, 0)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_password",
+          "overflow": 0,
+          "rect": {
+            "bottom": 403.0104370117187,
+            "height": 48,
+            "left": 48.66666793823242,
+            "right": 213.0000114440918,
+            "top": 355.01043701171875,
+            "width": 164.33334350585938,
+            "x": 48.66666793823242,
+            "y": 355.01043701171875
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(108, 117, 125)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 403.0104370117187,
+            "height": 48,
+            "left": 212,
+            "right": 256,
+            "top": 355.01043701171875,
+            "width": 44,
+            "x": 212,
+            "y": 355.01043701171875
+          },
+          "tag": "BUTTON",
+          "text": ""
+        },
+        {
+          "bg": "rgb(13, 110, 253)",
+          "fill": "rgb(255, 255, 255)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 475.0104370117187,
+            "height": 48,
+            "left": 48.66666793823242,
+            "right": 256.0000114440918,
+            "top": 427.0104370117187,
+            "width": 207.33334350585935,
+            "x": 48.66666793823242,
+            "y": 427.0104370117187
+          },
+          "tag": "BUTTON",
+          "text": "Prijavi se"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/login/",
+      "width": 320
+    },
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 220.27084350585935,
+            "height": 24,
+            "left": 48.66666793823242,
+            "right": 267.4166679382324,
+            "top": 196.27084350585935,
+            "width": 218.75,
+            "x": 48.66666793823242,
+            "y": 196.27084350585935
+          },
+          "tag": "LABEL",
+          "text": "Korisni\u010dko ime ili email adresa"
+        },
+        {
+          "bg": "rgb(232, 240, 254)",
+          "fill": "rgb(0, 0, 0)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_username",
+          "overflow": 0,
+          "rect": {
+            "bottom": 276.2708435058594,
+            "height": 48,
+            "left": 48.66666793823242,
+            "right": 326.0000114440918,
+            "top": 228.27084350585935,
+            "width": 277.3333435058594,
+            "x": 48.66666793823242,
+            "y": 228.27084350585935
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 324.2708435058594,
+            "height": 24,
+            "left": 48.66666793823242,
+            "right": 103.73958587646484,
+            "top": 300.2708435058594,
+            "width": 55.07291793823242,
+            "x": 48.66666793823242,
+            "y": 300.2708435058594
+          },
+          "tag": "LABEL",
+          "text": "Lozinka"
+        },
+        {
+          "bg": "rgb(232, 240, 254)",
+          "fill": "rgb(0, 0, 0)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_password",
+          "overflow": 0,
+          "rect": {
+            "bottom": 380.2708435058594,
+            "height": 48,
+            "left": 48.66666793823242,
+            "right": 283.0000114440918,
+            "top": 332.2708435058594,
+            "width": 234.33334350585935,
+            "x": 48.66666793823242,
+            "y": 332.2708435058594
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(108, 117, 125)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 380.2708435058594,
+            "height": 48,
+            "left": 282,
+            "right": 326,
+            "top": 332.2708435058594,
+            "width": 44,
+            "x": 282,
+            "y": 332.2708435058594
+          },
+          "tag": "BUTTON",
+          "text": ""
+        },
+        {
+          "bg": "rgb(13, 110, 253)",
+          "fill": "rgb(255, 255, 255)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 452.2708435058594,
+            "height": 48,
+            "left": 48.66666793823242,
+            "right": 326.0000114440918,
+            "top": 404.2708435058594,
+            "width": 277.3333435058594,
+            "x": 48.66666793823242,
+            "y": 404.2708435058594
+          },
+          "tag": "BUTTON",
+          "text": "Prijavi se"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/login/",
+      "width": 390
+    },
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 231.0729217529297,
+            "height": 48,
+            "left": 245.3125,
+            "right": 402.6770935058594,
+            "top": 183.0729217529297,
+            "width": 157.36459350585938,
+            "x": 245.3125,
+            "y": 183.0729217529297
+          },
+          "tag": "LABEL",
+          "text": "Korisni\u010dko ime ili email adresa"
+        },
+        {
+          "bg": "rgb(232, 240, 254)",
+          "fill": "rgb(0, 0, 0)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_username",
+          "overflow": 0,
+          "rect": {
+            "bottom": 287.0729217529297,
+            "height": 48,
+            "left": 245.3125,
+            "right": 402.6770935058594,
+            "top": 239.0729217529297,
+            "width": 157.36459350585938,
+            "x": 245.3125,
+            "y": 239.0729217529297
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 335.07293701171875,
+            "height": 24,
+            "left": 245.3125,
+            "right": 300.3854179382324,
+            "top": 311.07293701171875,
+            "width": 55.07291793823242,
+            "x": 245.3125,
+            "y": 311.07293701171875
+          },
+          "tag": "LABEL",
+          "text": "Lozinka"
+        },
+        {
+          "bg": "rgb(232, 240, 254)",
+          "fill": "rgb(0, 0, 0)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_password",
+          "overflow": 0,
+          "rect": {
+            "bottom": 391.0729370117187,
+            "height": 48,
+            "left": 245.3125,
+            "right": 359.67708587646484,
+            "top": 343.07293701171875,
+            "width": 114.36458587646484,
+            "x": 245.3125,
+            "y": 343.07293701171875
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(108, 117, 125)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 391.0729370117187,
+            "height": 48,
+            "left": 358.6770935058594,
+            "right": 402.6770935058594,
+            "top": 343.07293701171875,
+            "width": 44,
+            "x": 358.6770935058594,
+            "y": 343.07293701171875
+          },
+          "tag": "BUTTON",
+          "text": ""
+        },
+        {
+          "bg": "rgb(13, 110, 253)",
+          "fill": "rgb(255, 255, 255)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 463.0729370117187,
+            "height": 48,
+            "left": 245.3125,
+            "right": 402.6770935058594,
+            "top": 415.0729370117187,
+            "width": 157.36459350585938,
+            "x": 245.3125,
+            "y": 415.0729370117187
+          },
+          "tag": "BUTTON",
+          "text": "Prijavi se"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/login/",
+      "width": 768
+    },
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 214.8541717529297,
+            "height": 24,
+            "left": 538.6666870117188,
+            "right": 757.4166870117188,
+            "top": 190.8541717529297,
+            "width": 218.75,
+            "x": 538.6666870117188,
+            "y": 190.8541717529297
+          },
+          "tag": "LABEL",
+          "text": "Korisni\u010dko ime ili email adresa"
+        },
+        {
+          "bg": "rgb(232, 240, 254)",
+          "fill": "rgb(0, 0, 0)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_username",
+          "overflow": 0,
+          "rect": {
+            "bottom": 270.8541717529297,
+            "height": 48,
+            "left": 538.6666870117188,
+            "right": 781.3333587646484,
+            "top": 222.8541717529297,
+            "width": 242.6666717529297,
+            "x": 538.6666870117188,
+            "y": 222.8541717529297
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 318.85418701171875,
+            "height": 24,
+            "left": 538.6666870117188,
+            "right": 593.7396049499512,
+            "top": 294.85418701171875,
+            "width": 55.07291793823242,
+            "x": 538.6666870117188,
+            "y": 294.85418701171875
+          },
+          "tag": "LABEL",
+          "text": "Lozinka"
+        },
+        {
+          "bg": "rgb(232, 240, 254)",
+          "fill": "rgb(0, 0, 0)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_password",
+          "overflow": 0,
+          "rect": {
+            "bottom": 374.8541870117187,
+            "height": 48,
+            "left": 538.6666870117188,
+            "right": 738.3333587646484,
+            "top": 326.85418701171875,
+            "width": 199.6666717529297,
+            "x": 538.6666870117188,
+            "y": 326.85418701171875
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(108, 117, 125)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 374.8541870117187,
+            "height": 48,
+            "left": 737.3333740234375,
+            "right": 781.3333740234375,
+            "top": 326.85418701171875,
+            "width": 44,
+            "x": 737.3333740234375,
+            "y": 326.85418701171875
+          },
+          "tag": "BUTTON",
+          "text": ""
+        },
+        {
+          "bg": "rgb(13, 110, 253)",
+          "fill": "rgb(255, 255, 255)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 446.8541870117187,
+            "height": 48,
+            "left": 538.6666870117188,
+            "right": 781.3333587646484,
+            "top": 398.8541870117187,
+            "width": 242.6666717529297,
+            "x": 538.6666870117188,
+            "y": 398.8541870117187
+          },
+          "tag": "BUTTON",
+          "text": "Prijavi se"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/login/",
+      "width": 1440
+    },
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 214.11459350585935,
+            "height": 24,
+            "left": 48.66666793823242,
+            "right": 154.7708396911621,
+            "top": 190.11459350585935,
+            "width": 106.10417175292967,
+            "x": 48.66666793823242,
+            "y": 190.11459350585935
+          },
+          "tag": "LABEL",
+          "text": "Korisni\u010dko ime"
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_username",
+          "overflow": 0,
+          "rect": {
+            "bottom": 259.4479293823242,
+            "height": 37.33333587646485,
+            "left": 48.66666793823242,
+            "right": 232.0000114440918,
+            "top": 222.11459350585935,
+            "width": 183.33334350585935,
+            "x": 48.66666793823242,
+            "y": 222.11459350585935
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 307.44793701171875,
+            "height": 24,
+            "left": 48.66666793823242,
+            "right": 134.79166793823242,
+            "top": 283.44793701171875,
+            "width": 86.125,
+            "x": 48.66666793823242,
+            "y": 283.44793701171875
+          },
+          "tag": "LABEL",
+          "text": "Naziv bloga"
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_blog_name",
+          "overflow": 0,
+          "rect": {
+            "bottom": 352.7812728881836,
+            "height": 37.33333587646485,
+            "left": 48.66666793823242,
+            "right": 232.0000114440918,
+            "top": 315.44793701171875,
+            "width": 183.33334350585935,
+            "x": 48.66666793823242,
+            "y": 315.44793701171875
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 400.78125,
+            "height": 24,
+            "left": 48.66666793823242,
+            "right": 139.76041793823242,
+            "top": 376.78125,
+            "width": 91.09375,
+            "x": 48.66666793823242,
+            "y": 376.78125
+          },
+          "tag": "LABEL",
+          "text": "Email adresa"
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_email",
+          "overflow": 0,
+          "rect": {
+            "bottom": 446.1145858764648,
+            "height": 37.33333587646485,
+            "left": 48.66666793823242,
+            "right": 232.0000114440918,
+            "top": 408.78125,
+            "width": 183.33334350585935,
+            "x": 48.66666793823242,
+            "y": 408.78125
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 494.1145935058594,
+            "height": 24,
+            "left": 48.66666793823242,
+            "right": 103.73958587646484,
+            "top": 470.1145935058594,
+            "width": 55.07291793823242,
+            "x": 48.66666793823242,
+            "y": 470.1145935058594
+          },
+          "tag": "LABEL",
+          "text": "Lozinka"
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_password1",
+          "overflow": 0,
+          "rect": {
+            "bottom": 539.4479293823242,
+            "height": 37.33333587646485,
+            "left": 48.66666793823242,
+            "right": 189.0000114440918,
+            "top": 502.1145935058594,
+            "width": 140.33334350585938,
+            "x": 48.66666793823242,
+            "y": 502.1145935058594
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(108, 117, 125)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 539.4479293823242,
+            "height": 37.33333587646485,
+            "left": 188,
+            "right": 232,
+            "top": 502.1145935058594,
+            "width": 44,
+            "x": 188,
+            "y": 502.1145935058594
+          },
+          "tag": "BUTTON",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(33, 37, 41, 0.75)",
+          "font": "8px / 12px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 579.4479370117188,
+            "height": 36,
+            "left": 48.66666793823242,
+            "right": 232.0000114440918,
+            "top": 543.4479370117188,
+            "width": 183.33334350585935,
+            "x": 48.66666793823242,
+            "y": 543.4479370117188
+          },
+          "tag": "DIV",
+          "text": "Lozinka mora imati najmanje 10 znakova. Nemoj koristiti samo brojeve, pre\u010destu lozinku ili podatke sli\u010dne korisni\u010dkom imenu."
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 627.4479370117188,
+            "height": 24,
+            "left": 48.66666793823242,
+            "right": 157.35416793823242,
+            "top": 603.4479370117188,
+            "width": 108.6875,
+            "x": 48.66666793823242,
+            "y": 603.4479370117188
+          },
+          "tag": "LABEL",
+          "text": "Potvrdi lozinku"
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_password2",
+          "overflow": 0,
+          "rect": {
+            "bottom": 672.7812728881836,
+            "height": 37.33333587646485,
+            "left": 48.66666793823242,
+            "right": 189.0000114440918,
+            "top": 635.4479370117188,
+            "width": 140.33334350585938,
+            "x": 48.66666793823242,
+            "y": 635.4479370117188
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(108, 117, 125)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 672.7812728881836,
+            "height": 37.33333587646485,
+            "left": 188,
+            "right": 232,
+            "top": 635.4479370117188,
+            "width": 44,
+            "x": 188,
+            "y": 635.4479370117188
+          },
+          "tag": "BUTTON",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(33, 37, 41, 0.75)",
+          "font": "8px / 12px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 688.78125,
+            "height": 12,
+            "left": 48.66666793823242,
+            "right": 232.0000114440918,
+            "top": 676.78125,
+            "width": 183.33334350585935,
+            "x": 48.66666793823242,
+            "y": 676.78125
+          },
+          "tag": "DIV",
+          "text": "Ponovno upi\u0161i istu lozinku za potvrdu."
+        },
+        {
+          "bg": "rgb(13, 110, 253)",
+          "fill": "rgb(255, 255, 255)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 750.1145858764648,
+            "height": 37.33333587646485,
+            "left": 48.66666793823242,
+            "right": 232.0000114440918,
+            "top": 712.78125,
+            "width": 183.33334350585935,
+            "x": 48.66666793823242,
+            "y": 712.78125
+          },
+          "tag": "BUTTON",
+          "text": "Registriraj se"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/register/",
+      "width": 320
+    },
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 214.61459350585935,
+            "height": 24,
+            "left": 48.66666793823242,
+            "right": 154.7708396911621,
+            "top": 190.61459350585935,
+            "width": 106.10417175292967,
+            "x": 48.66666793823242,
+            "y": 190.61459350585935
+          },
+          "tag": "LABEL",
+          "text": "Korisni\u010dko ime"
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_username",
+          "overflow": 0,
+          "rect": {
+            "bottom": 259.9479293823242,
+            "height": 37.33333587646485,
+            "left": 48.66666793823242,
+            "right": 302.0000114440918,
+            "top": 222.61459350585935,
+            "width": 253.33334350585935,
+            "x": 48.66666793823242,
+            "y": 222.61459350585935
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 307.94793701171875,
+            "height": 24,
+            "left": 48.66666793823242,
+            "right": 134.79166793823242,
+            "top": 283.94793701171875,
+            "width": 86.125,
+            "x": 48.66666793823242,
+            "y": 283.94793701171875
+          },
+          "tag": "LABEL",
+          "text": "Naziv bloga"
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_blog_name",
+          "overflow": 0,
+          "rect": {
+            "bottom": 353.2812728881836,
+            "height": 37.33333587646485,
+            "left": 48.66666793823242,
+            "right": 302.0000114440918,
+            "top": 315.94793701171875,
+            "width": 253.33334350585935,
+            "x": 48.66666793823242,
+            "y": 315.94793701171875
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 401.28125,
+            "height": 24,
+            "left": 48.66666793823242,
+            "right": 139.76041793823242,
+            "top": 377.28125,
+            "width": 91.09375,
+            "x": 48.66666793823242,
+            "y": 377.28125
+          },
+          "tag": "LABEL",
+          "text": "Email adresa"
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_email",
+          "overflow": 0,
+          "rect": {
+            "bottom": 446.6145858764648,
+            "height": 37.33333587646485,
+            "left": 48.66666793823242,
+            "right": 302.0000114440918,
+            "top": 409.28125,
+            "width": 253.33334350585935,
+            "x": 48.66666793823242,
+            "y": 409.28125
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 494.6145935058594,
+            "height": 24,
+            "left": 48.66666793823242,
+            "right": 103.73958587646484,
+            "top": 470.6145935058594,
+            "width": 55.07291793823242,
+            "x": 48.66666793823242,
+            "y": 470.6145935058594
+          },
+          "tag": "LABEL",
+          "text": "Lozinka"
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_password1",
+          "overflow": 0,
+          "rect": {
+            "bottom": 539.9479293823242,
+            "height": 37.33333587646485,
+            "left": 48.66666793823242,
+            "right": 259.0000114440918,
+            "top": 502.6145935058594,
+            "width": 210.33334350585935,
+            "x": 48.66666793823242,
+            "y": 502.6145935058594
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(108, 117, 125)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 539.9479293823242,
+            "height": 37.33333587646485,
+            "left": 258,
+            "right": 302,
+            "top": 502.6145935058594,
+            "width": 44,
+            "x": 258,
+            "y": 502.6145935058594
+          },
+          "tag": "BUTTON",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(33, 37, 41, 0.75)",
+          "font": "8px / 12px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 567.9479370117188,
+            "height": 24,
+            "left": 48.66666793823242,
+            "right": 302.0000114440918,
+            "top": 543.9479370117188,
+            "width": 253.33334350585935,
+            "x": 48.66666793823242,
+            "y": 543.9479370117188
+          },
+          "tag": "DIV",
+          "text": "Lozinka mora imati najmanje 10 znakova. Nemoj koristiti samo brojeve, pre\u010destu lozinku ili podatke sli\u010dne korisni\u010dkom imenu."
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 615.9479370117188,
+            "height": 24,
+            "left": 48.66666793823242,
+            "right": 157.35416793823242,
+            "top": 591.9479370117188,
+            "width": 108.6875,
+            "x": 48.66666793823242,
+            "y": 591.9479370117188
+          },
+          "tag": "LABEL",
+          "text": "Potvrdi lozinku"
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_password2",
+          "overflow": 0,
+          "rect": {
+            "bottom": 661.2812728881836,
+            "height": 37.33333587646485,
+            "left": 48.66666793823242,
+            "right": 259.0000114440918,
+            "top": 623.9479370117188,
+            "width": 210.33334350585935,
+            "x": 48.66666793823242,
+            "y": 623.9479370117188
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(108, 117, 125)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 661.2812728881836,
+            "height": 37.33333587646485,
+            "left": 258,
+            "right": 302,
+            "top": 623.9479370117188,
+            "width": 44,
+            "x": 258,
+            "y": 623.9479370117188
+          },
+          "tag": "BUTTON",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(33, 37, 41, 0.75)",
+          "font": "8px / 12px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 677.28125,
+            "height": 12,
+            "left": 48.66666793823242,
+            "right": 302.0000114440918,
+            "top": 665.28125,
+            "width": 253.33334350585935,
+            "x": 48.66666793823242,
+            "y": 665.28125
+          },
+          "tag": "DIV",
+          "text": "Ponovno upi\u0161i istu lozinku za potvrdu."
+        },
+        {
+          "bg": "rgb(13, 110, 253)",
+          "fill": "rgb(255, 255, 255)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 738.6145858764648,
+            "height": 37.33333587646485,
+            "left": 48.66666793823242,
+            "right": 302.0000114440918,
+            "top": 701.28125,
+            "width": 253.33334350585935,
+            "x": 48.66666793823242,
+            "y": 701.28125
+          },
+          "tag": "BUTTON",
+          "text": "Registriraj se"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/register/",
+      "width": 390
+    },
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 245.33334350585935,
+            "height": 72,
+            "left": 245.3125,
+            "right": 299.98958587646484,
+            "top": 173.33334350585938,
+            "width": 54.67708587646485,
+            "x": 245.3125,
+            "y": 173.33334350585938
+          },
+          "tag": "LABEL",
+          "text": "Korisni\u010dko ime"
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_username",
+          "overflow": 0,
+          "rect": {
+            "bottom": 290.6666793823242,
+            "height": 37.33333587646485,
+            "left": 245.3125,
+            "right": 299.98958587646484,
+            "top": 253.33334350585935,
+            "width": 54.67708587646485,
+            "x": 245.3125,
+            "y": 253.33334350585935
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 221.33334350585935,
+            "height": 48,
+            "left": 323.9895935058594,
+            "right": 378.6666793823242,
+            "top": 173.33334350585938,
+            "width": 54.67708587646485,
+            "x": 323.9895935058594,
+            "y": 173.33334350585938
+          },
+          "tag": "LABEL",
+          "text": "Naziv bloga"
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_blog_name",
+          "overflow": 0,
+          "rect": {
+            "bottom": 266.6666793823242,
+            "height": 37.33333587646485,
+            "left": 323.9895935058594,
+            "right": 378.6666793823242,
+            "top": 229.33334350585935,
+            "width": 54.67708587646485,
+            "x": 323.9895935058594,
+            "y": 229.33334350585935
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 338.66668701171875,
+            "height": 24,
+            "left": 245.3125,
+            "right": 336.40625,
+            "top": 314.66668701171875,
+            "width": 91.09375,
+            "x": 245.3125,
+            "y": 314.66668701171875
+          },
+          "tag": "LABEL",
+          "text": "Email adresa"
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_email",
+          "overflow": 0,
+          "rect": {
+            "bottom": 384.0000228881836,
+            "height": 37.33333587646485,
+            "left": 245.3125,
+            "right": 378.6770935058594,
+            "top": 346.66668701171875,
+            "width": 133.36459350585938,
+            "x": 245.3125,
+            "y": 346.66668701171875
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 432,
+            "height": 24,
+            "left": 245.3125,
+            "right": 300.3854179382324,
+            "top": 408,
+            "width": 55.07291793823242,
+            "x": 245.3125,
+            "y": 408
+          },
+          "tag": "LABEL",
+          "text": "Lozinka"
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_password1",
+          "overflow": 0,
+          "rect": {
+            "bottom": 477.3333358764648,
+            "height": 37.33333587646485,
+            "left": 245.3125,
+            "right": 335.67708587646484,
+            "top": 440,
+            "width": 90.36458587646484,
+            "x": 245.3125,
+            "y": 440
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(108, 117, 125)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 477.3333358764648,
+            "height": 37.33333587646485,
+            "left": 334.6770935058594,
+            "right": 378.6770935058594,
+            "top": 440,
+            "width": 44,
+            "x": 334.6770935058594,
+            "y": 440
+          },
+          "tag": "BUTTON",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(33, 37, 41, 0.75)",
+          "font": "8px / 12px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 529.3333435058594,
+            "height": 48,
+            "left": 245.3125,
+            "right": 378.6770935058594,
+            "top": 481.3333435058594,
+            "width": 133.36459350585938,
+            "x": 245.3125,
+            "y": 481.3333435058594
+          },
+          "tag": "DIV",
+          "text": "Lozinka mora imati najmanje 10 znakova. Nemoj koristiti samo brojeve, pre\u010destu lozinku ili podatke sli\u010dne korisni\u010dkom imenu."
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 577.3333740234375,
+            "height": 24,
+            "left": 245.3125,
+            "right": 354,
+            "top": 553.3333740234375,
+            "width": 108.6875,
+            "x": 245.3125,
+            "y": 553.3333740234375
+          },
+          "tag": "LABEL",
+          "text": "Potvrdi lozinku"
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_password2",
+          "overflow": 0,
+          "rect": {
+            "bottom": 622.6667098999023,
+            "height": 37.33333587646485,
+            "left": 245.3125,
+            "right": 335.67708587646484,
+            "top": 585.3333740234375,
+            "width": 90.36458587646484,
+            "x": 245.3125,
+            "y": 585.3333740234375
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(108, 117, 125)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 622.6667098999023,
+            "height": 37.33333587646485,
+            "left": 334.6770935058594,
+            "right": 378.6770935058594,
+            "top": 585.3333740234375,
+            "width": 44,
+            "x": 334.6770935058594,
+            "y": 585.3333740234375
+          },
+          "tag": "BUTTON",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(33, 37, 41, 0.75)",
+          "font": "8px / 12px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 650.6666870117188,
+            "height": 24,
+            "left": 245.3125,
+            "right": 378.6770935058594,
+            "top": 626.6666870117188,
+            "width": 133.36459350585938,
+            "x": 245.3125,
+            "y": 626.6666870117188
+          },
+          "tag": "DIV",
+          "text": "Ponovno upi\u0161i istu lozinku za potvrdu."
+        },
+        {
+          "bg": "rgb(13, 110, 253)",
+          "fill": "rgb(255, 255, 255)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 712.0000228881836,
+            "height": 37.33333587646485,
+            "left": 245.3125,
+            "right": 378.6770935058594,
+            "top": 674.6666870117188,
+            "width": 133.36459350585938,
+            "x": 245.3125,
+            "y": 674.6666870117188
+          },
+          "tag": "BUTTON",
+          "text": "Registriraj se"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/register/",
+      "width": 768
+    },
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 200.4479217529297,
+            "height": 24,
+            "left": 512.6666870117188,
+            "right": 618.7708587646484,
+            "top": 176.4479217529297,
+            "width": 106.10417175292967,
+            "x": 512.6666870117188,
+            "y": 176.4479217529297
+          },
+          "tag": "LABEL",
+          "text": "Korisni\u010dko ime"
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_username",
+          "overflow": 0,
+          "rect": {
+            "bottom": 245.78125762939453,
+            "height": 37.33333587646485,
+            "left": 512.6666870117188,
+            "right": 635.9896087646484,
+            "top": 208.4479217529297,
+            "width": 123.32292175292967,
+            "x": 512.6666870117188,
+            "y": 208.4479217529297
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 200.4479217529297,
+            "height": 24,
+            "left": 659.9896240234375,
+            "right": 746.1146240234375,
+            "top": 176.4479217529297,
+            "width": 86.125,
+            "x": 659.9896240234375,
+            "y": 176.4479217529297
+          },
+          "tag": "LABEL",
+          "text": "Naziv bloga"
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_blog_name",
+          "overflow": 0,
+          "rect": {
+            "bottom": 245.78125762939453,
+            "height": 37.33333587646485,
+            "left": 659.9896240234375,
+            "right": 783.3125457763672,
+            "top": 208.4479217529297,
+            "width": 123.32292175292967,
+            "x": 659.9896240234375,
+            "y": 208.4479217529297
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 293.78125,
+            "height": 24,
+            "left": 512.6666870117188,
+            "right": 603.7604370117188,
+            "top": 269.78125,
+            "width": 91.09375,
+            "x": 512.6666870117188,
+            "y": 269.78125
+          },
+          "tag": "LABEL",
+          "text": "Email adresa"
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_email",
+          "overflow": 0,
+          "rect": {
+            "bottom": 339.11458587646484,
+            "height": 37.33333587646485,
+            "left": 512.6666870117188,
+            "right": 783.3229370117188,
+            "top": 301.78125,
+            "width": 270.65625,
+            "x": 512.6666870117188,
+            "y": 301.78125
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 387.1145935058594,
+            "height": 24,
+            "left": 512.6666870117188,
+            "right": 567.7396049499512,
+            "top": 363.1145935058594,
+            "width": 55.07291793823242,
+            "x": 512.6666870117188,
+            "y": 363.1145935058594
+          },
+          "tag": "LABEL",
+          "text": "Lozinka"
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_password1",
+          "overflow": 0,
+          "rect": {
+            "bottom": 432.4479293823242,
+            "height": 37.33333587646485,
+            "left": 512.6666870117188,
+            "right": 740.3229370117188,
+            "top": 395.1145935058594,
+            "width": 227.65625,
+            "x": 512.6666870117188,
+            "y": 395.1145935058594
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(108, 117, 125)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 432.4479293823242,
+            "height": 37.33333587646485,
+            "left": 739.3229370117188,
+            "right": 783.3229370117188,
+            "top": 395.1145935058594,
+            "width": 44,
+            "x": 739.3229370117188,
+            "y": 395.1145935058594
+          },
+          "tag": "BUTTON",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(33, 37, 41, 0.75)",
+          "font": "8px / 12px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 460.4479370117187,
+            "height": 24,
+            "left": 512.6666870117188,
+            "right": 783.3229370117188,
+            "top": 436.4479370117187,
+            "width": 270.65625,
+            "x": 512.6666870117188,
+            "y": 436.4479370117187
+          },
+          "tag": "DIV",
+          "text": "Lozinka mora imati najmanje 10 znakova. Nemoj koristiti samo brojeve, pre\u010destu lozinku ili podatke sli\u010dne korisni\u010dkom imenu."
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 508.4479370117187,
+            "height": 24,
+            "left": 512.6666870117188,
+            "right": 621.3541870117188,
+            "top": 484.4479370117187,
+            "width": 108.6875,
+            "x": 512.6666870117188,
+            "y": 484.4479370117187
+          },
+          "tag": "LABEL",
+          "text": "Potvrdi lozinku"
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_password2",
+          "overflow": 0,
+          "rect": {
+            "bottom": 553.7812728881836,
+            "height": 37.33333587646485,
+            "left": 512.6666870117188,
+            "right": 740.3229370117188,
+            "top": 516.4479370117188,
+            "width": 227.65625,
+            "x": 512.6666870117188,
+            "y": 516.4479370117188
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(108, 117, 125)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 553.7812728881836,
+            "height": 37.33333587646485,
+            "left": 739.3229370117188,
+            "right": 783.3229370117188,
+            "top": 516.4479370117188,
+            "width": 44,
+            "x": 739.3229370117188,
+            "y": 516.4479370117188
+          },
+          "tag": "BUTTON",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(33, 37, 41, 0.75)",
+          "font": "8px / 12px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 569.78125,
+            "height": 12,
+            "left": 512.6666870117188,
+            "right": 783.3229370117188,
+            "top": 557.78125,
+            "width": 270.65625,
+            "x": 512.6666870117188,
+            "y": 557.78125
+          },
+          "tag": "DIV",
+          "text": "Ponovno upi\u0161i istu lozinku za potvrdu."
+        },
+        {
+          "bg": "rgb(13, 110, 253)",
+          "fill": "rgb(255, 255, 255)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 631.1145858764648,
+            "height": 37.33333587646485,
+            "left": 512.6666870117188,
+            "right": 783.3229370117188,
+            "top": 593.78125,
+            "width": 270.65625,
+            "x": 512.6666870117188,
+            "y": 593.78125
+          },
+          "tag": "BUTTON",
+          "text": "Registriraj se"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/register/",
+      "width": 1440
+    },
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(208, 208, 208)",
+          "font": "16px \"Segoe UI\", system-ui, Roboto, \"Helvetica Neue\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 283.4687557220459,
+            "height": 31.33333396911621,
+            "left": 15,
+            "right": 305,
+            "top": 252.1354217529297,
+            "width": 290,
+            "x": 15,
+            "y": 252.1354217529297
+          },
+          "tag": "LABEL",
+          "text": "E-mail adresa:"
+        },
+        {
+          "bg": "rgb(18, 18, 18)",
+          "fill": "rgb(238, 238, 238)",
+          "font": "16px \"Segoe UI\", system-ui, Roboto, \"Helvetica Neue\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_email",
+          "overflow": 0,
+          "rect": {
+            "bottom": 319.46875,
+            "height": 36,
+            "left": 15,
+            "right": 305,
+            "top": 283.46875,
+            "width": 290,
+            "x": 15,
+            "y": 283.46875
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgb(65, 118, 144)",
+          "fill": "rgb(255, 255, 255)",
+          "font": "13px / 15px \"Segoe UI\", system-ui, Roboto, \"Helvetica Neue\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 410.8020935058594,
+            "height": 35,
+            "left": 25.666667938232425,
+            "right": 294.3333549499512,
+            "top": 375.8020935058594,
+            "width": 268.66668701171875,
+            "x": 25.666667938232425,
+            "y": 375.8020935058594
+          },
+          "tag": "INPUT",
+          "text": ""
+        }
+      ],
+      "url": "http://127.0.0.1:8017/password-reset/",
+      "width": 320
+    },
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(208, 208, 208)",
+          "font": "16px \"Segoe UI\", system-ui, Roboto, \"Helvetica Neue\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 283.4687557220459,
+            "height": 31.33333396911621,
+            "left": 15,
+            "right": 375,
+            "top": 252.1354217529297,
+            "width": 360,
+            "x": 15,
+            "y": 252.1354217529297
+          },
+          "tag": "LABEL",
+          "text": "E-mail adresa:"
+        },
+        {
+          "bg": "rgb(18, 18, 18)",
+          "fill": "rgb(238, 238, 238)",
+          "font": "16px \"Segoe UI\", system-ui, Roboto, \"Helvetica Neue\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_email",
+          "overflow": 0,
+          "rect": {
+            "bottom": 319.46875,
+            "height": 36,
+            "left": 15,
+            "right": 375,
+            "top": 283.46875,
+            "width": 360,
+            "x": 15,
+            "y": 283.46875
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgb(65, 118, 144)",
+          "fill": "rgb(255, 255, 255)",
+          "font": "13px / 15px \"Segoe UI\", system-ui, Roboto, \"Helvetica Neue\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 410.8020935058594,
+            "height": 35,
+            "left": 25.666667938232425,
+            "right": 364.3333549499512,
+            "top": 375.8020935058594,
+            "width": 338.66668701171875,
+            "x": 25.666667938232425,
+            "y": 375.8020935058594
+          },
+          "tag": "INPUT",
+          "text": ""
+        }
+      ],
+      "url": "http://127.0.0.1:8017/password-reset/",
+      "width": 390
+    },
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(208, 208, 208)",
+          "font": "16px \"Segoe UI\", system-ui, Roboto, \"Helvetica Neue\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 263.53125,
+            "height": 36,
+            "left": 30,
+            "right": 200,
+            "top": 227.53125,
+            "width": 170,
+            "x": 30,
+            "y": 227.53125
+          },
+          "tag": "LABEL",
+          "text": "E-mail adresa:"
+        },
+        {
+          "bg": "rgb(18, 18, 18)",
+          "fill": "rgb(238, 238, 238)",
+          "font": "16px \"Segoe UI\", system-ui, Roboto, \"Helvetica Neue\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_email",
+          "overflow": 0,
+          "rect": {
+            "bottom": 263.53125,
+            "height": 36,
+            "left": 200,
+            "right": 398.6666717529297,
+            "top": 227.53125,
+            "width": 198.6666717529297,
+            "x": 200,
+            "y": 227.53125
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgb(65, 118, 144)",
+          "fill": "rgb(255, 255, 255)",
+          "font": "13px / 15px \"Segoe UI\", system-ui, Roboto, \"Helvetica Neue\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 347.8645935058594,
+            "height": 35,
+            "left": 28.666667938232425,
+            "right": 168.4270896911621,
+            "top": 312.8645935058594,
+            "width": 139.7604217529297,
+            "x": 28.666667938232425,
+            "y": 312.8645935058594
+          },
+          "tag": "INPUT",
+          "text": ""
+        }
+      ],
+      "url": "http://127.0.0.1:8017/password-reset/",
+      "width": 768
+    },
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(208, 208, 208)",
+          "font": "13px \"Segoe UI\", system-ui, Roboto, \"Helvetica Neue\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 226.8020896911621,
+            "height": 28.666667938232425,
+            "left": 50,
+            "right": 220,
+            "top": 198.1354217529297,
+            "width": 170,
+            "x": 50,
+            "y": 198.1354217529297
+          },
+          "tag": "LABEL",
+          "text": "E-mail adresa:"
+        },
+        {
+          "bg": "rgb(18, 18, 18)",
+          "fill": "rgb(238, 238, 238)",
+          "font": "13px \"Segoe UI\", system-ui, Roboto, \"Helvetica Neue\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_email",
+          "overflow": 0,
+          "rect": {
+            "bottom": 226.8020896911621,
+            "height": 28.666667938232425,
+            "left": 220,
+            "right": 380.6666717529297,
+            "top": 198.1354217529297,
+            "width": 160.6666717529297,
+            "x": 220,
+            "y": 198.1354217529297
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgb(65, 118, 144)",
+          "fill": "rgb(255, 255, 255)",
+          "font": "13px / 15px \"Segoe UI\", system-ui, Roboto, \"Helvetica Neue\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 315.13543701171875,
+            "height": 35,
+            "left": 54.66666793823242,
+            "right": 210.4270896911621,
+            "top": 280.13543701171875,
+            "width": 155.7604217529297,
+            "x": 54.66666793823242,
+            "y": 280.13543701171875
+          },
+          "tag": "INPUT",
+          "text": ""
+        }
+      ],
+      "url": "http://127.0.0.1:8017/password-reset/",
+      "width": 1440
+    }
+  ],
+  "after": [
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 243.0104217529297,
+            "height": 48,
+            "left": 48.66666793823242,
+            "right": 256.0000114440918,
+            "top": 195.0104217529297,
+            "width": 207.33334350585935,
+            "x": 48.66666793823242,
+            "y": 195.0104217529297
+          },
+          "tag": "LABEL",
+          "text": "Korisni\u010dko ime ili email adresa"
+        },
+        {
+          "bg": "rgb(232, 240, 254)",
+          "fill": "rgb(0, 0, 0)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_username",
+          "overflow": 0,
+          "rect": {
+            "bottom": 299.0104217529297,
+            "height": 48,
+            "left": 48.66666793823242,
+            "right": 256.0000114440918,
+            "top": 251.0104217529297,
+            "width": 207.33334350585935,
+            "x": 48.66666793823242,
+            "y": 251.0104217529297
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 347.01043701171875,
+            "height": 24,
+            "left": 48.66666793823242,
+            "right": 103.73958587646484,
+            "top": 323.01043701171875,
+            "width": 55.07291793823242,
+            "x": 48.66666793823242,
+            "y": 323.01043701171875
+          },
+          "tag": "LABEL",
+          "text": "Lozinka"
+        },
+        {
+          "bg": "rgb(232, 240, 254)",
+          "fill": "rgb(0, 0, 0)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_password",
+          "overflow": 0,
+          "rect": {
+            "bottom": 403.0104370117187,
+            "height": 48,
+            "left": 48.66666793823242,
+            "right": 213.0000114440918,
+            "top": 355.01043701171875,
+            "width": 164.33334350585938,
+            "x": 48.66666793823242,
+            "y": 355.01043701171875
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(108, 117, 125)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 403.0104370117187,
+            "height": 48,
+            "left": 212,
+            "right": 256,
+            "top": 355.01043701171875,
+            "width": 44,
+            "x": 212,
+            "y": 355.01043701171875
+          },
+          "tag": "BUTTON",
+          "text": ""
+        },
+        {
+          "bg": "rgb(13, 110, 253)",
+          "fill": "rgb(255, 255, 255)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 475.0104370117187,
+            "height": 48,
+            "left": 48.66666793823242,
+            "right": 256.0000114440918,
+            "top": 427.0104370117187,
+            "width": 207.33334350585935,
+            "x": 48.66666793823242,
+            "y": 427.0104370117187
+          },
+          "tag": "BUTTON",
+          "text": "Prijavi se"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/login/",
+      "width": 320
+    },
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 220.27084350585935,
+            "height": 24,
+            "left": 48.66666793823242,
+            "right": 267.4166679382324,
+            "top": 196.27084350585935,
+            "width": 218.75,
+            "x": 48.66666793823242,
+            "y": 196.27084350585935
+          },
+          "tag": "LABEL",
+          "text": "Korisni\u010dko ime ili email adresa"
+        },
+        {
+          "bg": "rgb(232, 240, 254)",
+          "fill": "rgb(0, 0, 0)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_username",
+          "overflow": 0,
+          "rect": {
+            "bottom": 276.2708435058594,
+            "height": 48,
+            "left": 48.66666793823242,
+            "right": 326.0000114440918,
+            "top": 228.27084350585935,
+            "width": 277.3333435058594,
+            "x": 48.66666793823242,
+            "y": 228.27084350585935
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 324.2708435058594,
+            "height": 24,
+            "left": 48.66666793823242,
+            "right": 103.73958587646484,
+            "top": 300.2708435058594,
+            "width": 55.07291793823242,
+            "x": 48.66666793823242,
+            "y": 300.2708435058594
+          },
+          "tag": "LABEL",
+          "text": "Lozinka"
+        },
+        {
+          "bg": "rgb(232, 240, 254)",
+          "fill": "rgb(0, 0, 0)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_password",
+          "overflow": 0,
+          "rect": {
+            "bottom": 380.2708435058594,
+            "height": 48,
+            "left": 48.66666793823242,
+            "right": 283.0000114440918,
+            "top": 332.2708435058594,
+            "width": 234.33334350585935,
+            "x": 48.66666793823242,
+            "y": 332.2708435058594
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(108, 117, 125)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 380.2708435058594,
+            "height": 48,
+            "left": 282,
+            "right": 326,
+            "top": 332.2708435058594,
+            "width": 44,
+            "x": 282,
+            "y": 332.2708435058594
+          },
+          "tag": "BUTTON",
+          "text": ""
+        },
+        {
+          "bg": "rgb(13, 110, 253)",
+          "fill": "rgb(255, 255, 255)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 452.2708435058594,
+            "height": 48,
+            "left": 48.66666793823242,
+            "right": 326.0000114440918,
+            "top": 404.2708435058594,
+            "width": 277.3333435058594,
+            "x": 48.66666793823242,
+            "y": 404.2708435058594
+          },
+          "tag": "BUTTON",
+          "text": "Prijavi se"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/login/",
+      "width": 390
+    },
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 207.0729217529297,
+            "height": 24,
+            "left": 105.95833587646484,
+            "right": 324.70833587646484,
+            "top": 183.0729217529297,
+            "width": 218.75,
+            "x": 105.95833587646484,
+            "y": 183.0729217529297
+          },
+          "tag": "LABEL",
+          "text": "Korisni\u010dko ime ili email adresa"
+        },
+        {
+          "bg": "rgb(232, 240, 254)",
+          "fill": "rgb(0, 0, 0)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_username",
+          "overflow": 0,
+          "rect": {
+            "bottom": 263.0729217529297,
+            "height": 48,
+            "left": 105.95833587646484,
+            "right": 542.0312728881836,
+            "top": 215.0729217529297,
+            "width": 436.0729370117187,
+            "x": 105.95833587646484,
+            "y": 215.0729217529297
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 311.07293701171875,
+            "height": 24,
+            "left": 105.95833587646484,
+            "right": 161.0312538146973,
+            "top": 287.07293701171875,
+            "width": 55.07291793823242,
+            "x": 105.95833587646484,
+            "y": 287.07293701171875
+          },
+          "tag": "LABEL",
+          "text": "Lozinka"
+        },
+        {
+          "bg": "rgb(232, 240, 254)",
+          "fill": "rgb(0, 0, 0)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_password",
+          "overflow": 0,
+          "rect": {
+            "bottom": 367.0729370117187,
+            "height": 48,
+            "left": 105.95833587646484,
+            "right": 499.0312728881836,
+            "top": 319.07293701171875,
+            "width": 393.0729370117187,
+            "x": 105.95833587646484,
+            "y": 319.07293701171875
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(108, 117, 125)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 367.0729370117187,
+            "height": 48,
+            "left": 498.03125,
+            "right": 542.03125,
+            "top": 319.07293701171875,
+            "width": 44,
+            "x": 498.03125,
+            "y": 319.07293701171875
+          },
+          "tag": "BUTTON",
+          "text": ""
+        },
+        {
+          "bg": "rgb(13, 110, 253)",
+          "fill": "rgb(255, 255, 255)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 439.0729370117187,
+            "height": 48,
+            "left": 105.95833587646484,
+            "right": 542.0312728881836,
+            "top": 391.0729370117187,
+            "width": 436.0729370117187,
+            "x": 105.95833587646484,
+            "y": 391.0729370117187
+          },
+          "tag": "BUTTON",
+          "text": "Prijavi se"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/login/",
+      "width": 768
+    },
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 214.8541717529297,
+            "height": 24,
+            "left": 356.66668701171875,
+            "right": 575.4166870117188,
+            "top": 190.8541717529297,
+            "width": 218.75,
+            "x": 356.66668701171875,
+            "y": 190.8541717529297
+          },
+          "tag": "LABEL",
+          "text": "Korisni\u010dko ime ili email adresa"
+        },
+        {
+          "bg": "rgb(232, 240, 254)",
+          "fill": "rgb(0, 0, 0)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_username",
+          "overflow": 0,
+          "rect": {
+            "bottom": 270.8541717529297,
+            "height": 48,
+            "left": 356.66668701171875,
+            "right": 963.3333740234376,
+            "top": 222.8541717529297,
+            "width": 606.6666870117188,
+            "x": 356.66668701171875,
+            "y": 222.8541717529297
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 318.85418701171875,
+            "height": 24,
+            "left": 356.66668701171875,
+            "right": 411.7396049499512,
+            "top": 294.85418701171875,
+            "width": 55.07291793823242,
+            "x": 356.66668701171875,
+            "y": 294.85418701171875
+          },
+          "tag": "LABEL",
+          "text": "Lozinka"
+        },
+        {
+          "bg": "rgb(232, 240, 254)",
+          "fill": "rgb(0, 0, 0)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_password",
+          "overflow": 0,
+          "rect": {
+            "bottom": 374.8541870117187,
+            "height": 48,
+            "left": 356.66668701171875,
+            "right": 920.3333740234376,
+            "top": 326.85418701171875,
+            "width": 563.6666870117188,
+            "x": 356.66668701171875,
+            "y": 326.85418701171875
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(108, 117, 125)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 374.8541870117187,
+            "height": 48,
+            "left": 919.3333740234376,
+            "right": 963.3333740234376,
+            "top": 326.85418701171875,
+            "width": 44,
+            "x": 919.3333740234376,
+            "y": 326.85418701171875
+          },
+          "tag": "BUTTON",
+          "text": ""
+        },
+        {
+          "bg": "rgb(13, 110, 253)",
+          "fill": "rgb(255, 255, 255)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 446.8541870117187,
+            "height": 48,
+            "left": 356.66668701171875,
+            "right": 963.3333740234376,
+            "top": 398.8541870117187,
+            "width": 606.6666870117188,
+            "x": 356.66668701171875,
+            "y": 398.8541870117187
+          },
+          "tag": "BUTTON",
+          "text": "Prijavi se"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/login/",
+      "width": 1440
+    },
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 214.11459350585935,
+            "height": 24,
+            "left": 48.66666793823242,
+            "right": 154.7708396911621,
+            "top": 190.11459350585935,
+            "width": 106.10417175292967,
+            "x": 48.66666793823242,
+            "y": 190.11459350585935
+          },
+          "tag": "LABEL",
+          "text": "Korisni\u010dko ime"
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_username",
+          "overflow": 0,
+          "rect": {
+            "bottom": 270.1145935058594,
+            "height": 48,
+            "left": 48.66666793823242,
+            "right": 232.0000114440918,
+            "top": 222.11459350585935,
+            "width": 183.33334350585935,
+            "x": 48.66666793823242,
+            "y": 222.11459350585935
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 318.1145935058594,
+            "height": 24,
+            "left": 48.66666793823242,
+            "right": 134.79166793823242,
+            "top": 294.1145935058594,
+            "width": 86.125,
+            "x": 48.66666793823242,
+            "y": 294.1145935058594
+          },
+          "tag": "LABEL",
+          "text": "Naziv bloga"
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_blog_name",
+          "overflow": 0,
+          "rect": {
+            "bottom": 374.1145935058594,
+            "height": 48,
+            "left": 48.66666793823242,
+            "right": 232.0000114440918,
+            "top": 326.1145935058594,
+            "width": 183.33334350585935,
+            "x": 48.66666793823242,
+            "y": 326.1145935058594
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 422.1145935058594,
+            "height": 24,
+            "left": 48.66666793823242,
+            "right": 139.76041793823242,
+            "top": 398.1145935058594,
+            "width": 91.09375,
+            "x": 48.66666793823242,
+            "y": 398.1145935058594
+          },
+          "tag": "LABEL",
+          "text": "Email adresa"
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_email",
+          "overflow": 0,
+          "rect": {
+            "bottom": 478.1145935058594,
+            "height": 48,
+            "left": 48.66666793823242,
+            "right": 232.0000114440918,
+            "top": 430.1145935058594,
+            "width": 183.33334350585935,
+            "x": 48.66666793823242,
+            "y": 430.1145935058594
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 526.1145935058594,
+            "height": 24,
+            "left": 48.66666793823242,
+            "right": 103.73958587646484,
+            "top": 502.1145935058594,
+            "width": 55.07291793823242,
+            "x": 48.66666793823242,
+            "y": 502.1145935058594
+          },
+          "tag": "LABEL",
+          "text": "Lozinka"
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_password1",
+          "overflow": 0,
+          "rect": {
+            "bottom": 582.1146240234375,
+            "height": 48,
+            "left": 48.66666793823242,
+            "right": 189.0000114440918,
+            "top": 534.1146240234375,
+            "width": 140.33334350585938,
+            "x": 48.66666793823242,
+            "y": 534.1146240234375
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(108, 117, 125)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 582.1146240234375,
+            "height": 48,
+            "left": 188,
+            "right": 232,
+            "top": 534.1146240234375,
+            "width": 44,
+            "x": 188,
+            "y": 534.1146240234375
+          },
+          "tag": "BUTTON",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(33, 37, 41, 0.75)",
+          "font": "14px / 21px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 691.1146240234375,
+            "height": 105,
+            "left": 48.66666793823242,
+            "right": 232.0000114440918,
+            "top": 586.1146240234375,
+            "width": 183.33334350585935,
+            "x": 48.66666793823242,
+            "y": 586.1146240234375
+          },
+          "tag": "DIV",
+          "text": "Lozinka mora imati najmanje 10 znakova. Nemoj koristiti samo brojeve, pre\u010destu lozinku ili podatke sli\u010dne korisni\u010dkom imenu."
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 739.1146240234375,
+            "height": 24,
+            "left": 48.66666793823242,
+            "right": 157.35416793823242,
+            "top": 715.1146240234375,
+            "width": 108.6875,
+            "x": 48.66666793823242,
+            "y": 715.1146240234375
+          },
+          "tag": "LABEL",
+          "text": "Potvrdi lozinku"
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_password2",
+          "overflow": 0,
+          "rect": {
+            "bottom": 795.1146240234375,
+            "height": 48,
+            "left": 48.66666793823242,
+            "right": 189.0000114440918,
+            "top": 747.1146240234375,
+            "width": 140.33334350585938,
+            "x": 48.66666793823242,
+            "y": 747.1146240234375
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(108, 117, 125)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 795.1146240234375,
+            "height": 48,
+            "left": 188,
+            "right": 232,
+            "top": 747.1146240234375,
+            "width": 44,
+            "x": 188,
+            "y": 747.1146240234375
+          },
+          "tag": "BUTTON",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(33, 37, 41, 0.75)",
+          "font": "14px / 21px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 841.1146240234375,
+            "height": 42,
+            "left": 48.66666793823242,
+            "right": 232.0000114440918,
+            "top": 799.1146240234375,
+            "width": 183.33334350585935,
+            "x": 48.66666793823242,
+            "y": 799.1146240234375
+          },
+          "tag": "DIV",
+          "text": "Ponovno upi\u0161i istu lozinku za potvrdu."
+        },
+        {
+          "bg": "rgb(13, 110, 253)",
+          "fill": "rgb(255, 255, 255)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 913.1146240234376,
+            "height": 48,
+            "left": 48.66666793823242,
+            "right": 232.0000114440918,
+            "top": 865.1146240234375,
+            "width": 183.33334350585935,
+            "x": 48.66666793823242,
+            "y": 865.1146240234375
+          },
+          "tag": "BUTTON",
+          "text": "Registriraj se"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/register/",
+      "width": 320
+    },
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 214.61459350585935,
+            "height": 24,
+            "left": 48.66666793823242,
+            "right": 154.7708396911621,
+            "top": 190.61459350585935,
+            "width": 106.10417175292967,
+            "x": 48.66666793823242,
+            "y": 190.61459350585935
+          },
+          "tag": "LABEL",
+          "text": "Korisni\u010dko ime"
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_username",
+          "overflow": 0,
+          "rect": {
+            "bottom": 270.6145935058594,
+            "height": 48,
+            "left": 48.66666793823242,
+            "right": 302.0000114440918,
+            "top": 222.61459350585935,
+            "width": 253.33334350585935,
+            "x": 48.66666793823242,
+            "y": 222.61459350585935
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 318.6145935058594,
+            "height": 24,
+            "left": 48.66666793823242,
+            "right": 134.79166793823242,
+            "top": 294.6145935058594,
+            "width": 86.125,
+            "x": 48.66666793823242,
+            "y": 294.6145935058594
+          },
+          "tag": "LABEL",
+          "text": "Naziv bloga"
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_blog_name",
+          "overflow": 0,
+          "rect": {
+            "bottom": 374.6145935058594,
+            "height": 48,
+            "left": 48.66666793823242,
+            "right": 302.0000114440918,
+            "top": 326.6145935058594,
+            "width": 253.33334350585935,
+            "x": 48.66666793823242,
+            "y": 326.6145935058594
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 422.6145935058594,
+            "height": 24,
+            "left": 48.66666793823242,
+            "right": 139.76041793823242,
+            "top": 398.6145935058594,
+            "width": 91.09375,
+            "x": 48.66666793823242,
+            "y": 398.6145935058594
+          },
+          "tag": "LABEL",
+          "text": "Email adresa"
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_email",
+          "overflow": 0,
+          "rect": {
+            "bottom": 478.6145935058594,
+            "height": 48,
+            "left": 48.66666793823242,
+            "right": 302.0000114440918,
+            "top": 430.6145935058594,
+            "width": 253.33334350585935,
+            "x": 48.66666793823242,
+            "y": 430.6145935058594
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 526.6145935058594,
+            "height": 24,
+            "left": 48.66666793823242,
+            "right": 103.73958587646484,
+            "top": 502.6145935058594,
+            "width": 55.07291793823242,
+            "x": 48.66666793823242,
+            "y": 502.6145935058594
+          },
+          "tag": "LABEL",
+          "text": "Lozinka"
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_password1",
+          "overflow": 0,
+          "rect": {
+            "bottom": 582.6146240234375,
+            "height": 48,
+            "left": 48.66666793823242,
+            "right": 259.0000114440918,
+            "top": 534.6146240234375,
+            "width": 210.33334350585935,
+            "x": 48.66666793823242,
+            "y": 534.6146240234375
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(108, 117, 125)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 582.6146240234375,
+            "height": 48,
+            "left": 258,
+            "right": 302,
+            "top": 534.6146240234375,
+            "width": 44,
+            "x": 258,
+            "y": 534.6146240234375
+          },
+          "tag": "BUTTON",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(33, 37, 41, 0.75)",
+          "font": "14px / 21px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 670.6146240234375,
+            "height": 84,
+            "left": 48.66666793823242,
+            "right": 302.0000114440918,
+            "top": 586.6146240234375,
+            "width": 253.33334350585935,
+            "x": 48.66666793823242,
+            "y": 586.6146240234375
+          },
+          "tag": "DIV",
+          "text": "Lozinka mora imati najmanje 10 znakova. Nemoj koristiti samo brojeve, pre\u010destu lozinku ili podatke sli\u010dne korisni\u010dkom imenu."
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 718.6146240234375,
+            "height": 24,
+            "left": 48.66666793823242,
+            "right": 157.35416793823242,
+            "top": 694.6146240234375,
+            "width": 108.6875,
+            "x": 48.66666793823242,
+            "y": 694.6146240234375
+          },
+          "tag": "LABEL",
+          "text": "Potvrdi lozinku"
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_password2",
+          "overflow": 0,
+          "rect": {
+            "bottom": 774.6146240234375,
+            "height": 48,
+            "left": 48.66666793823242,
+            "right": 259.0000114440918,
+            "top": 726.6146240234375,
+            "width": 210.33334350585935,
+            "x": 48.66666793823242,
+            "y": 726.6146240234375
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(108, 117, 125)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 774.6146240234375,
+            "height": 48,
+            "left": 258,
+            "right": 302,
+            "top": 726.6146240234375,
+            "width": 44,
+            "x": 258,
+            "y": 726.6146240234375
+          },
+          "tag": "BUTTON",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(33, 37, 41, 0.75)",
+          "font": "14px / 21px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 799.6146240234375,
+            "height": 21,
+            "left": 48.66666793823242,
+            "right": 302.0000114440918,
+            "top": 778.6146240234375,
+            "width": 253.33334350585935,
+            "x": 48.66666793823242,
+            "y": 778.6146240234375
+          },
+          "tag": "DIV",
+          "text": "Ponovno upi\u0161i istu lozinku za potvrdu."
+        },
+        {
+          "bg": "rgb(13, 110, 253)",
+          "fill": "rgb(255, 255, 255)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 871.6146240234375,
+            "height": 48,
+            "left": 48.66666793823242,
+            "right": 302.0000114440918,
+            "top": 823.6146240234375,
+            "width": 253.33334350585935,
+            "x": 48.66666793823242,
+            "y": 823.6146240234375
+          },
+          "tag": "BUTTON",
+          "text": "Registriraj se"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/register/",
+      "width": 390
+    },
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 197.33334350585935,
+            "height": 24,
+            "left": 105.95833587646484,
+            "right": 212.06250762939453,
+            "top": 173.33334350585938,
+            "width": 106.10417175292967,
+            "x": 105.95833587646484,
+            "y": 173.33334350585938
+          },
+          "tag": "LABEL",
+          "text": "Korisni\u010dko ime"
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_username",
+          "overflow": 0,
+          "rect": {
+            "bottom": 253.33334350585935,
+            "height": 48,
+            "left": 105.95833587646484,
+            "right": 299.98958587646484,
+            "top": 205.33334350585935,
+            "width": 194.03125,
+            "x": 105.95833587646484,
+            "y": 205.33334350585935
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 197.33334350585935,
+            "height": 24,
+            "left": 323.9895935058594,
+            "right": 410.1145935058594,
+            "top": 173.33334350585938,
+            "width": 86.125,
+            "x": 323.9895935058594,
+            "y": 173.33334350585938
+          },
+          "tag": "LABEL",
+          "text": "Naziv bloga"
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_blog_name",
+          "overflow": 0,
+          "rect": {
+            "bottom": 253.33334350585935,
+            "height": 48,
+            "left": 323.9895935058594,
+            "right": 518.0208435058594,
+            "top": 205.33334350585935,
+            "width": 194.03125,
+            "x": 323.9895935058594,
+            "y": 205.33334350585935
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 301.3333435058594,
+            "height": 24,
+            "left": 105.95833587646484,
+            "right": 197.05208587646484,
+            "top": 277.3333435058594,
+            "width": 91.09375,
+            "x": 105.95833587646484,
+            "y": 277.3333435058594
+          },
+          "tag": "LABEL",
+          "text": "Email adresa"
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_email",
+          "overflow": 0,
+          "rect": {
+            "bottom": 357.3333435058594,
+            "height": 48,
+            "left": 105.95833587646484,
+            "right": 518.0312728881836,
+            "top": 309.3333435058594,
+            "width": 412.0729370117187,
+            "x": 105.95833587646484,
+            "y": 309.3333435058594
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 405.3333435058594,
+            "height": 24,
+            "left": 105.95833587646484,
+            "right": 161.0312538146973,
+            "top": 381.3333435058594,
+            "width": 55.07291793823242,
+            "x": 105.95833587646484,
+            "y": 381.3333435058594
+          },
+          "tag": "LABEL",
+          "text": "Lozinka"
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_password1",
+          "overflow": 0,
+          "rect": {
+            "bottom": 461.3333435058594,
+            "height": 48,
+            "left": 105.95833587646484,
+            "right": 475.0312728881836,
+            "top": 413.3333435058594,
+            "width": 369.0729370117187,
+            "x": 105.95833587646484,
+            "y": 413.3333435058594
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(108, 117, 125)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 461.3333435058594,
+            "height": 48,
+            "left": 474.03125,
+            "right": 518.03125,
+            "top": 413.3333435058594,
+            "width": 44,
+            "x": 474.03125,
+            "y": 413.3333435058594
+          },
+          "tag": "BUTTON",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(33, 37, 41, 0.75)",
+          "font": "14px / 21px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 507.3333435058594,
+            "height": 42,
+            "left": 105.95833587646484,
+            "right": 518.0312728881836,
+            "top": 465.3333435058594,
+            "width": 412.0729370117187,
+            "x": 105.95833587646484,
+            "y": 465.3333435058594
+          },
+          "tag": "DIV",
+          "text": "Lozinka mora imati najmanje 10 znakova. Nemoj koristiti samo brojeve, pre\u010destu lozinku ili podatke sli\u010dne korisni\u010dkom imenu."
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 555.3333740234375,
+            "height": 24,
+            "left": 105.95833587646484,
+            "right": 214.64583587646484,
+            "top": 531.3333740234375,
+            "width": 108.6875,
+            "x": 105.95833587646484,
+            "y": 531.3333740234375
+          },
+          "tag": "LABEL",
+          "text": "Potvrdi lozinku"
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_password2",
+          "overflow": 0,
+          "rect": {
+            "bottom": 611.3333740234375,
+            "height": 48,
+            "left": 105.95833587646484,
+            "right": 475.0312728881836,
+            "top": 563.3333740234375,
+            "width": 369.0729370117187,
+            "x": 105.95833587646484,
+            "y": 563.3333740234375
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(108, 117, 125)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 611.3333740234375,
+            "height": 48,
+            "left": 474.03125,
+            "right": 518.03125,
+            "top": 563.3333740234375,
+            "width": 44,
+            "x": 474.03125,
+            "y": 563.3333740234375
+          },
+          "tag": "BUTTON",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(33, 37, 41, 0.75)",
+          "font": "14px / 21px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 636.3333740234375,
+            "height": 21,
+            "left": 105.95833587646484,
+            "right": 518.0312728881836,
+            "top": 615.3333740234375,
+            "width": 412.0729370117187,
+            "x": 105.95833587646484,
+            "y": 615.3333740234375
+          },
+          "tag": "DIV",
+          "text": "Ponovno upi\u0161i istu lozinku za potvrdu."
+        },
+        {
+          "bg": "rgb(13, 110, 253)",
+          "fill": "rgb(255, 255, 255)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 708.3333740234375,
+            "height": 48,
+            "left": 105.95833587646484,
+            "right": 518.0312728881836,
+            "top": 660.3333740234375,
+            "width": 412.0729370117187,
+            "x": 105.95833587646484,
+            "y": 660.3333740234375
+          },
+          "tag": "BUTTON",
+          "text": "Registriraj se"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/register/",
+      "width": 768
+    },
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 200.4479217529297,
+            "height": 24,
+            "left": 304.66668701171875,
+            "right": 410.7708587646485,
+            "top": 176.4479217529297,
+            "width": 106.10417175292967,
+            "x": 304.66668701171875,
+            "y": 176.4479217529297
+          },
+          "tag": "LABEL",
+          "text": "Korisni\u010dko ime"
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_username",
+          "overflow": 0,
+          "rect": {
+            "bottom": 256.4479217529297,
+            "height": 48,
+            "left": 304.66668701171875,
+            "right": 635.9896240234375,
+            "top": 208.4479217529297,
+            "width": 331.32293701171875,
+            "x": 304.66668701171875,
+            "y": 208.4479217529297
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 200.4479217529297,
+            "height": 24,
+            "left": 659.9896240234375,
+            "right": 746.1146240234375,
+            "top": 176.4479217529297,
+            "width": 86.125,
+            "x": 659.9896240234375,
+            "y": 176.4479217529297
+          },
+          "tag": "LABEL",
+          "text": "Naziv bloga"
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_blog_name",
+          "overflow": 0,
+          "rect": {
+            "bottom": 256.4479217529297,
+            "height": 48,
+            "left": 659.9896240234375,
+            "right": 991.3125610351562,
+            "top": 208.4479217529297,
+            "width": 331.32293701171875,
+            "x": 659.9896240234375,
+            "y": 208.4479217529297
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 304.44793701171875,
+            "height": 24,
+            "left": 304.66668701171875,
+            "right": 395.7604370117187,
+            "top": 280.44793701171875,
+            "width": 91.09375,
+            "x": 304.66668701171875,
+            "y": 280.44793701171875
+          },
+          "tag": "LABEL",
+          "text": "Email adresa"
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_email",
+          "overflow": 0,
+          "rect": {
+            "bottom": 360.4479370117187,
+            "height": 48,
+            "left": 304.66668701171875,
+            "right": 991.3229370117188,
+            "top": 312.44793701171875,
+            "width": 686.65625,
+            "x": 304.66668701171875,
+            "y": 312.44793701171875
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 408.4479370117187,
+            "height": 24,
+            "left": 304.66668701171875,
+            "right": 359.7396049499512,
+            "top": 384.4479370117187,
+            "width": 55.07291793823242,
+            "x": 304.66668701171875,
+            "y": 384.4479370117187
+          },
+          "tag": "LABEL",
+          "text": "Lozinka"
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_password1",
+          "overflow": 0,
+          "rect": {
+            "bottom": 464.4479370117187,
+            "height": 48,
+            "left": 304.66668701171875,
+            "right": 948.3229370117188,
+            "top": 416.4479370117187,
+            "width": 643.65625,
+            "x": 304.66668701171875,
+            "y": 416.4479370117187
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(108, 117, 125)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 464.4479370117187,
+            "height": 48,
+            "left": 947.3229370117188,
+            "right": 991.3229370117188,
+            "top": 416.4479370117187,
+            "width": 44,
+            "x": 947.3229370117188,
+            "y": 416.4479370117187
+          },
+          "tag": "BUTTON",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(33, 37, 41, 0.75)",
+          "font": "14px / 21px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 510.4479370117187,
+            "height": 42,
+            "left": 304.66668701171875,
+            "right": 991.3229370117188,
+            "top": 468.4479370117187,
+            "width": 686.65625,
+            "x": 304.66668701171875,
+            "y": 468.4479370117187
+          },
+          "tag": "DIV",
+          "text": "Lozinka mora imati najmanje 10 znakova. Nemoj koristiti samo brojeve, pre\u010destu lozinku ili podatke sli\u010dne korisni\u010dkom imenu."
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 558.4479370117188,
+            "height": 24,
+            "left": 304.66668701171875,
+            "right": 413.3541870117187,
+            "top": 534.4479370117188,
+            "width": 108.6875,
+            "x": 304.66668701171875,
+            "y": 534.4479370117188
+          },
+          "tag": "LABEL",
+          "text": "Potvrdi lozinku"
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_password2",
+          "overflow": 0,
+          "rect": {
+            "bottom": 614.4479370117188,
+            "height": 48,
+            "left": 304.66668701171875,
+            "right": 948.3229370117188,
+            "top": 566.4479370117188,
+            "width": 643.65625,
+            "x": 304.66668701171875,
+            "y": 566.4479370117188
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(108, 117, 125)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 614.4479370117188,
+            "height": 48,
+            "left": 947.3229370117188,
+            "right": 991.3229370117188,
+            "top": 566.4479370117188,
+            "width": 44,
+            "x": 947.3229370117188,
+            "y": 566.4479370117188
+          },
+          "tag": "BUTTON",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgba(33, 37, 41, 0.75)",
+          "font": "14px / 21px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 639.4479370117188,
+            "height": 21,
+            "left": 304.66668701171875,
+            "right": 991.3229370117188,
+            "top": 618.4479370117188,
+            "width": 686.65625,
+            "x": 304.66668701171875,
+            "y": 618.4479370117188
+          },
+          "tag": "DIV",
+          "text": "Ponovno upi\u0161i istu lozinku za potvrdu."
+        },
+        {
+          "bg": "rgb(13, 110, 253)",
+          "fill": "rgb(255, 255, 255)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 711.4479370117188,
+            "height": 48,
+            "left": 304.66668701171875,
+            "right": 991.3229370117188,
+            "top": 663.4479370117188,
+            "width": 686.65625,
+            "x": 304.66668701171875,
+            "y": 663.4479370117188
+          },
+          "tag": "BUTTON",
+          "text": "Registriraj se"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/register/",
+      "width": 1440
+    },
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 294.1145935058594,
+            "height": 24,
+            "left": 40.66666793823242,
+            "right": 131.76041793823242,
+            "top": 270.1145935058594,
+            "width": 91.09375,
+            "x": 40.66666793823242,
+            "y": 270.1145935058594
+          },
+          "tag": "LABEL",
+          "text": "Email adresa"
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "fill": "rgb(0, 0, 0)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_email",
+          "overflow": 0,
+          "rect": {
+            "bottom": 350.1145935058594,
+            "height": 48,
+            "left": 40.66666793823242,
+            "right": 279.3333396911621,
+            "top": 302.1145935058594,
+            "width": 238.6666717529297,
+            "x": 40.66666793823242,
+            "y": 302.1145935058594
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgb(13, 110, 253)",
+          "fill": "rgb(255, 255, 255)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 414.1145935058594,
+            "height": 48,
+            "left": 40.66666793823242,
+            "right": 279.3333396911621,
+            "top": 366.1145935058594,
+            "width": 238.6666717529297,
+            "x": 40.66666793823242,
+            "y": 366.1145935058594
+          },
+          "tag": "BUTTON",
+          "text": "Po\u0161alji link"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/password-reset/",
+      "width": 320
+    },
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 270.6145935058594,
+            "height": 24,
+            "left": 40.66666793823242,
+            "right": 131.76041793823242,
+            "top": 246.61459350585935,
+            "width": 91.09375,
+            "x": 40.66666793823242,
+            "y": 246.61459350585935
+          },
+          "tag": "LABEL",
+          "text": "Email adresa"
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "fill": "rgb(0, 0, 0)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_email",
+          "overflow": 0,
+          "rect": {
+            "bottom": 326.6145935058594,
+            "height": 48,
+            "left": 40.66666793823242,
+            "right": 349.3333549499512,
+            "top": 278.6145935058594,
+            "width": 308.66668701171875,
+            "x": 40.66666793823242,
+            "y": 278.6145935058594
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgb(13, 110, 253)",
+          "fill": "rgb(255, 255, 255)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 390.6145935058594,
+            "height": 48,
+            "left": 40.66666793823242,
+            "right": 349.3333549499512,
+            "top": 342.6145935058594,
+            "width": 308.66668701171875,
+            "x": 40.66666793823242,
+            "y": 342.6145935058594
+          },
+          "tag": "BUTTON",
+          "text": "Po\u0161alji link"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/password-reset/",
+      "width": 390
+    },
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 253.33334350585935,
+            "height": 24,
+            "left": 200.64584350585935,
+            "right": 291.7395935058594,
+            "top": 229.33334350585935,
+            "width": 91.09375,
+            "x": 200.64584350585935,
+            "y": 229.33334350585935
+          },
+          "tag": "LABEL",
+          "text": "Email adresa"
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "fill": "rgb(0, 0, 0)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_email",
+          "overflow": 0,
+          "rect": {
+            "bottom": 309.3333435058594,
+            "height": 48,
+            "left": 200.64584350585935,
+            "right": 447.3541870117187,
+            "top": 261.3333435058594,
+            "width": 246.70834350585935,
+            "x": 200.64584350585935,
+            "y": 261.3333435058594
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgb(13, 110, 253)",
+          "fill": "rgb(255, 255, 255)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 373.3333435058594,
+            "height": 48,
+            "left": 200.64584350585935,
+            "right": 447.3541870117187,
+            "top": 325.3333435058594,
+            "width": 246.70834350585935,
+            "x": 200.64584350585935,
+            "y": 325.3333435058594
+          },
+          "tag": "BUTTON",
+          "text": "Po\u0161alji link"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/password-reset/",
+      "width": 768
+    },
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 208.4479217529297,
+            "height": 24,
+            "left": 376.6666870117187,
+            "right": 467.7604370117187,
+            "top": 184.4479217529297,
+            "width": 91.09375,
+            "x": 376.6666870117187,
+            "y": 184.4479217529297
+          },
+          "tag": "LABEL",
+          "text": "Email adresa"
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "fill": "rgb(0, 0, 0)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_email",
+          "overflow": 0,
+          "rect": {
+            "bottom": 264.4479217529297,
+            "height": 48,
+            "left": 376.6666870117187,
+            "right": 943.3333740234376,
+            "top": 216.4479217529297,
+            "width": 566.6666870117188,
+            "x": 376.6666870117187,
+            "y": 216.4479217529297
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgb(13, 110, 253)",
+          "fill": "rgb(255, 255, 255)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 328.44793701171875,
+            "height": 48,
+            "left": 376.6666870117187,
+            "right": 943.3333740234376,
+            "top": 280.44793701171875,
+            "width": 566.6666870117188,
+            "x": 376.6666870117187,
+            "y": 280.44793701171875
+          },
+          "tag": "BUTTON",
+          "text": "Po\u0161alji link"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/password-reset/",
+      "width": 1440
+    }
+  ],
+  "login_errors": [
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgb(248, 215, 218)",
+          "fill": "rgb(88, 21, 28)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 397.6770858764648,
+            "height": 105.33333587646484,
+            "left": 48.66666793823242,
+            "right": 256.0000114440918,
+            "top": 292.34375,
+            "width": 207.33334350585935,
+            "x": 48.66666793823242,
+            "y": 292.34375
+          },
+          "tag": "DIV",
+          "text": "Podaci za prijavu nisu ispravni. Preostalo poku\u0161aja: 4."
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 461.6770935058594,
+            "height": 48,
+            "left": 48.66666793823242,
+            "right": 256.0000114440918,
+            "top": 413.6770935058594,
+            "width": 207.33334350585935,
+            "x": 48.66666793823242,
+            "y": 413.6770935058594
+          },
+          "tag": "LABEL",
+          "text": "Korisni\u010dko ime ili email adresa"
+        },
+        {
+          "bg": "rgb(232, 240, 254)",
+          "fill": "rgb(0, 0, 0)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_username",
+          "overflow": 0,
+          "rect": {
+            "bottom": 517.6770935058594,
+            "height": 48,
+            "left": 48.66666793823242,
+            "right": 256.0000114440918,
+            "top": 469.6770935058594,
+            "width": 207.33334350585935,
+            "x": 48.66666793823242,
+            "y": 469.6770935058594
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 565.6771240234375,
+            "height": 24,
+            "left": 48.66666793823242,
+            "right": 103.73958587646484,
+            "top": 541.6771240234375,
+            "width": 55.07291793823242,
+            "x": 48.66666793823242,
+            "y": 541.6771240234375
+          },
+          "tag": "LABEL",
+          "text": "Lozinka"
+        },
+        {
+          "bg": "rgb(232, 240, 254)",
+          "fill": "rgb(0, 0, 0)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_password",
+          "overflow": 0,
+          "rect": {
+            "bottom": 621.6771240234375,
+            "height": 48,
+            "left": 48.66666793823242,
+            "right": 213.0000114440918,
+            "top": 573.6771240234375,
+            "width": 164.33334350585938,
+            "x": 48.66666793823242,
+            "y": 573.6771240234375
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(108, 117, 125)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 621.6771240234375,
+            "height": 48,
+            "left": 212,
+            "right": 256,
+            "top": 573.6771240234375,
+            "width": 44,
+            "x": 212,
+            "y": 573.6771240234375
+          },
+          "tag": "BUTTON",
+          "text": ""
+        },
+        {
+          "bg": "rgb(13, 110, 253)",
+          "fill": "rgb(255, 255, 255)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 693.6771240234375,
+            "height": 48,
+            "left": 48.66666793823242,
+            "right": 256.0000114440918,
+            "top": 645.6771240234375,
+            "width": 207.33334350585935,
+            "x": 48.66666793823242,
+            "y": 645.6771240234375
+          },
+          "tag": "BUTTON",
+          "text": "Prijavi se"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/login/",
+      "width": 320
+    },
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgb(248, 215, 218)",
+          "fill": "rgb(88, 21, 28)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 374.9375228881836,
+            "height": 81.33333587646484,
+            "left": 48.66666793823242,
+            "right": 326.0000114440918,
+            "top": 293.60418701171875,
+            "width": 277.3333435058594,
+            "x": 48.66666793823242,
+            "y": 293.60418701171875
+          },
+          "tag": "DIV",
+          "text": "Podaci za prijavu nisu ispravni. Preostalo poku\u0161aja: 4."
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 414.9375,
+            "height": 24,
+            "left": 48.66666793823242,
+            "right": 267.4166679382324,
+            "top": 390.9375,
+            "width": 218.75,
+            "x": 48.66666793823242,
+            "y": 390.9375
+          },
+          "tag": "LABEL",
+          "text": "Korisni\u010dko ime ili email adresa"
+        },
+        {
+          "bg": "rgb(232, 240, 254)",
+          "fill": "rgb(0, 0, 0)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_username",
+          "overflow": 0,
+          "rect": {
+            "bottom": 470.9375,
+            "height": 48,
+            "left": 48.66666793823242,
+            "right": 326.0000114440918,
+            "top": 422.9375,
+            "width": 277.3333435058594,
+            "x": 48.66666793823242,
+            "y": 422.9375
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 518.9375,
+            "height": 24,
+            "left": 48.66666793823242,
+            "right": 103.73958587646484,
+            "top": 494.9375,
+            "width": 55.07291793823242,
+            "x": 48.66666793823242,
+            "y": 494.9375
+          },
+          "tag": "LABEL",
+          "text": "Lozinka"
+        },
+        {
+          "bg": "rgb(232, 240, 254)",
+          "fill": "rgb(0, 0, 0)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_password",
+          "overflow": 0,
+          "rect": {
+            "bottom": 574.9375,
+            "height": 48,
+            "left": 48.66666793823242,
+            "right": 283.0000114440918,
+            "top": 526.9375,
+            "width": 234.33334350585935,
+            "x": 48.66666793823242,
+            "y": 526.9375
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(108, 117, 125)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 574.9375,
+            "height": 48,
+            "left": 282,
+            "right": 326,
+            "top": 526.9375,
+            "width": 44,
+            "x": 282,
+            "y": 526.9375
+          },
+          "tag": "BUTTON",
+          "text": ""
+        },
+        {
+          "bg": "rgb(13, 110, 253)",
+          "fill": "rgb(255, 255, 255)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 646.9375,
+            "height": 48,
+            "left": 48.66666793823242,
+            "right": 326.0000114440918,
+            "top": 598.9375,
+            "width": 277.3333435058594,
+            "x": 48.66666793823242,
+            "y": 598.9375
+          },
+          "tag": "BUTTON",
+          "text": "Prijavi se"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/login/",
+      "width": 390
+    },
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgb(248, 215, 218)",
+          "fill": "rgb(88, 21, 28)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 313.73958587646484,
+            "height": 57.33333587646485,
+            "left": 105.95833587646484,
+            "right": 542.0312728881836,
+            "top": 256.40625,
+            "width": 436.0729370117187,
+            "x": 105.95833587646484,
+            "y": 256.40625
+          },
+          "tag": "DIV",
+          "text": "Podaci za prijavu nisu ispravni. Preostalo poku\u0161aja: 4."
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 353.7395935058594,
+            "height": 24,
+            "left": 105.95833587646484,
+            "right": 324.70833587646484,
+            "top": 329.7395935058594,
+            "width": 218.75,
+            "x": 105.95833587646484,
+            "y": 329.7395935058594
+          },
+          "tag": "LABEL",
+          "text": "Korisni\u010dko ime ili email adresa"
+        },
+        {
+          "bg": "rgb(232, 240, 254)",
+          "fill": "rgb(0, 0, 0)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_username",
+          "overflow": 0,
+          "rect": {
+            "bottom": 409.7395935058594,
+            "height": 48,
+            "left": 105.95833587646484,
+            "right": 542.0312728881836,
+            "top": 361.7395935058594,
+            "width": 436.0729370117187,
+            "x": 105.95833587646484,
+            "y": 361.7395935058594
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 457.7395935058594,
+            "height": 24,
+            "left": 105.95833587646484,
+            "right": 161.0312538146973,
+            "top": 433.7395935058594,
+            "width": 55.07291793823242,
+            "x": 105.95833587646484,
+            "y": 433.7395935058594
+          },
+          "tag": "LABEL",
+          "text": "Lozinka"
+        },
+        {
+          "bg": "rgb(232, 240, 254)",
+          "fill": "rgb(0, 0, 0)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_password",
+          "overflow": 0,
+          "rect": {
+            "bottom": 513.7395935058594,
+            "height": 48,
+            "left": 105.95833587646484,
+            "right": 499.0312728881836,
+            "top": 465.7395935058594,
+            "width": 393.0729370117187,
+            "x": 105.95833587646484,
+            "y": 465.7395935058594
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(108, 117, 125)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 513.7395935058594,
+            "height": 48,
+            "left": 498.03125,
+            "right": 542.03125,
+            "top": 465.7395935058594,
+            "width": 44,
+            "x": 498.03125,
+            "y": 465.7395935058594
+          },
+          "tag": "BUTTON",
+          "text": ""
+        },
+        {
+          "bg": "rgb(13, 110, 253)",
+          "fill": "rgb(255, 255, 255)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 585.7396240234375,
+            "height": 48,
+            "left": 105.95833587646484,
+            "right": 542.0312728881836,
+            "top": 537.7396240234375,
+            "width": 436.0729370117187,
+            "x": 105.95833587646484,
+            "y": 537.7396240234375
+          },
+          "tag": "BUTTON",
+          "text": "Prijavi se"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/login/",
+      "width": 768
+    },
+    {
+      "doc": 0,
+      "items": [
+        {
+          "bg": "rgb(248, 215, 218)",
+          "fill": "rgb(88, 21, 28)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 321.52083587646484,
+            "height": 57.33333587646485,
+            "left": 356.66668701171875,
+            "right": 963.3333740234376,
+            "top": 264.1875,
+            "width": 606.6666870117188,
+            "x": 356.66668701171875,
+            "y": 264.1875
+          },
+          "tag": "DIV",
+          "text": "Podaci za prijavu nisu ispravni. Preostalo poku\u0161aja: 4."
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 361.5208435058594,
+            "height": 24,
+            "left": 356.66668701171875,
+            "right": 575.4166870117188,
+            "top": 337.5208435058594,
+            "width": 218.75,
+            "x": 356.66668701171875,
+            "y": 337.5208435058594
+          },
+          "tag": "LABEL",
+          "text": "Korisni\u010dko ime ili email adresa"
+        },
+        {
+          "bg": "rgb(232, 240, 254)",
+          "fill": "rgb(0, 0, 0)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_username",
+          "overflow": 0,
+          "rect": {
+            "bottom": 417.5208435058594,
+            "height": 48,
+            "left": 356.66668701171875,
+            "right": 963.3333740234376,
+            "top": 369.5208435058594,
+            "width": 606.6666870117188,
+            "x": 356.66668701171875,
+            "y": 369.5208435058594
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 465.5208435058594,
+            "height": 24,
+            "left": 356.66668701171875,
+            "right": 411.7396049499512,
+            "top": 441.5208435058594,
+            "width": 55.07291793823242,
+            "x": 356.66668701171875,
+            "y": 441.5208435058594
+          },
+          "tag": "LABEL",
+          "text": "Lozinka"
+        },
+        {
+          "bg": "rgb(232, 240, 254)",
+          "fill": "rgb(0, 0, 0)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_password",
+          "overflow": 0,
+          "rect": {
+            "bottom": 521.5208435058594,
+            "height": 48,
+            "left": 356.66668701171875,
+            "right": 920.3333740234376,
+            "top": 473.5208435058594,
+            "width": 563.6666870117188,
+            "x": 356.66668701171875,
+            "y": 473.5208435058594
+          },
+          "tag": "INPUT",
+          "text": ""
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "fill": "rgb(108, 117, 125)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 521.5208435058594,
+            "height": 48,
+            "left": 919.3333740234376,
+            "right": 963.3333740234376,
+            "top": 473.5208435058594,
+            "width": 44,
+            "x": 919.3333740234376,
+            "y": 473.5208435058594
+          },
+          "tag": "BUTTON",
+          "text": ""
+        },
+        {
+          "bg": "rgb(13, 110, 253)",
+          "fill": "rgb(255, 255, 255)",
+          "font": "600 16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "overflow": 0,
+          "rect": {
+            "bottom": 593.5208740234375,
+            "height": 48,
+            "left": 356.66668701171875,
+            "right": 963.3333740234376,
+            "top": 545.5208740234375,
+            "width": 606.6666870117188,
+            "x": 356.66668701171875,
+            "y": 545.5208740234375
+          },
+          "tag": "BUTTON",
+          "text": "Prijavi se"
+        }
+      ],
+      "url": "http://127.0.0.1:8017/login/",
+      "width": 1440
+    }
+  ],
+  "raw_directory": "C:\\Users\\mario\\Documents\\Codex\\2026-10-10\\z\\work\\u02-baseline",
+  "tests": {
+    "count": 226,
+    "seconds": 64.337,
+    "check": "pass",
+    "migration_drift": "none"
+  },
+  "limitations": [
+    "Not full U02 acceptance",
+    "No account creation or reset email",
+    "Reset screenshot scaled within canvas"
+  ]
+}

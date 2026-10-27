@@ -1382,6 +1382,20 @@
 /* Main content comes first in source; preserve the established left column visually. */
 .blog-main-left-column { order: -1; }
 </style>
+{% if request.resolver_match.url_name == 'login' or request.resolver_match.url_name == 'register' or request.resolver_match.url_name == 'password_reset' %}
+<style>
+/* Authentication forms have no sidebar content and need the full containing row. */
+.blog-main-layout-row > .blog-main-content-column { width: 100%; max-width: 100%; flex: 0 0 100%; }
+.blog-main-layout-row > .blog-main-left-column,
+.blog-main-layout-row > .blog-main-right-column { display: none; }
+.registration-card input,
+.registration-card button,
+.password-reset-card input,
+.password-reset-card button { min-height: 48px; }
+.registration-card .form-text { font-size: .875rem; line-height: 1.5; }
+.password-reset-card input { width: 100%; max-width: 100%; box-sizing: border-box; font-size: 1rem; }
+</style>
+{% endif %}
 {% if request.resolver_match.url_name == 'home' or request.resolver_match.url_name == 'search' %}
 <style>
 .discovery-layout-row .filter-link:not(.active):not(:hover) {

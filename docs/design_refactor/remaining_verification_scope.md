@@ -1,4 +1,6 @@
-# Remaining acceptance scope after Phase103p
+# Remaining acceptance scope after Phase103q
+
+Phase103q repairs U02 containing width, registration help/touch sizing and public password-reset template collision with Django admin. Twelve four-width final form states have doc0; registration768 fields54.677 to194.031px, help8 to14px, registration/reset controls48px. Wrong-login message and native required/email validation exercised; no account creation or mail. Sixteen sampled designed blog/detail controls identical to103p.226 tests64.337s/check/migration green. See phase103q_auth_forms.md. U02 server registration errors, full keyboard/contrast and successful workflows remain open; U03 reset result/token pages are not accepted by this change.
 
 Phase103p closes factory Planine/Nebeski calendar-month and archive caption surfaces: actual #43566c/#475569 on opaque #f1f5fb, calculated6.889/6.926. Sixteen paired blog/detail states320/390/768/1440 retain sampled geometry/fonts; document and final caption local excess0. Safe30/45; phone390/desktop1440 viewport captures inspected;224 tests64.852s/check/migration green. Desktop colors intentionally changed. See phase103p_caption_surfaces.md. Weekdays/days, other photo zones, desktop targets, factoryDefault and U02-U12 remain open. This supersedes older open references to these factory captions only.
 

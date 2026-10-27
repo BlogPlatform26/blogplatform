@@ -81,7 +81,7 @@ path("blog/settings/export-posts/", export_my_posts, name="export_my_posts"),
         path('delete-avatar/', views.delete_avatar, name='delete_avatar'),
     path(
         "password-reset/", auth_views.PasswordResetView.as_view(
-            template_name="registration/password_reset_form.html"
+            template_name="blog/password_reset_form.html"
         ),
         name="password_reset"
     ),
