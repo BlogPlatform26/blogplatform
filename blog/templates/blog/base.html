@@ -4170,6 +4170,30 @@ html body .blog-header-main .blog-page-subtitle {
 }
 {% endif %}
 
+/* Phase 103p: factory captions need a stable surface above the photograph. */
+{% if blog.profile.template == 'planine_u_magli' and blog_preferences.active_design_customization.box_title_color == '#6c7d8f' %}
+html body .calendar-title, html body .archive-title {
+    color: #43566c !important;
+    -webkit-text-fill-color: currentColor !important;
+    background: #f1f5fb !important;
+}
+html body .calendar-title span {
+    color: #43566c !important;
+    -webkit-text-fill-color: currentColor !important;
+}
+{% endif %}
+{% if blog.profile.template == 'nebeski_mir' and blog_preferences.active_design_customization.box_title_color == '#8f96aa' %}
+html body .calendar-title, html body .archive-title {
+    color: #475569 !important;
+    -webkit-text-fill-color: currentColor !important;
+    background: #f1f5fb !important;
+}
+html body .calendar-title span {
+    color: #475569 !important;
+    -webkit-text-fill-color: currentColor !important;
+}
+{% endif %}
+
 /* Phase 101k: opaque weekday ink for confirmed phone label failures. */
 @media (max-width: 575.98px) {
 {% if blog.profile.template == 'vodopad_u_magli' %}

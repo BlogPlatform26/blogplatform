@@ -1,0 +1,81 @@
+{
+  "phase": "103p",
+  "states": 16,
+  "widths": [
+    320,
+    390,
+    768,
+    1440
+  ],
+  "paired_rects_identical": true,
+  "paired_fonts_identical": true,
+  "document_excess": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "caption_local_excess": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "calculated_contrast_on_f1f5fb": {
+    "43566c": 6.889,
+    "475569": 6.926
+  },
+  "raw_directory": "C:\\Users\\mario\\Documents\\Codex\\2026-10-10\\z\\work\\phase103p",
+  "authoritative_after": "after-final.json",
+  "rejected_intermediate": "after.json (archive backgrounds still translucent)",
+  "safe": [
+    "http://127.0.0.1:8017/post/45/a-longer-editorial-story-for-mobile-and-desktop-verification/",
+    "http://127.0.0.1:8017/post/30/a-longer-editorial-story-for-mobile-and-desktop-verification/"
+  ],
+  "limitations": [
+    "Custom palettes not browser accepted",
+    "Calendar weekdays and days outside scope",
+    "Calculated CSS contrast is not rendered-pixel proof",
+    "Screenshots are viewport captures, not full pages"
+  ]
+}

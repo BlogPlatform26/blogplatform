@@ -1,4 +1,6 @@
-# Remaining acceptance scope after Phase103o
+# Remaining acceptance scope after Phase103p
+
+Phase103p closes factory Planine/Nebeski calendar-month and archive caption surfaces: actual #43566c/#475569 on opaque #f1f5fb, calculated6.889/6.926. Sixteen paired blog/detail states320/390/768/1440 retain sampled geometry/fonts; document and final caption local excess0. Safe30/45; phone390/desktop1440 viewport captures inspected;224 tests64.852s/check/migration green. Desktop colors intentionally changed. See phase103p_caption_surfaces.md. Weekdays/days, other photo zones, desktop targets, factoryDefault and U02-U12 remain open. This supersedes older open references to these factory captions only.
 
 Phase103o closes standard factory Nebeski desktop body backing/ink: opaque #f1f5fb with actual #475569, calculated6.926:1. Eight paired states preserve sampled geometry; phone/tablet sampled styles identical. Desktop colors intentionally changed. See phase103o_nebeski_desktop_body.md; other photo zones/custom content remain.
 
