@@ -1,4 +1,6 @@
-# Remaining acceptance scope after Phase103t
+# Remaining acceptance scope after Phase103u
+
+Phase103u closes the reset-complete login target:37.333 to48px at320/390/768/1440, doc/local excess0, heading/paragraph unchanged, Enter to login verified.231 tests50.613s/check/migration green. Phone390 viewport inspected after screenshot recovery; scaled white canvas limits visual proof. Direct GET is not reset-success workflow evidence. Browser success/expiry and other U02-U12 scope remain open. See phase103u_reset_complete_target.md.
 
 Phase103t adds server-only reset workflow evidence: in-memory email link, mismatch preserving password hash, successful reset and login, token reuse rejection, and expiration at61s with60s test timeout.231 tests64.047s/check/migration green. Tests-only; no app changes, persistent QA credentials or real email delivery. Browser success/expiry acceptance and complete-page login target remain open. See phase103t_reset_server_workflow.md.
 

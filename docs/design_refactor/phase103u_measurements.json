@@ -1,0 +1,470 @@
+{
+  "before": [
+    {
+      "items": [
+        {
+          "bg": "rgb(255, 255, 255)",
+          "color": "rgb(33, 37, 41)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "height": 205.1875,
+          "local": 0,
+          "tag": "DIV",
+          "text": "Lozinka je promijenjena\n                Sada se možeš prijaviti novom lozinkom.\n                \n                    Prijavi se",
+          "width": 272,
+          "x": 24,
+          "y": 114.1875
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(33, 37, 41)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "500 22.72px / 27.264px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "height": 54.52083587646485,
+          "local": 0,
+          "tag": "H3",
+          "text": "Lozinka je promijenjena",
+          "width": 238.6666717529297,
+          "x": 40.66666793823242,
+          "y": 130.8541717529297
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgba(33, 37, 41, 0.75)",
+          "fill": "rgba(33, 37, 41, 0.75)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "height": 48,
+          "local": 0,
+          "tag": "P",
+          "text": "Sada se možeš prijaviti novom lozinkom.",
+          "width": 238.6666717529297,
+          "x": 40.66666793823242,
+          "y": 201.375
+        },
+        {
+          "bg": "rgb(13, 110, 253)",
+          "color": "rgb(255, 255, 255)",
+          "fill": "rgb(255, 255, 255)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "height": 37.33333587646485,
+          "local": 0,
+          "tag": "A",
+          "text": "Prijavi se",
+          "width": 86.83333587646484,
+          "x": 116.58333587646484,
+          "y": 265.375
+        }
+      ],
+      "overflow": 0,
+      "width": 320
+    },
+    {
+      "items": [
+        {
+          "bg": "rgb(255, 255, 255)",
+          "color": "rgb(33, 37, 41)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "height": 154.42709350585938,
+          "local": 0,
+          "tag": "DIV",
+          "text": "Lozinka je promijenjena\n                Sada se možeš prijaviti novom lozinkom.\n                \n                    Prijavi se",
+          "width": 342,
+          "x": 24,
+          "y": 114.1875
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(33, 37, 41)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "500 23.14px / 27.768px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "height": 27.760417938232425,
+          "local": 0,
+          "tag": "H3",
+          "text": "Lozinka je promijenjena",
+          "width": 308.66668701171875,
+          "x": 40.66666793823242,
+          "y": 130.8541717529297
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgba(33, 37, 41, 0.75)",
+          "fill": "rgba(33, 37, 41, 0.75)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "height": 24,
+          "local": 0,
+          "tag": "P",
+          "text": "Sada se možeš prijaviti novom lozinkom.",
+          "width": 308.66668701171875,
+          "x": 40.66666793823242,
+          "y": 174.61459350585938
+        },
+        {
+          "bg": "rgb(13, 110, 253)",
+          "color": "rgb(255, 255, 255)",
+          "fill": "rgb(255, 255, 255)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "height": 37.33333587646485,
+          "local": 0,
+          "tag": "A",
+          "text": "Prijavi se",
+          "width": 86.83333587646484,
+          "x": 151.58334350585938,
+          "y": 214.61459350585935
+        }
+      ],
+      "overflow": 0,
+      "width": 390
+    },
+    {
+      "items": [
+        {
+          "bg": "rgb(255, 255, 255)",
+          "color": "rgb(33, 37, 41)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "height": 211.625,
+          "local": 0,
+          "tag": "DIV",
+          "text": "Lozinka je promijenjena\n                Sada se možeš prijaviti novom lozinkom.\n                \n                    Prijavi se",
+          "width": 280.04168701171875,
+          "x": 183.9791717529297,
+          "y": 70.1875
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(33, 37, 41)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "500 25.408px / 30.4896px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "height": 60.95833587646485,
+          "local": 0,
+          "tag": "H3",
+          "text": "Lozinka je promijenjena",
+          "width": 246.70834350585935,
+          "x": 200.64584350585935,
+          "y": 86.85417175292969
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgba(33, 37, 41, 0.75)",
+          "fill": "rgba(33, 37, 41, 0.75)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "height": 48,
+          "local": 0,
+          "tag": "P",
+          "text": "Sada se možeš prijaviti novom lozinkom.",
+          "width": 246.70834350585935,
+          "x": 200.64584350585935,
+          "y": 163.8125
+        },
+        {
+          "bg": "rgb(13, 110, 253)",
+          "color": "rgb(255, 255, 255)",
+          "fill": "rgb(255, 255, 255)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "height": 37.33333587646485,
+          "local": 0,
+          "tag": "A",
+          "text": "Prijavi se",
+          "width": 86.83333587646484,
+          "x": 280.5833435058594,
+          "y": 227.8125
+        }
+      ],
+      "overflow": 0,
+      "width": 768
+    },
+    {
+      "items": [
+        {
+          "bg": "rgb(255, 255, 255)",
+          "color": "rgb(33, 37, 41)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "height": 160.2604217529297,
+          "local": 0,
+          "tag": "DIV",
+          "text": "Lozinka je promijenjena\n                Sada se možeš prijaviti novom lozinkom.\n                \n                    Prijavi se",
+          "width": 600,
+          "x": 360,
+          "y": 70.1875
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(33, 37, 41)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "500 28px / 33.6px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "height": 33.59375,
+          "local": 0,
+          "tag": "H3",
+          "text": "Lozinka je promijenjena",
+          "width": 566.6666870117188,
+          "x": 376.6666870117187,
+          "y": 86.85417175292969
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgba(33, 37, 41, 0.75)",
+          "fill": "rgba(33, 37, 41, 0.75)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "height": 24,
+          "local": 0,
+          "tag": "P",
+          "text": "Sada se možeš prijaviti novom lozinkom.",
+          "width": 566.6666870117188,
+          "x": 376.6666870117187,
+          "y": 136.4479217529297
+        },
+        {
+          "bg": "rgb(13, 110, 253)",
+          "color": "rgb(255, 255, 255)",
+          "fill": "rgb(255, 255, 255)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "height": 37.33333587646485,
+          "local": 0,
+          "tag": "A",
+          "text": "Prijavi se",
+          "width": 86.83333587646484,
+          "x": 616.5833740234375,
+          "y": 176.4479217529297
+        }
+      ],
+      "overflow": 0,
+      "width": 1440
+    }
+  ],
+  "after": [
+    {
+      "items": [
+        {
+          "bg": "rgb(255, 255, 255)",
+          "color": "rgb(33, 37, 41)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "height": 215.8541717529297,
+          "local": 0,
+          "tag": "DIV",
+          "text": "Lozinka je promijenjena\n                Sada se možeš prijaviti novom lozinkom.\n                \n                    Prijavi se",
+          "width": 272,
+          "x": 24,
+          "y": 114.1875
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(33, 37, 41)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "500 22.72px / 27.264px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "height": 54.52083587646485,
+          "local": 0,
+          "tag": "H3",
+          "text": "Lozinka je promijenjena",
+          "width": 238.6666717529297,
+          "x": 40.66666793823242,
+          "y": 130.8541717529297
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgba(33, 37, 41, 0.75)",
+          "fill": "rgba(33, 37, 41, 0.75)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "height": 48,
+          "local": 0,
+          "tag": "P",
+          "text": "Sada se možeš prijaviti novom lozinkom.",
+          "width": 238.6666717529297,
+          "x": 40.66666793823242,
+          "y": 201.375
+        },
+        {
+          "bg": "rgb(13, 110, 253)",
+          "color": "rgb(255, 255, 255)",
+          "fill": "rgb(255, 255, 255)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "height": 48,
+          "local": 0,
+          "tag": "A",
+          "text": "Prijavi se",
+          "width": 86.83333587646484,
+          "x": 116.58333587646484,
+          "y": 265.375
+        }
+      ],
+      "overflow": 0,
+      "width": 320
+    },
+    {
+      "items": [
+        {
+          "bg": "rgb(255, 255, 255)",
+          "color": "rgb(33, 37, 41)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "height": 165.09375,
+          "local": 0,
+          "tag": "DIV",
+          "text": "Lozinka je promijenjena\n                Sada se možeš prijaviti novom lozinkom.\n                \n                    Prijavi se",
+          "width": 342,
+          "x": 24,
+          "y": 114.1875
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(33, 37, 41)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "500 23.14px / 27.768px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "height": 27.760417938232425,
+          "local": 0,
+          "tag": "H3",
+          "text": "Lozinka je promijenjena",
+          "width": 308.66668701171875,
+          "x": 40.66666793823242,
+          "y": 130.8541717529297
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgba(33, 37, 41, 0.75)",
+          "fill": "rgba(33, 37, 41, 0.75)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "height": 24,
+          "local": 0,
+          "tag": "P",
+          "text": "Sada se možeš prijaviti novom lozinkom.",
+          "width": 308.66668701171875,
+          "x": 40.66666793823242,
+          "y": 174.61459350585938
+        },
+        {
+          "bg": "rgb(13, 110, 253)",
+          "color": "rgb(255, 255, 255)",
+          "fill": "rgb(255, 255, 255)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "height": 48,
+          "local": 0,
+          "tag": "A",
+          "text": "Prijavi se",
+          "width": 86.83333587646484,
+          "x": 151.58334350585938,
+          "y": 214.61459350585935
+        }
+      ],
+      "overflow": 0,
+      "width": 390
+    },
+    {
+      "items": [
+        {
+          "bg": "rgb(255, 255, 255)",
+          "color": "rgb(33, 37, 41)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "height": 222.2916717529297,
+          "local": 0,
+          "tag": "DIV",
+          "text": "Lozinka je promijenjena\n                Sada se možeš prijaviti novom lozinkom.\n                \n                    Prijavi se",
+          "width": 280.04168701171875,
+          "x": 183.9791717529297,
+          "y": 70.1875
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(33, 37, 41)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "500 25.408px / 30.4896px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "height": 60.95833587646485,
+          "local": 0,
+          "tag": "H3",
+          "text": "Lozinka je promijenjena",
+          "width": 246.70834350585935,
+          "x": 200.64584350585935,
+          "y": 86.85417175292969
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgba(33, 37, 41, 0.75)",
+          "fill": "rgba(33, 37, 41, 0.75)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "height": 48,
+          "local": 0,
+          "tag": "P",
+          "text": "Sada se možeš prijaviti novom lozinkom.",
+          "width": 246.70834350585935,
+          "x": 200.64584350585935,
+          "y": 163.8125
+        },
+        {
+          "bg": "rgb(13, 110, 253)",
+          "color": "rgb(255, 255, 255)",
+          "fill": "rgb(255, 255, 255)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "height": 48,
+          "local": 0,
+          "tag": "A",
+          "text": "Prijavi se",
+          "width": 86.83333587646484,
+          "x": 280.5833435058594,
+          "y": 227.8125
+        }
+      ],
+      "overflow": 0,
+      "width": 768
+    },
+    {
+      "items": [
+        {
+          "bg": "rgb(255, 255, 255)",
+          "color": "rgb(33, 37, 41)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "height": 170.92709350585938,
+          "local": 0,
+          "tag": "DIV",
+          "text": "Lozinka je promijenjena\n                Sada se možeš prijaviti novom lozinkom.\n                \n                    Prijavi se",
+          "width": 600,
+          "x": 360,
+          "y": 70.1875
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(33, 37, 41)",
+          "fill": "rgb(33, 37, 41)",
+          "font": "500 28px / 33.6px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "height": 33.59375,
+          "local": 0,
+          "tag": "H3",
+          "text": "Lozinka je promijenjena",
+          "width": 566.6666870117188,
+          "x": 376.6666870117187,
+          "y": 86.85417175292969
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgba(33, 37, 41, 0.75)",
+          "fill": "rgba(33, 37, 41, 0.75)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "height": 24,
+          "local": 0,
+          "tag": "P",
+          "text": "Sada se možeš prijaviti novom lozinkom.",
+          "width": 566.6666870117188,
+          "x": 376.6666870117187,
+          "y": 136.4479217529297
+        },
+        {
+          "bg": "rgb(13, 110, 253)",
+          "color": "rgb(255, 255, 255)",
+          "fill": "rgb(255, 255, 255)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "height": 48,
+          "local": 0,
+          "tag": "A",
+          "text": "Prijavi se",
+          "width": 86.83333587646484,
+          "x": 616.5833740234375,
+          "y": 176.4479217529297
+        }
+      ],
+      "overflow": 0,
+      "width": 1440
+    }
+  ]
+}
