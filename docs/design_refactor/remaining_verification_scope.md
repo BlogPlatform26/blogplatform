@@ -1,4 +1,6 @@
-# Remaining acceptance scope after Phase103s
+# Remaining acceptance scope after Phase103t
+
+Phase103t adds server-only reset workflow evidence: in-memory email link, mismatch preserving password hash, successful reset and login, token reuse rejection, and expiration at61s with60s test timeout.231 tests64.047s/check/migration green. Tests-only; no app changes, persistent QA credentials or real email delivery. Browser success/expiry acceptance and complete-page login target remain open. See phase103t_reset_server_workflow.md.
 
 Phase103s removes duplicate valid-reset password toggles and gives scoped confirmation fields/buttons and invalid retry48px height. Four paired widths320/390/768/1440 have two functional toggles and doc/group excess0; empty validation and safe retry verified.229 tests52.485s/check/migration green. Phone390 viewport captures inspected. No password/email mutation; success/expired-token workflows and reset-complete login target remain open. See phase103s_reset_controls.md.
 
