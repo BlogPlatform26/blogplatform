@@ -1412,6 +1412,16 @@
 }
 </style>
 {% endif %}
+{% if request.resolver_match.url_name == 'terms_of_use' or request.resolver_match.url_name == 'privacy_policy' or request.resolver_match.url_name == 'content_rules' %}
+<style>
+@media (max-width: 767.98px) {
+    .blog-main-layout-row > .blog-main-content-column { order: -1; }
+    .blog-main-layout-row > .blog-main-left-column { order: 0; }
+    .blog-main-left-column .home-sidebar-box { margin-top: 0 !important; }
+    .blog-main-left-column .home-sidebar-box a { min-height: 48px; display: flex !important; align-items: center; }
+}
+</style>
+{% endif %}
 <div class="row align-items-start gx-4 home-main-row blog-main-layout-row {% if request.resolver_match.url_name == 'home' or request.resolver_match.url_name == 'search' %}discovery-layout-row {% endif %}{% if request.resolver_match.url_name == "home" %}home-layout-row{% endif %}{% if blog.profile.template == 'simple_retro' %} blog-main-layout-row--simple-retro{% endif %}">
 
         <!-- SREDINA -->

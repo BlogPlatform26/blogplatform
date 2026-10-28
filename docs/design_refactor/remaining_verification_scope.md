@@ -1,4 +1,6 @@
-# Remaining acceptance scope after Phase103u
+# Remaining acceptance scope after Phase103v
+
+Phase103v moves legal main content before sidebar on phones: y402.521 to114.188, navigation targets21 to48px.12 paired states across three routes/four widths have doc/local0;768/1440 sampled geometry/styles identical. No sampled content/link overlaps; native navigation to all three documents.231 tests50.958s/check/migration green;390 viewport inspected. See phase103v_legal_phone.md. U12 support/validation, full keyboard and larger-screen link targets remain open.
 
 Phase103u closes the reset-complete login target:37.333 to48px at320/390/768/1440, doc/local excess0, heading/paragraph unchanged, Enter to login verified.231 tests50.613s/check/migration green. Phone390 viewport inspected after screenshot recovery; scaled white canvas limits visual proof. Direct GET is not reset-success workflow evidence. Browser success/expiry and other U02-U12 scope remain open. See phase103u_reset_complete_target.md.
 
