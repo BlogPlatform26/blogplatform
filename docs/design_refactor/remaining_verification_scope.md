@@ -1,4 +1,6 @@
-# Remaining acceptance scope after Phase103r
+# Remaining acceptance scope after Phase103s
+
+Phase103s removes duplicate valid-reset password toggles and gives scoped confirmation fields/buttons and invalid retry48px height. Four paired widths320/390/768/1440 have two functional toggles and doc/group excess0; empty validation and safe retry verified.229 tests52.485s/check/migration green. Phone390 viewport captures inspected. No password/email mutation; success/expired-token workflows and reset-complete login target remain open. See phase103s_reset_controls.md.
 
 Phase103r resolves admin-template precedence for public reset done/confirm/complete using unique blog/ paths. Twelve direct-GET result/invalid-token layouts320/390/768/1440 have doc/local0; retry and login links verified.228 tests63.212s/check/migration green. See phase103r_reset_result_pages.md. This does not prove successful mail/password workflow, valid-token or expired-token states. Retry/login37.333px target heights remain follow-up; U03 stays open.
 

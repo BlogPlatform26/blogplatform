@@ -30,3 +30,22 @@ class PublicPasswordResetTests(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'blog/password_reset_form.html')
         self.assertTrue(response.context['form'].errors.get('email'))
+
+    def test_valid_token_shows_two_password_fields_without_manual_toggles(self):
+        from django.contrib.auth import get_user_model
+        from django.contrib.auth.tokens import default_token_generator
+        from django.utils.encoding import force_bytes
+        from django.utils.http import urlsafe_base64_encode
+
+        user = get_user_model().objects.create_user(username='reset-layout-test')
+        url = reverse('password_reset_confirm', args=[
+            urlsafe_base64_encode(force_bytes(user.pk)),
+            default_token_generator.make_token(user),
+        ])
+        response = self.client.get(url, follow=True)
+        self.assertTrue(response.context['validlink'])
+        self.assertTemplateUsed(response, 'blog/password_reset_confirm.html')
+        self.assertContains(response, 'name="new_password1"', count=1)
+        self.assertContains(response, 'name="new_password2"', count=1)
+        # The shared initializer supplies the only functional toggle per field.
+        self.assertNotContains(response, '<div class="input-group password-toggle-group">')

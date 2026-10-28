@@ -1,0 +1,1146 @@
+{
+  "before": [
+    {
+      "controls": [
+        {
+          "cls": "",
+          "id": "id_new_password1",
+          "label": null,
+          "parent": "input-group password-toggle-group",
+          "rect": {
+            "bottom": 244.11459350585935,
+            "height": 30,
+            "left": 40.66666793823242,
+            "right": 230.0000114440918,
+            "top": 214.11459350585935,
+            "width": 189.33334350585935,
+            "x": 40.66666793823242,
+            "y": 214.11459350585935
+          },
+          "tag": "INPUT"
+        },
+        {
+          "cls": "btn btn-outline-secondary password-toggle-btn",
+          "id": "",
+          "label": "Prika\u017ei lozinku",
+          "parent": "input-group password-toggle-group",
+          "rect": {
+            "bottom": 274.1145935058594,
+            "height": 30,
+            "left": 39.66666793823242,
+            "right": 83.66666793823242,
+            "top": 244.11459350585935,
+            "width": 44,
+            "x": 39.66666793823242,
+            "y": 244.11459350585935
+          },
+          "tag": "BUTTON"
+        },
+        {
+          "cls": "btn btn-outline-secondary password-toggle-btn",
+          "id": "",
+          "label": "Prika\u017ei lozinku",
+          "parent": "input-group password-toggle-group",
+          "rect": {
+            "bottom": 304.1145935058594,
+            "height": 30,
+            "left": 39.66666793823242,
+            "right": 83.66666793823242,
+            "top": 274.1145935058594,
+            "width": 44,
+            "x": 39.66666793823242,
+            "y": 274.1145935058594
+          },
+          "tag": "BUTTON"
+        },
+        {
+          "cls": "",
+          "id": "id_new_password2",
+          "label": null,
+          "parent": "input-group password-toggle-group",
+          "rect": {
+            "bottom": 575.1146240234375,
+            "height": 30,
+            "left": 40.66666793823242,
+            "right": 230.0000114440918,
+            "top": 545.1146240234375,
+            "width": 189.33334350585935,
+            "x": 40.66666793823242,
+            "y": 545.1146240234375
+          },
+          "tag": "INPUT"
+        },
+        {
+          "cls": "btn btn-outline-secondary password-toggle-btn",
+          "id": "",
+          "label": "Prika\u017ei lozinku",
+          "parent": "input-group password-toggle-group",
+          "rect": {
+            "bottom": 605.1146240234375,
+            "height": 30,
+            "left": 39.66666793823242,
+            "right": 83.66666793823242,
+            "top": 575.1146240234375,
+            "width": 44,
+            "x": 39.66666793823242,
+            "y": 575.1146240234375
+          },
+          "tag": "BUTTON"
+        },
+        {
+          "cls": "btn btn-outline-secondary password-toggle-btn",
+          "id": "",
+          "label": "Prika\u017ei lozinku",
+          "parent": "input-group password-toggle-group",
+          "rect": {
+            "bottom": 635.1146240234375,
+            "height": 30,
+            "left": 39.66666793823242,
+            "right": 83.66666793823242,
+            "top": 605.1146240234375,
+            "width": 44,
+            "x": 39.66666793823242,
+            "y": 605.1146240234375
+          },
+          "tag": "BUTTON"
+        },
+        {
+          "cls": "btn btn-primary w-100",
+          "id": "",
+          "label": null,
+          "parent": "",
+          "rect": {
+            "bottom": 688.4479598999023,
+            "height": 37.33333587646485,
+            "left": 40.66666793823242,
+            "right": 264.0000114440918,
+            "top": 651.1146240234375,
+            "width": 223.33334350585935,
+            "x": 40.66666793823242,
+            "y": 651.1146240234375
+          },
+          "tag": "BUTTON"
+        }
+      ],
+      "doc": 0,
+      "groups": [
+        {
+          "excess": 0,
+          "width": 223
+        },
+        {
+          "excess": 0,
+          "width": 223
+        },
+        {
+          "excess": 0,
+          "width": 223
+        },
+        {
+          "excess": 0,
+          "width": 223
+        }
+      ],
+      "width": 320
+    },
+    {
+      "controls": [
+        {
+          "cls": "",
+          "id": "id_new_password1",
+          "label": null,
+          "parent": "input-group password-toggle-group",
+          "rect": {
+            "bottom": 244.61459350585935,
+            "height": 30,
+            "left": 40.66666793823242,
+            "right": 230.0000114440918,
+            "top": 214.61459350585935,
+            "width": 189.33334350585935,
+            "x": 40.66666793823242,
+            "y": 214.61459350585935
+          },
+          "tag": "INPUT"
+        },
+        {
+          "cls": "btn btn-outline-secondary password-toggle-btn",
+          "id": "",
+          "label": "Prika\u017ei lozinku",
+          "parent": "input-group password-toggle-group",
+          "rect": {
+            "bottom": 244.61459350585935,
+            "height": 30,
+            "left": 229,
+            "right": 273,
+            "top": 214.61459350585935,
+            "width": 44,
+            "x": 229,
+            "y": 214.61459350585935
+          },
+          "tag": "BUTTON"
+        },
+        {
+          "cls": "btn btn-outline-secondary password-toggle-btn",
+          "id": "",
+          "label": "Prika\u017ei lozinku",
+          "parent": "input-group password-toggle-group",
+          "rect": {
+            "bottom": 274.6145935058594,
+            "height": 30,
+            "left": 39.66666793823242,
+            "right": 83.66666793823242,
+            "top": 244.61459350585935,
+            "width": 44,
+            "x": 39.66666793823242,
+            "y": 244.61459350585935
+          },
+          "tag": "BUTTON"
+        },
+        {
+          "cls": "",
+          "id": "id_new_password2",
+          "label": null,
+          "parent": "input-group password-toggle-group",
+          "rect": {
+            "bottom": 524.6145935058594,
+            "height": 30,
+            "left": 40.66666793823242,
+            "right": 230.0000114440918,
+            "top": 494.6145935058594,
+            "width": 189.33334350585935,
+            "x": 40.66666793823242,
+            "y": 494.6145935058594
+          },
+          "tag": "INPUT"
+        },
+        {
+          "cls": "btn btn-outline-secondary password-toggle-btn",
+          "id": "",
+          "label": "Prika\u017ei lozinku",
+          "parent": "input-group password-toggle-group",
+          "rect": {
+            "bottom": 524.6145935058594,
+            "height": 30,
+            "left": 229,
+            "right": 273,
+            "top": 494.6145935058594,
+            "width": 44,
+            "x": 229,
+            "y": 494.6145935058594
+          },
+          "tag": "BUTTON"
+        },
+        {
+          "cls": "btn btn-outline-secondary password-toggle-btn",
+          "id": "",
+          "label": "Prika\u017ei lozinku",
+          "parent": "input-group password-toggle-group",
+          "rect": {
+            "bottom": 554.6146240234375,
+            "height": 30,
+            "left": 39.66666793823242,
+            "right": 83.66666793823242,
+            "top": 524.6146240234375,
+            "width": 44,
+            "x": 39.66666793823242,
+            "y": 524.6146240234375
+          },
+          "tag": "BUTTON"
+        },
+        {
+          "cls": "btn btn-primary w-100",
+          "id": "",
+          "label": null,
+          "parent": "",
+          "rect": {
+            "bottom": 607.9479598999023,
+            "height": 37.33333587646485,
+            "left": 40.66666793823242,
+            "right": 334.0000114440918,
+            "top": 570.6146240234375,
+            "width": 293.3333435058594,
+            "x": 40.66666793823242,
+            "y": 570.6146240234375
+          },
+          "tag": "BUTTON"
+        }
+      ],
+      "doc": 0,
+      "groups": [
+        {
+          "excess": 0,
+          "width": 293
+        },
+        {
+          "excess": 0,
+          "width": 293
+        },
+        {
+          "excess": 0,
+          "width": 293
+        },
+        {
+          "excess": 0,
+          "width": 293
+        }
+      ],
+      "width": 390
+    },
+    {
+      "controls": [
+        {
+          "cls": "",
+          "id": "id_new_password1",
+          "label": null,
+          "parent": "input-group password-toggle-group",
+          "rect": {
+            "bottom": 203.33334350585935,
+            "height": 30,
+            "left": 200.64584350585935,
+            "right": 389.9791870117187,
+            "top": 173.33334350585938,
+            "width": 189.33334350585935,
+            "x": 200.64584350585935,
+            "y": 173.33334350585938
+          },
+          "tag": "INPUT"
+        },
+        {
+          "cls": "btn btn-outline-secondary password-toggle-btn",
+          "id": "",
+          "label": "Prika\u017ei lozinku",
+          "parent": "input-group password-toggle-group",
+          "rect": {
+            "bottom": 203.33334350585935,
+            "height": 30,
+            "left": 388.9791870117187,
+            "right": 432.9791870117187,
+            "top": 173.33334350585938,
+            "width": 44,
+            "x": 388.9791870117187,
+            "y": 173.33334350585938
+          },
+          "tag": "BUTTON"
+        },
+        {
+          "cls": "btn btn-outline-secondary password-toggle-btn",
+          "id": "",
+          "label": "Prika\u017ei lozinku",
+          "parent": "input-group password-toggle-group",
+          "rect": {
+            "bottom": 233.33334350585935,
+            "height": 30,
+            "left": 199.64584350585935,
+            "right": 243.64584350585935,
+            "top": 203.33334350585935,
+            "width": 44,
+            "x": 199.64584350585935,
+            "y": 203.33334350585935
+          },
+          "tag": "BUTTON"
+        },
+        {
+          "cls": "",
+          "id": "id_new_password2",
+          "label": null,
+          "parent": "input-group password-toggle-group",
+          "rect": {
+            "bottom": 483.3333435058594,
+            "height": 30,
+            "left": 200.64584350585935,
+            "right": 389.9791870117187,
+            "top": 453.3333435058594,
+            "width": 189.33334350585935,
+            "x": 200.64584350585935,
+            "y": 453.3333435058594
+          },
+          "tag": "INPUT"
+        },
+        {
+          "cls": "btn btn-outline-secondary password-toggle-btn",
+          "id": "",
+          "label": "Prika\u017ei lozinku",
+          "parent": "input-group password-toggle-group",
+          "rect": {
+            "bottom": 483.3333435058594,
+            "height": 30,
+            "left": 388.9791870117187,
+            "right": 432.9791870117187,
+            "top": 453.3333435058594,
+            "width": 44,
+            "x": 388.9791870117187,
+            "y": 453.3333435058594
+          },
+          "tag": "BUTTON"
+        },
+        {
+          "cls": "btn btn-outline-secondary password-toggle-btn",
+          "id": "",
+          "label": "Prika\u017ei lozinku",
+          "parent": "input-group password-toggle-group",
+          "rect": {
+            "bottom": 513.3333435058594,
+            "height": 30,
+            "left": 199.64584350585935,
+            "right": 243.64584350585935,
+            "top": 483.3333435058594,
+            "width": 44,
+            "x": 199.64584350585935,
+            "y": 483.3333435058594
+          },
+          "tag": "BUTTON"
+        },
+        {
+          "cls": "btn btn-primary w-100",
+          "id": "",
+          "label": null,
+          "parent": "",
+          "rect": {
+            "bottom": 566.6667098999023,
+            "height": 37.33333587646485,
+            "left": 200.64584350585935,
+            "right": 447.3541870117187,
+            "top": 529.3333740234375,
+            "width": 246.70834350585935,
+            "x": 200.64584350585935,
+            "y": 529.3333740234375
+          },
+          "tag": "BUTTON"
+        }
+      ],
+      "doc": 0,
+      "groups": [
+        {
+          "excess": 0,
+          "width": 247
+        },
+        {
+          "excess": 0,
+          "width": 247
+        },
+        {
+          "excess": 0,
+          "width": 247
+        },
+        {
+          "excess": 0,
+          "width": 247
+        }
+      ],
+      "width": 768
+    },
+    {
+      "controls": [
+        {
+          "cls": "",
+          "id": "id_new_password1",
+          "label": null,
+          "parent": "input-group password-toggle-group",
+          "rect": {
+            "bottom": 206.4479217529297,
+            "height": 30,
+            "left": 376.6666870117187,
+            "right": 566.0000305175781,
+            "top": 176.4479217529297,
+            "width": 189.33334350585935,
+            "x": 376.6666870117187,
+            "y": 176.4479217529297
+          },
+          "tag": "INPUT"
+        },
+        {
+          "cls": "btn btn-outline-secondary password-toggle-btn",
+          "id": "",
+          "label": "Prika\u017ei lozinku",
+          "parent": "input-group password-toggle-group",
+          "rect": {
+            "bottom": 206.4479217529297,
+            "height": 30,
+            "left": 565,
+            "right": 609,
+            "top": 176.4479217529297,
+            "width": 44,
+            "x": 565,
+            "y": 176.4479217529297
+          },
+          "tag": "BUTTON"
+        },
+        {
+          "cls": "btn btn-outline-secondary password-toggle-btn",
+          "id": "",
+          "label": "Prika\u017ei lozinku",
+          "parent": "input-group password-toggle-group",
+          "rect": {
+            "bottom": 236.4479217529297,
+            "height": 30,
+            "left": 375.6666870117187,
+            "right": 419.6666870117187,
+            "top": 206.4479217529297,
+            "width": 44,
+            "x": 375.6666870117187,
+            "y": 206.4479217529297
+          },
+          "tag": "BUTTON"
+        },
+        {
+          "cls": "",
+          "id": "id_new_password2",
+          "label": null,
+          "parent": "input-group password-toggle-group",
+          "rect": {
+            "bottom": 402.4479370117187,
+            "height": 30,
+            "left": 376.6666870117187,
+            "right": 566.0000305175781,
+            "top": 372.4479370117187,
+            "width": 189.33334350585935,
+            "x": 376.6666870117187,
+            "y": 372.4479370117187
+          },
+          "tag": "INPUT"
+        },
+        {
+          "cls": "btn btn-outline-secondary password-toggle-btn",
+          "id": "",
+          "label": "Prika\u017ei lozinku",
+          "parent": "input-group password-toggle-group",
+          "rect": {
+            "bottom": 402.4479370117187,
+            "height": 30,
+            "left": 565,
+            "right": 609,
+            "top": 372.4479370117187,
+            "width": 44,
+            "x": 565,
+            "y": 372.4479370117187
+          },
+          "tag": "BUTTON"
+        },
+        {
+          "cls": "btn btn-outline-secondary password-toggle-btn",
+          "id": "",
+          "label": "Prika\u017ei lozinku",
+          "parent": "input-group password-toggle-group",
+          "rect": {
+            "bottom": 432.4479370117187,
+            "height": 30,
+            "left": 375.6666870117187,
+            "right": 419.6666870117187,
+            "top": 402.4479370117187,
+            "width": 44,
+            "x": 375.6666870117187,
+            "y": 402.4479370117187
+          },
+          "tag": "BUTTON"
+        },
+        {
+          "cls": "btn btn-primary w-100",
+          "id": "",
+          "label": null,
+          "parent": "",
+          "rect": {
+            "bottom": 485.7812728881836,
+            "height": 37.33333587646485,
+            "left": 376.6666870117187,
+            "right": 943.3333740234376,
+            "top": 448.4479370117187,
+            "width": 566.6666870117188,
+            "x": 376.6666870117187,
+            "y": 448.4479370117187
+          },
+          "tag": "BUTTON"
+        }
+      ],
+      "doc": 0,
+      "groups": [
+        {
+          "excess": 0,
+          "width": 567
+        },
+        {
+          "excess": 0,
+          "width": 567
+        },
+        {
+          "excess": 0,
+          "width": 567
+        },
+        {
+          "excess": 0,
+          "width": 567
+        }
+      ],
+      "width": 1440
+    }
+  ],
+  "after": [
+    {
+      "controls": [
+        {
+          "background": "rgb(255, 255, 255)",
+          "cls": "",
+          "fill": "rgb(0, 0, 0)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_new_password1",
+          "label": null,
+          "parent": "input-group password-toggle-group",
+          "rect": {
+            "bottom": 262.1145935058594,
+            "height": 48,
+            "left": 40.66666793823242,
+            "right": 221.0000114440918,
+            "top": 214.11459350585935,
+            "width": 180.33334350585935,
+            "x": 40.66666793823242,
+            "y": 214.11459350585935
+          },
+          "tag": "INPUT"
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "cls": "btn btn-outline-secondary password-toggle-btn",
+          "fill": "rgb(108, 117, 125)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "label": "Prika\u017ei lozinku",
+          "parent": "input-group password-toggle-group",
+          "rect": {
+            "bottom": 262.1145935058594,
+            "height": 48,
+            "left": 220,
+            "right": 264,
+            "top": 214.11459350585935,
+            "width": 44,
+            "x": 220,
+            "y": 214.11459350585935
+          },
+          "tag": "BUTTON"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "cls": "",
+          "fill": "rgb(0, 0, 0)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_new_password2",
+          "label": null,
+          "parent": "input-group password-toggle-group",
+          "rect": {
+            "bottom": 551.1145935058594,
+            "height": 48,
+            "left": 40.66666793823242,
+            "right": 221.0000114440918,
+            "top": 503.1145935058594,
+            "width": 180.33334350585935,
+            "x": 40.66666793823242,
+            "y": 503.1145935058594
+          },
+          "tag": "INPUT"
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "cls": "btn btn-outline-secondary password-toggle-btn",
+          "fill": "rgb(108, 117, 125)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "label": "Prika\u017ei lozinku",
+          "parent": "input-group password-toggle-group",
+          "rect": {
+            "bottom": 551.1145935058594,
+            "height": 48,
+            "left": 220,
+            "right": 264,
+            "top": 503.1145935058594,
+            "width": 44,
+            "x": 220,
+            "y": 503.1145935058594
+          },
+          "tag": "BUTTON"
+        },
+        {
+          "background": "rgb(13, 110, 253)",
+          "cls": "btn btn-primary w-100",
+          "fill": "rgb(255, 255, 255)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "label": null,
+          "parent": "",
+          "rect": {
+            "bottom": 615.1146240234375,
+            "height": 48,
+            "left": 40.66666793823242,
+            "right": 264.0000114440918,
+            "top": 567.1146240234375,
+            "width": 223.33334350585935,
+            "x": 40.66666793823242,
+            "y": 567.1146240234375
+          },
+          "tag": "BUTTON"
+        }
+      ],
+      "doc": 0,
+      "groups": [
+        {
+          "excess": 0,
+          "width": 223
+        },
+        {
+          "excess": 0,
+          "width": 223
+        }
+      ],
+      "width": 320
+    },
+    {
+      "controls": [
+        {
+          "background": "rgb(255, 255, 255)",
+          "cls": "",
+          "fill": "rgb(0, 0, 0)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_new_password1",
+          "label": null,
+          "parent": "input-group password-toggle-group",
+          "rect": {
+            "bottom": 262.6145935058594,
+            "height": 48,
+            "left": 40.66666793823242,
+            "right": 291.0000114440918,
+            "top": 214.61459350585935,
+            "width": 250.33334350585935,
+            "x": 40.66666793823242,
+            "y": 214.61459350585935
+          },
+          "tag": "INPUT"
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "cls": "btn btn-outline-secondary password-toggle-btn",
+          "fill": "rgb(108, 117, 125)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "label": "Prika\u017ei lozinku",
+          "parent": "input-group password-toggle-group",
+          "rect": {
+            "bottom": 262.6145935058594,
+            "height": 48,
+            "left": 290,
+            "right": 334,
+            "top": 214.61459350585935,
+            "width": 44,
+            "x": 290,
+            "y": 214.61459350585935
+          },
+          "tag": "BUTTON"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "cls": "",
+          "fill": "rgb(0, 0, 0)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_new_password2",
+          "label": null,
+          "parent": "input-group password-toggle-group",
+          "rect": {
+            "bottom": 530.6145935058594,
+            "height": 48,
+            "left": 40.66666793823242,
+            "right": 291.0000114440918,
+            "top": 482.6145935058594,
+            "width": 250.33334350585935,
+            "x": 40.66666793823242,
+            "y": 482.6145935058594
+          },
+          "tag": "INPUT"
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "cls": "btn btn-outline-secondary password-toggle-btn",
+          "fill": "rgb(108, 117, 125)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "label": "Prika\u017ei lozinku",
+          "parent": "input-group password-toggle-group",
+          "rect": {
+            "bottom": 530.6145935058594,
+            "height": 48,
+            "left": 290,
+            "right": 334,
+            "top": 482.6145935058594,
+            "width": 44,
+            "x": 290,
+            "y": 482.6145935058594
+          },
+          "tag": "BUTTON"
+        },
+        {
+          "background": "rgb(13, 110, 253)",
+          "cls": "btn btn-primary w-100",
+          "fill": "rgb(255, 255, 255)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "label": null,
+          "parent": "",
+          "rect": {
+            "bottom": 594.6146240234375,
+            "height": 48,
+            "left": 40.66666793823242,
+            "right": 334.0000114440918,
+            "top": 546.6146240234375,
+            "width": 293.3333435058594,
+            "x": 40.66666793823242,
+            "y": 546.6146240234375
+          },
+          "tag": "BUTTON"
+        }
+      ],
+      "doc": 0,
+      "groups": [
+        {
+          "excess": 0,
+          "width": 293
+        },
+        {
+          "excess": 0,
+          "width": 293
+        }
+      ],
+      "width": 390
+    },
+    {
+      "controls": [
+        {
+          "background": "rgb(255, 255, 255)",
+          "cls": "",
+          "fill": "rgb(0, 0, 0)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_new_password1",
+          "label": null,
+          "parent": "input-group password-toggle-group",
+          "rect": {
+            "bottom": 221.33334350585935,
+            "height": 48,
+            "left": 200.64584350585935,
+            "right": 404.3541870117187,
+            "top": 173.33334350585938,
+            "width": 203.70834350585935,
+            "x": 200.64584350585935,
+            "y": 173.33334350585938
+          },
+          "tag": "INPUT"
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "cls": "btn btn-outline-secondary password-toggle-btn",
+          "fill": "rgb(108, 117, 125)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "label": "Prika\u017ei lozinku",
+          "parent": "input-group password-toggle-group",
+          "rect": {
+            "bottom": 221.33334350585935,
+            "height": 48,
+            "left": 403.3541870117187,
+            "right": 447.3541870117187,
+            "top": 173.33334350585938,
+            "width": 44,
+            "x": 403.3541870117187,
+            "y": 173.33334350585938
+          },
+          "tag": "BUTTON"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "cls": "",
+          "fill": "rgb(0, 0, 0)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_new_password2",
+          "label": null,
+          "parent": "input-group password-toggle-group",
+          "rect": {
+            "bottom": 489.3333435058594,
+            "height": 48,
+            "left": 200.64584350585935,
+            "right": 404.3541870117187,
+            "top": 441.3333435058594,
+            "width": 203.70834350585935,
+            "x": 200.64584350585935,
+            "y": 441.3333435058594
+          },
+          "tag": "INPUT"
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "cls": "btn btn-outline-secondary password-toggle-btn",
+          "fill": "rgb(108, 117, 125)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "label": "Prika\u017ei lozinku",
+          "parent": "input-group password-toggle-group",
+          "rect": {
+            "bottom": 489.3333435058594,
+            "height": 48,
+            "left": 403.3541870117187,
+            "right": 447.3541870117187,
+            "top": 441.3333435058594,
+            "width": 44,
+            "x": 403.3541870117187,
+            "y": 441.3333435058594
+          },
+          "tag": "BUTTON"
+        },
+        {
+          "background": "rgb(13, 110, 253)",
+          "cls": "btn btn-primary w-100",
+          "fill": "rgb(255, 255, 255)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "label": null,
+          "parent": "",
+          "rect": {
+            "bottom": 553.3333435058594,
+            "height": 48,
+            "left": 200.64584350585935,
+            "right": 447.3541870117187,
+            "top": 505.3333435058594,
+            "width": 246.70834350585935,
+            "x": 200.64584350585935,
+            "y": 505.3333435058594
+          },
+          "tag": "BUTTON"
+        }
+      ],
+      "doc": 0,
+      "groups": [
+        {
+          "excess": 0,
+          "width": 247
+        },
+        {
+          "excess": 0,
+          "width": 247
+        }
+      ],
+      "width": 768
+    },
+    {
+      "controls": [
+        {
+          "background": "rgb(255, 255, 255)",
+          "cls": "",
+          "fill": "rgb(0, 0, 0)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_new_password1",
+          "label": null,
+          "parent": "input-group password-toggle-group",
+          "rect": {
+            "bottom": 224.4479217529297,
+            "height": 48,
+            "left": 376.6666870117187,
+            "right": 900.3333740234375,
+            "top": 176.4479217529297,
+            "width": 523.6666870117188,
+            "x": 376.6666870117187,
+            "y": 176.4479217529297
+          },
+          "tag": "INPUT"
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "cls": "btn btn-outline-secondary password-toggle-btn",
+          "fill": "rgb(108, 117, 125)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "label": "Prika\u017ei lozinku",
+          "parent": "input-group password-toggle-group",
+          "rect": {
+            "bottom": 224.4479217529297,
+            "height": 48,
+            "left": 899.3333740234375,
+            "right": 943.3333740234376,
+            "top": 176.4479217529297,
+            "width": 44,
+            "x": 899.3333740234375,
+            "y": 176.4479217529297
+          },
+          "tag": "BUTTON"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "cls": "",
+          "fill": "rgb(0, 0, 0)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "id_new_password2",
+          "label": null,
+          "parent": "input-group password-toggle-group",
+          "rect": {
+            "bottom": 408.4479370117187,
+            "height": 48,
+            "left": 376.6666870117187,
+            "right": 900.3333740234375,
+            "top": 360.4479370117187,
+            "width": 523.6666870117188,
+            "x": 376.6666870117187,
+            "y": 360.4479370117187
+          },
+          "tag": "INPUT"
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "cls": "btn btn-outline-secondary password-toggle-btn",
+          "fill": "rgb(108, 117, 125)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "label": "Prika\u017ei lozinku",
+          "parent": "input-group password-toggle-group",
+          "rect": {
+            "bottom": 408.4479370117187,
+            "height": 48,
+            "left": 899.3333740234375,
+            "right": 943.3333740234376,
+            "top": 360.4479370117187,
+            "width": 44,
+            "x": 899.3333740234375,
+            "y": 360.4479370117187
+          },
+          "tag": "BUTTON"
+        },
+        {
+          "background": "rgb(13, 110, 253)",
+          "cls": "btn btn-primary w-100",
+          "fill": "rgb(255, 255, 255)",
+          "font": "16px / 24px system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "id": "",
+          "label": null,
+          "parent": "",
+          "rect": {
+            "bottom": 472.4479370117187,
+            "height": 48,
+            "left": 376.6666870117187,
+            "right": 943.3333740234376,
+            "top": 424.4479370117187,
+            "width": 566.6666870117188,
+            "x": 376.6666870117187,
+            "y": 424.4479370117187
+          },
+          "tag": "BUTTON"
+        }
+      ],
+      "doc": 0,
+      "groups": [
+        {
+          "excess": 0,
+          "width": 567
+        },
+        {
+          "excess": 0,
+          "width": 567
+        }
+      ],
+      "width": 1440
+    }
+  ],
+  "interactions": [
+    {
+      "labels": [
+        "Sakrij lozinku",
+        "Prika\u017ei lozinku"
+      ],
+      "types": [
+        "text",
+        "password"
+      ]
+    },
+    {
+      "types": [
+        "password",
+        "text"
+      ]
+    },
+    {
+      "active": "id_new_password1",
+      "missing": true
+    }
+  ],
+  "invalid-controls": [
+    {
+      "doc": 0,
+      "link": [
+        {
+          "excess": 0,
+          "rect": {
+            "bottom": 286.1145935058594,
+            "height": 48,
+            "left": 91.83333587646484,
+            "right": 228.16667938232425,
+            "top": 238.11459350585935,
+            "width": 136.33334350585938,
+            "x": 91.83333587646484,
+            "y": 238.11459350585935
+          },
+          "text": "Zatra\u017ei novi link"
+        }
+      ],
+      "width": 320
+    },
+    {
+      "doc": 0,
+      "link": [
+        {
+          "excess": 0,
+          "rect": {
+            "bottom": 286.6145935058594,
+            "height": 48,
+            "left": 126.83333587646484,
+            "right": 263.1666793823242,
+            "top": 238.61459350585935,
+            "width": 136.33334350585938,
+            "x": 126.83333587646484,
+            "y": 238.61459350585935
+          },
+          "text": "Zatra\u017ei novi link"
+        }
+      ],
+      "width": 390
+    },
+    {
+      "doc": 0,
+      "link": [
+        {
+          "excess": 0,
+          "rect": {
+            "bottom": 245.33334350585935,
+            "height": 48,
+            "left": 255.83334350585935,
+            "right": 392.1666870117187,
+            "top": 197.33334350585935,
+            "width": 136.33334350585938,
+            "x": 255.83334350585935,
+            "y": 197.33334350585935
+          },
+          "text": "Zatra\u017ei novi link"
+        }
+      ],
+      "width": 768
+    },
+    {
+      "doc": 0,
+      "link": [
+        {
+          "excess": 0,
+          "rect": {
+            "bottom": 224.4479217529297,
+            "height": 48,
+            "left": 591.8333740234375,
+            "right": 728.1667175292969,
+            "top": 176.4479217529297,
+            "width": 136.33334350585938,
+            "x": 591.8333740234375,
+            "y": 176.4479217529297
+          },
+          "text": "Zatra\u017ei novi link"
+        }
+      ],
+      "width": 1440
+    }
+  ]
+}

@@ -1394,6 +1394,9 @@
 .password-reset-card button { min-height: 48px; }
 .registration-card .form-text { font-size: .875rem; line-height: 1.5; }
 .password-reset-card input { width: 100%; max-width: 100%; box-sizing: border-box; font-size: 1rem; }
+.password-reset-confirm-card input { flex: 1 1 0; width: 0; min-width: 0; min-height: 48px; padding: .375rem .75rem; border: 1px solid #ced4da; border-radius: .375rem 0 0 .375rem; font: inherit; }
+.password-reset-confirm-card .password-toggle-group { flex-wrap: nowrap; }
+.password-reset-confirm-card .btn { min-height: 48px; display: inline-flex; align-items: center; justify-content: center; }
 </style>
 {% endif %}
 {% if request.resolver_match.url_name == 'home' or request.resolver_match.url_name == 'search' %}
