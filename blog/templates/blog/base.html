@@ -1572,7 +1572,14 @@
                 <div class="sidebar-title">Pomoć i podrška</div>
                 <div class="card-body">
 
-                    <form method="POST" action="{% url 'submit_bug_report' %}">
+                    <style>
+                    @media (max-width: 767.98px) {
+                        .support-request-form .support-type-option { min-width: 48px; min-height: 48px; display: inline-flex; align-items: center; gap: 4px; }
+                        .support-request-form .form-control,
+                        .support-request-form button[type="submit"] { min-height: 48px; }
+                    }
+                    </style>
+                    <form class="support-request-form" method="POST" action="{% url 'submit_bug_report' %}">
                         {% csrf_token %}
 
                         <div class="support-type-row mb-3">
@@ -1592,17 +1599,17 @@
 
                         <div class="mb-2">
                             <input type="text" name="title" class="form-control"
-                                placeholder="Naslov" required>
+                                placeholder="Naslov" aria-label="Naslov" required>
                         </div>
 
                         <div class="mb-2">
                             <textarea name="description" class="form-control" rows="4"
-                                    placeholder="Poruka" required></textarea>
+                                    placeholder="Poruka" aria-label="Poruka" required></textarea>
                         </div>
 
                         <div class="mb-2">
                             <input type="email" name="email" class="form-control"
-                                placeholder="Email (opcionalno)">
+                                placeholder="Email (opcionalno)" aria-label="Email (opcionalno)">
                         </div>
 
                         <button type="submit" class="btn btn-sm btn-outline-primary w-100">
