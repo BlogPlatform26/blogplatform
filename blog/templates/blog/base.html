@@ -1379,6 +1379,12 @@
     {% endif %}
 
 <style>
+/* Tablet home: keep forms readable without narrowing the main feed. */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .home-layout-row > .blog-main-content-column { width: 100%; max-width: 100%; flex: 0 0 100%; order: -1; }
+    .home-layout-row > .blog-main-left-column,
+    .home-layout-row > .blog-main-right-column { width: 50%; max-width: 50%; flex: 0 0 50%; order: 0; }
+}
 /* Main content comes first in source; preserve the established left column visually. */
 .blog-main-left-column { order: -1; }
 </style>
