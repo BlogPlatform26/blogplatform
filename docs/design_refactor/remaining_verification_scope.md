@@ -1,4 +1,8 @@
-# Remaining acceptance scope after Phase103v
+# Remaining acceptance scope after support controls and server verification
+
+Support controls (103x, d36ab7f) close phone 48px targets and accessible field names; four paired widths have no sampled local/document excess or control intersections, with tablet/desktop sampled geometry and colors unchanged. See phase103x_support_controls.md. Support server tests now cover all three categories, contact/owner persistence, invalid-input rejection and retained reports on mail failure; see support_server_acceptance.md. Browser success/error presentation, full keyboard use and narrow tablet fields remain open. Real SMTP delivery is not proven by in-memory email tests.
+
+The user explicitly reaffirmed full functionality as well as visual quality. Preserve all original functional requirements. Group remaining verification by complete user journeys, without repeating already closed layout fixes. Historical entries below retain their original scope; later evidence supersedes older open-item statements.
 
 Phase103v moves legal main content before sidebar on phones: y402.521 to114.188, navigation targets21 to48px.12 paired states across three routes/four widths have doc/local0;768/1440 sampled geometry/styles identical. No sampled content/link overlaps; native navigation to all three documents.231 tests50.958s/check/migration green;390 viewport inspected. See phase103v_legal_phone.md. U12 support/validation, full keyboard and larger-screen link targets remain open.
 
