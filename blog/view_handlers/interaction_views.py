@@ -11,6 +11,7 @@ from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse
 from django.views.decorators.http import require_POST
 from django.utils.text import slugify
+from django.utils.http import url_has_allowed_host_and_scheme
 
 from blog.forms import BugReportForm, CommentForm
 from blog.models import Comment, Follow, Like, Notification, PollOption, PollVote, Post, QuizAnswer, QuizOption
@@ -321,6 +322,9 @@ def poll_vote(request, post_id):
 @require_POST
 def submit_bug_report(request):
     form = BugReportForm(request.POST)
+    return_to = request.POST.get('return_to') or request.META.get('HTTP_REFERER', '')
+    if not url_has_allowed_host_and_scheme(return_to, allowed_hosts={request.get_host()}, require_https=request.is_secure()) or return_to.rstrip('/').endswith('/bug-report'):
+        return_to = reverse('home')
     request_type = (request.POST.get('request_type') or 'kvar').strip().lower()
     request_type_map = {
         'kvar': ('bug', 'KVAR', 'Kvar je prijavljen.'),
@@ -376,9 +380,9 @@ def submit_bug_report(request):
             message.send(fail_silently=False)
         except Exception as exc:
             messages.warning(request, f'Poruka je spremljena, ali mail nije poslan: {exc}')
-            return redirect(request.META.get('HTTP_REFERER', 'home'))
+            return redirect(return_to)
 
         messages.success(request, success_message)
     else:
-        messages.error(request, 'Nije poslano. Provjeri polja i pokušaj opet.')
-    return redirect(request.META.get('HTTP_REFERER', 'home'))
+        return render(request, 'blog/support_retry.html', {'form': form, 'return_to': return_to}, status=400)
+    return redirect(return_to)

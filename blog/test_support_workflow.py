@@ -50,8 +50,10 @@ class SupportWorkflowTests(TestCase):
                         {'request_type': 'unknown'}]:
             with self.subTest(changes=changes):
                 response = self.post_report(**changes)
-                self.assertEqual(response.status_code, 302)
-                self.assertIn('Nije poslano.', str(list(get_messages(response.wsgi_request))[0]))
+                self.assertEqual(response.status_code, 400)
+                self.assertTemplateUsed(response, 'blog/support_retry.html')
+                self.assertTrue(response.context['form'].errors)
+                self.assertEqual(response.context['form']['description'].value(), changes.get('description', 'Synthetic message'))
         self.assertEqual(BugReport.objects.count(), 0)
         self.assertEqual(len(mail.outbox), 0)
 
@@ -77,3 +79,13 @@ class SupportWorkflowTests(TestCase):
     def test_get_cannot_create_report(self):
         self.assertEqual(self.client.get(reverse('submit_bug_report')).status_code, 405)
         self.assertEqual(BugReport.objects.count(), 0)
+
+    def test_whitespace_error_preserves_message_and_can_be_corrected(self):
+        response = self.post_report(title='   ', request_type='pitanje')
+        self.assertEqual(response.status_code, 400)
+        self.assertEqual(response.context['form']['description'].value(), 'Synthetic message')
+        self.assertEqual(response.context['form']['request_type'].value(), 'pitanje')
+        self.assertEqual(BugReport.objects.count(), 0)
+        response = self.post_report(title='Corrected', request_type='pitanje', return_to='http://testserver/')
+        self.assertRedirects(response, 'http://testserver/', fetch_redirect_response=False)
+        self.assertEqual(BugReport.objects.get().title, '[PITANJE] Corrected')
