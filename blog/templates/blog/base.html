@@ -1388,6 +1388,30 @@
 /* Main content comes first in source; preserve the established left column visually. */
 .blog-main-left-column { order: -1; }
 {% if blog.profile.template == 'default' %}
+.calendar-scroll-hint { display: none; }
+@media (max-width: 479.98px) { .calendar-scroll-hint { display: block; } }
+html body .comment-body .comment-text .bp-comment-word {
+    max-width: 100%;
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+}
+@media (max-width: 991.98px) {
+    .blog-main-layout-row .calendar-box { width: 100%; max-width: 100%; min-width: 0; }
+    .blog-main-layout-row .calendar-scroll-region { max-width: 100%; overflow-x: auto; }
+    .blog-main-layout-row .calendar-weekdays,
+    .blog-main-layout-row .calendar-grid { min-width: 344px; grid-template-columns: repeat(7, minmax(44px, 1fr)); gap: 6px; }
+    .blog-main-layout-row .calendar-grid { grid-auto-rows: minmax(44px, auto); }
+    .blog-main-layout-row .calendar-day-today { transform: none; }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .blog-main-layout-row > .blog-main-content-column,
+    .blog-main-layout-row > .blog-main-left-column,
+    .blog-main-layout-row > .blog-main-right-column { width: 100%; max-width: 100%; flex: 0 0 100%; }
+    .blog-main-layout-row > .blog-main-content-column { order: -1; }
+    .blog-main-layout-row > .blog-main-left-column { order: 0; }
+    html body .blog-main-layout-row .page-top-align { margin-top: 24px !important; }
+    html body .blog-main-layout-row .blog-posts-shell > .page-top-align { margin-top: 0 !important; }
+}
 /* Default phone reading flow: show posts before supporting sidebars. */
 @media (max-width: 767.98px) {
     .blog-main-layout-row > .blog-main-content-column { order: -1; }
