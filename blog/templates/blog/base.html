@@ -1387,6 +1387,15 @@
 }
 /* Main content comes first in source; preserve the established left column visually. */
 .blog-main-left-column { order: -1; }
+{% if blog.profile.template == 'default' %}
+/* Default phone reading flow: show posts before supporting sidebars. */
+@media (max-width: 767.98px) {
+    .blog-main-layout-row > .blog-main-content-column { order: -1; }
+    .blog-main-layout-row > .blog-main-left-column { order: 0; }
+    html body .blog-main-layout-row .page-top-align { margin-top: 24px !important; }
+    html body .blog-main-layout-row .blog-posts-shell > .page-top-align { margin-top: 0 !important; }
+}
+{% endif %}
 </style>
 {% if request.resolver_match.url_name == 'submit_bug_report' or request.resolver_match.url_name == 'login' or request.resolver_match.url_name == 'register' or request.resolver_match.url_name == 'password_reset' or request.resolver_match.url_name == 'password_reset_done' or request.resolver_match.url_name == 'password_reset_confirm' or request.resolver_match.url_name == 'password_reset_complete' %}
 <style>
