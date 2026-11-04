@@ -1,0 +1,9 @@
+# Notification list read-state workflow
+
+The full notification list linked directly to the post/profile through notification_url, bypassing the recipient-checked endpoint that persists is_read. The dropdown already used that endpoint. List links now use notification_redirect as well; no layout CSS changes.
+
+Regression evidence: a test scoped to the actual list-group anchor failed before the template change and passes after it. A generic href assertion was insufficient because the dropdown contained the correct link. Four workflow tests cover empty/populated/read rendering, follow/like/comment/mention destinations and repeated open, recipient isolation, POST-only mark-all and guest protection. Full final suite:242 tests72.379s, check green; migration dry-run no changes.
+
+Native browser login uses existing synthetic qa102y_reader2672. Empty list and populated list measured at320/390/768/1440. Synthetic notification1 was created for that reader from factory author2680/post272, initially unread. Enter on the list row at390 reaches canonical post272; returning to notifications displays Pročitano. Logged out afterwards; QA server stopped, tab closed and viewport reset. No email or real-user mutation.
+
+Raw z/work/notification-empty.json,notification-populated.json,notification-link-regression.txt,notification-workflow-final-tests.txt. Screenshot z/outputs/notification-read-phone.png is an inspected390 viewport: it shows support before the main notification content, and the row extends below the viewport. It is NOT visual proof of the Pročitano suffix; that was verified from rendered text after navigation. This confirms a remaining phone ordering issue. Four-width measurements are final-state empty/populated evidence, not paired pre-fix geometry. Full keyboard, rendered mark-all flow, long-content contrast/overlap and containing layout acceptance remain open. U11 is not wholly closed.
