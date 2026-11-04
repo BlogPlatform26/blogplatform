@@ -1,0 +1,7 @@
+# Notifications: phone ordering and mark-all workflow
+
+The notification list now precedes support on phones, scoped to the notifications route below768px. Paired320/390/768/1440 browser samples are in z/work/notification-layout-before.json and notification-layout-after.json. Phone main y718.1875 becomes115.1875. All sampled tablet/desktop rectangles, fonts, text fills, backgrounds and local overflow remain identical; document overflow is zero at every width. No color change.
+
+Existing synthetic reader2672 received QA notification2 from2680/post272. At390, native Enter on Mark all changed Novo to Pročitano; both QA notifications1/2 read back is_read=True. No email. Raw notification-mark-all-before.txt and notification-mark-all-after.txt record the rendered states. Screenshot z/outputs/notification-flow-phone.png is an inspected390 viewport, not the whole page; both read labels and the main-before-support order are visible.
+
+242 tests passed in61.915s (z/work/notification-layout-suite.txt). Django check clean; migration dry-run no changes. Synthetic reader logged out, tab9 closed and viewport reset. This completes the phone ordering and rendered mark-all checks, not all U11 acceptance: full keyboard traversal, long-content contrast/overlap, tablet containing width and desktop targets remain open. See notification_read_workflow.md for recipient isolation and destination regression coverage.

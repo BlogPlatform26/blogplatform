@@ -1387,6 +1387,12 @@
 }
 /* Main content comes first in source; preserve the established left column visually. */
 .blog-main-left-column { order: -1; }
+{% if request.resolver_match.url_name == 'notifications' %}
+@media (max-width: 767.98px) {
+    .blog-main-content-column { order: -1; }
+    .blog-main-left-column { order: 0; }
+}
+{% endif %}
 {% if blog.profile.template == 'default' %}
 {% if blog_preferences.active_design_customization.post_date_color_1 == '#7a2cff' and blog_preferences.active_design_customization.post_date_color_2 == '#ffd200' and blog_preferences.active_design_customization.post_date_effect == 'gradient' %}
 /* Keep the factory gradient readable on white without overriding custom palettes. */
