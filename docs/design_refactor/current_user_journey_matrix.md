@@ -1,0 +1,26 @@
+# Current user journey acceptance matrix
+
+Reconciled at fc0714a on 2026-11-04. This is an evidence index, not a fresh runtime pass. All rows remain PARTIAL: a passing component test or a four-width layout does not establish a complete journey. Original requirements and route boundaries remain in [phase102t](phase102t_user_route_acceptance.md). Historical next-action paragraphs are superseded by this index and current_acceptance_next.md.
+
+| Journey | Retained evidence | Evidence still required to accept the journey |
+|---|---|---|
+| U01 Discovery | [Populated results/following](phase102y_populated_discovery.md), [focus order](phase103b_discovery_focus_order.md), [empty owner](phase103g_empty_owner_browser.md), [gradient limits](phase103h_gradient_visual_followup.md); pagination/query wrapping and fallback closures in ledger | Rendered gradient/hover evidence; long-author clamp usability; retain scope-preserving navigation and guest/reader/owner distinctions |
+| U02 Authentication forms | [Four-width forms and native errors](phase103q_auth_forms.md); synthetic login also exercised in notification flow | Registration server errors and successful workflow, full keyboard and contrast; separate terms/mail effects from layout |
+| U03 Account tokens | [Reset result pages](phase103r_reset_result_pages.md), [reset controls](phase103s_reset_controls.md), [server reset success/expiry](phase103t_reset_server_workflow.md), [complete target](phase103u_reset_complete_target.md) | Browser reset success/expiry; activation, email confirmation, reactivation and resend states. Server reset evidence does not cover these other token flows |
+| U04 Author onboarding | Route and ownership requirements in phase102t; no later closure established by this reconciliation | Owner/public author long content, question validation and saved result, reader controls |
+| U05 Reader interactions | Per-design layouts retained; [Default dense comments/calendar](default_populated_containment.md) is containment evidence | Follow/restrict/block, likes, comment validation/edit/cancel and quiz/poll results across relevant owner/reader/guest states; persistence/readback |
+| U06 Boxes | Historical editor geometry retained by phase102t | Add/edit validation and persisted synthetic box, long content, delete confirmation/cancel |
+| U07 Post authoring | Historical direct/dashboard fields and toolbars retained by phase102t | Dashboard768 new form, filter destinations, draft/autosave/save/reload and errors; actual editor feature workflow |
+| U08 Account and statistics | Historical settings shell retained by phase102t | Actual author/account/statistics subtab states, empty/populated statistics, export first-match route, deactivate/delete confirmation and cancel |
+| U09 Design settings | Historical preview, tabs and unsaved-update evidence retained by phase102t | Cards/music switches, validation, save/reload; do not equate unsaved preview with persistence |
+| U10 Profile | Historical profile fields/menu retained by phase102t | Saved values and validation, long username menu, password form/done layout; credential submission handled separately |
+| U11 Notifications | [Read-state regression and recipient isolation](notification_read_workflow.md), [phone order and native mark-all](notification_phone_flow.md); historical81b2 dropdown positioning | Full keyboard traversal, long-content contrast/overlap, tablet containing width and desktop targets; representative browser destination variants beyond like |
+| U12 Support/legal | [Server validation/persistence/locmem](support_server_acceptance.md), [browser success](support_browser_acceptance.md), [bound retry](support_retry_fix.md), [home tablet](home_tablet_support_layout.md), [legal phone](phase103v_legal_phone.md), [support names/phone targets](phase103x_support_controls.md) | Complete keyboard traversal, tablet targets, search support containing layout, additional rendered invalid-field combinations; larger-screen legal targets. No real SMTP proof |
+
+## Cross-cutting acceptance gates
+
+- All37 design series are coverage, not passes. Remaining photo surfaces, desktop targets, custom palettes and authenticated/optional content stay in [remaining scope](remaining_verification_scope.md).
+- [Zlatno desktop archive](zlatno_desktop_archive_surface.md) is closed by831a711; its calendar/profile photo zones remain open. Do not repeat the archive repair.
+- True factory Default fixture2680 has [baseline](factory_default_baseline.md), [phone flow](factory_default_phone_flow.md), [populated containment](default_populated_containment.md) and [date-year contrast](default_date_contrast.md) evidence. Full keyboard and gradient raster remain open.
+- For new app changes retain paired320/390/768/1440 actual child fill/backing/font/local overflow/overlap, safe interactions, check/migration/fullsuite and inspected viewport evidence. New failures must be fixed and rechecked; narrow passes cannot close a whole row.
+- Latest completed suite is242 tests61.915s for fc0714a; this index adds no test run. Whole-project completion requires all outstanding cells and the37-design proof matrix, not merely this document's existence.
