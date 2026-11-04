@@ -1388,6 +1388,13 @@
 /* Main content comes first in source; preserve the established left column visually. */
 .blog-main-left-column { order: -1; }
 {% if blog.profile.template == 'default' %}
+{% if blog_preferences.active_design_customization.post_date_color_1 == '#7a2cff' and blog_preferences.active_design_customization.post_date_color_2 == '#ffd200' and blog_preferences.active_design_customization.post_date_effect == 'gradient' %}
+/* Keep the factory gradient readable on white without overriding custom palettes. */
+html body .blog-date-shell.blog-date-effect-gradient { --date-secondary: #755600; }
+html body .blog-date-shell.blog-date-effect-gradient .blog-date-year,
+html body .blog-date-shell.blog-date-effect-gradient .blog-date-inline-year,
+html body .blog-date-shell.blog-date-effect-gradient .blog-date-inline-sep { opacity: 1; }
+{% endif %}
 .calendar-scroll-hint { display: none; }
 @media (max-width: 479.98px) { .calendar-scroll-hint { display: block; } }
 html body .comment-body .comment-text .bp-comment-word {

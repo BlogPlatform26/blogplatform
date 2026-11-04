@@ -235,6 +235,29 @@ class ActiveDesignRenderMatrixTests(TestCase):
             content,
         )
 
+    def test_default_date_contrast_guard_preserves_custom_colors_and_effects(self):
+        self.author.profile.template = "default"
+        self.author.profile.save(update_fields=["template"])
+        url = reverse("user_blog", args=[self.author.username])
+        marker = "--date-secondary: #755600;"
+        cases = [
+            ("#7a2cff", "#ffd200", "gradient", True),
+            ("#123456", "#ffd200", "gradient", False),
+            ("#7a2cff", "#123456", "gradient", False),
+            ("#7a2cff", "#ffd200", "solid", False),
+            ("#7a2cff", "#ffd200", "duo", False),
+        ]
+        for primary, secondary, effect, guarded in cases:
+            with self.subTest(primary=primary, secondary=secondary, effect=effect):
+                set_blog_preferences(self.author, {"design_customizations": {"default": {
+                    "post_date_color_1": primary,
+                    "post_date_color_2": secondary,
+                    "post_date_effect": effect,
+                }}})
+                response = self.client.get(url)
+                self.assertEqual(response.status_code, 200)
+                self.assertEqual(marker in response.content.decode(), guarded)
+
     def test_bespoke_dates_reach_every_shared_style_effect_and_scale(self):
         url = reverse("user_blog", args=[self.author.username])
         styles = tuple(POST_DATE_STYLE_OPTIONS)
