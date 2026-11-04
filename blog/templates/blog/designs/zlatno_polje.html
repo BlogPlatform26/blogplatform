@@ -523,6 +523,10 @@ select.form-select:focus {
 }
 
 {% if blog_preferences.active_design_customization.box_title_color == '#6c4410' %}
+@media (min-width: 992px) {
+    /* Keep factory archive text readable independently of the wheat photograph. */
+    html body .archive-title { background: #fff8e4 !important; }
+}
 @media (max-width: 991.98px) {
     /* Factory archive ink only; custom palette values remain authoritative. */
     html body .archive-title {
