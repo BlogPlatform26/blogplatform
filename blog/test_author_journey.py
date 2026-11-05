@@ -62,3 +62,55 @@ class AuthorJourneyTests(TestCase):
             self.assertEqual(response.status_code, 302)
             self.assertIn('/login/', response.url)
         self.assertFalse(AuthorQuestion.objects.exists())
+
+class AuthorAnswerJourneyTests(TestCase):
+    def setUp(self):
+        self.author = User.objects.create_user(username='answer-author')
+        self.sender = User.objects.create_user(username='answer-sender')
+        self.other = User.objects.create_user(username='answer-other')
+        profile = self.author.profile
+        profile.author_bio = 'Synthetic biography'
+        profile.save()
+        self.question = AuthorQuestion.objects.create(author=self.author, sender=self.sender, question='Unique private question')
+        self.settings_url = reverse('blog_settings') + '?tab=autor'
+        self.public_url = reverse('author_detail', args=[self.author.username])
+
+    def save_answer(self, answer, public=False):
+        data = {'save_author_question': '1', 'author_question_id': self.question.pk, 'answer': answer}
+        if public:
+            data['is_public'] = '1'
+        return self.client.post(self.settings_url, data)
+
+    def test_private_public_and_cleared_answer_visibility(self):
+        self.client.force_login(self.author)
+        self.assertEqual(self.save_answer('  Private answer  ').status_code, 302)
+        self.question.refresh_from_db()
+        self.assertEqual(self.question.answer, 'Private answer')
+        self.assertFalse(self.question.is_public)
+        self.assertIsNotNone(self.question.answered_at)
+        for viewer, visible in ((self.sender, True), (self.other, False)):
+            self.client.force_login(viewer)
+            response = self.client.get(self.public_url)
+            self.assertEqual(b'Unique private question' in response.content, visible)
+        self.client.logout()
+        self.assertNotContains(self.client.get(self.public_url), 'Private answer')
+        self.client.force_login(self.author)
+        self.save_answer('Public answer', public=True)
+        self.client.logout()
+        self.assertContains(self.client.get(self.public_url), 'Public answer')
+        self.client.force_login(self.author)
+        self.save_answer('  ', public=True)
+        self.question.refresh_from_db()
+        self.assertEqual(self.question.answer, '')
+        self.assertFalse(self.question.is_public)
+        self.assertIsNone(self.question.answered_at)
+        self.client.logout()
+        self.assertNotContains(self.client.get(self.public_url), 'Unique private question')
+
+    def test_other_user_cannot_modify_or_delete_question(self):
+        self.client.force_login(self.other)
+        self.save_answer('Unauthorized answer', public=True)
+        self.client.post(self.settings_url, {'delete_author_question': '1', 'author_question_id': self.question.pk})
+        self.question.refresh_from_db()
+        self.assertEqual(self.question.answer, '')
+        self.assertFalse(self.question.is_public)
