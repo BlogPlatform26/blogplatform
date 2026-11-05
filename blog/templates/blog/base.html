@@ -1388,6 +1388,10 @@
 /* Main content comes first in source; preserve the established left column visually. */
 .blog-main-left-column { order: -1; }
 {% if request.resolver_match.url_name == 'notifications' %}
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .blog-main-content-column { flex: 0 0 100%; width: 100%; order: -1; }
+    .blog-main-left-column, .blog-main-right-column { flex: 0 0 50%; width: 50%; order: 0; }
+}
 @media (max-width: 767.98px) {
     .blog-main-content-column { order: -1; }
     .blog-main-left-column { order: 0; }
