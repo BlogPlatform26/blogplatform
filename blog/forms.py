@@ -352,7 +352,8 @@ class AuthorQuestionForm(forms.ModelForm):
             "question": forms.Textarea(attrs={
                 "class": "form-control",
                 "rows": 4,
-                "placeholder": "Napiši pitanje autoru..."
+                "placeholder": "Napiši pitanje autoru...",
+                "aria-label": "Pitanje autoru",
             }),
         }
         labels = {
