@@ -11,7 +11,7 @@
 
         <form method="POST" action="{% url 'mark_all_notifications_read' %}">
             {% csrf_token %}
-            <button type="submit" class="btn btn-outline-primary btn-sm">
+            <button type="submit" class="btn btn-outline-primary btn-sm" style="min-height: 48px; min-width: 48px;">
                 Označi sve pročitano
             </button>
         </form>
