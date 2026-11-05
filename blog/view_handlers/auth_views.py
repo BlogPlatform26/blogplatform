@@ -754,13 +754,17 @@ def author_onboarding(request):
             messages.info(request, 'Dio O autoru možeš ispuniti kasnije u postavkama.')
             return redirect('profile')
 
+        # ModelForm validation updates its instance, including omitted checkboxes.
+        # These settings are edited elsewhere, not by the onboarding wizard.
+        preserved_settings = {
+            name: getattr(profile, name)
+            for name in ('author_contact', 'author_social_links', 'author_website', 'allow_author_questions')
+        }
         author_form = AuthorProfileForm(request.POST, instance=profile)
         if author_form.is_valid():
             saved_profile = author_form.save(commit=False)
-            saved_profile.author_contact = profile.author_contact
-            saved_profile.author_social_links = profile.author_social_links
-            saved_profile.author_website = profile.author_website
-            saved_profile.allow_author_questions = profile.allow_author_questions
+            for name, value in preserved_settings.items():
+                setattr(saved_profile, name, value)
             saved_profile.save()
             messages.success(request, 'Podaci o autoru su spremljeni.')
             return redirect('profile')
