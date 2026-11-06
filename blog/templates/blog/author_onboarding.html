@@ -305,6 +305,14 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    // Native validation happens before submit, including fields in hidden steps.
+    const form = document.getElementById('authorOnboardingForm');
+    form.addEventListener('invalid', function (event) {
+        const firstInvalid = form.querySelector(':invalid');
+        if (event.target !== firstInvalid) return;
+        const invalidStep = firstInvalid.closest('.author-step');
+        if (invalidStep) showStep(invalidStep.dataset.step);
+    }, true);
     const invalidField = document.querySelector('#authorOnboardingForm [aria-invalid="true"]');
     if (invalidField) {
         const invalidStep = invalidField.closest('.author-step');
