@@ -1033,10 +1033,10 @@ def blog_settings(request):
                 author_profile = author_form.save(commit=False)
                 author_profile.save(update_fields=list(AuthorProfileForm.Meta.fields))
                 messages.success(request, 'Podaci za Upoznaj autora su spremljeni.')
+                return redirect(author_tab_redirect)
             else:
                 first_error = next(iter(author_form.errors.values()))[0] if author_form.errors else 'Provjeri unesene podatke.'
                 messages.error(request, first_error)
-            return redirect(author_tab_redirect)
 
         if request.GET.get('tab') == 'autor' and 'save_author_question' in request.POST:
             question = AuthorQuestion.objects.filter(id=request.POST.get('author_question_id'), author=request.user).first()

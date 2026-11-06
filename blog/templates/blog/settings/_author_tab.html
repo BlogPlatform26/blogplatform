@@ -19,10 +19,12 @@
 
         <form method="POST">
             {% csrf_token %}
+            {{ author_form.non_field_errors }}
 
             <div class="mb-4">
                 <label class="form-label" for="{{ author_form.author_bio.id_for_label }}">{{ author_form.author_bio.label }}</label>
                 {{ author_form.author_bio }}
+                {{ author_form.author_bio.errors }}
             </div>
 
             <div class="author-settings-group mb-4">
@@ -31,38 +33,47 @@
                     <div class="col-md-6">
                         <label class="form-label" for="{{ author_form.author_full_name.id_for_label }}">{{ author_form.author_full_name.label }}</label>
                         {{ author_form.author_full_name }}
+                        {{ author_form.author_full_name.errors }}
                     </div>
                     <div class="col-md-6">
                         <label class="form-label" for="{{ author_form.author_nickname.id_for_label }}">{{ author_form.author_nickname.label }}</label>
                         {{ author_form.author_nickname }}
+                        {{ author_form.author_nickname.errors }}
                     </div>
                     <div class="col-md-6">
                         <label class="form-label" for="{{ author_form.author_birth_date.id_for_label }}">{{ author_form.author_birth_date.label }}</label>
                         {{ author_form.author_birth_date }}
+                        {{ author_form.author_birth_date.errors }}
                     </div>
                     <div class="col-md-6">
                         <label class="form-label" for="{{ author_form.author_birth_place.id_for_label }}">{{ author_form.author_birth_place.label }}</label>
                         {{ author_form.author_birth_place }}
+                        {{ author_form.author_birth_place.errors }}
                     </div>
                     <div class="col-md-6">
                         <label class="form-label" for="{{ author_form.author_education.id_for_label }}">{{ author_form.author_education.label }}</label>
                         {{ author_form.author_education }}
+                        {{ author_form.author_education.errors }}
                     </div>
                     <div class="col-md-6">
                         <label class="form-label" for="{{ author_form.author_occupation.id_for_label }}">{{ author_form.author_occupation.label }}</label>
                         {{ author_form.author_occupation }}
+                        {{ author_form.author_occupation.errors }}
                     </div>
                     <div class="col-md-6">
                         <label class="form-label" for="{{ author_form.author_languages.id_for_label }}">{{ author_form.author_languages.label }}</label>
                         {{ author_form.author_languages }}
+                        {{ author_form.author_languages.errors }}
                     </div>
                     <div class="col-md-6">
                         <label class="form-label" for="{{ author_form.author_religion.id_for_label }}">{{ author_form.author_religion.label }}</label>
                         {{ author_form.author_religion }}
+                        {{ author_form.author_religion.errors }}
                     </div>
                     <div class="col-md-6">
                         <label class="form-label" for="{{ author_form.author_nationality.id_for_label }}">{{ author_form.author_nationality.label }}</label>
                         {{ author_form.author_nationality }}
+                        {{ author_form.author_nationality.errors }}
                     </div>
                 </div>
             </div>
@@ -73,22 +84,27 @@
                     <div class="col-md-6">
                         <label class="form-label" for="{{ author_form.author_hobbies.id_for_label }}">{{ author_form.author_hobbies.label }}</label>
                         {{ author_form.author_hobbies }}
+                        {{ author_form.author_hobbies.errors }}
                     </div>
                     <div class="col-md-6">
                         <label class="form-label" for="{{ author_form.author_interests.id_for_label }}">{{ author_form.author_interests.label }}</label>
                         {{ author_form.author_interests }}
+                        {{ author_form.author_interests.errors }}
                     </div>
                     <div class="col-md-6">
                         <label class="form-label" for="{{ author_form.author_favorite_topics.id_for_label }}">{{ author_form.author_favorite_topics.label }}</label>
                         {{ author_form.author_favorite_topics }}
+                        {{ author_form.author_favorite_topics.errors }}
                     </div>
                     <div class="col-md-6">
                         <label class="form-label" for="{{ author_form.author_inspiration.id_for_label }}">{{ author_form.author_inspiration.label }}</label>
                         {{ author_form.author_inspiration }}
+                        {{ author_form.author_inspiration.errors }}
                     </div>
                     <div class="col-md-6">
                         <label class="form-label" for="{{ author_form.author_motto.id_for_label }}">{{ author_form.author_motto.label }}</label>
                         {{ author_form.author_motto }}
+                        {{ author_form.author_motto.errors }}
                     </div>
                 </div>
             </div>
@@ -99,20 +115,24 @@
                     <div class="col-md-6">
                         <label class="form-label" for="{{ author_form.author_contact.id_for_label }}">{{ author_form.author_contact.label }}</label>
                         {{ author_form.author_contact }}
+                        {{ author_form.author_contact.errors }}
                     </div>
                     <div class="col-md-6">
                         <label class="form-label" for="{{ author_form.author_social_links.id_for_label }}">{{ author_form.author_social_links.label }}</label>
                         {{ author_form.author_social_links }}
+                        {{ author_form.author_social_links.errors }}
                     </div>
                     <div class="col-md-12">
                         <label class="form-label" for="{{ author_form.author_website.id_for_label }}">{{ author_form.author_website.label }}</label>
                         {{ author_form.author_website }}
+                        {{ author_form.author_website.errors }}
                     </div>
                 </div>
             </div>
 
             <div class="form-check mt-4 mb-3">
                 {{ author_form.allow_author_questions }}
+                {{ author_form.allow_author_questions.errors }}
                 <label class="form-check-label" for="{{ author_form.allow_author_questions.id_for_label }}">
                     Dopusti čitateljima da ti postavljaju pitanja
                 </label>
