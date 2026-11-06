@@ -34,6 +34,7 @@
 
                 <form method="POST" id="authorOnboardingForm">
                     {% csrf_token %}
+                    {{ author_form.non_field_errors }}
 
                     <section class="author-step" data-step="1">
                         <h5 class="mb-3">Kratko o sebi</h5>
@@ -44,6 +45,7 @@
                             </label>
 
                             {{ author_form.author_bio }}
+                            {{ author_form.author_bio.errors }}
                         </div>
 
                         <div class="d-flex flex-wrap gap-2 justify-content-between">
@@ -72,6 +74,7 @@
                                 </label>
 
                                 {{ author_form.author_full_name }}
+                                {{ author_form.author_full_name.errors }}
                             </div>
 
                             <div>
@@ -80,6 +83,7 @@
                                 </label>
 
                                 {{ author_form.author_nickname }}
+                                {{ author_form.author_nickname.errors }}
                             </div>
 
                             <div>
@@ -88,6 +92,7 @@
                                 </label>
 
                                 {{ author_form.author_birth_date }}
+                                {{ author_form.author_birth_date.errors }}
                             </div>
 
                             <div>
@@ -96,6 +101,7 @@
                                 </label>
 
                                 {{ author_form.author_birth_place }}
+                                {{ author_form.author_birth_place.errors }}
                             </div>
 
                             <div>
@@ -104,6 +110,7 @@
                                 </label>
 
                                 {{ author_form.author_education }}
+                                {{ author_form.author_education.errors }}
                             </div>
 
                             <div>
@@ -112,6 +119,7 @@
                                 </label>
 
                                 {{ author_form.author_occupation }}
+                                {{ author_form.author_occupation.errors }}
                             </div>
 
                             <div>
@@ -120,6 +128,7 @@
                                 </label>
 
                                 {{ author_form.author_languages }}
+                                {{ author_form.author_languages.errors }}
                             </div>
 
                             <div>
@@ -128,6 +137,7 @@
                                 </label>
 
                                 {{ author_form.author_religion }}
+                                {{ author_form.author_religion.errors }}
                             </div>
 
                             <div>
@@ -136,6 +146,7 @@
                                 </label>
 
                                 {{ author_form.author_nationality }}
+                                {{ author_form.author_nationality.errors }}
                             </div>
                         </div>
 
@@ -171,6 +182,7 @@
                                 </label>
 
                                 {{ author_form.author_hobbies }}
+                                {{ author_form.author_hobbies.errors }}
                             </div>
 
                             <div>
@@ -179,6 +191,7 @@
                                 </label>
 
                                 {{ author_form.author_interests }}
+                                {{ author_form.author_interests.errors }}
                             </div>
 
                             <div>
@@ -187,6 +200,7 @@
                                 </label>
 
                                 {{ author_form.author_favorite_topics }}
+                                {{ author_form.author_favorite_topics.errors }}
                             </div>
 
                             <div>
@@ -195,6 +209,7 @@
                                 </label>
 
                                 {{ author_form.author_inspiration }}
+                                {{ author_form.author_inspiration.errors }}
                             </div>
 
                             <div>
@@ -203,6 +218,7 @@
                                 </label>
 
                                 {{ author_form.author_motto }}
+                                {{ author_form.author_motto.errors }}
                             </div>
                         </div>
 
@@ -275,7 +291,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const steps = Array.from(document.querySelectorAll('.author-step'));
     const indicators = Array.from(document.querySelectorAll('[data-step-indicator]'));
 
-    function showStep(stepNumber) {
+    function showStep(stepNumber, focusFirst = false) {
         steps.forEach(step => {
             step.classList.toggle('d-none', step.getAttribute('data-step') !== String(stepNumber));
         });
@@ -283,17 +299,30 @@ document.addEventListener('DOMContentLoaded', function () {
         indicators.forEach(indicator => {
             indicator.classList.toggle('active', indicator.getAttribute('data-step-indicator') === String(stepNumber));
         });
+        if (focusFirst) {
+            const activeStep = steps.find(step => step.dataset.step === String(stepNumber));
+            activeStep?.querySelector('input, textarea, select, button')?.focus();
+        }
+    }
+
+    const invalidField = document.querySelector('#authorOnboardingForm [aria-invalid="true"]');
+    if (invalidField) {
+        const invalidStep = invalidField.closest('.author-step');
+        if (invalidStep) {
+            showStep(invalidStep.dataset.step);
+            invalidField.focus();
+        }
     }
 
     document.querySelectorAll('[data-next-step]').forEach(button => {
         button.addEventListener('click', function () {
-            showStep(this.getAttribute('data-next-step'));
+            showStep(this.getAttribute('data-next-step'), true);
         });
     });
 
     document.querySelectorAll('[data-prev-step]').forEach(button => {
         button.addEventListener('click', function () {
-            showStep(this.getAttribute('data-prev-step'));
+            showStep(this.getAttribute('data-prev-step'), true);
         });
     });
 });

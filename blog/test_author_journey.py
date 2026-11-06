@@ -50,6 +50,8 @@ class AuthorJourneyTests(TestCase):
         response = self.client.post(url, {'author_bio': 'Invalid save', 'author_birth_date': 'not-a-date'})
         self.assertEqual(response.status_code, 200)
         self.assertTrue(response.context['author_form'].errors)
+        self.assertContains(response, 'id_author_birth_date_error')
+        self.assertContains(response, 'Invalid save')
         self.author.profile.refresh_from_db()
         self.assertEqual(self.author.profile.author_bio, 'Existing synthetic biography')
         self.client.post(url, {'author_bio': 'Saved synthetic biography'})
