@@ -4372,9 +4372,13 @@ html body [id^="comments-"] > .small.text-muted {
 @media (max-width: 575.98px) {
     html body .archive-title { color: #354b32 !important; -webkit-text-fill-color: currentColor !important; }
 }
+/* Keep factory archive text readable over photographs at wider widths. */
+@media (min-width: 576px) {
+    html body .archive-title { color: #354b32 !important; -webkit-text-fill-color: currentColor !important; background: #d4e3c4 !important; }
+}
 {% elif blog.profile.template == 'polarna_svjetlost' and blog_preferences.active_design_customization.box_title_color == '#d6efff' %}
-/* Phase 101q: factory archive ink uses a local polar reading surface. */
-@media (max-width: 575.98px) {
+/* Factory archive ink uses the local polar reading surface at every width. */
+@media (min-width: 0px) {
     html body .archive-title { color: #123047 !important; -webkit-text-fill-color: currentColor !important; background: #f1fbff !important; }
 }
 {% endif %}
