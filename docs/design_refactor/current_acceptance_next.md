@@ -1,3 +1,4 @@
+> Latest U04 evidence (2026-11-07): native hidden-step validation is closed by d52c7dd; incomplete-date skip and full phone wizard Tab path by 3980837; owner long-question containment at four widths and settings native Tab path by 04cc444. The tablet width and 48px wizard targets are documented in [onboarding_tablet_targets.md](onboarding_tablet_targets.md), with 250 tests passing in 52.791s. These supersede older next-work statements for those checks. Remaining work includes broader U04 focus/contrast and outstanding journey requirements, then the focused photo groups below; no repeat of those closed checks and no new 37-design tour.
 # Focused next acceptance work
 
 Reconciled through caae326 on 2026-11-07. Use [current journey matrix](current_user_journey_matrix.md) for U01-U12 acceptance boundaries and [remaining scope](remaining_verification_scope.md) for design-specific requirements. This is not a new browser pass.

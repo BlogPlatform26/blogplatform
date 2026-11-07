@@ -250,6 +250,12 @@
 </div>
 
 <style>
+/* Onboarding has no sidebar content; use the tablet row for its form. */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .blog-main-content-column { width: 100%; }
+    .blog-main-left-column, .blog-main-right-column { display: none; }
+}
+#authorOnboardingForm .btn { min-height: 48px; min-width: 48px; }
 .author-onboarding-card {
     border-radius: 18px;
 }
