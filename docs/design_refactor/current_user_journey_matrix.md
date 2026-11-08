@@ -31,3 +31,5 @@ Reconciled through dffd80e on 2026-11-08. This is an evidence index, not a fresh
 - [Four-theme weekday strips](photo_calendar_weekdays.md):16 paired blog states closed; detail-specific evidence remains open.
 - [Planine ordinary dates](mountain_regular_dates.md):8 paired blog/detail states closed at wider widths; phone records unchanged.
 - Next: one complete month-to-post calendar path with active/today/interactive states and actual arrow backing, then remaining photo groups. Do not repeat the three fixes above. Desktop targets and arbitrary custom/optional content remain governed by remaining_verification_scope.md.
+
+- [Planine calendar keyboard path](calendar_keyboard_navigation.md): four-width day focus/Enter/canonical route/Back destination evidence. Phone focus visually inspected; desktop day target and return focus remain open. This supersedes only the unrecorded-navigation portion of the preceding next action.
