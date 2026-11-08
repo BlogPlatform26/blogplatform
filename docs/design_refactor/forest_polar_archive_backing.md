@@ -8,6 +8,10 @@ Eight paired blog states cover both themes at all four widths. All16 sampled tit
 
 Evidence on durable disk: z/work/archive-photo-baseline.json, archive-photo-after.json, archive-photo-navigation.json; archive-polarna-pixel-analysis.txt. Inspected screenshots: outputs/archive-sumska-desktop-before.png, archive-polarna-desktop.png and archive-polarna-desktop-after.png (desktop viewport captures, not full pages). Final screenshot raster is1425x891 from the1440x900 override.
 
-QA server87692 stopped; guest tab6 closed and viewport reset. This closes factory archive caption backing for these two themes on the measured blog route. Other photographic calendar/profile zones, custom palettes, post-detail coverage, desktop link targets and the full U01-U12 acceptance matrix remain separate requirements.
+QA server87692 stopped; guest tab6 closed and viewport reset. This closes factory archive caption backing for these two themes on the measured blog route. Other photographic calendar/profile zones, custom palettes, desktop link targets and the full U01-U12 acceptance matrix remain separate requirements.
 
 Validation: check clean; migration dry-run no changes; full250 tests53.798s passed. Raw z/work/archive-photo-suite.txt.
+
+## Post-detail follow-up
+
+Durable z/work/archive-photo-detail.json records canonical post77/78 at320/390/768/1440. All eight final states have document/local overflow0 and14px between caption and link, with the expected factory foreground/backing and unchanged13px fonts. Native Enter on each detail archive link reaches its author October2026 archive. These are final-state detail checks, not paired before/after detail geometry. Server96666 stopped; guest tab7 closed and viewport reset. No further application edit or test rerun; suite250/53.798s remains the c444986 validation.
