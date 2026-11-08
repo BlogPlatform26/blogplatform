@@ -4073,6 +4073,26 @@ html body .blog-page-title a.blog-link {
 }
 {% endif %}
 {% if blog.profile.template == 'iznad_oblaka' %}
+{% if blog_preferences.active_design_customization.post_date_color_1 == '#f4c9d9' and blog_preferences.active_design_customization.post_date_effect == 'solid' %}
+/* Factory cloud dates need an opaque reading surface over the photograph. */
+html body .blog-date-shell.blog-date-effect-solid {
+    --date-primary: #514956;
+    background: #fff7fc !important;
+}
+html body .blog-date-shell.blog-date-effect-solid .blog-date-year,
+html body .blog-date-shell.blog-date-effect-solid .blog-date-inline-year,
+html body .blog-date-shell.blog-date-effect-solid .blog-date-inline-sep { opacity: 1; }
+{% endif %}
+{% if blog_preferences.active_design_customization.post_title_color == '#fff4fb' %}
+/* Keep the comment section label independent of pale factory title ink. */
+html body [id^="comments-"] > h6 {
+    color: #514956 !important;
+    -webkit-text-fill-color: #514956 !important;
+    background: #fff7fc;
+}
+{% endif %}
+{% endif %}
+{% if blog.profile.template == 'iznad_oblaka' %}
 .comment-item.bp-modern-comment-item .comment-body .comment-time {
     color: #514956 !important;
     background-color: #fff7fc;

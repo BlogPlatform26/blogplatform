@@ -33,3 +33,5 @@ Reconciled through dffd80e on 2026-11-08. This is an evidence index, not a fresh
 - Next: one complete month-to-post calendar path with active/today/interactive states and actual arrow backing, then remaining photo groups. Do not repeat the three fixes above. Desktop targets and arbitrary custom/optional content remain governed by remaining_verification_scope.md.
 
 - [Planine calendar keyboard path](calendar_keyboard_navigation.md): four-width day focus/Enter/canonical route/Back destination evidence. Phone focus visually inspected; desktop day target and return focus remain open. This supersedes only the unrecorded-navigation portion of the preceding next action.
+
+- [Iznad factory date/comment heading](cloud_factory_reading_surfaces.md): eight paired blog/detail states, contrast8.190,40 sampled rectangles/fonts unchanged;251 tests49.813s. Custom palette/effect guards tested; unrelated states remain open.

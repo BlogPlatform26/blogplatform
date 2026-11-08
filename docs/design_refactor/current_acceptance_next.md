@@ -11,3 +11,5 @@ U04 next: actual text/backing and focus-visible evidence on public/owner forms, 
 Factory Default layout/containment/date-year fixes and representative U11 notification core remain closed. Default gradient raster/full keyboard and all other outstanding matrix cells remain. No new37-design tour; coverage is not acceptance. Latest application suite250 tests50.645s belongs to dffd80e. This document is evidence reconciliation only.
 
 Navigation update: calendar_keyboard_navigation.md records four-width Planine day Tab/Enter/canonical route/Back destinations. Return Tab starts at logo; desktop day target25.703125x36 and translucent day backing remain open. Do not repeat the recorded path; continue actual backing/active/today/arrow target acceptance and assess return-focus behavior.
+
+Closed: Iznad factory solid date and comment-section heading, cloud_factory_reading_surfaces.md; eight paired states,251 tests49.813s. Do not repeat. Continue remaining calendar interactive/target and U04focuscontrast scope.

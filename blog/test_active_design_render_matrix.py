@@ -258,6 +258,29 @@ class ActiveDesignRenderMatrixTests(TestCase):
                 self.assertEqual(response.status_code, 200)
                 self.assertEqual(marker in response.content.decode(), guarded)
 
+    def test_cloud_factory_reading_surfaces_preserve_custom_palette(self):
+        self.author.profile.template = "iznad_oblaka"
+        self.author.profile.save(update_fields=["template"])
+        url = reverse("user_blog", args=[self.author.username])
+        cases = [
+            ("#f4c9d9", "solid", "#fff4fb", True, True),
+            ("#123456", "solid", "#fff4fb", False, True),
+            ("#f4c9d9", "gradient", "#fff4fb", False, True),
+            ("#f4c9d9", "duo", "#123456", False, False),
+            ("#f4c9d9", "solid", "#123456", True, False),
+        ]
+        for primary, effect, title, date_guard, title_guard in cases:
+            with self.subTest(primary=primary, effect=effect, title=title):
+                set_blog_preferences(self.author, {"design_customizations": {"iznad_oblaka": {
+                    "post_date_color_1": primary, "post_date_effect": effect,
+                    "post_title_color": title,
+                }}})
+                response = self.client.get(url)
+                self.assertEqual(response.status_code, 200)
+                content = response.content.decode()
+                self.assertEqual("--date-primary: #514956;" in content, date_guard)
+                self.assertEqual("Keep the comment section label independent" in content, title_guard)
+
     def test_bespoke_dates_reach_every_shared_style_effect_and_scale(self):
         url = reverse("user_blog", args=[self.author.username])
         styles = tuple(POST_DATE_STYLE_OPTIONS)
