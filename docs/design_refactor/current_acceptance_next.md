@@ -1,3 +1,5 @@
+> Planine date update2026-11-08: [mountain_regular_dates.md](mountain_regular_dates.md) closes measured ordinary-date readability at wider widths on blog/detail,8 paired states,7.202 contrast. Phone and special-day records unchanged. Active/today/interactive hover and arrows remain open.
+
 > Photo weekday update2026-11-08: [photo_calendar_weekdays.md](photo_calendar_weekdays.md) records four-theme fixed weekday strips,16 paired blog states and unchanged phone samples/geometry/fonts. Remaining photo work is date/active/hover/arrow evidence and detail routes; do not repeat the guest blog weekday fix.
 
 > Photo update 2026-11-08: [forest/polar archive backing](forest_polar_archive_backing.md) closes factory archive captions on measured blog routes at four widths; exact custom-color guards retained. Post-detail final-state evidence is also recorded for post77/78 at four widths, including Enter-to-archive destinations. Other calendar/profile photographic zones remain open. Do not repeat the blog caption fix.

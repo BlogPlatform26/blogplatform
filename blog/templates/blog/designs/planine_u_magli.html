@@ -222,6 +222,13 @@ footer {
     border-radius: 12px;
 }
 
+/* Regular date text needs a stable reading surface over the photograph. */
+@media (min-width: 576px) {
+    .calendar-day:not(.calendar-day-has-post):not(.calendar-day-today) {
+        color: #455364;
+        background: #f6f5f2;
+    }
+}
 .calendar-day:hover {
     color: #4e5c6b;
     border-color: rgba(142,163,187,0.34);
