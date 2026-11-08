@@ -4285,6 +4285,18 @@ html body .calendar-title span {
 }
 {% endif %}
 
+/* Opaque weekday reading strips preserve fixed theme ink over photographs. */
+@media (min-width: 576px) {
+{% if blog.profile.template == 'vodopad_u_magli' %}
+    .calendar-weekdays { color: #465042 !important; background: #f2f1ed; }
+{% elif blog.profile.template == 'planine_u_magli' %}
+    .calendar-weekdays { color: #5f6975 !important; background: #f6f5f2; }
+{% elif blog.profile.template == 'nebeski_mir' %}
+    .calendar-weekdays { color: #334155 !important; background: #f6f9ff; }
+{% elif blog.profile.template == 'iznad_oblaka' %}
+    .calendar-weekdays { color: #5f6670 !important; background: #f7f4f6; }
+{% endif %}
+}
 /* Phase 101k: opaque weekday ink for confirmed phone label failures. */
 @media (max-width: 575.98px) {
 {% if blog.profile.template == 'vodopad_u_magli' %}
