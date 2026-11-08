@@ -13,3 +13,5 @@ Factory Default layout/containment/date-year fixes and representative U11 notifi
 Navigation update: calendar_keyboard_navigation.md records four-width Planine day Tab/Enter/canonical route/Back destinations. Return Tab starts at logo; desktop day target25.703125x36 and translucent day backing remain open. Do not repeat the recorded path; continue actual backing/active/today/arrow target acceptance and assess return-focus behavior.
 
 Closed: Iznad factory solid date and comment-section heading, cloud_factory_reading_surfaces.md; eight paired states,251 tests49.813s. Do not repeat. Continue remaining calendar interactive/target and U04focuscontrast scope.
+
+U04 update: author_question_label_contrast.md closes public badge/question/answer label contrast for recorded fixture. Continue private-state visual proof, contact/info labels and remaining focus/public controls; do not repeat paired label geometry.

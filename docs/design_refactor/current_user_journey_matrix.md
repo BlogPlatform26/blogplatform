@@ -35,3 +35,5 @@ Reconciled through dffd80e on 2026-11-08. This is an evidence index, not a fresh
 - [Planine calendar keyboard path](calendar_keyboard_navigation.md): four-width day focus/Enter/canonical route/Back destination evidence. Phone focus visually inspected; desktop day target and return focus remain open. This supersedes only the unrecorded-navigation portion of the preceding next action.
 
 - [Iznad factory date/comment heading](cloud_factory_reading_surfaces.md): eight paired blog/detail states, contrast8.190,40 sampled rectangles/fonts unchanged;251 tests49.813s. Custom palette/effect guards tested; unrelated states remain open.
+
+- U04 [question-label contrast](author_question_label_contrast.md): public badge and shared question/answer labels repaired; four paired widths retain geometry/font/background. Private visual states and contact/info labels remain open. Latest suite251 tests313.329s.
