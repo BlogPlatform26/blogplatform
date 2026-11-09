@@ -1,0 +1,9 @@
+# Owner question filters and labels
+
+Verified on synthetic owner2673 at320/390/768/1440, 2026-11-09. The active filter previously used #0d6efd on rgba(13,110,253,.08) over the observed white card:4.043:1. It now uses #084298:8.410:1. The question label changes #6c757d to #495057 on #f8f9fa:4.449 to7.757:1. Private status badge remains unchanged, white on #6c757d:4.689:1.
+
+All three filters now have min-height48px and inline-flex vertical centering. Previous sampled height38.333px. This target enlargement and the resulting vertical displacement of following cards are intentional on desktop as well as phones. Four paired samples preserve every sampled font, width and background. Final document and local card/filter/question overflow are zero; raw doc deltas -15 reflect scrollbar space, normalized to0. No claim of identical full rectangles after target enlargement.
+
+Native390 Tab/Enter opens answered and unanswered filters, each shows the expected one card and selected filter. Native Tab scrolls focused unanswered filter into view; visible outline inspected in outputs/owner-filter-after-phone.png (390x900 requested viewport, scrolled, not full page). No answer, privacy setting or biography was submitted. This does not close all U04 owner/reader focus states or all designs.
+
+Durable evidence in C:/Users/mario/Documents/Codex/2026-10-10/z/work: owner-private-contrast.json, owner-private-after.json, owner-filter-comparison.json, owner-filter-navigation.json, owner-filter-focus.json, owner-private-analysis.json. Earlier focus screenshot owner-filter-focus-phone.png is baseline. Check and migration dry-run green;251 tests50.806s, owner-filter-suite.txt. QA server76542 stopped, tab23 logged out/closed and viewport reset. Earlier tab21 is an error page whose close was blocked; its account session was subsequently logged out via tab22.

@@ -17,3 +17,5 @@ Closed: Iznad factory solid date and comment-section heading, cloud_factory_read
 U04 update: author_question_label_contrast.md closes public badge/question/answer label contrast for recorded fixture. Continue private-state visual proof, contact/info labels and remaining focus/public controls; do not repeat paired label geometry.
 
 Closed: public Contact/info label contrast, author_info_label_contrast.md;251 tests63.452s. Remaining U04 focus/private/owner contrast and unrecorded skip states stay open.
+
+U04 update: owner_filter_contrast_targets.md closes recorded owner active-filter/question-label contrast and 48px filter targets, including native390 answered/unanswered navigation. Four paired font/width/background samples unchanged; intentional filter height/card vertical movement on desktop too.251 tests50.806s. Remaining reader private-state contrast and other owner/public focus states stay open.

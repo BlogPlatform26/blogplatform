@@ -39,3 +39,5 @@ Reconciled through dffd80e on 2026-11-08. This is an evidence index, not a fresh
 - U04 [question-label contrast](author_question_label_contrast.md): public badge and shared question/answer labels repaired; four paired widths retain geometry/font/background. Private visual states and contact/info labels remain open. Latest suite251 tests313.329s.
 
 - U04 [information labels](author_info_label_contrast.md): Contact/info contrast repaired, four paired public states retain sampled geometry/fonts. Guest Tab/Shift+Tab between Back and sign-in recorded; authenticated focus/contrast remains open. Latest suite251 tests63.452s.
+
+U04 update: owner_filter_contrast_targets.md closes recorded owner active-filter/question-label contrast and 48px filter targets, including native390 answered/unanswered navigation. Four paired font/width/background samples unchanged; intentional filter height/card vertical movement on desktop too.251 tests50.806s. Remaining reader private-state contrast and other owner/public focus states stay open.
