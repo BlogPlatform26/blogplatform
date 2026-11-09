@@ -15,3 +15,5 @@ Navigation update: calendar_keyboard_navigation.md records four-width Planine da
 Closed: Iznad factory solid date and comment-section heading, cloud_factory_reading_surfaces.md; eight paired states,251 tests49.813s. Do not repeat. Continue remaining calendar interactive/target and U04focuscontrast scope.
 
 U04 update: author_question_label_contrast.md closes public badge/question/answer label contrast for recorded fixture. Continue private-state visual proof, contact/info labels and remaining focus/public controls; do not repeat paired label geometry.
+
+Closed: public Contact/info label contrast, author_info_label_contrast.md;251 tests63.452s. Remaining U04 focus/private/owner contrast and unrecorded skip states stay open.
