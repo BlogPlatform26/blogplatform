@@ -43,3 +43,5 @@ Reconciled through dffd80e on 2026-11-08. This is an evidence index, not a fresh
 U04 update: owner_filter_contrast_targets.md closes recorded owner active-filter/question-label contrast and 48px filter targets, including native390 answered/unanswered navigation. Four paired font/width/background samples unchanged; intentional filter height/card vertical movement on desktop too.251 tests50.806s. Remaining reader private-state contrast and other owner/public focus states stay open.
 
 U04 reader update: reader_private_answered_evidence.md records question3 private answered contrast/containment at320/390/768/1440 and visible native390 submit focus. Evidence-only, desktop unchanged. Next reader2672 pending question1 plus remaining owner/public focus and skips; full scope remains open.
+
+U04 pending reader update: reader_private_pending_evidence.md records question1 pending text contrast4.677 and containment at320/390/768/1440; native390 submit focus and complete pending card visually inspected. No app change. Next remaining owner/public focus controls and unrecorded skips; do not repeat answered/pending private evidence.
