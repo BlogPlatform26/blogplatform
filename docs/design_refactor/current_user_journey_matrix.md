@@ -41,3 +41,5 @@ Reconciled through dffd80e on 2026-11-08. This is an evidence index, not a fresh
 - U04 [information labels](author_info_label_contrast.md): Contact/info contrast repaired, four paired public states retain sampled geometry/fonts. Guest Tab/Shift+Tab between Back and sign-in recorded; authenticated focus/contrast remains open. Latest suite251 tests63.452s.
 
 U04 update: owner_filter_contrast_targets.md closes recorded owner active-filter/question-label contrast and 48px filter targets, including native390 answered/unanswered navigation. Four paired font/width/background samples unchanged; intentional filter height/card vertical movement on desktop too.251 tests50.806s. Remaining reader private-state contrast and other owner/public focus states stay open.
+
+U04 reader update: reader_private_answered_evidence.md records question3 private answered contrast/containment at320/390/768/1440 and visible native390 submit focus. Evidence-only, desktop unchanged. Next reader2672 pending question1 plus remaining owner/public focus and skips; full scope remains open.
