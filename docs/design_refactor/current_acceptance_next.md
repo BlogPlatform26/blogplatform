@@ -29,3 +29,5 @@ U04 skip update: onboarding_keyboard_skip.md now records native390 step1 and ste
 Owner answer focus: owner_answer_focus.md records durable native390 checkbox/save/delete visible-focus evidence. Other controls and numerical focus contrast remain open; no full U04 closure. Skip1/2/3 and reader private evidence remain closed in their documented scope.
 
 Priority focus finding: owner_answer_focus.md quantifies recorded white-card ring contrasts1.414/2.063/2.151. Assess full indicator and implement scoped opaque focus-visible outline with fresh paired four-width proof and full app-change gates. Visible-focus documentation alone is not contrast acceptance.
+
+U04 answer-control focus repair: owner_answer_focus.md records opaque #084298 outline (9.362:1 on white), native Tab on all four controls at320/390/768/1440, paired normal geometry/fonts/colors unchanged, zero document/local overflow. Intentional desktop keyboard-focus change only. Continue remaining public/owner controls and calendar states; all37/U01-U12 remains incomplete.
