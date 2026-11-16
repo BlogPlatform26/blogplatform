@@ -1,0 +1,7 @@
+# Owner answer control focus
+
+2026-11-16,09596b0, synthetic owner2673, question1 unanswered, .qa100e.sqlite3. At390x900, native Tab traversed answer to public checkbox, save and delete. Each stabilized focus-visible state was visually inspected and recorded. Checkbox ring rgba(13,110,253,.25)4px; save ring rgba(13,110,253,.5)4px; delete ring rgba(220,53,69,.5)4px. Save117.146x48 and delete99.167x48 in this capture. This is visible-focus proof, not a numerical focus-contrast acceptance claim. No submission, deletion or checkbox change.
+
+Durable raw C:/Users/mario/Documents/Codex/2026-10-10/z/work/owner-focus-controls.json; inspected scrolled390 viewport images outputs/owner-focus-checkbox.png,owner-focus-save.png,owner-focus-delete.png. Earlier unavailable temporary captures are superseded by these files. This adds no four-width geometry comparison or whole U04 acceptance. App and desktop unchanged; no new tests required for evidence-only documentation.
+
+Logout confirmed guest navigation, tab6 closed, viewport reset, own QA39733 terminally stopped. Remaining: other author-settings controls/public owner link focus, numerical focus contrast where required, photographic calendar active/today/hover/backing/arrows/desktop targets, and the full37/U01-U12 matrix. Skip1/2/3 evidence remains closed separately.
