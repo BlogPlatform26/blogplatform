@@ -23,3 +23,5 @@ U04 update: owner_filter_contrast_targets.md closes recorded owner active-filter
 U04 reader update: reader_private_answered_evidence.md records question3 private answered contrast/containment at320/390/768/1440 and visible native390 submit focus. Evidence-only, desktop unchanged. Next reader2672 pending question1 plus remaining owner/public focus and skips; full scope remains open.
 
 U04 pending reader update: reader_private_pending_evidence.md records question1 pending text contrast4.677 and containment at320/390/768/1440; native390 submit focus and complete pending card visually inspected. No app change. Next remaining owner/public focus controls and unrecorded skips; do not repeat answered/pending private evidence.
+
+U04 skip update: onboarding_keyboard_skip.md now records native390 step1 and step3 skip draft-discard and reload preservation, complementing closed step2 incomplete-date skip. Continue durable owner focus proof and remaining public/owner controls; full matrix stays open.
