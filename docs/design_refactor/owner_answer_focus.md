@@ -5,3 +5,8 @@
 Durable raw C:/Users/mario/Documents/Codex/2026-10-10/z/work/owner-focus-controls.json; inspected scrolled390 viewport images outputs/owner-focus-checkbox.png,owner-focus-save.png,owner-focus-delete.png. Earlier unavailable temporary captures are superseded by these files. This adds no four-width geometry comparison or whole U04 acceptance. App and desktop unchanged; no new tests required for evidence-only documentation.
 
 Logout confirmed guest navigation, tab6 closed, viewport reset, own QA39733 terminally stopped. Remaining: other author-settings controls/public owner link focus, numerical focus contrast where required, photographic calendar active/today/hover/backing/arrows/desktop targets, and the full37/U01-U12 matrix. Skip1/2/3 evidence remains closed separately.
+## Focus ring contrast follow-up
+
+2026-11-16 analysis of durable owner-focus-controls.json: alpha-compositing the recorded shadows over the white card yields checkbox RGB194.5/218.75/254.5 ratio1.4140, save RGB134/182.5/254 ratio2.0635, delete RGB237.5/154/162 ratio2.1512 against white. These isolated rings do not reach the project's3:1 focus-indicator target. This is a calculation from recorded CSS and white backing, not new pixel sampling or a blanket WCAG conformance verdict: focused button fill also changes, and the entire indicator needs assessment.
+
+Next implementation candidate: scoped opaque focus-visible outline on .author-manage-card textarea, checkbox and action buttons, retaining dimensions and ordinary styles. Capture fresh paired320/390/768/1440 actual foreground/backing/font/geometry and clipping/overlap before editing, inspect native keyboard states, then check/migrations/full suite. Do not mark repaired from this calculation alone. App remains unchanged.

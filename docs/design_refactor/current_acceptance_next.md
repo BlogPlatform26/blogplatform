@@ -27,3 +27,5 @@ U04 pending reader update: reader_private_pending_evidence.md records question1 
 U04 skip update: onboarding_keyboard_skip.md now records native390 step1 and step3 skip draft-discard and reload preservation, complementing closed step2 incomplete-date skip. Continue durable owner focus proof and remaining public/owner controls; full matrix stays open.
 
 Owner answer focus: owner_answer_focus.md records durable native390 checkbox/save/delete visible-focus evidence. Other controls and numerical focus contrast remain open; no full U04 closure. Skip1/2/3 and reader private evidence remain closed in their documented scope.
+
+Priority focus finding: owner_answer_focus.md quantifies recorded white-card ring contrasts1.414/2.063/2.151. Assess full indicator and implement scoped opaque focus-visible outline with fresh paired four-width proof and full app-change gates. Visible-focus documentation alone is not contrast acceptance.
