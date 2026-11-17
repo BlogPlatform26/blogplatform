@@ -1,7 +1,7 @@
 {% if request.GET.tab == "autor" %}
     <h4 class="mb-4">Upoznaj autora</h4>
 
-    <div class="card p-4 mb-4 shadow-sm">
+    <div class="card p-4 mb-4 shadow-sm author-profile-card">
         <div class="d-flex flex-wrap justify-content-between gap-3 align-items-start mb-4">
             <div>
                 <h5 class="mb-1">Podaci autora</h5>
@@ -227,6 +227,15 @@
     </div>
 
     <style>
+    .author-profile-card input:focus-visible,
+    .author-profile-card textarea:focus-visible,
+    .author-profile-card button:focus-visible,
+    .author-profile-card a:focus-visible,
+    .author-filter-link:focus-visible{
+        outline:3px solid #084298;
+        outline-offset:3px;
+        box-shadow:none;
+    }
     .author-settings-group{
         border:1px solid #e9ecef;
         border-radius:18px;
