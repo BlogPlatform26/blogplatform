@@ -257,8 +257,10 @@ def post_detail(request, post_id, post_slug=None):
         calendar_month = base_month
 
     current_day = today.day if calendar_year == today.year and calendar_month == today.month else None
-    month_calendar, days_with_posts, day_single_post_map = build_calendar_for_user(post.author, calendar_year, calendar_month)
-    archives = build_archives_for_user(post.author)
+    month_calendar, days_with_posts, day_single_post_map = build_calendar_for_user(
+        post.author, calendar_year, calendar_month, check_scheduled=False,
+    )
+    archives = build_archives_for_user(post.author, check_scheduled=False)
 
     prev_month_url, next_month_url = build_month_navigation_urls(
         _bp_post_public_url(post),

@@ -80,7 +80,7 @@ def author_detail(request, username):
         display_year,
         display_month,
     )
-    archives = build_archives_for_user(blog_user)
+    archives = build_archives_for_user(blog_user, check_scheduled=False)
     prev_month_url, next_month_url = build_month_navigation_urls(
         request.path,
         display_year,

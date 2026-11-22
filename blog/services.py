@@ -2998,8 +2998,9 @@ def enrich_posts_with_quiz_poll_data(posts, request_user):
                 })
 
 
-def build_archives_for_user(user):
-    publish_due_posts(user)
+def build_archives_for_user(user, *, check_scheduled=True):
+    if check_scheduled:
+        publish_due_posts(user)
     tz = timezone.get_current_timezone()
     qs = (
         annotate_publication_datetime(
@@ -3030,8 +3031,9 @@ def build_archives_for_user(user):
 
 
 
-def build_calendar_for_user(user, year, month):
-    publish_due_posts(user)
+def build_calendar_for_user(user, year, month, *, check_scheduled=True):
+    if check_scheduled:
+        publish_due_posts(user)
     month_cal = calendar.monthcalendar(year, month)
     tz = timezone.get_current_timezone()
 
@@ -3278,8 +3280,12 @@ def get_profile_user_or_404(username):
 
 
 
-def get_profile_posts_queryset(profile_user, request_user, category_slug=None, year=None, month=None, day=None):
-    publish_due_posts(profile_user)
+def get_profile_posts_queryset(
+    profile_user, request_user, category_slug=None, year=None, month=None, day=None,
+    *, check_scheduled=True,
+):
+    if check_scheduled:
+        publish_due_posts(profile_user)
     tz = timezone.get_current_timezone()
 
     posts = annotate_publication_datetime(
@@ -3369,6 +3375,7 @@ def prepare_blog_context(request, profile_user, template_name, category_slug=Non
         year=filter_year,
         month=filter_month,
         day=filter_day,
+        check_scheduled=False,
     )
     page_obj = paginate_posts(posts, blog_preferences['posts_per_page'], request.GET.get('page'))
     current_posts = list(page_obj.object_list)
@@ -3381,8 +3388,9 @@ def prepare_blog_context(request, profile_user, template_name, category_slug=Non
         profile_user,
         display_year,
         display_month,
+        check_scheduled=False,
     )
-    archives = build_archives_for_user(profile_user)
+    archives = build_archives_for_user(profile_user, check_scheduled=False)
 
     calendar_extra_params = {}
     for key in ('category', 'tag'):
