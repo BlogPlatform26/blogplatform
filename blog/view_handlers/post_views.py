@@ -19,6 +19,7 @@ from blog.services import (
     build_archives_for_user,
     build_calendar_for_user,
     build_month_navigation_urls,
+    normalize_calendar_query,
     enrich_posts_with_quiz_poll_data,
     get_allow_anonymous_comments,
     build_author_profile_items,
@@ -239,19 +240,11 @@ def post_detail(request, post_id, post_slug=None):
     base_year = local_publication_datetime.year
     base_month = local_publication_datetime.month
 
-    try:
-        calendar_year = int(request.GET.get('year')) if request.GET.get('year') else base_year
-    except (TypeError, ValueError):
-        calendar_year = base_year
-
-    try:
-        calendar_month = int(request.GET.get('month')) if request.GET.get('month') else base_month
-    except (TypeError, ValueError):
-        calendar_month = base_month
-
-    if calendar_month < 1 or calendar_month > 12:
-        calendar_year = base_year
-        calendar_month = base_month
+    _, _, _, calendar_year, calendar_month = normalize_calendar_query(
+        request.GET.get('year') or base_year,
+        request.GET.get('month') or base_month,
+        fallback_date=local_publication_datetime.date(),
+    )
 
     current_day = today.day if calendar_year == today.year and calendar_month == today.month else None
     month_calendar, days_with_posts, day_single_post_map = build_calendar_for_user(post.author, calendar_year, calendar_month)

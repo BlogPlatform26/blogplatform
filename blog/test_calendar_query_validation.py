@@ -86,3 +86,21 @@ class CalendarQueryValidationTests(TestCase):
         self.assertEqual(author_response.status_code, 200)
         self.assertEqual(author_response.context["current_year"], 2024)
         self.assertEqual(author_response.context["current_month_num"], 2)
+
+    def test_post_detail_invalid_year_falls_back_to_publication_month(self):
+        url = reverse("post_detail_slug", args=[self.leap_post.pk, "leap-day-post"])
+        for year in ("0", "-1", "10000", "9999", "not-a-year"):
+            with self.subTest(year=year):
+                response = self.client.get(url, {"year": year, "month": "12"})
+                self.assertEqual(response.status_code, 200)
+                self.assertEqual(response.context["current_year"], 2024)
+                self.assertEqual(response.context["current_month_num"], 2)
+                self.assertContains(response, self.leap_post.title)
+
+    def test_post_detail_calendar_keeps_valid_requested_month(self):
+        url = reverse("post_detail_slug", args=[self.leap_post.pk, "leap-day-post"])
+        response = self.client.get(url, {"year": "2024", "month": "3"})
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.context["current_year"], 2024)
+        self.assertEqual(response.context["current_month_num"], 3)
+        self.assertContains(response, self.leap_post.title)
