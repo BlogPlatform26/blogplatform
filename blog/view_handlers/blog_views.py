@@ -1,11 +1,11 @@
 from django.contrib.auth.models import User
 from django.core.paginator import Paginator
-from django.db.models import Count, Q
+from django.db.models import Count, Prefetch, Q
 from django.shortcuts import render
 from django.utils import timezone
 
-from blog.models import Category, Follow, Like, Post, Tag
-from blog.services import annotate_publication_datetime, apply_blog_preferences_to_posts, get_active_category_name, get_home_featured_posts, get_special_day_cards, publish_due_home_featured_posts, publish_due_posts
+from blog.models import Category, Follow, Like, Post, PostImage, Tag
+from blog.services import annotate_publication_datetime, apply_blog_preferences_to_posts, get_active_category_name, get_home_featured_entries, get_home_featured_posts, get_special_day_cards, publish_due_home_featured_posts, publish_due_posts
 
 
 
@@ -59,7 +59,7 @@ def home(request):
     ordered_post_list = (
         base_post_list.distinct()
         .select_related('author', 'author__profile', 'category')
-        .prefetch_related('images', 'tags')
+        .prefetch_related(Prefetch('images', queryset=PostImage.objects.order_by('pk')), 'tags')
         .order_by('-publication_datetime_db', '-created_at')
     )
 
@@ -72,26 +72,26 @@ def home(request):
     featured_page = None
 
     if filter_type == 'featured':
-        featured_posts = list(get_home_featured_posts(base_post_list, now=now) or [])
-        apply_blog_preferences_to_posts(featured_posts)
-        _mark_liked_posts(featured_posts, request.user)
-
+        entries = get_home_featured_entries(base_post_list, now=now)
         featured_per_page = 6
-        featured_page = Paginator(featured_posts, featured_per_page).get_page(request.GET.get('page'))
+        featured_page = Paginator(entries, featured_per_page).get_page(request.GET.get('page'))
 
-        primary_start = max((featured_page.number - 1) * featured_per_page, 0)
-        primary_end = primary_start + featured_per_page
-        secondary_end = primary_end + featured_per_page
+        primary_start = (featured_page.number - 1) * featured_per_page
+        displayed_posts = get_home_featured_posts(
+            entries[primary_start:primary_start + 2 * featured_per_page]
+        )
+        apply_blog_preferences_to_posts(displayed_posts)
+        _mark_liked_posts(displayed_posts, request.user)
 
-        featured_primary_posts = featured_posts[primary_start:primary_end]
-        featured_secondary_posts = featured_posts[primary_end:secondary_end]
+        featured_primary_posts = displayed_posts[:featured_per_page]
+        featured_secondary_posts = displayed_posts[featured_per_page:]
+        featured_page.object_list = featured_primary_posts
         posts = featured_page
     else:
         if request.user.is_authenticated and filter_type == 'following':
             following_users = Follow.objects.filter(follower=request.user).values_list('following', flat=True)
             ordered_post_list = ordered_post_list.filter(author__in=following_users)
 
-        apply_blog_preferences_to_posts(ordered_post_list)
         posts = Paginator(ordered_post_list, per_page).get_page(request.GET.get('page'))
         apply_blog_preferences_to_posts(posts)
         _mark_liked_posts(posts, request.user)
@@ -101,15 +101,12 @@ def home(request):
         following_users = Follow.objects.filter(follower=request.user).values_list('following', flat=True)
         following_posts = annotate_publication_datetime(Post.objects.filter(author__in=following_users, status='published')).filter(publication_datetime_db__lte=now).order_by('-publication_datetime_db', '-created_at')[:5]
 
-    unread_notifications_count = request.user.notifications.filter(is_read=False).count() if request.user.is_authenticated else 0
-
     return render(request, 'blog/home.html', {
         'posts': posts,
         'featured_page': featured_page,
         'featured_primary_posts': featured_primary_posts,
         'featured_secondary_posts': featured_secondary_posts,
         'following_posts': following_posts,
-        'unread_notifications_count': unread_notifications_count,
         'active_category': category_slug,
         'active_tag': tag_name,
         'filter_type': filter_type,

@@ -16,7 +16,7 @@ from django.utils import timezone
 from django.shortcuts import render
 from django.conf import settings
 from django.core.paginator import Paginator
-from django.db.models import Count, F, Q
+from django.db.models import Count, Exists, F, OuterRef, Prefetch, Q
 from django.db.models.functions import Coalesce, TruncMonth
 from django.urls import reverse
 from django.utils.safestring import mark_safe
@@ -36,6 +36,7 @@ from .models import (
     Follow,
     PollVote,
     Post,
+    PostImage,
     QuizAnswer,
     Tag,
     UserBlock,
@@ -2479,9 +2480,7 @@ def _build_home_featured_candidates(base_queryset, slot_dt, excluded_post_ids=No
 def _publish_priority_home_featured_posts(base_queryset, now=None, backfill_days=3):
     now = now or timezone.now()
     window_start = now - timezone.timedelta(days=backfill_days)
-    featured_post_ids = set(
-        HomeFeaturedPost.objects.exclude(post__isnull=True).values_list('post_id', flat=True)
-    )
+    already_featured = HomeFeaturedPost.objects.filter(post_id=OuterRef('pk'))
 
     priority_posts = (
         annotate_publication_datetime(base_queryset)
@@ -2491,7 +2490,7 @@ def _publish_priority_home_featured_posts(base_queryset, now=None, backfill_days
             | Q(author__is_superuser=True)
             | _get_home_featured_premium_filter()
         )
-        .exclude(id__in=featured_post_ids)
+        .filter(~Exists(already_featured))
         .select_related('author', 'author__profile')
         .order_by('publication_datetime_db', 'created_at')
         .distinct()
@@ -2541,27 +2540,17 @@ def _pick_home_featured_post_for_slot(base_queryset, slot_dt, slot_name, slot_to
     )
 
     daily_cap = _get_home_featured_daily_cap(all_recent_count)
-    if daily_cap <= len(existing_today_entries):
-        HomeFeaturedPost.objects.create(
-            post=None,
-            source='algorithm',
-            featured_at=slot_dt,
-            slot_date=slot_date,
-            slot_name=slot_name,
-            slot_token=slot_token,
+    slot_defaults = {
+        'source': 'algorithm',
+        'featured_at': slot_dt,
+        'slot_date': slot_date,
+        'slot_name': slot_name,
+    }
+    if daily_cap <= len(existing_today_entries) or not candidates:
+        entry, _ = HomeFeaturedPost.objects.get_or_create(
+            slot_token=slot_token, defaults=slot_defaults,
         )
-        return None
-
-    if not candidates:
-        HomeFeaturedPost.objects.create(
-            post=None,
-            source='algorithm',
-            featured_at=slot_dt,
-            slot_date=slot_date,
-            slot_name=slot_name,
-            slot_token=slot_token,
-        )
-        return None
+        return entry.post
 
     score_values = [getattr(post, 'home_featured_score', 0) or 0 for post in candidates]
     interaction_values = [getattr(post, 'home_featured_interaction_total', 0) or 0 for post in candidates]
@@ -2601,17 +2590,16 @@ def _pick_home_featured_post_for_slot(base_queryset, slot_dt, slot_name, slot_to
     )
 
     chosen = qualified[0] if qualified else None
-    HomeFeaturedPost.objects.create(
-        post=chosen,
-        source='algorithm',
-        featured_at=slot_dt,
-        slot_date=slot_date,
-        slot_name=slot_name,
+    entry, _ = HomeFeaturedPost.objects.get_or_create(
         slot_token=slot_token,
-        score=getattr(chosen, 'home_featured_score', None) if chosen else None,
-        raw_score=getattr(chosen, 'home_featured_raw_score', None) if chosen else None,
+        defaults={
+            **slot_defaults,
+            'post': chosen,
+            'score': getattr(chosen, 'home_featured_score', None),
+            'raw_score': getattr(chosen, 'home_featured_raw_score', None),
+        },
     )
-    return chosen
+    return entry.post
 
 
 def publish_due_home_featured_posts(now=None, backfill_days=3):
@@ -2623,43 +2611,41 @@ def publish_due_home_featured_posts(now=None, backfill_days=3):
     local_today = timezone.localtime(now).date()
     start_date = local_today - timezone.timedelta(days=backfill_days)
 
-    slot_dates = []
-    cursor = start_date
-    while cursor <= local_today:
-        slot_dates.append(cursor)
-        cursor += timezone.timedelta(days=1)
-
-    existing_tokens = set(
-        HomeFeaturedPost.objects.exclude(slot_token__isnull=True).values_list('slot_token', flat=True)
-    )
-
-    for slot_date in slot_dates:
+    due_slots = {}
+    for day_offset in range(backfill_days + 1):
+        slot_date = start_date + timezone.timedelta(days=day_offset)
         for slot_name, hour in HOME_FEATURED_SLOT_SCHEDULE:
             slot_dt = _get_home_featured_slot_datetime(slot_date, hour)
-            if slot_dt > now:
-                continue
-            slot_token = f"{slot_date.isoformat()}:{slot_name}"
-            if slot_token in existing_tokens:
-                continue
+            if slot_dt <= now:
+                slot_token = f"{slot_date.isoformat()}:{slot_name}"
+                due_slots[slot_token] = (slot_dt, slot_name)
+
+    existing_tokens = set(
+        HomeFeaturedPost.objects.filter(slot_token__in=due_slots).values_list('slot_token', flat=True)
+    )
+    for slot_token, (slot_dt, slot_name) in due_slots.items():
+        if slot_token not in existing_tokens:
             _pick_home_featured_post_for_slot(base_queryset, slot_dt, slot_name, slot_token)
-            existing_tokens.add(slot_token)
 
 
-def get_home_featured_posts(base_queryset, now=None):
+def get_home_featured_entries(base_queryset, now=None):
     now = now or timezone.now()
-    base_queryset = annotate_publication_datetime(base_queryset)
-
-    entries = (
+    return (
         HomeFeaturedPost.objects.filter(
             featured_at__lte=now,
             post__isnull=False,
             post__in=base_queryset,
         )
         .select_related('post', 'post__author', 'post__author__profile', 'post__category')
-        .prefetch_related('post__images', 'post__tags')
-        .order_by('-featured_at', '-created_at')
+        .prefetch_related(
+            Prefetch('post__images', queryset=PostImage.objects.order_by('pk')),
+            'post__tags',
+        )
+        .order_by('-featured_at', '-created_at', '-pk')
     )
 
+
+def get_home_featured_posts(entries):
     posts = []
     for entry in entries:
         post = entry.post
@@ -2957,42 +2943,59 @@ def publish_due_posts(author=None):
 
 
 def enrich_posts_with_quiz_poll_data(posts, request_user):
-    is_auth = request_user.is_authenticated
+    posts = list(posts)
+    poll_ids = {post.pk for post in posts if post.post_type == 'poll'}
+    quiz_ids = {post.pk for post in posts if post.post_type == 'quiz'}
+    quiz_answers = {}
+    poll_votes = {}
+    if request_user.is_authenticated:
+        if quiz_ids:
+            quiz_answers = {
+                answer.post_id: answer
+                for answer in QuizAnswer.objects.filter(post_id__in=quiz_ids, user=request_user)
+                .select_related('selected_option')
+            }
+        if poll_ids:
+            poll_votes = {
+                vote.post_id: vote
+                for vote in PollVote.objects.filter(post_id__in=poll_ids, user=request_user)
+                .select_related('option')
+            }
+
+    poll_counts = {}
+    if poll_ids:
+        counts = (
+            PollVote.objects.filter(post_id__in=poll_ids)
+            .values('post_id', 'option_id')
+            .annotate(vote_count=Count('pk'))
+        )
+        for row in counts:
+            poll_counts.setdefault(row['post_id'], {})[row['option_id']] = row['vote_count']
 
     for post in posts:
-        post.quiz_user_answer = None
-        post.quiz_is_correct = None
-        post.poll_user_vote = None
+        post.quiz_user_answer = quiz_answers.get(post.pk) if post.post_type == 'quiz' else None
+        post.quiz_is_correct = (
+            post.quiz_user_answer.selected_option.is_correct if post.quiz_user_answer else None
+        )
+        post.poll_user_vote = poll_votes.get(post.pk) if post.post_type == 'poll' else None
         post.poll_results = []
         post.poll_total = 0
         apply_blog_preferences_to_profile(post.author.profile, post.author)
         post.allow_anonymous_comments = get_allow_anonymous_comments(post.author)
         ensure_post_home_image(post, save=True)
 
-        if post.post_type == 'quiz':
-            if is_auth:
-                ans = QuizAnswer.objects.filter(post=post, user=request_user).select_related('selected_option').first()
-                post.quiz_user_answer = ans
-                if ans:
-                    post.quiz_is_correct = ans.selected_option.is_correct
-
-        elif post.post_type == 'poll':
-            post.poll_total = PollVote.objects.filter(post=post).count()
-            if is_auth:
-                post.poll_user_vote = PollVote.objects.filter(post=post, user=request_user).select_related('option').first()
-
-            results = []
-            for opt in post.poll_options.all():
-                count = PollVote.objects.filter(post=post, option=opt).count()
-                percent = round((count / post.poll_total) * 100) if post.poll_total > 0 else 0
-                results.append({
-                    'id': opt.id,
-                    'text': opt.text,
+        if post.post_type == 'poll':
+            option_counts = poll_counts.get(post.pk, {})
+            post.poll_total = sum(option_counts.values())
+            for option in post.poll_options.all():
+                count = option_counts.get(option.pk, 0)
+                percent = round(count / post.poll_total * 100) if post.poll_total else 0
+                post.poll_results.append({
+                    'id': option.pk,
+                    'text': option.text,
                     'count': count,
                     'percent': percent,
                 })
-            post.poll_results = results
-
 
 
 def build_archives_for_user(user):
@@ -3367,10 +3370,9 @@ def prepare_blog_context(request, profile_user, template_name, category_slug=Non
         month=filter_month,
         day=filter_day,
     )
-    enrich_posts_with_quiz_poll_data(posts, request.user)
-
     page_obj = paginate_posts(posts, blog_preferences['posts_per_page'], request.GET.get('page'))
     current_posts = list(page_obj.object_list)
+    enrich_posts_with_quiz_poll_data(current_posts, request.user)
 
     for post in current_posts:
         post.allow_anonymous_comments = allow_anonymous_comments

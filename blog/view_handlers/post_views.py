@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.core.cache import cache
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
-from django.db.models import F
+from django.db.models import F, Prefetch, prefetch_related_objects
 from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse
 from django.utils import timezone
@@ -141,13 +141,7 @@ def post_detail(request, post_id, post_slug=None):
     publish_due_posts()
 
     post = get_object_or_404(
-        Post.objects.select_related('author', 'author__profile', 'category').prefetch_related(
-            'comments__author__profile',
-            'images',
-            'tags',
-            'quiz_options',
-            'poll_options'
-        ),
+        Post.objects.select_related('author', 'author__profile', 'category'),
         id=post_id,
         status='published'
     )
@@ -157,14 +151,23 @@ def post_detail(request, post_id, post_slug=None):
         if post_slug != expected_slug:
             return redirect(_bp_post_public_url(post))
 
+    prefetch_related_objects(
+        [post],
+        Prefetch(
+            'comments',
+            queryset=Comment.objects.select_related('author__profile').order_by('created_at', 'id'),
+        ),
+        'images', 'tags', 'quiz_options', 'poll_options',
+    )
+
     session_key = f'viewed_post_{post.id}'
 
     if request.user != post.author and not request.session.get(session_key):
+        Post.objects.filter(pk=post.pk).update(views=F('views') + 1)
         post.views += 1
-        post.save(update_fields=['views'])
         request.session[session_key] = True
 
-    comments = post.comments.all().order_by('created_at', 'id')
+    comments = post.comments.all()
     blog_preferences = apply_blog_preferences_to_profile(post.author.profile, post.author)
     allow_anonymous_comments = get_allow_anonymous_comments(post.author)
     post.allow_anonymous_comments = allow_anonymous_comments

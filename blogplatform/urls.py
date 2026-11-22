@@ -24,7 +24,7 @@ path("blog/settings/export-posts/", export_my_posts, name="export_my_posts"),
 
     path(
         "favicon.ico",
-        RedirectView.as_view(url="/static/images/favicon.png", permanent=False),
+        RedirectView.as_view(url="/static/images/favicon-180.png", permanent=False),
         name="favicon",
     ),
     path('admin/security-events/overview/', views.security_events_dashboard, name='security_events_dashboard'),

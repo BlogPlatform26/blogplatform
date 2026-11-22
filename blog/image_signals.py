@@ -12,8 +12,9 @@ from .models import (
 
 
 @receiver(post_save, sender=Post)
-def optimize_post_image(sender, instance, **kwargs):
-    optimize_image_field(instance, "image")
+def optimize_post_image(sender, instance, update_fields=None, **kwargs):
+    if update_fields is None or "image" in update_fields:
+        optimize_image_field(instance, "image")
 
 
 @receiver(post_save, sender=PostImage)
