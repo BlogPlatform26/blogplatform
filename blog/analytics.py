@@ -233,15 +233,20 @@ def build_live_analytics_context(owner):
     today = timezone.localdate()
 
     base_qs = BlogVisitor.objects.filter(blog_owner=owner).exclude(device_type='Bot')
-    month_visits = list(base_qs.filter(last_seen__gte=now - timedelta(days=MAP_LOOKBACK_DAYS)))
-    active_cutoff = now - timedelta(minutes=ACTIVE_WINDOW_MINUTES)
-    recent_cutoff = now - timedelta(minutes=RECENT_WINDOW_MINUTES)
-    active_visits = [visit for visit in month_visits if visit.last_seen >= active_cutoff]
+    active_now_qs = base_qs.filter(last_seen__gte=now - timedelta(minutes=ACTIVE_WINDOW_MINUTES))
+    recent_qs = base_qs.filter(last_seen__gte=now - timedelta(minutes=RECENT_WINDOW_MINUTES))
+    month_qs = base_qs.filter(last_seen__gte=now - timedelta(days=MAP_LOOKBACK_DAYS))
+    today_qs = base_qs.filter(last_seen__date=today)
+
+    month_visits = list(month_qs)
 
     page_counter = Counter(
-        PAGE_LABELS.get(visit.page_label, 'Druga stranica') for visit in active_visits
+        PAGE_LABELS.get(label, 'Druga stranica')
+        for label in active_now_qs.values_list('page_label', flat=True)
     )
-    device_counter = Counter(visit.device_type for visit in active_visits or month_visits)
+    device_counter = Counter(active_now_qs.values_list('device_type', flat=True))
+    if not device_counter:
+        device_counter = Counter(month_qs.values_list('device_type', flat=True))
 
     page_breakdown = [
         {'label': label, 'count': count}
@@ -260,11 +265,11 @@ def build_live_analytics_context(owner):
     location_breakdown = _build_location_breakdown(month_visits)
 
     return {
-        'active_now': len(active_visits),
-        'active_recent': sum(visit.last_seen >= recent_cutoff for visit in month_visits),
-        'today_unique': base_qs.filter(last_seen__date=today).count(),
+        'active_now': active_now_qs.count(),
+        'active_recent': recent_qs.count(),
+        'today_unique': today_qs.count(),
         'month_unique': month_unique,
-        'repeat_visitors': sum(visit.hit_count > 1 for visit in month_visits),
+        'repeat_visitors': month_qs.filter(hit_count__gt=1).count(),
         'page_breakdown': page_breakdown,
         'device_breakdown': device_breakdown,
         'map_points': map_points,

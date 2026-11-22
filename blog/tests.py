@@ -2,15 +2,12 @@ from datetime import timedelta
 from unittest.mock import patch
 
 from django.contrib.auth import get_user_model
-from django.core.cache import cache
 from django.db.models import prefetch_related_objects
 from django.test import TestCase
 from django.urls import reverse
 from django.utils import timezone
 
-from .analytics import build_live_analytics_context
-from .context_processors import get_top_bloggers
-from .models import BlogVisitor, Follow, HomeFeaturedPost, Notification, PollOption, PollVote, Post, QuizAnswer, QuizOption
+from .models import Follow, HomeFeaturedPost, Notification, PollOption, PollVote, Post, QuizAnswer, QuizOption
 from .services import enrich_posts_with_quiz_poll_data, publish_due_home_featured_posts, publish_due_posts
 
 
@@ -105,41 +102,3 @@ class FeedPerformanceTests(TestCase):
         self.assertRedirects(destination, reverse('user_blog', args=[self.author.username]))
         notification.refresh_from_db()
         self.assertTrue(notification.is_read)
-
-    def test_visitor_statistics_reuse_loaded_visits(self):
-        for token, age, hits, device in (
-            ('active', timedelta(minutes=2), 2, 'Desktop'),
-            ('recent', timedelta(minutes=10), 1, 'Mobile'),
-            ('old', timedelta(days=60), 3, 'Desktop'),
-            ('bot', timedelta(minutes=1), 4, 'Bot'),
-        ):
-            visit = BlogVisitor.objects.create(
-                blog_owner=self.author, visitor_token=token, hit_count=hits,
-                device_type=device, page_label='post',
-            )
-            BlogVisitor.objects.filter(pk=visit.pk).update(last_seen=self.now - age)
-        with self.assertNumQueries(3):
-            stats = build_live_analytics_context(self.author)
-        self.assertEqual(stats['active_now'], 1)
-        self.assertEqual(stats['active_recent'], 2)
-        self.assertEqual(stats['month_unique'], 2)
-        self.assertEqual(stats['repeat_visitors'], 1)
-        self.assertEqual(stats['device_breakdown'], [{'label': 'Desktop', 'count': 1}])
-        self.assertEqual(stats['latest_seen'], self.now - timedelta(minutes=2))
-
-    def test_top_bloggers_reuses_rankings_and_loads_current_profile(self):
-        key = 'blog:top-bloggers:v1:31'
-        cache.delete(key)
-        self.addCleanup(cache.delete, key)
-        self.create_post('Ranked post')
-
-        with self.assertNumQueries(2):
-            initial = get_top_bloggers(days=31)
-        self.assertEqual(initial[0]['user'], self.author)
-        self.author.profile.blog_name = 'Current blog name'
-        self.author.profile.save(update_fields=['blog_name'])
-
-        with self.assertNumQueries(1):
-            refreshed = get_top_bloggers(days=31)
-        self.assertEqual(refreshed[0]['user'].profile.blog_name, 'Current blog name')
-        self.assertEqual(refreshed[0]['score'], initial[0]['score'])

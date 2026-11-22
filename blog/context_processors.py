@@ -1,6 +1,5 @@
 from django.utils import timezone
 from django.contrib.auth.models import User
-from django.core.cache import cache
 from django.db.models import Count, Sum
 from datetime import timedelta
 import math
@@ -32,7 +31,7 @@ def compute_user_score(total_views, total_likes, total_comments):
     return float(w_views * math.log1p(total_views) + w_like * total_likes + w_comment * total_comments)
 
 
-def _rank_bloggers(days):
+def get_top_bloggers(days=30):
     since = timezone.now() - timedelta(days=days)
 
     rows = (annotate_publication_datetime(Post.objects.filter(status="published"))
@@ -61,11 +60,8 @@ def _rank_bloggers(days):
     k = int(clamp(k, 5, 10))
 
     data.sort(key=lambda x: x["score"], reverse=True)
-    return data[:k]
+    top = data[:k]
 
-
-def get_top_bloggers(days=30):
-    top = cache.get_or_set(f"blog:top-bloggers:v1:{days}", lambda: _rank_bloggers(days), timeout=30)
     users_map = {u.id: u for u in User.objects.select_related("profile").filter(id__in=[t["user_id"] for t in top])}
 
     result = []
