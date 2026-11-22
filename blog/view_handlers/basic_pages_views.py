@@ -57,6 +57,13 @@ def robots_txt(request):
     lines = [
         "User-agent: *",
         "Allow: /",
+        # Calendar filters produce alternate URLs for posts and profiles.
+        *(
+            f"Disallow: {section}*{separator}{parameter}="
+            for section in ("/blog/", "/post/")
+            for separator in ("?", "?*&")
+            for parameter in ("year", "month")
+        ),
         f"Sitemap: {request.build_absolute_uri(reverse('sitemap_xml'))}",
     ]
 
