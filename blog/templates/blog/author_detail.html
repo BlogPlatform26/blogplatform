@@ -71,7 +71,7 @@
         <div class="card shadow-sm border-0 mb-4 author-page-card">
             <div class="card-body p-4">
                 <div class="small text-muted">
-                    <a href="{% url 'login' %}">Prijavi se</a> da postaviš pitanje autoru.
+                    <a href="{% url 'login' %}" class="author-guest-login">Prijavi se</a> da postaviš pitanje autoru.
                 </div>
             </div>
         </div>
@@ -178,6 +178,10 @@
         outline-offset:3px;
         box-shadow:none;
     }
+    .author-guest-login{
+        margin-inline-end:0.5rem;
+    }
+
     .author-page-title {
         font-family: var(--blog-title-font, Georgia, "Times New Roman", serif);
         color: var(--blog-title-color, #3f3128);

@@ -19,3 +19,13 @@ Validation:251 tests passed in155.786s; Django check clean; migration check repo
 ## Remaining scope
 
 This closes the recorded form/filter opaque-focus repair, not full U04. Inline guest/content-link spacing, custom public backing/link states, calendar active/today/hover/focus/arrows/return focus and the remaining all37/U01-U12 matrix stay open. Do not rerun the paired form measurements without a new change.
+
+## Guest sign-in inline spacing repair (2026-11-23)
+
+The guest Prijavi se link had3.885px between its right edge and the first following character, while the opaque focus outline extended5.333px (2.66667 width plus offset). The390 screenshot showed the ring entering the following word. A scoped author-guest-login class now adds margin-inline-end:0.5rem. The gap measures11.885px at320/390/768/1440, leaving6.552px beyond the ring. The8px shift of following text is intentional on desktop too. Link dimensions, typography and outline are unchanged.
+
+Native Tab from Back focuses the sign-in link at all four widths; focus-visible is true and document horizontal excess0. All four900px-high viewport images were inspected; at320 the following text wraps below with no visible ring/text collision. Enter reaches /login/ (guest, no credentials entered). Paired normal samples include24 leaf nodes per width, with all measured rectangles/fonts preserved. At768/1440 sampled colors/backgrounds also match;320/390 have a header search-icon foreground difference recorded in raw evidence, unrelated to the scoped link rule. The text following the link intentionally shifts8px and is measured separately by DOM Range; leaf-only equality is not a claim that this text stayed in place.
+
+Raw under C:/Users/mario/Documents/Codex/2026-10-10/z/work/: guest-link-before.json, guest-link-after.json, guest-link-suite.txt. Inspected screenshots under z/outputs/: guest-link-after320.png, guest-link-after390.png, guest-link-after768.png, guest-link-after1440.png.253 tests136.958s passed, Django check clean, no migrations. QA used .qa100e.sqlite3, locmem email, own8017 servers26616/14680 stopped; guest tabs5/6 closed and viewport reset.
+
+This closes the recorded guest inline sign-in overlap. Custom content-link/backing states and calendar active/today/hover/focus/arrows/return focus remain open, as does full all37/U01-U12 acceptance.
