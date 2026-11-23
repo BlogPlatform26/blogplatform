@@ -29,3 +29,15 @@ Native Tab from Back focuses the sign-in link at all four widths; focus-visible 
 Raw under C:/Users/mario/Documents/Codex/2026-10-10/z/work/: guest-link-before.json, guest-link-after.json, guest-link-suite.txt. Inspected screenshots under z/outputs/: guest-link-after320.png, guest-link-after390.png, guest-link-after768.png, guest-link-after1440.png.253 tests136.958s passed, Django check clean, no migrations. QA used .qa100e.sqlite3, locmem email, own8017 servers26616/14680 stopped; guest tabs5/6 closed and viewport reset.
 
 This closes the recorded guest inline sign-in overlap. Custom content-link/backing states and calendar active/today/hover/focus/arrows/return focus remain open, as does full all37/U01-U12 acceptance.
+
+## Content-link contrast and inline focus (2026-11-23)
+
+A temporary synthetic2673 fixture added a long URL (https://example.test/ plus18 dugi-put/ segments), a short social URL and a website URL. It exposed link contrast4.293:1: actual fill#0d6efd over rgba(248,249,250,.9), rgba(255,255,255,.95) and white body, composed RGB248.7/249.6/250.5. The existing outward3px outline offset also entered adjacent prose around a wrapped URL.
+
+The existing scoped .author-page-info-value a rule now uses#084298 and an always-visible underline. Its focus-visible override uses outline-offset0, preserving the existing3px opaque outline while keeping it outside the glyphs and away from surrounding words. These color/decoration/focus changes are intentional on desktop too. The measured new text contrast is8.929:1 on this backing. Arbitrary custom photographic backing acceptance remains open.
+
+Paired320/390/768/1440 measurements preserve all three links' rectangles, line fragments, fonts, card geometry and backgrounds exactly. Long URL wraps into10/7/7/4 fragments respectively; the short social URL wraps into2 fragments only at320. Document and info-card local overflow0. Native Tab traverses all three links at every width (12 focus-visible states, offset0). Long-link focus inspected at all four widths;320 durable screenshot recovered using native Tab/Shift+Tab after an earlier scaled/cropped capture was rejected. No external URL was opened.
+
+Raw z/work/author-content-link-before.json, author-content-link-after.json, author-content-link-suite.txt; viewport images z/outputs/author-content-link-after320.png, author-content-link-after390.png, author-content-link-after768.png, author-content-link-after1440.png (900px-high viewports, not whole-page acceptance).253 tests115.544s/check/migrations green. QA8413/94324/38596 stopped, guest tabs7/8/9 closed, viewport reset. Synthetic2673 social and website fields restored to empty; bio remains Synthetic retry draft must survive. No credentials changed.
+
+Recorded content-link contrast/focus issue closed; other custom backing/hover states and calendar active/today/hover/focus/arrows/return focus remain open within the full37/U01-U12 objective.
