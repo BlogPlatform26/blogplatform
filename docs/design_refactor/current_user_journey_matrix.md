@@ -87,3 +87,5 @@ U12 field/retry focus (2026-11-25): support_field_focus.md records eight paired3
 Legal navigation targets (2026-11-25): legal_navigation_targets.md closes recorded three-route48px targets across320/390/768/1440 and representative shared Tab/Enter navigation. Twelve paired states retain main-content rectangles/fonts/backing, doc/local0; intentional tablet/desktop sidebar height growth.253tests81.249/check/migrations green. Remaining support hover/active/rendered invalid states and broader full matrix stay open.
 
 Legal normal sidebar contrast/separation:12 states/36links, active13.765 and inactive composited6.369; minimum8px link gap. Evidence-only, see legal_navigation_targets.md.
+
+U12 additional rendered-invalid evidence (2026-11-25): support_field_focus.md records description-only and combined whitespace errors at320/390/768/1440, correct per-field error associations, preserved input, and partial correction at390. Evidence-only, no desktop/app change. Pointer and remaining legal/footer/authenticated scope remain open.
