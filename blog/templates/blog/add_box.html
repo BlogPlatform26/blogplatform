@@ -155,8 +155,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const titleCounter = document.getElementById("addBoxTitleCounter");
     const contentCounter = document.getElementById("addBoxContentCounter");
     const contentError = document.getElementById("addBoxContentError");
-    const contentLimit = parseInt(form?.dataset.contentLimit || "1200", 10);
     const form = document.getElementById("addBoxForm");
+    const contentLimit = parseInt(form?.dataset.contentLimit || "1200", 10);
 
     function updateTitleCounter() {
         if (!titleInput || !titleCounter) return;

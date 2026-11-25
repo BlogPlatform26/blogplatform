@@ -89,3 +89,12 @@ Legal navigation targets (2026-11-25): legal_navigation_targets.md closes record
 Legal normal sidebar contrast/separation:12 states/36links, active13.765 and inactive composited6.369; minimum8px link gap. Evidence-only, see legal_navigation_targets.md.
 
 U12 additional rendered-invalid evidence (2026-11-25): support_field_focus.md records description-only and combined whitespace errors at320/390/768/1440, correct per-field error associations, preserved input, and partial correction at390. Evidence-only, no desktop/app change. Pointer and remaining legal/footer/authenticated scope remain open.
+
+## U06 add-box initialization and workflow (2026-11-25)
+Browser reproduced ReferenceError: Cannot access 'form' before initialization on /add-box/. Move the form lookup before contentLimit access; no styling change. Four before/after320/390/768/1440 snapshots of29 visible controls/labels/editor nodes are identical including rectangles, fonts, foreground/background and local excess; document excess0. Native editing updates title13 and content17 counters. At390,1201 characters shows the over-limit message and clicking Save stays on add-box; correction to17 characters plus left position saves synthetic UserBox1 for owner2673. Settings edit to 'Synthetic box edited'/'Synthetic edited content' survives reload. Delete confirmation shows that title; Cancel followed by Boxes retains the object. Fixture1 intentionally remains for subsequent QA; no deletion performed.
+
+Open findings: settings boxes at390 has scrollWidth382/clientWidth375 (7px excess), title target300x32; add form does not render bound errors and its position select lacks a label association; edit retry currently redirects and risks losing invalid input. These are not closed by the initialization repair. Continue full U06 validation/retry/long-content/targets and containment before acceptance.
+
+Raw z/work: box-before.json,box-after.json,box-counter-validation.json,box-flow.json,box-settings-layout-finding.json,box-counter-suite.txt. Inspected screenshot z/outputs/box-settings-finding390.png is390x900 scrolled viewport and shows the open issue. Own QA server restarted after template edit, then stopped with listener absent; owner logged out, tab19 closed, viewport reset. No intentional desktop change.
+
+U06 initialization validation:253 tests passed in87.752s; check clean, makemigrations --check --dry-run no changes. Browser evidence above covers the actual counter interaction absent from server tests.

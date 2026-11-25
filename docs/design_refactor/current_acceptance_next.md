@@ -58,3 +58,5 @@ Legal navigation targets (2026-11-25): legal_navigation_targets.md closes record
 Legal normal navigation contrast and separation verified from existing twelve samples:13.765 active/6.369 inactive,8px minimum gap. Do not repeat. NEXT additional rendered support invalid states and pointer states; retain broader legal/footer/authenticated and calendar/full matrix scope.
 
 Additional support invalid combinations and partial correction are recorded in support_field_focus.md (2026-11-25): eight four-width samples, error associations and preserved title, zero measured overflow. Do not repeat these whitespace-description/both-field cases. Continue pointer states and remaining legal/footer/authenticated scope; full37/U01-U12 remains incomplete.
+
+U06 priority: add-box initialization repaired; see dated matrix evidence. Synthetic box1 owner2673 persists after edit/reload/cancel. NEXT repair settings390 horizontal excess7px, bound validation/retry and control associations/targets, then complete grouped U06 acceptance. Full37/U01-U12 stays open.
