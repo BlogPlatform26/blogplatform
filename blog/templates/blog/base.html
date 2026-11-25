@@ -1644,10 +1644,15 @@ html body .comment-body .comment-text .bp-comment-word {
                         --bs-btn-active-bg: #084298;
                         --bs-btn-active-border-color: #084298;
                     }
+                    .support-request-form .form-control:focus-visible,
+                    .support-request-form input[type="radio"]:focus-visible,
                     .support-request-form .btn-outline-primary:focus-visible {
                         outline: 3px solid #084298;
                         outline-offset: 3px;
                         box-shadow: none;
+                    }
+                    .support-request-form input[type="radio"]:focus-visible {
+                        outline-offset: 0;
                     }
                     </style>
                     <form class="support-request-form" method="POST" action="{% url 'submit_bug_report' %}">
