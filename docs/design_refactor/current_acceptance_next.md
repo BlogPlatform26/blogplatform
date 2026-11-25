@@ -54,3 +54,5 @@ Evidence reconciliation2026-11-25: normal retry button contrast4.500782787406787
 
 
 Legal navigation targets (2026-11-25): legal_navigation_targets.md closes recorded three-route48px targets across320/390/768/1440 and representative shared Tab/Enter navigation. Twelve paired states retain main-content rectangles/fonts/backing, doc/local0; intentional tablet/desktop sidebar height growth.253tests81.249/check/migrations green. Remaining support hover/active/rendered invalid states and broader full matrix stay open.
+
+Legal normal navigation contrast and separation verified from existing twelve samples:13.765 active/6.369 inactive,8px minimum gap. Do not repeat. NEXT additional rendered support invalid states and pointer states; retain broader legal/footer/authenticated and calendar/full matrix scope.

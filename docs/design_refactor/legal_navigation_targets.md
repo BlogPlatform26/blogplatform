@@ -9,3 +9,7 @@ Native Tab traversal on content rules at each of four widths records search, log
 Raw under C:/Users/mario/Documents/Codex/2026-10-10/z/work/: legal-targets-before.json, legal-targets-after.json, legal-targets-keyboard.json, legal-targets-navigation.json, legal-targets-suite.txt. Images z/outputs/legal-targets768.png and legal-targets1440.png are900px viewport captures.
 
 Check/migrations clean;253 tests81.249s pass. QA server13151 stopped, port8017 absent, guesttab17 closed and viewport reset. No production database/media/email use. Full37/U01-U12 remains incomplete; support hover/active and rendered invalid combinations, broader legal text/contrast and other matrix work remain open.
+
+## Normal navigation contrast and separation
+
+Calculated from legal-targets-after.json (12 states,36 links): opaque card rgb(248,241,232), no background image; active text rgb(33,37,41) gives13.765130959447488:1. Inactive rgba(33,37,41,0.75) composites to(86.75,88,88.75), giving6.369034434941514:1. Minimum consecutive link rectangle gap is8px across the12 states. Normal navigation text contrast and separation pass in this recorded scope. No new app change or suite rerun; pointer hover/active and broader page typography are not inferred from these samples.
