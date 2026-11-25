@@ -9,3 +9,9 @@ Evidence under C:/Users/mario/Documents/Codex/2026-10-10/z/work/: support-field-
 Final tree:253 tests55.352s pass; check clean; no migrations. No app edits after tests. Server71112 stopped, listener8017 absent, guesttab16 closed, viewport reset. Documentation write was briefly blocked by usage-limit approval review and resumed after recovery, without credit reset.
 
 Remaining: pointer hover/active, retry button normal text contrast, other invalid/legal states, calendar and full37/U01–U12 acceptance. This is a bounded focus repair, not full acceptance.
+
+## Normal retry button evidence reconciliation
+
+Existing support-fields-after.json records normal button foreground rgb(255,255,255), opaque background rgb(13,110,253), background-image none and16px/24px text at320/390/768/1440. The message field, not the button, was focused during these samples. Standard sRGB relative-luminance calculation gives4.500782787406787:1. This meets4.5:1 narrowly without rounding up; no color edit is needed for this recorded state. Hover/active states are not inferred from it.
+
+Reviewed support workflow tests already cover empty title, empty description, invalid email, unknown request type, whitespace-title retry/correction, three categories, authenticated optional email, GET rejection and mail-failure persistence. These server checks do not replace rendered invalid-state or legal-page keyboard/target verification. No application change or test rerun for this evidence-only reconciliation.
