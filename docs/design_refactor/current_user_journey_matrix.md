@@ -82,3 +82,6 @@ U12 bounded update2026-11-24: support_submit_contrast.md closes recorded sidebar
 
 
 U12 field/retry focus (2026-11-25): support_field_focus.md records eight paired320/390/768/1440 samples,36 native focus states, opaque outlines8.354/9.362 contrast, preserved geometry/fonts and doc/local0.253tests55.352/check/migrations green. Intentional desktop keyboard-focus change. Hover/active, retry normal button contrast and full matrix remain open.
+
+
+Legal navigation targets (2026-11-25): legal_navigation_targets.md closes recorded three-route48px targets across320/390/768/1440 and representative shared Tab/Enter navigation. Twelve paired states retain main-content rectangles/fonts/backing, doc/local0; intentional tablet/desktop sidebar height growth.253tests81.249/check/migrations green. Remaining support hover/active/rendered invalid states and broader full matrix stay open.

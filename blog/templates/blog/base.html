@@ -1470,11 +1470,11 @@ html body .comment-body .comment-text .bp-comment-word {
 {% endif %}
 {% if request.resolver_match.url_name == 'terms_of_use' or request.resolver_match.url_name == 'privacy_policy' or request.resolver_match.url_name == 'content_rules' %}
 <style>
+    .blog-main-left-column .home-sidebar-box a { min-height: 48px; display: flex !important; align-items: center; }
 @media (max-width: 767.98px) {
     .blog-main-layout-row > .blog-main-content-column { order: -1; }
     .blog-main-layout-row > .blog-main-left-column { order: 0; }
     .blog-main-left-column .home-sidebar-box { margin-top: 0 !important; }
-    .blog-main-left-column .home-sidebar-box a { min-height: 48px; display: flex !important; align-items: center; }
 }
 </style>
 {% endif %}

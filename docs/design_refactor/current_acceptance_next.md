@@ -51,3 +51,6 @@ Support submit repair (2026-11-24): see support_submit_contrast.md. Recorded nor
 Support field/retry focus repair: see support_field_focus.md. Eight paired four-width samples preserve dimensions/fonts/backing, doc/local0;36 native focus states.253tests55.352/check/migrations green. Intentional desktop focus change; radio offset0 preserves label clearance. NEXT hover/active, retry normal button contrast, other invalid/legal/calendar/full matrix. Do not repeat this bounded focus repair.
 
 Evidence reconciliation2026-11-25: normal retry button contrast4.500782787406787 meets4.5 using recorded opaque white/blue at all four widths. No color fix needed. U12 top matrix row now removes already closed keyboard/tablet/search/focus work. NEXT legal sequential keyboard and tablet/desktop targets, pointer hover/active and additional rendered invalid combinations; full calendar/37/U01-U12 scope remains. See support_field_focus.md.
+
+
+Legal navigation targets (2026-11-25): legal_navigation_targets.md closes recorded three-route48px targets across320/390/768/1440 and representative shared Tab/Enter navigation. Twelve paired states retain main-content rectangles/fonts/backing, doc/local0; intentional tablet/desktop sidebar height growth.253tests81.249/check/migrations green. Remaining support hover/active/rendered invalid states and broader full matrix stay open.
