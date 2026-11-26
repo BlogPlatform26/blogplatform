@@ -267,7 +267,7 @@
 
                             <div class="mb-3">
                                 <div class="d-flex justify-content-between align-items-center gap-2">
-                                    <label class="form-label d-block mb-0">Naslov</label>
+                                    <label for="id_title" class="form-label d-block mb-0">Naslov</label>
                                     <div class="small text-muted">
                                         <span id="boxTitleCounter">{{ active_box.title|length }}</span>/{{ box_title_limit }}
                                     </div>
@@ -310,8 +310,8 @@
                             </div>
 
                             <div class="mb-3">
-                                <label class="form-label d-block">Pozicija</label>
-                                <select name="position" class="form-select">
+                                <label for="box_position" class="form-label d-block">Pozicija</label>
+                                <select id="box_position" name="position" class="form-select">
                                     <option value="left"
                                         {% if active_box.position == "left" %}selected{% elif left_count >= max_boxes_per_side %}disabled{% endif %}>
                                         Lijevo
@@ -624,3 +624,47 @@
 
 
 
+
+<style id="blogplatformBoxResponsiveControls">
+    #boxLayoutForm .sortable-box-item {
+        min-width: 0;
+    }
+
+    .box-editor-card > .d-flex > div {
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
+
+    /* The settings column has no right padding to absorb the row's negative gutter. */
+    #boxLayoutForm > .row {
+        margin-right: 0;
+    }
+
+    @media (max-width: 991.98px) {
+        .box-layout-topbar .box-add-btn,
+        .box-editor-card #id_title,
+        .box-editor-card select[name="position"],
+        .box-editor-card .btn,
+        #boxLayoutForm .box-item-link {
+            min-height: 48px !important;
+        }
+
+        .box-layout-topbar .box-add-btn,
+        .box-editor-card .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #boxLayoutForm .drag-handle {
+            width: 48px !important;
+            min-width: 48px !important;
+            height: 48px !important;
+        }
+
+        .box-editor-card .mt-3.d-flex {
+            flex-wrap: wrap;
+            gap: 0.5rem !important;
+        }
+    }
+</style>

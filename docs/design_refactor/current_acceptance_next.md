@@ -64,3 +64,7 @@ U06 priority: add-box initialization repaired; see dated matrix evidence. Synthe
 U06 recovery add/edit draft now has paired normal evidence and native invalid/correction proof in current_user_journey_matrix.md. Add layout exact; direct edit intentionally initializes CKEditor on desktop too. Next settings7pxoverflow and control targets, long-content/full U06; do not repeat recovery cases once final suite/commit recorded.
 
 Recovery final suite259tests106.734/check/migrationsgreen completes recorded add/edit draft preservation repair. NEXT settings boxes390overflow7px, targets and remaining groupedU06, not repeat recovered drafts.
+
+U06 settings containment and long-content update2026-11-26: see box_settings_containment.md. Recorded7px overflow/main mobile targets/long-title overflow/entity-count rejection are repaired and browser-verified; do not repeat recovery or long-content save/cancel. NEXT grouped drag/reorder autosave/readback, full-capacity browser states and editor toolbar/focus acceptance, then other full37/U01-U12 flows. Desktop row/card narrowing is intentional; main desktop editor geometry retained.
+
+Final validation2026-11-26:261tests84.208s pass; Django check clean; makemigrations --check --dry-run reports no changes. Raw box-settings-final-suite.txt.

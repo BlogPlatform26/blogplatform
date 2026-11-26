@@ -1,5 +1,5 @@
 from django.contrib.auth import get_user_model
-from django.test import TestCase
+from django.test import SimpleTestCase, TestCase
 from django.urls import reverse
 
 from blog.models import UserBox
@@ -79,3 +79,23 @@ class BoxRecoveryWorkflowTests(TestCase):
         self.assertIn('position', response.context['form'].errors)
         self.assertEqual(response.context['form']['content'].value(), '<p>Keep new draft</p>')
         self.assertContains(response, 'id="id_position_error"')
+
+
+class BoxRenderedLengthTests(SimpleTestCase):
+    def test_rendered_entities_at_limit_are_accepted(self):
+        from blog.forms import UserBoxForm
+        for content in ('<p>' + 'LongContentWord ' * 74 + 'LongContentWord&nbsp;</p>',
+                        '<p>' + '&amp;' * 1200 + '</p>',
+                        '<p>' + '&lt;b&gt;' * 400 + '</p>'):
+            with self.subTest(content=content[:40]):
+                form = UserBoxForm(data={'title': 'Boundary', 'position': 'left', 'content': content})
+                self.assertTrue(form.is_valid(), form.errors)
+
+    def test_rendered_entities_over_limit_are_rejected(self):
+        from blog.forms import UserBoxForm
+        for content in ('<p>' + '&amp;' * 1201 + '</p>',
+                        '<p>' + '&lt;b&gt;' * 401 + '</p>'):
+            with self.subTest(content=content[:40]):
+                form = UserBoxForm(data={'title': 'Too long', 'position': 'left', 'content': content})
+                self.assertFalse(form.is_valid())
+                self.assertIn('content', form.errors)

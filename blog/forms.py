@@ -8,6 +8,7 @@ from django_ckeditor_5.widgets import CKEditor5Widget
 from django.db.models import Case, When, Value, IntegerField
 
 import re
+from html import unescape
 
 from .html_sanitizer import sanitize_post_html
 from .models import Category, Post, Comment, Profile, UserBox, BugReport, AuthorQuestion, extract_youtube_video_id
@@ -468,7 +469,8 @@ class UserBoxForm(forms.ModelForm):
         content = self.cleaned_data.get("content") or ""
         sanitized_content = sanitize_post_html(content)
 
-        plain_text = strip_tags(sanitized_content).replace("\xa0", " ")
+        # Decode after removing markup so escaped tags remain visible text.
+        plain_text = unescape(strip_tags(sanitized_content)).replace("\xa0", " ")
         plain_text = re.sub(r"\s+", " ", plain_text).strip()
 
         if len(plain_text) > self.MAX_CONTENT_LENGTH:
