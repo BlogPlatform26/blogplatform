@@ -7,22 +7,28 @@
 <div class="card shadow-sm p-4">
     <h3>Uredi box</h3>
 
+    {{ form.media }}
+    {% if form.errors %}<p role="alert">Nije spremljeno. Ispravi označena polja. Unos je sačuvan.</p>{% endif %}
+    {{ form.non_field_errors }}
     <form method="POST">
         {% csrf_token %}
 
         <div class="mb-3">
-            <label>Naslov:</label>
+            <label for="id_title">Naslov:</label>
             {{ form.title }}
+            {{ form.title.errors }}
         </div>
 
         <div class="mb-3">
-            <label>Sadržaj:</label>
+            <label for="id_content">Sadržaj:</label>
             {{ form.content }}
+            {{ form.content.errors }}
         </div>
 
         <div class="mb-3">
-            <label>Pozicija:</label>
+            <label for="id_position">Pozicija:</label>
             {{ form.position }}
+            {{ form.position.errors }}
         </div>
 
         <button type="submit" class="btn btn-primary">

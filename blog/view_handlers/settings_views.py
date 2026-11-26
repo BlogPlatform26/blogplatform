@@ -802,19 +802,17 @@ def add_box(request):
         if form.is_valid():
             position = form.cleaned_data['position']
 
-            if position == 'left' and left_count >= MAX_BOXES_PER_SIDE:
-                messages.error(request, f'Ne možeš dodati više od {MAX_BOXES_PER_SIDE} lijeva boxa.')
-                return redirect('/blog/settings/?tab=boxevi')
+            count = left_count if position == 'left' else right_count
+            if count >= MAX_BOXES_PER_SIDE:
+                form.add_error('position',
+                               f'Odabrana strana je puna (najviše {MAX_BOXES_PER_SIDE} boxa).')
+            else:
+                box = form.save(commit=False)
+                box.user = request.user
+                box.order = get_next_box_order(request.user, position)
+                box.save()
+                return redirect(f'/blog/settings/?tab=boxevi&box={box.id}')
 
-            if position == 'right' and right_count >= MAX_BOXES_PER_SIDE:
-                messages.error(request, f'Ne možeš dodati više od {MAX_BOXES_PER_SIDE} desna boxa.')
-                return redirect('/blog/settings/?tab=boxevi')
-
-            box = form.save(commit=False)
-            box.user = request.user
-            box.order = get_next_box_order(request.user, position)
-            box.save()
-            return redirect(f'/blog/settings/?tab=boxevi&box={box.id}')
     else:
         form = UserBoxForm()
 
@@ -832,42 +830,26 @@ def add_box(request):
 def edit_box(request, box_id):
     normalize_user_boxes(request.user)
     box = get_object_or_404(UserBox, id=box_id, user=request.user)
+    old_position = box.position
+    form = UserBoxForm(request.POST if request.method == 'POST' else None, instance=box)
 
-    if request.method == 'POST':
-        form = UserBoxForm(request.POST, instance=box)
-        if form.is_valid():
-            new_position = form.cleaned_data.get('position')
-            old_position = box.position
-
-            left_count = UserBox.objects.filter(user=request.user, position='left').exclude(id=box.id).count()
-            right_count = UserBox.objects.filter(user=request.user, position='right').exclude(id=box.id).count()
-
-            if new_position == 'left' and left_count >= MAX_BOXES_PER_SIDE:
-                messages.error(request, f'Ne možeš prebaciti box lijevo jer je lijeva strana puna (max {MAX_BOXES_PER_SIDE}).')
-                return redirect(f'/blog/settings/?tab=boxevi&box={box.id}')
-
-            if new_position == 'right' and right_count >= MAX_BOXES_PER_SIDE:
-                messages.error(request, f'Ne možeš prebaciti box desno jer je desna strana puna (max {MAX_BOXES_PER_SIDE}).')
-                return redirect(f'/blog/settings/?tab=boxevi&box={box.id}')
-
+    if request.method == 'POST' and form.is_valid():
+        new_position = form.cleaned_data['position']
+        destination_count = UserBox.objects.filter(
+            user=request.user, position=new_position).exclude(id=box.id).count()
+        if destination_count >= MAX_BOXES_PER_SIDE:
+            form.add_error('position',
+                           f'Odabrana strana je puna (najviše {MAX_BOXES_PER_SIDE} boxa).')
+        else:
             updated_box = form.save(commit=False)
-
             if old_position != new_position:
                 updated_box.order = get_next_box_order(request.user, new_position)
-
             updated_box.save()
             normalize_user_boxes(request.user)
             return redirect(f'/blog/settings/?tab=boxevi&box={box.id}')
 
-        for field_errors in form.errors.values():
-            for error in field_errors:
-                messages.error(request, error)
-
-        return redirect(f'/blog/settings/?tab=boxevi&box={box.id}')
-    else:
-        form = UserBoxForm(instance=box)
-
-    return render(request, 'blog/edit_box.html', {'form': form})
+    return render(request, 'blog/edit_box.html', {'form': form},
+                  status=400 if request.method == 'POST' else 200)
 
 
 @login_required

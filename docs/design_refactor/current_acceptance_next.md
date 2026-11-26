@@ -60,3 +60,7 @@ Legal normal navigation contrast and separation verified from existing twelve sa
 Additional support invalid combinations and partial correction are recorded in support_field_focus.md (2026-11-25): eight four-width samples, error associations and preserved title, zero measured overflow. Do not repeat these whitespace-description/both-field cases. Continue pointer states and remaining legal/footer/authenticated scope; full37/U01-U12 remains incomplete.
 
 U06 priority: add-box initialization repaired; see dated matrix evidence. Synthetic box1 owner2673 persists after edit/reload/cancel. NEXT repair settings390 horizontal excess7px, bound validation/retry and control associations/targets, then complete grouped U06 acceptance. Full37/U01-U12 stays open.
+
+U06 recovery add/edit draft now has paired normal evidence and native invalid/correction proof in current_user_journey_matrix.md. Add layout exact; direct edit intentionally initializes CKEditor on desktop too. Next settings7pxoverflow and control targets, long-content/full U06; do not repeat recovery cases once final suite/commit recorded.
+
+Recovery final suite259tests106.734/check/migrationsgreen completes recorded add/edit draft preservation repair. NEXT settings boxes390overflow7px, targets and remaining groupedU06, not repeat recovered drafts.

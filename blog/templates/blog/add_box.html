@@ -103,6 +103,7 @@
                 <div class="small text-muted"><span id="addBoxTitleCounter">0</span>/{{ box_title_limit }}</div>
             </div>
             {{ form.title }}
+            {{ form.title.errors }}
             <div class="form-text">Naslov može imati najviše {{ box_title_limit }} znakova.</div>
         </div>
 
@@ -112,6 +113,7 @@
                 <div class="small text-muted"><span id="addBoxContentCounter">0</span>/{{ box_content_limit }}</div>
             </div>
             {{ form.content }}
+            {{ form.content.errors }}
             <div class="form-text">Tekst boxa može imati najviše {{ box_content_limit }} znakova bez HTML oznaka.</div>
             <div class="small text-danger d-none mt-1" id="addBoxContentError">
                 Tekst boxa je predug. Skrati sadržaj prije spremanja.
@@ -119,23 +121,24 @@
         </div>
 
         <div class="mb-3">
-            <label class="form-label">Pozicija</label>
+            <label for="id_position" class="form-label">Pozicija</label>
 
-            <select name="position" class="form-select">
+            <select id="id_position" name="position" class="form-select"{% if form.position.errors %} aria-invalid="true" aria-describedby="id_position_error"{% endif %}>
                 <option value="">---------</option>
 
-                <option value="left"
+                <option value="left" {% if form.position.value == "left" %}selected{% endif %}
                     {% if left_count >= max_boxes_per_side %}disabled{% endif %}
                     {% if left_count >= max_boxes_per_side %}title="Dosegnut maksimalan broj lijevih boxeva ({{ max_boxes_per_side }})"{% endif %}>
                     Lijevo
                 </option>
 
-                <option value="right"
+                <option value="right" {% if form.position.value == "right" %}selected{% endif %}
                     {% if right_count >= max_boxes_per_side %}disabled{% endif %}
                     {% if right_count >= max_boxes_per_side %}title="Dosegnut maksimalan broj desnih boxeva ({{ max_boxes_per_side }})"{% endif %}>
                     Desno
                 </option>
             </select>
+            {{ form.position.errors }}
         </div>
 
         <button type="submit" class="btn btn-primary">
