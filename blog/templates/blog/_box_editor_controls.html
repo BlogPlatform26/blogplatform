@@ -1,0 +1,25 @@
+<style id="blogplatformBoxEditorControls">
+    :is(#addBoxForm, #editBoxForm, #directEditBoxForm) .ck-toolbar__items > .ck-button:focus-visible,
+    :is(#addBoxForm, #editBoxForm, #directEditBoxForm) .ck-toolbar__items > .ck-dropdown > .ck-button:focus-visible,
+    :is(#addBoxForm, #editBoxForm, #directEditBoxForm) .ck-toolbar__items > .ck-dropdown > .ck-splitbutton > .ck-button:focus-visible,
+    :is(#addBoxForm, #editBoxForm, #directEditBoxForm) .bp-direct-spacing-control select:focus-visible {
+        outline: 3px solid #084298 !important;
+        outline-offset: -3px;
+        box-shadow: none !important;
+    }
+
+    @media (max-width: 991.98px) {
+        :is(#addBoxForm, #editBoxForm, #directEditBoxForm) .ck-toolbar__items > .ck-button,
+        :is(#addBoxForm, #editBoxForm, #directEditBoxForm) .ck-toolbar__items > .ck-dropdown > .ck-button,
+        :is(#addBoxForm, #editBoxForm, #directEditBoxForm) .ck-toolbar__items > .ck-dropdown > .ck-splitbutton > .ck-button {
+            min-width: 48px !important;
+            min-height: 48px !important;
+        }
+
+        :is(#addBoxForm, #editBoxForm, #directEditBoxForm) .bp-direct-spacing-control,
+        :is(#addBoxForm, #editBoxForm, #directEditBoxForm) .bp-direct-spacing-control select {
+            min-height: 48px !important;
+            height: auto !important;
+        }
+    }
+</style>

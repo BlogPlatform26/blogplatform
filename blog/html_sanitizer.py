@@ -95,6 +95,15 @@ BASE_ALLOWED_ATTRIBUTES = {
 }
 
 STYLE_ALLOWED_ATTRIBUTES = {
+    # CKEditor block formatting must survive save/reload on headings and lists.
+    "h1": ["style", "class", "title"],
+    "h2": ["style", "class", "title"],
+    "h3": ["style", "class", "title"],
+    "h4": ["style", "class", "title"],
+    "h5": ["style", "class", "title"],
+    "h6": ["style", "class", "title"],
+    "li": ["style", "class", "title"],
+    "blockquote": ["style", "class", "title"],
     "p": ["style", "class", "title"],
     "span": ["style", "class", "title"],
     "div": ["style", "class", "title"],
@@ -111,6 +120,7 @@ ALLOWED_PROTOCOLS = [
 
 ALLOWED_CSS_PROPERTIES = [
     "text-align",
+    "line-height",
     "color",
     "background-color",
     "font-weight",

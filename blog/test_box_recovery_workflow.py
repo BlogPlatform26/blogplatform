@@ -12,6 +12,21 @@ class BoxRecoveryWorkflowTests(TestCase):
         self.box = UserBox.objects.create(user=self.owner, title='Saved title',
                                           content='<p>Saved content</p>', position='left')
 
+    def test_editor_heading_alignment_and_spacing_survive_save(self):
+        html = ('<h3 style="text-align:center;line-height:2;position:fixed" '
+                'onclick="alert(1)"><strong>Heading</strong></h3>'
+                '<p style="line-height:1.5">Body</p><script>alert(2)</script>')
+        response = self.client.post(reverse('edit_box', args=[self.box.pk]), {
+            'title': 'Formatted', 'content': html, 'position': 'left'})
+        self.assertEqual(response.status_code, 302)
+        self.box.refresh_from_db()
+        self.assertIn('text-align:center', self.box.content)
+        self.assertIn('line-height:2', self.box.content)
+        self.assertIn('line-height:1.5', self.box.content)
+        self.assertIn('<strong>Heading</strong>', self.box.content)
+        for unsafe in ('position', 'onclick', '<script', 'alert('):
+            self.assertNotIn(unsafe, self.box.content)
+
     def test_invalid_edit_retains_draft_without_changing_saved_box(self):
         response = self.client.post(reverse('edit_box', args=[self.box.pk]), {
             'title': '   ', 'content': '<p>Unsaved draft must survive</p>', 'position': 'right'})

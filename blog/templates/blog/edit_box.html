@@ -3,6 +3,7 @@
 {% block right_sidebar %}{% endblock %}
 
 {% block content %}
+{% include "blog/_box_editor_controls.html" %}
 
 <div class="card shadow-sm p-4">
     <h3>Uredi box</h3>
@@ -10,7 +11,7 @@
     {{ form.media }}
     {% if form.errors %}<p role="alert">Nije spremljeno. Ispravi označena polja. Unos je sačuvan.</p>{% endif %}
     {{ form.non_field_errors }}
-    <form method="POST">
+    <form method="POST" id="directEditBoxForm">
         {% csrf_token %}
 
         <div class="mb-3">

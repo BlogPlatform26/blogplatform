@@ -70,3 +70,6 @@ U06 settings containment and long-content update2026-11-26: see box_settings_con
 Final validation2026-11-26:261tests84.208s pass; Django check clean; makemigrations --check --dry-run reports no changes. Raw box-settings-final-suite.txt.
 
 U06 layout movement/save closure2026-11-27: see box_layout_save_movement.md. Full-capacity reorder/swap, drag/cancel, partial/empty sides and offline retry/readback are recorded; five regression tests and final266tests84.741s/check/no migrations. New48px select rows intentionally increase desktop card heights;119 existing nodes per width retain font/fill/backing/x/width, doc/local0. Do not repeat these layout cases. NEXT editor toolbar keyboard/features, touch targets and numerical focus/contrast, then remaining grouped full37/U01-U12 scope.
+
+
+2026-11-27 editor update: main box-toolbar targets/focus and heading alignment/spacing persistence are closed in box_editor_controls_persistence.md (267tests59.783s;12 paired states). NEXT U06 dropdown/palette/link-dialog controls and standalone add/direct main-field/submit targets, then remaining full matrix. Preserve desktop normal toolbar geometry; do not repeat closed movement, draft recovery or primary toolbar repair. All37/U01-U12 remains incomplete.
