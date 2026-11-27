@@ -67,7 +67,7 @@
                                             <h5 class="mb-1">Lijevi boxevi</h5>
                                             <div class="small text-muted">Najviše {{ max_boxes_per_side }} boxa</div>
                                         </div>
-                                        <span class="badge text-bg-primary">{{ left_count }}/{{ max_boxes_per_side }}</span>
+                                        <span class="badge text-bg-primary" data-box-count="left">{{ left_count }}/{{ max_boxes_per_side }}</span>
                                     </div>
                                 </div>
 
@@ -117,7 +117,7 @@
                                             <h5 class="mb-1">Desni boxevi</h5>
                                             <div class="small text-muted">Najviše {{ max_boxes_per_side }} boxa</div>
                                         </div>
-                                        <span class="badge text-bg-success">{{ right_count }}/{{ max_boxes_per_side }}</span>
+                                        <span class="badge text-bg-success" data-box-count="right">{{ right_count }}/{{ max_boxes_per_side }}</span>
                                     </div>
                                 </div>
 
@@ -161,7 +161,8 @@
 
                     </div>
 
-                    <div id="boxAutoSaveStatus" class="small text-muted mt-2"></div>
+                    <div id="boxAutoSaveStatus" tabindex="-1" class="small text-muted mt-2" role="status" aria-live="polite" aria-atomic="true"></div>
+                    <button type="button" id="boxLayoutRetry" class="btn btn-outline-primary mt-2" hidden>Pokušaj ponovno spremiti raspored</button>
                 </form>
 
                 {% if active_box %}
@@ -255,9 +256,9 @@
                             <div class="small text-muted">
                                 Aktivna strana:
                                 {% if active_box.position == "left" %}
-                                    <span class="badge text-bg-primary">Lijevo</span>
+                                    <span id="activeBoxPosition" class="badge text-bg-primary">Lijevo</span>
                                 {% else %}
-                                    <span class="badge text-bg-success">Desno</span>
+                                    <span id="activeBoxPosition" class="badge text-bg-success">Desno</span>
                                 {% endif %}
                             </div>
                         </div>
@@ -667,4 +668,21 @@
             gap: 0.5rem !important;
         }
     }
+</style>
+
+<style id="blogplatformBoxMoveControls">
+    #boxLayoutForm .box-move-actions { padding: 0 0.55rem 0.45rem; }
+    #boxLayoutForm .box-move-select {
+        width: 100%; min-width: 0; min-height: 48px;
+        color: #084298; background-color: #fff;
+        border: 1px solid #64748b; border-radius: 7px;
+        padding: 0.35rem 0.5rem; font-size: 0.82rem;
+    }
+    #boxLayoutRetry { min-height: 48px; max-width: 100%; white-space: normal; }
+    #boxLayoutForm .box-move-select:focus-visible,
+    #boxLayoutRetry:focus-visible {
+        outline: 3px solid #084298; outline-offset: 2px; box-shadow: none;
+    }
+    #boxLayoutForm .text-success { color: #146c43 !important; }
+    #boxLayoutForm .text-danger { color: #b02a37 !important; }
 </style>

@@ -14,6 +14,7 @@ from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.http import require_POST
 from django.core.files.base import ContentFile
+from django.db import transaction
 from django.db.models import Case, Count, IntegerField, Q, Sum, Value, When
 from django.http import HttpResponseForbidden, JsonResponse
 from django.shortcuts import get_object_or_404, redirect, render
@@ -1082,65 +1083,58 @@ def blog_settings(request):
             return redirect("/blog/settings/?tab=postavke&settings_tab=sigurnost")
 
         if 'save_box_layout' in request.POST:
-            raw_layout = request.POST.get('box_layout_json', '[]')
+            is_ajax = request.headers.get('X-Requested-With') == 'XMLHttpRequest'
+
+            def layout_error(message, status=400):
+                if is_ajax:
+                    return JsonResponse({'saved': False, 'error': message}, status=status)
+                messages.error(request, message)
+                return redirect('/blog/settings/?tab=boxevi')
 
             try:
-                layout = json.loads(raw_layout)
+                layout = json.loads(request.POST.get('box_layout_json', '[]'))
             except json.JSONDecodeError:
-                messages.error(request, 'Raspored boxeva nije ispravan.')
-                return redirect('/blog/settings/?tab=boxevi')
-
+                return layout_error('Raspored boxeva nije ispravan.')
             if not isinstance(layout, list):
-                messages.error(request, 'Raspored boxeva nije ispravan.')
-                return redirect('/blog/settings/?tab=boxevi')
+                return layout_error('Raspored boxeva nije ispravan.')
 
             cleaned_layout = []
             seen_ids = set()
-            user_box_ids = set(UserBox.objects.filter(user=request.user).values_list('id', flat=True))
-
             for item in layout:
                 if not isinstance(item, dict):
-                    continue
-
-                try:
-                    box_id = int(item.get('id'))
-                except (TypeError, ValueError):
-                    continue
-
+                    return layout_error('Raspored boxeva nije ispravan.')
+                raw_id = item.get('id')
+                if isinstance(raw_id, bool) or not str(raw_id).isdecimal():
+                    return layout_error('Raspored boxeva nije ispravan.')
+                box_id = int(raw_id)
                 position = item.get('position')
-                if position not in {'left', 'right'}:
-                    continue
-
-                if box_id in seen_ids or box_id not in user_box_ids:
-                    continue
-
+                if position not in ('left', 'right') or box_id in seen_ids:
+                    return layout_error('Raspored boxeva nije ispravan.')
                 seen_ids.add(box_id)
                 cleaned_layout.append({'id': box_id, 'position': position})
 
-            if len(cleaned_layout) != len(user_box_ids):
-                messages.error(request, 'Nisu spremljeni svi boxevi. Pokušaj ponovno.')
-                return redirect('/blog/settings/?tab=boxevi')
-
             if not validate_box_layout_counts(cleaned_layout):
-                messages.error(request, f'Na svakoj strani mogu biti najviše {MAX_BOXES_PER_SIDE} boxa.')
-                return redirect('/blog/settings/?tab=boxevi')
+                return layout_error(f'Na svakoj strani mogu biti najviše {MAX_BOXES_PER_SIDE} boxa.')
 
-            grouped = {'left': [], 'right': []}
-            for item in cleaned_layout:
-                grouped[item['position']].append(item['id'])
+            with transaction.atomic():
+                user_box_ids = set(UserBox.objects.select_for_update().filter(user=request.user)
+                                   .values_list('id', flat=True))
+                if seen_ids != user_box_ids:
+                    return layout_error('Popis boxeva se promijenio. Osvježi stranicu i pokušaj ponovno.', 409)
+                orders = {'left': 0, 'right': 0}
+                for item in cleaned_layout:
+                    position = item['position']
+                    UserBox.objects.filter(id=item['id'], user=request.user).update(
+                        position=position, order=orders[position])
+                    orders[position] += 1
 
-            for position in ('left', 'right'):
-                for order, box_id in enumerate(grouped[position]):
-                    UserBox.objects.filter(id=box_id, user=request.user).update(position=position, order=order)
-
-            normalize_user_boxes(request.user)
+            if is_ajax:
+                return JsonResponse({'saved': True, 'layout': cleaned_layout})
 
             target_box_id = request.POST.get('active_box_id')
-            if target_box_id and str(target_box_id).isdigit() and int(target_box_id) in user_box_ids:
-                messages.success(request, 'Raspored boxeva je spremljen.')
-                return redirect(f'/blog/settings/?tab=boxevi&box={int(target_box_id)}')
-
             messages.success(request, 'Raspored boxeva je spremljen.')
+            if target_box_id and str(target_box_id).isdigit() and int(target_box_id) in user_box_ids:
+                return redirect(f'/blog/settings/?tab=boxevi&box={int(target_box_id)}')
             return redirect('/blog/settings/?tab=boxevi')
 
         if 'bulk_restore' in request.POST or 'bulk_permanent_delete' in request.POST:

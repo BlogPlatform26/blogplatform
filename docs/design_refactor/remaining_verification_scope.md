@@ -201,3 +201,5 @@ Mjesecev/Asfaltni32-state audit recorded. Both320 calendarx=-7.67/doc8;390x=-0.6
 ## Phase102l
 
 Mjesecev/Asfaltni phonecalendar position closed:32statesdoc/grid0,tablet/desktoprects/ink unchanged102k,safe205/206/213/220,Right40both,214tests57.049s. All37 current series covered is not acceptance. Broader photo/desktop-target/Default/user-page/usability work remains.
+
+2026-11-27 U06 reconciliation: recorded box layout reorder/swap/drag-cancel and atomic save/offline retry/readback are closed in box_layout_save_movement.md (266tests84.741s; four-width paired evidence). Editor toolbar/features/targets/numerical focus remain open. This supersedes historical next-layout statements without accepting all U06 or the full37/U01-U12 objective.
